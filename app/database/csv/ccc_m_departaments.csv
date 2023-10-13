@@ -1,0 +1,71 @@
+﻿Department ID,Department Name,Department Description,Is Active,Created By Contact ID,Created Date Time,Modified By Contact ID,Modified Date Time
+1,PWU-Analyser,Maintenance,,1,24/02/2022 12:35:04 PM,1460,11/05/2023 12:52:27 PM
+5,Sales and Marketing,Commercial,,1,24/02/2022 12:35:43 PM,1460,19/05/2023 1:05:24 PM
+7,Administrative department,Commercial,,1,24/02/2022 12:36:05 PM,1687,29/05/2023 11:09:53 AM
+8,SLU-Electrical,Maintenance,,1,24/02/2022 12:36:55 PM,1460,11/05/2023 12:52:27 PM
+9,SLU-Rotating,Maintenance,,1,24/02/2022 12:37:35 PM,1460,11/05/2023 12:52:27 PM
+10,SLU-Static,Maintenance,,1,24/02/2022 12:38:33 PM,1460,11/05/2023 12:52:27 PM
+11,SLU-Instrumentation,Maintenance,,1,24/02/2022 12:41:30 PM,1460,11/05/2023 12:52:27 PM
+12,SGU-Electrical,Maintenance,,1,24/02/2022 1:40:03 PM,1460,11/05/2023 12:52:27 PM
+13,SGU-Rotating,Maintenance,,1,24/02/2022 1:40:30 PM,1460,11/05/2023 12:52:27 PM
+14,SGU-Instrumentation,Maintenance,,1,24/02/2022 1:40:51 PM,1460,11/05/2023 12:52:27 PM
+15,SGU-Static,Maintenance,,1,24/02/2022 1:41:14 PM,1460,11/05/2023 12:52:27 PM
+16,PWU-Electrical,Maintenance,,1,24/02/2022 1:41:46 PM,1460,11/05/2023 12:52:27 PM
+17,PWU-Instrumentation,Maintenance,,1,24/02/2022 1:42:25 PM,1460,11/05/2023 12:52:27 PM
+18,PWU-Static,Maintenance,,1,24/02/2022 1:42:46 PM,1460,11/05/2023 12:52:27 PM
+19,PWU-Rotating,Maintenance,,1,24/02/2022 1:43:18 PM,1460,11/05/2023 12:52:27 PM
+20,U&O-Electrical,Maintenance,,1,24/02/2022 1:43:54 PM,1460,11/05/2023 12:52:27 PM
+21,U&O-Instrumentation,Maintenance,,1,24/02/2022 1:44:37 PM,1460,11/05/2023 12:52:27 PM
+22,U&O-Static,Maintenance,,1,24/02/2022 1:44:53 PM,1460,11/05/2023 12:52:27 PM
+23,U&O-Rotating,Maintenance,,1,24/02/2022 1:45:11 PM,1460,11/05/2023 12:52:27 PM
+26,MECH (Rotating),MECH (Rotating),,1,26/02/2022 2:12:21 PM,1452,24/08/2022 11:21:46 AM
+27,MECH (Static),MECH (Static),,1,26/02/2022 2:12:21 PM,1452,24/08/2022 11:21:46 AM
+28,Plant Integrity,Technical,,1,26/02/2022 2:16:41 PM,1460,19/05/2023 1:05:24 PM
+31,Motor Transport Operation department,Production,,1,10/03/2022 2:08:48 PM,1460,19/05/2023 1:05:24 PM
+32,HEAD,Head Department,,1452,23/05/2022 9:23:21 AM,1452,24/08/2022 11:21:46 AM
+33,MANAGER,Managers,,1452,23/05/2022 9:23:38 AM,1454,26/05/2022 2:36:51 PM
+34,CON-MON,Technical,,1452,23/05/2022 9:24:34 AM,1460,19/05/2023 12:53:15 PM
+35,Electrical,Electrical,,1454,13/06/2022 3:26:33 PM,1452,24/08/2022 11:21:46 AM
+36,Instrumentation,Instrumentation,,1454,13/06/2022 3:26:33 PM,1452,24/08/2022 11:21:46 AM
+37,Warehouse,Maintenance,,1452,26/06/2022 9:24:59 AM,1460,11/05/2023 12:44:14 PM
+38,TECHNICAL,TECHNICAL,,1452,26/06/2022 9:42:28 AM,1460,19/05/2023 12:53:15 PM
+40,U&O-Analyser,Maintenance,,689,5/07/2022 4:53:38 PM,1460,11/05/2023 12:52:27 PM
+41,CONT SERVICES,Maintenance,,1452,20/08/2022 2:19:38 PM,1460,11/05/2023 12:44:14 PM
+42,CofE,Maintenance,,1452,20/08/2022 2:20:24 PM,1460,11/05/2023 12:44:14 PM
+43,Turnaround,Maintenance,,1452,20/08/2022 2:20:57 PM,1460,11/05/2023 12:44:14 PM
+44,CIVIL,Maintenance,,1452,20/08/2022 2:21:14 PM,1460,11/05/2023 12:44:14 PM
+47,Synthesis Gas Unit,Production,,1,2/09/2022 8:55:28 AM,1460,19/05/2023 1:05:24 PM
+48,SGU-Analyser,Maintenance,,1,8/09/2022 4:48:25 PM,1460,11/05/2023 12:52:27 PM
+49,SLU-Analyser,Maintenance,,1465,24/09/2022 10:35:31 AM,1460,11/05/2023 12:52:27 PM
+50,Automation,Technical,,1465,13/10/2022 4:47:16 PM,1460,19/05/2023 12:53:15 PM
+51,Process Safety Department,Technical,,1465,13/10/2022 4:48:19 PM,1460,19/05/2023 12:53:15 PM
+52,Central Factory Laboratory,Production,,1465,13/10/2022 4:49:22 PM,1460,19/05/2023 12:53:15 PM
+53,Reliability,Technical,,1465,13/10/2022 4:49:44 PM,1460,19/05/2023 12:53:15 PM
+54,HSE,Other departments,,1465,13/10/2022 4:50:02 PM,1460,19/05/2023 1:05:24 PM
+59,INST-PWU,Instrumentation,,1,2/11/2022 5:46:26 AM,1460,16/01/2023 1:05:53 PM
+63,Maintenance General,Maintenance,,1,5/11/2022 1:50:22 PM,1687,22/07/2023 2:46:53 PM
+64,Process Engineering Department,Technical,,1460,6/12/2022 12:05:26 PM,1460,19/05/2023 12:53:15 PM
+66,Information Technology Department,Other departments,,1460,9/12/2022 2:11:54 PM,1460,19/05/2023 12:53:15 PM
+67,Account Department,Finance,,1460,19/12/2022 2:06:34 PM,1460,19/05/2023 12:58:56 PM
+68,Reliability (SS),Technical,,1465,30/12/2022 5:13:10 PM,1460,19/05/2023 12:53:15 PM
+70,Emergency situations and Security Service,Other departments,,1460,18/01/2023 11:36:36 AM,1460,19/05/2023 12:58:56 PM
+71,Procurement and Logistics,Commercial,,1460,13/02/2023 9:00:54 AM,1460,19/05/2023 1:05:24 PM
+72,Human Resources Department,Other departments,,1460,14/02/2023 11:00:29 AM,1460,19/05/2023 12:53:15 PM
+73,Planning Deparment,Finance,,1460,17/02/2023 4:21:04 PM,1460,19/05/2023 1:05:24 PM
+74,Production Management Department,Production,,1460,20/02/2023 3:14:14 PM,1460,19/05/2023 12:53:15 PM
+75,Business Development &Project Execution Department,Other departments,,1460,27/02/2023 8:54:26 AM,1460,19/05/2023 1:05:24 PM
+76,Synthesis Liquid Unit,Production,,1460,10/04/2023 1:50:31 PM,1460,19/05/2023 1:05:24 PM
+77,Product Work-up Unit,Production,,1460,10/04/2023 1:51:11 PM,1460,19/05/2023 1:05:24 PM
+78,Utilities and Off-sites Unit,Production,,1460,10/04/2023 1:51:33 PM,1460,19/05/2023 1:05:24 PM
+79,Projects Office,Project,,1460,10/05/2023 10:50:24 AM,1460,19/05/2023 12:53:16 PM
+80,Product Storage Department,Production,,1460,11/05/2023 3:43:33 PM,1460,19/05/2023 12:53:16 PM
+81,Localization  ,Maintenance,,1687,12/05/2023 2:58:17 PM,1460,19/05/2023 12:53:16 PM
+83,Financial Department,Finance,,1460,19/05/2023 12:47:25 PM,1460,19/05/2023 1:05:24 PM
+84,Treasury Department,Other departments,,1460,19/05/2023 12:56:34 PM,1460,19/05/2023 12:58:56 PM
+85,Consolidated information and Analytical,Other departments,,1460,19/05/2023 12:57:24 PM,1460,19/05/2023 12:58:56 PM
+86,Information security,Other departments,,1460,19/05/2023 12:59:25 PM,1460,19/05/2023 12:58:56 PM
+87,Legal department,Other departments,,1460,19/05/2023 1:00:02 PM,1460,19/05/2023 12:58:56 PM
+88,Training Sector,Other departments,,1460,19/05/2023 1:04:24 PM,1460,19/05/2023 1:05:23 PM
+89,UZGTL (Uniform),only for uniform issuance,,1460,26/05/2023 9:35:07 AM,1460,26/05/2023 9:34:13 AM
+90,Routine Maintenance Planning Department,Maintenance,,1460,26/05/2023 11:22:29 AM,1460,26/05/2023 11:21:17 AM
+91,Chinoz terminal,Chinoz terminal,,1460,18/07/2023 3:26:14 PM,1460,18/07/2023 3:23:36 PM

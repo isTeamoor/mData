@@ -15,6 +15,7 @@ def show_WO(month:int):
     materialRep.matReport(repMonth=month, repYear=2023, transactions=DF__transactions.transactions)
     return {'/matReport':'ok'}
 
+
 @router.get('/Spares')
 def show_WO():
     DF__spares.spares_RMPD.to_excel('spares_RMPD.xlsx')

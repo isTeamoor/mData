@@ -151,7 +151,7 @@ def matReport(repMonth, repYear, transactions):
     rep['Сумма конец']  = rep['Сумма начало'] + rep['Сумма приход']
 
     rep.loc[ (rep['Work Order Status Description'] == 'Closed')
-           & (rep['closedMonth'] == repMonth), ['Кол-во конец','Сумма конец'] ] = 0
+           & (rep['closedMonth'] <= repMonth), ['Кол-во конец','Сумма конец'] ] = 0
 
 
 

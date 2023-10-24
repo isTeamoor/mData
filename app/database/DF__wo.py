@@ -39,7 +39,3 @@ wo['isMaintenance'] = wo['Department Description'].copy().map(lambda x: 'yes' if
 
 rmpd = ['SLU', 'SGU', 'PWU', 'U&O','Routine Maintenance Planning Department']
 wo['isRMPD'] = wo['Short Department Name'].copy().map(lambda x: 'yes' if x in rmpd else 'no')
-
-
-
-wo_test = wo[['raisedYear', 'Work Order Number', 'Work Order Description', 'Modified Date Time']].head(100).to_dict(orient='records')

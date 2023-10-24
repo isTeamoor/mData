@@ -3,12 +3,9 @@ from typing import Optional
 from datetime import datetime
 
 
-class workOrders(BaseModel):
-    email: EmailStr
-    password: str
+class Filters(BaseModel):
+    filters: list
 
-class requisition(BaseModel):
-    data: str
-    extra: int
+
 
 

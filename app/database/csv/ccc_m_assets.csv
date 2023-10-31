@@ -4,6 +4,36 @@
 223866,9685,TURNING GEAR,173-XP-001A-XX-30
 94762,78366,Hoist crane,145-XF-040A-F
 220005,78371,LLF on Analysers and Sampling System for PM-1532,LLF on Analysers and Sampling System
+221008,78387,AHU-2 6 month's PM for Contractor (Contains 35 Equipment. Find in the Document section.),AHU-2
+222643,78387,ANALYZER CABINET AIR CONDITIONER(for 6 months: includes -32 equipment.),ACAC
+222659,78387,ANALYZERS SHELTER AIR CONDITIONER,ASAC
+222660,78387,AXIAL FAN,AF
+222661,78387,BLAST PROTACTION DAMPER,BPD
+222662,78387,CHEMICAL FILTER UNIT,CFU
+222663,78387,CLOSE CONTROL UNIT,CCU
+222681,78387,COMPRESSOR-RECEIVER UNIT WITH REMOVABLE CONDENSER,CUWRC
+222682,78387,CONSTANT AIR VOLUME UNIT,CTN-CAV
+222683,78387,DIFFERENTIAL HIGH/LOW PRESSURE SWITCH ,PDSH and PDSL
+222684,78387,ELECTRICAL DUCT HEATER,EDH
+222685,78387,EXHAUST FAN,EFN
+222686,78387,EXHAUST VENTILATION,EV
+222687,78387,EXHAUST VENTILATION EMERGENCY,EVE
+222688,78387,EXPANSION TANK,ET
+222689,78387,FIRE DAMPER ELECTRICAL ACTUATOR,FD
+222690,78387,HEAT EXCHANGER,HE
+222691,78387,HOT WATER DUCT HEATER,HDC
+222692,78387,HOT WATER GENERATOR,HWG
+222693,78387,HOT WATER PUMP,HWP
+222694,78387,HOT WATER UNIT HEATER,HUH
+222695,78387,HUMIDIFIER,HMD
+222696,78387,HVAC CONTROL PANEL,HCP
+222697,78387,HVAC INDOOR UNIT,HVAC UNIT
+223189,78387,Campus( вахтовая поселка 1),CAMP1
+223190,78387,Campus(вахтовая поселка 2),CAMP2
+223191,78387,MOISTURE TRANSMITTER,MT
+223192,78387,MOTORISED FIRE DAMPER,MFD
+223193,78387,MOTORIZED DAMPER,MD
+224064,78387,AHU-2 of HVAC System (for 2 months: includes - 39 equipment.),AHU-21
 99566,79974,Buildings in PWU areas,PWU buildings 
 214358,79974,Buildings in PWU areas,PWU buildings 
 80774,80781,Corrosion Inhibitor Storage Pump,174-XP-002-PD-01 B
@@ -6125,36 +6155,26 @@
 220421,78387,ACCU of HVAC System (for 6 months: includes -121 equipment.),ACCU-1
 220422,78387,ACCU of HVAC System (for 24 months: includes -103 equipment.),ACCU-2
 220904,78387,Hitachi,Unit-97
-221008,78387,AHU-2 6 month's PM for Contractor (Contains 35 Equipment. Find in the Document section.),AHU-2
 221468,78387,Chinoz terminal,Chinoz terminal Building
-222643,78387,ANALYZER CABINET AIR CONDITIONER(for 6 months: includes -32 equipment.),ACAC
-222659,78387,ANALYZERS SHELTER AIR CONDITIONER,ASAC
-222660,78387,AXIAL FAN,AF
-222661,78387,BLAST PROTACTION DAMPER,BPD
-222662,78387,CHEMICAL FILTER UNIT,CFU
-222663,78387,CLOSE CONTROL UNIT,CCU
-222681,78387,COMPRESSOR-RECEIVER UNIT WITH REMOVABLE CONDENSER,CUWRC
-222682,78387,CONSTANT AIR VOLUME UNIT,CTN-CAV
-222683,78387,DIFFERENTIAL HIGH/LOW PRESSURE SWITCH ,PDSH and PDSL
-222684,78387,ELECTRICAL DUCT HEATER,EDH
-222685,78387,EXHAUST FAN,EFN
-222686,78387,EXHAUST VENTILATION,EV
-222687,78387,EXHAUST VENTILATION EMERGENCY,EVE
-222688,78387,EXPANSION TANK,ET
-222689,78387,FIRE DAMPER ELECTRICAL ACTUATOR,FD
-222690,78387,HEAT EXCHANGER,HE
-222691,78387,HOT WATER DUCT HEATER,HDC
-222692,78387,HOT WATER GENERATOR,HWG
-222693,78387,HOT WATER PUMP,HWP
-222694,78387,HOT WATER UNIT HEATER,HUH
-222695,78387,HUMIDIFIER,HMD
-222696,78387,HVAC CONTROL PANEL,HCP
-222697,78387,HVAC INDOOR UNIT,HVAC UNIT
-223189,78387,Campus( вахтовая поселка 1),CAMP1
-223190,78387,Campus(вахтовая поселка 2),CAMP2
-223191,78387,MOISTURE TRANSMITTER,MT
-223192,78387,MOTORISED FIRE DAMPER,MFD
-223193,78387,MOTORIZED DAMPER,MD
+224063,78387,AHU of HVAC System (for 2 months: includes -39 equipment.),AHU-1
+224065,78387,AHU-2 6 month's PM for Contractor (Contains 39 Equipment. Find in the Document section.),AHU-2.0
+224066,78387,AHU-3 12 month's PM for Contractor (Contains 35 Equipment. Find in the Document section.),AHU-3
+224067,78387,CFU/PU- 2 month's PM for Contractor (Contains 20 Equipment. Find in the Document section.),CFU/PU-1
+224068,78387,CFU/PU-2 6 month's PM for Contractor (Contains 20 Equipment. Find in the Document section.),CFU/PU-2
+224069,78387,CFU/PU-3  6 month's PM for Contractor (Contains 25 Equipment. Find in the Document section.),CFU/PU-3
+224070,78387,CFU/PU-4  12 month's PM for Contractor (Contains 20 Equipment. Find in the Document section.),CFU/PU-4
+224071,78387,AS/AC-1   ANALAYZER shelter HVAC system (AS and AC) (for 6 months: includes - 32 equipment.),AS/AC-1 
+224087,78387,CCU and SAC units - 1  2 months PM for Contractor (Contains 85 Equipment. Find in the Document section.),CCU and SAC units
+224089,78387,CCU and SAC units - 2  6 months PM for Contractor (Contains 85 Equipment. Find in the Document section.),CCU and SAC units - 2 
+224090,78387,"Fans-1 [SFN, EFN and other types] 2 month's PM for Contractor (Contains 35 Equipment. Find in the Document section)","Fans-1 [SFN, EFN and other types]"
+224091,78387,"Fans-2 [SFN, EFN and other types] 6 month's PM for Contractor (Contains 181 Equipment. Find in the Document section.)","Fans-2 [SFN, EFN and other types]"
+224092,78387,"DAMPERS [BPD, MFD, MVD,MD and others] 12 month's PM for Contractor (Contains 469 Equipment. Find in the Document section.)","DAMPERS [BPD, MFD, MVD,MD and others]"
+224093,78387,CAV and VAV units 12 month's PM for Contractor (Contains 35 Equipment. Find in the Document section.),CAV and VAV units
+224094,78387,"Heating system equipments [ET, HE, HWP, HWG, EDH  and others] 12 month's PM for Contractor (Contains 302 Equipment. Find in the Document section.)","Heating system equipments [ET, HE, HWP, HWG, EDH  "
+224096,78387,HCP - 6 month's PM for Contractor (Contains 26 Equipment. Find in the Document section.),HCP-1
+224097,78387,"PDIS, PDS switches - 12 month's PM for Contractor (Contains 321 Equipment. Find in the Document section.)","PDIS, PDS switches"
+224098,78387,TCV - 12 month's PM for Contractor (Contains 96 Equipment. Find in the Document section.),TCV
+224099,78387,AIR CONDITIONERs - 6 month's PM for Contractor (Contains 526 Equipment. Find in the Document section.),AIR CONDITIONERs
 99581,78388,RAILCAR LOADING AREA HC SPILLAGE DRAIN DRUM,184-VD-001
 99836,78388,Weight Transmitter,184-WT-0001
 211351,78388,Fire Zone,FZ-19
@@ -41437,6 +41457,7 @@
 209198,175190,Rotating Supervisor,Kurbanov Gulmurod
 221544,175190,Analyzer  Technician,Shaxrizod Orziyev
 223545,175190,Junior electrician,Buriyev Abror
+223982,175190,Electrical Junior Technician,Bo'riyev Abror Abdivoitovich
 175193,175191,Analyzer Technician,Asror Xusanov
 175194,175191,Analyzer Supervisor,Doston Normuminov 
 175195,175191,Analyzer Technician,Shamsiddin Temirov
@@ -41463,7 +41484,7 @@
 175226,175191,Junior Electrical technician,Kamolov Dilshod Farmon o`g`li
 175227,175191,Junior Electrician,Boymurodov Jasurbek Baxriddin o`g`li
 175765,175191,Field Manager (PWU),Buriev Mansur
-175766,175191,Maintenance Planner (PWU),Xasanov Mansur
+175766,175191,Senior Maintenance Planner (PWU) & CMMS Lead Engineer,Xasanov Mansur Tulqin o'g'li
 211381,175191,Rotating Engineer,Soibov Asomiddin
 211382,175191,Rotating Engineer,Ochilov Shuhrat
 218585,175191,Junior Rotating technician,Umirov Shaxzod Sobir o`g`li
@@ -41529,6 +41550,7 @@
 208821,208822,Maintenance Manager,Gareth Jones Bryan
 209264,208822,Cost Controller,Isxakov Timur Iminjanovich
 218363,208822,Deputy of Manager of Routine Maintenance Manager,Pardayev Aliyor Dusnazarovich
+224040,208822,CMMS Engineer,Toshpulatov Ma'ruf O'rin o'g'li
 208838,208828,OWS for MAC/BAC (Train-1),110-OWS-CC150-01
 208839,208828,OWS for MAC/BAC (Train-2),110-OWS-CC250-01
 208840,208828,UCP for MAC/BAC (Train-1),110-UCP-XP150-01/06
@@ -44216,6 +44238,7 @@
 220358,209664,We Mach JT,Jo'rayev Nurbek
 223757,209664,Welder,Baratov Azizjon
 223758,209664,Welder,Salomov Ilhom
+223980,209664,Welder,Abdulloyev Javohir 
 222698,209745,HVAC system in WORK SHOP ( TOTAL 24 SPLIT AIR CONDITIONER),HVAC system in Work shop
 210005,209786,ESD stop (local) Button to 10-IS-1004,110-MPXS-202L
 209868,209820,Multiparameter Converter,110-FT-2003
@@ -44856,9 +44879,13 @@
 223888,218246,Maid,Abdixolikova Mexri Turdiyevna
 223889,218246,Maid,Soxibova Zamira Xaydarovna
 223890,218246,Maid,Parmonova Dilafruz Joxonovna
+224062,218246,Gardener,Mirzakeldiyev Bekzod Muzaffar o'g'li
+224085,218246,Electrician,Xasanov Akrom Qo'ziyevich
+224086,218246,Electrician,Botirov G'olib Mamanazar o'g'li
 222184,218247,senior specialist,Maxmatkulov Jakhongir
 222185,218247,specialist,Achilov Azam
 222186,218247,junior specialist,Jabborov Rustam
+224002,218247,Specialist,Narmetov Sardor Botirali o'g'li
 221427,218248,Leading Accountant,Ibragimov Jahongir Tillayevich
 221428,218248,Accountant,Orziyev Shahzodbek Xoliqul o'g'li
 221429,218248,Accountant,Kattaboyev Zafar Safarovich
@@ -44874,6 +44901,7 @@
 220001,218252,Junior specialist,Rakhimov Bokhodir Pardaevich
 220002,218252,Junior specialist,Rakhimov Akhror Dustyor o'g'li
 220003,218252,Junior specialist,Makhmatkulov Doniyor Bakhtiyor o'g'li
+224027,218252,Lead IT Engineer,Murotov Dilshod Nasimovich
 221645,218253,Senior Engineer,Rustamov Rakhmon Vakhobovich
 221646,218253,Lead Engineer,Ilyasov Shukhrat Xodjiahmatovich
 221647,218253,Engineer,Nomozov Otaqul Napasovich
@@ -45503,6 +45531,7 @@
 223556,218533,Trainee,Luqmonov Bunyod
 223557,218533,Trainee,Boltayev Shoxruh
 223878,218533,Trainee,Niyozov Abror Choriyevich
+224003,218533,Trainee,Kenjayev Shoxboz Erkin o'g'li
 219753,219752,Head of turnaround planning,Pan Aleksandr Sergeyevich
 219754,219752,Senior Planner,Azizbek Narziev G'aybullayevich
 219755,219752,Maintenance Planner,Bobomurodov Xurshid G'olibjon o'g'li

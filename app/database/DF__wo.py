@@ -16,15 +16,17 @@ wo = wo.merge( impo.assets,      how='left', on='Asset ID')
 wo['Raised Date Time'] = pd.to_datetime(wo['Raised Date Time'], format="%d/%m/%Y %H:%M:%S %p")
 wo['raisedYear']  = wo['Raised Date Time'].dt.year
 wo['raisedMonth'] = wo['Raised Date Time'].dt.month
+wo['raisedDay'] = wo['Raised Date Time'].dt.day
 
 wo['Modified Date Time'] = pd.to_datetime(wo['Modified Date Time'], format="%d/%m/%Y %H:%M:%S %p")
 wo['closedYear']  = wo['Modified Date Time'].dt.year
 wo['closedMonth'] = wo['Modified Date Time'].dt.month
+wo['closedDay'] = wo['Modified Date Time'].dt.day
 
 
 
 ### 4. Упорядочивание столбцов и удаление NaN
-wo = wo[['raisedYear', 'raisedMonth',  'closedYear', 'closedMonth',  'Work Order Number', 'Work Order Description', 'Work Order ID',
+wo = wo[['raisedYear', 'raisedMonth','raisedDay',  'closedYear', 'closedMonth', 'closedDay',  'Work Order Number', 'Work Order Description', 'Work Order ID',
           'Created By', 'Work Order Closed Contact ID', 'Work Order Status Description', 'Priority Description', 'Department Name', 'Department Description',
          'Job Type Description', 'Preventative Maintenance Number', 'Asset Description', 'Asset Number', 'Asset ID', 'Modified Date Time',]].fillna('undefined')
 
@@ -39,3 +41,4 @@ wo['isMaintenance'] = wo['Department Description'].copy().map(lambda x: 'yes' if
 
 rmpd = ['SLU', 'SGU', 'PWU', 'U&O','Routine Maintenance Planning Department']
 wo['isRMPD'] = wo['Short Department Name'].copy().map(lambda x: 'yes' if x in rmpd else 'no')
+wo_RMPD        = wo.loc[ wo['isRMPD'] == 'yes' ]

@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import os
+from ..lib.gen import filterDF
 
 ### Номера Reservations, материалы по которым уже списаны
 inactive = [
@@ -21,28 +23,31 @@ to_014 = ['6935','5841','7139','5230','4189','3494','2799','5749','1738','1308',
 '2912','2913','7481','7407','7473','7403','2802','3229','5305','6122','6332','6900','7497','7883','7882',
 ]
 
+department_Filters = {}
+department_Filters['rmpd'] = [
+    {"field":'isRMPD', "operator":"==", "value":"'yes'"}, "&", {"field":'Reserved By', "operator":"!=", "value":"'Mirjakhon Toirov'"}, 
+    "&",{"field":'Reserved By', "operator":"!=", "value":"'Bobur Aralov'"}
+]
 
 
 
-
-
-def matReport(repMonth, repYear, transactions):
+def matReport(repMonth, repYear, transactions, department):
     ### 0. Исключение (забыл добавить в далолатнома в августе)
     transactions.loc [ transactions['Reservation Number']==3269, 'closedMonth' ] = 9
 
     
+
+
     ### 1. Подготовка DF Transactions
-    transactions  = transactions.loc [ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
+    transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
                                     & (transactions['transactYear'] == repYear)
-                                    & (transactions['isRMPD'] == 'yes')
-                                    & (transactions['Reserved By'] != 'Mirjakhon Toirov') & (transactions['Reserved By'] != 'Bobur Aralov')
                                     & (~transactions['Reservation Number'].isin(inactive))
                                     ]
-    print(transactions.loc[ transactions['Reservation Number']==1591, 'Material Code' ])
+    transactions = filterDF(transactions, department_Filters[department])
     
     transactions  = transactions[['Material Code','Catalogue Description','UOMDescription','Quantity','Reservation Number','Work Order Status Description','closedMonth','transactMonth',
                                   'Short Department Name','Reserved By','Work Order Number','reservYear','reservMonth','Asset Description', 'Asset Number','Actual Quantity','closedYear']]
-    
+
     transactions.rename(columns={'Material Code':'Код товара',
                                  'Catalogue Description':'Материал',
                                  'UOMDescription':'Ед.изм.',
@@ -53,15 +58,15 @@ def matReport(repMonth, repYear, transactions):
     
 
 
+
     ### 2. Выборка транзакций на начало месяца и в течении месяца
     begin = transactions.loc[ (transactions['transactMonth'] < repMonth)
                             & ( 
                                 (transactions['Work Order Status Description'] != 'Closed') 
-                                | ( (transactions['Work Order Status Description'] == 'Closed') & ( (transactions['closedYear'] == repYear) & (transactions['closedMonth'] >= repMonth) ) )
+                                | ((transactions['Work Order Status Description'] == 'Closed') & (transactions['closedMonth'] >= repMonth))
                               )
                             ]
-                        
-    current = transactions.loc[(transactions['transactMonth'] == repMonth)]
+    current = transactions.loc[transactions['transactMonth'] == repMonth]
 
 
 
@@ -72,10 +77,8 @@ def matReport(repMonth, repYear, transactions):
     {'Код товара':'4921','Материал':'Size: 1 1/2" (Size: 40mm) Gasket, 316L SS WND GRAPH FILL 316L SS I/R 316L SS O/R RF B16.20 CL600 4.5MM thickness (3.2MM RING) Spiral Wound','Ед.изм.':'шт','Quantity':2,'Reservation Number':431,'Work Order Status Description':'Closed','closedMonth':9,'Отдел':'SLU','Reserved By':'Ulugbek  Khamroev','WO №':2771,'reservYear':2023,'reservMonth':8,'Asset Description':'', 'Объект':'',},
     {'Код товара':'4973','Материал':'Size: 12" (Size: 300mm) Gasket, 316L SS WND GRAPH FILL CS I/R CS O/R RF B16.20 CL600 4.5MM thickness (3.2MM RING) Spiral Wound','Ед.изм.':'шт','Quantity':2,'Reservation Number':437,'Work Order Status Description':'Closed','closedMonth':9,'Отдел':'SLU','Reserved By':'Ulugbek  Khamroev','WO №':651,'reservYear':2023,'reservMonth':8,'Asset Description':'', 'Объект':'',},
     ]
-    current_additional = [
-    #{'Код товара':'','Материал':'','Ед.изм.':'','Quantity':0,'Reservation Number':0,'Work Order Status Description':'','closedMonth':0,'Отдел':'','Reserved By':'','WO №':0,'reservYear':2023,'reservMonth':0,'Asset Description':'', 'Объект':'',},
-    ]
-
+    current_additional = []
+    
     for row in begin_additional:
         newRow = pd.DataFrame(row, index=[0])
         begin = pd.concat([begin, newRow]).reset_index(drop=True)
@@ -105,8 +108,6 @@ def matReport(repMonth, repYear, transactions):
     
 
 
-
-
     ### 6. Добавление цен и групп из 1с. Вычисление сумм на начало и Приход
     rep = rep.merge(OneC(), on = 'Код товара', how = 'outer')
     rep[['Кол-во начало','Кол-во приход','Цена']] = rep[['Кол-во начало','Кол-во приход','Цена']].fillna(0)
@@ -117,7 +118,6 @@ def matReport(repMonth, repYear, transactions):
 
 
 
-    
     ### 7. Подготовка полей Расход
     rep['Кол-во расход'] = rep['Кол-во начало'] + rep['Кол-во приход']
     rep['Сумма расход']  = rep['Сумма начало'] + rep['Сумма приход']
@@ -213,12 +213,20 @@ def matReport(repMonth, repYear, transactions):
 
 
 
+
+    ### 15. Представление для накладной
+    waybill = OneCW()
+    waybill = waybill[['Unnamed: 6','Unnamed: 1','Unnamed: 11','Unnamed: 23','Unnamed: 15','Unnamed: 24']]
+
+
+
     
-    check.to_excel('1. check.xlsx')
-    matRep.to_excel('2. matRep.xlsx')
+    check.to_excel('2. check.xlsx')
+    matRep.to_excel('3. matRep.xlsx')
     dalolat.to_excel('4. dalolat.xlsx')
-    view_014.to_excel('5. view_014.xlsx')
-    view_wOff.to_excel('5. view_wOff.xlsx')
+    view_014.to_excel('4. view_014.xlsx')
+    view_wOff.to_excel('4. view_wOff.xlsx')
+    waybill.to_excel('4. waybill.xlsx')
     
 
 
@@ -226,7 +234,7 @@ def matReport(repMonth, repYear, transactions):
 
 
 def OneC():
-  prices = pd.read_excel("0. мунтазам.xlsx").rename(columns={'Unnamed: 1':'Kod', 'Unnamed: 2':'Name', 'Unnamed: 5':'Qty1', 'Unnamed: 6':'Sum1','Unnamed: 7':'Qty2', 'Unnamed: 8':'Sum2'}).iloc[16: ][['Kod', 'Name','Qty1','Sum1','Qty2','Sum2']]
+  prices = pd.read_excel("1. 1C muntasam.xlsx").rename(columns={'Unnamed: 1':'Kod', 'Unnamed: 2':'Name', 'Unnamed: 5':'Qty1', 'Unnamed: 6':'Sum1','Unnamed: 7':'Qty2', 'Unnamed: 8':'Sum2'}).iloc[16: ][['Kod', 'Name','Qty1','Sum1','Qty2','Sum2']]
   prices['Kod'] = prices['Kod'].astype(str)
   prices['Код товара'] = prices['Kod'].copy().map(lambda x: x[-4:])
   prices[['Sum1','Sum2','Qty1','Qty2']] = prices[['Sum1','Sum2','Qty1','Qty2']].fillna(0)
@@ -238,3 +246,9 @@ def OneC():
 
   prices = prices.loc[ ~prices['Name'].isna(), ['Account', 'Код товара', 'Цена'] ]
   return prices
+
+def OneCW():
+  waybill = pd.read_excel("1. 1CW muntasam.xlsx")
+  waybill = waybill[['Unnamed: 1','Unnamed: 6','Unnamed: 11','Unnamed: 15','Unnamed: 23','Unnamed: 24']].iloc[16:]
+  waybill = waybill.loc[~waybill['Unnamed: 6'].isnull()]
+  return waybill

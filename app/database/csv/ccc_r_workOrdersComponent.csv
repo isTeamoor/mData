@@ -27736,7 +27736,7 @@ NDE & Inspection Services,18039,33042,67
 Mechanical Services,18048,33043,76
 NDE & Inspection Services,18039,33044,67
 Mechanical Services,18048,33045,76
-NDE & Inspection Services,18039,33046,67
+Mechanical Services,18048,33046,76
 Mechanical Services,18048,33047,76
 Instrumentation Services,18051,33048,79
 Mechanical Services,18048,33049,76
@@ -30624,17 +30624,17 @@ Jet Wash Cleaning,18048,35954,93
 Instrumentation Services,18051,35955,79
 Instrumentation Services,18051,35956,79
 Mechanical Services,18048,35957,76
-NDE & Inspection Services,18039,35958,67
+Mechanical Services,18048,35958,76
 Mechanical Services,18048,35959,76
-NDE & Inspection Services,18039,35960,67
+Mechanical Services,18048,35960,76
 Mechanical Services,18048,35961,76
-NDE & Inspection Services,18039,35962,67
+Mechanical Services,18048,35962,76
 Mechanical Services,18048,35963,76
-NDE & Inspection Services,18039,35964,67
+Mechanical Services,18048,35964,76
 Mechanical Services,18048,35965,76
-NDE & Inspection Services,18039,35966,67
+Mechanical Services,18048,35966,76
 Mechanical Services,18048,35967,76
-NDE & Inspection Services,18039,35968,67
+Mechanical Services,18048,35968,76
 Instrumentation Services,18051,35969,79
 Maintenance Insulation,18037,35970,65
 Piping (Steam tracing),18048,35971,92
@@ -41490,7 +41490,6 @@ Instrumentation Services,18051,46862,79
 Mechanical Services,18048,46863,76
 Mechanical Static spares,18050,46864,78
 Maintenance Insulation,18037,46865,65
-Piping (Steam tracing),18048,46866,92
 Maintenance Rotating Services,18040,46867,68
 Mechanical Rotating Spares,18045,46868,73
 Maintenance Rotating Services,18040,46869,68
@@ -46571,11 +46570,11 @@ ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,51967,97
 ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,51968,97
 Instrumentation Services,18051,51969,79
 Instrumentation Services,18051,51970,79
-Mechanical Services,,51971,76
-Mechanical Services,,51972,76
-Mechanical Services,,51973,76
-Mechanical Services,,51974,76
-Mechanical Services,,51975,76
+Mechanical Services,18048,51971,76
+Mechanical Services,18048,51972,76
+Mechanical Services,18048,51973,76
+Mechanical Services,18048,51974,76
+Mechanical Services,18048,51975,76
 Mechanical Services,,51976,76
 Mechanical Services,,51977,76
 Mechanical Services,,51978,76
@@ -46657,8 +46656,8 @@ Mechanical Services,,52053,76
 Mechanical Services,,52054,76
 Mechanical Services,18048,52055,76
 Mechanical Services,,52056,76
-Mechanical Services,,52057,76
-Mechanical Services,,52058,76
+Mechanical Services,18048,52057,76
+Mechanical Services,18048,52058,76
 Instrumentation Services,18051,52059,79
 Instrumentation Services,18051,52060,79
 VALVES - REGULAR,18048,52061,63
@@ -49648,7 +49647,7 @@ Piping (Steam tracing),18048,55058,92
 Maintenance Insulation,18037,55060,65
 Mechanical Services,18040,55061,76
 Mechanical Services,18048,55062,76
-Mechanical Services,,55063,76
+Mechanical Services,18048,55063,76
 Mechanical Services,18048,55064,76
 Mechanical Services,18048,55065,76
 Mechanical Services,18048,55066,76
@@ -50696,7 +50695,6 @@ Electrical Services,18047,56119,75
 Electrical Services,18047,56120,75
 Electrical Services,18047,56121,75
 Maintenance Rotating Services,18040,56122,68
-Maintenance Insulation,,56123,65
 Instrumentation Services,18051,56127,79
 ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,56129,97
 Analyser Services,18051,56130,95
@@ -53270,9 +53268,7 @@ Mechanical Static spares,18050,58709,78
 ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,58710,97
 ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,58711,97
 Electrical Services,18047,58712,75
-Piping (Steam tracing),18048,58713,92
 Piping (Steam tracing),18048,58714,92
-Mechanical Static spares,18050,58715,78
 Mechanical Static spares,18050,58716,78
 Mechanical Static spares,18050,58717,78
 Mechanical Static spares,18050,58718,78
@@ -53284,7 +53280,6 @@ Mechanical Static spares,18050,58723,78
 Maintenance Welding,18038,58724,66
 Maintenance Insulation,18037,58725,65
 Instrumentation Services,18051,58726,79
-Maintenance Insulation,,58727,65
 Mechanical Services,18048,58728,76
 Mechanical Static spares,18050,58729,78
 Maintenance Insulation,18037,58730,65
@@ -53375,3 +53370,622 @@ Instrumentation Services,18051,58814,79
 ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,58815,97
 Maintenance Insulation,18037,58816,65
 Maintenance Insulation,18037,58817,65
+Instrumentation Services,18051,58818,79
+Instrumentation Services,18051,58819,79
+Instrumentation Services,18051,58820,79
+Personal Protective Equipment,18116,58821,96
+Maintenance Rotating Services,18040,58822,68
+Mechanical Static spares,18043,58823,78
+Electrical Services,18047,58824,75
+Maintenance Welding,18038,58825,66
+Mechanical Static spares,18050,58826,78
+Maintenance Welding,18038,58827,66
+Mechanical Static spares,18050,58828,78
+Mechanical Services,18048,58829,76
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,58830,97
+Electrical Services,18047,58831,75
+Electrical Services,18047,58832,75
+Electrical Services,18047,58833,75
+Maintenance Rotating Services,18040,58834,68
+Maintenance Rotating Services,18040,58835,68
+Maintenance Rotating Services,18040,58836,68
+Maintenance Additional Spares,18059,58837,87
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,58838,97
+Maintenance Civil Services,18052,58839,80
+Analyser Services,,58840,95
+Maintenance Insulation,18037,58841,65
+Analyser Services,,58842,95
+Electrical Services,18047,58843,75
+Mechanical Services,,58844,76
+Mechanical Services,18048,58845,76
+Analyser Services,,58846,95
+Analyser Services,,58847,95
+Mechanical Services,18048,58848,76
+Maintenance Rotating Services,18040,58849,68
+Maintenance Insulation,18037,58850,65
+Maintenance Rotating Services,18040,58851,68
+Maintenance Insulation,18037,58852,65
+Maintenance Rotating Services,18040,58853,68
+Maintenance Insulation,18037,58854,65
+Maintenance Rotating Services,18040,58855,68
+Maintenance Insulation,18037,58856,65
+Maintenance Rotating Services,18040,58857,68
+Maintenance Insulation,18037,58858,65
+Maintenance Rotating Services,18040,58859,68
+Maintenance Insulation,18037,58860,65
+Maintenance Rotating Services,18040,58861,68
+Maintenance Insulation,18037,58862,65
+Maintenance Rotating Services,18040,58863,68
+Maintenance Insulation,18037,58864,65
+Mechanical Services,18048,58865,76
+Mechanical Services,18048,58866,76
+Mechanical Services,18048,58867,76
+Mechanical Services,18048,58868,76
+Mechanical Services,18048,58869,76
+Maintenance Civil Services,18052,58870,80
+Piping (Steam tracing),18048,58871,92
+Mechanical Services,18048,58872,76
+Piping (Steam tracing),18048,58873,92
+Mechanical Services,18048,58874,76
+Maintenance Civil Services,18052,58875,80
+Maintenance Insulation,18037,58876,65
+Mechanical Static spares,18050,58877,78
+Mechanical Services,18048,58878,76
+Mechanical Services,18048,58879,76
+Mechanical Services,18048,58880,76
+Electrical Services,18047,58881,75
+Electrical Services,18047,58882,75
+Maintenance Welding,18038,58883,66
+Electrical Services,18047,58884,75
+Electrical Services,18047,58885,75
+Mechanical Services,18048,58886,76
+Mechanical Services,18048,58887,76
+NDE & Inspection Services,18039,58888,67
+NDE & Inspection Services,18039,58889,67
+Mechanical Services,18048,58890,76
+NDE & Inspection Services,18039,58891,67
+Mechanical Services,18048,58892,76
+NDE & Inspection Services,18039,58893,67
+Mechanical Services,18048,58894,76
+NDE & Inspection Services,18039,58895,67
+Mechanical Services,18048,58896,76
+NDE & Inspection Services,18039,58897,67
+Mechanical Services,18048,58898,76
+Mechanical Services,18048,58899,76
+Mechanical Static spares,18050,58900,78
+Maintenance Insulation,18037,58901,65
+Electrical Services,18047,58902,75
+Electrical Services,18047,58903,75
+Electrical Services,18047,58904,75
+Mechanical Static spares,18050,58905,78
+Electrical Services,18047,58906,75
+Electrical Services,18047,58907,75
+Electrical Services,18047,58908,75
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,58909,97
+Electrical Services,18047,58910,75
+Electrical Spares,18041,58911,69
+Maintenance Insulation,18037,58912,65
+Electrical Services,18047,58913,75
+Electrical Spares,18041,58914,69
+Maintenance Insulation,18037,58915,65
+Electrical Services,18047,58916,75
+Electrical Spares,18041,58917,69
+Maintenance Insulation,18037,58918,65
+Electrical Services,18047,58919,75
+Electrical Spares,18041,58920,69
+Maintenance Insulation,18037,58921,65
+Electrical Services,18047,58922,75
+Electrical Spares,18041,58923,69
+Electrical Services,18047,58924,75
+Electrical Spares,18041,58925,69
+Electrical Services,18047,58926,75
+Electrical Spares,18041,58927,69
+Electrical Services,18047,58928,75
+Electrical Spares,18041,58929,69
+Maintenance Insulation,18037,58930,65
+Electrical Services,18047,58931,75
+Electrical Spares,18041,58932,69
+Maintenance Insulation,18037,58933,65
+Electrical Services,18047,58934,75
+Electrical Spares,18041,58935,69
+Maintenance Insulation,18037,58936,65
+Electrical Services,18047,58937,75
+Electrical Spares,18041,58938,69
+Maintenance Insulation,18037,58939,65
+Electrical Services,18047,58940,75
+Electrical Spares,18041,58941,69
+Maintenance Insulation,18037,58942,65
+Electrical Services,18047,58943,75
+Electrical Spares,18041,58944,69
+Maintenance Insulation,18037,58945,65
+Electrical Services,18047,58946,75
+Electrical Spares,18041,58947,69
+Maintenance Insulation,18037,58948,65
+Electrical Services,18047,58949,75
+Electrical Spares,18041,58950,69
+Maintenance Insulation,18037,58951,65
+Electrical Services,18047,58952,75
+Electrical Spares,18041,58953,69
+Maintenance Insulation,18037,58954,65
+Electrical Services,18047,58955,75
+Electrical Spares,18041,58956,69
+Maintenance Insulation,18037,58957,65
+Electrical Services,18047,58958,75
+Electrical Spares,18041,58959,69
+Maintenance Insulation,18037,58960,65
+Electrical Services,18047,58961,75
+Electrical Spares,18041,58962,69
+Maintenance Insulation,18037,58963,65
+Electrical Services,18047,58964,75
+Electrical Spares,18041,58965,69
+Maintenance Insulation,18037,58966,65
+Electrical Services,18047,58967,75
+Electrical Spares,18041,58968,69
+Maintenance Insulation,18037,58969,65
+Electrical Services,18047,58970,75
+Electrical Spares,18041,58971,69
+Maintenance Insulation,18037,58972,65
+Electrical Services,18047,58973,75
+Electrical Spares,18041,58974,69
+Maintenance Insulation,18037,58975,65
+Electrical Services,18047,58976,75
+Electrical Spares,18041,58977,69
+Maintenance Insulation,18037,58978,65
+Electrical Services,18047,58979,75
+Electrical Spares,18041,58980,69
+Maintenance Insulation,18037,58981,65
+Electrical Services,18047,58982,75
+Electrical Spares,18041,58983,69
+Maintenance Insulation,18037,58984,65
+Electrical Services,18047,58985,75
+Electrical Spares,18041,58986,69
+Maintenance Insulation,18037,58987,65
+Electrical Services,18047,58988,75
+Electrical Spares,18041,58989,69
+Maintenance Insulation,18037,58990,65
+Electrical Services,18047,58991,75
+Electrical Spares,18041,58992,69
+Maintenance Insulation,18037,58993,65
+Electrical Services,18047,58994,75
+Electrical Spares,18041,58995,69
+Maintenance Insulation,18037,58996,65
+Maintenance Insulation,18037,58997,65
+Piping (Steam tracing),18048,58998,92
+Electrical Services,18047,58999,75
+Analyser Services,18051,59000,95
+Analyser Services,18051,59001,95
+Electrical Services,18047,59002,75
+Analyser Services,18051,59003,95
+Electrical Services,18047,59004,75
+Instrumentation Services,18051,59005,79
+Instrumentation Services,18043,59006,79
+Instrumentation Services,18051,59007,79
+Instrument Spares,18043,59008,71
+Maintenance Insulation,18037,59009,65
+Maintenance Insulation,18037,59010,65
+Maintenance Insulation,18037,59011,65
+Maintenance Insulation,18037,59012,65
+Instrumentation Services,18051,59013,79
+Instrument Spares,18043,59014,71
+Maintenance Insulation,18037,59015,65
+Maintenance Insulation,18037,59016,65
+Instrumentation Services,18051,59017,79
+Instrument Spares,18043,59018,71
+Instrumentation Services,18051,59019,79
+Instrument Spares,18043,59020,71
+Piping (Steam tracing),18048,59021,92
+Piping (Steam tracing),18048,59022,92
+Piping (Steam tracing),18048,59023,92
+Piping (Steam tracing),18048,59024,92
+Piping (Steam tracing),18048,59025,92
+Piping (Steam tracing),18048,59026,92
+Maintenance Insulation,18048,59027,65
+Piping (Steam tracing),18037,59028,92
+Maintenance Insulation,18037,59029,65
+Piping (Steam tracing),18048,59030,92
+Electrical Services,18047,59031,75
+Piping (Steam tracing),18048,59032,92
+Piping (Steam tracing),18048,59033,92
+Electrical Services,18047,59034,75
+Piping (Steam tracing),18048,59035,92
+Electrical Services,18047,59036,75
+Piping (Steam tracing),18048,59037,92
+Maintenance Insulation,18037,59038,65
+Maintenance Insulation,18037,59039,65
+Maintenance Scaffolding,18036,59040,64
+Mechanical Services,18048,59041,76
+Mechanical Static spares,18050,59042,78
+Maintenance Scaffolding,18036,59043,64
+Maintenance Insulation,18037,59044,65
+Mechanical Services,18048,59045,76
+Mechanical Static spares,18050,59046,78
+Maintenance Scaffolding,18036,59047,64
+Piping (Steam tracing),18048,59048,92
+Maintenance Insulation,18037,59049,65
+Electrical Services,18047,59050,75
+Electrical Services,18047,59051,75
+Electrical Services,18047,59052,75
+Electrical Services,18047,59053,75
+Electrical Services,18047,59054,75
+Mechanical Services,18048,59055,76
+Maintenance Civil Services,18052,59056,80
+Instrumentation Services,18051,59057,79
+Instrument Spares,18043,59058,71
+Maintenance Civil Services,18052,59059,80
+Maintenance Civil Services,18052,59060,80
+Maintenance Civil Services,18052,59061,80
+Maintenance Civil Services,18052,59062,80
+Operation Chemicals,18070,59063,99
+Operation Chemicals,18070,59064,99
+Personal Protective Equipment,18188,59065,96
+Mechanical Services,18048,59066,76
+Mechanical Static spares,18050,59067,78
+Mechanical Static spares,18050,59068,78
+Maintenance Welding,18183,59069,66
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59070,97
+Maintenance Rotating Services,18040,59071,68
+Instrument Spares,18045,59072,71
+Instrumentation Services,18051,59073,79
+Instrument Spares,18043,59074,71
+Maintenance Rotating Services,18040,59075,68
+Mechanical Rotating Spares,18045,59076,73
+Maintenance Rotating Services,18040,59077,68
+Mechanical Rotating Spares,18045,59078,73
+Maintenance Rotating Services,18040,59081,68
+Mechanical Rotating Spares,18045,59082,73
+Maintenance Rotating Services,18040,59083,68
+Mechanical Rotating Spares,18045,59084,73
+Maintenance Rotating Services,18040,59085,68
+Mechanical Rotating Spares,18045,59086,73
+Electrical Services,18047,59087,75
+Electrical Spares,18041,59088,69
+Electrical Services,18047,59089,75
+Electrical Spares,18041,59090,69
+Maintenance Scaffolding,18036,59091,64
+Maintenance Insulation,18037,59092,65
+Maintenance Scaffolding,18036,59093,64
+Maintenance Insulation,18037,59094,65
+Electrical Services,18047,59095,75
+Electrical Spares,18041,59096,69
+Maintenance Insulation,18037,59097,65
+Personal Protective Equipment,18064,59098,96
+Mechanical Services,18048,59099,76
+Mechanical Services,18048,59100,76
+Mechanical Services,18048,59101,76
+Mechanical Services,18048,59102,76
+Mechanical Services,18048,59103,76
+Mechanical Services,18048,59104,76
+Mechanical Services,18048,59105,76
+Mechanical Services,18048,59106,76
+Mechanical Services,18048,59107,76
+Electrical Services,18047,59109,75
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59110,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59111,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59112,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59113,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59114,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59115,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59116,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59117,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59118,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59119,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59120,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59121,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59122,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59123,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59124,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59125,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59126,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59127,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59128,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59129,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59130,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59131,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59132,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59133,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59134,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59135,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59136,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59137,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59138,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59139,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59140,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59141,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59142,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59143,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59144,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59145,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59146,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59147,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59148,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59149,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59150,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59151,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59152,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59153,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59154,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59155,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59156,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59157,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59158,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59159,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59160,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59161,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59162,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59163,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59164,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59165,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59166,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59167,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59168,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59169,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59170,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59171,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59172,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59173,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59174,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59175,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59176,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59177,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59178,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59179,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59180,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59181,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59182,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59183,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59184,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59185,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59186,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59187,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59188,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59189,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59190,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59191,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59192,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59193,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59194,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59195,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59196,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59197,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59198,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59199,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59200,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59201,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59202,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59203,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59204,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59205,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59206,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59207,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59208,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59209,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59210,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59211,97
+Instrumentation Services,18051,59212,79
+Operation Chemicals,18082,59213,99
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59214,97
+Mechanical Services,18048,59216,76
+Electrical Services,18047,59217,75
+Electrical Services,18047,59218,75
+Electrical Services,18047,59219,75
+Maintenance Rotating Services,18040,59220,68
+Mechanical Rotating Spares,18045,59221,73
+Maintenance Rotating Services,18040,59222,68
+Mechanical Rotating Spares,18045,59223,73
+Maintenance Rotating Services,18040,59224,68
+Mechanical Rotating Spares,18045,59225,73
+Maintenance Rotating Services,18040,59226,68
+Mechanical Rotating Spares,18045,59227,73
+Maintenance Scaffolding,18036,59228,64
+Maintenance Rotating Services,18040,59229,68
+Mechanical Rotating Spares,18045,59230,73
+Maintenance Insulation,18037,59231,65
+Electrical Services,18047,59232,75
+Mechanical Services,18048,59233,76
+Mechanical Services,18048,59234,76
+Mechanical Services,18048,59235,76
+Electrical Services,18047,59236,75
+Piping (Steam tracing),18048,59237,92
+Electrical Services,18047,59238,75
+Electrical Services,18047,59239,75
+Mechanical Services,18040,59240,76
+Mechanical Static spares,18050,59241,78
+Maintenance Rotating Services,18040,59242,68
+Electrical Services,18047,59243,75
+Electrical Spares,18041,59244,69
+Maintenance Insulation,18037,59245,65
+Electrical Services,18047,59246,75
+Electrical Spares,18041,59247,69
+Maintenance Insulation,18037,59248,65
+Maintenance Rotating Services,18040,59249,68
+Electrical Services,18047,59250,75
+Electrical Spares,18041,59251,69
+Maintenance Insulation,18037,59252,65
+Maintenance Rotating Services,18040,59253,68
+Electrical Services,18047,59254,75
+Electrical Spares,18041,59255,69
+Maintenance Insulation,18037,59256,65
+Mechanical Services,18048,59257,76
+Mechanical Services,18048,59258,76
+Mechanical Static spares,18050,59259,78
+Mechanical Static spares,18050,59260,78
+Mechanical Services,18048,59261,76
+Piping (Steam tracing),18048,59262,92
+Mechanical Static spares,18050,59263,78
+Maintenance Rotating Services,18040,59264,68
+Piping (Steam tracing),18048,59265,92
+Mechanical Static spares,18050,59266,78
+Maintenance Rotating Services,18040,59267,68
+Maintenance Rotating Services,18040,59268,68
+Piping (Steam tracing),18048,59269,92
+Mechanical Static spares,18048,59270,78
+Mechanical Services,18048,59271,76
+Mechanical Services,18048,59272,76
+Mechanical Services,18048,59273,76
+Mechanical Services,18048,59274,76
+Mechanical Services,18048,59275,76
+Mechanical Services,18048,59276,76
+Mechanical Services,18048,59277,76
+Mechanical Services,18048,59278,76
+Mechanical Services,18048,59279,76
+Maintenance Welding,18087,59280,66
+Mechanical Services,18048,59281,76
+Mechanical Services,18048,59282,76
+Mechanical Static spares,18050,59283,78
+Mechanical Services,18048,59284,76
+Mechanical Services,18048,59285,76
+Mechanical Services,18048,59286,76
+Mechanical Services,18048,59287,76
+Mechanical Services,18048,59288,76
+Mechanical Services,18048,59289,76
+Maintenance Rotating Services,18040,59290,68
+Maintenance Rotating Services,18040,59291,68
+Maintenance Rotating Services,18040,59292,68
+Maintenance Insulation,18037,59293,65
+Maintenance Rotating Services,18040,59294,68
+Maintenance Rotating Services,18040,59295,68
+Maintenance Insulation,18037,59296,65
+Maintenance Rotating Services,18040,59297,68
+Maintenance Insulation,18037,59298,65
+Maintenance Insulation,18037,59299,65
+Maintenance Insulation,18037,59300,65
+Maintenance Rotating Services,18040,59301,68
+Mechanical Services,18048,59302,76
+Maintenance Insulation,18037,59303,65
+Maintenance Rotating Services,18040,59304,68
+Mechanical Services,18048,59305,76
+Mechanical Services,18048,59306,76
+Mechanical Services,18048,59307,76
+Maintenance Rotating Services,18040,59308,68
+Mechanical Services,18048,59309,76
+Mechanical Services,18048,59310,76
+Mechanical Services,18048,59311,76
+Maintenance Insulation,18037,59312,65
+Maintenance Welding,18038,59313,66
+Maintenance Scaffolding,18036,59314,64
+Maintenance Rotating Services,18040,59315,68
+Mechanical Services,18048,59316,76
+Mechanical Services,18048,59317,76
+Vehicle and Spares,18059,59318,100
+Mechanical Services,18048,59319,76
+Mechanical Services,18048,59320,76
+Mechanical Services,18048,59321,76
+Mechanical Services,18048,59322,76
+Mechanical Services,18048,59323,76
+Mechanical Services,18048,59324,76
+Mechanical Services,18048,59325,76
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59326,97
+Mechanical Services,18048,59327,76
+Mechanical Services,18048,59328,76
+Mechanical Services,18048,59329,76
+Mechanical Services,18048,59330,76
+Mechanical Services,18048,59331,76
+Mechanical Services,10,59332,76
+Mechanical Services,18048,59333,76
+Mechanical Services,18048,59334,76
+Mechanical Services,18048,59335,76
+Mechanical Services,18048,59336,76
+Mechanical Services,18048,59337,76
+Mechanical Services,18048,59338,76
+Mechanical Services,18048,59339,76
+Mechanical Services,18048,59340,76
+Mechanical Services,18048,59341,76
+Mechanical Services,18048,59342,76
+Mechanical Services,18048,59343,76
+Mechanical Services,10,59344,76
+Mechanical Services,18048,59345,76
+Mechanical Services,18048,59346,76
+Mechanical Services,18048,59347,76
+Mechanical Services,18048,59348,76
+Mechanical Services,18048,59349,76
+Maintenance Welding,18038,59350,66
+Mechanical Static spares,18050,59351,78
+Mechanical Services,18048,59352,76
+Mechanical Services,18048,59353,76
+Mechanical Services,18048,59354,76
+Mechanical Services,18048,59355,76
+Mechanical Services,18048,59356,76
+Mechanical Services,18048,59357,76
+Mechanical Services,18048,59358,76
+Mechanical Services,18048,59359,76
+Mechanical Services,18048,59360,76
+Mechanical Services,18048,59361,76
+Mechanical Services,18048,59362,76
+Mechanical Services,18048,59363,76
+Mechanical Services,18048,59364,76
+Mechanical Services,18048,59365,76
+Mechanical Services,18048,59366,76
+Mechanical Services,18048,59367,76
+Mechanical Services,18048,59368,76
+Mechanical Services,18048,59369,76
+Instrumentation Services,,59370,79
+Instrumentation Services,,59371,79
+Maintenance Welding,18038,59372,66
+Instrumentation Services,,59373,79
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18051,59374,97
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18051,59375,97
+Maintenance Insulation,18037,59376,65
+Mechanical Services,18048,59377,76
+Maintenance Welding,18038,59378,66
+Maintenance Welding,18038,59379,66
+Maintenance Insulation,18037,59380,65
+Piping (Steam tracing),18048,59381,92
+Maintenance Scaffolding,18036,59382,64
+Mechanical Services,18048,59383,76
+Mechanical Static spares,18050,59384,78
+Jet Wash Cleaning,18048,59385,93
+Instrumentation Services,18051,59386,79
+Mechanical Services,18048,59387,76
+Maintenance Insulation,18037,59388,65
+Piping (Steam tracing),18048,59389,92
+Mechanical Static spares,18050,59390,78
+Piping (Steam tracing),18048,59391,92
+Maintenance Insulation,18037,59392,65
+Instrumentation Services,18051,59393,79
+Maintenance Scaffolding,18036,59394,64
+Maintenance Scaffolding,18036,59395,64
+Maintenance Scaffolding,18036,59396,64
+Maintenance Welding,18038,59397,66
+Mechanical Services,18048,59398,76
+Maintenance Insulation,18037,59399,65
+Maintenance Welding,18038,59400,66
+Mechanical Services,18048,59401,76
+Maintenance Welding,18038,59402,66
+Mechanical Services,18048,59403,76
+Maintenance Insulation,,59404,65
+Mechanical Services,18048,59405,76
+Maintenance Insulation,18037,59406,65
+Maintenance Welding,18038,59408,66
+Maintenance Insulation,18037,59409,65
+Piping (Steam tracing),18048,59410,92
+Maintenance Welding,18038,59411,66
+Maintenance Welding,18038,59412,66
+Maintenance Welding,18038,59413,66
+Maintenance Welding,18038,59414,66
+Jet Wash Cleaning,18048,59415,93
+Jet Wash Cleaning,18048,59416,93
+ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,59417,97
+Piping (Steam tracing),18048,59418,92
+Maintenance Scaffolding,18036,59419,64
+Maintenance Insulation,18037,59420,65
+Maintenance Scaffolding,18036,59421,64
+Maintenance Scaffolding,18036,59422,64
+Maintenance Insulation,18037,59423,65
+Piping (Steam tracing),18048,59424,92
+Maintenance Welding,18038,59425,66
+Maintenance Insulation,18037,59426,65
+Piping (Steam tracing),18048,59427,92
+Maintenance Insulation,18037,59428,65
+Maintenance Scaffolding,18036,59429,64
+Maintenance Scaffolding,18036,59430,64
+Maintenance Scaffolding,18036,59431,64
+Maintenance Scaffolding,18036,59432,64
+Maintenance Scaffolding,18036,59433,64
+Maintenance Scaffolding,18036,59434,64
+Piping (Steam tracing),18048,59435,92
+Instrumentation Services,18051,59436,79
+Instrument Spares,18043,59437,71
+Maintenance Rotating Services,18040,59438,68
+Mechanical Rotating Spares,18045,59439,73
+Instrumentation Services,18051,59440,79
+Mechanical Services,18048,59442,76

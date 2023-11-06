@@ -4,6 +4,11 @@
 223866,9685,TURNING GEAR,173-XP-001A-XX-30
 94762,78366,Hoist crane,145-XF-040A-F
 220005,78371,LLF on Analysers and Sampling System for PM-1532,LLF on Analysers and Sampling System
+220006,78371,LLF for Analysers department,LLF inspections U&O-Analyser
+220029,78371,LLF inspection U&O-STAT,LLF inspection U&O-STAT
+220030,78371,LLF inspection U&O-Rota,LLF inspection U&O-Rota
+220031,78371,LLF inspection U&O-Elec,LLF inspection U&O-Elec
+220032,78371,LLF inspection U&O-INS,LLF inspection U&O-INS
 221008,78387,AHU-2 6 month's PM for Contractor (Contains 35 Equipment. Find in the Document section.),AHU-2
 222643,78387,ANALYZER CABINET AIR CONDITIONER(for 6 months: includes -32 equipment.),ACAC
 222659,78387,ANALYZERS SHELTER AIR CONDITIONER,ASAC
@@ -5366,11 +5371,6 @@
 78384,78371,Chemical Storage,Unit 87
 80520,78371,The other equipment,U&O-General
 80764,78371,Fuel System,Unit 78
-220006,78371,LLF for Analysers department,LLF inspections U&O-Analyser
-220029,78371,LLF inspection U&O-STAT,LLF inspection U&O-STAT
-220030,78371,LLF inspection U&O-Rota,LLF inspection U&O-Rota
-220031,78371,LLF inspection U&O-Elec,LLF inspection U&O-Elec
-220032,78371,LLF inspection U&O-INS,LLF inspection U&O-INS
 86692,78372,Process condensate storage tank,172-TK-001
 91541,78372,FILTERED WATER TANK,171-TK-001A
 91542,78372,FILTERED WATER TANK,171-TK-001B
@@ -41440,7 +41440,6 @@
 175453,175190,Instrumentation Engineer,Qosimov Marufjon
 175454,175190,Electrical Junior Technician,Shaymardonov Sherzod
 175455,175190,Electrical Junior Technician,Shukurov Husniddin
-175456,175190,Analyzer Technician,To'rayev Bobir
 175457,175190,Static Engineer,Toshqobilov Javoxir
 175458,175190,Instrumentation Technician,Turaev Ilhom
 175460,175190,Rotating Junior Technician,Umrzoqov Sarvar
@@ -41454,6 +41453,7 @@
 175468,175190,Analyzer  Technician,Ziyodullayev Sharofiddin
 175469,175190,Rotating Technician,Musharrapov Faxriyor
 175470,175190,Static Junior Technician,Tilavov Shohijahon
+175471,175190,Electrical technician, Ravshanov Nodirbek Baxtiyarovich
 209198,175190,Rotating Supervisor,Kurbanov Gulmurod
 221544,175190,Analyzer  Technician,Shaxrizod Orziyev
 223545,175190,Junior electrician,Buriyev Abror
@@ -41483,6 +41483,7 @@
 175225,175191,Electrical Junior technician,Fayzullayev Sardorbek
 175226,175191,Junior Electrical technician,Kamolov Dilshod Farmon o`g`li
 175227,175191,Junior Electrician,Boymurodov Jasurbek Baxriddin o`g`li
+175456,175191,Instrumentation Engineer,Turayev Bobir Bahodir o'g'li
 175765,175191,Field Manager (PWU),Buriev Mansur
 175766,175191,Senior Maintenance Planner (PWU) & CMMS Lead Engineer,Xasanov Mansur Tulqin o'g'li
 211381,175191,Rotating Engineer,Soibov Asomiddin
@@ -44979,6 +44980,7 @@
 222924,218261,Driver, Murodov Furqat Zokir o'g'li
 222925,218261,Driver,Ahmedov Sanjar Asad o'g'li
 222926,218261,Driver,Omonov Sanjarbek Xurram o'g'li
+224100,218261,Driver,Namatov Anvar Pulatovich 
 218561,218262,Trainee,Fayziyev Elyor Ziyodullayevich
 218564,218262,Trainee,Abdurahmonov Jo`rabek Isomiddin o`g`li 
 218591,218262,Trainee,Aytniyazov Ayrug`an Paraxat uli`
@@ -45448,7 +45450,6 @@
 175238,218533,Trainee,Bo`riyev Muhsin Baxrom o`g`li
 175245,218533,Trainee,Doniyev Doston Tursunpo`lot o`g`li
 175264,218533,Trainee,Ubaydullayev Doston Yunus o`g`li
-175471,218533,Trainee, Ravshanov Nodirbek Baxtiyarovich
 208788,218533,Trainee,Shodiyev Shoxruh Erkin o'g'li
 208815,218533,Trainee,Doniyev Doston Tursunpo'lot o'g'li
 210576,218533,Analyser Engineer,Ziyadullayev Sunnatillo Ziyodulla o'g'li

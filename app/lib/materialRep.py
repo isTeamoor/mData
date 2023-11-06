@@ -6,7 +6,13 @@ from ..lib.gen import filterDF
 ### Номера Reservations, материалы по которым уже списаны
 inactive = [
 771,848,937,938,939,1049,1050,1051,1114,1272,1320,1322,1452,1592,1609,3798,1871,1873,1874,1902,1922,1924,2356,2306,2355,2826,3806,3843,2859,2873,3088,3093,3927,3135,3242,3797,3826,3983,3827,
-3845,3977,3978,3979,3980,4346,4347,4348,4349,4038,4039,4040,4041,4042,4043,4125,4126,4159,4178,4194,4182,4198,4251,4252,4324,4325,921,2357,3227,3257,1126,885,1901,1921,1923,756,
+3845,3977,3978,3979,3980,4346,4347,4348,4349,4038,4039,4040,4041,4042,4043,4125,4126,4159,4178,4194,4182,4198,4251,4252,4324,4325,921,2357,3227,3257,1126,885,1901,1921,1923,756,2045,2044,
+
+#Cofe
+1538, 1756, 1847, 1946, 2695, 4554, 4555, 4556, 4557, 4684, 4685, 5244, 5311, 5418, 4014, 4116, 4117, 4155, 4245, 4394, 4396, 4463, 4620, 1350, 2886, 4015, 4761, 4763, 4765, 5362, 2887, 4826,
+4782, 4483, 3032, 3033, 3412, 3414, 3416, 3418, 3423, 3465, 3471, 3485, 3489, 3507, 3515, 3596, 3766, 4095, 3396, 3397, 3398, 3399, 3400, 3405, 3408, 3409, 3410, 3411, 3413, 3420, 3422, 3424, 
+3428, 3434, 3455, 3457, 3460, 3470, 3472, 3475, 3479, 3482, 3483, 3486, 3490, 3513, 3516, 3519, 3521, 3524, 3552, 3591, 3597, 3767, 4480, 3545, 4119, 4623, 4754, 5310, 5374, 5416, 4481, 4552,
+1774, 4244, 
 ]
 
 to_014 = ['6935','5841','7139','5230','4189','3494','2799','5749','1738','1308','1309','1310','1311','1312','1329','1330','1331','1333','1351','1354','1372','1374','1376','1377','1378','892','2204',
@@ -28,14 +34,18 @@ department_Filters['rmpd'] = [
     {"field":'isRMPD', "operator":"==", "value":"'yes'"}, "&", {"field":'Reserved By', "operator":"!=", "value":"'Mirjakhon Toirov'"}, 
     "&",{"field":'Reserved By', "operator":"!=", "value":"'Bobur Aralov'"}
 ]
+department_Filters['cofe'] = [ {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},]
+
+
+
 
 
 
 def matReport(repMonth, repYear, transactions, department):
-    ### 0. Исключение (забыл добавить в далолатнома в августе)
-    transactions.loc [ transactions['Reservation Number']==3269, 'closedMonth' ] = 9
-
-    
+    ### 0. Исключение
+    transactions.loc[ transactions['Reservation Number'] == 5850, 'Material Code' ] = '6811'
+    transactions.loc[ transactions['Reservation Number'] == 5850, 'Catalogue Description' ] = 'Stainless steel Tube for steam tracing ASTMA269 TP304 Welded Annealed Tube 1/2" O.D x 0.035" THK / Трубка из нержавеющей стали для пароспутника'
+    transactions.loc[ transactions['Reservation Number'] == 5850, 'UOMDescription' ] = 'м'
 
 
     ### 1. Подготовка DF Transactions
@@ -74,8 +84,6 @@ def matReport(repMonth, repYear, transactions, department):
     ### 3. Дополнительные транзакции, которые вводятся вручную как исключения
     begin_additional = [
     #{'Код товара':'','Материал':'','Ед.изм.':'','Quantity':0,'Reservation Number':0,'Work Order Status Description':'','closedMonth':0,'Отдел':'','Reserved By':'','WO №':0,'reservYear':2023,'reservMonth':0,'Asset Description':'', 'Объект':'',},
-    {'Код товара':'4921','Материал':'Size: 1 1/2" (Size: 40mm) Gasket, 316L SS WND GRAPH FILL 316L SS I/R 316L SS O/R RF B16.20 CL600 4.5MM thickness (3.2MM RING) Spiral Wound','Ед.изм.':'шт','Quantity':2,'Reservation Number':431,'Work Order Status Description':'Closed','closedMonth':9,'Отдел':'SLU','Reserved By':'Ulugbek  Khamroev','WO №':2771,'reservYear':2023,'reservMonth':8,'Asset Description':'', 'Объект':'',},
-    {'Код товара':'4973','Материал':'Size: 12" (Size: 300mm) Gasket, 316L SS WND GRAPH FILL CS I/R CS O/R RF B16.20 CL600 4.5MM thickness (3.2MM RING) Spiral Wound','Ед.изм.':'шт','Quantity':2,'Reservation Number':437,'Work Order Status Description':'Closed','closedMonth':9,'Отдел':'SLU','Reserved By':'Ulugbek  Khamroev','WO №':651,'reservYear':2023,'reservMonth':8,'Asset Description':'', 'Объект':'',},
     ]
     current_additional = []
     
@@ -102,7 +110,7 @@ def matReport(repMonth, repYear, transactions, department):
     ### 5. Объединение "на начало" и "приход", 
     begin.rename(columns={'Quantity':'Кол-во начало'}, inplace=True)
     current.rename(columns={'Quantity':'Кол-во приход'}, inplace=True)
-
+    
     rep = begin.merge(current, how='outer', on=['Код товара','Материал','Ед.изм.','Reservation Number','Work Order Status Description','closedMonth','Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект',])
 
     
@@ -234,7 +242,7 @@ def matReport(repMonth, repYear, transactions, department):
 
 
 def OneC():
-  prices = pd.read_excel("1. 1C muntasam.xlsx").rename(columns={'Unnamed: 1':'Kod', 'Unnamed: 2':'Name', 'Unnamed: 5':'Qty1', 'Unnamed: 6':'Sum1','Unnamed: 7':'Qty2', 'Unnamed: 8':'Sum2'}).iloc[16: ][['Kod', 'Name','Qty1','Sum1','Qty2','Sum2']]
+  prices = pd.read_excel("1. 1C.xlsx").rename(columns={'Unnamed: 1':'Kod', 'Unnamed: 2':'Name', 'Unnamed: 5':'Qty1', 'Unnamed: 6':'Sum1','Unnamed: 7':'Qty2', 'Unnamed: 8':'Sum2'}).iloc[16: ][['Kod', 'Name','Qty1','Sum1','Qty2','Sum2']]
   prices['Kod'] = prices['Kod'].astype(str)
   prices['Код товара'] = prices['Kod'].copy().map(lambda x: x[-4:])
   prices[['Sum1','Sum2','Qty1','Qty2']] = prices[['Sum1','Sum2','Qty1','Qty2']].fillna(0)
@@ -248,7 +256,7 @@ def OneC():
   return prices
 
 def OneCW():
-  waybill = pd.read_excel("1. 1CW muntasam.xlsx")
+  waybill = pd.read_excel("1. 1CW.xlsx")
   waybill = waybill[['Unnamed: 1','Unnamed: 6','Unnamed: 11','Unnamed: 15','Unnamed: 23','Unnamed: 24']].iloc[16:]
   waybill = waybill.loc[~waybill['Unnamed: 6'].isnull()]
   return waybill

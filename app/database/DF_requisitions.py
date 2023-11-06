@@ -41,4 +41,25 @@ reqItems = reqItems[['Requisition Number','Requisition Description','Approval Pa
  	                'Expected Purchase Price',	'raisedYear','raisedMonth',	'requiredYear', 'requiredMonth',	'Completed Date Time',	'Completed By',	'Cancelled Date Time',	'Cancelled By',
                     'Account Code Name', 'Account Code Description',	'Comment','User Defined Text Box','Work Order Number','Work Order Status Description','Priority Description',
                     'Department Name',	'Department Description', 'Asset Description',	'Asset Number',	'Account Code (from WO)',	'Account Code Description (from WO)']]
+reqItems = reqItems.loc [ reqItems['Cancelled By'].isna() ]
 
+
+
+
+
+
+
+
+maintenance_ApprovalPath = ['Chinoz Terminal', 'Civil', 'Civil Department', 'CofE', 'CofE Default', 'CofE department', 
+                            'Contract Services Deparment', 'Maintenance', 'Material Control Department', 'PWU Default',
+                            'Routine Maintenance Department', 'SLU Default', 'TAR', 'Turnaround', 
+                              ]
+maintenance_ReservedBy = ['Super User Mansur Khasanov', 'Abusoleh Asrorxonov Qutbiddinovich', 'Administrator Admin', 'Azizbek Berdiev',
+                          "Mansur Xasanov Tulqin o'g'li", "Maruf Toshpulatov O'rin og'li", "Mirsaid Xaydorov Baxtiyor o'g'li", 
+                          ]
+
+reqItems_maintenance = reqItems.loc[ (reqItems['Approval Path Name'].isin(maintenance_ApprovalPath))
+                                   | (reqItems['Requisitioned By'].isin(maintenance_ReservedBy)) ]
+
+reqItems_others = reqItems.loc[ (~reqItems['Approval Path Name'].isin(maintenance_ApprovalPath))
+                                   & (~reqItems['Requisitioned By'].isin(maintenance_ReservedBy)) ]

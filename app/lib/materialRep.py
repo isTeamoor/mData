@@ -1,240 +1,276 @@
 import pandas as pd
 import numpy as np
-import os
 from ..lib.gen import filterDF
 
-### Номера Reservations, материалы по которым уже списаны
+
+
+#Номера Reservations, материалы по которым уже списаны
 inactive = [
-771,848,937,938,939,1049,1050,1051,1114,1272,1320,1322,1452,1592,1609,3798,1871,1873,1874,1902,1922,1924,2356,2306,2355,2826,3806,3843,2859,2873,3088,3093,3927,3135,3242,3797,3826,3983,3827,
-3845,3977,3978,3979,3980,4346,4347,4348,4349,4038,4039,4040,4041,4042,4043,4125,4126,4159,4178,4194,4182,4198,4251,4252,4324,4325,921,2357,3227,3257,1126,885,1901,1921,1923,756,2045,2044,
-
+#RMPD
+771,848,937,938,939,1049,1050,1051,1114,1272,1320,1322,1452,1592,1609,3798,1871,1873,1874,1902,1922,1924,2356,2306,2355,2826,3806,3843,2859,2873,3088,3093,3927,3135,3242,3797,
+3826,3983,3827,3845,3977,3978,3979,3980,4346,4347,4348,4349,4038,4039,4040,4041,4042,4043,4125,4126,4159,4178,4194,4182,4198,4251,4252,4324,4325,921,2357,3227,3257,1126,885,
+1901,1921,1923,756,2045,2044,
 #Cofe
-1538, 1756, 1847, 1946, 2695, 4554, 4555, 4556, 4557, 4684, 4685, 5244, 5311, 5418, 4014, 4116, 4117, 4155, 4245, 4394, 4396, 4463, 4620, 1350, 2886, 4015, 4761, 4763, 4765, 5362, 2887, 4826,
-4782, 4483, 3032, 3033, 3412, 3414, 3416, 3418, 3423, 3465, 3471, 3485, 3489, 3507, 3515, 3596, 3766, 4095, 3396, 3397, 3398, 3399, 3400, 3405, 3408, 3409, 3410, 3411, 3413, 3420, 3422, 3424, 
-3428, 3434, 3455, 3457, 3460, 3470, 3472, 3475, 3479, 3482, 3483, 3486, 3490, 3513, 3516, 3519, 3521, 3524, 3552, 3591, 3597, 3767, 4480, 3545, 4119, 4623, 4754, 5310, 5374, 5416, 4481, 4552,
-1774, 4244, 
-]
+1538, 1756, 1847, 1946, 2695, 4554, 4555, 4556, 4557, 4684, 4685, 5244, 5311, 5418, 4014, 4116, 4117, 4155, 4245, 4394, 4396, 4463, 4620, 1350, 2886, 4015, 4761, 4763, 4765, 5362, 
+2887, 4826, 4782, 4483, 3032, 3033, 3412, 3414, 3416, 3418, 3423, 3465, 3471, 3485, 3489, 3507, 3515, 3596, 3766, 4095, 3396, 3397, 3398, 3399, 3400, 3405, 3408, 3409, 3410, 3411, 
+3413, 3420, 3422, 3424, 3428, 3434, 3455, 3457, 3460, 3470, 3472, 3475, 3479, 3482, 3483, 3486, 3490, 3513, 3516, 3519, 3521, 3524, 3552, 3591, 3597, 3767, 4480, 3545, 4119, 4623, 
+4754, 5310, 5374, 5416, 4481, 4552, 1774, 4244, 1222, 1442, 1755, 1776, 1948, 2646, 4385, 4756, 5246, 5415, 1777, 2647, 4053, 4154, 4196, 4246, 4386, 4398, 4462, 4619, 4707, 4747, 
+4755, 5417, 1791, 2323, 4749, 2916, 3020, 3097, 3180, 3184, 3544, 3624, 4047, 3910, 4401, 4037, 4081, 4115, 5430, 4118, 4140, 4397, 4402, 5248, 5249, 4403, 4465, 4404, 4461, 4621, 
+4705, 5247, 5312, 5375, 4406, 4464, 4706, 4822, 4823, 4824, 4825, 5250, 5373, 5548, ]
 
-to_014 = ['6935','5841','7139','5230','4189','3494','2799','5749','1738','1308','1309','1310','1311','1312','1329','1330','1331','1333','1351','1354','1372','1374','1376','1377','1378','892','2204',
-'4179','0158','0140','0134','0114','0915','1278','1276','1275','1277','1272','1279','3190','2995','2806','2812','2813','2814','2826','2827','2828','2830','2896','2897','1307','1353','1373', '3904',
-'1375','2325','1393','3484','3017','2786','3019','4662','0899','3745','1367','2890','2891','2892','2893','2894','2452','2092','2451','2817','0155','0156','0526','0002','4188','2910','6597', '7277',
-'1622','1625','1623','1626','1624','3222','1628','1630','1627','1632','0009','0001','4346','6860','1274','1273','1352','2854','2863','2885','3480','1349','3226','2824','2935','1344','6601', '6600',
-'1337','1313','1315','1316','1317','1320','1321','1322','1323','1325','1326','1327','1568','1635','1570','1571','1588','1590','1591','1636','1603','1604','1621','2804','2807','2809','2815', '6598',
-'2816','2818','2819','2820','2821','2822','2823','2831','2834','2840','2845','2846','2847','2848','2851','2856','2858','2860','2861','2864','2878','2880','2881','2882','2883','2884','2886', '6599',
-'2887','2888','2899','2900','2901','2902','2903','2906','2936','3260','0809','0810','2453','0678','0157','0203','0113','0158','0159','6136','1575','1578','0154','6899','2450','5359','6799',
-'3227','1379','1382','1314','1319','2879','1366','2857','2865','0007','0008','5942','4140','5752','6330','1189','1324','0865','1369','0863','1355','1387','0804','1587','1328',
-'1332','2829','1406','0806','0805','1338','1342','1343','1339','1340','1341','2855','2852','3223','2862','1334','1335','1336','2850','2859','2853','1403','1574','1576','1577','1582','1360',
-'1361','1364','1365','1429','1407','0691','0692','0693','0694','0695','0700','0703','0702','0705','0706','0707','0708','1350','1371','1380','1381','1383','1384','1385','1386','1394', '1395',
-'1396','1398','1399','1589','1639','1606','1620','2835','0189','0745','0140','0230','0738','5232','5231','0899','0155','0114','0157','0526','0113','1201','1202','1203','1204','6340','2911',
-'2912','2913','7481','7407','7473','7403','2802','3229','5305','6122','6332','6900','7497','7883','7882',
-]
+#Номера Material Codes, соответствующие 014 счёту
+to_014 = ['6935','5841','7139','5230','4189','3494','2799','5749','1738','1308','1309','1310','1311','1312','1329','1330','1331','1333','1351','1354','1372','1374','1376',
+'1377','1378','892','2204','4179','0158','0140','0134','0114','0915','1278','1276','1275','1277','1272','1279','3190','2995','2806','2812','2813','2814','2826','2827','2828',
+'2830','2896','2897','1307','1353','1373', '3904','1375','2325','1393','3484','3017','2786','3019','4662','0899','3745','1367','2890','2891','2892','2893','2894','2452','2092',
+'2451','2817','0155','0156','0526','0002','4188','2910','6597', '7277','1622','1625','1623','1626','1624','3222','1628','1630','1627','1632','0009','0001','4346','6860','1274',
+'1273','1352','2854','2863','2885','3480','1349','3226','2824','2935','1344','6601', '6600','1337','1313','1315','1316','1317','1320','1321','1322','1323','1325','1326','1327',
+'1568','1635','1570','1571','1588','1590','1591','1636','1603','1604','1621','2804','2807','2809','2815', '6598','2816','2818','2819','2820','2821','2822','2823','2831','2834',
+'2840','2845','2846','2847','2848','2851','2856','2858','2860','2861','2864','2878','2880','2881','2882','2883','2884','2886', '6599','2887','2888','2899','2900','2901','2902',
+'2903','2906','2936','3260','0809','0810','2453','0678','0157','0203','0113','0158','0159','6136','1575','1578','0154','6899','2450','5359','6799','3227','1379','1382','1314',
+'1319','2879','1366','2857','2865','0007','0008','5942','4140','5752','6330','1189','1324','0865','1369','0863','1355','1387','0804','1587','1328','1332','2829','1406','0806',
+'0805','1338','1342','1343','1339','1340','1341','2855','2852','3223','2862','1334','1335','1336','2850','2859','2853','1403','1574','1576','1577','1582','1360','1361','1364',
+'1365','1429','1407','0691','0692','0693','0694','0695','0700','0703','0702','0705','0706','0707','0708','1350','1371','1380','1381','1383','1384','1385','1386','1394', '1395',
+'1396','1398','1399','1589','1639','1606','1620','2835','0189','0745','0140','0230','0738','5232','5231','0899','0155','0114','0157','0526','0113','1201','1202','1203','1204',
+'6340','2911','2912','2913','7481','7407','7473','7403','2802','3229','5305','6122','6332','6900','7497','7883','7882', '9300', '7331', '5831', '5328', ]
 
+#Фильтры transactions по департаментам
 department_Filters = {}
 department_Filters['rmpd'] = [
-    {"field":'isRMPD', "operator":"==", "value":"'yes'"}, "&", {"field":'Reserved By', "operator":"!=", "value":"'Mirjakhon Toirov'"}, 
-    "&",{"field":'Reserved By', "operator":"!=", "value":"'Bobur Aralov'"}
+{"field":'isRMPD', "operator":"==", "value":"'yes'"}, 
+"&", 
+{"field":'Reserved By', "operator":"!=", "value":"'Mirjakhon Toirov'"}, 
+"&",
+{"field":'Reserved By', "operator":"!=", "value":"'Bobur Aralov'"}
 ]
 department_Filters['cofe'] = [ {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},]
 
 
 
 
+### Дополнительные транзакции
+#{'Код товара':'','Материал':'','Ед.изм.':'','Quantity':0,'Reservation Number':0,'Work Order Status Description':'','closedMonth':0,'Отдел':'','Reserved By':'','WO №':0,'reservYear':2023,'reservMonth':0,'Asset Description':'', 'Объект':'',},
 
+begin_additional = {}
+current_additional = {}
 
-def matReport(repMonth, repYear, transactions, department):
-    ### 0. Исключение
-    transactions.loc[ transactions['Reservation Number'] == 5850, 'Material Code' ] = '6811'
-    transactions.loc[ transactions['Reservation Number'] == 5850, 'Catalogue Description' ] = 'Stainless steel Tube for steam tracing ASTMA269 TP304 Welded Annealed Tube 1/2" O.D x 0.035" THK / Трубка из нержавеющей стали для пароспутника'
-    transactions.loc[ transactions['Reservation Number'] == 5850, 'UOMDescription' ] = 'м'
+begin_additional['rmpd'] = []
+begin_additional['cofe'] = [
+{'Код товара':'5943','Материал':'Газ сжиженный ПБФ','Ед.изм.':'бал','Quantity':3,'Reservation Number':-1,'Work Order Status Description':'OnHand','closedMonth':13,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-1,'reservYear':2023,'reservMonth':13,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'6933','Материал':'Дизельное топливо GTL ','Ед.изм.':'л','Quantity':100,'Reservation Number':-2,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-2,'reservYear':2023,'reservMonth':9,'Asset Description':'CofE', 'Объект':'CofE'},
+]
 
+current_additional['rmpd'] = []
+current_additional['cofe'] = [
+{'Код товара':'6933','Материал':'Дизельное топливо GTL ','Ед.изм.':'л','Quantity':200,'Reservation Number':-2,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-2,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'9910','Материал':'ПАБ-32 Qora metall chiqindilari ','Ед.изм.':'тн','Quantity':13.917,'Reservation Number':-3,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-3,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'9911','Материал':'Медный провода разделан с бумажным и друг приделками','Ед.изм.':'кг','Quantity':800.25,'Reservation Number':-4,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-4,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'9912','Материал':'Алюмин лом листы разделан с желез приделками смешанный (Алюмин 6)','Ед.изм.':'кг','Quantity':499.8,'Reservation Number':-5,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-5,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'9913','Материал':'Алюмин лом смешанный разделан с желез приделками (Алюмин 14)','Ед.изм.':'кг','Quantity':1400.08,'Reservation Number':-6,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-6,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'9683','Материал':'СА-5 Qora metall chiqindilari ','Ед.изм.':'тн','Quantity':11.685,'Reservation Number':-7,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-7,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+]
 
-    ### 1. Подготовка DF Transactions
-    transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
-                                    & (transactions['transactYear'] == repYear)
-                                    & (~transactions['Reservation Number'].isin(inactive))
-                                    ]
-    transactions = filterDF(transactions, department_Filters[department])
-    
-    transactions  = transactions[['Material Code','Catalogue Description','UOMDescription','Quantity','Reservation Number','Work Order Status Description','closedMonth','transactMonth',
-                                  'Short Department Name','Reserved By','Work Order Number','reservYear','reservMonth','Asset Description', 'Asset Number','Actual Quantity','closedYear']]
 
-    transactions.rename(columns={'Material Code':'Код товара',
-                                 'Catalogue Description':'Материал',
-                                 'UOMDescription':'Ед.изм.',
-                                 'Asset Number':'Объект', 
-                                 'Short Department Name':'Отдел',
-                                 'Work Order Number':'WO №', 
-                                 'Actual Quantity': 'Кол-во'}, inplace=True)
-    
 
+### Корректировки
+def transCorrect(transactions):
+  transacts = transactions
 
+  ### 1. Разовые изменения
+  transacts.loc[ transacts['Reservation Number'] == 5850, 'Material Code' ] = '6811'
+  transacts.loc[ transacts['Reservation Number'] == 5850, 'Catalogue Description' ] = 'Stainless steel Tube for steam tracing ASTMA269 TP304 Welded Annealed Tube 1/2" O.D x 0.035" THK / Трубка из нержавеющей стали для пароспутника'
+  transacts.loc[ transacts['Reservation Number'] == 5850, 'UOMDescription' ] = 'м'
 
-    ### 2. Выборка транзакций на начало месяца и в течении месяца
-    begin = transactions.loc[ (transactions['transactMonth'] < repMonth)
-                            & ( 
-                                (transactions['Work Order Status Description'] != 'Closed') 
-                                | ((transactions['Work Order Status Description'] == 'Closed') & (transactions['closedMonth'] >= repMonth))
-                              )
-                            ]
-    current = transactions.loc[transactions['transactMonth'] == repMonth]
+  ### 2. Постоянные корректировки
+  transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 # 9356 - Высокотемпературный силиконовый герметик "TYTAN"
+  transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6 # 7633 - Рулон оцинкованный ГОСТ 14918-80 Ст08пс Zn120,  0,65x1250 БТ н/обр.
 
+  return transacts
 
 
 
-    ### 3. Дополнительные транзакции, которые вводятся вручную как исключения
-    begin_additional = [
-    #{'Код товара':'','Материал':'','Ед.изм.':'','Quantity':0,'Reservation Number':0,'Work Order Status Description':'','closedMonth':0,'Отдел':'','Reserved By':'','WO №':0,'reservYear':2023,'reservMonth':0,'Asset Description':'', 'Объект':'',},
-    ]
-    current_additional = []
-    
-    for row in begin_additional:
-        newRow = pd.DataFrame(row, index=[0])
-        begin = pd.concat([begin, newRow]).reset_index(drop=True)
-    for row in current_additional:
-        newRow = pd.DataFrame(row, index=[0])
-        current = pd.concat([current, newRow]).reset_index(drop=True)
 
 
+def matReport(repMonth, repYear, department, transactions):
+  transactions = transCorrect(transactions)
 
+  ### 1. Подготовка DF Transactions
+  transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
+                                  & (transactions['transactYear'] == repYear)
+                                  & (~transactions['Reservation Number'].isin(inactive))
+                                  ]
+  transactions = filterDF(transactions, department_Filters[department])
+  
+  transactions  = transactions[['Material Code','Catalogue Description','UOMDescription','Quantity','Reservation Number','Work Order Status Description','closedMonth','transactMonth',
+                                'Short Department Name','Reserved By','Work Order Number','reservYear','reservMonth','Asset Description', 'Asset Number','Actual Quantity','closedYear']]
 
-    ### 4. Получение суммы по количеству для каждой reservation
-    begin   = begin.groupby(  ['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект',]).sum()
-    current = current.groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект',]).sum()
+  transactions.rename(columns={'Material Code':'Код товара',
+                                'Catalogue Description':'Материал',
+                                'UOMDescription':'Ед.изм.',
+                                'Asset Number':'Объект', 
+                                'Short Department Name':'Отдел',
+                                'Work Order Number':'WO №', 
+                                'Actual Quantity': 'Кол-во'}, inplace=True)
+  
 
-    begin.reset_index(drop=False, inplace=True)
-    current.reset_index(drop=False, inplace=True)
 
 
+  ### 2. Выборка транзакций на начало месяца и в течении месяца
+  begin = transactions.loc[ (transactions['transactMonth'] < repMonth)
+                          & ( 
+                              (transactions['Work Order Status Description'] != 'Closed') 
+                              | ((transactions['Work Order Status Description'] == 'Closed') & (transactions['closedMonth'] >= repMonth))
+                            )
+                          ]
+  current = transactions.loc[transactions['transactMonth'] == repMonth]
 
+  for row in begin_additional[department]:
+      newRow = pd.DataFrame(row, index=[0])
+      begin = pd.concat([begin, newRow]).reset_index(drop=True)
+  for row in current_additional[department]:
+      newRow = pd.DataFrame(row, index=[0])
+      current = pd.concat([current, newRow]).reset_index(drop=True)
 
-    ### 5. Объединение "на начало" и "приход", 
-    begin.rename(columns={'Quantity':'Кол-во начало'}, inplace=True)
-    current.rename(columns={'Quantity':'Кол-во приход'}, inplace=True)
-    
-    rep = begin.merge(current, how='outer', on=['Код товара','Материал','Ед.изм.','Reservation Number','Work Order Status Description','closedMonth','Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект',])
 
-    
 
 
-    ### 6. Добавление цен и групп из 1с. Вычисление сумм на начало и Приход
-    rep = rep.merge(OneC(), on = 'Код товара', how = 'outer')
-    rep[['Кол-во начало','Кол-во приход','Цена']] = rep[['Кол-во начало','Кол-во приход','Цена']].fillna(0)
+  ### 4. Получение суммы по количеству для каждой reservation
+  begin   = begin.groupby(  ['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект',]).sum()
+  current = current.groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект',]).sum()
 
-    rep['Сумма начало'] = rep['Кол-во начало'] * rep['Цена']
-    rep['Сумма приход'] = rep['Кол-во приход'] * rep['Цена']
+  begin.reset_index(drop=False, inplace=True)
+  current.reset_index(drop=False, inplace=True)
 
 
 
 
-    ### 7. Подготовка полей Расход
-    rep['Кол-во расход'] = rep['Кол-во начало'] + rep['Кол-во приход']
-    rep['Сумма расход']  = rep['Сумма начало'] + rep['Сумма приход']
+  ### 5. Объединение "на начало" и "приход", 
+  begin.rename(columns={'Quantity':'Кол-во начало'}, inplace=True)
+  current.rename(columns={'Quantity':'Кол-во приход'}, inplace=True)
+  
+  rep = begin.merge(current, how='outer', on=['Код товара','Материал','Ед.изм.','Reservation Number','Work Order Status Description','closedMonth','Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект',])
 
-    rep['is014'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in to_014 else '')
+  
 
-    rep.loc[  (rep['is014'] == 'yes')
-            | (
-              (rep['Work Order Status Description'] != 'Closed') | ((rep['Work Order Status Description'] == 'Closed') & (rep['closedMonth'] > repMonth))
-              ), ['Кол-во расход','Сумма расход'] ] = 0
 
+  ### 6. Добавление цен и групп из 1с. Вычисление сумм на начало и Приход
+  rep = rep.merge(OneC(), on = 'Код товара', how = 'outer')
+  rep[['Кол-во начало','Кол-во приход','Цена']] = rep[['Кол-во начало','Кол-во приход','Цена']].fillna(0)
 
+  rep['Сумма начало'] = rep['Кол-во начало'] * rep['Цена']
+  rep['Сумма приход'] = rep['Кол-во приход'] * rep['Цена']
 
 
 
-    ### 8. Подготовка полей 014
-    rep['Кол-во 014'] = rep['Кол-во начало'] + rep['Кол-во приход']
-    rep['Сумма 014']  = rep['Сумма начало'] + rep['Сумма приход']
 
-    rep.loc[  ~(rep['is014'] == 'yes')
-            | (
-              (rep['Work Order Status Description'] != 'Closed') | ((rep['Work Order Status Description'] == 'Closed') & (rep['closedMonth'] > repMonth))
-              ), ['Кол-во 014','Сумма 014'] ] = 0
+  ### 7. Подготовка полей Расход
+  rep['Кол-во расход'] = rep['Кол-во начало'] + rep['Кол-во приход']
+  rep['Сумма расход']  = rep['Сумма начало'] + rep['Сумма приход']
 
+  rep['is014'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in to_014 else '')
 
+  rep.loc[  (rep['is014'] == 'yes')
+          | (
+            (rep['Work Order Status Description'] != 'Closed') | ((rep['Work Order Status Description'] == 'Closed') & (rep['closedMonth'] > repMonth))
+            ), ['Кол-во расход','Сумма расход'] ] = 0
 
 
 
-    ### 9. Подготовка полей Конец
-    rep['Кол-во конец'] = rep['Кол-во начало'] + rep['Кол-во приход']
-    rep['Сумма конец']  = rep['Сумма начало'] + rep['Сумма приход']
 
-    rep.loc[ (rep['Work Order Status Description'] == 'Closed')
-           & (rep['closedMonth'] <= repMonth), ['Кол-во конец','Сумма конец'] ] = 0
 
+  ### 8. Подготовка полей 014
+  rep['Кол-во 014'] = rep['Кол-во начало'] + rep['Кол-во приход']
+  rep['Сумма 014']  = rep['Сумма начало'] + rep['Сумма приход']
 
+  rep.loc[  ~(rep['is014'] == 'yes')
+          | (
+            (rep['Work Order Status Description'] != 'Closed') | ((rep['Work Order Status Description'] == 'Closed') & (rep['closedMonth'] > repMonth))
+            ), ['Кол-во 014','Сумма 014'] ] = 0
 
 
-    ### 10. Завершение подготовки базового DF
-    rep = rep[['Account','Код товара','Материал', 'Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход',
-               'Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец', 'Reservation Number','Work Order Status Description',
-                'closedMonth','Отдел','Reserved By','is014','WO №','reservYear','reservMonth','Asset Description', 'Объект',]]
 
 
 
+  ### 9. Подготовка полей Конец
+  rep['Кол-во конец'] = rep['Кол-во начало'] + rep['Кол-во приход']
+  rep['Сумма конец']  = rep['Сумма начало'] + rep['Сумма приход']
 
-    ### 11. Базовый файл с детализацией по Reservations
-    check = rep
+  rep.loc[ (rep['Work Order Status Description'] == 'Closed')
+          & (rep['closedMonth'] <= repMonth), ['Кол-во конец','Сумма конец'] ] = 0
 
 
 
 
-    ### 12. Подготовка итогового материального отчёта
-    matRep = rep.groupby(['Код товара','Account','Материал','Ед.изм.','Цена']).sum()
-    matRep.reset_index(drop=False, inplace=True)
-    matRep = matRep[['Account','Код товара','Материал','Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход','Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец',]]
-    matRep['Account'].fillna('undef')
+  ### 10. Завершение подготовки базового DF
+  rep = rep[['Account','Код товара','Материал', 'Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход',
+              'Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец', 'Reservation Number','Work Order Status Description',
+              'closedMonth','Отдел','Reserved By','is014','WO №','reservYear','reservMonth','Asset Description', 'Объект',]]
 
-    ### 12.1 Cуммирующие строки
-    for acc in matRep['Account'].unique():
-        matRep.loc[len(matRep)] = matRep.loc[ matRep['Account']==acc ].sum(numeric_only=True)
-        matRep.loc[len(matRep)-1, 'Account'] = acc
-    matRep.loc[len(matRep)] = matRep.loc[ matRep['Материал'].isna() ].sum(numeric_only=True)
-    matRep.loc[len(matRep)-1, 'Материал'] = 'Жами'
 
 
 
+  ### 11. Базовый файл с детализацией по Reservations
+  check = rep
 
 
-    ### 13. Подготовка Акта ввода в эксплуатацию (внутренний)
-    dalolat = rep.loc[ rep['Кол-во расход']>0 ].copy()
-    
-    dalolat['Кол-во всего'] = dalolat['Код товара'].copy().map(  lambda x: dalolat.loc[dalolat['Код товара'] == x, 'Кол-во расход'].sum() )
 
-    dalolat = dalolat[['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By','Цена']]
-    dalolat = dalolat.groupby(['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By',]).sum()
-    
 
+  ### 12. Подготовка итогового материального отчёта
+  matRep = rep.groupby(['Код товара','Account','Материал','Ед.изм.','Цена']).sum()
+  matRep.reset_index(drop=False, inplace=True)
+  matRep = matRep[['Account','Код товара','Материал','Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход','Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец',]]
+  matRep['Account'].fillna('undef')
 
+  ### 12.1 Cуммирующие строки
+  for acc in matRep['Account'].unique():
+      matRep.loc[len(matRep)] = matRep.loc[ matRep['Account']==acc ].sum(numeric_only=True)
+      matRep.loc[len(matRep)-1, 'Account'] = acc
+  matRep.loc[len(matRep)] = matRep.loc[ matRep['Материал'].isna() ].sum(numeric_only=True)
+  matRep.loc[len(matRep)-1, 'Материал'] = 'Жами'
 
 
-    ### 14. Представление 014 для е-doc
-    view_014 = rep.loc[ rep['Кол-во 014']>0 ].copy()
-    view_014.insert(1,'Примечание', 'Reserved by '+view_014['Reserved By']+' WO № '+view_014['WO №'].astype(str)+' Reservation Number '+view_014['Reservation Number'].astype(str))
-    view_014 = view_014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во 014', 'Сумма 014','Примечание']]
 
 
 
+  ### 13. Подготовка Акта ввода в эксплуатацию (внутренний)
+  dalolat = rep.loc[ rep['Кол-во расход']>0 ].copy()
+  
+  dalolat['Кол-во всего'] = dalolat['Код товара'].copy().map(  lambda x: dalolat.loc[dalolat['Код товара'] == x, 'Кол-во расход'].sum() )
 
+  dalolat = dalolat[['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By','Цена']]
+  dalolat = dalolat.groupby(['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By',]).sum()
+  
 
-    ### 14. Представление списание для е-doc
-    view_wOff = rep.loc[rep['Кол-во расход']>0] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]   
 
 
 
+  ### 14. Представление 014 для е-doc
+  view_014 = rep.loc[ rep['Кол-во 014']>0 ].copy()
+  view_014.insert(1,'Примечание', 'Reserved by '+view_014['Reserved By']+' WO № '+view_014['WO №'].astype(str)+' Reservation Number '+view_014['Reservation Number'].astype(str))
+  view_014 = view_014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во 014', 'Сумма 014','Примечание']]
 
-    ### 15. Представление для накладной
-    waybill = OneCW()
-    waybill = waybill[['Unnamed: 6','Unnamed: 1','Unnamed: 11','Unnamed: 23','Unnamed: 15','Unnamed: 24']]
 
 
 
-    
-    check.to_excel('2. check.xlsx')
-    matRep.to_excel('3. matRep.xlsx')
-    dalolat.to_excel('4. dalolat.xlsx')
-    view_014.to_excel('4. view_014.xlsx')
-    view_wOff.to_excel('4. view_wOff.xlsx')
-    waybill.to_excel('4. waybill.xlsx')
+
+  ### 14. Представление списание для е-doc
+  view_wOff = rep.loc[rep['Кол-во расход']>0] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]   
+
+
+
+
+  ### 15. Представление для накладной
+  waybill = OneCW()
+  waybill = waybill[['Unnamed: 6','Unnamed: 1','Unnamed: 11','Unnamed: 23','Unnamed: 15','Unnamed: 24']]
+
+
+
+  
+  check.to_excel('2. check.xlsx')
+  matRep.to_excel('3. matRep.xlsx')
+  dalolat.to_excel('4. dalolat.xlsx')
+  view_014.to_excel('4. view_014.xlsx')
+  view_wOff.to_excel('4. view_wOff.xlsx')
+  waybill.to_excel('4. waybill.xlsx')
     
 
 

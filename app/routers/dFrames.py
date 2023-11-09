@@ -1,13 +1,18 @@
 from fastapi import APIRouter
 from .. import models
 from ..lib import gen
-from ..database import DF__transactions, DF__spares, DF_requisitions
+from ..database import DF__transactions, DF__spares, DF_requisitions, DF__trades
 
 
 router = APIRouter(
     prefix="/dframes",
     tags=['Data Frames']
 )
+
+@router.get('/trades')
+def materialCosts():
+    DF__trades.trades.to_excel('trades.xlsx')
+    return {'trades':'ok'}
 
 
 @router.post('/spares')

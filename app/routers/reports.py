@@ -1,7 +1,8 @@
 from fastapi import APIRouter
 from .. import models
-from ..lib import materialRep, planfact, KPI
+from ..lib import materialRep, planfact, KPI, checkStore
 from ..database.DF__transactions import transactions
+from ..lib.MaterialReports import regular
 
 
 router = APIRouter(
@@ -11,9 +12,14 @@ router = APIRouter(
 
 
 @router.get('/matReport/{month}/{department}')
-def show_matrep(month:int, department:str):
-    materialRep.matReport(repMonth=month, repYear=2023, department = department, transactions=transactions)
+def get_matrep(month:int, department:str):
+    regular.matReport(repMonth=month, repYear=2023, department = department, transactions=transactions)
     return {'/matReport':'ok'}
+
+@router.get('/checkStore/{month}')
+def warehouseTransactions(month:int):
+    checkStore.exec(transactions=transactions, repMonth=month, repYear=2023)
+    return {'/warehouseTransactions':'ok'}
 
 @router.get('/kpi')
 def show_kpi():

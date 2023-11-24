@@ -27,8 +27,10 @@ transactions['Material Code'] = transactions['Material Code'].map(lambda x: x.st
 
 
 spares = DF__spares.spares[['reservYear','reservMonth', 'Reservation Number','Work Order Number', 'Work Order Status Description', 'Short Department Name', 'isRMPD', 'isMaintenance',
-                            'Asset Description', 'Asset Number','Reserved By', 'closedYear', 'closedMonth','Actual Quantity', 'Estimated Unit Cost', 'Estimated Quantity','Work Order Spare ID']]
+                            'Asset Description', 'Asset Number','Reserved By', 'closedYear', 'closedMonth','Actual Quantity', 'Estimated Unit Cost', 'Estimated Quantity','Work Order Spare ID', 
+                            'Group WO number', 'Is Group Work Order','Spares Comment',]]
 transactions = transactions.merge(spares, how='left', on='Work Order Spare ID')
+transactions['Material Code'] = transactions['Material Code'].fillna('undefined')
 
 
 

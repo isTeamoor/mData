@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from ..lib.gen import filterDF
+from ..database.DF__spares import spares
 
 
 
@@ -20,7 +21,7 @@ inactive = [
 
 #Номера Material Codes, соответствующие 014 счёту
 to_014 = ['6935','5841','7139','5230','4189','3494','2799','5749','1738','1308','1309','1310','1311','1312','1329','1330','1331','1333','1351','1354','1372','1374','1376',
-'1377','1378','892','2204','4179','0158','0140','0134','0114','0915','1278','1276','1275','1277','1272','1279','3190','2995','2806','2812','2813','2814','2826','2827','2828',
+'1377','1378', '892','2204','4179','0158','0140','0134','0114','0915','1278','1276','1275','1277','1272','1279','3190','2995','2806','2812','2813','2814','2826','2827','2828',
 '2830','2896','2897','1307','1353','1373', '3904','1375','2325','1393','3484','3017','2786','3019','4662','0899','3745','1367','2890','2891','2892','2893','2894','2452','2092',
 '2451','2817','0155','0156','0526','0002','4188','2910','6597', '7277','1622','1625','1623','1626','1624','3222','1628','1630','1627','1632','0009','0001','4346','6860','1274',
 '1273','1352','2854','2863','2885','3480','1349','3226','2824','2935','1344','6601', '6600','1337','1313','1315','1316','1317','1320','1321','1322','1323','1325','1326','1327',
@@ -31,7 +32,7 @@ to_014 = ['6935','5841','7139','5230','4189','3494','2799','5749','1738','1308',
 '0805','1338','1342','1343','1339','1340','1341','2855','2852','3223','2862','1334','1335','1336','2850','2859','2853','1403','1574','1576','1577','1582','1360','1361','1364',
 '1365','1429','1407','0691','0692','0693','0694','0695','0700','0703','0702','0705','0706','0707','0708','1350','1371','1380','1381','1383','1384','1385','1386','1394', '1395',
 '1396','1398','1399','1589','1639','1606','1620','2835','0189','0745','0140','0230','0738','5232','5231','0899','0155','0114','0157','0526','0113','1201','1202','1203','1204',
-'6340','2911','2912','2913','7481','7407','7473','7403','2802','3229','5305','6122','6332','6900','7497','7883','7882', '9300', '7331', '5831', '5328', ]
+'6340','2911','2912','2913','7481','7407','7473','7403','2802','3229','5305','6122','6332','6900','7497','7883','7882','9300','7331','5831','5328', ]
 
 #Фильтры transactions по департаментам
 department_Filters = {}
@@ -43,6 +44,7 @@ department_Filters['rmpd'] = [
 {"field":'Reserved By', "operator":"!=", "value":"'Bobur Aralov'"}
 ]
 department_Filters['cofe'] = [ {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},]
+department_Filters['apsp'] = [ {"field":'Account Code Description', "operator":"==", "value":"Air Product Service Expences"},]
 
 
 
@@ -57,15 +59,23 @@ begin_additional['rmpd'] = []
 begin_additional['cofe'] = [
 {'Код товара':'5943','Материал':'Газ сжиженный ПБФ','Ед.изм.':'бал','Quantity':3,'Reservation Number':-1,'Work Order Status Description':'OnHand','closedMonth':13,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-1,'reservYear':2023,'reservMonth':13,'Asset Description':'CofE', 'Объект':'CofE'},
 {'Код товара':'6933','Материал':'Дизельное топливо GTL ','Ед.изм.':'л','Quantity':100,'Reservation Number':-2,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-2,'reservYear':2023,'reservMonth':9,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'5287','Материал':"Nipoflange 3'' X 1'' ND, Cl300, BWxRF, CS A105 BE MSS-SP-97 MR0103 / Фланцевая бобышка",'Ед.изм.':'шт','Quantity':2,'Reservation Number':-8,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-8,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'5149','Материал':"Клапан запорный 3/4' #300 фланцевый*",'Ед.изм.':'комплект','Quantity':1,'Reservation Number':-9,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-9,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'5286','Материал':"ELBOW 90 LR, 1/2', SCH 40, CS A105 SWE, B16.11 CL600 MR0103, / Отвод",'Ед.изм.':'шт','Quantity':1,'Reservation Number':-10,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-10,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'5239','Материал':"ELBOW 90 LR, 3', SCH 40, CS A234- WPB, SMLS, ASME B16.9 MR0103, / Отвод",'Ед.изм.':'шт','Quantity':12,'Reservation Number':-11,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-11,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'5237','Материал':"PIPE 1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.9,'Reservation Number':-12,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-12,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'5236','Материал':"PIPE 1-1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.8,'Reservation Number':-13,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-13,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'5234','Материал':"PIPE 3', SCH STD, A106-B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':98.08,'Reservation Number':-14,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-14,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
 ]
 
-current_additional['rmpd'] = []
+current_additional['rmpd'] = [
+{'Код товара':'9911','Материал':'Медный провода разделан с бумажным и друг приделками','Ед.изм.':'кг','Quantity':800.25,'Reservation Number':-4,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'rmpd','Reserved By':'Shaxriyor Nuritdinov','WO №':-4,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'9912','Материал':'Алюмин лом листы разделан с желез приделками смешанный (Алюмин 6)','Ед.изм.':'кг','Quantity':499.8,'Reservation Number':-5,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'rmpd','Reserved By':'Shaxriyor Nuritdinov','WO №':-5,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+{'Код товара':'9913','Материал':'Алюмин лом смешанный разделан с желез приделками (Алюмин 14)','Ед.изм.':'кг','Quantity':1400.08,'Reservation Number':-6,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Shaxriyor Nuritdinov','WO №':-6,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
+]
 current_additional['cofe'] = [
 {'Код товара':'6933','Материал':'Дизельное топливо GTL ','Ед.изм.':'л','Quantity':200,'Reservation Number':-2,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-2,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
 {'Код товара':'9910','Материал':'ПАБ-32 Qora metall chiqindilari ','Ед.изм.':'тн','Quantity':13.917,'Reservation Number':-3,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Davron Xidirov','WO №':-3,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
-{'Код товара':'9911','Материал':'Медный провода разделан с бумажным и друг приделками','Ед.изм.':'кг','Quantity':800.25,'Reservation Number':-4,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Shaxriyor Nuritdinov','WO №':-4,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
-{'Код товара':'9912','Материал':'Алюмин лом листы разделан с желез приделками смешанный (Алюмин 6)','Ед.изм.':'кг','Quantity':499.8,'Reservation Number':-5,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Shaxriyor Nuritdinov','WO №':-5,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
-{'Код товара':'9913','Материал':'Алюмин лом смешанный разделан с желез приделками (Алюмин 14)','Ед.изм.':'кг','Quantity':1400.08,'Reservation Number':-6,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Shaxriyor Nuritdinov','WO №':-6,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
 {'Код товара':'9683','Материал':'СА-5 Qora metall chiqindilari ','Ед.изм.':'тн','Quantity':11.685,'Reservation Number':-7,'Work Order Status Description':'Closed','closedMonth':10,'Отдел':'CofE','Reserved By':'Davron Xidirov','WO №':-7,'reservYear':2023,'reservMonth':10,'Asset Description':'CofE', 'Объект':'CofE'},
 ]
 
@@ -75,13 +85,14 @@ def transCorrect(transactions):
   transacts = transactions
 
   ### 1. Разовые изменения
-  transacts.loc[ transacts['Reservation Number'] == 5850, 'Material Code' ] = '6811'
-  transacts.loc[ transacts['Reservation Number'] == 5850, 'Catalogue Description' ] = 'Stainless steel Tube for steam tracing ASTMA269 TP304 Welded Annealed Tube 1/2" O.D x 0.035" THK / Трубка из нержавеющей стали для пароспутника'
-  transacts.loc[ transacts['Reservation Number'] == 5850, 'UOMDescription' ] = 'м'
+  transacts.loc[ transacts['Reservation Number'] == 5850, 'Код товара' ] = '6811'
+  transacts.loc[ transacts['Reservation Number'] == 5850, 'Материал' ] = 'Stainless steel Tube for steam tracing ASTMA269 TP304 Welded Annealed Tube 1/2" O.D x 0.035" THK / Трубка из нержавеющей стали для пароспутника'
+  transacts.loc[ transacts['Reservation Number'] == 5850, 'Ед.изм.' ] = 'м'
 
   ### 2. Постоянные корректировки
   transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 # 9356 - Высокотемпературный силиконовый герметик "TYTAN"
   transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6 # 7633 - Рулон оцинкованный ГОСТ 14918-80 Ст08пс Zn120,  0,65x1250 БТ н/обр.
+  transacts.loc[ transacts['Reservation Number'] == 5778, 'closedMonth' ] = 10 # Миржахон что то поменял в закрытом WO
 
   return transacts
 
@@ -89,8 +100,12 @@ def transCorrect(transactions):
 
 
 
+
 def matReport(repMonth, repYear, department, transactions):
-  transactions = transCorrect(transactions)
+  ##### Exception Ulugbek Hamroyev LTFT Возврат труб был в ноябре письмо
+  transactions.loc [ transactions['Catalogue Transaction ID'].isin([101733,101734]), 'transactMonth'] = 11
+
+
 
   ### 1. Подготовка DF Transactions
   transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
@@ -100,15 +115,17 @@ def matReport(repMonth, repYear, department, transactions):
   transactions = filterDF(transactions, department_Filters[department])
   
   transactions  = transactions[['Material Code','Catalogue Description','UOMDescription','Quantity','Reservation Number','Work Order Status Description','closedMonth','transactMonth',
-                                'Short Department Name','Reserved By','Work Order Number','reservYear','reservMonth','Asset Description', 'Asset Number','Actual Quantity','closedYear']]
+                                'Short Department Name','Reserved By','Work Order Number','reservYear','reservMonth','Asset Description', 'Asset Number','closedYear','Estimated Quantity',
+                                'Group WO number', 'Is Group Work Order','Spares Comment',]]
 
   transactions.rename(columns={'Material Code':'Код товара',
                                 'Catalogue Description':'Материал',
                                 'UOMDescription':'Ед.изм.',
                                 'Asset Number':'Объект', 
                                 'Short Department Name':'Отдел',
-                                'Work Order Number':'WO №', 
-                                'Actual Quantity': 'Кол-во'}, inplace=True)
+                                'Work Order Number':'WO №'}, inplace=True)
+  
+  transactions = transCorrect(transactions)
   
 
 
@@ -245,7 +262,13 @@ def matReport(repMonth, repYear, department, transactions):
   ### 14. Представление 014 для е-doc
   view_014 = rep.loc[ rep['Кол-во 014']>0 ].copy()
   view_014.insert(1,'Примечание', 'Reserved by '+view_014['Reserved By']+' WO № '+view_014['WO №'].astype(str)+' Reservation Number '+view_014['Reservation Number'].astype(str))
-  view_014 = view_014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во 014', 'Сумма 014','Примечание']]
+  view_014 = view_014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014','Примечание']]
+
+  view_014_G = view_014.copy()
+  view_014_G['Объект'] = ''
+  view_014_G = view_014_G.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
+  view_014_G.reset_index(drop=False, inplace=True)
+  view_014_G = view_014_G[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014','Примечание']]
 
 
 
@@ -268,6 +291,7 @@ def matReport(repMonth, repYear, department, transactions):
   matRep.to_excel('3. matRep.xlsx')
   dalolat.to_excel('4. dalolat.xlsx')
   view_014.to_excel('4. view_014.xlsx')
+  view_014_G.to_excel('4. view_014_G.xlsx')
   view_wOff.to_excel('4. view_wOff.xlsx')
   waybill.to_excel('4. waybill.xlsx')
     

@@ -3,9 +3,9 @@ from typing import Optional
 from datetime import datetime
 
 
-class Filters(BaseModel):
+class Selection(BaseModel):
     filters: list
-
+    sections: list
 
 
 

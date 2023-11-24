@@ -9,6 +9,7 @@ woComponent  = impo.woComponent
 accountCodes = impo.accountCodes
 jobCodes     = impo.jobCodes
 uom          = impo.uom
+customFieldSpares = impo.customFieldSpares
 
 
 
@@ -19,6 +20,7 @@ spares = spares.merge(woComponent,  on='Work Order Component ID', how='left')
 spares = spares.merge(accountCodes, on='Account Code ID',         how='left')
 spares = spares.merge(jobCodes,     on='Job Code Major ID',       how='left')
 spares = spares.merge(uom,          on='UOMID',                   how='left')
+spares = spares.merge(customFieldSpares,on='Work Order Spare ID', how='left')
 
 
 
@@ -27,11 +29,14 @@ spares.rename(columns={'Account Code Name': 'Account Code'}, inplace=True)
 spares.loc[spares['Account Code'].isnull(), ['Account Code Description']] = 'Not Assigned'
 spares.loc[spares['Account Code'].isnull(), ['Account Code']] = '99999999999'
 spares[['reservMonth', 'reservYear', 'Reservation Number']] = spares[['reservMonth', 'reservYear', 'Reservation Number']].fillna(0)
+spares['Group WO number'] = spares['Group WO number'].fillna('undefined')
 
 
 
 ### 4. Удаление spares, для которых reservation не назначен, но WO уже закрыт или отменен
-unused = spares.loc[(spares['Reservation Number'] == 0) & ((spares['Work Order Status Description'] == 'Closed') | (spares['Work Order Status Description'] == 'Cancelled'))]
+unused = spares.loc[(spares['Reservation Number'] == 0) 
+                   & (spares['Group WO number']=='undefined')
+                   & ((spares['Work Order Status Description'] == 'Closed') | (spares['Work Order Status Description'] == 'Cancelled'))]
 spares = spares.drop(unused.index)
 
 
@@ -45,4 +50,3 @@ spares.insert(1, 'Estimated Cost', spares['Estimated Quantity'] * spares['Estima
 ### 6. Фильтрованные dataFrames
 spares_maintenance = spares.loc[ spares['isMaintenance'] == 'yes' ]
 spares_RMPD        = spares.loc[ spares['isRMPD'] == 'yes' ]
-

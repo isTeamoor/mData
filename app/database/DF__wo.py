@@ -3,13 +3,16 @@ import pandas as pd
 from . import impo
 
 
-wo = impo.wo.merge( impo.woStatus,    how='left', on='Work Order Status ID')
-wo = wo.merge( impo.contactID,   how='left', left_on='Created By Contact ID', right_on='Contact ID')
-wo = wo.merge( impo.priorityID,  how='left', on='Priority ID')
-wo = wo.merge( impo.departament, how='left', on='Department ID')
-wo = wo.merge( impo.jobType,     how='left', on='Job Type ID')
-wo = wo.merge( impo.pm,          how='left', on='Preventative Maintenance ID')
-wo = wo.merge( impo.assets,      how='left', on='Asset ID')
+wo = impo.wo.merge( impo.woStatus, how='left', on='Work Order Status ID')
+wo = wo.merge( impo.contactID,     how='left', left_on='Created By Contact ID', right_on='Contact ID')
+wo = wo.merge( impo.priorityID,    how='left', on='Priority ID')
+wo = wo.merge( impo.departament,   how='left', on='Department ID')
+wo = wo.merge( impo.jobType,       how='left', on='Job Type ID')
+wo = wo.merge( impo.pm,            how='left', on='Preventative Maintenance ID')
+wo = wo.merge( impo.assets,        how='left', on='Asset ID')
+wo = wo.merge( impo.isGrouppedWO,  how='left',on='Work Order ID')
+wo = wo.merge( impo.woNumbers,     how='left', left_on='Group Work Order ID', right_on='Work Order ID', suffixes=(None,'to_delete'))
+
 
 
 
@@ -28,7 +31,7 @@ wo['closedDay'] = wo['Modified Date Time'].dt.day
 ### 4. Упорядочивание столбцов и удаление NaN
 wo = wo[['raisedYear', 'raisedMonth','raisedDay',  'closedYear', 'closedMonth', 'closedDay',  'Work Order Number', 'Work Order Description', 'Work Order ID',
           'Created By', 'Work Order Closed Contact ID', 'Work Order Status Description', 'Priority Description', 'Department Name', 'Department Description',
-         'Job Type Description', 'Preventative Maintenance Number', 'Asset Description', 'Asset Number', 'Asset ID', 'Modified Date Time',]].fillna('undefined')
+         'Job Type Description', 'Preventative Maintenance Number', 'Asset Description', 'Asset Number', 'Asset ID', 'Modified Date Time', 'Group WO number','Is Group Work Order']].fillna('undefined')
 
 
 

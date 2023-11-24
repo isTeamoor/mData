@@ -1,7 +1,67 @@
+from datetime import datetime
+
 from ..database.DF__budget import budget, months
-from ..database.DF__wo import wo
 from ..database.DF__spares import spares
 from ..lib import gen
+from ..database.DF_assets import byAssets, checkRelationships
+
+def WorkOrders(wo, sections, filters=[]):
+    wo = gen.filterDF(wo, filters)
+    uniqs = gen.uniqueValues(wo, [*sections])
+    yearsLst  = wo['raisedYear'].unique()
+    statusLst = wo['Work Order Status Description'].unique()
+    
+
+
+    data = {}
+    
+
+
+    for field in uniqs.keys():
+        data[field] = {}
+
+
+        df = wo.groupby(['raisedYear', 'raisedMonth', field, 'Asset ID', 'Work Order Status Description']).count()
+        df.reset_index(drop=False, inplace=True)
+        
+        
+        for item in uniqs[field]:
+            output = {}
+            output = gen.initObject(yearsLst, ['raised', 'notClosed', *statusLst])
+            output['byAssets'] = {}
+
+            for year in yearsLst:
+                for month in range(0,12):
+                    
+                    chunk = df.loc [ (df['raisedYear']==year) & (df['raisedMonth']==month+1) & (df[field]==item), ['Asset ID', 'Work Order Status Description', 'Work Order Number'] ]
+
+                    output['raised']['monthly'][year][month] = int(chunk['Work Order Number'].sum().item())
+                    output['raised']['cumulat'][year][month] = int((output['raised']['monthly'][year][month]) + (output['raised']['cumulat'][year][month-1] if month>0 else 0))  
+                    output['notClosed']['monthly'][year][month] = int(chunk.loc[ (chunk['Work Order Status Description'] != 'Closed') & (chunk['Work Order Status Description'] != 'Cancelled'), 'Work Order Number'].sum().item())
+                    output['notClosed']['cumulat'][year][month] = int((output['notClosed']['monthly'][year][month]) + (output['notClosed']['cumulat'][year][month-1] if month>0 else 0))
+                    
+                    for status in chunk['Work Order Status Description'].unique():
+                        val = chunk.loc[  chunk['Work Order Status Description'] == status, 'Work Order Number' ].sum().item()
+                        output[status]['monthly'][year][month]    = int(val)
+                        output[status]['cumulat'][year][month] = (output[status]['monthly'][year][month]) + (output[status]['cumulat'][year][month-1] if month>0 else 0)
+
+                    
+
+                chunk = df.loc [ (df['raisedYear']==year) & (df[field]==item), ['Asset ID', 'Work Order Status Description', 'Work Order Number'] ]
+
+                output['byAssets']['raised'] = byAssets(chunk[['Asset ID', 'Work Order Number']].groupby('Asset ID').sum(), 'woCount')
+                output['byAssets']['notClosed'] = byAssets(chunk.loc[ (chunk['Work Order Status Description'] != 'Closed') 
+                                                                                            & (chunk['Work Order Status Description'] != 'Cancelled'),['Asset ID', 'Work Order Number']].groupby('Asset ID').sum(), 'woCount')
+
+                #for status in chunk['Work Order Status Description'].unique():
+                    #output['byAssets'][status] = byAssets(chunk.loc[chunk['Work Order Status Description'] == status, ['Asset ID', 'Work Order Number']].groupby('Asset ID').sum(), 'woCount')
+                
+        
+            data[field][item] = output
+    return data
+
+
+
 
 def Budget():
     output = {}
@@ -28,46 +88,6 @@ def Budget():
             output['aCodesCum'][budget['Account Code Description'][row]][month] = val
             if month>0:
                 output['aCodesCum'][budget['Account Code Description'][row]][month] += output['aCodesCum'][ budget['Account Code Description'][row] ][month-1]
-    return output
-
-
-def WorkOrders(filter=[]):
-    df = gen.filterDF(wo, filter)
-
-    df = df.groupby(['raisedYear', 'raisedMonth', 'Work Order Status Description']).count()
-    df.reset_index(drop=False, inplace=True)
-    yearsLst  = df['raisedYear'].unique()
-    statusLst = df['Work Order Status Description'].unique()
-
-    output = {}
-    for status in ['raised', 'notClosed', *statusLst]:
-        output[status] = {}
-        output[status]['monthly'] = {}
-        output[status]['cumulat'] = {}
-        for year in yearsLst:
-            year = int(year)
-            output[status]['monthly'][year] = {}
-            output[status]['cumulat'][year] = {}
-            for month in range(0,12):
-                output[status]['monthly'][year][month] = 0
-                output[status]['cumulat'][year][month] = 0
-
-    for year in yearsLst:
-        for month in range(0,12):
-            dataChunk = gen.filterDF(df, [{'field':'raisedYear', 'value':year, 'operator':'=='}, 
-                                      '&',{'field':'raisedMonth', 'value':month+1, 'operator':'=='} ])[['Work Order Status Description', 'Work Order Number']]
-            if dataChunk.size == 0:
-                continue
-            output['raised']['monthly'][year][month] = int(dataChunk['Work Order Number'].sum().item())
-            output['raised']['cumulat'][year][month] = int((output['raised']['monthly'][year][month]) + (output['raised']['cumulat'][year][month-1] if month>0 else 0))      
-            output['notClosed']['monthly'][year][month] = int(dataChunk.loc[ (dataChunk['Work Order Status Description'] != 'Closed') & (dataChunk['Work Order Status Description'] != 'Cancelled'), 'Work Order Number'].sum().item())
-            output['notClosed']['cumulat'][year][month] = int((output['notClosed']['monthly'][year][month]) + (output['notClosed']['cumulat'][year][month-1] if month>0 else 0))
-
-            for status in dataChunk['Work Order Status Description'].unique():
-                val = dataChunk.loc[  dataChunk['Work Order Status Description'] == status, 'Work Order Number' ]
-                output[status]['monthly'][year][month]    = int(val)
-                output[status]['cumulat'][year][month] = (output[status]['monthly'][year][month]) + (output[status]['cumulat'][year][month-1] if month>0 else 0)
-
     return output
 
 

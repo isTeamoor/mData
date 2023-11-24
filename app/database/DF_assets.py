@@ -1,8 +1,4 @@
-from src import impo
-from datetime import datetime
-
-assets = impo.assets
-
+from .impo import assets
 
 
 ### 1. Объект, показывающий наследников каждого asset
@@ -23,6 +19,20 @@ for row in assets.index:
 
 
 
+def checkRelationships(source):
+    for item in source.index:
+        flag = 0
+        for parent in AssetsRelationships:
+            if flag == 1:
+                continue
+            if item in AssetsRelationships[parent]:
+                flag = 1
+        if flag == 0:
+            print(item)
+
+
+
+
 def rooting (parent, assetID, source, valueName):
     output = {}
     value = 0
@@ -30,7 +40,7 @@ def rooting (parent, assetID, source, valueName):
     # Если нет WOC и нет наследников - вернуть пустой объект и count = 0
     if ((assetID not in source.index) and (assetID not in AssetsRelationships)):
         return output, value
-    
+        
     #Если есть WOC, то value увеличивается
     if assetID in source.index:
         value = source.loc[ assetID ].item()
@@ -59,8 +69,8 @@ def rooting (parent, assetID, source, valueName):
         
     return output, value
 
+
 def byAssets(source, valueName):
     output = {}
     output = rooting(0, 77405, source, valueName)[0]
     return output
-

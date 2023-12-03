@@ -3,20 +3,7 @@ from . import impo
 
 
 ### 1. Импорт загруженных данных
-trades       = impo.trades
-woComponent  = impo.woComponent
-accountCodes = impo.accountCodes
-jobCodes     = impo.jobCodes
-tradeID      = impo.tradeID
-
-
-
-### 2. Объединение dataFrames
-trades = trades.merge(DF__wo.wo,           on='Work Order ID',           how='left')
-trades = trades.merge(woComponent,  on='Work Order Component ID', how='left')
-trades = trades.merge(accountCodes, on='Account Code ID',         how='left')
-trades = trades.merge(tradeID,      on='Trade Code ID',           how='left')
-trades = trades.merge(jobCodes,     on='Job Code Major ID',       how='left')
+trades = impo.trades.merge(DF__wo.wo, on='Work Order ID', how='left')
 
 
 

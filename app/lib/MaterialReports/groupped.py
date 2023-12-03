@@ -3,6 +3,8 @@ import pandas as pd
 def spread(transactions, spares, inactive_Master_Reservations):
   transacts = transactions
   targetDF = transacts.loc[ (transacts['Is Group Work Order']=='yes') & (~(transacts['Reservation Number'].isin(inactive_Master_Reservations))) ]
+  if targetDF.size == 0:
+    return transacts
 
 
 
@@ -17,11 +19,16 @@ def spread(transactions, spares, inactive_Master_Reservations):
 
 
 
+
+
   Limits = pd.DataFrame()
+
+  checkHasValues = False
 
   for i, MR in MRs.iterrows():
     
     if  childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].size != 0:
+      checkHasValues = True
       for i, childSpare in childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].iterrows():
         record = pd.DataFrame({
           'master WO №':MR['WO №'],
@@ -57,6 +64,9 @@ def spread(transactions, spares, inactive_Master_Reservations):
         }, index=[0])
 
         Limits = pd.concat([Limits, record]).reset_index(drop=True)
+
+  if checkHasValues == False:
+    return transacts
 
 
 

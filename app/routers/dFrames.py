@@ -3,7 +3,6 @@ from .. import models
 from ..lib import gen
 from ..database import DF__transactions
 from ..database import DF__spares
-from ..database import DF_requisitions
 from ..database import DF__trades
 from ..database import DF__wo
 
@@ -33,13 +32,6 @@ def dframe_wo():
 def materialCosts(response:models.Selection):
     filteredDF = gen.filterDF(DF__spares.spares, response.filters).fillna(0).to_dict('split')
     return filteredDF
-
-@router.get('/requisitions')
-def requisitions():
-    DF_requisitions.reqItems.to_excel('reqItems.xlsx')
-    DF_requisitions.reqItems_maintenance.to_excel('reqItems_maint.xlsx')
-    DF_requisitions.reqItems_others.to_excel('reqItems_others.xlsx')
-    return {'requisitions':'ok'}
 
 
 

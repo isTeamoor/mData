@@ -1,17 +1,20 @@
 from datetime import datetime
 import pandas as pd
-from . import impo
+from .impo import wo, assets, isGrouppedWO, contactID
 
 
-wo = impo.wo.merge( impo.woStatus, how='left', on='Work Order Status ID')
-wo = wo.merge( impo.contactID,     how='left', left_on='Created By Contact ID', right_on='Contact ID')
-wo = wo.merge( impo.priorityID,    how='left', on='Priority ID')
-wo = wo.merge( impo.departament,   how='left', on='Department ID')
-wo = wo.merge( impo.jobType,       how='left', on='Job Type ID')
-wo = wo.merge( impo.pm,            how='left', on='Preventative Maintenance ID')
-wo = wo.merge( impo.assets,        how='left', on='Asset ID')
-wo = wo.merge( impo.isGrouppedWO,  how='left',on='Work Order ID')
-wo = wo.merge( impo.woNumbers,     how='left', left_on='Group Work Order ID', right_on='Work Order ID', suffixes=(None,'to_delete'))
+
+isGrouppedWO['Is Group Work Order'] = 'yes'
+
+woNumbers = wo[['Work Order ID', 'Work Order Number']].copy()
+woNumbers.rename(columns={'Work Order Number':'Group WO number'}, inplace=True)
+
+
+
+wo = wo.merge( contactID,     how='left', left_on='Created By Contact ID', right_on='Contact ID')
+wo = wo.merge( assets,        how='left', on='Asset ID')
+wo = wo.merge( isGrouppedWO,  how='left',on='Work Order ID')
+wo = wo.merge( woNumbers,     how='left', left_on='Group Work Order ID', right_on='Work Order ID', suffixes=(None,'to_delete'))
 
 
 
@@ -21,17 +24,18 @@ wo['raisedYear']  = wo['Raised Date Time'].dt.year
 wo['raisedMonth'] = wo['Raised Date Time'].dt.month
 wo['raisedDay'] = wo['Raised Date Time'].dt.day
 
-wo['Modified Date Time'] = pd.to_datetime(wo['Modified Date Time'], format="%d/%m/%Y %H:%M:%S %p")
-wo['closedYear']  = wo['Modified Date Time'].dt.year
-wo['closedMonth'] = wo['Modified Date Time'].dt.month
-wo['closedDay'] = wo['Modified Date Time'].dt.day
+
+wo['Closed Date Time'] = pd.to_datetime(wo['Closed Date Time'], format="%d/%m/%Y %H:%M:%S %p")
+wo['closedYear']  = wo['Closed Date Time'].dt.year
+wo['closedMonth'] = wo['Closed Date Time'].dt.month
+wo['closedDay'] = wo['Closed Date Time'].dt.day
 
 
 
-### 4. Упорядочивание столбцов и удаление NaN
-wo = wo[['raisedYear', 'raisedMonth','raisedDay',  'closedYear', 'closedMonth', 'closedDay',  'Work Order Number', 'Work Order Description', 'Work Order ID',
-          'Created By', 'Work Order Closed Contact ID', 'Work Order Status Description', 'Priority Description', 'Department Name', 'Department Description',
-         'Job Type Description', 'Preventative Maintenance Number', 'Asset Description', 'Asset Number', 'Asset ID', 'Modified Date Time', 'Group WO number','Is Group Work Order']].fillna('undefined')
+
+wo = wo[['raisedYear', 'raisedMonth','raisedDay', 'Closed Date Time', 'closedYear', 'closedMonth', 'closedDay',  'Work Order Number', 'Work Order Description', 
+         'Created By', 'Work Order Status Description', 'Priority Description', 'Department Name', 'Department Description', 'Work Order ID',
+         'Job Type Description', 'Asset Description', 'Asset Number', 'Asset ID', 'Group WO number','Is Group Work Order']].fillna('undefined')
 
 
 

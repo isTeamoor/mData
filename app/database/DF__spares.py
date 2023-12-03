@@ -5,22 +5,12 @@ from .DF__wo import wo
 
 ### 1. Импорт загруженных данных 
 spares       = impo.spares
-woComponent  = impo.woComponent
-accountCodes = impo.accountCodes
-jobCodes     = impo.jobCodes
-uom          = impo.uom
-customFieldSpares = impo.customFieldSpares
 
 
 
 ### 2. Объединение dataFrames
 spares = spares.merge(reservations, on='Work Order Spare ID',     how='left')
 spares = spares.merge(wo,           on='Work Order ID',           how='left')
-spares = spares.merge(woComponent,  on='Work Order Component ID', how='left')
-spares = spares.merge(accountCodes, on='Account Code ID',         how='left')
-spares = spares.merge(jobCodes,     on='Job Code Major ID',       how='left')
-spares = spares.merge(uom,          on='UOMID',                   how='left')
-spares = spares.merge(customFieldSpares,on='Work Order Spare ID', how='left')
 
 
 

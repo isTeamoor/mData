@@ -4,9 +4,7 @@ from . import impo
 
 
 
-transactions = impo.transactions.merge(impo.catalogInfo, left_on='Catalogue Asset ID', right_on='Asset ID', how='left')
-
-
+transactions = impo.transactions.rename(columns={'User Defined Text Box1': 'Material Code'})
 
 
 transactions['Catalogue Transaction Date Time'] = pd.to_datetime(transactions['Catalogue Transaction Date Time'], format="%d/%m/%Y %H:%M:%S %p")

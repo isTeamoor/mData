@@ -1,9 +1,0 @@
-﻿Work Order Status ID,Work Order Status Number,Work Order Status Description,Work Order Status Function Name,Created By Contact ID,Created Date Time,Modified By Contact ID,Modified Date Time
-1,0,Entered,Entered,1,17/09/2007 4:09:12 PM,1,17/09/2007 4:09:12 PM
-2,2,Scheduled,Scheduled,1,17/09/2007 4:09:12 PM,1452,10/01/2023 10:59:46 AM
-3,3,Ready To Start,Ready To Start,1,17/09/2007 4:09:12 PM,1452,10/01/2023 10:59:46 AM
-4,4,Started,Started,1,17/09/2007 4:09:12 PM,1452,10/01/2023 10:59:46 AM
-5,6,Closed,Closed,1,17/09/2007 4:09:12 PM,1452,10/01/2023 10:59:46 AM
-6,7,Cancelled,Cancelled,1,17/09/2007 4:09:12 PM,1452,10/01/2023 10:59:46 AM
-8,5,Completed,,1454,15/06/2022 11:01:23 AM,1452,10/01/2023 10:59:46 AM
-1008,1,Constraint,,1452,10/01/2023 10:53:45 AM,1452,10/01/2023 10:59:46 AM

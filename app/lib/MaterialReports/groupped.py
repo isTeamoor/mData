@@ -1,21 +1,28 @@
 import pandas as pd
 
+
+
 def spread(transactions, spares, inactive_Master_Reservations):
-  transacts = transactions
-  targetDF = transacts.loc[ (transacts['Is Group Work Order']=='yes') & (~(transacts['Reservation Number'].isin(inactive_Master_Reservations))) ]
-  if targetDF.size == 0:
-    return transacts
 
+  transacts = transactions.copy()
+  targetDF = transacts.loc[ (transacts['Is Master Work Order']=='yes') & (~(transacts['Reservation Number'].isin(inactive_Master_Reservations))) ]
+  if targetDF.loc[ ~(targetDF['Catalogue Transaction Action Name']=='Issue') ].size != 0:
+    print('there are master reservations with return to stock')
+  else:
+    print('there are NO master reservations with return to stock')
 
+  
 
-  MRs = targetDF.copy().groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','transactMonth',
-                                           'Отдел','Reserved By','WO №','reservYear','reservMonth','Asset Description', 'Объект','closedYear']).sum()
+  MRs = targetDF.copy().groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth', 'Отдел','Reserved By','WO №','reservYear',
+                                 'reservMonth','Asset Description', 'Объект','closedYear', 'Catalogue Transaction Action Name','transactMonth']).sum()
   MRs.reset_index(drop=False, inplace=True)
 
 
 
   childSpares = spares.loc[ (~(spares['Group WO number']=='undefined')) & (spares['Spares Comment'].str.isnumeric()) ].copy()
-  childSpares['Spares Comment'] = childSpares['Spares Comment'].astype(int)
+  childSpares['Spares Comment'] = childSpares['Spares Comment'].astype(float)
+
+
 
 
 
@@ -25,8 +32,10 @@ def spread(transactions, spares, inactive_Master_Reservations):
 
   checkHasValues = False
 
+
+
   for i, MR in MRs.iterrows():
-    
+
     if  childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].size != 0:
       checkHasValues = True
       for i, childSpare in childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].iterrows():
@@ -70,6 +79,7 @@ def spread(transactions, spares, inactive_Master_Reservations):
 
 
 
+
   for i, MR in MRs.iterrows():
     usedQty = Limits.loc[ Limits['master Reservation №'] == MR['Reservation Number'], 'Estimated Quantity'].sum().item()
     Limits.loc[ Limits['master Reservation №'] == MR['Reservation Number'], 'Remain Qty' ] = Limits['master Reservation Qty'] - usedQty
@@ -107,6 +117,7 @@ def spread(transactions, spares, inactive_Master_Reservations):
       'Group WO number':childSpare['master WO №'], 
       'Is Group Work Order':'no',
       'Spares Comment':childSpare['master Reservation №'],
+      'Catalogue Transaction Action Name':'Issue'
     }, index=[0])
     transacts = pd.concat([transacts, pseudoTransaction]).reset_index(drop=True)
   

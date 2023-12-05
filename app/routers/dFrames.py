@@ -27,6 +27,11 @@ def dframe_wo():
     DF__wo.wo.to_excel('wo.xlsx')
     return {'wo':'ok'}
 
+@router.get('/transactions')
+def dframe_transactions():
+    DF__transactions.transactions.to_excel('transactions.xlsx')
+    return {'transactions':'ok'}
+
 
 @router.post('/spares')
 def materialCosts(response:models.Selection):

@@ -1,0 +1,215 @@
+﻿Trade Code ID,Trade Code Description
+1,Condition Monitoring Technician
+2,Field instrumentation Junior technician
+3,Electrical support J.technician
+4,Electrical Support technician
+5,Tool Support
+6,Metrology Supervisor
+7,Condition Monitoring Technician
+8,Plant Inspector
+9,Crane XX Ton c/w driver
+10,Scaffolder
+11,Metrology Engineer
+12,Lorry XX Ton c/w driver
+13,Fire and Gas engineer
+14,MIG Welder
+15,Management
+16,HRM
+17,Legal
+44,Head
+45,Contract services Scaf COOR
+46,Supv Con
+47,Contract Sefvices Coor
+48,Material Control Security Warehouse Worker
+49,Unit Engineer
+50,Contract Services COOR
+51,Passenger Car
+52,Bus
+53,Mini Bus
+54,Truck
+55,Work Shop machinist
+56,Trailer
+57,Mobile Mechanism
+58,Contract Services COOR
+59,Material Control Senior Specialist
+60,Analyser Technician
+61,Material Control Jun. Technician
+62,Electrical Supervisor
+63,Instrument Engineer
+64,Material Control Storekeeper
+65,Instrument Supervisor
+66,Static Engineer
+67,Field Manager U&O
+68,Field Manager SLU
+69,Rotating Equipment Engineer
+70,Integrity Engineer- Mechanical
+71,Workshop Supervisor CofE
+72,Rotating Supervisor
+73,Analyser Supervisor
+74,VALVE Supervisor
+75,Static Supervisor
+76,PLC/IC Engineer
+77,Valve Engineer
+78,PSV Technician
+79,PLC Technician
+80,Insulation Coordinator
+81,Field Manager PWU
+82,Maintenance Planner
+83,Piping Engineer
+84,MTR Engineer
+85,PSV Junior Technician
+86,MTR Supervisor
+87,Condition Monitoring Supervisor
+88,ICSS Supervisor
+18,InfoAnaly
+19,Security
+20,Procure
+21,Marketing
+22,Admin
+23,Accounting
+24,Planning
+25,Financial
+26,SynGasProd
+27,SynLiqProd
+28,PWU Prod
+29,U&O Prod
+30,Cost Controller
+31,Lead Engineer SLU
+32,Lead Engineer SGU
+33,Lead Engineer PWU
+34,Laboratory
+35,Integrity
+36,Proc Tech
+37,Lead Engineer U&O
+38,HSE
+40,IT
+41,Localise
+42,PCD
+43,Transport
+89,F&G Supervisor
+90,Pipe Fitter
+91,Electrical Engineer
+92,ELEC Coord
+93,HVAC Supervisor
+94,Field Manager SGU
+95,Inspection Engineer pipeline/Projects
+96,Deputy of Head
+97,Instrumentation Technician
+98,Electrical Technician
+99,Unit Engineer junior
+100,STAT
+101,Lead Specialist
+102,Workshop machinist junior
+103,CATA
+104,Field Manager CofE
+162,Production
+163,FM CIVIL
+164,INTEGRITY
+169,Material Control Specialist
+170,Manufacturing Execution system
+113,FIELD OP
+114,INS ENG
+130,SUPV PSV
+131,JET TECH
+165,Building Engineer
+166,Civil Engineer
+134,INS CRDNTR
+171,DCS Specialist
+173,Advanced Process Control
+174,MOC Coordinator
+141,FM PWU
+142,ELEC SUPV
+143,MP CofE
+144,INS SUPV
+145,INS TECH
+146,ANLZ JTECH
+147,INS JTECH
+148,STAT TECH
+149,ROTO TECH
+150,MP PWU
+151,MP SGU
+152,MP SLU
+153,MP U&O
+154,WELD ENG
+155,WELDER
+156,MP CIV
+157,ELEC JTECH
+158,STAT JTECH
+159,ROTO JTECH
+160,CM JTECH
+161,INSULATE
+175,Incident Management and Investigation Coordinator
+176,Document / Process Safety Information Controller
+177,FOREMAN
+178,BOARDMAN
+179,Laboratory assistant 
+180,Rotating Equipment engineer
+181,Electrical Specialist
+182,Instrumentation Engineer
+183,Analyzer specialist
+184,Occupation safety senior specialist
+185,DOCTOR
+186,Senior firefighting specialist
+187,Senior environmental Specialist
+188,Industrial safety engineer
+189,Environmental engineer
+190,Occupation safety engineer
+191,HSE Engineer
+192,Firefighting engineer
+172,DCS Engineer
+193,Social Worker
+194,Medical asistant
+195,HSE Junior specialist
+204,UNGM-DR
+200,PSV Junior Technician
+206,"Shurtan GC, Mech-Workshop"
+212,TA Elec Technician
+129,HVAC ENG
+214,TA Rota Technician
+217,TA Mech Engineer
+218,TA Rota Engineer
+219,TA Inst Engineer
+220,TA Elec Supervisor
+221,TA Mech Supervisor
+222,TA Rota Supervisor
+223,TA Inst Supervisor
+224,TA HSE
+225,TA NDE Technician
+226,TA NDE Engineer
+227,TA Coordinator
+228,TA Manager
+229,TA Pipe Insulator
+230,TA Piping Engineer
+231,TA Piping Technician
+232,TA Analyzer Supervisor
+233,TA Analyzer Engineer
+234,TA Valve Engineer
+235,TA Static Engineer
+236,TA Static Technician
+237,TA HP Jet Cleaner
+238,TA QC Engineer
+239,TA HVAC Engineer
+246,Junior Engineer
+247,Senior Engineer
+249,Junior Planner
+253,2-grade
+266,SS Electrician
+259,CMMS Engineer
+264,Constraction Worker
+265,valve
+167,Land Surveyor
+168,Steel Strucure Engineer
+251,6-grade
+263,insu
+201,Valve technician
+202,PIPING JUNIOR
+213,TA Mech Technician
+215,TA Inst Technician
+243,Adminstration
+248,Operator
+250,10 grade
+252,9-grade
+267,General Director
+262,scaf
+216,TA Elec Engineer
+244,Engineer

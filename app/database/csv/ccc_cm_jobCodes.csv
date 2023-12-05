@@ -1,0 +1,98 @@
+﻿Job Code Major ID,Job Code Major Description
+1,"AIR CONDITION, HEAT"
+2,CAB/SHEET METALS
+3,"INSTRUMENTS, GAUGES"
+4,AERODYNAMIC DEVICES
+6,"AXLES, REAR NON DRIV"
+7,BRAKES
+8,FRAME
+10,SUSPENSION
+11,"TIRES, TUBES, LINERS"
+12,"WHEELS, RIMS, HUBS, BRG"
+14,AXLE DRVN FRNT STEER
+15,AXLE DRVN REAR
+16,CLUTCH
+17,DRIVE SHAFT
+18,TRANSFER CASE
+19,TRANSMISSION MANUAL
+20,TRANSMISSION AUTOMATIC
+21,AUXILIARY TRANSMISSION
+22,CHARGING SYSTEM
+23,CRANKING SYSTEM
+24,IGNITION SYSTEM
+25,LIGHTING SYSTEM
+26,AIR INTAKE SYSTEM
+27,COOLING SYSTEM
+28,EXHAUST SYSTEM
+29,FUEL SYSTEM
+30,POWER PLANT
+31,ELECTRIC PROPULSION
+32,GENERAL ACCESSORIES
+33,ELECTRICAL  ACCESSORIES
+34,EXPENDABLE ITEMS
+35,HORN AND MOUNTING
+36,"CARGO HANDLING, LIFT"
+37,POWER TAKE OFF
+38,SPARE WHEEL MOUNTING
+39,WINCHES
+40,VEHICLE COUPLING SYS
+41,HYDRAULIC SYSTEMS
+42,PREVENTIVE MAINTENANCE
+43,BODY
+44,REAR DOOR
+45,TANK VESSEL INNER
+46,TANK VESSEL OUTER
+47,MANHOLES
+48,RINGS AND BOLSTERS
+49,TRAILER FRAME/SUPPORT
+50,TRIM AND MISC.  HRDWR
+51,SAFETY DEVICES
+52,HEATING UNIT
+53,REFRIG.  MECHANICAL
+54,REGRIG. NITROGEN
+55,REFRIG. COLD PLATE
+56,BLOWER
+57,COMPRESSOR
+58,ENGINE (AUXILARY)
+59,LINES
+60,MANIFOLD
+61,POWERSHAFT
+62,PUMP
+63,VALVES - REGULAR
+64,Maintenance Scaffolding
+65,Maintenance Insulation
+66,Maintenance Welding
+67,NDE & Inspection Services
+68,Maintenance Rotating Services
+69,Electrical Spares
+70,Control System Spares
+71,Instrument Spares
+72,Analyser Spares
+73,Mechanical Rotating Spares
+74,Refractory Services
+75,Electrical Services
+76,Mechanical Services
+77,Equipment Hiring Services
+78,Mechanical Static spares
+79,Instrumentation Services
+80,Maintenance Civil Services
+81,General Maintenance Material
+82,Maintenance Additional Services
+83,Smaller Modifications
+84,Extraordinary Maintenance
+85,Plant Shutdown Costs
+86,Maintenance Buildings - Infrastructure
+87,Maintenance Additional Spares
+88,Maintenance service-contracts
+89,Vehicle Maintenance
+90,Non-Operating Plant Area Services
+92,Piping (Steam tracing)
+93,Jet Wash Cleaning
+94,Heating Ventilation Air Condition
+95,Analyser Services
+96,Personal Protective Equipment
+97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS
+98,Material Reservation
+99,Operation Chemicals
+100,Vehicle Hire
+101,Air Product Spares

@@ -1,28 +1,29 @@
 import pandas as pd
-import numpy as np
-from ...lib.gen import filterDF
 from ...database.DF__spares import spares
-from . import exceptions
-from . import reference
-from . import groupped
+from ..gen import filterDF
+from . import exceptions, reference, groupped
+
 
 
 
 def matReport(repMonth, repYear, department, transactions):
 
   transactions = exceptions.corrections(transactions)
-
   
+  
+
   ### 1. Подготовка DF Transactions
   transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
                                   & (transactions['transactYear'] == repYear)
                                   & (~transactions['Reservation Number'].isin(reference.inactive_Reservations))
                                   ]
+  
   transactions = filterDF(transactions, reference.department_Filters[department])
+  
   
   transactions = transactions[['Material Code','Catalogue Description','UOMDescription','Quantity','Reservation Number','Work Order Status Description','closedMonth','transactMonth',
                                'Short Department Name','Reserved By','Work Order Number','reservYear','reservMonth','Asset Description', 'Asset Number','closedYear','Estimated Quantity',
-                               'Group WO number', 'Is Group Work Order','Spares Comment',]]
+                               'Group WO number', 'Is Master Work Order','Spares Comment', 'Catalogue Transaction Action Name']]
 
   transactions.rename(columns={'Material Code':'Код товара',
                                 'Catalogue Description':'Материал',
@@ -31,6 +32,9 @@ def matReport(repMonth, repYear, department, transactions):
                                 'Short Department Name':'Отдел',
                                 'Work Order Number':'WO №'}, inplace=True)
   
+
+
+
   transactions = groupped.spread(transactions, spares, reference.inactive_Master_Reservations)
 
 
@@ -193,7 +197,7 @@ def matReport(repMonth, repYear, department, transactions):
 
 
 
-  
+  '''
   check.to_excel('2. check.xlsx')
   matRep.to_excel('3. matRep.xlsx')
   dalolat.to_excel('4. dalolat.xlsx')
@@ -201,4 +205,5 @@ def matReport(repMonth, repYear, department, transactions):
   view_014_G.to_excel('4. view_014_G.xlsx')
   view_wOff.to_excel('4. view_wOff.xlsx')
   waybill.to_excel('4. waybill.xlsx')
+  '''
     

@@ -1,11 +1,13 @@
 """Добавленные вручную товарные позиции"""
 extra = {
+    'empty': {'Код товара':'','Материал':'','Ед.изм.':'','Quantity':0,'Reservation Number':0,'Work Order Status Description':'','closedMonth':0,'Отдел':'','Reserved By':'','WO №':0,'reservYear':2023,'reservMonth':0,'Asset Description':'', 'Объект':''},
     'rmpd':{
         'begin':[],
         'currentMonth':[]
     },
     'cofe':{
         'begin':[
+            # По результатам инвентаризации - "LPG"
             {'Код товара':'5943','Материал':'Газ сжиженный ПБФ','Ед.изм.':'бал','Quantity':3,'Reservation Number':-1,'Work Order Status Description':'OnHand','closedMonth':13,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-1,'reservYear':2023,'reservMonth':13,'Asset Description':'CofE', 'Объект':'CofE'},
             {'Код товара':'5287','Материал':"Nipoflange 3'' X 1'' ND, Cl300, BWxRF, CS A105 BE MSS-SP-97 MR0103 / Фланцевая бобышка",'Ед.изм.':'шт','Quantity':2,'Reservation Number':-2,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-2,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
             {'Код товара':'5149','Материал':"Клапан запорный 3/4' #300 фланцевый*",'Ед.изм.':'комплект','Quantity':1,'Reservation Number':-3,'Work Order Status Description':'Open','closedMonth':10,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','WO №':-3,'reservYear':2022,'reservMonth':12,'Asset Description':'CofE', 'Объект':'CofE'},
@@ -18,20 +20,19 @@ extra = {
         'currentMonth':[]
     },
 }
-"""Example"""
-#{'Код товара':'','Материал':'','Ед.изм.':'','Quantity':0,'Reservation Number':0,'Work Order Status Description':'','closedMonth':0,'Отдел':'','Reserved By':'','WO №':0,'reservYear':2023,'reservMonth':0,'Asset Description':'', 'Объект':''},
 
 
 def corrections(transactions):
-    transacts = transactions
+    transacts = transactions.copy()
 
     transacts.loc [ transacts['Catalogue Transaction ID'].isin([101733,101734]), 'transactMonth'] = 11 #Ulugbek Hamroyev LTFT Возврат труб был в ноябре письмо
 
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 # 9356 - Высокотемпературный силиконовый герметик "TYTAN"
     transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6 # 7633 - Рулон оцинкованный ГОСТ 14918-80 Ст08пс Zn120,  0,65x1250 БТ н/обр.
+
+    transacts.loc[ transacts['Reservation Number'] == 4415, 'closedMonth' ] = 11 #В связи с переходом на новый closed dates
+    transacts.loc[ transacts['Reservation Number'] == 5188, 'closedMonth' ] = 11 #В связи с переходом на новый closed dates
+    transacts.loc[ transacts['Reservation Number'] == 3768, 'isRMPD' ] = 'yes' #Проблемный WO, его должны перезакрыть в следюущем месяце
     
-    transacts.loc[ transacts['Reservation Number'] == 5778, 'closedMonth' ] = 10 # Миржахон что то поменял в закрытом WO
 
     return transacts
-
-

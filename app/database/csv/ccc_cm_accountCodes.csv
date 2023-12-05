@@ -1,0 +1,171 @@
+﻿Account Code ID,Account Code Name,Account Code Description
+3,210112010000,LP Nitrogen Costs
+7,13600000001,LABRCOST - Labour Cost
+10,100000000001,MAINTCOST - Maintenance Cost
+18033,210102000001,Pipeline Gas
+18036,210108010000,Maintenance Scaffolding
+18037,210108020000,Maintenance Insulation
+18038,210109010000,Maintenance Welding
+18039,210108030000,NDE & Inspection Services
+18040,210109020000,Maintenance Rotating Services
+18041,210109030000,Electrical Spares
+18042,210109040000,Control System Spares
+18043,210109050000,Instrument Spares
+18044,210109060000,Analyser Spares
+18045,210109070000,Mechanical Rotating Spares
+18046,210108040000,Refractory Services
+18047,210109080000,Electrical Services
+18048,210109090000,Mechanical (Static) Services
+18049,210108050000,Equipment Hiring Services
+18050,210109100000,Mechanical (Static) spares
+18051,210109110000,Instrumentation Services
+18052,210109120000,Maintenance Civil Services
+18053,210109130000,General Maintenance Material
+18054,210108060000,Maintenance Additional Services
+18055,210109140000,Smaller Modifications (MOC)
+18056,210108070000,Extraordinary Maintenance
+18057,210109150000,Plant Shutdown Costs
+18058,210109160000,Maintenance Buildings - Infrastructure
+18059,210109170000,Maintenance Additional Spares
+18060,210108080000,Maintenance service-contracts
+18061,210108090000,Vehicle Maintenance
+18062,210108100000,Non-Operating Plant Area Services
+18063,210103000001,Electricity - Plant (variable Cost)
+18064,210501070001,Safety Equipment & Supplies (PPE)
+18065,210104000001,Raw Water - Plant
+18066,210101000001,Methane Rich Gas
+18067,210109210000,Automation team
+18068,210112060000,Storage & Distribution Cost
+18069,210106100000,Lubricants
+18070,210105100000,FT Catalyst - Sasol
+18071,210105400001,FT Catalyst - Clariant
+18072,210502000001,Travel Airfare
+18073,210502000002,Travel Rail
+18074,210502000003,Business Trip Expenses
+18075,210502000004,Corporate Training
+18076,210502000006,Mandatory HSE Corporate Training
+18077,210502000007,Training - Study Assistance
+18078,210502000008,Training External Overseas
+18079,210502000009,Conference Fees
+18080,210106010000,Support Material for Production
+18081,210106020000,Other Catalyst
+18082,210106030000,Chemicals
+18083,210106040000,Chemical Service contracts
+18084,210106050000,Molecular Sieves
+18085,210106060000,Operating materials
+18086,210106070000,Production services
+18087,210106080000,Diesel
+18088,210106090000,Consumables
+18089,210112020000,Shipping Services
+18090,210112030000,Nitrogen Storage Costs
+18091,210112040000,Surveying Charges
+18092,210112050000,Demurrage
+18093,210112070000,Shipping Freight
+18094,210112080000,Insurance
+18095,220327010000,Management Contingency
+18096,220324010000,Staff Recruitment
+18097,220324020000,Immigration Services
+18098,210501030001,Catalyst Disposal
+18099,210112090000,Catalyst Reclamation
+18100,210112100000,Contractor services - sundries
+18101,TBC,Air Products Tolling Fee
+18102,210112110000-0,ESA / TSA - Sasol
+18103,210112110000-1,RSA - Sasol
+18104,210112110000-2,PMC
+18105,210112110000-3,Nexant
+18106,210112110000-4,Vendors
+18107,210112110000-5,Professional Services
+18108,210107010000,Research Cost
+18109,210501010001,Security Services
+18110,210112120000,Cleaning Contractors
+18111,210112130000,External Services Non Maintenance
+18112,210501030002,Other Waste Disposal 
+18113,210501070002,Fire Equipments and supplies
+18114,210501070003,Emergency Response services
+18115,210501070004,Gas Safety services
+18116,210501070005,Protective clothing 
+18117,210501070006,HSE Promotion
+18118,210501070007,Laboratory Services
+18119,210501070008,Quality Assurance Charges
+18120,210501070009,Environment Site Services
+18121,210501070010,Safety Recognition
+18122,210501070011,Safety Services
+18123,210116010000,Damaged and Goods Lost in Transit
+18124,210116020000,Material Price Variances
+18125,210106110000,Laboratory Materials
+18126,210106120000,Cleaning Materials
+18127,210501800001,Computer Maintenance
+18128,210501800002,Computer Software
+18129,210501800003,Software Licenses
+18130,210501800004,Computer Consumables
+18131,210501800005,Internet Browsing
+18132,210501800006,IT Applications Maintenance
+18133,210501800007,Network Maintenance Charges
+18134,210501800008,Disaster Recovery Systems
+18135,210501020001,Rent
+18136,210501020002,Office Rent
+18137,210501020003,Warehouse Rent
+18138,220205010000,Domestic Water
+18139,220205020000,Electricity 
+18140,220205030000,Other utilities (gas and etc)
+18141,220205040000,Canteen equipment sundry
+18142,220205050000,Commisary-Tea Services
+18143,220205060000,Staff Functions & Off-Sites
+18144,220205070000,Bus and Transport
+18145,220205080000,Postage
+18146,220205090000,Telephone & Fax usage
+18147,220205100000, Vehicle Licenses
+18148,220205110000,Printing & Stationery
+18149,220205120000,Laundry
+18150,220205130000,Courier Services
+18151,220205140000,Office Refreshments
+18152,220205150000,Canteen meals
+18153,220205160000,Indoor Plants & Landscaping
+18154,220205170000,Security Clearance
+18155,220213010000,Tender Adverting and Recoveries
+18156,220213020000,Subscriptions (Periodicals)
+18157,220213030000,Environment Association Fees
+18158,220213040000,Entertainment
+18159,220213050000,Advertising Costs
+18160,220213060000,Sponsorships
+18161,220213070000,Community development
+18162,220213080000,Gifts
+18163,220213090000,Public Relations
+18164,210110010000,Lab Equipment <$5000 USD
+18165,210110020000,ICT Equipment <$5000 USD
+18166,210110030000,Office & Pl.  Equip. <$5000 USD
+18167,210110040000,Tools Equipment <$5000 USD
+18168,210110050000,Office Equipment <$5000 USD
+18169,210110060000,Other Equipment <$5000 USD
+18170,210110070000,Comm Equipment <$5000 USD
+18171,210507010000,License Fees Other
+18172,220205180000,Cell Phone Rental and Charges
+18173,220303010000,Legal Expenses
+18174,220211010000,Vehicle Insurances
+18175,220304010000,Audit External
+18176,220304020000,Evaluation costs (acceptance on balance sheet)
+18177,220312010000,Bank Charges General
+18178,TBC1,Other expenses
+18179,220314010000,Tashkent office land tax
+18180,220314020000,Guzar district land tax
+18181,220314030000,Nishan district land tax
+18182,Old2,Old2
+18183,210500000000,UNG TRAING COST - Welders
+18184,220211080000,Accident Insurance(All Staff) 12% income tax
+18185,220211090000,Health Insurance (All Staff) 12$ income tax top
+18187,100000000002,TECHNICAL COST - Technical Cost
+18188,100000000003,PRODUCTION COST - Production Cost
+18189,100000000006,COMMERCIAL COST - Commercial Cost
+18190,100000000005,FINANCIAL COST - Financial Cost
+18191,100000000004,OTHER DEPARTMENT'S COST - Other department's Cost
+18192,100000000007,PROJECT OFFICE COST - Project Cost
+18193,0,0
+18195,Old,Old
+18196,220211060000,Compulsory Hazardous Industrial Facilities Laibili
+18197,210614110045,Cold Box expenditures 
+18198,210614130067,LTFT 1
+18199,220211050000,Compulsory Employer's Liability
+18200,100000000008,GENERAL AFFAIRS
+18201,100000000010,Air Product Service Expences
+18202,100000000011,Vehicle hire
+18203,100000000012,Air Product Spares

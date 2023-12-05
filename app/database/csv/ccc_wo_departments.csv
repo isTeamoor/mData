@@ -1,0 +1,72 @@
+﻿Department ID,Department Name,Department Description
+1,PWU-Analyser,Maintenance
+5,Sales and Marketing,Commercial
+7,Administrative department,Commercial
+8,SLU-Electrical,Maintenance
+9,SLU-Rotating,Maintenance
+10,SLU-Static,Maintenance
+11,SLU-Instrumentation,Maintenance
+12,SGU-Electrical,Maintenance
+13,SGU-Rotating,Maintenance
+14,SGU-Instrumentation,Maintenance
+15,SGU-Static,Maintenance
+16,PWU-Electrical,Maintenance
+17,PWU-Instrumentation,Maintenance
+18,PWU-Static,Maintenance
+19,PWU-Rotating,Maintenance
+20,U&O-Electrical,Maintenance
+21,U&O-Instrumentation,Maintenance
+22,U&O-Static,Maintenance
+23,U&O-Rotating,Maintenance
+26,MECH (Rotating),MECH (Rotating)
+27,MECH (Static),MECH (Static)
+28,Plant Integrity,Technical
+31,Motor Transport Operation department,Production
+32,HEAD,Head Department
+33,MANAGER,Managers
+34,CON-MON,Technical
+35,Electrical,Electrical
+36,Instrumentation,Instrumentation
+37,Warehouse,Maintenance
+38,TECHNICAL,TECHNICAL
+40,U&O-Analyser,Maintenance
+41,CONT SERVICES,Maintenance
+42,CofE,Maintenance
+43,Turnaround,Maintenance
+44,CIVIL,Maintenance
+47,Synthesis Gas Unit,Production
+48,SGU-Analyser,Maintenance
+49,SLU-Analyser,Maintenance
+50,Automation,Technical
+51,Process Safety Department,Technical
+52,Central Factory Laboratory,Production
+53,Reliability,Technical
+54,HSE,Other departments
+59,INST-PWU,Instrumentation
+63,Maintenance General,Maintenance
+64,Process Engineering Department,Technical
+66,Information Technology Department,Other departments
+67,Account Department,Finance
+68,Reliability (SS),Technical
+70,Emergency situations and Security Service,Other departments
+71,Procurement and Logistics,Commercial
+72,Human Resources Department,Other departments
+73,Planning Deparment,Finance
+74,Production Management Department,Production
+75,Business Development &Project Execution Department,Other departments
+76,Synthesis Liquid Unit,Production
+77,Product Work-up Unit,Production
+78,Utilities and Off-sites Unit,Production
+79,Projects Office,Project
+80,Product Storage Department,Production
+81,Localization  ,Maintenance
+83,Financial Department,Finance
+84,Treasury Department,Other departments
+85,Consolidated information and Analytical,Other departments
+86,Information security,Other departments
+87,Legal department,Other departments
+88,Training Sector,Other departments
+89,UZGTL (Uniform),only for uniform issuance
+90,Routine Maintenance Planning Department,Maintenance
+91,Chinoz terminal,Chinoz terminal
+92,Technical Coordination,Technical Coordination Department

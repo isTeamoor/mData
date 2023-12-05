@@ -1,0 +1,9 @@
+﻿Work Order Status ID,Work Order Status Description
+1,Entered
+2,Scheduled
+3,Ready To Start
+4,Started
+5,Closed
+6,Cancelled
+8,Completed
+1008,Constraint

@@ -1,10 +1,19 @@
 import pandas as pd
-from . import DF__spares
-from . import impo
+from .DF__spares import spares
+from .impo import transactions, assetIDcatalogID, stockOnHand, stockReserved, catalogueInfo, uom
 
 
 
-transactions = impo.transactions.rename(columns={'User Defined Text Box1': 'Material Code'})
+transactions = transactions.merge(assetIDcatalogID, how='left', left_on='Catalogue Asset ID', right_on='Asset ID')
+transactions = transactions.merge(catalogueInfo,    how='left', on='Catalogue ID')
+transactions = transactions.merge(stockOnHand,      how='left', on='Asset ID')
+transactions = transactions.merge(stockReserved,    how='left', on='Asset ID')
+transactions = transactions.merge(uom,              how='left', on='UOMID')
+
+
+
+transactions.rename(columns={'User Defined Text Box1': 'Material Code'}, inplace=True)
+
 
 
 transactions['Catalogue Transaction Date Time'] = pd.to_datetime(transactions['Catalogue Transaction Date Time'], format="%d/%m/%Y %H:%M:%S %p")
@@ -14,8 +23,9 @@ transactions['transactDay']   = transactions['Catalogue Transaction Date Time'].
 
 
 
-
 transactions['Quantity'] = transactions['Quantity'].map(lambda x: -x)
+
+
 
 transactions['Material Code'] = transactions['Material Code'].astype(str)
 transactions  = transactions.loc [ (transactions['Material Code'].str.len() != 5) ]
@@ -23,12 +33,12 @@ transactions['Material Code'] = transactions['Material Code'].map(lambda x: x.st
 
 
 
-
-spares = DF__spares.spares[['reservYear','reservMonth', 'Reservation Number','Work Order Number', 'Work Order Status Description', 'Short Department Name', 'isRMPD', 'isMaintenance',
-                            'Asset Description', 'Asset Number','Reserved By', 'closedYear', 'closedMonth','Actual Quantity', 'Estimated Unit Cost', 'Estimated Quantity','Work Order Spare ID', 
-                            'Group WO number', 'Is Group Work Order','Spares Comment',]]
+spares = spares[['reservYear','reservMonth', 'Reservation Number','Work Order Number', 'Work Order Status Description', 'Short Department Name', 'isRMPD', 'isMaintenance',
+                 'Asset Description', 'Asset Number','Reserved By', 'closedYear', 'closedMonth','Actual Quantity', 'Estimated Unit Cost', 'Estimated Quantity','Work Order Spare ID', 
+                 'Group WO number', 'Is Master Work Order','Spares Comment']]
 transactions = transactions.merge(spares, how='left', on='Work Order Spare ID')
-transactions['Material Code'] = transactions['Material Code'].fillna('undefined')
+
+transactions = transactions.fillna('undefined')
 
 
 

@@ -1,47 +1,9 @@
 import pandas as pd
 import numpy as np
 
-"""Номера Reservations, материалы по которым уже списаны"""
-inactive_Reservations= [
-### RMPD
-771,848,937,938,939,1049,1050,1051,1114,1272,1320,1322,1452,1592,1609,3798,1871,1873,1874,1902,1922,1924,2356,2306,2355,2826,3806,3843,2859,2873,3088,3093,3927,3135,3242,3797,
-3826,3983,3827,3845,3977,3978,3979,3980,4346,4347,4348,4349,4038,4039,4040,4041,4042,4043,4125,4126,4159,4178,4194,4182,4198,4251,4252,4324,4325,921,2357,3227,3257,1126,885,
-1901,1921,1923,756,2045,2044, 465, 798, 799,
-### CofE
-1538, 1756, 1847, 1946, 2695, 4554, 4555, 4556, 4557, 4684, 4685, 5244, 5311, 5418, 4014, 4116, 4117, 4155, 4245, 4394, 4396, 4463, 4620, 1350, 2886, 4015, 4761, 4763, 4765, 5362, 
-2887, 4826, 4782, 4483, 3032, 3033, 3412, 3414, 3416, 3418, 3423, 3465, 3471, 3485, 3489, 3507, 3515, 3596, 3766, 4095, 3396, 3397, 3398, 3399, 3400, 3405, 3408, 3409, 3410, 3411, 
-3413, 3420, 3422, 3424, 3428, 3434, 3455, 3457, 3460, 3470, 3472, 3475, 3479, 3482, 3483, 3486, 3490, 3513, 3516, 3519, 3521, 3524, 3552, 3591, 3597, 3767, 4480, 3545, 4119, 4623, 
-4754, 5310, 5374, 5416, 4481, 4552, 1774, 4244, 1222, 1442, 1755, 1776, 1948, 2646, 4385, 4756, 5246, 5415, 1777, 2647, 4053, 4154, 4196, 4246, 4386, 4398, 4462, 4619, 4707, 4747, 
-4755, 5417, 1791, 2323, 4749, 2916, 3020, 3097, 3180, 3184, 3544, 3624, 4047, 3910, 4401, 4037, 4081, 4115, 5430, 4118, 4140, 4397, 4402, 5248, 5249, 4403, 4465, 4404, 4461, 4621, 
-4705, 5247, 5312, 5375, 4406, 4464, 4706, 4822, 4823, 4824, 4825, 5250, 5373, 5548, ]
 
 
-"""Номера Mater Reservations, материалы по которым уже списаны"""
-inactive_Master_Reservations  = [
-### CofE
-782,787,788,846,851,857,904,905,908,935,954,986,1009,1129,1311,1312,1313,1314,1341,1342,1343,1424,1426,1439,1443,1551,1560,1593,1594,1599,1603,1629,1631,1697,1698,1710,1848,
-1849,1852,2278,2307,2335,2648,2649,2679,2816,2908,2955,2956,2957,2959,3146,3147,3148,3203,3204,5527,5528,5536,
- ]
-
-
-"""Номера Материальных Кодов, относящихся к 014 Забалансовому счёту"""
-is_014 = ['6935','5841','7139','5230','4189','3494','2799','5749','1738','1308','1309','1310','1311','1312','1329','1330','1331','1333','1351','1354','1372','1374','1376',
-'1377','1378', '892','2204','4179','0158','0140','0134','0114','0915','1278','1276','1275','1277','1272','1279','3190','2995','2806','2812','2813','2814','2826','2827','2828',
-'2830','2896','2897','1307','1353','1373', '3904','1375','2325','1393','3484','3017','2786','3019','4662','0899','3745','1367','2890','2891','2892','2893','2894','2452','2092',
-'2451','2817','0155','0156','0526','0002','4188','2910','6597', '7277','1622','1625','1623','1626','1624','3222','1628','1630','1627','1632','0009','0001','4346','6860','1274',
-'1273','1352','2854','2863','2885','3480','1349','3226','2824','2935','1344','6601', '6600','1337','1313','1315','1316','1317','1320','1321','1322','1323','1325','1326','1327',
-'1568','1635','1570','1571','1588','1590','1591','1636','1603','1604','1621','2804','2807','2809','2815', '6598','2816','2818','2819','2820','2821','2822','2823','2831','2834',
-'2840','2845','2846','2847','2848','2851','2856','2858','2860','2861','2864','2878','2880','2881','2882','2883','2884','2886', '6599','2887','2888','2899','2900','2901','2902',
-'2903','2906','2936','3260','0809','0810','2453','0678','0157','0203','0113','0158','0159','6136','1575','1578','0154','6899','2450','5359','6799','3227','1379','1382','1314',
-'1319','2879','1366','2857','2865','0007','0008','5942','4140','5752','6330','1189','1324','0865','1369','0863','1355','1387','0804','1587','1328','1332','2829','1406','0806',
-'0805','1338','1342','1343','1339','1340','1341','2855','2852','3223','2862','1334','1335','1336','2850','2859','2853','1403','1574','1576','1577','1582','1360','1361','1364',
-'1365','1429','1407','0691','0692','0693','0694','0695','0700','0703','0702','0705','0706','0707','0708','1350','1371','1380','1381','1383','1384','1385','1386','1394', '1395',
-'1396','1398','1399','1589','1639','1606','1620','2835','0189','0745','0140','0230','0738','5232','5231','0899','0155','0114','0157','0526','0113','1201','1202','1203','1204',
-'6340','2911','2912','2913','7481','7407','7473','7403','2802','3229','5305','6122','6332','6900','7497','7883','7882','9300','7331','5831','5328', ]
-
-
-
-"""Фильтры для отделения transactions отдела"""
+# Фильтры для отделения transactions отдела
 department_Filters = {
     'rmpd':[
         {"field":'isRMPD', "operator":"==", "value":"'yes'"}, 
@@ -53,30 +15,225 @@ department_Filters = {
     'cofe':[ 
         {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
     ],
-    'ap':[ 
-        {"field":'Account Code Description', "operator":"==", "value":"Air Product Service Expences"},
-    ]
 }
 
 
-"""Читает отчёт из 1С и возвращает цену в сумах, группу учёта, """
+# Номера Материальных Кодов, относящихся к 014 Забалансовому счёту
+is_014 = ['06935','05841','07139','05230','04189','03494','02799','05749','01738','01308','01309','01310','01311','01312','01329','01330','01331','01333','01351','01354','01372','01374','01376',
+'01377','01378', '00892','02204','04179','00158','00140','00134','00114','00915','01278','01276','01275','01277','01272','01279','03190','02995','02806','02812','02813','02814','02826','02827',
+'02828','02830','02896','02897','01307','01353','01373', '03904','01375','02325','01393','03484','03017','02786','03019','04662','00899','03745','01367','02890','02891','02892','02893','02894',
+'02452','02092','02451','02817','00155','00156','00526','00002','04188','02910','06597', '07277','01622','01625','01623','01626','01624','03222','01628','01630','01627','01632','00009','00001',
+'04346','06860','01274','01273','01352','02854','02863','02885','03480','01349','03226','02824','02935','01344','06601', '06600','01337','01313','01315','01316','01317','01320','01321','01322',
+'01323','01325','01326','01327','01568','01635','01570','01571','01588','01590','01591','01636','01603','01604','01621','02804','02807','02809','02815', '06598','02816','02818','02819','02820',
+'02821','02822','02823','02831','02834','02840','02845','02846','02847','02848','02851','02856','02858','02860','02861','02864','02878','02880','02881','02882','02883','02884','02886', '60599',
+'02887','02888','02899','02900','02901','02902','02903','02906','02936','03260','00809','00810','02453','00678','00157','00203','00113','00158','00159','06136','01575','01578','00154','06899',
+'02450','05359','06799','03227','01379','01382','01314','01319','02879','01366','02857','02865','00007','00008','05942','04140','05752','06330','01189','01324','00865','01369','00863','01355',
+'01387','00804','01587','01328','01332','02829','01406','00806','00805','01338','01342','01343','01339','01340','01341','02855','02852','03223','02862','01334','01335','01336','02850','02859',
+'02853','01403','01574','01576','01577','01582','01360','01361','01364','01365','01429','01407','00691','00692','00693','00694','00695','00700','00703','00702','00705','00706','00707','00708',
+'01350','01371','01380','01381','01383','01384','01385','01386','01394', '01395','01396','01398','01399','01589','01639','01606','01620','02835','00189','00745','00140','00230','00738','05232',
+'05231','00899','00155','00114','00157','00526','00113','01201','01202','01203','01204','06340','02911','02912','02913','07481','07407','07473','07403','02802','03229','05305','06122','06332',
+'06900','07497','07883','07882','09300','07331','05831','05328', '09767', '09327', '09326', '01875','04183', '09359', '02811', '07626','07627','07628', '07629', '07616', '07617']
+
+
+
+
+
+
+# Читает отчёт из 1С и возвращает цену в сумах, группу учёта
 def OneC():
-  prices = pd.read_excel("1. 1C.xlsx").rename(columns={'Unnamed: 1':'Kod', 'Unnamed: 2':'Name', 'Unnamed: 5':'Qty1', 'Unnamed: 6':'Sum1','Unnamed: 7':'Qty2', 'Unnamed: 8':'Sum2'}).iloc[16: ][['Kod', 'Name','Qty1','Sum1','Qty2','Sum2']]
-  prices['Kod'] = prices['Kod'].astype(str)
-  prices['Код товара'] = prices['Kod'].copy().map(lambda x: x[-4:])
-  prices[['Sum1','Sum2','Qty1','Qty2']] = prices[['Sum1','Sum2','Qty1','Qty2']].fillna(0)
-  prices['Цена'] = (prices['Sum1']+prices['Sum2'])/(prices['Qty1']+prices['Qty2'])
+  output = pd.read_excel("1. 1C.xlsx")
 
-  prices['Account'] = prices['Kod']
-  prices.loc[ ~prices['Name'].isna(), 'Account' ] = np.nan
-  prices['Account'] = prices['Account'].ffill()
+  output.rename(columns={
+    'Unnamed: 1':'Kod', 
+    'Unnamed: 2':'Name', 
+    'Unnamed: 5':'Qty1', 
+    'Unnamed: 6':'Sum1',
+    'Unnamed: 7':'Qty2', 
+    'Unnamed: 8':'Sum2'
+  }, inplace=True)
 
-  prices = prices.loc[ ~prices['Name'].isna(), ['Account', 'Код товара', 'Цена'] ]
-  return prices
+  output = output.iloc[16: ][['Kod', 'Name','Qty1','Sum1','Qty2','Sum2']]
 
-"""Читает накладную из 1С и возвращает цену в сумах, группу учёта, """
+  output.fillna({'Sum1':0,'Sum2':0,'Qty1':0,'Qty2':0}, inplace=True)
+  output['Цена'] = ( output['Sum1']+output['Sum2'] ) / ( output['Qty1']+output['Qty2'] )
+
+
+  output['Kod'] = output['Kod'].astype(str)
+  output['Kod'] = output['Kod'].map(lambda x: x.strip())
+  output['Код товара'] = output['Kod'].copy().map(lambda x: '0000'+ x if len(x)==1 else '000'+ x if len(x)==2 else '00'+ x if len(x)==3 else '0' + x if len(x)==4 else x[-5:])
+
+  output['Account'] = output['Kod'].copy()
+  output.loc[ ~output['Name'].isna(), 'Account' ] = np.nan
+  output['Account'] = output['Account'].ffill()
+
+
+  return output.loc[ ~output['Name'].isna(), ['Account', 'Код товара', 'Цена'] ]
+
+# Читает и распечатывает накладную из 1С
 def OneCW():
   waybill = pd.read_excel("1. 1CW.xlsx")
   waybill = waybill[['Unnamed: 6','Unnamed: 1','Unnamed: 11','Unnamed: 23','Unnamed: 15','Unnamed: 24']].iloc[16:]
   waybill = waybill.loc[~waybill['Unnamed: 6'].isnull()]
-  return waybill
+  waybill.to_excel('4. waybill.xlsx')
+
+# Transactions из сгруппированных WO расщепляются с учётом spares из зависимых WO
+def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear):
+  transacts = transactions.copy()
+
+  targetDF = transacts.loc[ (transacts['Is Master Work Order']=='yes') & (~(transacts['Reservation Number'].isin(inactive_Master_Reservations))) ]
+
+  if targetDF.loc[ targetDF['Catalogue Transaction Action Name']=='Return to Stock' ].size != 0:
+    print('there are master reservations with return to stock\n', targetDF.loc[ targetDF['Catalogue Transaction Action Name']!='Issue' ])
+  else:
+    print('there are NO master reservations with return to stock')
+
+
+  
+  # Master Reservations с реальным Qty, учитывающим уменьшение от Return to Stock
+  MRs = targetDF.copy().groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth', 'Отдел','Reserved By','WO №','reservYear',
+                                 'reservMonth','Asset Description', 'Объект','closedYear']).sum()
+  MRs.reset_index(drop=False, inplace=True)
+
+
+
+  childSpares = spares.loc[ (spares['Group WO number']!=0) & (spares['Spares Comment'].str.isnumeric()) ].copy()
+  childSpares['Spares Comment'] = childSpares['Spares Comment'].astype(float)
+
+
+
+
+
+
+
+  Limits = pd.DataFrame()
+
+  checkHasValues = False
+
+
+
+  for i, MR in MRs.iterrows():
+
+    if  childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].size != 0:
+      checkHasValues = True
+      for i, childSpare in childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].iterrows():
+        record = pd.DataFrame({
+          'master WO №':MR['WO №'],
+          'master WO Status' : MR['Work Order Status Description'],
+          'master Reservation Reserved By' : MR['Reserved By'],
+          'master Reservation №' : MR['Reservation Number'],
+          'master Reservation material' : MR['Материал'],
+          'master Reservation Material Code' : MR['Код товара'],
+          'master Reservation Qty' : MR['Quantity'],
+          'master Reservation reservYear' : MR['reservYear'],
+          'master Reservation reservMonth' : MR['reservMonth'],
+          'is new transaction':'yes'
+        }, index=[0])
+        for key in childSpare.index:
+          record[key] = childSpare[key]
+
+        Limits = pd.concat([Limits, record]).reset_index(drop=True)
+    
+    else:
+        record = pd.DataFrame({
+          'master WO №':MR['WO №'],
+          'master WO Status' : MR['Work Order Status Description'],
+          'master Reservation Reserved By' : MR['Reserved By'],
+          'master Reservation №' : MR['Reservation Number'],
+          'master Reservation material' : MR['Материал'],
+          'master Reservation Material Code' : MR['Код товара'],
+          'master Reservation Qty' : MR['Quantity'],
+          'master Reservation reservYear' : MR['reservYear'],
+          'master Reservation reservMonth' : MR['reservMonth'],
+          'is new transaction':'no'
+        }, index=[0])
+
+        Limits = pd.concat([Limits, record]).reset_index(drop=True)
+
+
+
+  if checkHasValues == False:
+    print('no changes in related WOs')
+    return transacts
+  print('there are changes in related WOs')
+
+
+
+
+
+
+
+
+  for i, MR in MRs.iterrows():
+    usedQty = Limits.loc[ Limits['master Reservation №'] == MR['Reservation Number'], 'Estimated Quantity'].sum().item()
+    Limits.loc[ Limits['master Reservation №'] == MR['Reservation Number'], 'Remain Qty' ] = Limits['master Reservation Qty'] - usedQty
+
+
+
+  Limits2 = Limits.groupby(['master Reservation №','master WO №', 'master Reservation material', 'master Reservation Qty','Remain Qty'])['Actual Quantity'].count()
+  Limits2 = Limits2.reset_index(drop=False)
+  Limits2 = Limits2[['master WO №', 'master Reservation №', 'master Reservation material', 'master Reservation Qty',	'Remain Qty' ]]
+
+
+
+
+
+
+
+
+
+
+  transacts=transacts.drop(targetDF.index)
+  counter = -10000
+  for i, childSpare in Limits.loc[ Limits['is new transaction']=='yes' ].iterrows():
+    counter+=1
+    pseudoTransaction = pd.DataFrame({
+      'Код товара':childSpare['master Reservation Material Code'],
+      'Материал':childSpare['master Reservation material'],
+      'Ед.изм.':childSpare['UOMDescription'],
+      'Quantity':childSpare['Estimated Quantity'],
+      'Reservation Number':counter,
+      'Work Order Status Description':childSpare['Work Order Status Description'],
+      'closedMonth':childSpare['closedMonth'],
+      'closedYear':childSpare['closedYear'],
+      'transactMonth':childSpare['master Reservation reservMonth'],  
+      'transactYear':childSpare['master Reservation reservYear'],                             
+      'Отдел':childSpare['Short Department Name'],
+      'Reserved By':childSpare['master Reservation Reserved By'],
+      'WO №':childSpare['Work Order Number'],
+      'Asset Description':childSpare['Asset Description'], 
+      'Объект':childSpare['Asset Number'],                              
+      'Catalogue Transaction Action Name':'Issue'
+    }, index=[0])
+    transacts = pd.concat([transacts, pseudoTransaction]).reset_index(drop=True)
+  
+
+
+  for i, MR in MRs.iterrows():
+    pseudoTransaction = {}
+    for field in MR.index:
+      pseudoTransaction[field] = MR[field]
+
+    returned = targetDF.loc[  (targetDF['Catalogue Transaction Action Name']=='Return to Stock') 
+                               & (targetDF['Reservation Number'] == MR['Reservation Number']) 
+                               & (targetDF['transactMonth'] == repMonth)
+                               & (targetDF['transactYear'] == repYear)
+                            ]
+
+    pseudoTransaction['Quantity'] = Limits2.loc[ Limits2['master Reservation №'] == MR['Reservation Number'] , 'Remain Qty'].item() + returned['Quantity'].sum().item()
+    pseudoTransaction = pd.DataFrame(pseudoTransaction, index=[0])
+    transacts = pd.concat([transacts, pseudoTransaction]).reset_index(drop=True)
+    
+    if returned.size >0:
+      for i, MRreturned in returned.iterrows():
+        pseudoTransaction = {}
+        for column in MRreturned.index:
+          pseudoTransaction[column] = MRreturned[column]
+        pseudoTransaction = pd.DataFrame(pseudoTransaction, index=[0])
+        transacts = pd.concat([transacts, pseudoTransaction]).reset_index(drop=True)
+
+  Limits[['master Reservation Reserved By',	'master WO №',	'master WO Status',	'master Reservation №',	'master Reservation reservMonth',	'master Reservation Material Code',
+          'master Reservation material',	'master Reservation Qty',	'Work Order Spare Description',	'Estimated Quantity',	'Work Order Number',	'Work Order Description',	
+          'Work Order Status Description',	'Asset Description',	'Asset Number']].to_excel('limits.xlsx')
+  Limits2.to_excel('limits2.xlsx')
+  return transacts
+

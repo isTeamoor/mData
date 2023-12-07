@@ -4,6 +4,8 @@ from .DF__woComponent import woComponent
 from .DF__reservations import reservations
 
 
+
+
 spares = spares.merge(reservations, on='Work Order Spare ID',     how='left')
 spares = spares.merge(woComponent,  on='Work Order Component ID', how='left')
 spares = spares.merge(wo,           on='Work Order ID',           how='left')
@@ -11,31 +13,41 @@ spares = spares.merge(customFields, on='Work Order Spare ID',     how='left')
 spares = spares.merge(uom,          on='UOMID',                   how='left')
 
 
-### 2. Форматирование пустых значений
-spares.loc[spares['Account Code'].isnull(), ['Account Code Description']] = 'Not Assigned'
-spares.loc[spares['Account Code'].isnull(), ['Account Code']] = '99999999999'
 
-spares[['reservMonth', 'reservYear', 'Reservation Number']] = spares[['reservMonth', 'reservYear', 'Reservation Number']].fillna(0)
-spares['Group WO number'] = spares['Group WO number'].fillna('undefined')
+spares.fillna({
+    'Account Code':'undefined', 'Account Code Description':'undefined',
+    'reservMonth':0, 'reservYear':0, 'Reservation Number':0,
+    'Group WO number':0,
+}, inplace=True)
 
 
 
-### 3. Удаление spares, для которых reservation не назначен, но WO уже закрыт или отменен
+
+### Удаление spares, для которых reservation не назначен, но WO уже закрыт или отменен
 unused = spares.loc[(spares['Reservation Number'] == 0) 
-                   & (spares['Group WO number']=='undefined')
+                   & (spares['Group WO number']==0)
                    & ((spares['Work Order Status Description'] == 'Closed') | (spares['Work Order Status Description'] == 'Cancelled'))]
 spares = spares.drop(unused.index)
 
 
 
+spares['Actual Cost']    = spares['Actual Quantity'] * spares['Estimated Unit Cost']
+spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit Cost']
 
-spares.insert(1, 'Actual Cost', spares['Actual Quantity'] * spares['Estimated Unit Cost'])
-spares.insert(1, 'Estimated Cost', spares['Estimated Quantity'] * spares['Estimated Unit Cost'])
 spares.loc [spares['Account Code']=='100000000012', 'Short Department Name'] = '4AP'
 
 
 
-
-### 6. Фильтрованные dataFrames
-spares_maintenance = spares.loc[ spares['isMaintenance'] == 'yes' ]
-spares_RMPD        = spares.loc[ spares['isRMPD'] == 'yes' ]
+spares = spares[[
+'Work Order Spare ID', 'Work Order ID', 'Work Order Spare Description', 'Reservation Number', 'reservYear', 'reservMonth', 'Reserved By', 
+'Estimated Quantity', 'Actual Quantity','UOMDescription','Estimated Unit Cost', 'Estimated Cost', 'Actual Cost', 
+'Work Order Number','Work Order Status Description','raisedYear', 'raisedMonth',
+'Work Order Component Description', 'Job Code Major Description', 'Account Code', 'Account Code Description', 
+'closedYear', 'closedMonth', 'Priority Description', 'Department Name',
+'Short Department Name', 'isMaintenance', 'isRMPD',
+'Department Description', 'Job Type Description', 'Created By',
+'Asset Description', 'Asset Number', 'Asset ID', 'Parent Asset ID',
+'Is Master Work Order', 'Is Group Work Order', 'Group WO number','Spares Comment',
+'WO Account Code Name', 'WO Account Code Description',
+'Work Order Description', 'Employee WOSpares', 
+]]

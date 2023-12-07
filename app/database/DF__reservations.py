@@ -1,14 +1,10 @@
 import pandas as pd
-from . import impo
+from .impo import reservations, contactID
 
 
 
-reservations = impo.reservations.copy()
-contactID    = impo.contactID[['Contact ID', 'Reserved By']]
 
-
-
-reservations = reservations.loc[  ~(reservations['Cancelled By Contact ID']>200)  ] 
+reservations = reservations.loc[  reservations['Cancelled By Contact ID'].isna()  ].copy()
 
 
 
@@ -17,7 +13,7 @@ reservations['reservYear']  = reservations['Completed Date Time'].dt.year
 reservations['reservMonth'] = reservations['Completed Date Time'].dt.month
 
 
-reservations = reservations.merge(contactID, how = 'left', left_on = 'Created By Contact ID', right_on = 'Contact ID')
+reservations = reservations.merge(contactID[['Contact ID', 'Reserved By']], how = 'left', left_on = 'Created By Contact ID', right_on = 'Contact ID')
 
 
-reservations = reservations[['reservYear','reservMonth', 'Reservation Number','Work Order Spare ID', 'Reserved By',]]
+reservations = reservations[['Work Order Spare ID', 'Reservation Number', 'reservYear','reservMonth', 'Reserved By',]]

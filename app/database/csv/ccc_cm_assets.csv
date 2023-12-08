@@ -116,11 +116,16 @@
 218451,175189,analyser junior technician,Davlatov Shoxijahon Sobir o'g'li
 218576,175189,Static Junior Technician,Radjabov Jaloliddin Jahongir o`g`li
 220897,175189,Junior technician,Qarshiy Laziz Kuchar o'g'li
+175193,175191,Analyzer Technician,Asror Xusanov
+175197,175191,Rotating Engineer,Shaxzod Abdimurodov
+175199,175191,Rotating Technician,Ilxom Nomazov
+175204,175191,Static Engineer,Dusmatov Nodirbek
 175218,175191,Electrical Technician,Daminov Doniyor
 175221,175191,Electrical Junior technician,Raxmatov Jahongir
 175222,175191,Electrical Junior technician,Normurodov Sanjar
 175223,175191,Electrical Junior technician,Nazarov Abror
 175224,175191,Electrical Junior technician,Suyunov Ahror
+211382,175191,Rotating Engineer,Ochilov Shuhrat
 175235,175192,Electrical Supervisor,Axmedov Ibroxim
 175236,175192,Electrical Junior Technician,Bahodirov Dilshodbek
 175239,175192,Electrical Junior Technician,Bokiev Kamol
@@ -41489,40 +41494,35 @@
 221544,175190,Analyzer  Technician,Shaxrizod Orziyev
 223545,175190,Junior electrician,Buriyev Abror
 223982,175190,Electrical Junior Technician,Bo'riyev Abror Abdivoitovich
-175193,175191,Analyzer Technician,Asror Xusanov
-175194,175191,Analyzer Supervisor,Doston Normuminov 
-175195,175191,Analyzer Technician,Shamsiddin Temirov
-175196,175191,Rotating Technician,Oxunjon Zamonov
-175197,175191,Rotating Engineer,Shaxzod Abdimurodov
-175199,175191,Rotating Technician,Ilxom Nomazov
-175200,175191,Rotating Supervisor,Obid Bo'tayorov 
+175194,175191,Analyzer Supervisor,Normuminov Doston Almardon o'g'li
+175195,175191,Analyzer Technician,Temirov Shamsiddin Shaymardan o'g'li
+175196,175191,Rotating Technician,Zamonov Oxunjon Noxim o'g'li
+175200,175191,Rotating Supervisor,Bo'tayorov Obid Norqo'chqor o'g'li
 175201,175191,Junior Static technician,Suyunov Mansur Soat o`g`li
-175202,175191,Static Supervisor,Karimov Atobek
-175203,175191,Static Engineer,Narziyev Nizomiddin 
-175204,175191,Static Engineer,Dusmatov Nodirbek
-175205,175191,Static Technician,Buriev Shoxrux
-175206,175191,Static Junior Technician,Shamsiyev Shoxrux
-175207,175191,Static Junior Technician,Almardonov Akmal
-175209,175191,Instrumentation Engineer,Dusnazarov Umar
-175210,175191,Instrumentation Engineer,Xudoyarov Yigitali
-175211,175191,Instrumentation Technician,Xujayev Jahongir
-175212,175191,Instrumentation Technician,Boytemirov Sardorbek
+175202,175191,Static Supervisor,Karimov Atobek Axmad o'g'li
+175203,175191,Static Engineer,Narziyev Nizomiddin Uyg'un o'g'li
+175205,175191,Static Technician,Buriev Shoxrux Axmad o'g'li
+175206,175191,Static Junior Technician,Shamsiyev Shoxrux Abdiroziq o'g'li
+175207,175191,Static Junior Technician,Almardonov Akmal Abduhomidovich
+175209,175191,Instrumentation Engineer,Dusnazarov Umar Doniyor o'g'li
+175210,175191,Instrumentation Engineer,Xudoyarov Yigitali Nomozovich
+175211,175191,Instrumentation Technician,Xujayev Jahongir Bahodir o'g'li
+175212,175191,Instrumentation Technician,Boytemirov Sardorbek Shavkat o'g'li
 175215,175191,Junior Instrument technician,Jovliyev Shavkatjon Uchqun o`g`li
-175216,175191,Trainee,Kenjayev Akbar Shavkat o`g`li
-175217,175191,Electrical Supervisor,Nuriddinov Shaxriyor
-175220,175191,Electrical Junior technician,Muxammadiyev Ulug'bek
-175225,175191,Electrical Junior technician,Fayzullayev Sardorbek
+175216,175191,Junior Instrumentation technician,Kenjayev Akbar Shavkat o`g`li
+175217,175191,Electrical Supervisor,Nuriddinov Shaxriyor Navruz o'g'li
+175220,175191,Electrical Junior technician,Muxammadiyev Ulug'bek Begim o'g'li
+175225,175191,Electrical Junior technician,Fayzullayev Sardorbek Muradulla o'g'li
 175226,175191,Junior Electrical technician,Kamolov Dilshod Farmon o`g`li
 175227,175191,Junior Electrician,Boymurodov Jasurbek Baxriddin o`g`li
 175456,175191,Instrumentation Engineer,Turayev Bobir Botir o'g'li
 175765,175191,Field Manager (PWU),Buriev Mansur Jurayevich
 175766,175191,Senior Maintenance Planner (PWU) & CMMS Lead Engineer,Xasanov Mansur Tulqin o'g'li
-211381,175191,Rotating Engineer,Soibov Asomiddin
-211382,175191,Rotating Engineer,Ochilov Shuhrat
-218447,175191,Elect,Xo'jamberdiyev Bobosher Mamatqul o'g'li
+211381,175191,Rotating Engineer,Soibov Asomiddin Abdilaziz o'g'li
+218447,175191,Junior electrical technician,Xo'jamberdiyev Bobosher Mamatqul o'g'li
 218585,175191,Junior Rotating technician,Umirov Shaxzod Sobir o`g`li
 218588,175191,Junior Rotating technician,Choriyev Shaxriyor To`ychi o`g`li
-220942,175191,Trainee,Nasimov Baxrom Ixtiyor o'g'li
+220942,175191,Junior electrical tecnician,Nasimov Baxrom Ixtiyor o'g'li
 222699,175191,Junior rotating technician,Miximov Shaxzod Farhod o'g'li
 223241,175191,Inst Junior technique,Eshqobilov Quvonch
 223461,175191,Trainee,Baxriyev Sunnatbek
@@ -45573,6 +45573,7 @@
 224664,218533,Trainee,O'rinov Muslimbek Sherqul o'g'li
 224665,218533,Trainee,Ergashev Anvar Nizamitdin o'g'li 
 224666,218533,Trainee,Narziyev Suyun Sadin o'g'li
+224756,218533,Trainee,G`oziyev Jamshid Yaxshiboyevich
 219753,219752,Head of turnaround planning,Pan Aleksandr Sergeyevich
 219754,219752,Senior Planner,Azizbek Narziev G'aybullayevich
 219755,219752,Maintenance Planner,Bobomurodov Xurshid G'olibjon o'g'li

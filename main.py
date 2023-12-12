@@ -1,14 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import reports, dFrames, stat, utils
-
+from app.routers import reports, dFrames
+from app.routers import analysis
 
 app = FastAPI()
 app.include_router(reports.router)
 app.include_router(dFrames.router)
-app.include_router(stat.router)
-app.include_router(utils.router)
+app.include_router(analysis.router)
 
 
 app.add_middleware(

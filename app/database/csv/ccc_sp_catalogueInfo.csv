@@ -925,6 +925,11 @@
 93030,,scaffolding outscoutauf,,2
 93035,108,108,,2
 93036, , ,,2
+93037,WIM00040949,WIM00040949,,2
+93041,ишчила,ишчила,,2
+93132,wim000 | 120-PC-003A/B/ T,wim000 | 120-PC-003A/B/ TSP 4X2-9/ Mechanical SEAL,,2
+93133,B/ T,wim000 | 120-PC-003A/B/ TSP 4X2-9/ Mechanical SEAL,,2
+93134,воен,воен,,2
 6666,WIM0000001,120-PC-003A/B/ TSP 4X2-9/ Mechanical SEAL,3284,8
 6667,WIM0000002,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 21,76/Ea",2179,2
 6668,WIM0000003,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 36,26/Ea",2180,2
@@ -4837,10 +4842,10 @@
 50944,WIM0044067,Муфтовая соединительная головка ПР 66х51мм,O0006829,2
 50945,WIM0044068,"THREADED FLANGE 1-1/2"" #150",12243,2
 50946,WIM0044069,"THREADED FLANGE 3"" #150",12244,2
-50947,WIM0044070,Анкер-клин HSL-4-G M12/25,12245,2
-50948,WIM0044071,Анкер-шуруп HUS3-H 10/90,12246,2
-50949,WIM0044072,Анкерный болт распорный M10x200 (M10x202),12247,2
-50950,WIM0044073,Шпилька анкерный 8.8 М30х1000,12248,2
+50947,WIM0044070,Анкер-клин HSL-4-G M12/25,O0010634,2
+50948,WIM0044071,Анкер-шуруп HUS3-H 10/90,O0010635,2
+50949,WIM0044072,Анкерный болт распорный M10x200 (M10x202),O0010636,2
+50950,WIM0044073,Шпилька анкерный 8.8 М30х1000,O0010637,2
 50951,WIM0044074,Шпилька М24 L=150. A320 L7M в комплекте с двумя гайками Hh F194 7M,12249,2
 50952,WIM0044075,Шпилька с 2 гайками M24x150,12250,2
 50953,WIM0044076,Фильтр топливный FS1013,12251,2
@@ -4915,8 +4920,8 @@
 51024,WIM0044147,"Фланец из нерж.стали, 3"" ss a182-f316l rf 125 aarh  b16.5 cl150  s-10s",O0010512,2
 51025,WIM0044148,Проволока сварочная OK Autroud 12.51 1.2ММ,12323,17
 51026,WIM0044149,Мат огнеупорный Cerachem Blanket 7320х610х25ММ керамическое стекловолокно 128КГ/КУБ.М СТО 05802307-1-012-2017,12324,18
-51027,WIM0044150,Электрод сварочный OK 76.28 3.2х350ММ 1/2 VP,12325,17
-51028,WIM0044151,Электрод сварочный 2133 Mn 3.2х350ММ UTP,12326,17
+51027,WIM0044150,Электрод сварочный OK 76.28 3.2х350ММ 1/2 VP,O0010638,17
+51028,WIM0044151,Электрод сварочный 2133 Mn 3.2х350ММ UTP,O0010639,17
 51029,WIM0044152,"Пруток сварочный A 2133 Mn 2,4х1000ММ UTP",12327,17
 51030,WIM0044153,"Фланец заглушка 2""""/50; A182-F316/316L; 150#; RF;присоединяемая труба 60,3х2,77",O0010513,2
 51031,WIM0044154,Смазка графитовая,12329,17
@@ -5581,54 +5586,54 @@
 51704,WIM0044827,BUNDLE DEVICE FOR 120-CC-101 Y1811-03 (S.369-17 OF 18),13002,8
 51705,WIM0044828,BUNDLE DEVICE FOR 120-CC-101 Y1811-04 (S.369-17 OF 18),13003,8
 51706,WIM0044829,WRENCH FOR R/M COUPLING FOR 120-CC-101 Y1811-96 (S.369-17 OF 18),13004,2
-51707,WIM0044830,CLAMP D10XD12 FOR 120-CC-101 Y1811-B2 (S.369-17 OF 18),13005,2
-51708,WIM0044831,CLAMP D10XD6 FOR 120-CC-101 Y1811-B3 (S.369-17 OF 18),13006,2
-51709,WIM0044832,PLIER FOR ERGC TURBINE 5CL-6 Y9721-12 (S.369-17 OF 18),13007,2
-51710,WIM0044833,ROTOR AJUSTING TOOL FOR ERGC TURBINE 5CL-6 Y9722-11 (S.369-17 OF 18),13008,8
-51711,WIM0044834,INP WRENCH @55 FOR ERGC TURBINE 5CL-6 Y9731-51 (S.369-17 OF 18),13009,2
-51712,WIM0044835,INP WRENCH @55 FOR ERGC TURBINE 5CL-6 Y9731-65 (S.369-17 OF 18),13010,2
-51713,WIM0044836,WIRE ROPE @D16 L1600 FOR ERGC TURBINE 5CL-6 Y9712-91 (S.369-17 OF 18),13011,2
+51707,WIM0044830,CLAMP D10XD12 FOR 120-CC-101 Y1811-B2 (S.369-17 OF 18),O0010642,2
+51708,WIM0044831,CLAMP D10XD6 FOR 120-CC-101 Y1811-B3 (S.369-17 OF 18),O0010643,2
+51709,WIM0044832,PLIER FOR ERGC TURBINE 5CL-6 Y9721-12 (S.369-17 OF 18),O0010644,2
+51710,WIM0044833,ROTOR AJUSTING TOOL FOR ERGC TURBINE 5CL-6 Y9722-11 (S.369-17 OF 18),O0010645,8
+51711,WIM0044834,INP WRENCH @55 FOR ERGC TURBINE 5CL-6 Y9731-51 (S.369-17 OF 18) 120-CC-101/201,O0010646,2
+51712,WIM0044835,INP WRENCH @55 FOR ERGC TURBINE 5CL-6 Y9731-65 (S.369-17 OF 18) 120-CC-101/201,O0010647,2
+51713,WIM0044836,WIRE ROPE @D16 L1600 FOR ERGC TURBINE 5CL-6 Y9712-91 (S.369-17 OF 18) 120-CC-101/201,O0010648,2
 51714,WIM0044837,CD FOR ACTUATOR FOR ERGC TURBINE 5CL-6 Y5121-12 (S.369-15 OF 16),13012,2
-51715,WIM0044838,GUIDE BAR @D44.5L558 FOR ERGC TURBINE 5CL-6 Y9712-44 (S.369-15 OF 16),13013,2
-51716,WIM0044839,PLIER FOR ERGC TURBINE 5CL-6 Y9721-12 (S.369-15 OF 16),13014,2
-51717,WIM0044840,HEXAGON HEAD BOLT M16X35 FOR 150-CC-001 C3132-61 (S.369-1 OF 16),13015,2
+51715,WIM0044838,GUIDE BAR @D44.5L558 FOR ERGC TURBINE 5CL-6 Y9712-44 (S.369-15 OF 16) 120-CC-101/201,O0010649,2
+51716,WIM0044839,PLIER FOR ERGC TURBINE 5CL-6 Y9721-12 (S.369-15 OF 16) 120-CC-101/201,O0010650,2
+51717,WIM0044840,HEXAGON HEAD BOLT M16X35 FOR 150-CC-001 C3132-61 (S.369-1 OF 16),O0010651,2
 51718,WIM0044841,BUNDLE DEVICE FOR 150-CC-001 Y1811-03 (S.369-15 OF 16),13016,8
 51719,WIM0044842,BUNDLE DEVICE FOR 150-CC-001 Y1811-04 (S.369-15 OF 16),13017,8
-51720,WIM0044843,T-WRENCH FOR THR.NUT FOR 150-CC-001 Y1811-23 (S.369-15 OF 16),13018,2
-51721,WIM0044844,SEAL PULLER (M6) FOR 150-CC-001 Y1811-35 (S.369-15 OF 16),13019,8
-51722,WIM0044845,SEAL PULLER (M8) FOR 150-CC-001 Y1811-37 (S.369-15 OF 16),13020,8
-51723,WIM0044846,CENTERING TOOL FOR 150-CC-001 Y1811-54 (S.369-15 OF 16),13021,8
-51724,WIM0044847,GAS SEAL INST. FOR 150-CC-001 Y1811-71 (S.369-15 OF 16),13022,8
-51725,WIM0044848,WRENCH FOR R/M COUPLING FOR 150-CC-001 Y1811-96 (S.369-15 OF 16),13023,2
+51720,WIM0044843,T-WRENCH FOR THR.NUT FOR 150-CC-001 Y1811-23 (S.369-15 OF 16),O0010652,2
+51721,WIM0044844,SEAL PULLER (M6) FOR 150-CC-001 Y1811-35 (S.369-15 OF 16),O0010653,8
+51722,WIM0044845,SEAL PULLER (M8) FOR 150-CC-001 Y1811-37 (S.369-15 OF 16),O0010654,8
+51723,WIM0044846,CENTERING TOOL FOR 150-CC-001 Y1811-54 (S.369-15 OF 16),O0010655,8
+51724,WIM0044847,GAS SEAL INST. FOR 150-CC-001 Y1811-71 (S.369-15 OF 16),O0010656,8
+51725,WIM0044848,WRENCH FOR R/M COUPLING FOR 150-CC-001 Y1811-96 (S.369-15 OF 16),O0010657,2
 51726,WIM0044849,CD FOR SERVICE TOOL FOR RGC TURBINE 5CL-4 Y5121-12 (S.369-15 OF 16),13024,2
-51727,WIM0044850,PLIER FOR RGC TURBINE 5CL-4 Y9721-12 (S.369-15 OF 16),13025,2
-51728,WIM0044851,INP WRENCH @46 FOR RGC TURBINE 5CL-4 Y9731-62 (S.369-15 OF 16),13026,2
-51729,WIM0044852,GAS SEAL INST. FOR 150-CC-003 Y1811-71 (S.369-16 OF 17),13027,8
+51727,WIM0044850,PLIER FOR RGC TURBINE 5CL-4 Y9721-12 (S.369-15 OF 16) 150-CC-001,O0010658,2
+51728,WIM0044851,INP WRENCH @46 FOR RGC TURBINE 5CL-4 Y9731-62 (S.369-15 OF 16),O0010659,2
+51729,WIM0044852,GAS SEAL INST. FOR 150-CC-003 Y1811-71 (S.369-16 OF 17),O0010660,8
 51730,WIM0044853,LIFTING TOOL FOR TURBINE ROTOR FOR DW RGC TURBINE 3CL-4 Y9710-16 (S.369-16 OF 17),13028,8
-51731,WIM0044854,SPANNER FOR CASING BOLT (M36) FOR DW RGC TURBINE 3CL-4 Y9710-30 (S.369-16 OF 17),13029,2
+51731,WIM0044854,SPANNER FOR CASING BOLT (M36) FOR DW RGC TURBINE 3CL-4 Y9710-30 (S.369-16 OF 17),O0010661,2
 51732,WIM0044855,ROTOR TURNING TOOL FOR CENTERNING CHECK FOR DW RGC TURBINE 3CL-4 Y9710-33 (S.369-16 OF 17),13030,8
 51733,WIM0044856,BUNDLE DEVICE FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-03 (S.469-17 OF 18),13031,8
 51734,WIM0044857,BUNDLE DEVICE FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-04 (S.469-17 OF 18),13032,8
 51735,WIM0044858,SHEAR RING LINER FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-09 (S.469-17 OF 18),13033,2
 51736,WIM0044859,JACK BOLT M12X150 FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-21 (S.469-17 OF 18),13034,2
-51737,WIM0044860,EYE BOLT-C M42 FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-30 (S.469-17 OF 18),13035,2
-51738,WIM0044861,GAS SEAL COLLAR PULLER FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-70 (S.469-17 OF 18),13036,8
-51739,WIM0044862,ADAPTER FOR R/M COUPLING FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-97 (S.469-17 OF 18),13037,8
+51737,WIM0044860,EYE BOLT-C M42 FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-30 (S.469-17 OF 18),O0010662,2
+51738,WIM0044861,GAS SEAL COLLAR PULLER FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-70 (S.469-17 OF 18),O0010663,8
+51739,WIM0044862,ADAPTER FOR R/M COUPLING FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1811-97 (S.469-17 OF 18),O0010664,8
 51740,WIM0044863,HAND PUMP ASS'Y 3000BAR FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y5811-01 (S.469-17 OF 18),13038,8
 51741,WIM0044864,HAND PUMP ASS'Y 720BAR FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y5811-02 (S.469-17 OF 18),13039,8
-51742,WIM0044865,GUIDE BAR @D44.5L758 FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y9712-44 (S.469-17 OF 18),13040,2
+51742,WIM0044865,GUIDE BAR @D44.5L758 FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y9712-44 (S.469-17 OF 18) 130-CC-114,O0010665,2
 51743,WIM0044866,LIFT TOOL @200 L1260 FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y9712-72 (S.469-17 OF 18),13041,2
-51744,WIM0044867,JACK BOLT M12L80 FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y9721-25 (S.469-17 OF 18),13042,2
-51745,WIM0044868,HOOK SPANNER FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y6221-41 (S.469-17 OF 18),13043,2
-51746,WIM0044869,CHARGING HOSE FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y6221-45 (S.469-17 OF 18),13044,2
-51747,WIM0044870,ACCUMULATOR (IRC #1) HOOK SPANER L295 FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1700-05-01 (S.469-17 OF 18),13045,2
-51748,WIM0044871,GUIDE BAR @D44.5L758 FOR IRC TURBINE 5CL-4 Y9712-44 (S.469-17 OF 18),13046,2
-51749,WIM0044872,JACK UP BOLT @M30L220 FOR IRC TURBINE 5CL-4 Y9712-54 (S.469-17 OF 18),13047,2
-51750,WIM0044873,JACK UP BOLT @M30L160 FOR IRC TURBINE 5CL-4 Y9712-56 (S.469-17 OF 18),13048,2
-51751,WIM0044874,HEX. BOLT & NUT M24*130 FOR IRC TURBINE 5CL-4 Y9712-74 (S.469-17 OF 18),13049,2
-51752,WIM0044875,EYE BOLT M30 FOR IRC TURBINE 5CL-4 Y9721-61 (S.469-17 OF 18),13050,2
-51753,WIM0044876,INP WRENCH @36 FOR IRC TURBINE 5CL-4 Y9731-56 (S.469-17 OF 18),13051,2
-51754,WIM0044877,INP WRENCH @46 FOR IRC TURBINE 5CL-4 Y9731-62 (S.469-17 OF 18),13052,2
+51744,WIM0044867,JACK BOLT M12L80 FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y9721-25 (S.469-17 OF 18),O0010666,2
+51745,WIM0044868,HOOK SPANNER FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y6221-41 (S.469-17 OF 18) 130-CC-114,O0010667,2
+51746,WIM0044869,CHARGING HOSE FOR CENTRIFUGAL COMPRESSOR IRC TURBINE 5CL-4 Y6221-45 (S.469-17 OF 18) 130-CC-114,O0010668,2
+51747,WIM0044870,ACCUMULATOR (IRC #1) HOOK SPANER L295 FOR CENTRIFUGAL COMPRESSOR 130-CC-114 Y1700-05-01 (S.469-17 OF 18),O0010669,2
+51748,WIM0044871,GUIDE BAR @D44.5L758 FOR IRC TURBINE 5CL-4 Y9712-44 (S.469-17 OF 18) 130-CC-114,O0010670,2
+51749,WIM0044872,JACK UP BOLT @M30L220 FOR IRC TURBINE 5CL-4 Y9712-54 (S.469-17 OF 18),O0010671,2
+51750,WIM0044873,JACK UP BOLT @M30L160 FOR IRC TURBINE 5CL-4 Y9712-56 (S.469-17 OF 18) 130-CC-114,O0010672,2
+51751,WIM0044874,HEX. BOLT & NUT M24*130 FOR IRC TURBINE 5CL-4 Y9712-74 (S.469-17 OF 18) 130-CC-114,O0010673,2
+51752,WIM0044875,EYE BOLT M30 FOR IRC TURBINE 5CL-4 Y9721-61 (S.469-17 OF 18) 130-CC-114,O0010674,2
+51753,WIM0044876,INP WRENCH @36 FOR IRC TURBINE 5CL-4 Y9731-56 (S.469-17 OF 18) 130-CC-114,O0010675,2
+51754,WIM0044877,INP WRENCH @46 FOR IRC TURBINE 5CL-4 Y9731-62 (S.469-17 OF 18) 130-CC-114,O0010676,2
 51755,WIM0044878,"Off-Spec Product Pumps_CAN+SEAL PIPE_TVCP 6X4-12,5S",13053,8
 51756,WIM0044879,Hot dip galvanized anchor Anchor bolt (1EA) & nut (2EA) for Off-Spec Product Pumps,13054,8
 51757,WIM0044880,Steel and glass Constant level oiler for Off-Spec Product Pumps,13055,2
@@ -14585,9 +14590,9 @@
 92723,WIM0053547,"1. NAME OF PART : GASKET- SPIRAL WOUND GASKET (t4.5)- FILLER : GRAPHITE- HOOP : 316L S.S- INNER RING : C.S- OUTER RING : C.S3. SIZE : t4.5 / 2"" ASME 300# RF4. DOC No. : UZGTL-IJE-HEX-10-60-0-05045. ITEM No. : 19",16697,2
 92724,WIM0053548,"1. NAME OF PART : GASKET- SPIRAL WOUND GASKET (t4.5)- FILLER : GRAPHITE- HOOP : 316L S.S- INNER RING : C.S- OUTER RING : C.S3. SIZE : t4.5 / 1"" ASME 300# RF4. DOC No. : UZGTL-IJE-HEX-10-60-0-05045. ITEM No. : 23",16698,2
 92725,WIM0053549,"1. NAME OF PART : GASKET- SPIRAL WOUND GASKET (t4.5)- FILLER : GRAPHITE- HOOP : 316L S.S- INNER RING : C.S- OUTER RING : C.S3. SIZE : t4.5 / 1"" ASME 300# RF4. DOC No. : UZGTL-IJE-HEX-10-60-0-05045. ITEM No. : 27",16699,2
-92726,WIM0053550,Diesel Generator 50 kW,,8
-92727,WIM0053551,Diesel Generator 63 kW,,8
-92728,WIM0053552,Diesel Generator 250 kW,,8
+92726,WIM0053550,Дизельный генератор мощностью 50кВт,O0010532,2
+92727,WIM0053551,Дизельный генератор мощностью 63кВт,O0010533,2
+92728,WIM0053552,Дизельный генератор мощностью 250кВт,O0010534,2
 92729,WIM0053553,Electrical cable,,12
 92730,WIM0053554,Self-supporting insulated wire,,12
 92731,WIM0053555,Branch clamp for SIP cable,,2
@@ -14876,3 +14881,97 @@
 93032,WIM0053826,Баллон для азота (5155095Y) (пустой). Для использования с газовым огнетушителем FM200 и B20-SKD-0503. В здании удаленной аппаратной КИПиА RIB-1,O0009331,2
 93033,WIM0053827,Баллон для азота (KF233555AA) (пустой). Для использования с газовым огнетушителем FM200 и B23-SKD-0502. В здании удаленной аппаратной КИПиА RIB-4,O0009332,2
 93034,WIM0053828,Батареи аккумляторные литий-ионные,O0010826,2
+93038,Serv_0000254,Оказание услуг по разработке норм расхода газа на собственные нужды и потери на 2024 год для ООО «Uzbekistan GTL»,,2
+93039,WIM0053829,Mattresses Insulation-According to spe Material: Mineral wool and Glass fiber fabric E1A3222793-198,O0010640,2
+93040,WIM0053830,Mattresses Insulation spare parts Material: Mineral wool and Glass fiber fabric E1A3222793-199,O0010641,2
+93042,ContractServ00001,(Shielded) Metal Arc welding (work up to 10 meters),,45
+93043,ContractServ00002,(Shielded) Metal Arc welding (work from 10 meters to 20 meters),,45
+93044,ContractServ00003,(Shielded) Metal Arc welding (work from 20 meters to 30 meters),,45
+93045,ContractServ00004,(Shielded) Metal Arc welding (work from 30 meters to 40 meters),,45
+93046,ContractServ00005,(Shielded) Metal Arc welding (work from 40 meters to 50 meters),,45
+93047,ContractServ00006,TIG welding (work up to 10 meters),,45
+93048,ContractServ00007,TIG welding (work from 10 meters to 20 meters),,45
+93049,ContractServ00008,TIG welding (work from 20 meters to 30 meters),,45
+93050,ContractServ00009,TIG welding (work from 30 meters to 40 meters),,45
+93051,ContractServ00010,TIG welding (work from 40 meters to 50 meters),,45
+93052,ContractServ00011,"Preparation, chamfer opening, installation of welding products (work up to 10 meters)",,45
+93053,ContractServ00012,"Preparation, chamfer opening, installation of welding products (work from 10 meters to 20 meters)",,45
+93054,ContractServ00013,"Preparation, chamfer opening, installation of welding products (work from 20 meters to 30 meters)",,45
+93055,ContractServ00014,"Preparation, chamfer opening, installation of welding products (work from 30 meters to 40 meters)",,45
+93056,ContractServ00015,"Preparation, chamfer opening, installation of welding products (work from 40 meters to 50 meters)",,45
+93057,ContractServ00016,Cleaning of welding products (work up to 10 meters),,45
+93058,ContractServ00017,Cleaning of welding products (work from 10 meters to 20 meters),,45
+93059,ContractServ00018,Cleaning of welding products (work from 20 meters to 30 meters),,45
+93060,ContractServ00019,Cleaning of welding products (work from 30 meters to 40 meters),,45
+93061,ContractServ00020,Cleaning of welding products (work from 40 meters to 50 meters),,45
+93062,ContractServ00021,Gas welding cutting thickness up to 10mm (work at height up to 10m),,45
+93063,ContractServ00022,Gas welding cutting thickness up to 10mm (work from 10 meters to 20 meters),,45
+93064,ContractServ00023,Gas welding cutting thickness up to 10mm (work from 20 meters to 30 meters),,45
+93065,ContractServ00024,Gas welding cutting thickness up to 10mm (work from 30 meters to 40 meters),,45
+93066,ContractServ00025,Gas welding cutting thickness up to 10mm (work from 40 meters to 50 meters),,45
+93067,ContractServ00026,Gas welding cutting with a thickness of 10mm to 20mm (work at height up to 10m),,45
+93068,ContractServ00027,Gas welding cutting with a thickness of 10mm to 20mm (work from 10 meters to 20 meters),,45
+93069,ContractServ00028,Gas welding cutting with a thickness of 10mm to 20mm (work from 20 meters to 30 meters),,45
+93070,ContractServ00029,Gas welding cutting with a thickness of 10mm to 20mm (work from 30 meters to 40 meters),,45
+93071,ContractServ00030,Gas welding cutting with a thickness of 10mm to 20mm (work from 40 meters to 50 meters),,45
+93072,ContractServ00031,Gas welding cutting with a thickness of 20mm to 30mm (work at height up to 10m),,45
+93073,ContractServ00032,Gas welding cutting with a thickness of 20mm to 30mm (work from 10 meters to 20 meters),,45
+93074,ContractServ00033,Gas welding cutting with a thickness of 20mm to 30mm (work from 20 meters to 30 meters),,45
+93075,ContractServ00034,Gas welding cutting with a thickness of 20mm to 30mm (work from 30 meters to 40 meters),,45
+93076,ContractServ00035,Gas welding cutting with a thickness of 20mm to 30mm (work from 40 meters to 50 meters),,45
+93077,ContractServ00036,Gas welding cutting with a thickness of 30mm to 40mm (work at height up to 10m),,45
+93078,ContractServ00037,Gas welding cutting with a thickness of 30mm to 40mm (work from 10 meters to 20 meters),,45
+93079,ContractServ00038,Gas welding cutting with a thickness of 30mm to 40mm (work from 20 meters to 30 meters),,45
+93080,ContractServ00039,Gas welding cutting with a thickness of 30mm to 40mm (work from 30 meters to 40 meters),,45
+93081,ContractServ00040,Gas welding cutting with a thickness of 30mm to 40mm (work from 40 meters to 50 meters),,45
+93082,ContractServ00041,Gas welding cutting with a thickness of 40mm to 50mm (work at height up to 10m),,45
+93083,ContractServ00042,Gas welding cutting with a thickness of 40mm to 50mm (work from 10 meters to 20 meters),,45
+93084,ContractServ00043,Gas welding cutting with a thickness of 40mm to 50mm (work from 20 meters to 30 meters),,45
+93085,ContractServ00044,Gas welding cutting with a thickness of 40mm to 50mm (work from 30 meters to 40 meters),,45
+93086,ContractServ00045,Gas welding cutting with a thickness of 40mm to 50mm (work from 40 meters to 50 meters),,45
+93087,ContractServ00046,Dismantling coating the surface of pipelines with aluminum sheets or galvanized steel,,44
+93088,ContractServ00047,Dismantling the insulation of pipelines,,23
+93089,ContractServ00048,Dismantling of foil pipelines,,44
+93090,ContractServ00049,Cleaning the surface of pipelines with metal brushes,,44
+93091,ContractServ00050,Pipe insulation with foil,,44
+93092,ContractServ00051,Pipeline insulation,,23
+93093,ContractServ00052,Covering the surface of pipelines with aluminum sheets or galvanized steel,,44
+93094,ContractServ00053,Dismantling coatinginsulation of flanged aluminum or galvanized sheet,,44
+93095,ContractServ00054,Dismantling the insulation of flange connections,,23
+93096,ContractServ00055,Removing the Flange Foil,,44
+93097,ContractServ00056,Cleaning the surface of flange connections with metal brushes,,44
+93098,ContractServ00057,Insulation of flange connections with foil,,44
+93099,ContractServ00058,Insulation flange connections,,23
+93100,ContractServ00059,Covering the surface of flange connections with aluminum sheets or galvanized steel,,44
+93101,ContractServ00060,Dismantling covering the surface of shut-off valves with aluminum sheets or galvanized steel,,2
+93102,ContractServ00061,Dismantling the insulation of shut-off valves,,2
+93103,ContractServ00062,Dismantling of the shut-off valve foil,,2
+93104,ContractServ00063,Cleaning the surface of shut-off valves with metal brushes,,2
+93105,ContractServ00064,Foil insulation of shut-off valves,,2
+93106,ContractServ00065, Insulation of shut-off valve,,2
+93107,ContractServ00066,Covering the surface of shut-off valves with aluminum sheets or galvanized steel,,2
+93108,ContractServ00067,Installation of scaffolding at a height of 0-12 meters,,23
+93109,ContractServ00068,Installation of scaffolding at a height of 13-22 meters,,23
+93110,ContractServ00069,Installation of scaffolding at a height of 23-32 meters,,23
+93111,ContractServ00070,Installation of scaffolding at a height of 32 meters or more,,23
+93112,ContractServ00071,Installation of scaffolding on clamps at a height of 0-12 meters,,23
+93113,ContractServ00072,Installation of scaffolding on clamps at a height of 13-22  meters,,23
+93114,ContractServ00073,Installation of scaffolding on clamps at a height of 23-32 meters,,23
+93115,ContractServ00074,Installation of scaffolding on clamps at a height of 32 meters or more,,23
+93116,ContractServ00075,Installation of hinged scaffolding at a height of 0-12 meters,,44
+93117,ContractServ00076,Installation of hinged scaffolding at a height of 13-22 meters,,44
+93118,ContractServ00077,Installation of hinged scaffolding at a height of 23-32  meters,,44
+93119,ContractServ00078,Installation of hinged scaffolding at a height of 32 meters or more,,44
+93120,ContractServ00079,Dismantling of scaffolding at a height of 0-12 meters,,23
+93121,ContractServ00080,Dismantling of scaffolding at a height of 13-22 meters,,23
+93122,ContractServ00081,Dismantling of scaffolding at a height of 23-32  meters,,23
+93123,ContractServ00082,Dismantling of scaffolding at a height of 32 meters or more,,23
+93124,ContractServ00083,Dismantling of scaffolding on clamps at a height of 0-12 meters,,23
+93125,ContractServ00084,Dismantling of scaffolding on clamps at a height of 13-22meters,,23
+93126,ContractServ00085,Dismantling of scaffolding on clamps at a height of 23-32   meters,,23
+93127,ContractServ00086,Dismantling of scaffolding on clamps at a height of 32 meters or more,,23
+93128,ContractServ00087,Dismantling of hinged scaffolding at a height of 0-12 meters,,44
+93129,ContractServ00088,Dismantling of hinged scaffolding at a height of 13-22 meters,,44
+93130,ContractServ00089,Dismantling of hinged scaffolding at a height of 23-32  meters,,44
+93131,ContractServ00090,Dismantling of hinged scaffolding at a height of 32 meters or more,,44
+93135,Serv_0000255,For services of Lube and Transformer Oil Analysis for various equipment of Uzbekistan GTL LLC,,2

@@ -13,6 +13,7 @@ reservations['reservYear']  = reservations['Completed Date Time'].dt.year
 reservations['reservMonth'] = reservations['Completed Date Time'].dt.month
 
 
+
 reservations = reservations.merge(contactID[['Contact ID', 'Reserved By']], how = 'left', left_on = 'Created By Contact ID', right_on = 'Contact ID')
 
 

@@ -1,0 +1,753 @@
+﻿Requisition ID,Requisition Number,Requisition Description,Requisitioned By Contact ID,Required By Date Time,Approval Path ID,Raised Date Time,Created By Contact ID
+13,17,test,1,7/09/2022 11:44:04 AM,24,7/09/2022 11:44:04 AM,1
+14,18,,1463,11/09/2022 11:03:12 AM,25,11/09/2022 11:03:12 AM,1463
+15,19,,689,12/09/2022 10:57:06 AM,26,12/09/2022 10:57:06 AM,689
+16,20,,689,12/09/2022 10:57:11 AM,26,12/09/2022 10:57:11 AM,689
+17,21,,689,12/09/2022 10:57:16 AM,26,12/09/2022 10:57:16 AM,689
+18,22,,689,12/09/2022 10:59:34 AM,26,12/09/2022 10:59:34 AM,689
+19,23,,689,12/09/2022 11:00:43 AM,26,12/09/2022 11:00:43 AM,689
+20,24,,689,12/09/2022 11:04:56 AM,26,12/09/2022 11:04:56 AM,689
+21,25,,689,12/09/2022 11:06:32 AM,26,12/09/2022 11:06:32 AM,689
+22,26,Test please ignore,1,14/09/2022 11:37:07 AM,33,14/09/2022 11:37:07 AM,1
+23,27,,689,12/09/2022 9:00:00 AM,33,16/09/2022 9:21:56 AM,689
+24,28,,689,14/09/2022 2:00:00 PM,26,16/09/2022 9:23:50 AM,689
+25,29,,1460,20/09/2022 3:39:42 PM,28,20/09/2022 3:39:42 PM,1460
+26,30,,1460,9/10/2022 9:00:00 AM,28,20/09/2022 3:55:48 PM,1460
+27,31,,689,21/09/2022 12:00:00 AM,26,21/09/2022 3:06:35 PM,689
+28,32,,689,21/09/2022 12:00:00 AM,26,21/09/2022 3:08:37 PM,689
+29,33,,689,19/09/2022 12:00:00 AM,26,22/09/2022 10:19:19 AM,689
+30,34,,1460,23/09/2022 10:24:48 AM,28,23/09/2022 10:24:48 AM,1460
+31,35,,1460,23/09/2022 10:24:54 AM,28,23/09/2022 10:24:54 AM,1460
+32,36,,1460,23/09/2022 10:24:57 AM,28,23/09/2022 10:24:57 AM,1460
+33,37,,1460,23/09/2022 10:25:00 AM,28,23/09/2022 10:25:00 AM,1460
+34,38,,1460,23/09/2022 10:25:04 AM,28,23/09/2022 10:25:04 AM,1460
+35,39,,1460,24/09/2022 3:00:00 PM,28,24/09/2022 3:16:11 PM,1460
+36,40,,1460,26/09/2022 2:13:48 PM,28,26/09/2022 2:13:48 PM,1460
+37,41,,1460,23/09/2022 9:00:00 AM,28,28/09/2022 9:56:18 AM,1460
+38,42,,1460,27/09/2022 2:00:00 PM,28,28/09/2022 10:48:43 AM,1460
+39,43,,1460,27/09/2022 2:00:00 PM,28,28/09/2022 10:49:22 AM,1460
+40,44,,1460,27/09/2022 2:00:00 PM,28,28/09/2022 10:53:18 AM,1460
+41,45,,1460,27/09/2022 2:00:00 PM,28,28/09/2022 11:25:02 AM,1460
+42,46,,1460,27/09/2022 2:00:00 PM,28,28/09/2022 11:28:14 AM,1460
+43,47,,1460,4/10/2022 9:00:00 AM,28,29/09/2022 3:57:08 PM,1460
+44,48,,1465,30/09/2022 9:00:00 AM,,30/09/2022 1:59:16 PM,1465
+45,49,,1461,4/11/2022 12:00:00 AM,26,8/11/2022 9:56:26 AM,1461
+46,50,,689,15/12/2022 4:19:33 PM,26,15/12/2022 4:19:33 PM,689
+47,55,,1460,10/01/2023 10:20:29 AM,28,10/01/2023 10:20:29 AM,1460
+48,60,Cluster filters for LTFT Reactors required during TAR-2024,1674,1/03/2024 3:37:26 PM,6,10/01/2023 3:37:26 PM,1674
+49,61,,1456,10/01/2023 4:05:21 PM,6,10/01/2023 4:05:21 PM,1456
+50,71,,1461,10/02/2023 4:46:32 PM,26,10/02/2023 4:46:32 PM,1461
+51,72,,1461,10/02/2023 4:51:45 PM,26,10/02/2023 4:51:45 PM,1461
+52,73,,1461,10/02/2023 4:59:07 PM,33,10/02/2023 4:59:07 PM,1461
+53,74,,1461,13/02/2023 9:26:33 AM,33,13/02/2023 9:26:33 AM,1461
+54,75,,1461,13/02/2023 9:29:41 AM,33,13/02/2023 9:29:41 AM,1461
+55,76,,1461,13/02/2023 12:00:00 AM,33,13/02/2023 9:30:43 AM,1461
+56,77,,1461,13/02/2023 9:37:10 AM,33,13/02/2023 9:37:10 AM,1461
+57,78,,1648,14/02/2023 2:34:30 PM,33,14/02/2023 2:34:30 PM,1648
+58,80,For Purchase,1648,15/02/2023 1:56:30 PM,33,15/02/2023 1:56:30 PM,1648
+59,82,UZGTL-CGM-PRO-07-10-0000-11-D in accordance with #1 for sampling and laboratory analysis from the specified device in Unit10,703,27/02/2023 2:07:02 PM,35,16/02/2023 2:07:02 PM,703
+60,83,For use as PPE in the analysis of the central laboratory of the plant,703,27/02/2023 2:22:10 PM,35,16/02/2023 2:22:10 PM,703
+61,95,For drum handling package(130-XP-009) and packaging materials,1656,28/02/2023 11:30:01 AM,33,17/02/2023 11:30:01 AM,1656
+62,101,to ensure continuous operation of the pumps,1460,17/03/2023 2:53:55 PM,33,17/02/2023 2:53:55 PM,1460
+63,102,to ensure continuous operation of the pumps (150-PC-002A/B),1460,17/03/2023 3:05:55 PM,33,17/02/2023 3:05:55 PM,1460
+64,103,to ensure continuous operation of the pumps (150-PC-002A/B),1460,17/03/2023 3:34:18 PM,33,17/02/2023 3:34:18 PM,1460
+65,104,to ensure continuous operation of the pumps (150-PC-002A/B),1460,17/03/2023 3:54:57 PM,33,17/02/2023 3:54:57 PM,1460
+66,108,,1903,20/02/2023 11:01:57 AM,36,20/02/2023 11:01:57 AM,1903
+67,111,Test,1651,21/02/2023 9:50:31 AM,33,21/02/2023 9:50:31 AM,1651
+68,110,To ensure continius operation of analyzers,1902,28/02/2023 11:14:27 AM,36,21/02/2023 11:14:27 AM,1902
+69,114,to ensure continious operation of UzGTL plant  ,1920,15/03/2023 12:18:28 PM,34,21/02/2023 12:18:28 PM,1920
+70,117,To ensure a trainig course of Scaffolding,1902,21/03/2023 12:29:58 PM,33,21/02/2023 12:29:58 PM,1902
+71,118,To ensure course of public speaking,1902,21/02/2023 12:36:48 PM,36,21/02/2023 12:36:48 PM,1902
+72,112,Ishchi hodimlar ehtiyoji uchun (),695,10/03/2023 11:23:20 AM,36,21/02/2023 11:23:20 AM,695
+73,120,to ensure continious operation of Unit 30 and 45 ,1920,15/03/2023 3:30:38 PM,34,21/02/2023 3:30:38 PM,1920
+74,125,Regarding the hiring of welders through outsourcing department in order to ensure the stable operation of the plant's technological equipment,1582,22/03/2023 2:27:02 PM,36,22/02/2023 2:27:02 PM,1582
+75,128,Regarding the hiring of welders through outsourcing department in order to ensure the stable operation of the plant's technological equipment,1582,22/03/2023 2:50:17 PM,,22/02/2023 2:50:17 PM,1582
+76,127,The measurement of vibration,1687,22/03/2023 2:44:15 PM,33,22/02/2023 2:44:15 PM,1687
+77,132,V-belt(Toothed)/клиновой ремень(зубчатый)/(174-XF-001-CB-01A/B)(171-XP-001-CB-01A/B)(176-XP-013-CB-01/02A/B)(171-XP-013-PX-08)(177-XP-006-CB-01A/B/C/D/E/F)(171-XP-001-CB-02A/B),1155,31/03/2023 5:24:16 PM,33,22/02/2023 5:24:16 PM,1155
+78,134,cvbcv,1,23/02/2023 5:41:54 PM,33,23/02/2023 5:41:54 PM,1
+79,135,vbnvbn,1,23/02/2023 5:44:07 PM,33,23/02/2023 5:44:07 PM,1
+80,137,,667,24/02/2023 10:45:50 AM,,24/02/2023 10:45:50 AM,667
+81,138,Ecology courses for HSE team,1902,24/02/2023 3:53:06 PM,36,24/02/2023 3:53:06 PM,1902
+82,139,fvfv,1687,28/02/2023 9:11:06 AM,,28/02/2023 9:11:06 AM,1687
+83,142,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,28/02/2023 10:50:15 AM,35,28/02/2023 10:50:15 AM,703
+84,145,Welding consumables and goods required for maintenance welding works,1582,28/03/2023 11:37:09 AM,,28/02/2023 11:37:09 AM,1582
+85,146,to covering unloaded perlite from Main Heat Exchanger of Unit 10,1920,9/03/2023 3:01:27 PM,34,1/03/2023 3:01:27 PM,1920
+86,147,,1,3/03/2023 10:12:52 AM,,3/03/2023 10:12:52 AM,1
+87,150,Work Shop Equipment ,1463,3/04/2023 12:00:00 AM,33,3/03/2023 4:56:10 PM,1463
+88,151,160-XP-005-CB-02B-M Repairing burnt pump,761,17/04/2023 8:30:41 AM,33,6/03/2023 8:30:41 AM,761
+89,153,,667,11/03/2023 1:50:34 PM,,11/03/2023 1:50:34 PM,667
+90,157,In order to replace the broken transmitter (120-PDT-1070B) with a new one.,1480,14/04/2023 4:32:59 PM,33,14/03/2023 4:32:59 PM,1480
+91,159,Spare Parts TECU 1 & 2,1453,17/03/2023 4:45:00 PM,33,17/03/2023 4:45:00 PM,1452
+92,158,Mechanical Seals for ASU/SGU Rotating Equipment for normal operation,1661,15/04/2023 2:01:49 PM,33,18/03/2023 2:01:49 PM,1661
+93,160,,594,23/06/2023 12:00:00 AM,33,23/03/2023 1:36:53 PM,594
+94,161,,594,23/06/2023 1:51:40 PM,33,23/03/2023 1:51:40 PM,594
+95,162,Requistion raised as per ORD-21/172-2022,594,23/06/2023 1:55:49 PM,33,23/03/2023 1:55:49 PM,594
+96,163,"Providing necessary spare parts for the repair of control valves installed at the factory of ""Uzbekistan GTL"" LLC",594,1/06/2023 2:24:40 PM,33,1/04/2023 2:24:40 PM,594
+97,164,,594,23/03/2023 2:24:40 PM,,23/03/2023 2:24:40 PM,594
+98,166,Condition monitoring tools. ,667,24/03/2023 10:49:15 AM,35,24/03/2023 10:49:15 AM,667
+99,171,,1892,27/03/2023 4:32:28 PM,,27/03/2023 4:32:28 PM,1892
+100,174,Shurtan GKM dan olingan 40 % lik ishqor eritmasini 98% ishqor kukuni tarzida qaytarish uchun tovar-zaym shartomasini tuzish ,1920,27/03/2023 5:25:56 PM,34,27/03/2023 5:25:56 PM,1920
+101,176,In order to recovery second 110-PC-071 LOX pump and for stock in the future,1661,29/03/2023 10:39:42 AM,33,29/03/2023 10:39:42 AM,1661
+102,177,Zavod ehtiyoji uchun ,695,29/04/2023 3:16:15 PM,36,29/03/2023 3:16:15 PM,695
+103,178,BIRLAMCHI O'T O'CHIRISH VOSITALARINI QAYTA ZARYADLASH ,695,17/04/2023 3:25:37 PM,36,29/03/2023 3:25:37 PM,695
+104,184,Refractory materials for ATR & WHB,1674,15/01/2024 11:02:43 AM,33,31/03/2023 11:02:43 AM,1674
+105,186,to modification of GRP pileline in unit 71,619,30/04/2023 2:17:54 PM,33,31/03/2023 2:17:54 PM,619
+106,193,Insulation material for  ,1463,31/03/2023 5:00:12 PM,33,31/03/2023 5:00:12 PM,1463
+107,194,Insulation material for plant maintenance  ,1463,2/04/2023 9:25:10 AM,33,2/04/2023 9:25:10 AM,1463
+108,196,oil replacement of pumps,1462,3/04/2023 9:55:39 AM,33,3/04/2023 9:55:39 AM,1462
+109,197,"Сыворотка против ядов змей ГЮРЗЫ, ЭФЫ, КОБРЫ. Сыворотка против яда паука КАРАКУРТА",695,3/04/2023 12:27:06 PM,36,3/04/2023 12:27:06 PM,695
+110,199,to ensure without interruption work of Process Dryer package (135-XP-002) ,1920,3/04/2023 12:41:40 PM,34,3/04/2023 12:41:40 PM,1920
+111,198,In order to maintain hermeticity and increase the coefficient of friction in PLFs' vibrator shaft and all o-ring mounted places.,1147,3/05/2023 12:00:00 AM,33,3/04/2023 12:34:21 PM,1147
+112,200,Cluster Filter Assemblies sets for 130-VR-105/205 (FT reactors),1674,29/12/2023 12:00:00 AM,33,3/04/2023 1:12:45 PM,1674
+113,201,Продление домена gtl.uz,1903,3/04/2023 2:53:27 PM,36,3/04/2023 2:53:27 PM,1903
+114,202,Uzbekistan GTL Kerosine ni tahlil qilish uchun Rossiya ga pochta qilib jo'natish.,703,3/04/2023 3:23:00 PM,35,3/04/2023 3:23:00 PM,703
+115,204,,1687,3/04/2023 3:56:19 PM,34,3/04/2023 3:56:19 PM,1687
+116,207,Автошины для внедорожника,1921,4/04/2023 1:56:07 PM,34,4/04/2023 1:56:07 PM,1921
+117,209,Routine use,1460,4/05/2023 3:53:28 PM,33,4/04/2023 3:53:28 PM,1460
+118,210,Obtain smoke detectors for Jayron warehouse ,1463,4/04/2023 4:11:11 PM,33,4/04/2023 4:11:11 PM,1463
+119,211,staem tracing spare parts for plant maintenance ,1463,4/04/2023 4:21:35 PM,25,4/04/2023 4:21:35 PM,1463
+120,212,staem tracing spare parts for plant maintenance ,1463,4/04/2023 4:27:32 PM,75,4/04/2023 4:27:32 PM,1463
+121,213,приобретение багета для обрамления офисных картин,1955,4/04/2023 4:43:06 PM,36,4/04/2023 4:43:06 PM,1955
+122,214,Sanoat xavfsizligi deklaratsiyasini SX ekspertizasidan o'tkazish ,695,5/07/2023 9:38:43 AM,36,5/04/2023 9:38:43 AM,695
+123,216,To test local activated carbon in Steam condensate polishing PKGs (172-XP-001/004),1852,24/04/2023 12:35:48 PM,34,5/04/2023 12:35:48 PM,1852
+124,217,Grease for lubrication of rotating equipment,667,5/04/2023 2:08:46 PM,35,5/04/2023 2:08:46 PM,667
+125,218,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,5/04/2023 5:31:13 PM,35,5/04/2023 5:31:13 PM,703
+126,219,Uzbekistan GTL  zavodida Ekologik monitoring o'tkazish bo'yicha ,695,6/05/2023 1:36:59 PM,36,6/04/2023 1:36:59 PM,695
+127,220,To ensure Preparation and submission of application forms for inventions and useful models and using database,1902,6/04/2023 2:44:12 PM,35,6/04/2023 2:44:12 PM,1902
+128,221,Gaskets for 135-XF-021A/B (Sealing Materials),689,24/04/2023 4:49:41 PM,33,6/04/2023 4:49:41 PM,689
+129,223,,1909,6/04/2023 5:53:35 PM,,6/04/2023 5:53:35 PM,1909
+130,224,Epson Плоттер,1903,6/04/2023 6:03:54 PM,33,6/04/2023 6:03:54 PM,1903
+131,225,Epson Плоттер,1903,6/04/2023 6:20:34 PM,36,6/04/2023 6:20:34 PM,1903
+132,228,110-PC-071 Lox for rebuilding and assembling the pump,1661,7/04/2023 10:38:39 AM,33,7/04/2023 10:38:39 AM,1661
+133,227,Orifice Plates for LTFT,689,1/04/2024 10:32:17 AM,33,7/04/2023 10:32:17 AM,689
+134,229,to ensure continuous operation of the lingting fexture,761,1/06/2023 2:20:20 PM,33,7/04/2023 2:20:20 PM,761
+135,230,For the purchase of a tricycle cargo bike and two wheel bike  to ensure the movement of an employee and an iron tool box on them,1463,7/04/2023 2:27:59 PM,33,7/04/2023 2:27:59 PM,1463
+136,232,Seal ring for damaged 145-XV-0314 butterfly valve,594,14/04/2023 5:02:40 PM,,7/04/2023 5:02:40 PM,1460
+137,234,Серверный жесткий Диск NLSAS,1903,10/04/2023 11:48:27 AM,36,10/04/2023 11:48:27 AM,1903
+138,236,For use in warehouse needs,1656,11/05/2023 4:23:07 PM,33,10/04/2023 4:23:07 PM,1656
+139,235,To ensure continius operation of networking,1902,10/04/2023 4:15:30 PM,35,10/04/2023 4:15:30 PM,1902
+140,239,Spare Main Flare Tip Assembly and Top davit for 181-RF-001,1674,11/12/2023 2:21:16 PM,33,11/04/2023 2:21:16 PM,1674
+141,240,,1461,12/04/2023 9:14:02 AM,26,12/04/2023 9:14:02 AM,1461
+142,242,"Запрос на закуп карточек формы Т-2, для регистрации сотрудников по законодательству Республики Узбекистан ",1902,12/04/2023 2:45:57 PM,36,12/04/2023 2:45:57 PM,1902
+143,243,Maintenance of the magnetic bearing of the turbo expander-compressor and the control magnetic bearing of the cabinet,1176,12/04/2023 2:53:08 PM,33,12/04/2023 2:53:08 PM,1176
+144,246,Специальная дорожная и строительная техника,1921,12/04/2023 3:06:11 PM,34,12/04/2023 3:06:11 PM,1921
+145,248,to ensure without interruption work of Uzbekistan GTL LLC,1920,28/04/2023 4:57:33 PM,34,12/04/2023 4:57:33 PM,1920
+146,249,Spare parts for butterfly valves installed LEAF filters,594,13/07/2023 1:30:57 PM,33,13/04/2023 1:30:57 PM,594
+147,252,Система автоматического проезда автотранспортом в комплекте,1903,14/04/2023 10:23:10 AM,36,14/04/2023 10:23:10 AM,1903
+148,251,to ensure without interruption work of Synthesis gas unit ,1920,31/10/2023 10:01:14 AM,34,14/04/2023 10:01:14 AM,1920
+149,253,"обеспечение организации чёткой системы мониторинга качества и безопасности продукции в целях получения конкурентных преимуществ, минимизации расходов и возможности контроля каждого процесса",1957,15/05/2023 11:25:58 AM,36,14/04/2023 11:25:58 AM,1957
+150,254,оказание услуг по перевозке пассажиров автомобильным транспортом,1953,17/04/2023 12:06:15 PM,34,17/04/2023 12:06:15 PM,1953
+151,255,End Cover (TC Coated) for 130-PC-032,689,1/07/2023 10:18:13 AM,53,18/04/2023 10:18:13 AM,689
+152,257,Усовершенствование автоматизированной системы управления кадровыми ресурсами «GTL-HRM»,1902,18/04/2023 3:42:50 PM,38,18/04/2023 3:42:50 PM,1902
+153,258,To repair the steam leak ,619,28/04/2023 3:52:26 PM,33,18/04/2023 3:52:26 PM,619
+154,260,Repair material for valve 110-LV-1301A and 110-LV-1301B.,1480,18/05/2023 4:48:01 PM,33,18/04/2023 4:48:01 PM,1480
+155,265,NUJ larni xavfsizligini ta`minlash maqsadida,1893,20/05/2023 12:00:00 AM,36,20/04/2023 2:52:51 PM,1893
+156,266,,1460,20/04/2023 2:53:53 PM,28,20/04/2023 2:53:53 PM,1460
+157,268,"A stamp to ensure the quality, quantity, and safety of products loaded into rail cars",691,20/05/2023 4:17:02 PM,34,20/04/2023 4:17:02 PM,691
+158,270,"Providing necessary spare parts for the repair of control valves installed at the factory of ""Uzbekistan GTL"" LLC",594,23/07/2023 1:46:16 PM,33,23/04/2023 1:46:16 PM,594
+159,271,,1902,25/04/2023 3:03:40 PM,36,25/04/2023 3:03:40 PM,1902
+160,273,Pipe diameter 100 mm Metering method: turbine Type,1888,25/04/2023 4:16:39 PM,36,25/04/2023 4:16:39 PM,1888
+161,275,,1888,25/04/2023 5:01:18 PM,,25/04/2023 5:01:18 PM,1888
+162,280,Прохождение обучения по управлению беспилотно-летательных аппаратов,1957,26/04/2023 10:03:48 AM,36,26/04/2023 10:03:48 AM,1957
+163,283,description,1682,26/04/2023 2:34:26 PM,36,26/04/2023 2:34:26 PM,1682
+164,281,Delivery of the cargo under the contract UzGTL-CON-3288,1914,26/04/2023 2:18:23 PM,36,26/04/2023 2:18:23 PM,1914
+165,284,Счётчик для учёта холодный воды вахтового поселка,1889,31/05/2023 12:00:00 AM,36,24/04/2023 12:00:00 AM,1889
+166,286,Signing a contract with the electronic project management center,1902,26/04/2023 4:09:12 PM,38,26/04/2023 4:09:12 PM,1902
+167,285,Электрические приборы для вахтового поселка,1889,31/05/2023 3:53:47 PM,36,26/04/2023 12:00:00 AM,1889
+168,288,Аппарат высокого давления для чистки и мойки автомобильной техники ,1921,26/04/2023 5:36:53 PM,34,26/04/2023 5:36:53 PM,1921
+169,290,"Изучение экологического воздействия и влияния дизельного топлива GTL на окружающую среду, проведение соответствующих испытаний и получения международного заключения независимого экспертного органа, в соответствии с международными стандартами",1962,27/04/2023 10:00:40 AM,36,27/04/2023 10:00:40 AM,1962
+170,291,Rechargeable batteries  for  UzGTL campus maintenance,1463,27/04/2023 1:44:00 PM,33,27/04/2023 1:44:00 PM,1463
+171,293,Таблички для зданий,1889,27/04/2023 4:28:25 PM,36,22/05/2023 4:28:25 PM,1889
+172,294,Товары для офиса (канцтовары и хозяйственные товары),1889,27/04/2023 4:37:06 PM,36,10/05/2023 4:37:06 PM,1889
+173,296,to control pH in Unit 10,1920,20/05/2023 5:03:40 PM,,27/04/2023 5:03:40 PM,1920
+174,297,to ensure continuously working operator console,600,12/06/2023 10:06:58 AM,35,28/04/2023 10:06:58 AM,600
+175,298,to control pH in ASU closed loop  ,1920,10/05/2023 10:30:19 AM,34,28/04/2023 10:30:19 AM,1920
+176,300,Requistion raised as per ORD-48/1554-2022,594,29/07/2023 5:29:15 PM,33,29/04/2023 5:29:15 PM,594
+177,301,Requistion raised as per ORD-48/684-2022,594,29/04/2023 5:43:27 PM,33,29/04/2023 5:43:27 PM,594
+178,302,"Телевизор 55"" Smart 4K TV",1903,1/05/2023 9:12:58 AM,36,1/05/2023 9:12:58 AM,1903
+179,303,Anomal sovuq vaqtida ishdan chiqqan priborlarni yangisiga almashtirish,1648,1/06/2023 12:00:00 AM,33,1/05/2023 9:43:38 AM,1648
+180,305,"A stamp to ensure the quality, quantity, and safety of products loaded into rail cars",691,7/05/2023 11:58:49 AM,34,1/05/2023 11:58:49 AM,691
+181,308,Modification of  gas cylinders  and technical examination ,1463,1/05/2023 3:07:53 PM,33,1/05/2023 3:07:53 PM,1463
+182,311,Для оптимизации графика отбора проб,839,2/05/2023 8:50:26 AM,35,2/05/2023 8:50:26 AM,839
+183,312,Для оптимизации графика отбора проб,839,2/05/2023 8:57:36 AM,,2/05/2023 8:57:36 AM,839
+184,314,Для оптимизации графика отбора проб,839,2/05/2023 9:09:51 AM,35,2/05/2023 9:09:51 AM,839
+185,315,Для оптимизации графика отбора проб,839,2/05/2023 9:17:45 AM,35,2/05/2023 9:17:45 AM,839
+186,316,Preventetive Maintenance for Electrical equipments,1179,2/06/2023 10:40:50 AM,33,2/05/2023 10:40:50 AM,1179
+187,317,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,16/06/2023 10:06:33 AM,35,3/05/2023 10:06:33 AM,1891
+188,318,Contract signing with JSC UzGasTrade regarding providing pipeline gas for 2023 ,1920,3/05/2023 12:16:59 PM,34,3/05/2023 12:16:59 PM,1920
+189,319,"Signing an agreement with ""BNQIZ"" LLC for the purpose of responsible storage of GTL products",691,3/05/2023 3:39:14 PM,34,3/05/2023 3:39:14 PM,691
+190,323," Услуга ""Разработка норм эксплуатационного пробега автошин""",1921,17/05/2023 12:00:00 AM,34,3/05/2023 4:44:39 PM,1921
+191,325,замена и опломбировка прибора учета электроэнергии ,1955,4/05/2023 10:56:17 AM,36,4/05/2023 10:56:17 AM,1955
+192,327,Оказание услуг по выработке GTL дизеля со стороны БНПЗ,1962,4/05/2023 12:45:38 PM,36,4/05/2023 12:45:38 PM,1962
+193,328,Emergency Spare parts for Invertors of ABB VSD panels,1461,1/07/2023 3:12:24 PM,33,4/05/2023 3:12:24 PM,1461
+194,329,,1955,4/05/2023 3:23:03 PM,39,4/05/2023 3:23:03 PM,1955
+195,330,,1955,4/05/2023 3:39:53 PM,,4/05/2023 3:39:53 PM,1955
+196,335,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,5/05/2023 11:15:54 AM,40,5/05/2023 11:15:54 AM,703
+197,338,Tibbiy sug'urta ,695,5/06/2023 4:15:49 PM,36,5/05/2023 4:15:49 PM,695
+198,339,Tibbiy sug'urta ,695,5/06/2023 4:20:54 PM,36,5/05/2023 4:20:54 PM,695
+199,342,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,8/05/2023 11:55:06 AM,35,8/05/2023 11:55:06 AM,703
+200,343,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,8/05/2023 11:58:03 AM,35,8/05/2023 11:58:03 AM,703
+201,344,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,8/05/2023 11:59:17 AM,35,8/05/2023 11:59:17 AM,703
+202,345,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,29/05/2023 12:00:34 PM,35,8/05/2023 12:00:34 PM,703
+203,348,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,22/05/2023 12:05:19 PM,40,8/05/2023 12:05:19 PM,703
+204,350,Ер участкасининг (Завод худуди) геодезик ўлчов натижасида топографик хариталарини тайёрлаш,839,10/05/2023 9:16:28 AM,35,10/05/2023 9:16:28 AM,839
+205,352,Drinking water supply and sewage system materials,1685,12/06/2023 2:56:47 PM,33,11/05/2023 2:56:47 PM,1685
+206,351,1 dona o'lchov  vositasi (sekundomer) ni kalibrovkadan o'tkazish uchun UzMMI DM bilan shartnoma qilish,703,11/05/2023 3:01:42 PM,35,11/05/2023 3:01:42 PM,703
+207,354,Providing certificate of origins for semi-synthtetic diesel that is going to be exported ,1962,11/05/2023 4:37:17 PM,36,11/05/2023 4:37:17 PM,1962
+208,355,"Cleaning service of railway tanks by ""Бухарский Региональный Железнодорожный Узел""",1962,11/05/2023 4:46:01 PM,36,11/05/2023 4:46:01 PM,1962
+209,357,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,11/07/2023 12:00:00 AM,35,12/05/2023 9:38:39 AM,1891
+210,358,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,16/06/2023 12:00:00 AM,35,12/05/2023 10:44:53 AM,1891
+211,359,"On May 18, 19 and 20, it is planned to distribute pilaf",1971,12/05/2023 3:55:32 PM,36,12/05/2023 3:55:32 PM,1463
+212,360,License for 1C:Enterprise (лицензия на 1C:Предприятие),1682,12/05/2023 5:18:40 PM,36,12/05/2023 5:18:40 PM,1682
+213,361," Услуга ""Утилизации Автомобильных шин""",1921,12/05/2023 5:25:05 PM,34,12/05/2023 5:25:05 PM,1921
+214,362," Услуга ""Утилизации Аккумуляторных батарей"".",1921,12/05/2023 5:32:27 PM,34,12/05/2023 5:32:27 PM,1921
+215,363,solar water heater 200L ,1476,15/05/2023 9:11:12 AM,35,15/05/2023 9:11:12 AM,1476
+216,364,solar water heater 100L ,1476,15/05/2023 9:40:39 AM,35,15/05/2023 9:40:39 AM,1476
+217,365,to keep calcium level about 50~150 ppm in Cooling Water system.,1920,23/05/2023 10:03:45 AM,34,15/05/2023 10:03:45 AM,1920
+218,367,Disposal of Liquid household west from septic tanks ,695,22/05/2023 10:58:19 AM,36,15/05/2023 10:58:19 AM,695
+219,368,Demercurization of burned-out florescent lamps ,695,22/05/2023 11:05:41 AM,36,15/05/2023 11:05:41 AM,695
+220,370,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,15/08/2023 2:16:48 PM,35,15/05/2023 2:16:48 PM,1891
+221,372,"May 19th, 2023 catering to 1000 standard gest and 300 VIP gest. This service should be performed as per Order N1 of ""Uzbekneftgas"" JSC",1972,15/05/2023 4:43:10 PM,36,15/05/2023 4:43:10 PM,1972
+222,371,Заявка на закупку средств для ухода за цветами,1889,15/05/2023 2:51:18 PM,36,31/05/2023 2:51:18 PM,1889
+223,373,на услуги комплексной съемки сферических панорам в формате 360° градусов с последующим монтажом «Виртуальная выставка» для ООО «Uzbekistan GTL» ,1972,15/05/2023 5:13:50 PM,36,15/05/2023 5:13:50 PM,1972
+224,374,On implementation of biological diversity monitoring ,695,23/05/2023 9:00:40 AM,36,16/05/2023 9:00:40 AM,695
+225,375,Заявка на закупку средств для ухода за цветами,1889,16/05/2023 9:18:45 AM,,31/05/2023 9:18:45 AM,1889
+226,376,LED tube lamps are intended to replace existing lighting lamps at the facilities of Uzbekistan GTL LLC.,1891,18/08/2023 9:27:37 AM,35,16/05/2023 9:27:37 AM,1891
+227,377,FILTER ELEMENT for 120-XF-003-XF-02A/B/C,1661,16/05/2023 4:48:42 PM,33,16/05/2023 4:48:42 PM,1661
+228,378,Размещение участников форума лицензиаров в отеле в Самарканде,1955,16/05/2023 5:11:24 PM,36,16/05/2023 5:11:24 PM,1955
+229,380,размещение участников форума лицензиаров в Самарканде,1955,16/05/2023 5:34:26 PM,36,16/05/2023 5:34:26 PM,1955
+230,381,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,28/08/2023 8:40:08 AM,35,17/05/2023 8:40:08 AM,1891
+231,382,LED tube lamps are intended to replace existing lighting lamps at the facilities of Uzbekistan GTL LLC.,1891,30/06/2023 8:45:41 AM,35,17/05/2023 8:45:41 AM,1891
+232,385,To make it automatic for sulfuric acid loading into the cooling tower basin,1924,17/06/2023 11:32:35 AM,34,17/05/2023 11:32:35 AM,1924
+233,386,,1476,17/05/2023 2:37:13 PM,35,17/05/2023 2:37:13 PM,1476
+234,388,,1973,17/05/2023 2:54:52 PM,,17/05/2023 2:54:52 PM,1973
+235,387,Заявка на закупку логотипа UNG для административного бытового комплекса,1889,17/05/2023 2:50:11 PM,36,25/05/2023 2:50:11 PM,1889
+236,391,Для составления договора с Пробирной палатой для оказания услуг по обнаружению драг металла ,839,17/05/2023 5:08:05 PM,35,17/05/2023 5:08:05 PM,839
+237,392,,1903,18/05/2023 11:43:31 AM,36,18/05/2023 11:43:31 AM,1903
+238,393,,1903,18/05/2023 11:50:51 AM,,18/05/2023 11:50:51 AM,1903
+239,394,,1903,18/05/2023 11:55:37 AM,36,18/05/2023 11:55:37 AM,1903
+240,397,Средства гигиены для гостей вахтового посёлка (форум Sasol),1889,22/05/2023 10:56:00 AM,39,19/05/2023 10:56:00 AM,1889
+241,398,In order to purchase office fan ,1955,29/05/2023 2:37:34 PM,39,19/05/2023 2:37:34 PM,1955
+242,400,essential for welding activity ,1463,24/05/2023 3:12:52 PM,55,19/05/2023 3:12:52 PM,1463
+243,402,Yo'l belgilari va suniy notekislik ,695,26/05/2023 4:11:30 PM,71,19/05/2023 4:11:30 PM,695
+244,404,Средства гигиены для гостей вахтового посёлка,1889,23/05/2023 11:25:47 AM,39,20/05/2023 11:25:47 AM,1889
+245,407,dilivery spare part under contract UZGT,594,24/05/2023 8:11:46 AM,,24/05/2023 8:11:46 AM,594
+246,411,Долгосрочный контракт с гостиницей в Ташкентской области или Ташкенте ,1955,26/05/2023 12:43:09 PM,39,24/05/2023 12:43:09 PM,1955
+247,413,,1955,24/05/2023 2:55:58 PM,,24/05/2023 2:55:58 PM,1955
+248,415,solar water heater 100L ,1476,26/06/2023 3:04:23 PM,,24/05/2023 3:04:23 PM,1476
+249,420,"Услуга на ""Поставку и монтаж полиграфических материалов для автомашин""",1921,24/05/2023 4:33:35 PM,51,24/05/2023 4:33:35 PM,1921
+250,421,"1) Знак аварийной остановки-переносной знак, представляющий собой световозвращающий красный треугольник, выполненный из стеклопластика или других материалов. предупреждающий водителей о неисправности автомобиля находящегося за знаком в ночное время суток.",1921,24/05/2023 4:44:59 PM,51,24/05/2023 4:44:59 PM,1921
+251,422,"Аптечка категории ""В""- для автомобилей категории (М1) легковые автомобили. Аптечки категории ""С"" для автомобилей категории (N1, N2, N3) грузовые автомобили всех типов. Аптечки категории ""D"" для автомобилей (М2, М3) микроавтобусы, автобусы.",1921,24/05/2023 4:47:35 PM,51,24/05/2023 4:47:35 PM,1921
+252,423,"Переносные порошковые огнетушители, используемые для тушения твердых веществ, жидкостей и газов, а также электропроводов под напряжением. Для устранения очагов возгорания на транспортных средствах. ОП-2, 2-х литровые, ОП- 5, 5 литровые, ОП -10, 10 литровы",1921,24/05/2023 5:19:27 PM,51,24/05/2023 5:19:27 PM,1921
+253,424,СИЗ для сотрудников отдела,839,25/05/2023 10:03:18 AM,,25/05/2023 10:03:18 AM,839
+254,425,Пропан для охлаждающий системы установки 35,1920,31/05/2023 1:46:18 PM,,25/05/2023 1:46:18 PM,1920
+255,427,Road precast reinforced concrete slab,1685,25/06/2023 7:50:38 PM,54,25/05/2023 7:50:38 PM,1685
+256,428,"To ensure course of ""Uz DSt 3410:2019 general requirements for the competence of test laboratory technicians",1902,26/05/2023 7:26:45 AM,62,26/05/2023 7:26:45 AM,1902
+257,429,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,31/05/2023 12:00:00 AM,40,27/05/2023 10:48:12 AM,703
+258,430,to provide additional volume for storage GTL products,1920,29/05/2023 8:41:35 AM,52,29/05/2023 8:41:35 AM,1920
+259,432,to provide additional volume for storage GTL products,1920,29/05/2023 10:16:26 AM,52,29/05/2023 10:16:26 AM,1920
+260,433,Propan,1920,5/06/2023 10:50:19 AM,48,29/05/2023 10:50:19 AM,1920
+261,437,,689,2/01/2023 8:30:00 AM,26,29/05/2023 4:26:42 PM,689
+262,440,Refrigerant (Propane) for  Refrigeration package  (135-XP-003),1920,5/06/2023 9:36:25 AM,52,31/05/2023 9:36:25 AM,1920
+263,442,Круглая печать для оформления документов касающихся отдела сбыта и маркетинга,1962,31/05/2023 4:07:43 PM,63,31/05/2023 4:07:43 PM,1962
+264,443,Заявка на закупку селекона для сантехнических работ,1889,10/06/2023 4:19:39 PM,39,31/05/2023 4:19:39 PM,1889
+265,441,Uzbekistan GTL kompaniyasi klinikasini faoliyatini yuritish uchun Viloyat sanitariya epidemalogiya osoyishtalik jamiyati boshqarmasi xulosasi ,695,30/06/2023 3:53:08 PM,71,31/05/2023 3:53:08 PM,695
+266,444,Подключение интернета к Чиназкому терминалу,1903,1/06/2023 12:35:13 PM,70,1/06/2023 12:35:13 PM,1903
+267,447,СИЗ для сотрудников отдела,839,1/06/2023 1:28:25 PM,62,1/06/2023 1:28:25 PM,839
+268,449,"Access for online international Standards, Specifications, and Technical Publications",1891,14/08/2023 2:22:45 PM,60,1/06/2023 2:22:45 PM,1891
+269,455,Contract signing with Chinoz TETK  regarding  power supply to storage area GTL Chinoz terminali,1476,2/06/2023 2:59:38 PM,30,1/06/2023 2:59:38 PM,1476
+270,457,for saving energy of process unit with proper insulation ,1463,1/06/2023 3:03:42 PM,75,1/06/2023 3:03:42 PM,1463
+271,458,"Development of environmental regulations-document ""Statement on environmental consequences"" (ZEP) for the  ""Uzbekiston GTL"" LLC plant (assignment to category I of environmental impact - a particularly hazardous type of activity)",695,7/06/2023 4:08:18 PM,71,1/06/2023 4:08:18 PM,695
+272,460,183-TK-005 tanklardagi emergency venti uchun kerakli o'lchamdagi gasketni yasab o'rnatish uchun,1460,8/06/2023 12:00:00 AM,53,1/06/2023 5:13:49 PM,1460
+273,461,Lubrications for ASU Refrigiration package and Lin pumps,1661,2/06/2023 12:02:18 PM,53,2/06/2023 12:02:18 PM,1661
+274,462,Chemical for chemical cleaning air preheater in Unit 60 ,1920,5/06/2023 10:09:16 AM,52,5/06/2023 10:09:16 AM,1920
+275,466,Chemical for chemical cleaning air preheater in Unit 60 ,1920,14/06/2023 10:53:45 AM,52,5/06/2023 10:53:45 AM,1920
+276,468,For an annual metrological inspection,1179,16/06/2023 4:26:36 PM,53,5/06/2023 4:26:36 PM,1179
+277,467,to ensure continuous operating of the pumps,1155,5/07/2023 3:54:58 PM,53,5/06/2023 3:54:58 PM,1155
+278,469,,1661,6/06/2023 9:35:12 AM,53,6/06/2023 9:35:12 AM,1661
+279,470,Purchase of Breathing apparatus with modular design,695,7/07/2023 9:21:25 AM,71,7/06/2023 9:21:25 AM,695
+280,471,,1924,7/06/2023 10:51:24 AM,,7/06/2023 10:51:24 AM,1924
+281,473,Klapan va so'ndirgichlar va Tiqin o'rnatish uchun yorliqlar xarid qilish ,695,14/06/2023 3:35:14 PM,71,7/06/2023 3:35:14 PM,695
+282,477,Purchase of Personal protective footwear,695,10/07/2023 1:37:44 PM,71,8/06/2023 1:37:44 PM,695
+283,479,Расходные материалы и ремонт принтеров xerox 7830,1903,9/06/2023 9:59:47 AM,70,9/06/2023 9:59:47 AM,1903
+284,484,Қишки махсус кийим  (Зимная куртка) харид қилиш,695,10/07/2023 2:54:33 PM,71,9/06/2023 2:54:33 PM,695
+285,485,,812,9/06/2023 3:10:01 PM,47,9/06/2023 3:10:01 PM,812
+286,486,Training Vibration Analysis Category CAT I,667,9/06/2023 3:21:14 PM,60,9/06/2023 3:21:14 PM,667
+287,487,Ishlab chiqarishdagi extiyot qism zaruriyat tufayli,1973,17/06/2023 12:00:00 AM,53,22/08/2022 12:00:00 AM,1973
+288,488,,1889,23/06/2023 3:47:05 PM,39,10/06/2023 3:47:05 PM,1889
+289,493,Purchase of Foaming agent PO-6 (6%),695,19/06/2023 2:39:02 PM,71,12/06/2023 2:39:02 PM,695
+290,492,Unit-50dagi MOV larni to'xtovsiz ishlashini ta'minlash,1973,19/06/2023 12:00:00 AM,,12/06/2023 2:02:44 PM,1973
+291,494,In order to maintain the continuous operation of the heat exchanger 160-ES-003 ,1973,19/06/2023 12:00:00 AM,,12/06/2023 2:53:46 PM,1973
+292,490,Development detailed design of Single-Circuit Air Line of 6kV,1924,12/07/2023 11:51:53 AM,72,12/06/2023 11:51:53 AM,1924
+293,496,,1973,19/06/2023 12:00:00 AM,,12/06/2023 3:14:45 PM,1973
+294,498,172-FV-0726/0826/0926 klapanlarni ehtiyot qismlarini sotib olish.,1973,19/06/2023 12:00:00 AM,,12/06/2023 3:17:43 PM,1973
+295,500,172-FV-0726/0826/0926 klapanlarni ehtiyot qismlarini sotib olish.,1973,12/06/2023 3:22:10 PM,53,12/06/2023 3:22:10 PM,1973
+296,501,,1973,12/06/2023 3:24:46 PM,,12/06/2023 3:24:46 PM,1973
+297,502,,1973,12/06/2023 3:26:02 PM,,12/06/2023 3:26:02 PM,1973
+298,506,,1460,12/06/2023 3:31:18 PM,28,12/06/2023 3:31:18 PM,1460
+299,508,,1460,12/06/2023 3:38:35 PM,28,12/06/2023 3:38:35 PM,1460
+300,507,172-FV-0726/0826/0926 klapanlarni ehtiyot qismlarini sotib olish.,1973,19/06/2023 12:00:00 AM,53,12/06/2023 3:34:47 PM,1973
+301,510,,1460,12/06/2023 3:45:16 PM,28,12/06/2023 3:45:16 PM,1460
+302,509,Unit 77 Low Head Pump (177-PC-003A/B/ C/D/F) larni uzluksiz ishlashini ta'minlash uchun ehtiyot qismlar sotib olish,1973,12/07/2023 12:00:00 AM,53,12/06/2023 3:40:29 PM,1973
+303,511,Ishlab chiqarishdagi extiyot qismlar zaruriyat tufayli,1973,12/06/2024 12:00:00 AM,53,12/06/2023 4:15:03 PM,1973
+304,491,for outstanding insulation issues in the process units ,1463,12/07/2023 2:01:45 PM,75,12/06/2023 2:01:45 PM,1463
+305,512,"Uzbekistan GTL"" MCHJ zavodining ikkinchi trainni ishga tushirish va uzliksiz elektr energiya bilan ta'minlash maqsadida",1973,20/06/2023 12:00:00 AM,53,12/06/2023 4:48:09 PM,1973
+306,513,,1460,12/06/2023 4:55:43 PM,28,12/06/2023 4:55:43 PM,1460
+307,516,,1687,13/06/2023 8:36:54 AM,,13/06/2023 8:36:54 AM,1687
+308,517,,1687,13/06/2023 10:17:48 AM,,13/06/2023 10:17:48 AM,1687
+309,518,,1687,13/06/2023 10:41:26 AM,,13/06/2023 10:41:26 AM,1687
+310,519,,1,13/06/2023 10:41:48 AM,,13/06/2023 10:41:48 AM,1
+311,520,,1,13/06/2023 11:31:34 AM,,13/06/2023 11:31:34 AM,1
+312,524,Респиратор маскали харид  қилиш,695,14/07/2023 12:07:02 AM,71,14/06/2023 12:07:02 AM,695
+313,525,Перчатки КЩС харид қилиш,695,14/07/2023 12:14:56 AM,71,14/06/2023 12:14:56 AM,695
+314,526,заявка для необходимых товаров в GTL Чиноз терминал,1889,21/06/2023 1:44:38 PM,39,14/06/2023 1:44:38 PM,1889
+315,527,Электрический вилочный погрузчик,1921,14/06/2023 3:00:31 PM,51,14/06/2023 3:00:31 PM,1921
+316,529,Моддий техник назорат бўлими омборларида ёритиш тизимини таъмирлаш учун керакли ехтиёт қисмларни харид қилинадиган товар моддий бойликларнинг,1656,21/06/2023 3:29:52 PM,77,14/06/2023 3:29:52 PM,1656
+317,528,Washing of 30 tank wagons in order to ensure continuity of the product loading process,691,30/06/2023 3:13:19 PM,41,14/06/2023 3:13:19 PM,691
+318,530,Передвижная шланговая система / Кўчма шланг тизими харид қилиш,695,14/07/2023 8:16:21 PM,71,14/06/2023 8:16:21 PM,695
+319,531,Vagon-sisternalarga xavflilik darajasini bildiruvchi yorliq xarid qilish to'g'risida,691,5/07/2023 8:52:18 AM,41,15/06/2023 8:52:18 AM,691
+320,537,to replace the damaged one,619,15/06/2023 3:48:38 PM,53,15/06/2023 3:48:38 PM,619
+321,538,,1186,,,15/06/2023 5:05:50 PM,1186
+322,542,,695,15/07/2023 8:38:02 PM,71,15/06/2023 8:38:02 PM,695
+323,545,Ishchilar maxsus kiyimini xarid qilish ,695,14/07/2023 8:59:10 PM,71,15/06/2023 8:59:10 PM,695
+324,546,Replaced damaged spools of 171-XP-011,1165,16/07/2023 8:59:32 AM,53,16/06/2023 8:59:32 AM,1165
+325,549,PWU unitning nasoslari uchun zarur ehtiyot qismlar sotib olish to'g'risida,1973,26/06/2023 12:00:00 AM,53,16/06/2023 1:30:40 PM,1973
+326,550,Portable lamps,1678,20/10/2023 3:00:06 PM,56,16/06/2023 3:00:06 PM,1678
+327,551,,1164,16/06/2023 3:23:32 PM,75,16/06/2023 3:23:32 PM,1164
+328,554,Spare parts for butterfly valves installed LEAF filters,594,18/09/2023 3:12:51 PM,53,18/06/2023 3:12:51 PM,594
+329,555,для поддержания уровня кальция в охлаждающей воде,1920,10/08/2023 8:29:21 AM,52,19/06/2023 8:29:21 AM,1920
+330,557,,1164,19/06/2023 9:51:08 AM,,19/06/2023 9:51:08 AM,1164
+331,558,Kalibrlash ko'zda tutilgan asboblar roýxati katalogda ilova qilingan,1463,19/06/2023 10:13:01 AM,75,19/06/2023 10:13:01 AM,1463
+332,559,kalibrlash ko'zda tutilgan asboblar ro'yxati katalogda biriktirilgan,1463,19/06/2023 10:24:03 AM,25,19/06/2023 10:24:03 AM,1463
+333,560,kalibrlash ko'zda tutilgan asboblar ro'yxati katalogda biriktirilgan,1463,19/07/2023 10:34:53 AM,75,19/06/2023 10:34:53 AM,1463
+334,561,,1687,19/06/2023 10:37:15 AM,,19/06/2023 10:37:15 AM,1687
+335,562,,1687,19/06/2023 10:39:26 AM,,19/06/2023 10:39:26 AM,1687
+336,563,,1,19/06/2023 10:42:36 AM,,19/06/2023 10:42:36 AM,1
+337,566,kalibrlash ko'zda tutilgan asboblar ro'yxati katalogda biriktirilgan,1463,19/06/2023 10:43:43 AM,75,19/06/2023 10:43:43 AM,1463
+338,568,"""Uzbekistan GTL"" MChJ tomonidan Shurtan GKM ga azot gazini yetkazib berish bo'yicha shartnoma tuzish.",1920,20/06/2023 8:57:00 AM,57,20/06/2023 8:57:00 AM,1920
+339,569,,1968,20/06/2023 9:46:19 AM,,20/06/2023 9:46:19 AM,1968
+340,570,"Разработать нормы расхода топлива для транспортных средств и специальной техники на L/h, L/m-h, для газового оборудования, для бензиновых и дизельных двигателей. Всего 8 (восемь) норм.",1921,4/07/2023 9:48:20 AM,51,20/06/2023 9:48:20 AM,1921
+341,571,,1968,20/06/2023 9:54:14 AM,,20/06/2023 9:54:14 AM,1968
+342,572,Ishlab chiqarishdagi extiyot qism zaruriyat tufayli,1973,20/06/2023 10:44:13 AM,53,20/06/2023 10:44:13 AM,1973
+343,574,Acquisition of a time tracking system,1902,20/06/2023 3:16:13 PM,38,20/06/2023 3:16:13 PM,1902
+344,575,Ishlab chiqarishdagi extiyot qism zaruriyat tufayli. Hozirgi kunda filterda bosimlar farqi ko'tarilgani hisobiga ochilgan va filter elementdagi muommolarni yuvish orqali hal etib bo'lmayapdi.,1973,22/07/2023 12:00:00 AM,53,22/06/2023 4:45:21 PM,1973
+345,576,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,23/06/2023 10:48:05 AM,40,23/06/2023 10:48:05 AM,703
+346,577,Приобретение умного дверного замка на входную дверь в Ташкентский офис,1955,23/06/2023 12:09:13 PM,39,23/06/2023 12:09:13 PM,1955
+347,578,“Uzbekistan GTL” MChJga tegishli vagon va yuk mashinalari tarozilariga texnik xizmat ko'rsatish uchun,691,3/07/2023 2:30:38 PM,41,23/06/2023 2:30:38 PM,691
+348,579,Maintenance of Perlite Loading,1924,23/07/2023 2:52:05 PM,48,23/06/2023 2:52:05 PM,1924
+349,580,Maintenance of Perlite Loading,1924,23/07/2023 3:29:48 PM,48,23/06/2023 3:29:48 PM,1924
+350,581,For loading and unloading perlite in the train 2 Cold box during repair,812,3/07/2023 12:00:00 AM,47,26/06/2023 9:37:07 AM,812
+351,582,"ABB VSD panels maintenance training courses: G152, G380, G384",1461,26/06/2023 3:48:10 PM,53,26/06/2023 3:48:10 PM,1461
+352,585,10 refrigerators for the operator's room of Uzbekistan GTL plant.,1920,27/07/2023 4:19:44 PM,39,27/06/2023 4:19:44 PM,1920
+353,587,Yangiyo'l Shahar obodonlashtirish boshqarmasi bilan shartnoma tuzish ,695,4/07/2023 5:25:42 PM,41,27/06/2023 5:25:42 PM,695
+354,590,Bir martalik kombinezon xarid qilish ,695,27/07/2023 5:42:14 PM,71,27/06/2023 5:42:14 PM,695
+355,591,Storage and Shipment of LPG,1962,3/07/2023 4:17:29 PM,63,3/07/2023 4:17:29 PM,1962
+356,592,To add to the GTL products being received (Fuel Aid ULS537),691,5/07/2023 12:00:00 AM,41,4/07/2023 9:01:38 AM,691
+357,593,Бортовой терминал GPS модуль ,1921,12/07/2023 11:10:12 AM,51,5/07/2023 11:10:12 AM,1921
+358,594,,1955,5/07/2023 11:13:42 AM,,5/07/2023 11:13:42 AM,1955
+359,595,услуги CIP зала аэропорта Ташкент для гостей компании ,1955,5/07/2023 12:34:36 PM,39,5/07/2023 12:34:36 PM,1955
+360,597,Shurtan GKM dan olingan 40 % lik ishqor eritmasini 98% ishqor kukuni tarzida qaytarish uchun tovar-zaym shartomasini tuzish,1920,6/07/2023 5:00:30 PM,52,6/07/2023 5:00:30 PM,1920
+361,598,Обеспечение функционирования лифта,1955,7/07/2023 10:49:44 AM,39,7/07/2023 10:49:44 AM,1955
+362,599,Yong'in xavfsizligi xizmati talabiga muvofiq.,593,7/07/2023 12:00:00 AM,61,7/07/2023 11:30:57 AM,593
+363,600,Almashtirish uchun,1648,7/07/2023 11:38:56 AM,53,7/07/2023 11:38:56 AM,1648
+364,601,Almashtirish uchun,1648,7/07/2023 11:49:27 AM,53,7/07/2023 11:49:27 AM,1648
+365,602,Almashtirish uchun,1648,7/07/2023 11:53:11 AM,53,7/07/2023 11:53:11 AM,1648
+366,603,Required Spare parts of Lighting fixtures and Heat tracing,1973,7/07/2023 5:15:43 PM,,7/07/2023 5:15:43 PM,1973
+367,604,Based on Procurement plan 2023 required Spare parts of Lighting fixtures and Heat tracing,1973,19/07/2023 12:00:00 AM,53,9/07/2023 8:38:30 AM,1973
+368,605,Based on Procurement plan 2023 and based on operating site current condition. Refer to attached file for detail technical data,1973,20/07/2023 12:00:00 AM,53,9/07/2023 10:15:59 AM,1973
+369,606,,689,7/05/2023 9:30:00 AM,26,10/07/2023 8:41:17 AM,689
+370,608,"Implementation of preventive disinfection, disinfestation and deratization works at the facilities of ""Uzbekistan"" GTL LLC",695,10/08/2023 1:06:40 PM,71,10/07/2023 1:06:40 PM,695
+371,609,For marking materials ,1656,10/07/2023 1:14:51 PM,77,10/07/2023 1:14:51 PM,1656
+372,610,Engagement of the outsourcing service company to carry out all type of non-destructive testing (NDE).,735,10/08/2023 4:02:05 PM,59,10/07/2023 4:02:05 PM,735
+373,612,"Statistical information on export, import, production and consumption of diesel fuel in Uzbekistan",1962,11/07/2023 1:54:57 PM,63,11/07/2023 1:54:57 PM,1962
+374,614,,1461,14/07/2023 8:30:00 AM,26,11/07/2023 2:35:31 PM,1461
+375,613,to ensure continuous operation of Valves ,641,11/10/2023 12:00:00 AM,53,11/07/2023 2:19:16 PM,641
+376,618,заявка на услуги по ремонту логотипа для здания административно бытового комплекса,1889,17/07/2023 10:32:12 AM,39,12/07/2023 10:32:12 AM,1889
+377,617,Bolts & Nuts to use during Turnaround,1674,15/11/2023 10:10:00 AM,56,12/07/2023 10:10:00 AM,1674
+378,617,Bolts & Nuts to use during Turnaround,1674,15/11/2023 10:10:00 AM,56,12/07/2023 10:10:00 AM,1674
+379,617,Bolts & Nuts to use during Turnaround,1674,15/11/2023 10:10:00 AM,56,12/07/2023 10:10:00 AM,1674
+380,617,Bolts & Nuts to use during Turnaround,1674,15/11/2023 10:10:00 AM,56,12/07/2023 10:10:00 AM,1674
+381,620,,1186,1/07/2023 10:00:00 AM,,12/07/2023 2:30:05 PM,1186
+382,621,,1186,1/07/2023 10:00:00 AM,,12/07/2023 2:30:05 PM,1186
+383,619,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,19/07/2023 2:28:00 PM,40,12/07/2023 2:28:00 PM,1687
+384,622,"to ensure continuous operating of the Sulphuric Acid Pumps(187-PC-002A/B),Caustic Soda Transfer Pumps(187-PC-004A/B)",1155,11/08/2023 3:06:06 PM,53,12/07/2023 3:06:06 PM,1155
+385,624,Almashtirish va modiy texnik bazani yaratish uchun,1648,12/07/2023 5:01:53 PM,53,12/07/2023 5:01:53 PM,1648
+386,623,Gas chromatograph kalonkalarini qurutish uchun regeneratsiya pechi,1641,13/08/2023 4:52:53 PM,53,12/07/2023 4:52:53 PM,1641
+387,625,,735,12/07/2023 5:07:47 PM,,12/07/2023 5:07:47 PM,735
+388,626,Argon gas purchasing for welding works,1463,24/07/2023 11:00:23 AM,75,13/07/2023 11:00:23 AM,1463
+389,627,"In order to properly follow the safety rules during unloading, loading and moving from one place to another",1902,13/07/2023 3:58:46 PM,38,13/07/2023 3:58:46 PM,1902
+390,628,"In order to properly follow the safety rules during using cranes when unloading, loading and moving from one place to another ",1902,13/07/2023 4:07:02 PM,38,13/07/2023 4:07:02 PM,1902
+391,629,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun  Navoiyazot AJdan azot maxsulotini olib kelish ,1920,14/07/2023 5:23:55 PM,52,14/07/2023 5:23:55 PM,1920
+392,630,windsock xarid qilish ,695,15/08/2023 2:15:57 AM,71,15/07/2023 2:15:57 AM,695
+393,631,,1460,17/07/2023 12:00:00 AM,28,17/07/2023 3:08:41 PM,1460
+394,632,,1463,17/07/2023 12:00:00 AM,25,17/07/2023 3:24:25 PM,1463
+395,633,КСЩ камбинизон харид қилиш ,695,18/08/2023 4:45:43 AM,71,18/07/2023 4:45:43 AM,695
+396,634,"Development of environmental regulations-document ""Statement of the impact of the environmental"" (ZVOS) for the  ""Uzbekiston GTL"" LLC plant (assignment to category I of environmental impact - a particularly hazardous type of activity)",695,18/07/2023 3:51:54 PM,71,18/07/2023 3:51:54 PM,695
+397,635,In order to maintain the continuous operation of the 110-VC-121/221AB Adsorbers of Unit-10 ,1973,28/07/2023 10:15:39 AM,53,19/07/2023 10:15:39 AM,1973
+398,636,,1964,26/07/2023 12:00:00 AM,,19/07/2023 10:46:06 AM,1964
+399,637,"In order to accept, register, process incoming correspondence and orders from higher departments and organisations through ""Edo.ijro.uz""",1957,20/07/2023 9:53:43 AM,67,20/07/2023 9:53:43 AM,1957
+400,639,In order to properly follow the safety rules during maintenance and repair of explosion-proof equipments,1902,20/07/2023 11:35:38 AM,60,20/07/2023 11:35:38 AM,1902
+401,640,Double door cupboard and Cloth for Repair work. ,689,31/08/2023 2:23:44 PM,53,20/07/2023 2:23:44 PM,689
+402,642,Автошины (ЗАДНИЕ шины для автопогрузчиков 5 тонн),1921,27/07/2023 4:13:51 PM,51,20/07/2023 4:13:51 PM,1921
+403,643,Автошины (ПЕРЕДНИЕ шины для автопогрузчиков 5 тонн) ,1921,27/07/2023 4:20:18 PM,51,20/07/2023 4:20:18 PM,1921
+404,644,Автошины (Для полуприцепа),1921,31/07/2023 4:24:00 PM,51,20/07/2023 4:24:00 PM,1921
+405,645,Автошины (Для автобусов),1921,31/07/2023 4:28:07 PM,51,20/07/2023 4:28:07 PM,1921
+406,646,Автошины (Для грузовых автомобилей),1921,31/07/2023 4:32:11 PM,51,20/07/2023 4:32:11 PM,1921
+407,647,Автошины (Для легковых автомобилей) 225/55-R17,1921,31/07/2023 4:35:33 PM,51,20/07/2023 4:35:33 PM,1921
+408,648,Автошины (Для легковых автомобилей) 205/65-R15,1921,31/07/2023 4:41:55 PM,51,20/07/2023 4:41:55 PM,1921
+409,649,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,21/08/2023 4:51:33 PM,60,20/07/2023 4:51:33 PM,1891
+410,650,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,21/08/2023 5:01:59 PM,60,20/07/2023 5:01:59 PM,1891
+411,651,Signing a contract with the Agrochemical Analysis Center of Kashkadarya Region to conduct an agrochemical analysis of the soil of 50 hectares and obtain the conclusion,695,20/07/2023 5:05:22 PM,71,20/07/2023 5:05:22 PM,695
+412,652,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,21/08/2023 5:11:13 PM,60,20/07/2023 5:11:13 PM,1891
+413,653,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,21/08/2023 5:18:41 PM,60,20/07/2023 5:18:41 PM,1891
+414,654,Прием специальных письменных писем (посылок) в UzGTL и доставка их в города Узбекистана и стран СНГ,1962,21/07/2023 11:09:27 AM,30,21/07/2023 11:09:27 AM,1962
+415,655,"Trainig courses at the Academy of Public Administration under the President of the Republic of Uzbekistan, Higher School of Business and Entrepreneurship, Institute for the Study of Youth Problems and Training of Prospective Personnel",1902,21/07/2023 3:29:43 PM,38,21/07/2023 3:29:43 PM,1902
+416,656,Заявка для заключения договору по услугам озеленения,1889,31/07/2023 1:51:02 PM,39,24/07/2023 1:51:02 PM,1889
+417,657,Автобус количеством 1(один) шт.  Согласно Приложению №1 к техническому заданию.,1921,31/07/2023 5:14:52 PM,51,24/07/2023 5:14:52 PM,1921
+418,661,размещение гостей компании в г.Карши,1955,25/07/2023 12:20:10 PM,39,25/07/2023 12:20:10 PM,1955
+419,664,"Training in labor protection courses will be organized online, and it is planned to train employees of the HSE department",1902,26/07/2023 11:00:16 AM,71,26/07/2023 11:00:16 AM,1902
+420,663,To ensure without interruption work of Uzbekistan GTL  LLC ,1920,26/07/2023 10:15:36 AM,52,26/07/2023 10:15:36 AM,1920
+421,665,Providing certificate of origins for synthtetic diesel that is going to be exported from GTL Chinaz terminal,1962,26/07/2023 5:14:01 PM,63,26/07/2023 5:14:01 PM,1962
+422,666,Gaskets (Sealing Materials),689,28/08/2023 3:19:18 PM,53,27/07/2023 3:19:18 PM,689
+423,667,Safe handling of acid is provided and direct exposure is prevented.,1923,27/09/2023 4:50:07 PM,50,27/07/2023 4:50:07 PM,1923
+424,669,Safe handling of acid is provided and direct exposure is prevented.,1923,27/09/2023 5:19:11 PM,50,27/07/2023 5:19:11 PM,1923
+425,670,,1903,4/08/2023 10:38:41 AM,70,28/07/2023 10:38:41 AM,1903
+426,671,Sulfat kislota vagoniga texnik xizmat ko'rsatish,691,1/08/2023 11:56:56 AM,41,28/07/2023 11:56:56 AM,691
+427,676,Корхона норматив базасини янгилаш мақсадида ,839,14/08/2023 5:04:07 PM,62,31/07/2023 5:04:07 PM,839
+428,677,,839,1/08/2023 9:54:34 AM,,1/08/2023 9:54:34 AM,839
+429,678,Корхона норматив базасини янгилаш мақсадида ,839,14/08/2023 10:02:31 AM,62,1/08/2023 10:02:31 AM,839
+430,681,"Refractory materials to repair defects which may be found during inspection of Fired Heaters, Fired Superheater, Reformer and LTFT reactor during Turnaround.",616,1/11/2023 12:00:00 AM,56,1/08/2023 3:02:57 PM,616
+431,683,Paint for repainting works(TAR-2023),1884,15/11/2023 12:00:00 AM,56,1/08/2023 5:04:57 PM,1884
+432,682,Gaskets for use in case of damages during repair works and inspections during Turnaround execution.,616,1/11/2023 4:51:33 PM,56,1/08/2023 4:51:33 PM,616
+433,685,"Training course for ""Installation and operation of solar photoelectric plants and water heating collectors"". The course should be provided online. ",1902,2/08/2023 9:17:21 AM,38,2/08/2023 9:17:21 AM,1902
+434,684,Explosion Proof Fan,1678,2/11/2023 8:35:52 AM,56,2/08/2023 8:35:52 AM,1678
+435,686,"to ensure continuous operation of the motors ( 110-PC-101A-M01,  110-PC-101B-M01, 110-PC-201B-M01, 110-PC-131A-M01, 110-PC-231A-M01, 110-PC-231B-M01, 110-PC-132A-M01, 110-PC-232A-M01, 110-PC-232B-M01, 110-XP-110-CS-01B-M01)",1137,2/08/2023 2:28:55 PM,53,2/08/2023 2:28:55 PM,1137
+436,688,"Training course on ""Safe working at height"". The course must be conducted at the factory site",1902,2/08/2023 3:43:16 PM,38,2/08/2023 3:43:16 PM,1902
+437,691,Spacer and Gate valve for Unit-20 Train-2 BFW line,1661,2/08/2023 4:34:27 PM,53,2/08/2023 4:34:27 PM,1461
+438,692,For an annual metrological inspection,1179,2/08/2023 4:39:24 PM,53,2/08/2023 4:39:24 PM,1179
+439,695,,1902,3/08/2023 12:08:06 PM,,3/08/2023 12:08:06 PM,1902
+440,697,,1460,3/08/2023 4:43:56 PM,,3/08/2023 4:43:56 PM,1460
+441,698,LOX-120 Oil for LOX pumps,1661,3/08/2023 4:45:40 PM,53,3/08/2023 4:45:40 PM,1661
+442,700,,1203,4/08/2023 11:15:47 AM,,4/08/2023 11:15:47 AM,1203
+443,706,,1582,4/08/2023 2:14:49 PM,,4/08/2023 2:14:49 PM,1582
+444,707,Yaroqsiz holga kelgan o`lchash asboblari o’rniga yangi o`lchash asboblari xarid qilish,1480,4/08/2023 2:22:11 PM,53,4/08/2023 2:22:11 PM,1480
+445,719,,735,4/08/2023 3:48:17 PM,,4/08/2023 3:48:17 PM,735
+446,711,Miscellaneous materials to repair defects which may be found during inspection of ATR&WHB and Reformer during Turnaround.,616,15/11/2023 2:36:53 PM,56,4/08/2023 2:36:53 PM,616
+447,722,,1460,4/08/2023 4:42:56 PM,,4/08/2023 4:42:56 PM,1460
+448,715,Filtr element for equipment,1884,4/08/2023 3:05:17 PM,56,4/08/2023 3:05:17 PM,1884
+449,723,Piping materials to repair defects which may be found during inspection of static equipment and analyzers during Turnaround.,616,15/11/2023 8:49:09 AM,56,5/08/2023 8:49:09 AM,616
+450,725,Engagement of the outsourcing service company to carry out the thermography inspection of Equipments,1582,7/09/2023 10:20:07 AM,59,7/08/2023 10:20:07 AM,1582
+451,734,,1,8/08/2023 9:29:04 AM,,8/08/2023 9:29:04 AM,1
+452,735,,1,8/08/2023 9:33:12 AM,,8/08/2023 9:33:12 AM,1
+453,737,,1920,8/08/2023 9:46:05 AM,,8/08/2023 9:46:05 AM,1920
+454,738,приобретение холодильника для Ташкентского офиса ,1955,8/08/2023 9:50:22 AM,39,8/08/2023 9:50:22 AM,1955
+455,733,,1460,8/08/2023 9:24:46 AM,,8/08/2023 9:24:46 AM,1460
+456,739,,1920,8/08/2023 10:06:14 AM,,8/08/2023 10:06:14 AM,1920
+457,740,,1920,8/08/2023 10:07:33 AM,,8/08/2023 10:07:33 AM,1920
+458,741,,1920,8/08/2023 10:08:22 AM,,8/08/2023 10:08:22 AM,1920
+459,742,,1920,8/08/2023 10:09:16 AM,,8/08/2023 10:09:16 AM,1920
+460,744,,1889,8/08/2023 10:25:12 AM,39,8/08/2023 10:25:12 AM,1889
+461,745,NDE consumables required for all DPT inspections,735,8/09/2023 11:09:59 AM,59,8/08/2023 11:09:59 AM,735
+462,746,to replace existing lighting lamps at the facilities of GTL Chinaz Terminal.,1891,8/11/2023 12:00:00 AM,60,8/08/2023 11:17:13 AM,1891
+463,747,,1899,8/08/2023 11:35:47 AM,,8/08/2023 11:35:47 AM,1899
+464,748,Solar water heater 200 L,1891,8/11/2023 12:00:00 AM,60,8/08/2023 4:16:43 PM,1891
+465,749,to reduce the consumption of electricity from the network for GTL Chinaz Terminal,1891,8/11/2023 12:00:00 AM,60,8/08/2023 4:23:20 PM,1891
+466,750,Required spare parts due to pump failure,1973,8/08/2023 4:51:49 PM,53,8/08/2023 4:51:49 PM,1973
+467,751,qayta baholash,1625,31/08/2023 4:54:26 PM,64,8/08/2023 4:54:26 PM,1625
+468,752,Махсус қуёшдан химоя қилувчи кўзойнак Харид килиш,695,8/09/2023 8:10:22 AM,71,9/08/2023 8:10:22 AM,695
+469,753,procurement of the measuring equipment,1203,28/08/2023 10:09:09 AM,62,9/08/2023 10:09:09 AM,1203
+470,755,,1903,9/08/2023 10:39:11 AM,70,9/08/2023 10:39:11 AM,1903
+471,756,for measuring tank levels of the intermediate tank system U83,748,9/09/2023 5:03:23 PM,49,9/08/2023 5:03:23 PM,748
+472,759,,689,18/06/2023 9:30:00 AM,26,10/08/2023 2:58:37 PM,689
+473,761,"Обязательное страхование гражданской ответственности за причинение вреда жизни, здоровью и (или) имуществу других лиц и окружающей среде в случае аварии на опасном производственном объекте",2014,25/08/2023 3:44:26 PM,66,10/08/2023 3:44:26 PM,2014
+474,763,Gaskets for use in case of damages during repair works and inspections during Turnaround execution,1674,1/11/2023 4:27:54 PM,56,10/08/2023 4:27:54 PM,1674
+475,767,Centering Sleeve and Micrometr for normal operation of ASU,1461,31/08/2023 3:50:22 PM,53,11/08/2023 3:50:22 PM,1461
+476,768,Unit 84 184-TK-002A/B/C kerosen rezervuarlarini artib tozalash,691,21/08/2023 9:22:28 AM,41,14/08/2023 9:22:28 AM,691
+477,783,"Рации,межсетевой экран, ТВ и проектор для комнаты совещаний.",1903,18/08/2023 1:42:04 PM,70,14/08/2023 1:42:04 PM,1903
+478,786,Precoating paints,1674,27/11/2023 2:13:44 PM,56,14/08/2023 2:13:44 PM,1674
+479,788,"На проведение работ по проектированию, поставка оборудований и отделочные работы учебного заведения филиала РГУ нефти и газа. ",1685,21/08/2023 3:08:17 PM,54,14/08/2023 3:08:17 PM,1685
+480,790,"На проведение работ по проектированию, поставка оборудований и отделочные работ учебного заведения Бухарского нефтегазового колледжа.",1685,21/08/2023 3:28:36 PM,54,14/08/2023 3:28:36 PM,1685
+481,789,ORD-48/1047-2023 xizmat xatiga asosan UzGTL-PR-0994 ZZ ga qo'shimcha sifatida oil gun sotib olish uchun,1973,14/09/2023 12:00:00 AM,53,14/08/2023 3:15:55 PM,1973
+482,792,Loyiha smeta hujjatlarini ekspertizadan o'tkazish to'g'risida shartnoma,1924,14/08/2023 4:17:47 PM,72,14/08/2023 4:17:47 PM,1924
+483,795,Поздравительные открытки ко дню независимости РУЗ,1955,14/08/2023 6:02:16 PM,39,14/08/2023 6:02:16 PM,1955
+484,796,"Обязательное страхование гражданской ответственности за причинение вреда жизни, здоровью и (или) имуществу других лиц и окружающей среде в случае аварии на опасном производственном объекте",2014,25/08/2023 7:01:26 PM,,14/08/2023 7:01:26 PM,2014
+485,797,Spare parts for control valves and measuring instruments,1676,16/11/2023 12:00:00 AM,56,15/08/2023 8:31:39 AM,1676
+486,800,TOC (Total Organic Carbon) va Moisture analizatorlari uchun kerakli ehtiyot qismlari sotib olish,1641,18/09/2023 9:37:22 AM,53,16/08/2023 9:37:22 AM,1641
+487,803,Purchase of Spare parts for Pressure Safety Valves (PSV) (Except Unit 10 equipment) to repair defects which may be found during inspection of Pressure Safety Valves during Turnaround,616,15/11/2023 12:00:00 AM,56,16/08/2023 3:51:04 PM,616
+488,804,носилка ва Жонлантириш ва суний нафас бериш мосламаси харид қилиш,695,18/09/2023 12:14:04 PM,71,17/08/2023 12:14:04 PM,695
+489,806,"«Uzbekistan GTL» МЧЖда (1160 киши) ISO 37001:2016 стандарти бўйича сертификатлаштириш ва иккита инспекция аудитини ўтказиш, жорий этилган коррупцияга қарши курашиш ва комплаенс (мувофиқликни) назорат тизими",1906,18/08/2023 3:15:21 PM,66,18/08/2023 3:15:21 PM,1906
+490,809,,639,18/09/2023 11:50:48 AM,,19/08/2023 11:50:48 AM,639
+491,810,tamirlalsh uchun ,639,18/09/2023 11:59:42 AM,53,19/08/2023 11:59:42 AM,639
+492,811,tamirlalsh uchun ,639,18/09/2023 12:10:33 PM,53,19/08/2023 12:10:33 PM,639
+493,812,Rechargeable batteries  for  UzGTL plant maintenance,1463,19/09/2023 4:01:42 PM,25,19/08/2023 4:01:42 PM,1463
+494,813,Obtain smoke detectors and heat detectors for Uzbekistan GTL factory,1463,18/09/2023 4:11:10 PM,25,19/08/2023 4:11:10 PM,1463
+495,815,SGUdagi Gaz xromatograf analizatorlari uchun ehtiyot qismlar sotib olish,1493,21/09/2023 10:17:21 AM,53,21/08/2023 10:17:21 AM,1493
+496,816,Аккумуляторные батареи (АКБ) емкостью 200 Ah,1921,4/09/2023 10:52:49 AM,51,21/08/2023 10:52:49 AM,1921
+497,817,газ қутқарув хизматига жанговар холат ва махсус анжомлар хисоби учун тезкор автобус харид қилиш,695,21/09/2023 11:36:25 AM,71,21/08/2023 11:36:25 AM,695
+498,819,Providing certificate of origins for synthtetic diesel that is going to be exported ,1962,21/08/2023 12:28:46 PM,63,21/08/2023 12:28:46 PM,1962
+499,820,Televizor xarid qilish ,695,21/08/2023 12:46:32 PM,71,21/08/2023 12:46:32 PM,695
+500,821,"Обязательное страхование гражданской ответственности за причинение вреда жизни, здоровью и (или) имуществу других лиц и окружающей среде в случае аварии на опасном производственном объекте",2014,25/08/2023 12:00:00 AM,66,21/08/2023 1:52:57 PM,2014
+501,822,В избежание недостачи в государственном резерве дизеля и масло хранимого Чиназском терминале ООО «Uzbekistan GTL»,1999,31/08/2023 2:43:26 PM,80,21/08/2023 2:43:26 PM,1999
+502,823,Spare parts for Karcher HDS10/20-4MX  in Washing Bay,1463,21/08/2023 3:16:05 PM,25,21/08/2023 3:16:05 PM,1463
+503,825,Order PPE for Jet wash cleaner workers,1463,21/08/2023 3:35:42 PM,25,21/08/2023 3:35:42 PM,1463
+504,826,For loading and unloading perlite materials during the repair,812,21/08/2023 6:19:42 PM,47,21/08/2023 6:19:42 PM,812
+505,835,to reduce the consumption of electricity from the network for Uzbekistan GTL ,1891,25/09/2023 1:23:15 PM,60,23/08/2023 1:23:15 PM,1891
+506,836,100 kW Diesel Generator ,1891,25/09/2023 1:31:40 PM,60,23/08/2023 1:31:40 PM,1891
+507,837,PTFE lining for damaged spools,1973,24/08/2023 8:25:25 AM,53,24/08/2023 8:25:25 AM,1973
+508,838,"Cone support during the Dec-2023 Outage, as it may get damaged during inspection of ATR.",616,24/08/2023 10:45:07 AM,56,24/08/2023 10:45:07 AM,616
+509,839,"Pipes, pipe fittings and gate valves for use in the installation of suction bypass lines between compressors 130-XP-115 and 130-XP-215 of Trains 1 and 2.",616,24/08/2023 10:57:20 AM,56,24/08/2023 10:57:20 AM,616
+510,842,Gaskets for use in case of damages during repair works and inspections during Turnaround execution,1674,15/11/2023 4:31:08 PM,56,24/08/2023 4:31:08 PM,1674
+511,843,Fill up argon gas 20pcs of gas cylinders   ,1463,1/09/2023 10:39:52 AM,75,25/08/2023 10:39:52 AM,1463
+512,844,Texnik xizmat ko'rsatish tsexining infrastrukrutra loyihasiga ekspertiza xulosasini olish,1685,31/08/2023 1:02:38 PM,54,25/08/2023 1:02:38 PM,1685
+513,845,Bolts & Nuts to use during Turnaround,1674,15/11/2023 2:26:57 PM,56,25/08/2023 2:26:57 PM,1674
+514,846,Vacuum Leak Detector and Box frames required for NDE inspections,735,28/09/2023 10:57:25 AM,59,28/08/2023 10:57:25 AM,735
+515,847,,1903,28/08/2023 11:00:38 AM,70,28/08/2023 11:00:38 AM,1903
+516,848,for insulation of cryogenic equipment for the Cold Box ,812,28/08/2023 11:09:28 AM,47,28/08/2023 11:09:28 AM,812
+517,849,"СХ, ММ ва АММ бўлими ўқув синфини жихозлаш бўйича керакли жихозлар харид килиш",695,28/09/2023 9:18:51 PM,71,28/08/2023 9:18:51 PM,695
+518,851,2 ea. Mechanical seal of pump 130-PC-005A/B,1973,29/10/2023 12:00:00 AM,53,29/08/2023 11:18:10 AM,1973
+519,852,Applying PTFE lining for the existing spool,1973,29/09/2023 12:00:00 AM,53,29/08/2023 5:07:08 PM,1973
+520,855,Обеспечение сотрудников Ташкентсткого офиса бумагой для принтера (из расчета на 10 месяцев) ,1955,30/08/2023 3:04:55 PM,39,30/08/2023 3:04:55 PM,1955
+521,850,Vagon-sisternalarga xavflilik darajasini bildiruvchi yorliq xarid qilish to'g'risida,691,29/09/2023 8:51:52 AM,41,29/08/2023 8:51:52 AM,691
+522,856,Vagon-sisternalarga xavflilik darajasini bildiruvchi yorliq xarid qilish to'g'risida,691,30/08/2023 3:34:17 PM,41,30/08/2023 3:34:17 PM,691
+523,857,Обеспечение сотрудников папками для внесения документов руководству  ,1955,30/08/2023 3:41:57 PM,39,30/08/2023 3:41:57 PM,1955
+524,859,For safekeeping perlite,812,30/08/2023 5:11:01 PM,47,30/08/2023 5:11:01 PM,812
+525,861,"Pipes, pipe fittings and gate valves for use in the installation highpressure N2 line to substitute the seal gas package of Compressors (120-CC-101 and 120-CC-101).",616,31/08/2023 8:28:19 AM,56,31/08/2023 8:28:19 AM,616
+526,863,Тошкент офис биносини кайта бахолаш,1625,11/09/2023 10:23:01 AM,64,31/08/2023 10:23:01 AM,1625
+527,864,Филтрли ярим маска ва Филтрли элементи харид қилиш,695,5/09/2023 3:10:39 PM,71,5/09/2023 3:10:39 PM,695
+528,866,Applying filter screen to existing filter elements of 145-XF-040A. 38 PCS filter element (1 SET),1973,5/10/2023 12:00:00 AM,53,5/09/2023 4:38:15 PM,1973
+529,865,For testing safety valves ,1463,19/09/2023 4:32:52 PM,75,5/09/2023 4:32:52 PM,1463
+530,868,Touch panel(Сенсорный инфокиоск) sotib olish uchun,640,6/09/2023 11:45:17 AM,58,6/09/2023 11:45:17 AM,1463
+531,869,Responsible storage of GTL products at Intermax Petroleum LLC,1962,6/09/2023 3:33:06 PM,63,6/09/2023 3:33:06 PM,1962
+532,870,"Awarding of the winners of the ""Most Devoted Teacher"" contest",1902,6/09/2023 6:11:12 PM,38,6/09/2023 6:11:12 PM,1902
+533,871,"To buy laptops to reward the winners of the Most Selfless Teacher competition held by the limited liability company ""Uzbekistan GTL""",1902,6/09/2023 6:22:34 PM,38,6/09/2023 6:22:34 PM,1902
+534,872,,1973,10/10/2023 12:00:00 AM,,7/09/2023 8:51:57 AM,1973
+535,875,Spare parts for butterfly valves installed LEAF filters,639,7/11/2023 9:20:10 AM,53,7/09/2023 9:20:10 AM,639
+536,876,Required repair kits for mechanical seals based on approved ORD-FIN1030/349-2023 office memo,1973,7/12/2023 12:00:00 AM,,7/09/2023 9:41:32 AM,1973
+537,877,Required spare repair kits for mechanical seal based on approved ORD-FIN1030/349-2023 office Memo,1973,7/12/2023 10:23:10 AM,53,7/09/2023 10:23:10 AM,1973
+538,878,Zavod markaziy Laboratoriyasidapriborlarni kalibrlash uchun,703,7/09/2023 11:20:03 AM,40,7/09/2023 11:20:03 AM,703
+539,880,PHOSPHATE DOSING PUMP for 120-XP-101-PD-01A,1461,7/09/2023 1:44:10 PM,53,7/09/2023 1:44:10 PM,1461
+540,882,For maintenance services to eliminate of the BWF leak in Unit 20 Uzbekistan GTL LLC.,1461,18/09/2023 11:06:54 AM,53,11/09/2023 11:06:54 AM,1176
+541,883,to ensure continous operating of the pumps(172-PC-004A/B),1155,11/10/2023 4:48:13 PM,53,11/09/2023 4:48:13 PM,1155
+542,884,Complete mechanical seal is required due to erosion ,1973,11/10/2023 12:00:00 AM,53,11/09/2023 5:10:46 PM,1973
+543,885,Ishlab chiqarishdagi extiyot qism zaruriyat tufayli,1973,11/12/2023 12:00:00 AM,53,11/09/2023 5:15:26 PM,1973
+544,889,"Заявка для закупки негазированной питьевой воды объемом 0,5 л",1889,13/09/2023 10:14:33 AM,39,13/09/2023 10:14:33 AM,1889
+545,891,Scaffolding services for December-2023 Outage Period,1674,1/10/2023 4:00:11 PM,56,13/09/2023 4:00:11 PM,1674
+546,892,Insulation Services for December-2023 Outage Period,1674,1/12/2023 4:04:22 PM,56,13/09/2023 4:04:22 PM,1674
+547,893,Refractory Damage Repair Services for December-2023 Outage Period,1674,1/12/2023 4:09:57 PM,56,13/09/2023 4:09:57 PM,1674
+548,896,Por performing F&GS services ,1463,14/10/2023 2:41:14 PM,75,14/09/2023 2:41:14 PM,1463
+549,898,Zavod markaziy Laboratoriyasida priborlarni kalibrlash uchun,703,14/09/2023 4:04:30 PM,,14/09/2023 4:04:30 PM,703
+550,899,Zavod markaziy Laboratoriyasidapriborlarni kalibrlash uchun,703,14/09/2023 4:15:32 PM,40,14/09/2023 4:15:32 PM,703
+551,901,Transportation of PERLITE FILTRAFLO 4251 in 28 800 kgs from Mersin Port to Uzbeistan GTL Plat,1919,29/09/2023 12:00:00 AM,30,14/09/2023 5:13:36 PM,1919
+552,902,Zavod markaziy Laboratoriyasida ICP 9000 va LC20 priborlarini ko'rikdan o'tkazish,703,15/09/2023 10:01:49 AM,40,15/09/2023 10:01:49 AM,703
+553,904,Implementation of industrial waste reception and disposal (defusing) service of hazard class 2-3,695,22/09/2023 4:35:13 PM,71,15/09/2023 4:35:13 PM,695
+554,905,Mechanical Services for December-2023 Outage Period,1674,1/12/2023 4:41:56 PM,56,15/09/2023 4:41:56 PM,1674
+555,909,Required spare pipe and pipe fittings based on office memo ORD-FIN1030/128-2023,1973,19/09/2023 9:17:54 AM,53,19/09/2023 9:17:54 AM,1973
+556,909,Required spare pipe and pipe fittings based on office memo ORD-FIN1030/128-2023,1973,19/09/2023 9:17:54 AM,53,19/09/2023 9:17:54 AM,1973
+557,910,UHP Cleaning services for December-2023 Outage Period,1674,1/12/2023 12:20:28 PM,56,19/09/2023 12:20:28 PM,1674
+558,911,for performing leak test of HVAC system of GTL plant ,1463,16/10/2023 2:56:38 PM,75,19/09/2023 2:56:38 PM,1463
+559,912,Обязательное страхование гражданской ответственности работодателя,2014,27/09/2023 10:53:18 AM,66,20/09/2023 10:53:18 AM,2014
+560,920,Заявка для чистящих средств и средств гигиены для работ административного отдела,1889,20/09/2023 2:45:00 PM,39,20/09/2023 2:45:00 PM,1889
+561,921,,663,20/09/2023 4:11:17 PM,,20/09/2023 4:11:17 PM,663
+562,922,,1460,20/09/2023 5:10:00 PM,,20/09/2023 5:02:48 PM,1460
+563,922,Evakuatsion banner va yong'inga qarshi kigiz (koshma) xarid qilish,695,20/10/2023 4:38:53 PM,71,20/09/2023 4:38:53 PM,695
+564,925,"""Uzbekistan GTL Chinoz terminali"" balansidagi temiryo'l izlari pasportlarini va Temiryo'l bilan ishlarni olib borish yo'riqnomasini qayta rasmiylashtirish",691,21/09/2023 11:27:22 AM,80,21/09/2023 11:27:22 AM,691
+565,926,pneumatic pump for loading chemicals,691,21/09/2023 11:58:19 AM,41,21/09/2023 11:58:19 AM,691
+566,927,На проведение работ по проектированию специального помещения для хранения газобаллонов на территории заводского склада ,1685,21/10/2023 2:27:30 PM,31,21/09/2023 2:27:30 PM,1685
+567,928,Televizor xarid qilish ,695,29/09/2023 2:43:15 PM,71,22/09/2023 2:43:15 PM,695
+568,930,Required bladders for lube oil accumulators due to frequent malfunctions,1973,22/10/2023 12:00:00 AM,53,22/09/2023 4:57:10 PM,1973
+569,929,Tovar moddiy boyliklarni kuzgi qishgi mavsumda yog`ingarchiliklardan asrash maqsadida foydalanish uchun,1656,2/10/2023 4:21:09 PM,77,22/09/2023 4:21:09 PM,1656
+570,931,For performing F&GS services on the plant,1463,25/09/2023 11:52:22 AM,75,25/09/2023 11:52:22 AM,1463
+571,932,for performing PSV calibration testing required spare part for popping machine ,1463,25/09/2023 12:10:54 PM,75,25/09/2023 12:10:54 PM,1463
+572,934,Tovar moddiy boyliklarni kuzgi qishgi mavsumda yog`ingarchiliklardan asrash maqsadida foydalanish uchun,1656,9/10/2023 4:49:39 PM,77,25/09/2023 4:49:39 PM,1656
+573,935,"Испытания по ГОСТ Р50588 на определение технических характеристик пенообразователя марки: ""ПО-6 СОН-У"" и ""ПО-6"" ",1999,25/10/2023 4:51:01 PM,80,25/09/2023 4:51:01 PM,1999
+574,936,Providing reference weights for technical service and calibration of weighbridges by O'ztemiryo'lkonteyner AJ,1164,25/10/2023 4:59:29 PM,80,25/09/2023 4:59:29 PM,1164
+575,937,"Course for ""Advanced Turnaround, Shutdown & LIVE ONLINE Outage Management""",1902,26/09/2023 9:55:28 AM,38,26/09/2023 9:55:28 AM,1902
+576,941,AVBR bo'yicha avariya javonidagi barcha jihozlarni avariya holatlarida ishlatilishini taminlash.,691,26/09/2023 2:35:39 PM,41,26/09/2023 2:35:39 PM,691
+577,940,to ensure continuous operation of the ASU unit,1137,26/10/2023 2:16:41 PM,53,26/09/2023 2:16:41 PM,1137
+578,946,Qarshi shahrisa bo'lib o'tadigan Respublika xalqaro yarmakasi uchun,1185,3/10/2023 4:33:51 PM,58,26/09/2023 4:33:51 PM,1185
+579,944,Install N2 Using Nitrogen instead of MRG during U20 start-up of the desulphurization section,1924,26/09/2023 3:48:27 PM,47,26/09/2023 3:48:27 PM,1924
+580,945,Sentrafugal kompressorlarning uzluksiz ishlashini taminlash maqsadida,639,4/10/2023 12:00:00 AM,53,26/09/2023 4:34:25 PM,639
+581,949,Подключение Чиназкого терминала к газовой сети,1999,26/10/2023 5:13:17 PM,,26/09/2023 5:13:17 PM,1999
+582,950,To ensure continous operation of the valves ,641,31/10/2023 8:13:05 AM,53,27/09/2023 8:13:05 AM,641
+583,951,To ensure continous operation of the valves ,641,31/12/2023 8:28:27 AM,53,27/09/2023 8:28:27 AM,641
+584,954,Qarshi shahrisa bo'lib o'tadigan Respublika xalqaro yarmakasi uchun,1185,4/10/2023 1:23:55 PM,58,27/09/2023 1:23:55 PM,1185
+585,957,Услуги по разработке рабочего документа (РД) и дизайна для осуществления строительно-монтажных работ «регистратура в административно-бытовом комплексе завода».,1685,16/10/2023 4:59:45 PM,31,27/09/2023 4:59:45 PM,1685
+586,958,Перевозка катализатора Сасол для нужд завода ,1912,31/10/2023 5:25:05 PM,30,27/09/2023 5:25:05 PM,1912
+587,961,Kerosin maxsulotini qo'shimcha laboratoriya tahlili uchun AQSHning Honeywell UOP kompanisiga yuborish,1968,5/10/2023 9:15:32 AM,46,28/09/2023 9:15:32 AM,1968
+588,959,"Service for Instruments, On-Off and control valves maintenance and repair",1676,1/12/2023 8:50:39 AM,56,28/09/2023 8:50:39 AM,1676
+589,962,"""Uzbekistan GTL Chinoz terminali"" balansidagi temiryo'l izlari doimiy sozligi va aniqlangan kamchiliklarni bartaraf etish ishlarni olib borish ",691,28/09/2023 10:26:00 AM,80,28/09/2023 10:26:00 AM,691
+590,965,Install N2 Using Nitrogen instead of MRG during U20 start-up of the desulphurization section,1924,28/09/2023 1:49:51 PM,47,28/09/2023 1:49:51 PM,1924
+591,967,,689,28/09/2023 8:30:00 AM,26,28/09/2023 4:45:35 PM,689
+592,966,,703,28/09/2023 4:39:01 PM,,28/09/2023 4:39:01 PM,703
+593,968,Zavod markaziy Laboratoriyasida priborlarni kalibrlash uchun,703,28/09/2023 5:23:44 PM,40,28/09/2023 5:23:44 PM,703
+594,969,Подключение Чиназкого терминала к газовой сети,1999,29/10/2023 11:02:32 AM,80,29/09/2023 11:02:32 AM,1999
+595,970,Подключение Чиназкого терминала к газовой сети,1999,29/10/2023 11:07:21 AM,80,29/09/2023 11:07:21 AM,1999
+596,973,Qarshi shahrisa bo'lib o'tadigan Respublika xalqaro yarmakasi uchun,1185,3/10/2023 10:25:33 AM,58,3/10/2023 10:25:33 AM,1185
+597,974,Almashtirish va modiy texnik bazani yaratish uchun,1648,3/10/2023 11:38:52 AM,53,3/10/2023 11:38:52 AM,1648
+598,976,курсы Академии СГБ Республики Узбекистан,1902,3/10/2023 12:18:19 PM,38,3/10/2023 12:18:19 PM,1902
+599,975,"Hiring a contractor for Engineering, Procurement and Construction of Single-Circuit Air Line of 6kV from UzGTL Plant to Workers town ",1924,3/10/2023 12:05:37 PM,68,3/10/2023 12:05:37 PM,1924
+600,977,"Hiring a contractor for Engineering, Procurement and Construction of Single-Circuit Air Line of 6kV from UzGTL Plant to Workers Camp ",1924,3/10/2023 2:32:17 PM,72,3/10/2023 2:32:17 PM,1924
+601,979,for welding works ,1463,11/10/2023 10:34:54 AM,75,4/10/2023 10:34:54 AM,1463
+602,981,Принтер и терминал доступа,1903,4/10/2023 5:04:49 PM,70,4/10/2023 5:04:49 PM,1903
+603,984,for GTL LAB project is required to conduct market study,1968,5/10/2023 1:59:21 PM,46,5/10/2023 1:59:21 PM,1968
+604,985,Preparing the hoist crane for maintenance (120-XP-203-XX-01),1137,6/11/2023 4:41:16 PM,53,5/10/2023 4:41:16 PM,1137
+605,987,Sentrafugal kompressorlar uchun wendor olib kelishi ko'zda tutilgan materiallar ,639,9/10/2023 12:00:00 AM,53,5/10/2023 4:58:01 PM,639
+606,986,Ofis xodimlarini kerakli anjomlar bilan ta'minlash ( qor kurash uchun ),2020,5/11/2023 4:54:35 PM,39,5/10/2023 4:54:35 PM,2020
+607,989,размещение гостей компании в г.Карши,1955,6/10/2023 11:07:37 AM,39,6/10/2023 11:07:37 AM,1955
+608,990,размещение гостей компании в г.Карши,1955,6/10/2023 11:31:41 AM,39,6/10/2023 11:31:41 AM,1955
+609,991,Mahsulotlarni qabul qilib olish to’kib olish qurilmasi USN-150/175 ni qismlarini birlashtirib turuvchi rezina salniklarini sotib olish bo’yicha,2029,6/10/2023 3:29:46 PM,80,6/10/2023 3:29:46 PM,2029
+610,993,"Ambient air protection, harmful polluting gases from motor vehicles and soil analysis ",663,13/10/2023 4:52:09 PM,80,6/10/2023 4:52:09 PM,663
+611,994,"""provision of reconstruction and scheduled maintenance services automatic fire alarm systems object oil depot """"GTL Chinoz terminali""""""",663,13/10/2023 5:05:16 PM,80,6/10/2023 5:05:16 PM,663
+612,997,,703,9/10/2023 1:53:22 PM,,9/10/2023 1:53:22 PM,703
+613,998,Almashtirish va modiy texnik bazani yaratish uchun,1648,9/10/2023 4:53:56 PM,53,9/10/2023 4:53:56 PM,1648
+614,999,"To buy laptops to reward the winners of the Most Selfless Teacher competition held by the limited liability company ""Uzbekistan GTL""",1902,9/10/2023 5:55:22 PM,38,9/10/2023 5:55:22 PM,1902
+615,1000,"Awarding of the winners of the ""Most Devoted Teacher"" contest",1902,9/10/2023 6:00:08 PM,38,9/10/2023 6:00:08 PM,1902
+616,1004,Vagon-sisternalarga xavflilik darajasini bildiruvchi yorliq xarid qilish to'g'risida,691,10/10/2023 3:30:57 PM,,10/10/2023 3:30:57 PM,691
+617,1006,"""Uzbekistan GTL"" zavodi hududidagi bosimi tushgan birlamchi yong'in o'chirgichlarni qayta to'ldirish uchun shartnoma qilish",695,18/10/2023 10:13:45 AM,71,11/10/2023 10:13:45 AM,695
+618,1007,Procurement of USB 3.0 flash drives of 4Gb capacity for regional fair to give as gift to winners,1968,11/10/2023 11:30:21 AM,46,11/10/2023 11:30:21 AM,1968
+619,1008,Spare parts for Unit 10 Pressure Safety Valves (PSV) to repair defects which may be found during inspection.,616,11/10/2023 2:50:02 PM,56,11/10/2023 2:50:02 PM,616
+620,1008,Spare parts for Unit 10 Pressure Safety Valves (PSV) to repair defects which may be found during inspection.,616,11/10/2023 2:50:02 PM,56,11/10/2023 2:50:02 PM,616
+621,1008,Spare parts for Unit 10 Pressure Safety Valves (PSV) to repair defects which may be found during inspection.,616,11/10/2023 2:50:02 PM,56,11/10/2023 2:50:02 PM,616
+622,1016,Tovar moddiy boylikni xarid qilish uchun,2029,11/10/2023 8:34:45 PM,,11/10/2023 8:34:45 PM,2029
+623,1017,Tovar moddiy boylikni xarid qilish uchun,2029,11/10/2023 9:00:38 PM,,11/10/2023 9:00:38 PM,2029
+624,1018,Tovar moddiy boylikni xarid qilish uchun,2029,11/10/2023 9:09:35 PM,,11/10/2023 9:09:35 PM,2029
+625,1019,Tovar moddiy boylikni xarid qilish uchun,2029,11/10/2023 9:25:09 PM,,11/10/2023 9:25:09 PM,2029
+626,1020,Tovar moddiy boylikni xarid qilish uchun,2029,11/10/2023 9:27:43 PM,,11/10/2023 9:27:43 PM,2029
+627,1022,Vagon-sisternalarga xavflilik darajasini bildiruvchi yorliq xarid qilish to'g'risida,691,12/10/2023 9:24:00 AM,41,12/10/2023 9:24:00 AM,691
+628,1024,Tovar moddiy boylikni xarid qilish uchun,2029,12/10/2023 9:30:13 AM,80,12/10/2023 9:30:13 AM,2029
+629,1025,Tovar moddiy boylikni xarid qilish uchun,2029,12/10/2023 9:34:14 AM,80,12/10/2023 9:34:14 AM,2029
+630,1026,Tovar moddiy boylikni xarid qilish uchun,2029,12/10/2023 9:45:11 AM,80,12/10/2023 9:45:11 AM,2029
+631,1028,Tovar moddiy boylikni xarid qilish uchun,2029,12/10/2023 9:51:53 AM,80,12/10/2023 9:51:53 AM,2029
+632,1029,Tovar moddiy boylikni xarid qilish uchun,2029,12/10/2023 9:57:22 AM,80,12/10/2023 9:57:22 AM,2029
+633,1031,Tovar moddiy boylikni xarid qilish uchun,2029,12/10/2023 10:20:24 AM,80,12/10/2023 10:20:24 AM,2029
+634,1032,Uzbekistan GTLkompaniyasiga kerakli dori vositalarini xarid qilish ,695,19/10/2023 10:27:08 AM,71,12/10/2023 10:27:08 AM,695
+635,1033,Publication in journal,1962,12/10/2023 2:46:32 PM,63,12/10/2023 2:46:32 PM,1962
+636,1034,,1656,12/10/2023 2:58:49 PM,,12/10/2023 2:58:49 PM,1656
+637,1038,Providing services for developing norms of usage chemicals and catalysts ,1920,13/10/2023 10:17:34 AM,52,13/10/2023 10:17:34 AM,1920
+638,1039,«Uzbekistan GTL» МЧЖ компаниясининг Автотранспортлардан фойдаланиш бўлимига тегишли 250 тоннали KOBELCO СКS2500 маркали кранига мувофиқлик сертификатини олиш,695,20/10/2023 5:10:24 PM,71,13/10/2023 5:10:24 PM,695
+639,1041,"Автошины для внедорожникаToyota Land Cruiser Ширина, высота, диаметр: 265/65-R-18.",1921,24/10/2023 5:30:05 PM,51,17/10/2023 5:30:05 PM,1921
+640,1044,for monitoring the pH of the pre-cooling system make-up water,812,10/11/2023 11:22:04 AM,47,18/10/2023 11:22:04 AM,812
+641,1045,"Услуги по получению экспертного заключения от ГУП ""Шахарсозлик хужжатлари экспертизаси"" на проектно-сметную документацию для осуществления строительства операторского здания В35/7 на установке 45.",1685,25/10/2023 3:29:34 PM,31,18/10/2023 3:29:34 PM,1685
+642,1046,"На техническое обследование и инструментальное исследование строительных конструкций Эстакады лёгкого типа для осмотра котлов-цистерн под налив светлых нефтепродуктов на “GTL Chinoz terminal” в Ташкенте области Чиназкий район, Республики Узбекистан.",2029,19/10/2023 11:21:02 AM,80,19/10/2023 11:21:02 AM,2029
+643,1047,On the purchase of special containers for storage and temporary placement of household waste,695,26/10/2023 12:16:05 PM,71,19/10/2023 12:16:05 PM,695
+644,1050,For technical maintenance of HVAC system ,1463,20/11/2023 4:11:40 PM,75,20/10/2023 4:11:40 PM,1463
+645,1051,In order to repair and maintain gate valves installed on BFW line,1973,20/10/2023 4:54:01 PM,53,20/10/2023 4:54:01 PM,1973
+646,1052,In order to designing with seal system modified mechanical seal of 130-PC-005A/B pump,1973,20/10/2023 4:57:14 PM,53,20/10/2023 4:57:14 PM,1973
+647,1053,Zavod markaziy Laboratoriyasi uchun,703,21/10/2023 1:48:34 PM,40,21/10/2023 1:48:34 PM,703
+648,1054,,1889,23/10/2023 10:53:13 AM,39,23/10/2023 10:53:13 AM,1889
+649,1056,2-3 хавфлилик синфига мансуб саноат чиқиндиларни утилизация қилиш,663,31/10/2023 2:49:23 PM,80,23/10/2023 2:49:23 PM,663
+650,1061,"Recycling services industrial waste 2-3 hazard class during the operation of the facility LLC ""Uzbekistan GTL"" ""GTL Chinoz terminal",663,31/10/2023 11:37:49 AM,80,24/10/2023 11:37:49 AM,663
+651,1062,GTL Chinoz Terminal Analysis of sources of agri cultural drinking water supply,663,24/10/2023 11:46:29 AM,80,24/10/2023 11:46:29 AM,663
+652,1063,"""GTL Chinoz Environmental norm for terminal"". (PDV, PDO, PDS and RSV) development of documents and the State environmental expertise to carry out their work",663,31/10/2023 11:49:00 AM,80,24/10/2023 11:49:00 AM,663
+653,1064,,1889,24/10/2023 1:40:49 PM,39,24/10/2023 1:40:49 PM,1889
+654,1066,To ensure proper working condition of HVAC systems  ,1463,31/10/2023 4:32:18 PM,75,24/10/2023 4:32:18 PM,1463
+655,1065,to ensure continuous operation of the HVAC system,1987,30/10/2023 4:23:25 PM,57,24/10/2023 4:23:25 PM,1987
+656,1067,Mechanical seal shall be purchased with Duplex 2205 internal material and port modification F,1973,26/10/2023 8:28:16 AM,53,26/10/2023 8:28:16 AM,1973
+657,1068,Ishlab chiqarishdagi extiyot qism zaruriyat tufayli,1973,26/10/2023 8:34:14 AM,53,26/10/2023 8:34:14 AM,1973
+658,1071,Заявка для закупки флагов и лопат,1889,26/10/2023 10:45:29 AM,39,26/10/2023 10:45:29 AM,1889
+659,1072,обеспечение работоспособности шлагбаума,2040,26/10/2023 12:32:48 PM,39,26/10/2023 12:32:48 PM,2040
+660,1073,Uz GTL Temiryo'l tarozisining ehtiyot qismlarini ta'mirlash uchun,691,26/10/2023 2:51:52 PM,41,26/10/2023 2:51:52 PM,691
+661,1074,Temiryo'l tarozisining ehtiyot qismlarini ta'mirlash uchun,691,26/10/2023 3:45:32 PM,41,26/10/2023 3:45:32 PM,691
+662,1075,Осуществление закупки строительных инертных материалов,1685,27/11/2023 4:00:48 PM,31,27/10/2023 4:00:48 PM,1685
+663,1076,"""Uzbekistan GTL"" МЧЖ ва Тошкент вилояти ФВБ ўртасида ""Uzbekistan GTL""МЧЖ га қарашли GTL Чиназ терминалида ёнғинларнинг олдини олиш ва уларни бартараф этиш бўйича Ёнғин хавфсизлиги хизматини ташкил этиш тўғрисида шартнома тузиш.",695,3/11/2023 4:23:52 PM,71,27/10/2023 4:23:52 PM,695
+664,1077,Globe glass for Lighting system,1640,30/10/2023 1:11:08 PM,,30/10/2023 1:11:08 PM,1640
+665,1078,To ensure continous operation of 130-AT-1001/2001 ,721,6/11/2023 3:03:27 PM,53,30/10/2023 3:03:27 PM,721
+666,1079,Аккумуляторные батареи (АКБ) емкостью 200 Ah,1921,6/11/2023 4:00:16 PM,51,30/10/2023 4:00:16 PM,1921
+667,1084,Almashtirish va modiy texnik bazani yaratish uchun,1648,30/10/2023 4:51:51 PM,,30/10/2023 4:51:51 PM,1648
+668,1085,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,703,31/10/2023 3:27:31 PM,40,31/10/2023 3:27:31 PM,703
+669,1087,Аккумуляторные батареи (АКБ) - Имеющий источник постоянного тока с возможностью многократной зарядки и разрядки. ,1921,1/12/2023 12:33:25 PM,51,1/11/2023 12:33:25 PM,1921
+670,1088,Аккумуляторные батареи (АКБ) - Имеющий источник постоянного тока с возможностью многократной зарядки и разрядки. ,1921,1/12/2023 12:38:04 PM,51,1/11/2023 12:38:04 PM,1921
+671,1089,Аккумуляторные батареи (АКБ) - Имеющий источник постоянного тока с возможностью многократной зарядки и разрядки. ,1921,1/12/2023 12:41:33 PM,51,1/11/2023 12:41:33 PM,1921
+672,1090,Аккумуляторные батареи (АКБ) - Имеющий источник постоянного тока с возможностью многократной зарядки и разрядки. ,1921,1/12/2023 12:43:36 PM,51,1/11/2023 12:43:36 PM,1921
+673,1091,Аккумуляторные батареи (АКБ) - Имеющий источник постоянного тока с возможностью многократной зарядки и разрядки. ,1921,1/12/2023 12:45:24 PM,51,1/11/2023 12:45:24 PM,1921
+674,1092,Аккумуляторные батареи (АКБ) - Имеющий источник постоянного тока с возможностью многократной зарядки и разрядки. ,1921,1/12/2023 12:46:54 PM,51,1/11/2023 12:46:54 PM,1921
+675,1093,Подписка на журнал “Uzbekiston neft va gaz jurnali”,2040,,39,1/11/2023 5:35:03 PM,2040
+676,1094,Для определения физико-химических свойств компонента синтетического дизельного топлива SCDF  ,839,2/11/2023 3:28:23 PM,62,2/11/2023 3:28:23 PM,839
+677,1096,to ensure continuous operation of H2S gas detectors,1645,1/12/2023 5:00:43 PM,53,2/11/2023 5:00:43 PM,1645
+678,1097,Комплектующее для непрыревной работы принтеров на заводе и в офисах,2038,2/11/2023 5:11:11 PM,70,2/11/2023 5:11:11 PM,2038
+679,1099,"Портативное пусковое зарядное устройство для автомобилей c бензиновым двигателем объёмом до 5,0л., или дизельный двигатель объёмом до 3,5л. При отсутствии заряда в аккумуляторной батарее.",1921,1/12/2023 12:00:00 AM,51,3/11/2023 9:42:19 AM,1921
+680,1100,Qarshi shahrisa bo'lib o'tadigan tadbirlar uchun,1185,3/12/2023 9:40:54 AM,58,3/11/2023 9:40:54 AM,1185
+681,1101,услуги пресс-тура,1957,8/11/2023 9:48:56 AM,67,3/11/2023 9:48:56 AM,1957
+682,1102,Refractory materail,1998,3/11/2023 10:18:07 AM,53,3/11/2023 10:18:07 AM,1998
+683,1104,Ehtiyot qismlarni saqlashda yopiq ombor hududidan unumli foydalanish maqsadida “Tokcha(стеллаж)”lar hamda kimyoviy reagentlar omborida hujjatlar bilan ishlashni qulaylashtirish maqsadida “Printer” larni xarid qilish bo`yicha,1656,6/11/2023 9:00:15 AM,77,6/11/2023 9:00:15 AM,1656
+684,1108,"""Uzbekistan GTL Chinoz terminali"" balansidagi temiryo'l izlari doimiy sozligi va aniqlangan kamchiliklarni bartaraf etish ishlarni olib borish. Hozirda hech qaanday shartnoma mavjud emas va keyingi 2024-yil uchun shartnoma tuzilishini so'raymiz",691,6/11/2023 12:17:47 PM,41,6/11/2023 12:17:47 PM,691
+685,1110,в качестве корпоративного подарка в рамках пресс-тура,1957,8/11/2023 12:00:00 AM,67,6/11/2023 4:36:20 PM,1957
+686,1111,Umumiy foydalanish uchun ,1185,6/12/2023 4:38:50 PM,58,6/11/2023 4:38:50 PM,1185
+687,1114,To ensure the continuous operation of the blowers,1973,7/11/2023 11:19:26 AM,53,7/11/2023 11:19:26 AM,1973
+688,1115,Refractory materail,1998,7/11/2023 11:27:51 AM,53,7/11/2023 11:27:51 AM,1998
+689,1117,Ofis xodimlarini kerakli anjomlar bilan ta'minlash ( qor kurash uchun ),2020,8/12/2023 12:57:55 PM,39,8/11/2023 12:57:55 PM,2020
+690,1121,Maxsus himoya ko'zonagini xarid qilish ,695,9/12/2023 1:20:12 PM,71,9/11/2023 1:20:12 PM,695
+691,1122,Preventetive Maintenance for Electrical equipments,1179,9/11/2023 2:54:48 PM,53,9/11/2023 2:54:48 PM,1179
+692,1125,"Hiring a contractor for Engineering, Procurement and Construction of Single-Circuit Air Line of 6kV from UzGTL Plant to Workers town ",1924,10/11/2023 9:16:41 AM,72,10/11/2023 9:16:41 AM,1924
+693,1123,Transportation of activated carbon in 79000 kgs from Tuticorin port to Uzbekistan GTL plant,1918,20/11/2023 8:37:34 AM,30,10/11/2023 8:37:34 AM,1918
+694,1126,"Testing, verification and calibration services measuring and protection instruments",1891,21/11/2023 9:53:52 AM,,10/11/2023 9:53:52 AM,1891
+695,1127,,2038,10/11/2023 1:14:14 PM,,10/11/2023 1:14:14 PM,2038
+696,1129,Required spare mechanical seal due to leakage,1973,10/11/2023 1:46:22 PM,53,10/11/2023 1:46:22 PM,1973
+697,1130,Ishlab chiqarishdagi extiyot qism zaruriyat tufayli,1973,10/11/2023 2:01:16 PM,53,10/11/2023 2:01:16 PM,1973
+698,1132,,2038,13/11/2023 10:02:59 AM,70,13/11/2023 10:02:59 AM,2038
+699,1133,Услуги на разработку РД по строительству чердачной кровли на зданиях расположенных в вахтовом посёлке заво-да GTL,1685,20/11/2023 11:47:24 AM,31,13/11/2023 11:47:24 AM,1685
+700,1135,For performing F&GS services on the plant-2,1463,14/11/2023 9:44:51 AM,75,14/11/2023 9:44:51 AM,1463
+701,1134,Base oils market study for the project “Synthetic base oils production on the basis of the Uzbekistan GTL plant”,1968,14/11/2023 9:44:09 AM,72,14/11/2023 9:44:09 AM,1968
+702,1136,Respublikada bo'lib o'tadigan yarmakalarda foydalanish uchun,1185,14/12/2023 12:00:00 AM,58,14/11/2023 11:26:50 AM,1185
+703,1139,Cofe mashinanig uzluksiz ishlashini taminlash maqsadida,2020,14/12/2023 2:23:02 PM,39,14/11/2023 2:23:02 PM,2020
+704,1140,To ensure continous operation of the valves ,641,15/11/2023 8:39:53 AM,53,15/11/2023 8:39:53 AM,641
+705,1141,To ensure continuous operation of the compressor,641,15/11/2023 8:58:51 AM,53,15/11/2023 8:58:51 AM,641
+706,1142,Ishlab chiqarishdagi extiyot qism zaruriyat tufayli,1973,15/12/2023 12:00:00 AM,53,15/11/2023 10:59:03 AM,1973
+707,1144,Ortilgan vagonlar ichidagi GTL mahsulotlarini temiryo'l orqali tashish vaqtida xavfsizligini taminlash va mahsulot  butunligini saqlash.,691,15/11/2023 1:42:14 PM,41,15/11/2023 1:42:14 PM,691
+708,1146,Mahsulot yuklangan vagon-sisternalarinig yuqori lyuk (manhole)ini mahkamlash uchun ,691,15/11/2023 2:16:32 PM,41,15/11/2023 2:16:32 PM,691
+709,1147,Training Vibration Analysis Category CAT I,667,15/11/2023 4:13:59 PM,60,15/11/2023 4:13:59 PM,667
+710,1149,Umumiy foydalanish uchun ,1185,16/12/2023 5:12:43 PM,58,16/11/2023 5:12:43 PM,1185
+711,1150,,689,16/11/2023 8:30:00 AM,26,17/11/2023 9:08:39 AM,689
+712,1152," Услуга ""Добровольное всестороннее страхование транспортных средств и техники специального назначения""",1921,3/01/2024 4:48:20 PM,51,17/11/2023 4:48:20 PM,1921
+713,1151,"Due to the need to increase recognition and create a positive image Companies among other employers, exchange of experience, improvement of HR business processes in the Company and participation in the creation of a professional HR platform for finding so",1902,17/11/2023 4:45:10 PM,38,17/11/2023 4:45:10 PM,1902
+714,1153,"Due to the need to increase recognition and create a positive image Companies among other employers, exchange of experience, improvement of HR business processes in the Company and participation in the creation of a professional HR platform for finding so",1902,17/11/2023 5:19:11 PM,38,17/11/2023 5:19:11 PM,1902
+715,1154,wef,839,20/11/2023 9:59:20 AM,,20/11/2023 9:59:20 AM,839
+716,1155,Маҳсулотларимизни Темир йўл орқали ташишда унинг хизматидан фойдаланиш учун шартнома тузиш.,691,20/11/2023 3:32:11 PM,41,20/11/2023 3:32:11 PM,691
+717,1158,Автобус количеством 1(один) шт.  Согласно Приложению №1 к техническому заданию.,1921,4/12/2023 4:53:35 PM,51,20/11/2023 4:53:35 PM,1921
+718,1159,«Uzbekistan GTL» МЧЖ хавфли ишлаб чиқариш объектларини идентификацияси,695,28/11/2023 1:18:16 AM,71,21/11/2023 1:18:16 AM,695
+719,1168,Доступ к системе гос.закупки,2080,22/11/2023 2:53:59 PM,30,22/11/2023 2:53:59 PM,2080
+720,1170,,1179,22/11/2023 3:43:29 PM,53,22/11/2023 3:43:29 PM,1179
+721,1169,Chemical reagents: 1) 2 bottles of Cold flow enhancers; 2) 2 cans of GTL Disiel for analyses,2046,30/11/2023 12:00:00 AM,52,22/11/2023 3:04:13 PM,2046
+722,1171,Cryogenic  system of U35 (cooldawn for atilgas),2046,22/12/2023 5:11:00 PM,52,22/11/2023 5:11:00 PM,2046
+723,1174,"Testing, verification and calibration services measuring and protection instruments",1891,30/11/2023 11:16:10 AM,30,23/11/2023 11:16:10 AM,1891
+724,1175,"Разработать нормы расхода топлива для транспортных средств и специальной техники на L/h, L/m-h, для газового оборудования, для бензиновых и дизельных двигателей.",1921,7/12/2023 3:21:02 PM,51,23/11/2023 3:21:02 PM,1921
+725,1177,,1889,23/11/2023 8:02:32 PM,39,23/11/2023 8:02:32 PM,1889
+726,1179,Providing reference weights for technical service and calibration of weighbridges by O'ztemiryo'lkonteyner AJ,1164,7/12/2023 1:13:12 PM,41,24/11/2023 1:13:12 PM,1164
+727,1180,ЗЗ на закупку металлических дверных запчастей ,1685,1/12/2023 3:46:33 PM,31,24/11/2023 3:46:33 PM,1685
+728,1180,Zavod atrofini kukalamzorlashtirish,1889,24/11/2023 3:33:27 PM,,24/11/2023 3:33:27 PM,1889
+729,1181,Завод атрофини кўкаламзорлаштириш учун кўчат харидига буюртма,1889,27/11/2023 8:55:51 AM,39,27/11/2023 8:55:51 AM,1889
+730,1184,Для определения физико-химических свойств топливо дизельное синтетическое ЕВРО-6  ,839,28/11/2023 4:29:36 PM,83,28/11/2023 4:29:36 PM,839
+731,1185,Заявка на закупку канцелярских товаров,1889,28/11/2023 4:42:49 PM,39,28/11/2023 4:42:49 PM,1889
+732,1187,Respublikada bo'lib o'tadigan tadbirlar uchun,1185,10/12/2023 9:36:33 AM,58,29/11/2023 9:36:33 AM,1185
+733,1188,Card of VSD panel for Unit77,1179,29/11/2023 9:46:19 AM,53,29/11/2023 9:46:19 AM,1179
+734,1183,,1186,26/11/2023 10:00:00 AM,,29/11/2023 2:38:04 PM,1186
+735,1186,,1186,26/11/2023 10:00:00 AM,,29/11/2023 3:02:52 PM,1186
+736,1189,"на закупку услуг по техническому обслуживанию (эксплуатации) зданий, соор инженерного оборудования ООО «Uzbekistan GTL-Chinoz terminal».",2029,29/11/2023 3:31:18 PM,,29/11/2023 3:31:18 PM,2029
+737,1190,"Testing, verification and calibration services measuring and protection instruments",1891,21/12/2023 3:42:43 PM,30,29/11/2023 3:42:43 PM,1891
+738,1192,"на закупку услуг по техническому обслуживанию (эксплуатации) зданий, соор инженерного оборудования ООО «Uzbekistan GTL-Chinoz terminal».",2029,29/11/2023 4:11:57 PM,80,29/11/2023 4:11:57 PM,2029
+739,1193,на закупку услуг по строительству лёгкой конструкции резервной электростанции (обертывание генератора) ООО «Uzbekistan GTL-Chinoz Terminal».,2029,29/11/2023 4:20:20 PM,80,29/11/2023 4:20:20 PM,2029
+740,1194,UzGTL xodimlari uchun va zavod ehtiyoji uchun kerakli anjomlarni xarid qilish ,695,30/12/2023 12:41:55 AM,71,30/11/2023 12:41:55 AM,695
+741,1194,UzGTL xodimlari uchun va zavod ehtiyoji uchun kerakli anjomlarni xarid qilish ,695,30/12/2023 12:41:55 AM,71,30/11/2023 12:41:55 AM,695
+742,1182,Flammable va Hydrogen gaz detectorlari uchun sensor va ORP analizatorlari uchun ORP test solution ,721,30/12/2023 3:19:12 PM,53,30/11/2023 3:19:12 PM,721
+743,1191,Предрейсовый медицинский осмотр водителей Ташкентский офис,1921,3/01/2024 4:31:30 PM,51,30/11/2023 4:31:30 PM,1921
+744,0,"Автосервис в г.Карши с возможностью выезда ремонтной бригады в Кашкадарьинскую область, в Гузарский район, завод Uzbekistan GTL.",1921,3/01/2024 12:00:00 AM,51,30/11/2023 4:44:15 PM,1921
+745,1195,Автосервис в г.Ташкент для ремонта автомашин марки GM,1921,3/01/2024 4:51:19 PM,51,30/11/2023 4:51:19 PM,1921
+746,1196,Автосервис в г.Ташкент для ремонта автомашин марки TOYOTA,1921,3/01/2024 4:59:15 PM,51,30/11/2023 4:59:15 PM,1921
+747,1197,"Автосервис в г.Карши с возможностью выезда ремонтной бригады в Кашкадарьинскую область, в Гузарский район, завод Uzbekistan GTL.",1921,3/01/2024 5:23:37 PM,51,30/11/2023 5:23:37 PM,1921
+748,1198,"Testing, verification and calibration services measuring and protection instruments",1891,31/12/2023 12:00:00 AM,60,1/12/2023 8:48:44 AM,1891
+749,1199,"Testing, verification and calibration services measuring and protection instruments",1891,31/12/2023 8:53:44 AM,60,1/12/2023 8:53:44 AM,1891
+750,1201,"2024-yil Aprel oyida rejalashtirilgan kapital ta'mir vaqtida, 150-CC-003 kompressorni ""Dry Gas Seal"" ini ta'mirlash ishlarini amalga oshirish ta'lab etiladi",1973,1/04/2024 12:00:00 AM,53,4/12/2023 4:06:35 PM,1973
+751,1202,"Kompaniya xodimlarini dolzarb ma'lumotlar bilan tanishtirish O‘zbekistonning ijtimoiy-siyosiy hayoti, shuningdek, xorijda ro‘y berayotgan voqealar haqida",2020,4/01/2024 4:08:37 PM,39,4/12/2023 4:08:37 PM,2020
+752,1204,,1460,20/11/2023 10:00:00 AM,,5/12/2023 9:04:09 AM,1460
+753,1205,Chemical reagents: 1) 2 bottles of Cold flow enhancers; 2) 2 cans of GTL Disiel for analyses,2046,12/12/2023 2:15:08 PM,52,5/12/2023 2:15:08 PM,2046
+754,1208,,1460,20/11/2023 10:00:00 AM,,6/12/2023 9:18:24 AM,1460
+755,1209,,1460,20/11/2023 10:00:00 AM,,6/12/2023 9:21:29 AM,1460
+756,1215,for fuel gas system,1665,14/12/2023 12:00:00 AM,52,7/12/2023 9:26:08 AM,1665
+757,1216,Zavod o'z extiyojlari uchun energoresurslarni normasini hisoblash,2046,14/12/2023 12:00:00 AM,52,7/12/2023 3:43:51 PM,2046
+758,1219,Zavod o'z extiyojlari uchun gaz sarfi normalarini ishlab chiqish,2046,14/12/2023 10:29:01 AM,52,11/12/2023 10:29:01 AM,2046
+759,1221,КОРПОРАТИВНЫЕ ПОДАРКИ,1957,11/12/2023 11:07:54 AM,39,11/12/2023 11:07:54 AM,1957
+760,1222,Diesel Generatorlarni montaj qilish uchun,1889,11/12/2023 2:28:01 PM,39,11/12/2023 2:28:01 PM,1889
+761,1223,for insulation of cryogenic equipment for the Cold Box ,2046,18/12/2023 4:49:07 PM,52,11/12/2023 4:49:07 PM,2046
+762,1224,Required gaskets for routine maintenance,1973,12/12/2023 8:38:40 AM,53,12/12/2023 8:38:40 AM,1973
+763,1226,"""Узбекнефтгаз"" АЖ 2019 йил 27 февралда тасдиқланган 27-сон Бошқарув қарорининг 4-иловаси 7-банди, ""Узбекнефтгаз"" АЖ 2019 йил 29 апрелда тасдиқланган 114-сон Башқарув фармойиши 6-банди.",2070,12/12/2023 9:15:33 AM,67,12/12/2023 9:15:33 AM,2070
+764,1227,For services of Lube and Transformer Oil Analysis for various equipment of Uzbekistan GTL LLC.,1502,12/01/2024 9:22:03 AM,60,12/12/2023 9:22:03 AM,1502

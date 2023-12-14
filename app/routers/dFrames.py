@@ -3,6 +3,7 @@ from ..database import DF__transactions
 from ..database import DF__spares
 from ..database import DF__trades
 from ..database import DF__wo
+from ..database import DF__requisitions
 
 
 router = APIRouter(
@@ -29,4 +30,9 @@ def dframe_wo():
 def dframe_transactions():
     DF__transactions.transactions.to_excel('transactions.xlsx')
     return {'transactions':'ok'}
+
+@router.get('/requisitions')
+def dframe_transactions():
+    DF__requisitions.requisitions.to_excel('requisitions.xlsx')
+    return {'requisitions':'ok'}
 

@@ -1,0 +1,79 @@
+﻿Approval Path ID,Approval Path Name
+1,SLU Rotating
+2,SGU Rotating
+3,Maintenance Requests
+4,PWU Rotating
+5,U&O Rotating
+6,TAR
+7,SLU Static
+8,SLU Electrical
+9,SLU Instrument
+10,SLU Analyser
+11,PWU Static
+12,PWU Instrument
+13,PWU Electrical
+14,PWU Analyser
+15,SGU Static
+16,SGU Instrument
+17,SGU Electrical
+18,SGU Analyser
+19,U&O Static
+20,U&O Instrument
+21,U&O Electrical
+22,U&O Analyser
+23,CofE Maintenance
+24,Con-Mon
+25,CofE Default
+26,SLU Default
+27,SGU Default
+28,PWU Default
+29,U&O Default
+30,Procurement Department
+31,Civil
+32,Reliability
+33,Maintenance
+34,Production
+35,Technical
+36,Other Departments
+37,Contract Services
+38,Human Resource
+39,Administration
+40,Central Laboratory
+41,Product Storage& Export
+42,Automation
+43,IT dept
+46,Business Development 
+47,Synthesis Gas Unit
+48,Synthesis Liquid Unit
+49,Product Work-up Unit
+50,Utilities and Off-sites Unit
+51,Motor transport Operation
+52,Production Management Department
+53,Routine Maintenance Department
+54,Civil Department
+55,CofE
+56,Turnaround
+57,Contract Services Deparment
+58,Localization
+59,Plant Integrity
+60,Reliability Department
+61,Automation Department
+62,Process Safety Department
+63,Sales & Marketing
+64,Accounting & Corporate Reporting
+65,Planning Department
+66,Financial Department
+67,Consolidated information & Analytical
+68,Treasury and Project Management
+69,Emergency situations and Security services
+70,IT department
+71,HSE department
+72,Project Office
+73,Information Security Department
+74,Legal Department
+75,CofE department
+76,Product Storage& Export Dept
+77,Material Control Department
+80,Chinoz Terminal
+81,Contract Service Requisition
+83,Technical Coordination Department

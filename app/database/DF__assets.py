@@ -49,6 +49,7 @@ def rooting (parent, assetID, source, valueName):
     if assetID in source.index:
         value = source.loc[ assetID ].item()
 
+
     #Для каждого из наследников
     for key in AssetsRelationships[assetID]:
         #Если у наследника нет своих наследников
@@ -75,6 +76,7 @@ def rooting (parent, assetID, source, valueName):
 
 
 def byAssets(source, valueName):
+    source = source[source != 0]
     output = {}
     output = rooting(0, 77405, source, valueName)[0]
     return output

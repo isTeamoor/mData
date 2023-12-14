@@ -33,6 +33,9 @@ woComponent  = pd.read_csv("app/database/csv/ccc_cm_woComponent.csv",  encoding=
 jobCodes     = pd.read_csv("app/database/csv/ccc_cm_jobCodes.csv",     encoding="utf-8")
 
 
+requisitions     = pd.read_csv("app/database/csv/ccc_rq_requisitions.csv", encoding="utf-8")
+requisitionItems = pd.read_csv("app/database/csv/ccc_rq_reqItems.csv",     encoding="utf-8")
+approvalPath     = pd.read_csv("app/database/csv/ccc_rq_approvalPath.csv", encoding="utf-8")
 
 
 contactID.insert(1, 'Reserved By',      contactID['First Name'] + " " + contactID['Last Name'])
@@ -40,6 +43,8 @@ contactID.insert(1, 'Created By',       contactID['First Name'] + " " + contactI
 contactID.insert(1, 'Requisitioned By', contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Completed By',     contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Cancelled By',     contactID['First Name'] + " " + contactID['Last Name'])
+contactID.insert(1, 'Requisition line By',     contactID['First Name'] + " " + contactID['Last Name'])
+
 
 
 

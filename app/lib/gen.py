@@ -21,7 +21,72 @@ def filterDF(df,  filters = 'all' ):
     return df.query(conditionString(filters))
 
 
-
+name = "Mansur Xasanov Tulqin o'g'li"
 filters = {
-    'notClosedWO':[{'field':'Work Order Status Description', 'operator':'not in', 'value':"['Closed', 'Cancelled']"}]
+    'notClosedWO':[{'field':'Work Order Status Description', 'operator':'not in', 'value':"['Closed', 'Cancelled']"}],
+    'rmpd':[
+        {"field":'isRMPD', "operator":"==", "value":"'yes'"}, 
+        "&", 
+        {"field":'Reserved By', "operator":"!=", "value":"'Mirjakhon Toirov'"}, 
+        "&",
+        {"field":'Reserved By', "operator":"!=", "value":"'Bobur Aralov'"}
+    ],
+    'cofe':[ 
+        {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
+    ],
+    'maintenance':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+    ],
+    'maintenance-planerExample':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Created By', "operator":"==", "value":f'"{str(name)}"'},
+    ],
+    'maintenance-PriorityExample':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Priority Description', "operator":"==", "value":"'EMERGENCY-24hr'"},
+    ],
+    'maintenance_closed':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
+    ],
+    'maintenance-planerExample_closed':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
+        "&",
+        {"field":'Created By', "operator":"==", "value":f'"{str(name)}"'},
+    ],
+    'maintenance-PriorityExample_closed':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
+        "&",
+        {"field":'Priority Description', "operator":"==", "value":"'EMERGENCY-24hr'"},
+    ],
+    'maintenance-PriorityExample_closed':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
+        "&",
+        {"field":'Priority Description', "operator":"==", "value":"'EMERGENCY-24hr'"},
+    ],
+    'maintenance-1planer-1priority':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Priority Description', "operator":"==", "value":"'EMERGENCY-24hr'"},
+        "&",
+        {"field":'Created By', "operator":"==", "value":f'"{str(name)}"'},
+    ],
+    'maintenance-1planer-1priority_closed':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'Priority Description', "operator":"==", "value":"'EMERGENCY-24hr'"},
+        "&",
+        {"field":'Created By', "operator":"==", "value":f'"{str(name)}"'},
+        "&",
+        {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
+    ],
 }

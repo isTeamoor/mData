@@ -51,7 +51,7 @@ def proportion(obj):
     if not isContainer:
         summary = sum(obj.values())
         for key, value in obj.items():
-            newObj[key] = round(obj[key]/summary*100, 1)
+            newObj[key] = round(obj[key]/summary*100, 1) if summary > 0 else 0
     return newObj
 
 def simpleCumulate(obj):
@@ -115,10 +115,23 @@ def fieldTotal_by_year_month(df, yearfield, monthfield, theField, action, filter
               'cumulative':simpleCumulate(data)}
     return output
 
+def fieldTotal_by_Assets_year(df, yearfield, theField, action, filters=[]):
+    df = gen.filterDF(df, filters)
+    output = {}
+    for year, group in df[[yearfield, theField, 'Asset ID']].groupby(yearfield):
+        source = group.groupby('Asset ID')[theField]
+        if action == 'count':
+            source = source.count()
+        if action == 'sum':
+            source = source.sum()
+        output[year] = byAssets(source, theField)
+    output = {'data':output}
+    return output
+
 def fieldTotal_by_Assets_year_month(df, yearfield, monthfield, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
     output = {}
-    for year, content in wo[[yearfield, monthfield, theField, 'Asset ID']].groupby(yearfield):
+    for year, content in df[[yearfield, monthfield, theField, 'Asset ID']].groupby(yearfield):
         output[year] = {}
         for month, group in content[[monthfield, theField, 'Asset ID']].groupby(monthfield):
             source = group.groupby('Asset ID')[theField]

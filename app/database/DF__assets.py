@@ -23,6 +23,26 @@ for row in assets.index:
 
 
 
+### 2. Показать все объекты, относящиеся к SGU
+def unitChildren():
+    SGU = 77437
+    assetNumberlist = []
+
+    def goThroughTree(assetID):
+        subList = []
+        for child in AssetsRelationships[assetID].keys():
+            childAssetNumber = AssetsRelationships[assetID][child]['assetNumber']
+            subList.append(childAssetNumber)
+            if child in AssetsRelationships:
+                subList.extend(goThroughTree(child))
+        return subList
+
+    assetNumberlist.extend(goThroughTree(SGU))
+    return assetNumberlist
+
+
+
+
 def checkRelationships(source):
     for item in source.index:
         flag = 0

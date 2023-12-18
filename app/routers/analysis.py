@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from .. import models
 from ..lib.Analysis import hub
 from ..lib.Analysis.toExcel import writeExcel
-from ..lib.purch import purchs
+#from ..lib.purch import purchs
 
 
 router = APIRouter(

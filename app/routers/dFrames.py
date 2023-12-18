@@ -4,6 +4,7 @@ from ..database import DF__spares
 from ..database import DF__trades
 from ..database import DF__wo
 from ..database import DF__requisitions
+from ..database import DF__assets
 
 
 router = APIRouter(
@@ -35,4 +36,9 @@ def dframe_transactions():
 def dframe_transactions():
     DF__requisitions.requisitions.to_excel('requisitions.xlsx')
     return {'requisitions':'ok'}
+
+@router.get('/assetChildren')
+def dframe_assetChildren():
+    print(DF__assets.unitChildren())
+    return {'assetChildren':DF__assets.AssetsRelationships}
 

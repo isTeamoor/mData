@@ -1,5 +1,6 @@
 import pandas as pd
 from ...database.DF__spares import spares
+from ...database.DF__assets import unitChildren
 from ..gen import filterDF
 from . import exceptions, reference
 
@@ -225,7 +226,8 @@ def matReport(repMonth, repYear, department, transactions):
   view_wOff = dalolat.copy()
   view_wOff.reset_index(drop=False, inplace=True)
   view_wOff = view_wOff.loc [ view_wOff['Кол-во расход'] !=0 ] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]   
-
+  view_wOff_SGU = view_wOff.loc [ view_wOff['Объект'].isin(unitChildren()) ]
+  view_wOff_notSGU = view_wOff.loc [ ~view_wOff['Объект'].isin(unitChildren()) ]
 
 
 
@@ -234,7 +236,8 @@ def matReport(repMonth, repYear, department, transactions):
   dalolat.to_excel('4. dalolat.xlsx')
   view_014.to_excel('4. view_014.xlsx')
   view_014_G.to_excel('4. view_014_G.xlsx')
-  view_wOff.to_excel('4. view_wOff.xlsx')
+  view_wOff_SGU.to_excel('4. view_wOff_SGU.xlsx')
+  view_wOff_notSGU.to_excel('4. view_wOff_notSGU.xlsx')
   reference.OneCW()
   
     

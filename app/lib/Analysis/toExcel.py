@@ -1,5 +1,9 @@
 import xlsxwriter
 from . import hub
+from ..gen import filterDF
+from ...database.DF__wo import wo
+from ...database.DF__spares import spares
+
 
 def oneLine(workbook, sheetName, sectionName, seriesName, index = 1 ):
     if index == 1:
@@ -80,6 +84,55 @@ def rooted(workbook, sheetName, sectionName, seriesName, header):
 
 
 def writeExcel():
+    workbook = xlsxwriter.Workbook('СС report for D.xlsx')
+
+    oneLine(workbook, 'Overall Cost', 'materialCost_total', 'Mat.cost "by reservDate"')
+    categorized(workbook, 'By Priority', 'materialCost_total_by_Priority', '$ Priority')#11
+    categorized(workbook, 'By Priority', 'WO_raised_number_by_Priority', 'WO Priority', 11)
+
+    categorized(workbook, 'By JobType', 'materialCost_total_by_JobType', '$ JobType')#11
+    categorized(workbook, 'By JobType', 'WO_raised_number_by_JobType', 'WO JobType', 20)
+
+    categorized(workbook, 'By Discipline', 'materialCost_total_by_Discipline', '$ Discipline')
+
+    workbook.close()
+
+    workbook1 = xlsxwriter.Workbook('raised WO by assets.xlsx')
+
+    rooted(workbook1, 'WO raised by Assets', 'WO_raised_number_by_Assets', 'Work Order Number','Raised WO number')
+
+    workbook1.close()
+
+
+    workbook2 = xlsxwriter.Workbook('matCost by assets.xlsx')
+
+    rooted(workbook2, 'matCost by Assets', 'materialCost_by_Assets', 'Actual Cost','Material Cost')
+
+    workbook2.close()
+
+
+    df = filterDF(wo, [
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'raisedYear', "operator":"==", "value":"2023"}
+    ])
+    modDF = df[['Asset ID', 'Asset Description', 'Asset Number', 'Work Order Number']].groupby(['Asset ID', 'Asset Description', 'Asset Number',]).count()
+    modDF.reset_index(drop=False, inplace=True)
+    modDF = modDF.sort_values(by=['Work Order Number'], ascending = False)
+    modDF.to_excel('wo raised number for every asset.xlsx')
+
+
+    df = filterDF(spares, [
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+        "&",
+        {"field":'reservYear', "operator":"==", "value":"2023"}
+    ])
+    modDF = df[['Asset ID', 'Asset Description', 'Asset Number', 'Actual Cost']].groupby(['Asset ID', 'Asset Description', 'Asset Number',]).sum()
+    modDF.reset_index(drop=False, inplace=True)
+    modDF = modDF.sort_values(by=['Actual Cost'], ascending = False)
+    modDF.to_excel('material cost for every asset.xlsx')
+
+
     '''workbook = xlsxwriter.Workbook('Appendix 1.xlsx')
     
     oneLine(workbook, 'Material Cost', 'materialCost_total', 'Mat.cost "by reservDate"')
@@ -107,7 +160,7 @@ def writeExcel():
     rooted(workbook, 'Closed Cost(A)-Planer', 'materialCost_closed(a)_planer', 'Actual Cost','2023y Closed material expenses - For 1 planer' )
     rooted(workbook, 'Closed Cost(A)-Priority', 'materialCost_closed(a)_priority', 'Actual Cost','2023y Closed material expenses - For 1 PriorityType Emergency 24H' )
 
-    workbook.close()'''
+    workbook.close()
 
 
 
@@ -129,6 +182,6 @@ def writeExcel():
     categorized(workbook2, 'Closed Cost by', 'f-emerg_materialCost_closed_by_Department', 'Department', 54)#70
     
     rooted(workbook2, 'Closed Cost(A)', 'f-emerg_materialCost_closed(a)', 'Actual Cost','2023y Closed material expenses - by 1 Planer Emergency 24H' )
+    
 
-
-    workbook2.close()
+    workbook2.close()'''

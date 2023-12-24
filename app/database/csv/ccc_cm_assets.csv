@@ -4684,6 +4684,7 @@
 224538,77428,Pressure Transmitter,110-PT-1573
 224539,77428,Pressure Transmitter,110-PT-1574
 224855,77428,Fire Gauge ,110-FG-1011
+224990,77428,Valve,110-V-2326B
 722,77429,OXYGEN PREHEATER,120-ES-204
 94918,77429,Synthesis Gas Unit Train 2,Unit20-Tr2
 94939,77429,STEAM DRUM,120-VD-201
@@ -44971,6 +44972,9 @@
 218528,218255,Drafter,Utkir Toshhpulatov
 218529,218255,Electrical Engineer,Tolib Kholnazarov
 218530,218255,Instrument Engineer,Sharofiddin Ziyodullaev
+224926,218256,CFO Consultant,Shamsiyev Behzod Dilshodovich
+224927,218256,Head of the Treasury department,Urazimbetov Dilshod Dauletbayevich
+224928,218256,Specialist,Abdumuradov Shaxzod Ilxomovich
 219736,218257,Head of department,Imamov Sardorbek Qahramon o'g'li
 219737,218257,Social worker,Usmanova Diana Maratovna
 219738,218257,Specialist,Abdullayev Alisher Hikmat o'g'li
@@ -45022,6 +45026,8 @@
 222926,218261,Driver,Omonov Sanjarbek Xurram o'g'li
 224100,218261,Driver,Namatov Anvar Pulatovich 
 224283,218261,Forklift driver,Beknazarov Turg'unboy Otanazarovich
+224922,218261,Driver,Eliyev Asliddin Bahodir o'g'li
+224980,218261,Driver,Muzaffarov Suhrob Barnoyevich
 218561,218262,Trainee,Fayziyev Elyor Ziyodullayevich
 218564,218262,Trainee,Abdurahmonov Jo`rabek Isomiddin o`g`li 
 218591,218262,Trainee,Aytniyazov Ayrug`an Paraxat uli`
@@ -45124,6 +45130,7 @@
 219999,218263,Laboratory assistant,Xamrayev Axat Xolliyarovich
 220000,218263,Laboratory assistant,Daminov Mirshod Abdijalil o`g`li
 221511,218263,Laborant,Boysunov Akbar Axmedovich
+223460,218263,Trainee,Shodmonov Muhiddin
 219879,218264,Boardman,Nuraddinov Nuraddin Odamboy o`g`li
 219908,218264,Foreman,Yoqubov Shahboz Norqulovich
 220287,218264,Production Manager,Gulyamov Jamol Gafurovich
@@ -45556,7 +45563,6 @@
 223456,218533,Trainee,Rajabov Sultonmurod
 223457,218533,Trainee,Shodiqulov Jalol
 223458,218533,Trainee,Jusibbayev Amir
-223460,218533,Trainee,Shodmonov Muhiddin
 223554,218533,Trainee,Abdumo'minov G'ayrat
 223555,218533,Trainee,Annamurodov Shoxruh
 223556,218533,Trainee,Luqmonov Bunyod

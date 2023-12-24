@@ -5,12 +5,25 @@ from ...database.DF__spares import spares
 
 dataLib = {
     #################################################
+    ###-              CC Report for D            -###
+    #################################################
+    'materialCost_total'             :{'f':WO.fieldTotal_by_year_month, 'args':[spares, 'reservYear', 'reservMonth','Actual Cost', 'sum', gen.filters['maintenance']]},
+    'materialCost_total_by_Priority' :{'f':WO.coupleFields_by_year_month, 'args':[spares, 'reservYear', 'reservMonth', 'Priority Description', 'Actual Cost', 'sum', gen.filters['maintenance']]},
+    'WO_raised_number_by_Priority'   :{'f':WO.coupleFields_by_year_month, 'args':[wo, 'raisedYear', 'raisedMonth', 'Priority Description', 'Work Order ID', 'count', gen.filters['maintenance']]},
+    'materialCost_total_by_JobType' :{'f':WO.coupleFields_by_year_month, 'args':[spares, 'reservYear', 'reservMonth', 'Job Type Description', 'Actual Cost', 'sum', gen.filters['maintenance']]},
+    'WO_raised_number_by_JobType'   :{'f':WO.coupleFields_by_year_month, 'args':[wo, 'raisedYear', 'raisedMonth', 'Job Type Description', 'Work Order ID', 'count', gen.filters['maintenance']]},
+    'WO_raised_number_by_Assets'     :{'f':WO.fieldTotal_by_Assets_year, 'args':[wo, 'raisedYear', 'Work Order Number', 'count', gen.filters['maintenance']]},
+    'materialCost_by_Assets'         :{'f':WO.fieldTotal_by_Assets_year, 'args':[spares, 'reservYear', 'Actual Cost', 'sum', gen.filters['maintenance']]},
+    'materialCost_total_by_Discipline' :{'f':WO.coupleFields_by_year_month, 'args':[spares, 'reservYear', 'reservMonth', 'Department Name', 'Actual Cost', 'sum', gen.filters['maintenance']]},
+    
+
+    #################################################
     ###-   Total Raised Work Orders Statistics   -###
     #################################################
     'WO_raised_number_Overall'         :{'f':WO.fieldTotal, 'args':[wo, 'Work Order ID', 'count']},
     'WO_raised_number_by_year'         :{'f':WO.fieldTotal_by_year, 'args':[wo, 'raisedYear','Work Order ID', 'count']},
     'WO_raised_number_by_year_month'   :{'f':WO.fieldTotal_by_year_month, 'args':[wo, 'raisedYear', 'raisedMonth', 'Work Order ID', 'count']},
-    'WO_raised_number_by_Assets'       :{'f':WO.fieldTotal_by_Assets_year_month, 'args':[wo, 'raisedYear', 'raisedMonth', 'Work Order Number', 'count']},
+    #'WO_raised_number_by_Assets'       :{'f':WO.fieldTotal_by_Assets_year_month, 'args':[wo, 'raisedYear', 'raisedMonth', 'Work Order Number', 'count']},
 
     'WO_raised_number_by_Priority_by_year'   :{'f':WO.coupleFields_by_year, 'args':[wo, 'raisedYear','Priority Description', 'Work Order ID', 'count']},
     'WO_raised_number_by_JobType_by_year'    :{'f':WO.coupleFields_by_year, 'args':[wo, 'raisedYear','Job Type Description', 'Work Order ID', 'count']},
@@ -74,7 +87,7 @@ dataLib = {
     ###############################################
     ###-               СС Report               -###
     ###############################################
-    'materialCost_total'   :{'f':WO.fieldTotal_by_year_month, 'args':[spares, 'reservYear', 'reservMonth','Actual Cost', 'sum', gen.filters['maintenance']]},
+    #'materialCost_total'   :{'f':WO.fieldTotal_by_year_month, 'args':[spares, 'reservYear', 'reservMonth','Actual Cost', 'sum', gen.filters['maintenance']]},
     'materialCost_total(a)':{'f':WO.fieldTotal_by_Assets_year, 'args':[spares, 'reservYear', 'Actual Cost', 'sum', gen.filters['maintenance']]},
     'materialCost_total(a)_planer':{'f':WO.fieldTotal_by_Assets_year, 'args':[spares, 'reservYear', 'Actual Cost', 'sum', gen.filters['maintenance-planerExample']]},
     'materialCost_total(a)_priority':{'f':WO.fieldTotal_by_Assets_year, 'args':[spares, 'reservYear', 'Actual Cost', 'sum', gen.filters['maintenance-PriorityExample']]},

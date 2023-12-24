@@ -44,7 +44,7 @@ spares = spares[[
 'Work Order Number','Work Order Status Description','raisedYear', 'raisedMonth',
 'Work Order Component Description', 'Job Code Major Description', 'Account Code', 'Account Code Description', 
 'closedYear', 'closedMonth', 'Priority Description', 'Department Name',
-'Short Department Name', 'isMaintenance', 'isRMPD',
+'Short Department Name', 'isMaintenance', 'isRMPD', 'Discipline',
 'Department Description', 'Job Type Description', 'Created By',
 'Asset Description', 'Asset Number', 'Asset ID', 'Parent Asset ID',
 'Is Master Work Order', 'Is Group Work Order', 'Group WO number','Spares Comment',

@@ -31,13 +31,18 @@ requisitions['requiredMonth'] = requisitions['Required By Date Time'].dt.month
 
 
 
+
 requisitions = requisitions.loc [ requisitions['raisedYear']==2023]
-requisitions = requisitions.loc [ requisitions['requiredYear']==2023]
+#requisitions = requisitions.loc [ requisitions['requiredYear']==2023]
+
+
 
 
 maintenanceApprovalPath = ['SLU Default', 'PWU Default', 'Maintenance', 'CofE department', 'Routine Maintenance Department', 'CofE', 'Civil Department', 
                            'Material Control Department', 'Turnaround', 'Contract Services Deparment', 'CofE Default','Civil']
 requisitions = requisitions.loc [ requisitions['Approval Path Name'].isin(maintenanceApprovalPath)]
+
+
 
 
 requisitions['mergeNumber'] = ''

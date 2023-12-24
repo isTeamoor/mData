@@ -92,9 +92,13 @@ def cumulate(obj, prevMonthly={}):
     return newObj
 
 
+
+
 ##############################
 ###-     Main Functions   -###
 ##############################
+
+
 def fieldTotal(df, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
     return {'data':sub_fieldTotal(df, theField, action)}

@@ -23,6 +23,13 @@ def filterDF(df,  filters = 'all' ):
 
 name = "Mansur Xasanov Tulqin o'g'li"
 filters = {
+    'maintenance':[
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+    ],
+    
+
+
+
     'notClosedWO':[{'field':'Work Order Status Description', 'operator':'not in', 'value':"['Closed', 'Cancelled']"}],
     'rmpd':[
         {"field":'isRMPD', "operator":"==", "value":"'yes'"}, 
@@ -34,9 +41,7 @@ filters = {
     'cofe':[ 
         {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
     ],
-    'maintenance':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-    ],
+    
     'maintenance-planerExample':[
         {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
         "&",
@@ -90,3 +95,4 @@ filters = {
         {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
     ],
 }
+

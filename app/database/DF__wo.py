@@ -46,7 +46,7 @@ wo.fillna({
 
 
 wo['Short Department Name'] = wo['Department Name'].copy().map(lambda x: x[:3] if x.startswith(('SLU', 'SGU', 'PWU', 'U&O')) else x)
-#wo['Discipline']  = wo['Department Name'].copy().map(lambda x: x.split('-')[1] if x.startswith(('SLU', 'SGU', 'PWU', 'U&O')) else x)
+wo['Discipline']  = wo['Department Name'].copy().map(lambda x: x.split('-')[1] if x.startswith(('SLU', 'SGU', 'PWU', 'U&O')) else x)
 
 
 
@@ -59,7 +59,7 @@ wo['isRMPD'] = wo['Short Department Name'].copy().map(lambda x: 'yes' if x in rm
 
 
 wo = wo[['Work Order ID', 'Work Order Number', 'Work Order Status Description','raisedYear', 'raisedMonth','closedYear', 'closedMonth',
-        'Priority Description','Department Name','Short Department Name','isMaintenance', 'isRMPD', 'Department Description', 'Job Type Description','Created By',
+        'Priority Description','Department Name','Short Department Name','Discipline','isMaintenance', 'isRMPD', 'Department Description', 'Job Type Description','Created By',
         'Asset Description','Asset Number', 'Asset ID', 'Parent Asset ID',
         'Is Master Work Order', 'Is Group Work Order', 'Group WO number', 
         'WO Account Code Name','WO Account Code Description','Work Order Description',]]

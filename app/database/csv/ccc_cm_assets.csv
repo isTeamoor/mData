@@ -152,6 +152,9 @@
 218371,218224,Electrician,Zulfiqorov Alisher Isaevich
 218376,218224,Electrician,Nazarov Abror Normaxmat o'g'li
 218378,218224,Electrician,Rasulov Elmurod Arzimurod o'g'li
+218520,218255,Specialist, Sherbekjon Ikromov
+218521,218255,Head of BD and PM, Ravshan Karabayev
+218529,218255,Electrical Engineer,Tolib Kholnazarov
 218321,218261,Bus Driver,Ergashev Ravshan Quldoshevich
 218332,218261,Vehicle Driver,Suvonov Uchqun Erkinovich
 219877,218265,Senior field operator,Normirzayev Yusuf Abulxakim o`g`li
@@ -4685,6 +4688,7 @@
 224539,77428,Pressure Transmitter,110-PT-1574
 224855,77428,Fire Gauge ,110-FG-1011
 224990,77428,Valve,110-V-2326B
+225143,77428,TBC,110-XP-290-TK-03
 722,77429,OXYGEN PREHEATER,120-ES-204
 94918,77429,Synthesis Gas Unit Train 2,Unit20-Tr2
 94939,77429,STEAM DRUM,120-VD-201
@@ -41435,7 +41439,7 @@
 218252,174964,Other departments,Information Technology Department
 218253,174964,Other departments,Emergency situations and Security Service
 218254,174964,Other departments,Human Resources Department
-218255,174964,Other departments,Business Development &Project Execution Department
+218255,174964,Other departments,Project Management
 218256,174964,Other departments,Treasury Department
 218257,174964,Other departments,Consolidated information and Analytical
 218258,174964,Other departments,Information security
@@ -41553,7 +41557,6 @@
 175254,175192,Rotating Engineer,Moyliyev Nurbek
 175255,175192,Static Technician ,Norboyev Faxriddin
 175256,175192,Instrumentation Junior Technician,Ochilov Suxrobbek
-175258,175192,Instrumentation Junior Technician,Qiyomov Mansur
 175259,175192,Electrical Engineer,Qoraboyev Bahrom
 175261,175192,Electrical Technician,Sa`dullayev Elbek
 175262,175192,Electrical Junior Technician,Toshniyozov Farrux
@@ -44220,6 +44223,7 @@
 209637,209288,Outdoor Hose Reel,183-OHR-025
 209638,209288,Outdoor Hose Reel,184-OHR-001
 209639,209288,Outdoor Hose Reel,184-OHR-002
+175258,209664,Instrumentation Junior Technician,Qiyomov Mansur
 209665,209664,Field Manager,Safarali Khudayshukurov
 209666,209664,Maintenance Planner,Toirov Mirjakhon 
 209668,209664,F&G system Supervisor,Taniev Rustam
@@ -44962,16 +44966,15 @@
 218517,218255,Specialist,Abror Boltayev
 218518,218255,Lead Specialist,Jalil Egamberdiyev
 218519,218255,Specialist, Shohabbos Hazratkulov
-218520,218255,Specialist, Sherbekjon Ikromov
-218521,218255,Head of BD and PM, Ravshan Karabayev
 218523,218255,Lead Engineer, Abbos Kudratov
 218524,218255,Lead Specialist, Samandar Kurbonov
 218525,218255,Specialist, Bekzod Rajabov
 218526,218255,Lead Specialist, Shukur Rakhmatov
 218527,218255,Lead Specialist, Bakhrom Sattorov
 218528,218255,Drafter,Utkir Toshhpulatov
-218529,218255,Electrical Engineer,Tolib Kholnazarov
 218530,218255,Instrument Engineer,Sharofiddin Ziyodullaev
+225160,218255,Specialist ,Aktamov Islom Aslom o'g'li
+225161,218255,Project Coordinator,Xalimov Sarvar Sur'at o'g'li
 224926,218256,CFO Consultant,Shamsiyev Behzod Dilshodovich
 224927,218256,Head of the Treasury department,Urazimbetov Dilshod Dauletbayevich
 224928,218256,Specialist,Abdumuradov Shaxzod Ilxomovich
@@ -45028,6 +45031,7 @@
 224283,218261,Forklift driver,Beknazarov Turg'unboy Otanazarovich
 224922,218261,Driver,Eliyev Asliddin Bahodir o'g'li
 224980,218261,Driver,Muzaffarov Suhrob Barnoyevich
+225162,218261,Driver,Sadullayev Xusniddin Yulchiyevich
 218561,218262,Trainee,Fayziyev Elyor Ziyodullayevich
 218564,218262,Trainee,Abdurahmonov Jo`rabek Isomiddin o`g`li 
 218591,218262,Trainee,Aytniyazov Ayrug`an Paraxat uli`
@@ -45372,6 +45376,7 @@
 220969,218267,Trainee,Xalilov Edem  Ablyazovich
 221027,218267,Trainee,Ravshanov Shaxriyor Muhiddin o'g'li
 221517,218267,Operator,Saidov O'lmas Toshkentovich
+218301,218268,Unit Engineer,Ramazonov Ulug`bek Erkin o`g`li
 220955,218268,Operator,Sanjarov Amal Sanjar o'g'li
 220956,218268,Operator,Seytekov Axmet Muxametjan uli
 222578,218268,Weighing engineer,Parmanov Sherzod Turdimurodovich
@@ -45381,7 +45386,6 @@
 222582,218268,Operator,Xurramov Sunnatulla Abdimajid o'g'li
 222583,218268,Operator,Bekqulov Elyor Egamberdiyevich
 222584,218268,Operator,Raximov Lazizbek Oktyabrovich
-222585,218268,Operator,Jo`rayev Husniddin Abdig'ani o'g'li
 222586,218268,Operator,Boboxonov Murod Maxmud o'g'li
 222587,218268,railway dispatcher,Islomov Javohir Yodgor o'g'li
 222588,218268,Operator,Amirkulov O'gabek Maxammadi o'g'li
@@ -45470,6 +45474,8 @@
 219708,218272,PLC Technician,Salimov Muxriddin Abduholiq o'g'li
 219709,218272,PLC  Technician,Quziyev Javlonbek Musamad o'g'li
 219710,218272,PLC Technician,Alovuddinov Kamoliddin Yahyo o'g'li
+219760,218272,Technician PLC,Eshboyev Qambar Gulboyevich
+222585,218272,Technician PLC,Jo`rayev Husniddin Abdig'ani o'g'li
 218308,218273,Senior Process Safety Specialist,Saparniyazov Kaxarman Kaliyevich
 218309,218273,Process Safety Specialist,Rustamov Zoir XXX
 218310,218273,Document / Process Safety Information Controller,Tursunniyozov Davron Olimovich
@@ -45480,7 +45486,6 @@
 218297,218274,Unit Engineer,Jo`rayev Aloviddin Ozodovich
 218298,218274,Unit Engineer,Maxsetov Bekzat Rustem o'g'li
 218300,218274,Unit Engineer,Ramazonov Rustam Rasul o'g'li
-218301,218274,Unit Engineer,Ramazonov Ulug`bek Erkin o`g`li
 218302,218274,Plant Material Balance Engineer,Ro'ziyev Alisher Axtamovich
 218303,218274,Leading engineer,Sharipov Jobirbek Shahrilloyevich
 218305,218274,Unit Engineer,Umirov Baxtiyor Sharipovich
@@ -45582,6 +45587,9 @@
 224666,218533,Trainee,Narziyev Suyun Sadin o'g'li
 224756,218533,Trainee,G`oziyev Jamshid Yaxshiboyevich
 224854,218533,Trainee,Jo`raqulov Shomirzo Shaxobiddin o`g`li
+225180,218533,Trainee,Atajonov Shohzod Bolta o`g`li
+225181,218533,Trainee,Sotivoldiyev Shoxruhmirzo Dilmurodjon o`g`li
+225182,218533,Trainee,Zulunov Abbos To`lqinjon o`g`li
 219753,219752,Head of turnaround planning,Pan Aleksandr Sergeyevich
 219754,219752,Senior Planner,Azizbek Narziev G'aybullayevich
 219755,219752,Maintenance Planner,Bobomurodov Xurshid G'olibjon o'g'li
@@ -45589,7 +45597,6 @@
 219757,219752,Instrument engineer PWU/U&O,Ismoilov Kamoljon Yashinovich
 219758,219752,Electrical engineer SGU/SLU,Hamidov Sardor Abdisalim o'g'li
 219759,219752,Electrical engineer PWU/U&O,Omonov O'ktam Eshquvat o'g'li
-219760,219752,Analyzer engineer SGU/SLU,Eshboyev Qambar Gulboyevich
 219761,219752,Analyzer engineer PWU/U&O,Voitov Akrom Ramazonovich
 219762,219752,Mech static engineer SGU/SLU,Berdialiyev Jo'rabek Turdi o'g'li
 219763,219752,Mech static engineer PWU/U&O,Sadullayev Ilyos Urolovich

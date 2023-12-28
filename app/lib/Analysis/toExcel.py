@@ -1,4 +1,6 @@
 import xlsxwriter
+import re
+import pandas as pd
 from . import hub
 from ..gen import filterDF
 from ...database.DF__wo import wo
@@ -13,17 +15,16 @@ def oneLine(workbook, sheetName, sectionName, seriesName, index = 1 ):
     source = hub.getVal(sectionName)
 
     if index == 1:
-            for i in range(0,12):
-                worksheet.write(0, i+1, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i])
-                worksheet.write(0, i+15, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i])
+        for i in range(0,12):
+            worksheet.write(0, i+1, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i])
+            worksheet.write(0, i+15, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i])
 
     worksheet.write(index, 0, seriesName)
     worksheet.write(index, 14, seriesName+' Cumulative')
 
-    
     for i in range(1,13):
         worksheet.write(index, i, source['data'][2023][i] if i in source['data'][2023] else 0)
-        worksheet.write(index, i+14, source['cumulative'][2023][i] if i in source['data'][2023] else 0)
+        worksheet.write(index, i+14, source['cumulative'][2023][i] if i in source['cumulative'][2023] else 0)
 
 def categorized(workbook, sheetName, sectionName, seriesName, index = 1 ):
     if index == 1:
@@ -44,7 +45,7 @@ def categorized(workbook, sheetName, sectionName, seriesName, index = 1 ):
     row = index
     for i in range(1,13):
         data = source['data'][2023][i] if i in source['data'][2023] else {}
-        cumulat = source['cumulative'][2023][i] if i in source['data'][2023] else {}
+        cumulat = source['cumulative'][2023][i] if i in source['cumulative'][2023] else {}
         for key in data.keys():
             if key not in rowNumbers:
                 rowNumbers[key] = row
@@ -85,103 +86,101 @@ def rooted(workbook, sheetName, sectionName, seriesName, header):
 
 def writeExcel():
     workbook = xlsxwriter.Workbook('СС report for D.xlsx')
-
     oneLine(workbook, 'Overall Cost', 'materialCost_total', 'Mat.cost "by reservDate"')
-    categorized(workbook, 'By Priority', 'materialCost_total_by_Priority', '$ Priority')#11
+    categorized(workbook, 'By Priority', 'materialCost_total_by_Priority', '$ Priority')
     categorized(workbook, 'By Priority', 'WO_raised_number_by_Priority', 'WO Priority', 11)
-
-    categorized(workbook, 'By JobType', 'materialCost_total_by_JobType', '$ JobType')#11
+    categorized(workbook, 'By JobType', 'materialCost_total_by_JobType', '$ JobType')
     categorized(workbook, 'By JobType', 'WO_raised_number_by_JobType', 'WO JobType', 20)
-
     categorized(workbook, 'By Discipline', 'materialCost_total_by_Discipline', '$ Discipline')
-
     workbook.close()
 
-    workbook1 = xlsxwriter.Workbook('raised WO by assets.xlsx')
 
-    rooted(workbook1, 'WO raised by Assets', 'WO_raised_number_by_Assets', 'Work Order Number','Raised WO number')
 
+    workbook1 = xlsxwriter.Workbook('WO_raised_number by assets.xlsx')
+    rooted(workbook1, 'WO raised by Assets', 'WO_raised_number_by_Assets', 'Work Order ID','Raised WO number')
     workbook1.close()
+
+    df = filterDF(wo, [
+    {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+    "&",
+    {"field":'raisedYear', "operator":"==", "value":"2023"}
+    ])
+    total = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    CM = ['Corrective', 'Corrective after STPdM']
+    PM = ['Strategy', 'Strategy Predictive Monitoring/Fault Diagnostic', 'Operational Jobs', 'Modifications']
+    OT = ['PPE','Special Tooling','Rework','Construction/Commissioning Works','Administration','Service for Air Product','Vehicle Reservations',]
+    df.loc[:, ['Total raised', 'PMs raised', 'CMs raised', 'OTs raised']] = 0
+
+    modDF = df.copy()
+    for i in df.index:
+        modDF.loc[i,'Total raised' ] = 1
+        modDF.loc[ i, total[df.loc[i, 'raisedMonth'] - 1] ] = 1
+        if df.loc[i, 'Job Type Description'] in CM:
+            modDF.loc[i,'CMs raised'] = 1
+        if df.loc[i, 'Job Type Description'] in PM:
+            modDF.loc[i,'PMs raised'] = 1
+        if df.loc[i, 'Job Type Description'] in OT:
+            modDF.loc[i,'OTs raised'] = 1
+
+    modDF = modDF.groupby(['Asset Description', 'Asset Number',]).sum()
+    modDF.reset_index(drop=False, inplace=True)
+    modDF['CMs'] = modDF['CMs raised']/ modDF['Total raised']
+    modDF['PMs'] = modDF['PMs raised']/ modDF['Total raised']
+    modDF['OTs'] = modDF['OTs raised']/ modDF['Total raised']
+    modDF = modDF[['Asset Description', 'Asset Number', 'Total raised', 'CMs', 'PMs', 'OTs','CMs raised', 'PMs raised', 'OTs raised', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']]
+    modDF = modDF.sort_values(by=['Total raised'], ascending = False)
+    modDF.to_excel('WO_raised_number sorted by assets.xlsx')
+
 
 
     workbook2 = xlsxwriter.Workbook('matCost by assets.xlsx')
-
     rooted(workbook2, 'matCost by Assets', 'materialCost_by_Assets', 'Actual Cost','Material Cost')
-
     workbook2.close()
-
-
-    df = filterDF(wo, [
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-        "&",
-        {"field":'raisedYear', "operator":"==", "value":"2023"}
-    ])
-    modDF = df[['Asset ID', 'Asset Description', 'Asset Number', 'Work Order Number']].groupby(['Asset ID', 'Asset Description', 'Asset Number',]).count()
-    modDF.reset_index(drop=False, inplace=True)
-    modDF = modDF.sort_values(by=['Work Order Number'], ascending = False)
-    modDF.to_excel('wo raised number for every asset.xlsx')
-
 
     df = filterDF(spares, [
         {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
         "&",
         {"field":'reservYear', "operator":"==", "value":"2023"}
     ])
-    modDF = df[['Asset ID', 'Asset Description', 'Asset Number', 'Actual Cost']].groupby(['Asset ID', 'Asset Description', 'Asset Number',]).sum()
+    df.loc[:, ['Total cost', 'PMs cost', 'CMs cost', 'OTs cost']] = 0
+
+    modDF = df.copy()
+    for i in df.index:
+        modDF.loc[i,'Total cost' ] = df.loc[i,'Actual Cost']
+        if df.loc[i, 'Job Type Description'] in CM:
+            modDF.loc[i,'CMs cost'] = df.loc[i,'Actual Cost']
+        if df.loc[i, 'Job Type Description'] in PM:
+            modDF.loc[i,'PMs cost'] = df.loc[i,'Actual Cost']
+        if df.loc[i, 'Job Type Description'] in OT:
+            modDF.loc[i,'OTs cost'] = df.loc[i,'Actual Cost']
+
+
+    modDF = modDF.groupby(['Asset Description', 'Asset Number',]).sum()
     modDF.reset_index(drop=False, inplace=True)
-    modDF = modDF.sort_values(by=['Actual Cost'], ascending = False)
-    modDF.to_excel('material cost for every asset.xlsx')
+    modDF['CMs'] = modDF['CMs cost']/ modDF['Total cost']
+    modDF['PMs'] = modDF['PMs cost']/ modDF['Total cost']
+    modDF['OTs'] = modDF['OTs cost']/ modDF['Total cost']
+    modDF = modDF[['Asset Description', 'Asset Number', 'Total cost', 'CMs', 'PMs', 'OTs','CMs cost', 'PMs cost', 'OTs cost']]
+    modDF = modDF.sort_values(by=['Total cost'], ascending = False)
 
-
-    '''workbook = xlsxwriter.Workbook('Appendix 1.xlsx')
     
-    oneLine(workbook, 'Material Cost', 'materialCost_total', 'Mat.cost "by reservDate"')
-    oneLine(workbook, 'Material Cost', 'materialCost_closed', 'Mat.cost "by closedDate"', 2)
+    eqpt = pd.read_excel('eqpt1.xlsx')
+    eqpt = eqpt.iloc[5:, [5,6,9]]
+    eqpt.rename(columns={'Unnamed: 5':'tagNumber', 'Unnamed: 6':'Description', 'Unnamed: 9':'Cost'}, inplace=True)
+    eqpt = eqpt.loc[~eqpt['tagNumber'].isna()]
 
-    categorized(workbook, 'Mat.Cost by', 'materialCost_total_by_Planers', 'Created By')#28
-    categorized(workbook, 'Mat.Cost by', 'materialCost_total_by_JobType', 'JobType', 28)#44
-    categorized(workbook, 'Mat.Cost by', 'materialCost_total_by_Priority', 'Priority', 44)#54
-    categorized(workbook, 'Mat.Cost by', 'materialCost_total_by_Department', 'Department', 54)#70
-    categorized(workbook, 'Mat.Cost by', 'materialCost_total_by_AccountCodes', 'Account Code', 70)
+    usedTags = []
+    for i, row in modDF.iterrows():
+        elems = row['Asset Number'].split('-')
+        modDF.loc[i, 'Asset Cost'] = 0
+        if len(elems)>=3:
+            regexp = f"{elems[0]}.*{elems[1]}.*{elems[2][:3]}"
+            for i, item in eqpt.iterrows():
+                if re.search(regexp, item['tagNumber']): 
+                    modDF.loc[i, 'Asset Cost'] = item['Cost']
+                    usedTags.append(item.name)
 
-    rooted(workbook, 'Mat.Cost by Assets', 'materialCost_total(a)', 'Actual Cost','2023y used material expenses' )
-    rooted(workbook, 'Mat.Cost by 1 planer', 'materialCost_total(a)_planer', 'Actual Cost','2023y used material expenses - For 1 planer' )
-    rooted(workbook, 'Mat.Cost by 1 PriorityType', 'materialCost_total(a)_priority', 'Actual Cost','2023y used material expenses - For 1 PriorityType Emergency 24H' )
-
-
-
-    categorized(workbook, 'Closed Cost by', 'materialCost_closed_by_Planers', 'Created By')#28
-    categorized(workbook, 'Closed Cost by', 'materialCost_closed_by_JobType', 'JobType', 28)#44
-    categorized(workbook, 'Closed Cost by', 'materialCost_closed_by_Priority', 'Priority', 44)#54
-    categorized(workbook, 'Closed Cost by', 'materialCost_closed_by_Department', 'Department', 54)#70
-    
-
-    rooted(workbook, 'Closed Cost(A)', 'materialCost_closed(a)', 'Actual Cost','2023y Closed material expenses' )
-    rooted(workbook, 'Closed Cost(A)-Planer', 'materialCost_closed(a)_planer', 'Actual Cost','2023y Closed material expenses - For 1 planer' )
-    rooted(workbook, 'Closed Cost(A)-Priority', 'materialCost_closed(a)_priority', 'Actual Cost','2023y Closed material expenses - For 1 PriorityType Emergency 24H' )
-
-    workbook.close()
+    modDF.to_excel('matCost by assets.xlsx')
+    eqpt.loc[~eqpt.index.isin(usedTags)].to_excel('unusedEqptTags.xlsx')
 
 
-
-    workbook2 = xlsxwriter.Workbook('Appendix 2.xlsx')
-    oneLine(workbook2, 'Material Cost', 'f-emerg_materialCost_total', 'Mat.cost "by reservDate"')
-    oneLine(workbook2, 'Material Cost', 'f-emerg_materialCost_closed', 'Mat.cost "by closedDate"', 2)
-
-    categorized(workbook2, 'Mat.Cost by', 'f-emerg_materialCost_total_by_Planers', 'Created By')#28
-    categorized(workbook2, 'Mat.Cost by', 'f-emerg_materialCost_total_by_JobType', 'JobType', 28)#44
-    categorized(workbook2, 'Mat.Cost by', 'f-emerg_materialCost_total_by_Priority', 'Priority', 44)#54
-    categorized(workbook2, 'Mat.Cost by', 'f-emerg_materialCost_total_by_Department', 'Department', 54)#70
-    categorized(workbook2, 'Mat.Cost by', 'f-emerg_materialCost_total_by_AccountCodes', 'Account Code', 70)
-
-    rooted(workbook2, 'Mat.Cost by Assets', 'f-emerg_materialCost_total(a)', 'Actual Cost','2023y used material expenses - by 1 Planer Emergency 24H' )
-
-    categorized(workbook2, 'Closed Cost by', 'f-emerg_materialCost_closed_by_Planers', 'Created By')#28
-    categorized(workbook2, 'Closed Cost by', 'f-emerg_materialCost_closed_by_JobType', 'JobType', 28)#44
-    categorized(workbook2, 'Closed Cost by', 'f-emerg_materialCost_closed_by_Priority', 'Priority', 44)#54
-    categorized(workbook2, 'Closed Cost by', 'f-emerg_materialCost_closed_by_Department', 'Department', 54)#70
-    
-    rooted(workbook2, 'Closed Cost(A)', 'f-emerg_materialCost_closed(a)', 'Actual Cost','2023y Closed material expenses - by 1 Planer Emergency 24H' )
-    
-
-    workbook2.close()'''

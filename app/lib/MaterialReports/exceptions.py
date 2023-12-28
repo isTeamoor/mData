@@ -1,7 +1,6 @@
 def corrections(transactions):
     transacts = transactions.copy()
 
-    transacts.loc [ transacts['Catalogue Transaction ID'].isin([101733,101734]), 'transactMonth'] = 11 #Ulugbek Hamroyev LTFT Возврат труб был в ноябре письмо
     transacts.loc [ transacts['Catalogue Transaction ID'] == 103005, 'transactMonth'] = 12 #Мирсаид хайдаров в декабре возврат письмо
 
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 # 9356 - Высокотемпературный силиконовый герметик "TYTAN"(часть уже списана до меня)
@@ -59,26 +58,15 @@ extra = {
             #Постоянно на балансе 3 балона газа
             {'Код товара':'05943','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':'Газ сжиженный ПБФ','Ед.изм.':'бал','Quantity':3,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
             # По результатам инвентаризации - "LPG"
-            {'Код товара':'05287','Reservation Number':-2,'WO №':-2,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Nipoflange 3'' X 1'' ND, Cl300, BWxRF, CS A105 BE MSS-SP-97 MR0103 / Фланцевая бобышка",'Ед.изм.':'шт','Quantity':2,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05286','Reservation Number':-3,'WO №':-3,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"ELBOW 90 LR, 1/2', SCH 40, CS A105 SWE, B16.11 CL600 MR0103, / Отвод",'Ед.изм.':'шт','Quantity':1,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05239','Reservation Number':-4,'WO №':-4,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"ELBOW 90 LR, 3', SCH 40, CS A234- WPB, SMLS, ASME B16.9 MR0103, / Отвод",'Ед.изм.':'шт','Quantity':12,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
             {'Код товара':'05237','Reservation Number':-5,'WO №':-5,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"PIPE 1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.9,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
             {'Код товара':'05236','Reservation Number':-6,'WO №':-6,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"PIPE 1-1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.8,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05234','Reservation Number':-7,'WO №':-7,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"PIPE 3', SCH STD, A106-B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':98.08,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
         ],
         'currentMonth':[
-            {'Код товара':'06933','Reservation Number':-8,'WO №':-8,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':100,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
             {'Код товара':'06933','Reservation Number':-9,'WO №':-9,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':100,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'09683','Reservation Number':-10,'WO №':-10,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':15.561,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'01875','Reservation Number':-11,'WO №':-11,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Азот баллон 50л ",'Ед.изм.':'шт','Quantity':3,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
         ],
         'currentReturn':[
             ### !!! Qty со знаком "-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             # Возврат на склад материалов с "LPG"
-            {'Код товара':'05234','Reservation Number':-7,'WO №':-7,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"PIPE 3', SCH STD, A106-B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':-98.08,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05239','Reservation Number':-4,'WO №':-4,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"ELBOW 90 LR, 3', SCH 40, CS A234- WPB, SMLS, ASME B16.9 MR0103, / Отвод",'Ед.изм.':'шт','Quantity':-12,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05286','Reservation Number':-3,'WO №':-3,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"ELBOW 90 LR, 1/2', SCH 40, CS A105 SWE, B16.11 CL600 MR0103, / Отвод",'Ед.изм.':'шт','Quantity':-1,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05287','Reservation Number':-2,'WO №':-2,'closedMonth':11,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Nipoflange 3'' X 1'' ND, Cl300, BWxRF, CS A105 BE MSS-SP-97 MR0103 / Фланцевая бобышка",'Ед.изм.':'шт','Quantity':-2,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
         ]
     },
 }

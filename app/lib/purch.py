@@ -26,6 +26,12 @@ purchs['Document'] = purchs['Document'].fillna('undef')
 purchs['Document'] = purchs['Document'].astype(str)
 
 def regexps(row):
+    if row['Document']=="ORD-27/54-2023 - Requisition Report-178":
+        return 178
+    if row['Document']=="ORD-48/1554-2022 28.11.2022\nRequsition 300 29.04.2023":
+        return 300
+    if row['Document']=="№ 298 03.05.2023":
+        return 298
     if re.search('Requ', row['Document']) or re.search('PR', row['Document']) or re.search('RP', row['Document']) or re.search('RR', row['Document']):
         for match in re.findall("\d*", row['Document']):
             if match:
@@ -33,16 +39,13 @@ def regexps(row):
     else:
         if re.findall("^\d\d{,5}\d$", row['Document']):
             return re.findall("^\d\d{,5}\d$", row['Document'])[0]
+    
         
 purchs['Requisition Number'] = purchs.apply(regexps, axis=1)
+#purchs.to_excel('checkNumbersPurch.xlsx')
 
+purchs = purchs.loc[ ~purchs['Requisition Number'].isna() ]
 
-purchs = purchs.loc[ (purchs['Document'].str.contains('ORD') == False)
-                   & (purchs['Document'].str.contains('undef') == False)
-                   & (purchs['Document'] != '-') ]
-
-purchs['Requisition Number'].fillna(0, inplace=True)
-purchs = purchs.loc [ purchs['Requisition Number']!=0 ]
 purchs['Requisition Number'] = purchs['Requisition Number'].astype(int)
 
 
@@ -82,7 +85,7 @@ purchs = purchs[['Contract', 'Items', 'Price', 'Requisition Number', 'mergeNumbe
 
 budgetContracted = purchs.groupby('contractMonth')['Price'].sum()
 budgetPlaned = requisitions.groupby('raisedMonth')['Total Expected Price'].sum()
-budgetRequired = requisitions.groupby('requiredMonth')['Total Expected Price'].sum()
+budgetRequired = requisitions.groupby(['requiredYear','requiredMonth'])['Total Expected Price'].sum()
 
 purchCompare = purchs.merge(requisitions, how='outer', on=['Requisition Number','mergeNumber' ])
 

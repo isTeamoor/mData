@@ -24,8 +24,8 @@ spares.fillna({
 
 
 ### Удаление spares, для которых reservation не назначен, но WO уже закрыт или отменен
-unused = spares.loc[(spares['Reservation Number'] == 0) 
-                   & (spares['Group WO number']==0)
+unused = spares.loc[(spares['Reservation Number'].isna()) 
+                   & (spares['Spares Comment'].isna())
                    & ((spares['Work Order Status Description'] == 'Closed') | (spares['Work Order Status Description'] == 'Cancelled'))]
 spares = spares.drop(unused.index)
 
@@ -34,12 +34,26 @@ spares = spares.drop(unused.index)
 spares['Actual Cost']    = spares['Actual Quantity'] * spares['Estimated Unit Cost']
 spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit Cost']
 
-spares.loc [spares['Account Code']=='100000000012', 'Short Department Name'] = '4AP'
+spares.loc [ (spares['Account Code']=='100000000012') & (spares['Reserved By']=="To'lqin Berdiyev Omonovich"), 'Short Department Name'] = '4AP'
+
+
+
+#### Exception due to my mistake
+spares.loc[ (spares['Work Order Number'].isin([82863,82299,81549,81548])) 
+           & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'closedYear' ] = 2024
+spares.loc[ (spares['Work Order Number'].isin([82863,82299,81549,81548])) 
+           & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'closedMonth' ] = 1
+
+spares.loc[ (spares['Work Order Number'].isin([65047, 65049])) 
+           & (spares['Work Order Spare Description']=='Цилиндр теплоизоляционный ТЕХНО 120 1200х60,3х40мм'), 'closedYear' ] = 2024
+spares.loc[ (spares['Work Order Number'].isin([65047, 65049]))  
+           & (spares['Work Order Spare Description']=='Цилиндр теплоизоляционный ТЕХНО 120 1200х60,3х40мм'), 'closedMonth' ] = 1
+
 
 
 
 spares = spares[[
-'Work Order Spare ID', 'Work Order ID', 'Work Order Spare Description', 'Reservation Number', 'reservYear', 'reservMonth', 'Reserved By', 
+'Work Order Spare ID', 'Work Order ID', 'Work Order Spare Description', 'Reservation Number', 'reservYear', 'reservMonth', 'Reserved By', 'isRMPD_planner',
 'Estimated Quantity', 'Actual Quantity','UOMDescription','Estimated Unit Cost', 'Estimated Cost', 'Actual Cost', 
 'Work Order Number','Work Order Status Description','raisedYear', 'raisedMonth',
 'Work Order Component Description', 'Job Code Major Description', 'Account Code', 'Account Code Description', 

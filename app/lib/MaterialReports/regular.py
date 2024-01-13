@@ -70,6 +70,10 @@ def matReport(repMonth, repYear, department, transactions):
   currentReturn['Quantity'] = currentReturn['Quantity'].map(lambda x: -x) ### Qty "положительные"
 
 
+  begin        .rename(columns={'Quantity':'Кол-во начало'}, inplace=True)
+  current      .rename(columns={'Quantity':'Кол-во приход'}, inplace=True)
+  currentReturn.rename(columns={'Quantity':'Кол-во возврат'}, inplace=True)
+
   begin                 = begin.groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','closedYear','Отдел', 'Reserved By','WO №','Asset Description', 'Объект',]).sum()
   current             = current.groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','closedYear','Отдел', 'Reserved By','WO №','Asset Description', 'Объект',]).sum()
   currentReturn = currentReturn.groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth','closedYear','Отдел', 'Reserved By','WO №','Asset Description', 'Объект',]).sum()
@@ -82,10 +86,6 @@ def matReport(repMonth, repYear, department, transactions):
 
 
   ### 5. Объединение "на начало" и "приход" и "возврат"
-  begin        .rename(columns={'Quantity':'Кол-во начало'}, inplace=True)
-  current      .rename(columns={'Quantity':'Кол-во приход'}, inplace=True)
-  currentReturn.rename(columns={'Quantity':'Кол-во возврат'}, inplace=True)
-  
   rep = begin.merge(current,     how='outer', on=['Код товара','Материал','Ед.изм.','Reservation Number','Work Order Status Description','closedYear','closedMonth','Отдел','Reserved By','WO №','Asset Description','Объект',])
   rep = rep.merge(currentReturn, how='outer', on=['Код товара','Материал','Ед.изм.','Reservation Number','Work Order Status Description','closedYear','closedMonth','Отдел','Reserved By','WO №','Asset Description','Объект',])
 
@@ -229,6 +229,18 @@ def matReport(repMonth, repYear, department, transactions):
   view_wOff_SGU = view_wOff.loc [ view_wOff['Объект'].isin(unitChildren()) ]
   view_wOff_notSGU = view_wOff.loc [ ~view_wOff['Объект'].isin(unitChildren()) ]
 
+  view_wOff_SGU_G = view_wOff_SGU.copy()
+  view_wOff_notSGU_G = view_wOff_notSGU.copy()
+  view_wOff_SGU_G['Объект'] = ''
+  view_wOff_notSGU_G['Объект'] = ''
+  view_wOff_SGU_G = view_wOff_SGU_G.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
+  view_wOff_notSGU_G = view_wOff_notSGU_G.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
+  view_wOff_SGU_G.reset_index(drop=False, inplace=True)
+  view_wOff_notSGU_G.reset_index(drop=False, inplace=True)
+  view_wOff_SGU_G = view_wOff_SGU_G[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]
+  view_wOff_notSGU_G = view_wOff_notSGU_G[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]
+
+
 
 
   check.to_excel('2. check.xlsx')
@@ -238,6 +250,8 @@ def matReport(repMonth, repYear, department, transactions):
   view_014_G.to_excel('4. view_014_G.xlsx')
   view_wOff_SGU.to_excel('4. view_wOff_SGU.xlsx')
   view_wOff_notSGU.to_excel('4. view_wOff_notSGU.xlsx')
+  view_wOff_SGU_G.to_excel('4. view_wOff_SGU_G.xlsx')
+  view_wOff_notSGU_G.to_excel('4. view_wOff_notSGU_G.xlsx')
   reference.OneCW()
   
     

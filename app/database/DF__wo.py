@@ -21,11 +21,9 @@ wo = wo.merge(woNumbers[['Work Order ID', 'Group WO number']], how='left', left_
 wo['Raised Date Time'] = pd.to_datetime(wo['Raised Date Time'], format="%d/%m/%Y %H:%M:%S %p")
 wo['raisedYear']  = wo['Raised Date Time'].dt.year
 wo['raisedMonth'] = wo['Raised Date Time'].dt.month
-wo['raisedDay']   = wo['Raised Date Time'].dt.day
 
 wo['closedYear']  = wo['Closed Date Time'].dt.year
 wo['closedMonth'] = wo['Closed Date Time'].dt.month
-wo['closedDay']   = wo['Closed Date Time'].dt.day
 
 
 

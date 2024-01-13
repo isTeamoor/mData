@@ -55933,7 +55933,7 @@
 61419,65,Maintenance Insulation,18037,
 61420,65,Maintenance Insulation,18037,
 61421,92,Piping (Steam tracing),18048,
-61422,92,Piping (Steam tracing),18048,
+61422,92,Piping (Steam tracing),18048,3
 61423,66,Maintenance Welding,18038,
 61424,65,Maintenance Insulation,18037,
 61425,93,Jet Wash Cleaning,18048,
@@ -55943,11 +55943,11 @@
 61429,65,Maintenance Insulation,18037,
 61430,92,Piping (Steam tracing),18048,3
 61431,65,Maintenance Insulation,18037,
-61432,92,Piping (Steam tracing),18048,
+61432,92,Piping (Steam tracing),18048,3
 61433,65,Maintenance Insulation,18037,
 61434,92,Piping (Steam tracing),18048,
 61435,92,Piping (Steam tracing),18048,
-61436,92,Piping (Steam tracing),18048,
+61436,92,Piping (Steam tracing),18048,3
 61437,92,Piping (Steam tracing),18048,
 61438,66,Maintenance Welding,18038,
 61439,76,Mechanical Services,18048,
@@ -56478,12 +56478,6 @@
 61969,64,Maintenance Scaffolding,18036,
 61970,92,Piping (Steam tracing),18048,
 61971,77,Equipment Hiring Services,18049,
-61972,76,Mechanical Services,18048,
-61973,78,Mechanical Static spares,18050,
-61974,65,Maintenance Insulation,18037,
-61975,64,Maintenance Scaffolding,18036,
-61976,92,Piping (Steam tracing),18048,
-61977,77,Equipment Hiring Services,18049,
 61978,76,Mechanical Services,18048,
 61979,78,Mechanical Static spares,18050,
 61980,65,Maintenance Insulation,18037,
@@ -57068,8 +57062,8 @@
 62561,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
 62562,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
 62563,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
-62564,66,Maintenance Welding,18038,
-62565,78,Mechanical Static spares,18050,
+62564,66,Maintenance Welding,18038,3
+62565,78,Mechanical Static spares,18050,3
 62566,75,Electrical Services,18047,3
 62567,75,Electrical Services,18047,3
 62568,79,Instrumentation Services,18051,3
@@ -57666,7 +57660,7 @@
 63160,65,Maintenance Insulation,18037,
 63161,92,Piping (Steam tracing),18048,
 63162,92,Piping (Steam tracing),18048,
-63163,92,Piping (Steam tracing),18048,
+63163,92,Piping (Steam tracing),18048,3
 63164,65,Maintenance Insulation,18037,
 63165,79,Instrumentation Services,18051,
 63166,92,Piping (Steam tracing),18048,
@@ -57677,7 +57671,7 @@
 63171,96,Personal Protective Equipment,18064,
 63172,92,Piping (Steam tracing),18048,3
 63173,65,Maintenance Insulation,18037,
-63174,92,Piping (Steam tracing),18048,
+63174,92,Piping (Steam tracing),18048,3
 63175,64,Maintenance Scaffolding,18036,
 63176,65,Maintenance Insulation,18037,
 63177,65,Maintenance Insulation,18037,
@@ -58031,7 +58025,7 @@
 63525,79,Instrumentation Services,18051,3
 63526,79,Instrumentation Services,18051,3
 63527,76,Mechanical Services,18048,3
-63528,66,Maintenance Welding,18038,
+63528,66,Maintenance Welding,18038,3
 63529,76,Mechanical Services,18048,3
 63530,75,Electrical Services,18047,3
 63531,76,Mechanical Services,18048,3
@@ -58080,32 +58074,32 @@
 63574,75,Electrical Services,,
 63575,75,Electrical Services,,
 63576,75,Electrical Services,,
-63577,75,Electrical Services,,
+63577,75,Electrical Services,18047,
 63578,75,Electrical Services,,
-63579,75,Electrical Services,,
+63579,75,Electrical Services,18047,
 63580,75,Electrical Services,18047,
 63581,75,Electrical Services,,
 63582,75,Electrical Services,,
 63583,75,Electrical Services,,
 63584,75,Electrical Services,,
-63585,75,Electrical Services,,
-63586,75,Electrical Services,,
-63587,75,Electrical Services,,
+63585,75,Electrical Services,18047,
+63586,75,Electrical Services,18047,
+63587,75,Electrical Services,18047,
 63588,75,Electrical Services,,
 63589,75,Electrical Services,,
 63590,75,Electrical Services,,
 63591,75,Electrical Services,,
 63592,75,Electrical Services,,
-63593,75,Electrical Services,,
-63594,75,Electrical Services,,
-63595,75,Electrical Services,,
-63596,75,Electrical Services,,
-63597,75,Electrical Services,,
-63598,75,Electrical Services,,
-63599,75,Electrical Services,,
-63600,75,Electrical Services,,
-63601,75,Electrical Services,,
-63602,75,Electrical Services,,
+63593,75,Electrical Services,18047,
+63594,75,Electrical Services,18047,
+63595,75,Electrical Services,18047,
+63596,75,Electrical Services,18047,
+63597,75,Electrical Services,18047,
+63598,75,Electrical Services,18047,
+63599,75,Electrical Services,18047,
+63600,75,Electrical Services,18047,
+63601,75,Electrical Services,18047,
+63602,75,Electrical Services,18047,
 63603,75,Electrical Services,,
 63604,75,Electrical Services,,
 63605,75,Electrical Services,,
@@ -58440,12 +58434,12 @@
 63934,65,Maintenance Insulation,18037,8
 63935,65,Maintenance Insulation,18037,
 63936,64,Maintenance Scaffolding,18036,
-63937,78,Mechanical Static spares,18050,
-63938,76,Mechanical Services,18048,
-63939,76,Mechanical Services,18048,
-63940,78,Mechanical Static spares,18050,
-63941,78,Mechanical Static spares,18050,
-63942,76,Mechanical Services,18048,
+63937,71,Instrument Spares,18043,
+63938,79,Instrumentation Services,18051,
+63939,79,Instrumentation Services,18051,
+63940,71,Instrument Spares,18043,
+63941,71,Instrument Spares,18043,
+63942,79,Instrumentation Services,18051,
 63943,73,Mechanical Rotating Spares,18045,3
 63944,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
 63945,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
@@ -58571,7 +58565,7 @@
 64065,65,Maintenance Insulation,18037,3
 64066,65,Maintenance Insulation,18037,
 64067,66,Maintenance Welding,18038,3
-64068,94,Heating Ventilation Air Condition,18051,
+64068,94,Heating Ventilation Air Condition,18051,3
 64069,76,Mechanical Services,18048,3
 64070,76,Mechanical Services,18048,3
 64071,95,Analyser Services,18051,3
@@ -58979,138 +58973,138 @@
 64473,96,Personal Protective Equipment,18064,
 64474,66,Maintenance Welding,18038,
 64475,65,Maintenance Insulation,18037,
-64476,79,Instrumentation Services,18051,5
-64477,79,Instrumentation Services,18051,5
-64478,79,Instrumentation Services,18051,5
-64479,79,Instrumentation Services,18051,5
-64480,79,Instrumentation Services,18051,5
-64481,79,Instrumentation Services,18051,5
-64482,79,Instrumentation Services,18051,5
-64483,79,Instrumentation Services,18051,5
-64484,79,Instrumentation Services,18051,5
-64485,79,Instrumentation Services,18051,5
-64486,79,Instrumentation Services,18051,5
-64487,79,Instrumentation Services,18051,5
-64488,79,Instrumentation Services,18051,5
-64489,79,Instrumentation Services,18051,5
-64490,79,Instrumentation Services,18051,5
-64491,79,Instrumentation Services,18051,5
-64492,79,Instrumentation Services,18051,5
-64493,79,Instrumentation Services,18051,5
-64494,79,Instrumentation Services,18051,5
-64495,79,Instrumentation Services,18051,5
-64496,79,Instrumentation Services,18051,5
-64497,79,Instrumentation Services,18051,5
-64498,79,Instrumentation Services,18051,5
-64499,79,Instrumentation Services,18051,5
-64500,79,Instrumentation Services,18051,5
-64501,79,Instrumentation Services,18051,5
-64502,79,Instrumentation Services,18051,5
-64503,79,Instrumentation Services,18051,5
-64504,79,Instrumentation Services,18051,5
-64505,79,Instrumentation Services,18051,5
-64506,79,Instrumentation Services,18051,5
-64507,79,Instrumentation Services,18051,5
-64508,79,Instrumentation Services,18051,5
-64509,79,Instrumentation Services,18051,5
-64510,79,Instrumentation Services,18051,5
-64511,79,Instrumentation Services,18051,5
-64512,79,Instrumentation Services,18051,5
-64513,79,Instrumentation Services,18051,5
-64514,79,Instrumentation Services,18051,5
-64515,79,Instrumentation Services,18051,5
-64516,79,Instrumentation Services,18051,5
-64517,79,Instrumentation Services,18051,5
-64518,79,Instrumentation Services,18051,5
-64519,79,Instrumentation Services,18051,5
-64520,79,Instrumentation Services,18051,5
-64521,79,Instrumentation Services,18051,5
-64522,79,Instrumentation Services,18051,5
-64523,79,Instrumentation Services,18051,5
-64524,79,Instrumentation Services,18051,5
-64525,79,Instrumentation Services,18051,5
-64526,79,Instrumentation Services,18051,5
-64527,79,Instrumentation Services,18051,5
-64528,79,Instrumentation Services,18051,5
-64529,79,Instrumentation Services,18051,5
-64530,79,Instrumentation Services,18051,5
-64531,79,Instrumentation Services,18051,5
-64532,79,Instrumentation Services,18051,5
-64533,79,Instrumentation Services,18051,5
-64534,79,Instrumentation Services,18051,5
-64535,79,Instrumentation Services,18051,5
-64536,79,Instrumentation Services,18051,5
-64537,79,Instrumentation Services,18051,5
-64538,79,Instrumentation Services,18051,5
-64539,79,Instrumentation Services,18051,5
-64540,79,Instrumentation Services,18051,5
-64541,79,Instrumentation Services,18051,5
-64542,79,Instrumentation Services,18051,5
-64543,79,Instrumentation Services,18051,5
-64544,79,Instrumentation Services,18051,5
-64545,79,Instrumentation Services,18051,5
-64546,79,Instrumentation Services,18051,5
-64547,79,Instrumentation Services,18051,5
-64548,79,Instrumentation Services,18051,5
-64549,79,Instrumentation Services,18051,5
-64550,79,Instrumentation Services,18051,5
-64551,79,Instrumentation Services,18051,5
-64552,79,Instrumentation Services,18051,5
-64553,79,Instrumentation Services,18051,5
-64554,79,Instrumentation Services,18051,5
-64555,79,Instrumentation Services,18051,5
-64556,79,Instrumentation Services,18051,5
-64557,79,Instrumentation Services,18051,5
-64558,79,Instrumentation Services,18051,5
-64559,79,Instrumentation Services,18051,5
-64560,79,Instrumentation Services,18051,5
-64561,79,Instrumentation Services,18051,5
+64476,79,Instrumentation Services,18051,3
+64477,79,Instrumentation Services,18051,3
+64478,79,Instrumentation Services,18051,3
+64479,79,Instrumentation Services,18051,3
+64480,79,Instrumentation Services,18051,3
+64481,79,Instrumentation Services,18051,3
+64482,79,Instrumentation Services,18051,3
+64483,79,Instrumentation Services,18051,3
+64484,79,Instrumentation Services,18051,3
+64485,79,Instrumentation Services,18051,3
+64486,79,Instrumentation Services,18051,3
+64487,79,Instrumentation Services,18051,3
+64488,79,Instrumentation Services,18051,3
+64489,79,Instrumentation Services,18051,3
+64490,79,Instrumentation Services,18051,3
+64491,79,Instrumentation Services,18051,3
+64492,79,Instrumentation Services,18051,3
+64493,79,Instrumentation Services,18051,3
+64494,79,Instrumentation Services,18051,3
+64495,79,Instrumentation Services,18051,3
+64496,79,Instrumentation Services,18051,3
+64497,79,Instrumentation Services,18051,3
+64498,79,Instrumentation Services,18051,3
+64499,79,Instrumentation Services,18051,3
+64500,79,Instrumentation Services,18051,3
+64501,79,Instrumentation Services,18051,3
+64502,79,Instrumentation Services,18051,3
+64503,79,Instrumentation Services,18051,3
+64504,79,Instrumentation Services,18051,3
+64505,79,Instrumentation Services,18051,3
+64506,79,Instrumentation Services,18051,3
+64507,79,Instrumentation Services,18051,3
+64508,79,Instrumentation Services,18051,3
+64509,79,Instrumentation Services,18051,3
+64510,79,Instrumentation Services,18051,3
+64511,79,Instrumentation Services,18051,3
+64512,79,Instrumentation Services,18051,3
+64513,79,Instrumentation Services,18051,3
+64514,79,Instrumentation Services,18051,3
+64515,79,Instrumentation Services,18051,3
+64516,79,Instrumentation Services,18051,3
+64517,79,Instrumentation Services,18051,3
+64518,79,Instrumentation Services,18051,3
+64519,79,Instrumentation Services,18051,3
+64520,79,Instrumentation Services,18051,3
+64521,79,Instrumentation Services,18051,3
+64522,79,Instrumentation Services,18051,3
+64523,79,Instrumentation Services,18051,3
+64524,79,Instrumentation Services,18051,3
+64525,79,Instrumentation Services,18051,3
+64526,79,Instrumentation Services,18051,3
+64527,79,Instrumentation Services,18051,3
+64528,79,Instrumentation Services,18051,3
+64529,79,Instrumentation Services,18051,3
+64530,79,Instrumentation Services,18051,3
+64531,79,Instrumentation Services,18051,3
+64532,79,Instrumentation Services,18051,3
+64533,79,Instrumentation Services,18051,3
+64534,79,Instrumentation Services,18051,3
+64535,79,Instrumentation Services,18051,3
+64536,79,Instrumentation Services,18051,3
+64537,79,Instrumentation Services,18051,3
+64538,79,Instrumentation Services,18051,3
+64539,79,Instrumentation Services,18051,3
+64540,79,Instrumentation Services,18051,3
+64541,79,Instrumentation Services,18051,3
+64542,79,Instrumentation Services,18051,3
+64543,79,Instrumentation Services,18051,3
+64544,79,Instrumentation Services,18051,3
+64545,79,Instrumentation Services,18051,3
+64546,79,Instrumentation Services,18051,3
+64547,79,Instrumentation Services,18051,3
+64548,79,Instrumentation Services,18051,3
+64549,79,Instrumentation Services,18051,3
+64550,79,Instrumentation Services,18051,3
+64551,79,Instrumentation Services,18051,3
+64552,79,Instrumentation Services,18051,3
+64553,79,Instrumentation Services,18051,3
+64554,79,Instrumentation Services,18051,3
+64555,79,Instrumentation Services,18051,3
+64556,79,Instrumentation Services,18051,3
+64557,79,Instrumentation Services,18051,3
+64558,79,Instrumentation Services,18051,3
+64559,79,Instrumentation Services,18051,3
+64560,79,Instrumentation Services,18051,3
+64561,79,Instrumentation Services,18051,3
 64562,79,Instrumentation Services,18051,5
-64563,79,Instrumentation Services,18051,5
-64564,79,Instrumentation Services,18051,5
-64565,79,Instrumentation Services,18051,5
-64566,79,Instrumentation Services,18051,5
-64567,79,Instrumentation Services,18051,5
-64568,79,Instrumentation Services,18051,5
-64569,79,Instrumentation Services,18051,5
-64570,79,Instrumentation Services,18051,5
-64571,79,Instrumentation Services,18051,5
-64572,79,Instrumentation Services,18051,5
-64573,79,Instrumentation Services,18051,5
-64574,79,Instrumentation Services,18051,5
-64575,79,Instrumentation Services,18051,5
-64576,79,Instrumentation Services,18051,5
-64577,79,Instrumentation Services,18051,5
-64578,79,Instrumentation Services,18051,5
-64579,79,Instrumentation Services,18051,5
-64580,79,Instrumentation Services,18051,5
-64581,79,Instrumentation Services,18051,5
-64582,79,Instrumentation Services,18051,5
-64583,79,Instrumentation Services,18051,5
-64584,79,Instrumentation Services,18051,5
-64585,79,Instrumentation Services,18051,5
-64586,79,Instrumentation Services,18051,5
-64587,79,Instrumentation Services,18051,5
-64588,79,Instrumentation Services,18051,5
-64589,79,Instrumentation Services,18051,5
-64590,79,Instrumentation Services,18051,5
-64591,79,Instrumentation Services,18051,5
+64563,79,Instrumentation Services,18051,3
+64564,79,Instrumentation Services,18051,3
+64565,79,Instrumentation Services,18051,3
+64566,79,Instrumentation Services,18051,3
+64567,79,Instrumentation Services,18051,3
+64568,79,Instrumentation Services,18051,3
+64569,79,Instrumentation Services,18051,3
+64570,79,Instrumentation Services,18051,3
+64571,79,Instrumentation Services,18051,3
+64572,79,Instrumentation Services,18051,3
+64573,79,Instrumentation Services,18051,3
+64574,79,Instrumentation Services,18051,3
+64575,79,Instrumentation Services,18051,3
+64576,79,Instrumentation Services,18051,3
+64577,79,Instrumentation Services,18051,3
+64578,79,Instrumentation Services,18051,3
+64579,79,Instrumentation Services,18051,3
+64580,79,Instrumentation Services,18051,3
+64581,79,Instrumentation Services,18051,3
+64582,79,Instrumentation Services,18051,3
+64583,79,Instrumentation Services,18051,3
+64584,79,Instrumentation Services,18051,3
+64585,79,Instrumentation Services,18051,3
+64586,79,Instrumentation Services,18051,3
+64587,79,Instrumentation Services,18051,3
+64588,79,Instrumentation Services,18051,3
+64589,79,Instrumentation Services,18051,3
+64590,79,Instrumentation Services,18051,3
+64591,79,Instrumentation Services,18051,3
 64592,79,Instrumentation Services,18051,5
-64593,79,Instrumentation Services,18051,5
-64594,79,Instrumentation Services,18051,5
-64595,79,Instrumentation Services,18051,5
-64596,79,Instrumentation Services,18051,5
-64597,79,Instrumentation Services,18051,5
-64598,79,Instrumentation Services,18051,5
-64599,79,Instrumentation Services,18051,5
-64600,79,Instrumentation Services,18051,5
-64601,79,Instrumentation Services,18051,5
-64602,79,Instrumentation Services,18051,5
-64603,79,Instrumentation Services,18051,5
-64604,79,Instrumentation Services,18051,5
-64605,79,Instrumentation Services,18051,5
-64606,79,Instrumentation Services,18051,5
-64607,79,Instrumentation Services,18051,5
+64593,79,Instrumentation Services,18051,3
+64594,79,Instrumentation Services,18051,3
+64595,79,Instrumentation Services,18051,3
+64596,79,Instrumentation Services,18051,3
+64597,79,Instrumentation Services,18051,3
+64598,79,Instrumentation Services,18051,3
+64599,79,Instrumentation Services,18051,3
+64600,79,Instrumentation Services,18051,3
+64601,79,Instrumentation Services,18051,3
+64602,79,Instrumentation Services,18051,3
+64603,79,Instrumentation Services,18051,3
+64604,79,Instrumentation Services,18051,3
+64605,79,Instrumentation Services,18051,3
+64606,79,Instrumentation Services,18051,3
+64607,79,Instrumentation Services,18051,3
 64608,64,Maintenance Scaffolding,18036,
 64609,76,Mechanical Services,18048,
 64610,76,Mechanical Services,18048,
@@ -59321,33 +59315,32 @@
 64816,68,Maintenance Rotating Services,18040,5
 64817,94,Heating Ventilation Air Condition,18051,
 64818,76,Mechanical Services,18048,3
-64819,69,Electrical Spares,18047,3
 64820,95,Analyser Services,18051,5
 64821,76,Mechanical Services,18048,3
-64822,79,Instrumentation Services,18051,
+64822,79,Instrumentation Services,18057,
 64823,95,Analyser Services,18051,5
 64824,65,Maintenance Insulation,18037,3
 64825,67,NDE & Inspection Services,18051,
 64826,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
-64827,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
+64827,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18057,
 64828,68,Maintenance Rotating Services,18040,3
 64829,68,Maintenance Rotating Services,18040,3
 64830,68,Maintenance Rotating Services,18040,3
 64831,68,Maintenance Rotating Services,18040,5
 64832,68,Maintenance Rotating Services,18040,3
-64833,79,Instrumentation Services,18051,
-64834,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
-64835,79,Instrumentation Services,18051,
-64836,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
+64833,79,Instrumentation Services,18057,
+64834,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18057,
+64835,79,Instrumentation Services,18057,
+64836,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18057,
 64837,79,Instrumentation Services,18051,8
 64838,96,Personal Protective Equipment,18064,5
 64839,79,Instrumentation Services,18051,
 64840,79,Instrumentation Services,18051,
 64841,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
-64842,79,Instrumentation Services,18051,
-64843,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
-64844,79,Instrumentation Services,18051,
-64845,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
+64842,79,Instrumentation Services,18057,
+64843,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18057,
+64844,79,Instrumentation Services,18057,
+64845,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18057,
 64846,68,Maintenance Rotating Services,18040,
 64847,73,Mechanical Rotating Spares,18045,
 64848,96,Personal Protective Equipment,18064,
@@ -59356,12 +59349,1515 @@
 64851,73,Mechanical Rotating Spares,18045,3
 64852,79,Instrumentation Services,18051,
 64853,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
-64854,69,Electrical Spares,18041,3
 64855,76,Mechanical Services,18048,
 64856,78,Mechanical Static spares,18050,
-64857,79,Instrumentation Services,18051,
-64858,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
+64857,79,Instrumentation Services,18057,
+64858,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18057,
 64859,66,Maintenance Welding,18038,3
 64860,69,Electrical Spares,18188,13
 64861,79,Instrumentation Services,18051,
 64862,79,Instrumentation Services,18051,
+64863,76,Mechanical Services,18048,3
+64864,68,Maintenance Rotating Services,18040,5
+64865,65,Maintenance Insulation,18037,
+64866,68,Maintenance Rotating Services,18040,5
+64867,65,Maintenance Insulation,18037,
+64868,68,Maintenance Rotating Services,18040,5
+64869,65,Maintenance Insulation,18037,
+64870,68,Maintenance Rotating Services,18040,5
+64871,65,Maintenance Insulation,18037,
+64872,68,Maintenance Rotating Services,18040,5
+64873,65,Maintenance Insulation,18037,
+64874,68,Maintenance Rotating Services,18040,5
+64875,65,Maintenance Insulation,18037,
+64876,68,Maintenance Rotating Services,18040,5
+64877,65,Maintenance Insulation,18037,
+64878,68,Maintenance Rotating Services,18040,5
+64879,65,Maintenance Insulation,18037,
+64880,68,Maintenance Rotating Services,18040,5
+64881,65,Maintenance Insulation,18037,
+64882,68,Maintenance Rotating Services,18040,5
+64883,65,Maintenance Insulation,18037,
+64884,68,Maintenance Rotating Services,18040,5
+64885,65,Maintenance Insulation,18037,
+64886,68,Maintenance Rotating Services,18040,5
+64887,65,Maintenance Insulation,18037,
+64888,68,Maintenance Rotating Services,18040,5
+64889,65,Maintenance Insulation,18037,
+64890,68,Maintenance Rotating Services,18040,5
+64891,65,Maintenance Insulation,18037,
+64892,68,Maintenance Rotating Services,18040,5
+64893,65,Maintenance Insulation,18037,
+64894,68,Maintenance Rotating Services,18040,5
+64895,65,Maintenance Insulation,18037,
+64896,68,Maintenance Rotating Services,18040,5
+64897,65,Maintenance Insulation,18037,
+64898,68,Maintenance Rotating Services,18040,5
+64899,65,Maintenance Insulation,18037,
+64900,68,Maintenance Rotating Services,18040,5
+64901,65,Maintenance Insulation,18037,
+64902,68,Maintenance Rotating Services,18040,5
+64903,65,Maintenance Insulation,18037,
+64904,68,Maintenance Rotating Services,18040,5
+64905,65,Maintenance Insulation,18037,
+64906,68,Maintenance Rotating Services,18040,5
+64907,65,Maintenance Insulation,18037,
+64908,68,Maintenance Rotating Services,18040,5
+64909,65,Maintenance Insulation,18037,
+64910,68,Maintenance Rotating Services,18040,5
+64911,65,Maintenance Insulation,18037,
+64912,68,Maintenance Rotating Services,18040,5
+64913,65,Maintenance Insulation,18037,
+64914,68,Maintenance Rotating Services,18040,5
+64915,65,Maintenance Insulation,18037,
+64916,68,Maintenance Rotating Services,18040,5
+64917,65,Maintenance Insulation,18037,
+64918,68,Maintenance Rotating Services,18040,5
+64919,65,Maintenance Insulation,18037,
+64920,68,Maintenance Rotating Services,18040,5
+64921,65,Maintenance Insulation,18037,
+64922,68,Maintenance Rotating Services,18040,5
+64923,65,Maintenance Insulation,18037,
+64924,68,Maintenance Rotating Services,18040,5
+64925,65,Maintenance Insulation,18037,
+64926,68,Maintenance Rotating Services,18040,5
+64927,65,Maintenance Insulation,18037,
+64928,68,Maintenance Rotating Services,18040,5
+64929,65,Maintenance Insulation,18037,
+64930,68,Maintenance Rotating Services,18040,5
+64931,65,Maintenance Insulation,18037,
+64932,68,Maintenance Rotating Services,18040,5
+64933,65,Maintenance Insulation,18037,
+64934,68,Maintenance Rotating Services,18040,5
+64935,65,Maintenance Insulation,18037,
+64936,68,Maintenance Rotating Services,18040,5
+64937,65,Maintenance Insulation,18037,
+64938,68,Maintenance Rotating Services,18040,5
+64939,65,Maintenance Insulation,18037,
+64940,68,Maintenance Rotating Services,18040,5
+64941,65,Maintenance Insulation,18037,
+64942,68,Maintenance Rotating Services,18040,5
+64943,65,Maintenance Insulation,18037,
+64944,68,Maintenance Rotating Services,18040,5
+64945,65,Maintenance Insulation,18037,
+64946,68,Maintenance Rotating Services,18040,5
+64947,65,Maintenance Insulation,18037,
+64948,68,Maintenance Rotating Services,18040,5
+64949,65,Maintenance Insulation,18037,
+64950,68,Maintenance Rotating Services,18040,5
+64951,65,Maintenance Insulation,18037,
+64952,68,Maintenance Rotating Services,18040,5
+64953,65,Maintenance Insulation,18037,
+64954,68,Maintenance Rotating Services,18040,5
+64955,65,Maintenance Insulation,18037,
+64956,68,Maintenance Rotating Services,18040,5
+64957,65,Maintenance Insulation,18037,
+64958,68,Maintenance Rotating Services,18040,5
+64959,65,Maintenance Insulation,18037,
+64960,68,Maintenance Rotating Services,18040,5
+64961,65,Maintenance Insulation,18037,
+64962,68,Maintenance Rotating Services,18040,5
+64963,65,Maintenance Insulation,18037,
+64964,68,Maintenance Rotating Services,18040,5
+64965,65,Maintenance Insulation,18037,
+64966,68,Maintenance Rotating Services,18040,5
+64967,65,Maintenance Insulation,18037,
+64968,68,Maintenance Rotating Services,18040,5
+64969,65,Maintenance Insulation,18037,
+64970,68,Maintenance Rotating Services,18040,5
+64971,65,Maintenance Insulation,18037,
+64972,68,Maintenance Rotating Services,18040,5
+64973,65,Maintenance Insulation,18037,
+64974,68,Maintenance Rotating Services,18040,5
+64975,65,Maintenance Insulation,18037,
+64976,68,Maintenance Rotating Services,18040,
+64977,68,Maintenance Rotating Services,18040,
+64978,68,Maintenance Rotating Services,18040,
+64979,68,Maintenance Rotating Services,18040,
+64980,75,Electrical Services,18047,
+64981,68,Maintenance Rotating Services,18040,
+64982,75,Electrical Services,18047,
+64983,68,Maintenance Rotating Services,18040,
+64984,75,Electrical Services,18047,
+64985,68,Maintenance Rotating Services,18040,
+64986,75,Electrical Services,18047,
+64987,68,Maintenance Rotating Services,18040,
+64988,75,Electrical Services,18047,
+64989,68,Maintenance Rotating Services,18040,
+64990,75,Electrical Services,18047,
+64991,68,Maintenance Rotating Services,18040,
+64992,75,Electrical Services,18047,
+64993,68,Maintenance Rotating Services,18040,
+64994,75,Electrical Services,18047,
+64995,68,Maintenance Rotating Services,18040,
+64996,75,Electrical Services,18047,
+64997,68,Maintenance Rotating Services,18040,
+64998,75,Electrical Services,18047,
+64999,68,Maintenance Rotating Services,18040,
+65000,75,Electrical Services,18047,
+65001,68,Maintenance Rotating Services,18040,
+65002,75,Electrical Services,18047,
+65003,68,Maintenance Rotating Services,18040,
+65004,75,Electrical Services,18047,
+65005,68,Maintenance Rotating Services,18040,
+65006,75,Electrical Services,18047,
+65007,68,Maintenance Rotating Services,18040,
+65008,75,Electrical Services,18047,
+65009,68,Maintenance Rotating Services,18040,
+65010,75,Electrical Services,18047,
+65011,76,Mechanical Services,18048,3
+65012,95,Analyser Services,18051,5
+65013,95,Analyser Services,18051,5
+65014,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65015,66,Maintenance Welding,18038,
+65016,76,Mechanical Services,18048,
+65017,78,Mechanical Static spares,18050,
+65018,68,Maintenance Rotating Services,18040,
+65019,68,Maintenance Rotating Services,18040,5
+65020,66,Maintenance Welding,18038,3
+65021,93,Jet Wash Cleaning,18048,3
+65022,69,Electrical Spares,18041,3
+65023,96,Personal Protective Equipment,18064,5
+65024,96,Personal Protective Equipment,18064,5
+65025,96,Personal Protective Equipment,18064,5
+65026,75,Electrical Services,18047,
+65027,75,Electrical Services,18047,3
+65028,76,Mechanical Services,18048,3
+65029,64,Maintenance Scaffolding,18036,3
+65030,78,Mechanical Static spares,18050,
+65031,78,Mechanical Static spares,18050,
+65032,78,Mechanical Static spares,18050,3
+65033,76,Mechanical Services,18048,3
+65034,78,Mechanical Static spares,18050,5
+65035,78,Mechanical Static spares,18050,5
+65036,76,Mechanical Services,18048,
+65037,78,Mechanical Static spares,18050,
+65038,76,Mechanical Services,18048,
+65039,78,Mechanical Static spares,18050,
+65040,76,Mechanical Services,18048,
+65041,78,Mechanical Static spares,18050,
+65042,66,Maintenance Welding,18038,3
+65043,96,Personal Protective Equipment,18064,5
+65044,96,Personal Protective Equipment,18064,5
+65045,96,Personal Protective Equipment,18064,5
+65046,76,Mechanical Services,18048,3
+65047,76,Mechanical Services,18048,3
+65048,76,Mechanical Services,18048,3
+65049,68,Maintenance Rotating Services,18040,3
+65050,76,Mechanical Services,18048,3
+65051,76,Mechanical Services,18048,9
+65052,76,Mechanical Services,18048,3
+65053,76,Mechanical Services,18048,3
+65054,76,Mechanical Services,18048,3
+65055,76,Mechanical Services,18048,3
+65056,95,Analyser Services,18051,3
+65057,95,Analyser Services,18051,3
+65058,76,Mechanical Services,18048,3
+65059,76,Mechanical Services,18048,3
+65060,76,Mechanical Services,18048,3
+65061,76,Mechanical Services,18048,3
+65062,76,Mechanical Services,18048,3
+65063,76,Mechanical Services,18048,3
+65064,76,Mechanical Services,18048,3
+65065,76,Mechanical Services,18048,3
+65066,76,Mechanical Services,18048,3
+65067,76,Mechanical Services,18048,3
+65068,76,Mechanical Services,18048,3
+65069,75,Electrical Services,18047,5
+65070,95,Analyser Services,18051,3
+65071,95,Analyser Services,18051,3
+65072,75,Electrical Services,18047,
+65073,75,Electrical Services,18047,
+65074,75,Electrical Services,18047,
+65075,75,Electrical Services,18047,
+65076,75,Electrical Services,18047,8
+65077,75,Electrical Services,18047,5
+65078,78,Mechanical Static spares,18050,3
+65079,75,Electrical Services,18047,
+65080,75,Electrical Services,18047,
+65081,75,Electrical Services,18047,
+65082,75,Electrical Services,18047,
+65083,76,Mechanical Services,18048,3
+65084,75,Electrical Services,18047,5
+65085,75,Electrical Services,18047,
+65086,75,Electrical Services,18047,
+65087,75,Electrical Services,18047,
+65088,75,Electrical Services,18047,
+65089,65,Maintenance Insulation,18037,
+65090,75,Electrical Services,18047,
+65091,75,Electrical Services,18047,
+65092,75,Electrical Services,18047,
+65093,75,Electrical Services,18047,
+65094,79,Instrumentation Services,18051,
+65095,71,Instrument Spares,18043,
+65096,79,Instrumentation Services,18051,
+65097,71,Instrument Spares,18043,
+65098,79,Instrumentation Services,18051,
+65099,71,Instrument Spares,18043,
+65100,79,Instrumentation Services,18051,
+65101,71,Instrument Spares,18043,
+65102,75,Electrical Services,18047,
+65103,69,Electrical Spares,18041,
+65104,75,Electrical Services,18047,
+65105,69,Electrical Spares,18041,
+65106,75,Electrical Services,18047,
+65107,69,Electrical Spares,18041,
+65108,63,VALVES - REGULAR,18051,
+65109,96,Personal Protective Equipment,18064,
+65110,75,Electrical Services,18047,5
+65111,79,Instrumentation Services,18051,3
+65112,79,Instrumentation Services,18051,3
+65113,79,Instrumentation Services,18051,3
+65114,79,Instrumentation Services,18051,3
+65115,79,Instrumentation Services,18051,3
+65116,76,Mechanical Services,18048,
+65117,78,Mechanical Static spares,18050,
+65118,66,Maintenance Welding,18038,
+65119,66,Maintenance Welding,18038,
+65120,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65121,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65122,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65123,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65124,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65125,95,Analyser Services,18051,3
+65126,81,General Maintenance Material,18053,
+65127,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65128,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65129,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65130,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65131,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65132,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65133,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65134,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65135,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65136,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65137,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65138,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65139,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65140,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65141,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65142,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65143,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65144,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65145,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65146,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65147,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65148,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65149,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65150,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65151,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65152,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65153,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65154,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65155,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65156,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65157,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65158,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65159,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65160,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65161,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65162,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65163,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65164,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65165,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65166,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65167,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65168,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65169,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65170,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65171,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65172,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65173,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65174,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65175,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65176,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65177,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65178,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65179,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65180,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65181,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65182,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65183,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65184,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65185,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65186,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65187,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65188,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65189,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65190,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65191,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65192,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65193,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65194,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65195,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65196,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65197,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65198,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65199,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65200,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65201,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65202,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65203,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65204,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65205,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65206,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65207,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65208,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65209,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65210,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65211,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65212,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65213,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65214,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65215,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65216,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65217,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65218,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65219,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65220,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65221,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65222,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65223,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65224,78,Mechanical Static spares,18050,
+65225,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65226,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65227,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65228,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65229,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65230,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65231,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65232,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65233,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65234,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65235,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65236,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65237,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65238,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65239,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65240,95,Analyser Services,18051,3
+65241,76,Mechanical Services,18051,3
+65242,75,Electrical Services,18047,3
+65243,96,Personal Protective Equipment,18187,12
+65244,79,Instrumentation Services,18051,
+65245,71,Instrument Spares,18043,
+65246,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65247,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65248,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65249,76,Mechanical Services,18048,3
+65250,75,Electrical Services,18047,3
+65251,76,Mechanical Services,18048,3
+65252,75,Electrical Services,18047,3
+65253,101,Air Product Spares,18203,
+65254,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65255,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65256,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65257,96,Personal Protective Equipment,18188,
+65258,96,Personal Protective Equipment,18064,
+65259,96,Personal Protective Equipment,18064,
+65260,96,Personal Protective Equipment,18064,
+65261,96,Personal Protective Equipment,18064,
+65262,96,Personal Protective Equipment,18064,
+65263,76,Mechanical Services,18048,
+65264,78,Mechanical Static spares,18050,
+65265,65,Maintenance Insulation,18037,
+65266,76,Mechanical Services,18048,
+65267,78,Mechanical Static spares,18050,
+65268,65,Maintenance Insulation,18037,
+65269,76,Mechanical Services,18048,
+65270,78,Mechanical Static spares,18050,
+65271,65,Maintenance Insulation,18037,
+65272,76,Mechanical Services,18048,
+65273,78,Mechanical Static spares,18050,
+65274,65,Maintenance Insulation,18037,
+65275,76,Mechanical Services,18048,
+65276,78,Mechanical Static spares,18050,
+65277,65,Maintenance Insulation,18037,
+65278,76,Mechanical Services,18048,
+65279,78,Mechanical Static spares,18050,
+65280,65,Maintenance Insulation,18037,
+65281,76,Mechanical Services,18048,
+65282,78,Mechanical Static spares,18050,
+65283,65,Maintenance Insulation,18037,
+65284,66,Maintenance Welding,18038,3
+65285,75,Electrical Services,18047,
+65286,69,Electrical Spares,18041,
+65287,75,Electrical Services,18047,
+65288,69,Electrical Spares,18041,
+65289,75,Electrical Services,18047,
+65290,69,Electrical Spares,18041,
+65291,75,Electrical Services,18047,
+65292,69,Electrical Spares,18041,
+65293,75,Electrical Services,18047,
+65294,69,Electrical Spares,18041,
+65295,75,Electrical Services,18047,
+65296,69,Electrical Spares,18041,
+65297,75,Electrical Services,18047,
+65298,69,Electrical Spares,18041,
+65299,75,Electrical Services,18047,
+65300,69,Electrical Spares,18041,
+65301,75,Electrical Services,18047,
+65302,69,Electrical Spares,18041,
+65303,75,Electrical Services,18047,
+65304,69,Electrical Spares,18041,
+65305,75,Electrical Services,18047,
+65306,69,Electrical Spares,18041,
+65307,75,Electrical Services,18047,
+65308,69,Electrical Spares,18041,
+65309,75,Electrical Services,18047,
+65310,69,Electrical Spares,18041,
+65311,75,Electrical Services,18047,
+65312,69,Electrical Spares,18041,
+65313,75,Electrical Services,18047,
+65314,69,Electrical Spares,18041,
+65315,75,Electrical Services,18047,
+65316,69,Electrical Spares,18041,
+65317,75,Electrical Services,18047,
+65318,69,Electrical Spares,18041,
+65319,75,Electrical Services,18047,
+65320,69,Electrical Spares,18041,
+65321,75,Electrical Services,18047,
+65322,69,Electrical Spares,18041,
+65323,75,Electrical Services,18047,
+65324,69,Electrical Spares,18041,
+65325,79,Instrumentation Services,18051,3
+65326,79,Instrumentation Services,18051,3
+65327,79,Instrumentation Services,18051,3
+65328,79,Instrumentation Services,18051,
+65329,71,Instrument Spares,18043,
+65330,79,Instrumentation Services,18051,3
+65331,71,Instrument Spares,18043,3
+65332,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65333,79,Instrumentation Services,18051,
+65334,66,Maintenance Welding,18038,
+65335,92,Piping (Steam tracing),18048,
+65336,66,Maintenance Welding,,
+65337,79,Instrumentation Services,18051,3
+65338,95,Analyser Services,18051,5
+65339,66,Maintenance Welding,18038,
+65340,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65341,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65342,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65343,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65344,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65345,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65346,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65347,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65348,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65349,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65350,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65351,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65352,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65353,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65354,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65355,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65356,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65357,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65358,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65359,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65360,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65361,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65362,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65363,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65364,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65365,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65366,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65367,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65368,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65369,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65370,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65371,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65372,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65373,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65374,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65375,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65376,68,Maintenance Rotating Services,18040,5
+65377,96,Personal Protective Equipment,18064,
+65378,68,Maintenance Rotating Services,18040,3
+65379,68,Maintenance Rotating Services,18040,3
+65380,79,Instrumentation Services,18051,3
+65381,79,Instrumentation Services,18051,3
+65382,83,Smaller Modifications,18169,3
+65383,76,Mechanical Services,18048,
+65384,78,Mechanical Static spares,18050,
+65385,76,Mechanical Services,18048,
+65386,78,Mechanical Static spares,18050,
+65387,79,Instrumentation Services,18051,
+65388,71,Instrument Spares,18043,
+65389,79,Instrumentation Services,18051,
+65390,71,Instrument Spares,18043,
+65391,79,Instrumentation Services,18051,
+65392,71,Instrument Spares,18043,
+65393,68,Maintenance Rotating Services,18040,
+65394,73,Mechanical Rotating Spares,18045,
+65395,68,Maintenance Rotating Services,18040,
+65396,73,Mechanical Rotating Spares,18045,
+65397,95,Analyser Services,18057,
+65398,79,Instrumentation Services,18051,3
+65399,68,Maintenance Rotating Services,18040,
+65400,73,Mechanical Rotating Spares,18045,
+65401,68,Maintenance Rotating Services,18040,
+65402,73,Mechanical Rotating Spares,18045,
+65403,68,Maintenance Rotating Services,18040,
+65404,73,Mechanical Rotating Spares,18045,
+65405,68,Maintenance Rotating Services,18040,
+65406,73,Mechanical Rotating Spares,18045,
+65407,75,Electrical Services,18047,
+65408,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65409,76,Mechanical Services,18048,3
+65410,75,Electrical Services,18047,3
+65411,75,Electrical Services,18047,8
+65412,81,General Maintenance Material,18059,
+65413,68,Maintenance Rotating Services,18040,3
+65414,68,Maintenance Rotating Services,18040,3
+65415,95,Analyser Services,18057,
+65416,95,Analyser Services,18057,
+65418,95,Analyser Services,18057,
+65419,95,Analyser Services,18057,
+65420,95,Analyser Services,18057,
+65421,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65422,75,Electrical Services,18047,3
+65423,75,Electrical Services,18047,3
+65424,75,Electrical Services,18047,3
+65425,75,Electrical Services,18047,3
+65426,75,Electrical Services,18047,3
+65427,75,Electrical Services,18047,3
+65428,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65429,75,Electrical Services,18057,5
+65430,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65431,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65432,79,Instrumentation Services,18051,8
+65433,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65434,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65435,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65436,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65437,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65438,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65439,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65440,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65441,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65442,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65443,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65444,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65445,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65446,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65447,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65448,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65449,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65450,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65451,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65452,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65453,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65454,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65455,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65456,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65457,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65458,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65459,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65460,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65461,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65462,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65463,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65464,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65465,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65466,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65467,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65468,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65469,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65470,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65471,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65472,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65473,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65474,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65475,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65476,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65477,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65478,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65479,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65480,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65481,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65482,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65483,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65484,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65485,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65486,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65487,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65488,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65489,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65490,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65491,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65492,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65493,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65494,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65495,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65496,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65497,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65498,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65499,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65500,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65501,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65502,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65503,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65504,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65505,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65506,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65507,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65508,75,Electrical Services,18057,
+65509,76,Mechanical Services,18048,
+65510,78,Mechanical Static spares,18050,
+65511,79,Instrumentation Services,18057,
+65512,68,Maintenance Rotating Services,18040,
+65513,73,Mechanical Rotating Spares,18045,
+65514,68,Maintenance Rotating Services,18040,
+65515,73,Mechanical Rotating Spares,18045,
+65516,68,Maintenance Rotating Services,18040,
+65517,73,Mechanical Rotating Spares,18045,
+65518,75,Electrical Services,18057,
+65519,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
+65520,66,Maintenance Welding,18038,3
+65521,78,Mechanical Static spares,18050,3
+65522,65,Maintenance Insulation,18037,3
+65523,75,Electrical Services,18057,
+65524,65,Maintenance Insulation,18037,
+65525,67,NDE & Inspection Services,,
+65526,75,Electrical Services,18057,
+65527,75,Electrical Services,18057,
+65528,76,Mechanical Services,18048,
+65529,75,Electrical Services,18057,
+65531,68,Maintenance Rotating Services,18040,3
+65532,65,Maintenance Insulation,18037,3
+65533,64,Maintenance Scaffolding,18036,3
+65534,75,Electrical Services,18057,5
+65535,64,Maintenance Scaffolding,18036,3
+65536,65,Maintenance Insulation,18037,3
+65537,76,Mechanical Services,18048,3
+65538,66,Maintenance Welding,18038,3
+65539,96,Personal Protective Equipment,18064,
+65540,96,Personal Protective Equipment,18064,
+65541,96,Personal Protective Equipment,18064,
+65542,96,Personal Protective Equipment,18064,
+65543,96,Personal Protective Equipment,18064,
+65544,96,Personal Protective Equipment,18064,
+65545,96,Personal Protective Equipment,18064,
+65546,96,Personal Protective Equipment,18064,
+65547,96,Personal Protective Equipment,18064,
+65548,96,Personal Protective Equipment,18064,
+65549,96,Personal Protective Equipment,18064,
+65550,96,Personal Protective Equipment,18064,
+65551,79,Instrumentation Services,18051,
+65552,79,Instrumentation Services,18051,
+65553,79,Instrumentation Services,18051,
+65554,95,Analyser Services,18057,
+65555,95,Analyser Services,18057,
+65556,76,Mechanical Services,18048,3
+65557,76,Mechanical Services,18048,3
+65558,76,Mechanical Services,18048,3
+65559,76,Mechanical Services,18048,3
+65560,97,ICSS/DCS,18057,
+65561,79,Instrumentation Services,18057,
+65562,96,Personal Protective Equipment,18064,
+65563,96,Personal Protective Equipment,18064,
+65565,76,Mechanical Services,18048,3
+65566,95,Analyser Services,18051,3
+65567,68,Maintenance Rotating Services,18040,5
+65568,68,Maintenance Rotating Services,18040,5
+65569,68,Maintenance Rotating Services,18040,5
+65570,68,Maintenance Rotating Services,18040,5
+65571,68,Maintenance Rotating Services,18040,5
+65572,68,Maintenance Rotating Services,18040,5
+65573,68,Maintenance Rotating Services,18040,5
+65574,68,Maintenance Rotating Services,18040,5
+65575,68,Maintenance Rotating Services,18040,5
+65576,68,Maintenance Rotating Services,18040,5
+65577,68,Maintenance Rotating Services,18040,5
+65578,68,Maintenance Rotating Services,18040,5
+65579,68,Maintenance Rotating Services,18040,5
+65580,68,Maintenance Rotating Services,18040,5
+65581,68,Maintenance Rotating Services,18040,5
+65582,68,Maintenance Rotating Services,18040,5
+65583,79,Instrumentation Services,18051,
+65584,79,Instrumentation Services,18051,
+65585,79,Instrumentation Services,18051,
+65586,79,Instrumentation Services,18051,
+65587,79,Instrumentation Services,18051,
+65588,79,Instrumentation Services,18051,
+65589,79,Instrumentation Services,18051,
+65590,79,Instrumentation Services,18051,
+65591,79,Instrumentation Services,18051,
+65592,79,Instrumentation Services,18051,
+65593,79,Instrumentation Services,18051,
+65594,79,Instrumentation Services,18051,
+65595,79,Instrumentation Services,18051,
+65596,79,Instrumentation Services,18051,
+65597,79,Instrumentation Services,18051,
+65598,79,Instrumentation Services,18051,
+65599,79,Instrumentation Services,18051,
+65600,79,Instrumentation Services,18051,
+65601,79,Instrumentation Services,18051,
+65602,79,Instrumentation Services,18051,
+65603,79,Instrumentation Services,18051,
+65604,79,Instrumentation Services,18051,
+65605,79,Instrumentation Services,18051,
+65606,79,Instrumentation Services,18051,
+65607,79,Instrumentation Services,18051,
+65608,79,Instrumentation Services,18051,
+65609,79,Instrumentation Services,18051,
+65610,79,Instrumentation Services,18051,
+65611,79,Instrumentation Services,18051,
+65612,79,Instrumentation Services,18051,
+65613,79,Instrumentation Services,18051,
+65614,79,Instrumentation Services,18051,
+65615,79,Instrumentation Services,18051,
+65616,79,Instrumentation Services,18051,
+65617,79,Instrumentation Services,18051,
+65618,79,Instrumentation Services,18051,
+65619,79,Instrumentation Services,18051,
+65620,79,Instrumentation Services,18051,
+65621,79,Instrumentation Services,18051,
+65622,79,Instrumentation Services,18051,
+65623,79,Instrumentation Services,18051,
+65624,79,Instrumentation Services,18051,
+65625,79,Instrumentation Services,18051,
+65626,79,Instrumentation Services,18051,
+65627,79,Instrumentation Services,18051,
+65628,79,Instrumentation Services,18051,
+65629,79,Instrumentation Services,18051,
+65630,79,Instrumentation Services,18051,
+65631,79,Instrumentation Services,18051,
+65632,79,Instrumentation Services,18051,
+65633,79,Instrumentation Services,18051,
+65634,79,Instrumentation Services,18051,
+65635,79,Instrumentation Services,18051,
+65636,79,Instrumentation Services,18051,
+65637,79,Instrumentation Services,18051,
+65638,79,Instrumentation Services,18051,
+65639,79,Instrumentation Services,18051,
+65640,79,Instrumentation Services,18051,
+65641,79,Instrumentation Services,18051,
+65642,79,Instrumentation Services,18051,
+65643,79,Instrumentation Services,18051,
+65644,79,Instrumentation Services,18051,
+65645,79,Instrumentation Services,18051,
+65646,79,Instrumentation Services,18051,
+65647,79,Instrumentation Services,18051,
+65648,79,Instrumentation Services,18051,
+65649,79,Instrumentation Services,18051,
+65650,79,Instrumentation Services,18051,
+65651,79,Instrumentation Services,18051,
+65652,79,Instrumentation Services,18051,
+65653,79,Instrumentation Services,18051,
+65654,79,Instrumentation Services,18051,
+65655,79,Instrumentation Services,18051,
+65656,79,Instrumentation Services,18051,
+65657,79,Instrumentation Services,18051,
+65658,79,Instrumentation Services,18051,
+65659,79,Instrumentation Services,18051,
+65660,79,Instrumentation Services,18051,
+65661,79,Instrumentation Services,18051,
+65662,79,Instrumentation Services,18051,
+65663,79,Instrumentation Services,18051,
+65664,79,Instrumentation Services,18051,
+65665,79,Instrumentation Services,18051,
+65666,79,Instrumentation Services,18051,
+65667,79,Instrumentation Services,18051,
+65668,79,Instrumentation Services,18051,
+65669,79,Instrumentation Services,18051,
+65670,79,Instrumentation Services,18051,
+65671,79,Instrumentation Services,18051,
+65672,79,Instrumentation Services,18051,
+65673,79,Instrumentation Services,18051,
+65674,79,Instrumentation Services,18051,
+65675,79,Instrumentation Services,18051,
+65676,79,Instrumentation Services,18051,
+65677,79,Instrumentation Services,18051,
+65678,79,Instrumentation Services,18051,
+65679,79,Instrumentation Services,18051,
+65680,79,Instrumentation Services,18051,
+65681,79,Instrumentation Services,18051,
+65682,79,Instrumentation Services,18051,
+65683,79,Instrumentation Services,18051,
+65684,79,Instrumentation Services,18051,
+65685,79,Instrumentation Services,18051,
+65686,79,Instrumentation Services,18051,
+65687,79,Instrumentation Services,18051,
+65688,79,Instrumentation Services,18051,
+65689,79,Instrumentation Services,18051,
+65690,79,Instrumentation Services,18051,
+65691,79,Instrumentation Services,18051,
+65692,79,Instrumentation Services,18051,
+65693,79,Instrumentation Services,18051,
+65694,79,Instrumentation Services,18051,
+65695,79,Instrumentation Services,18051,
+65696,79,Instrumentation Services,18051,
+65697,79,Instrumentation Services,18051,
+65698,79,Instrumentation Services,18051,
+65699,79,Instrumentation Services,18051,
+65700,79,Instrumentation Services,18051,
+65701,79,Instrumentation Services,18051,
+65702,79,Instrumentation Services,18051,
+65703,79,Instrumentation Services,18051,
+65704,79,Instrumentation Services,18051,
+65705,79,Instrumentation Services,18051,
+65706,79,Instrumentation Services,18051,
+65707,79,Instrumentation Services,18051,
+65708,79,Instrumentation Services,18051,
+65709,79,Instrumentation Services,18051,
+65710,79,Instrumentation Services,18051,
+65711,79,Instrumentation Services,18051,
+65712,79,Instrumentation Services,18051,
+65713,79,Instrumentation Services,18051,
+65714,79,Instrumentation Services,18051,
+65715,79,Instrumentation Services,18051,
+65716,79,Instrumentation Services,18051,
+65717,79,Instrumentation Services,18051,
+65718,79,Instrumentation Services,18051,
+65719,79,Instrumentation Services,18051,
+65720,79,Instrumentation Services,18051,
+65721,79,Instrumentation Services,18051,
+65722,79,Instrumentation Services,18051,
+65723,79,Instrumentation Services,18051,
+65724,79,Instrumentation Services,18051,
+65725,79,Instrumentation Services,18051,
+65726,79,Instrumentation Services,18051,
+65727,79,Instrumentation Services,18051,
+65728,79,Instrumentation Services,18051,
+65729,79,Instrumentation Services,18051,
+65730,79,Instrumentation Services,18051,
+65731,79,Instrumentation Services,18051,
+65732,79,Instrumentation Services,18051,
+65733,79,Instrumentation Services,18051,
+65734,79,Instrumentation Services,18051,
+65735,79,Instrumentation Services,18051,
+65736,79,Instrumentation Services,18051,
+65737,79,Instrumentation Services,18051,
+65738,79,Instrumentation Services,18051,
+65739,79,Instrumentation Services,18051,
+65740,79,Instrumentation Services,18051,
+65741,79,Instrumentation Services,18051,
+65742,79,Instrumentation Services,18051,
+65743,79,Instrumentation Services,18051,
+65744,79,Instrumentation Services,18051,
+65745,79,Instrumentation Services,18051,
+65746,79,Instrumentation Services,18051,
+65747,79,Instrumentation Services,18051,
+65748,79,Instrumentation Services,18051,
+65749,79,Instrumentation Services,18051,
+65750,79,Instrumentation Services,18051,
+65751,79,Instrumentation Services,18051,
+65752,79,Instrumentation Services,18051,
+65753,79,Instrumentation Services,18051,
+65754,79,Instrumentation Services,18051,
+65755,79,Instrumentation Services,18051,
+65756,79,Instrumentation Services,18051,
+65757,79,Instrumentation Services,18051,
+65758,79,Instrumentation Services,18051,
+65759,79,Instrumentation Services,18051,
+65760,79,Instrumentation Services,18051,
+65761,79,Instrumentation Services,18051,
+65762,79,Instrumentation Services,18051,
+65763,79,Instrumentation Services,18051,
+65764,79,Instrumentation Services,18051,
+65765,79,Instrumentation Services,18051,
+65766,79,Instrumentation Services,18051,
+65767,79,Instrumentation Services,18051,
+65768,79,Instrumentation Services,18051,
+65769,79,Instrumentation Services,18051,
+65770,79,Instrumentation Services,18051,
+65771,79,Instrumentation Services,18051,
+65772,79,Instrumentation Services,18051,
+65773,79,Instrumentation Services,18051,
+65774,79,Instrumentation Services,18051,
+65775,79,Instrumentation Services,18051,
+65776,79,Instrumentation Services,18051,
+65777,79,Instrumentation Services,18051,
+65778,79,Instrumentation Services,18051,
+65779,79,Instrumentation Services,18051,
+65780,79,Instrumentation Services,18051,
+65781,79,Instrumentation Services,18051,
+65782,79,Instrumentation Services,18051,
+65783,79,Instrumentation Services,18051,
+65784,79,Instrumentation Services,18051,
+65785,79,Instrumentation Services,18051,
+65786,79,Instrumentation Services,18051,
+65787,79,Instrumentation Services,18051,
+65788,79,Instrumentation Services,18051,
+65789,79,Instrumentation Services,18051,
+65790,79,Instrumentation Services,18051,
+65791,79,Instrumentation Services,18051,
+65792,79,Instrumentation Services,18051,
+65793,79,Instrumentation Services,18051,
+65794,79,Instrumentation Services,18051,
+65795,79,Instrumentation Services,18051,
+65796,79,Instrumentation Services,18051,
+65797,79,Instrumentation Services,18051,
+65798,79,Instrumentation Services,18051,
+65799,79,Instrumentation Services,18051,
+65800,79,Instrumentation Services,18051,
+65801,79,Instrumentation Services,18051,
+65802,79,Instrumentation Services,18051,
+65803,79,Instrumentation Services,18051,
+65804,79,Instrumentation Services,18051,
+65805,79,Instrumentation Services,18051,
+65806,79,Instrumentation Services,18051,
+65807,79,Instrumentation Services,18051,
+65808,79,Instrumentation Services,18051,
+65809,79,Instrumentation Services,18051,
+65810,79,Instrumentation Services,18051,
+65811,79,Instrumentation Services,18051,
+65812,79,Instrumentation Services,18051,
+65813,79,Instrumentation Services,18051,
+65814,79,Instrumentation Services,18051,
+65815,79,Instrumentation Services,18051,
+65816,79,Instrumentation Services,18051,
+65817,79,Instrumentation Services,18051,
+65818,79,Instrumentation Services,18051,
+65819,79,Instrumentation Services,18051,
+65820,79,Instrumentation Services,18051,
+65821,79,Instrumentation Services,18051,
+65822,79,Instrumentation Services,18051,
+65823,79,Instrumentation Services,18051,
+65824,79,Instrumentation Services,18051,
+65825,79,Instrumentation Services,18051,
+65826,79,Instrumentation Services,18051,
+65827,79,Instrumentation Services,18051,
+65828,79,Instrumentation Services,18051,
+65829,79,Instrumentation Services,18051,
+65830,79,Instrumentation Services,18051,
+65831,79,Instrumentation Services,18051,
+65832,79,Instrumentation Services,18051,
+65833,79,Instrumentation Services,18051,
+65834,79,Instrumentation Services,18051,
+65835,79,Instrumentation Services,18051,
+65836,79,Instrumentation Services,18051,
+65837,79,Instrumentation Services,18051,
+65838,79,Instrumentation Services,18051,
+65839,79,Instrumentation Services,18051,
+65840,79,Instrumentation Services,18051,
+65841,79,Instrumentation Services,18051,
+65842,79,Instrumentation Services,18051,
+65843,79,Instrumentation Services,18051,
+65844,79,Instrumentation Services,18051,
+65845,79,Instrumentation Services,18051,
+65846,79,Instrumentation Services,18051,
+65847,79,Instrumentation Services,18051,
+65848,79,Instrumentation Services,18051,
+65849,79,Instrumentation Services,18051,
+65850,79,Instrumentation Services,18051,
+65851,79,Instrumentation Services,18051,
+65852,79,Instrumentation Services,18051,
+65853,79,Instrumentation Services,18051,
+65854,79,Instrumentation Services,18051,
+65855,79,Instrumentation Services,18051,
+65856,79,Instrumentation Services,18051,
+65857,79,Instrumentation Services,18051,
+65858,79,Instrumentation Services,18051,
+65859,79,Instrumentation Services,18051,
+65860,79,Instrumentation Services,18051,
+65861,79,Instrumentation Services,18051,
+65862,79,Instrumentation Services,18051,
+65863,79,Instrumentation Services,18051,
+65864,79,Instrumentation Services,18051,
+65865,75,Electrical Services,18048,3
+65866,75,Electrical Services,18048,3
+65867,75,Electrical Services,18048,3
+65868,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65869,66,Maintenance Welding,18057,
+65870,79,Instrumentation Services,18051,3
+65871,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65872,79,Instrumentation Services,18051,3
+65873,79,Instrumentation Services,18051,3
+65874,64,Maintenance Scaffolding,18036,3
+65875,95,Analyser Services,18051,3
+65876,95,Analyser Services,18051,3
+65877,79,Instrumentation Services,18051,3
+65878,79,Instrumentation Services,18051,3
+65879,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65880,95,Analyser Services,18057,5
+65881,80,Maintenance Civil Services,18052,3
+65882,79,Instrumentation Services,18051,3
+65883,79,Instrumentation Services,18051,3
+65884,79,Instrumentation Services,18051,3
+65885,79,Instrumentation Services,18051,3
+65886,79,Instrumentation Services,18051,3
+65887,79,Instrumentation Services,18051,3
+65888,79,Instrumentation Services,18051,
+65889,71,Instrument Spares,18043,
+65890,79,Instrumentation Services,18051,
+65891,71,Instrument Spares,18043,
+65892,95,Analyser Services,18057,5
+65893,66,Maintenance Welding,18038,3
+65894,96,Personal Protective Equipment,18064,
+65895,75,Electrical Services,18057,
+65896,66,Maintenance Welding,18038,
+65897,65,Maintenance Insulation,18037,
+65898,79,Instrumentation Services,,
+65899,66,Maintenance Welding,18038,
+65900,66,Maintenance Welding,18038,
+65901,79,Instrumentation Services,,
+65902,68,Maintenance Rotating Services,18040,3
+65903,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65904,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
+65905,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,
+65906,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65907,96,Personal Protective Equipment,18064,
+65908,96,Personal Protective Equipment,18064,
+65909,96,Personal Protective Equipment,18064,
+65910,100,Vehicle Hire,,
+65911,78,Mechanical Static spares,18050,
+65912,76,Mechanical Services,18048,
+65913,79,Instrumentation Services,18057,
+65914,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65915,78,Mechanical Static spares,18050,
+65916,75,Electrical Services,18047,5
+65917,75,Electrical Services,18047,5
+65918,75,Electrical Services,18047,5
+65919,75,Electrical Services,18047,5
+65920,75,Electrical Services,18047,5
+65921,75,Electrical Services,18047,5
+65922,75,Electrical Services,18047,5
+65923,75,Electrical Services,18047,5
+65924,75,Electrical Services,18047,5
+65925,75,Electrical Services,18047,5
+65926,75,Electrical Services,18047,5
+65927,75,Electrical Services,18047,5
+65928,75,Electrical Services,18047,5
+65929,75,Electrical Services,18047,5
+65930,75,Electrical Services,18047,5
+65931,75,Electrical Services,18047,5
+65932,75,Electrical Services,18047,5
+65933,75,Electrical Services,18047,5
+65934,75,Electrical Services,18047,5
+65935,75,Electrical Services,18047,5
+65936,75,Electrical Services,18047,5
+65937,75,Electrical Services,18047,5
+65938,75,Electrical Services,18047,5
+65939,75,Electrical Services,18047,5
+65940,75,Electrical Services,18047,5
+65941,75,Electrical Services,18047,5
+65942,75,Electrical Services,18047,5
+65943,75,Electrical Services,18047,5
+65944,75,Electrical Services,18047,5
+65945,75,Electrical Services,18047,5
+65946,75,Electrical Services,18047,5
+65947,75,Electrical Services,18047,5
+65948,75,Electrical Services,18047,5
+65949,75,Electrical Services,18047,5
+65950,75,Electrical Services,18047,5
+65951,75,Electrical Services,18047,5
+65952,75,Electrical Services,18047,5
+65953,75,Electrical Services,18047,5
+65954,75,Electrical Services,18047,5
+65955,75,Electrical Services,18047,5
+65956,75,Electrical Services,18047,5
+65957,75,Electrical Services,18047,5
+65958,75,Electrical Services,18047,5
+65959,75,Electrical Services,18047,5
+65960,76,Mechanical Services,18057,
+65961,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65962,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65963,79,Instrumentation Services,18051,
+65964,71,Instrument Spares,18043,
+65965,79,Instrumentation Services,18051,
+65966,71,Instrument Spares,18043,
+65967,79,Instrumentation Services,18051,
+65968,71,Instrument Spares,18043,
+65969,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65970,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65971,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65972,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65973,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65974,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65975,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65976,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65977,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+65978,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+65979,75,Electrical Services,18047,
+65980,69,Electrical Spares,18041,
+65981,76,Mechanical Services,18047,
+65982,76,Mechanical Services,18047,
+65983,76,Mechanical Services,18047,
+65984,76,Mechanical Services,18047,
+65985,98,Material Reservation,18064,
+65986,65,Maintenance Insulation,18057,
+65987,64,Maintenance Scaffolding,18057,
+65988,68,Maintenance Rotating Services,18040,3
+65989,98,Material Reservation,18064,
+65990,98,Material Reservation,18064,
+65991,98,Material Reservation,18064,
+65992,76,Mechanical Services,18047,
+65993,79,Instrumentation Services,18051,3
+65994,79,Instrumentation Services,18051,3
+65995,79,Instrumentation Services,18051,3
+65996,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65997,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65998,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+65999,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66000,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66001,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66002,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66003,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66004,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66005,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66006,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66007,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66008,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66009,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66010,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66011,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66012,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66013,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66014,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66015,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66016,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66017,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66018,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66019,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66020,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66021,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66022,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66023,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66024,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+66025,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66026,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66027,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66028,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+66029,75,Electrical Services,18047,
+66030,75,Electrical Services,18047,
+66031,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+66032,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+66033,68,Maintenance Rotating Services,18040,5
+66034,68,Maintenance Rotating Services,18040,5
+66035,68,Maintenance Rotating Services,18040,5
+66036,68,Maintenance Rotating Services,18040,5
+66037,68,Maintenance Rotating Services,18040,5
+66038,68,Maintenance Rotating Services,18040,5
+66039,68,Maintenance Rotating Services,18040,5
+66040,68,Maintenance Rotating Services,18040,5
+66041,68,Maintenance Rotating Services,18040,5
+66042,68,Maintenance Rotating Services,18040,5
+66043,68,Maintenance Rotating Services,18040,5
+66044,68,Maintenance Rotating Services,18040,5
+66045,68,Maintenance Rotating Services,18040,5
+66046,68,Maintenance Rotating Services,18040,5
+66047,68,Maintenance Rotating Services,18040,5
+66048,68,Maintenance Rotating Services,18040,5
+66049,68,Maintenance Rotating Services,18040,5
+66050,68,Maintenance Rotating Services,18040,5
+66051,68,Maintenance Rotating Services,18040,5
+66052,68,Maintenance Rotating Services,18040,5
+66053,68,Maintenance Rotating Services,18040,5
+66054,68,Maintenance Rotating Services,18040,5
+66055,68,Maintenance Rotating Services,18040,5
+66056,68,Maintenance Rotating Services,18040,5
+66057,68,Maintenance Rotating Services,18040,5
+66058,68,Maintenance Rotating Services,18040,5
+66059,68,Maintenance Rotating Services,18040,5
+66060,68,Maintenance Rotating Services,18040,5
+66061,68,Maintenance Rotating Services,18040,5
+66062,68,Maintenance Rotating Services,18040,5
+66063,68,Maintenance Rotating Services,18040,5
+66064,68,Maintenance Rotating Services,18040,5
+66065,68,Maintenance Rotating Services,18040,5
+66066,68,Maintenance Rotating Services,18040,5
+66067,68,Maintenance Rotating Services,18040,5
+66068,68,Maintenance Rotating Services,18040,5
+66069,68,Maintenance Rotating Services,18040,5
+66070,68,Maintenance Rotating Services,18040,5
+66071,68,Maintenance Rotating Services,18040,5
+66072,68,Maintenance Rotating Services,18040,5
+66073,68,Maintenance Rotating Services,18040,5
+66074,68,Maintenance Rotating Services,18040,5
+66075,68,Maintenance Rotating Services,18040,5
+66076,68,Maintenance Rotating Services,18040,5
+66077,68,Maintenance Rotating Services,18040,5
+66078,68,Maintenance Rotating Services,18040,5
+66079,68,Maintenance Rotating Services,18040,5
+66080,68,Maintenance Rotating Services,18040,5
+66081,68,Maintenance Rotating Services,18040,5
+66082,68,Maintenance Rotating Services,18040,5
+66083,68,Maintenance Rotating Services,18040,5
+66084,68,Maintenance Rotating Services,18040,5
+66085,68,Maintenance Rotating Services,18040,5
+66086,68,Maintenance Rotating Services,18040,5
+66087,68,Maintenance Rotating Services,18040,5
+66088,68,Maintenance Rotating Services,18040,5
+66089,68,Maintenance Rotating Services,18040,5
+66090,68,Maintenance Rotating Services,18040,5
+66091,68,Maintenance Rotating Services,18040,5
+66092,64,Maintenance Scaffolding,18036,3
+66094,76,Mechanical Services,18036,
+66095,75,Electrical Services,18047,
+66096,69,Electrical Spares,18041,
+66097,66,Maintenance Welding,18038,3
+66098,94,Heating Ventilation Air Condition,18051,
+66099,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66100,66,Maintenance Welding,,
+66101,66,Maintenance Welding,,
+66102,76,Mechanical Services,,
+66103,95,Analyser Services,18051,3
+66104,68,Maintenance Rotating Services,18040,3
+66105,68,Maintenance Rotating Services,18040,3
+66106,75,Electrical Services,18047,
+66107,69,Electrical Spares,18041,
+66108,96,Personal Protective Equipment,18064,
+66109,75,Electrical Services,18047,
+66110,69,Electrical Spares,18041,
+66111,75,Electrical Services,18047,
+66112,69,Electrical Spares,18041,
+66113,76,Mechanical Services,18048,3
+66114,63,VALVES - REGULAR,18051,3
+66115,76,Mechanical Services,18048,3
+66116,98,Material Reservation,18064,
+66117,92,Piping (Steam tracing),18048,3
+66118,92,Piping (Steam tracing),18048,3
+66119,75,Electrical Services,18047,3
+66120,75,Electrical Services,18047,3
+66121,75,Electrical Services,18047,
+66122,75,Electrical Services,18047,
+66123,75,Electrical Services,18047,
+66124,75,Electrical Services,18047,
+66125,75,Electrical Services,18047,
+66126,75,Electrical Services,18047,
+66127,75,Electrical Services,18047,
+66128,75,Electrical Services,18047,
+66129,75,Electrical Services,18047,
+66130,75,Electrical Services,18047,
+66131,75,Electrical Services,18047,
+66132,75,Electrical Services,18047,
+66133,75,Electrical Services,18047,
+66134,75,Electrical Services,18047,
+66135,75,Electrical Services,18047,
+66136,75,Electrical Services,18047,
+66137,75,Electrical Services,18047,
+66138,75,Electrical Services,18047,
+66139,75,Electrical Services,18047,
+66140,75,Electrical Services,18047,
+66141,75,Electrical Services,18047,
+66142,75,Electrical Services,18047,
+66143,75,Electrical Services,18047,
+66144,75,Electrical Services,18047,
+66145,75,Electrical Services,18047,
+66146,75,Electrical Services,18047,
+66147,75,Electrical Services,18047,
+66148,75,Electrical Services,18047,
+66149,75,Electrical Services,18047,
+66150,75,Electrical Services,18047,
+66151,75,Electrical Services,18047,
+66152,75,Electrical Services,18047,
+66153,75,Electrical Services,18047,
+66154,75,Electrical Services,18047,
+66155,75,Electrical Services,18047,
+66156,75,Electrical Services,18047,
+66157,75,Electrical Services,18047,
+66158,75,Electrical Services,18047,
+66159,75,Electrical Services,18047,
+66160,75,Electrical Services,18047,
+66161,75,Electrical Services,18047,
+66162,75,Electrical Services,18047,
+66163,75,Electrical Services,18047,
+66164,75,Electrical Services,18047,
+66165,75,Electrical Services,18047,
+66166,75,Electrical Services,18047,
+66167,75,Electrical Services,18047,
+66168,75,Electrical Services,18047,
+66169,75,Electrical Services,18047,
+66170,75,Electrical Services,18047,
+66171,78,Mechanical Static spares,18050,3
+66172,92,Piping (Steam tracing),18048,
+66173,92,Piping (Steam tracing),18048,
+66174,78,Mechanical Static spares,18050,
+66175,92,Piping (Steam tracing),18048,
+66176,92,Piping (Steam tracing),18048,
+66177,92,Piping (Steam tracing),18048,3
+66178,68,Maintenance Rotating Services,18040,
+66179,95,Analyser Services,18051,5
+66180,95,Analyser Services,18051,5
+66181,95,Analyser Services,18051,5
+66182,95,Analyser Services,18051,5
+66183,95,Analyser Services,18051,5
+66184,95,Analyser Services,18051,5
+66185,95,Analyser Services,18051,5
+66186,95,Analyser Services,18051,5
+66187,95,Analyser Services,18051,5
+66188,95,Analyser Services,18051,5
+66189,95,Analyser Services,18051,5
+66190,95,Analyser Services,18051,5
+66191,95,Analyser Services,18051,5
+66192,95,Analyser Services,18051,5
+66193,95,Analyser Services,18051,5
+66194,95,Analyser Services,18051,5
+66195,95,Analyser Services,18051,5
+66196,95,Analyser Services,18051,5
+66197,95,Analyser Services,18051,5
+66198,95,Analyser Services,18051,5
+66199,95,Analyser Services,18051,5
+66200,95,Analyser Services,18051,5
+66201,95,Analyser Services,18051,5
+66202,95,Analyser Services,18051,5
+66203,95,Analyser Services,18051,5
+66204,95,Analyser Services,18051,5
+66205,95,Analyser Services,18051,5
+66206,95,Analyser Services,18051,5
+66207,95,Analyser Services,18051,5
+66208,95,Analyser Services,18051,5
+66209,95,Analyser Services,18051,5
+66210,95,Analyser Services,18051,5
+66211,95,Analyser Services,18051,5
+66212,95,Analyser Services,18051,5
+66213,95,Analyser Services,18051,5
+66214,95,Analyser Services,18051,5
+66215,95,Analyser Services,18051,5
+66216,95,Analyser Services,18051,5
+66217,95,Analyser Services,18051,5
+66218,95,Analyser Services,18051,5
+66219,95,Analyser Services,18051,5
+66220,95,Analyser Services,18051,5
+66221,95,Analyser Services,18051,5
+66222,95,Analyser Services,18051,5
+66223,95,Analyser Services,18051,5
+66224,95,Analyser Services,18051,5
+66225,95,Analyser Services,18051,5
+66226,95,Analyser Services,18051,5
+66227,95,Analyser Services,18051,5
+66228,95,Analyser Services,18051,5
+66229,95,Analyser Services,18051,5
+66230,95,Analyser Services,18051,5
+66231,95,Analyser Services,18051,5
+66232,95,Analyser Services,18051,5
+66233,95,Analyser Services,18051,5
+66234,95,Analyser Services,18051,5
+66235,95,Analyser Services,18051,5
+66236,95,Analyser Services,18051,5
+66237,95,Analyser Services,18051,5
+66238,95,Analyser Services,18051,5
+66239,95,Analyser Services,18051,5
+66240,95,Analyser Services,18051,5
+66241,95,Analyser Services,18051,5
+66242,95,Analyser Services,18051,5
+66243,68,Maintenance Rotating Services,18040,
+66244,73,Mechanical Rotating Spares,18045,
+66245,68,Maintenance Rotating Services,18040,
+66246,73,Mechanical Rotating Spares,18040,
+66247,92,Piping (Steam tracing),18048,
+66248,92,Piping (Steam tracing),18048,
+66249,92,Piping (Steam tracing),18048,
+66250,92,Piping (Steam tracing),18048,
+66251,92,Piping (Steam tracing),18048,
+66252,92,Piping (Steam tracing),18048,
+66253,92,Piping (Steam tracing),18048,
+66254,92,Piping (Steam tracing),18048,
+66255,65,Maintenance Insulation,18037,
+66256,64,Maintenance Scaffolding,18036,
+66257,78,Mechanical Static spares,18050,
+66258,92,Piping (Steam tracing),18048,
+66259,78,Mechanical Static spares,18050,
+66260,92,Piping (Steam tracing),18048,3
+66261,65,Maintenance Insulation,18037,3
+66262,92,Piping (Steam tracing),18048,
+66263,92,Piping (Steam tracing),18048,
+66264,92,Piping (Steam tracing),18048,
+66265,92,Piping (Steam tracing),18048,
+66266,92,Piping (Steam tracing),18048,
+66267,92,Piping (Steam tracing),18048,
+66268,92,Piping (Steam tracing),18048,
+66269,92,Piping (Steam tracing),18048,3
+66270,92,Piping (Steam tracing),18048,3
+66271,92,Piping (Steam tracing),18048,3
+66272,80,Maintenance Civil Services,18052,3
+66273,75,Electrical Services,18047,3
+66274,96,Personal Protective Equipment,18064,3
+66275,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66276,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66277,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66278,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66279,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66280,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66281,65,Maintenance Insulation,18037,3
+66282,68,Maintenance Rotating Services,18040,3
+66283,96,Personal Protective Equipment,18064,
+66284,96,Personal Protective Equipment,18064,
+66285,96,Personal Protective Equipment,18064,
+66286,75,Electrical Services,18047,
+66287,75,Electrical Services,18057,
+66288,75,Electrical Services,18047,3
+66289,68,Maintenance Rotating Services,18040,3
+66290,76,Mechanical Services,18048,3
+66291,75,Electrical Services,18057,
+66292,80,Maintenance Civil Services,18052,4
+66293,80,Maintenance Civil Services,18052,4
+66294,79,Instrumentation Services,18057,
+66295,80,Maintenance Civil Services,18052,4
+66296,76,Mechanical Services,18048,
+66297,78,Mechanical Static spares,18050,
+66298,76,Mechanical Services,18048,
+66299,78,Mechanical Static spares,18050,
+66300,76,Mechanical Services,18048,
+66301,78,Mechanical Static spares,18050,
+66302,79,Instrumentation Services,18051,3
+66303,75,Electrical Services,18057,
+66304,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66305,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,3
+66306,76,Mechanical Services,18057,
+66307,76,Mechanical Services,18048,
+66308,78,Mechanical Static spares,18050,
+66309,76,Mechanical Services,18048,
+66310,78,Mechanical Static spares,18050,
+66311,79,Instrumentation Services,18051,
+66312,79,Instrumentation Services,18051,
+66313,79,Instrumentation Services,18051,
+66314,79,Instrumentation Services,18051,
+66315,76,Mechanical Services,18048,
+66316,75,Electrical Services,18047,
+66317,65,Maintenance Insulation,18037,
+66318,68,Maintenance Rotating Services,18040,3
+66319,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,4
+66320,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,4
+66321,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,4
+66322,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,4
+66323,76,Mechanical Services,18048,3
+66324,76,Mechanical Services,18048,3
+66325,76,Mechanical Services,18048,3
+66326,76,Mechanical Services,18048,3
+66327,76,Mechanical Services,18048,3
+66328,95,Analyser Services,18051,3
+66329,76,Mechanical Services,18048,3
+66330,79,Instrumentation Services,18051,3
+66331,76,Mechanical Services,18048,3
+66332,68,Maintenance Rotating Services,18040,3
+66333,76,Mechanical Services,18048,3
+66334,68,Maintenance Rotating Services,18040,3
+66335,79,Instrumentation Services,18051,3
+66336,68,Maintenance Rotating Services,18040,3
+66337,68,Maintenance Rotating Services,18040,3
+66338,68,Maintenance Rotating Services,18040,3
+66339,68,Maintenance Rotating Services,18040,3
+66340,68,Maintenance Rotating Services,18040,3
+66341,68,Maintenance Rotating Services,18040,3
+66342,68,Maintenance Rotating Services,18040,3
+66343,68,Maintenance Rotating Services,18040,3
+66344,68,Maintenance Rotating Services,18040,3
+66345,68,Maintenance Rotating Services,18040,3
+66346,95,Analyser Services,18051,3
+66347,79,Instrumentation Services,18051,3
+66348,71,Instrument Spares,18051,3
+66349,95,Analyser Services,18051,3
+66350,95,Analyser Services,18051,3
+66351,79,Instrumentation Services,18051,3
+66352,76,Mechanical Services,18048,
+66353,78,Mechanical Static spares,18050,
+66354,78,Mechanical Static spares,18050,
+66355,75,Electrical Services,18047,3
+66356,75,Electrical Services,18047,3
+66357,95,Analyser Services,18057,
+66358,95,Analyser Services,18057,
+66359,95,Analyser Services,18057,
+66360,79,Instrumentation Services,18057,
+66361,97,ICSS/DCS/SIS/UCP/,18057,
+66362,100,Vehicle Hire,,
+66363,95,Analyser Services,18057,
+66364,75,Electrical Services,18057,5
+66365,76,Mechanical Services,18048,3
+66366,78,Mechanical Static spares,18050,3
+66367,80,Maintenance Civil Services,18052,3
+66368,79,Instrumentation Services,,
+66369,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,,
+66370,73,Mechanical Rotating Spares,18045,

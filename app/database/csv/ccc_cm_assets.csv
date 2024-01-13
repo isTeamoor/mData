@@ -130,6 +130,7 @@
 175226,175191,Junior Electrical technician,Kamolov Dilshod Farmon o`g`li
 175227,175191,Junior Electrician,Boymurodov Jasurbek Baxriddin o`g`li
 211382,175191,Rotating Engineer,Ochilov Shuhrat
+175214,175192,Analyzer Junior Technician,G‘aybullayev Maqsudjon
 175235,175192,Electrical Supervisor,Axmedov Ibroxim
 175236,175192,Electrical Junior Technician,Bahodirov Dilshodbek
 175239,175192,Electrical Junior Technician,Bokiev Kamol
@@ -158,6 +159,9 @@
 218321,218261,Bus Driver,Ergashev Ravshan Quldoshevich
 218332,218261,Vehicle Driver,Suvonov Uchqun Erkinovich
 219877,218265,Senior field operator,Normirzayev Yusuf Abulxakim o`g`li
+218308,218273,Senior Process Safety Specialist,Saparniyazov Kaxarman Kaliyevich
+218296,218274,Leading engineer,Boltayev Sanjar Rustam o'g'li
+218302,218274,Plant Material Balance Engineer,Ro'ziyev Alisher Axtamovich
 220948,218533,Trainee,Azimov Alisher Morqa o'g'li
 220964,218533,Trainee,Suyunov Mansur Baxodir o’g’li
 222188,218533,Trainee,Baxronov Axror Shokir o`g`li
@@ -4939,6 +4943,7 @@
 224611,77429,TBC,120-FV-2037
 224668,77429,TBC,120-A-REK-1001
 224669,77429,TBC,120-A-REK-2001
+226177,77429,Absorber ,120-VC-221
 710,77430,OIL COOLER (PLATE HEX),120-CC-101-EP-01B
 77433,77430,Air Seperation Unit Common System,Unit 10-Common
 77436,77430,Synthesis Gas Common,Unit 20-Common
@@ -5264,7 +5269,7 @@
 107840,78368,START-UP SILENCER,150-XS-002
 107855,78368,DW REACTOR FEED HEATER,150-HF-003
 107882,78368,DW FRACTIONATOR REBOILER HEATER,150-HF-004
-108044,78368,HDT Effluent(2Phase)/LIQUID,150-PSV-0005 
+108044,78368,HDT Effluent(2Phase)/LIQUID,150-PSV-0005
 108046,78368,DMDS(V) / GAS,150-PSV-0010A
 108047,78368,DMDS(V) / GAS,150-PSV-0010B
 108088,78368,Sour Water(L) / LIQUID,150-PSV-0046A
@@ -5345,6 +5350,9 @@
 223399,78368,Pressure Safety Valve,150-PSV-0730
 224659,78368,Pressure Saety Valve,150-PSV-0747
 224660,78368,Pressure Saety Valve,150-PSV-0748
+226023,78368,DW External Recycle Gas / Gas,150-PSV-0732
+226024,78368,Vapor Mixture  / GAS ,150-PSV-0784
+226025,78368,Vapor Mixture  / GAS ,150-PSV-0785
 85592,78369,HYDROGENATOR (VESSEL REACTOR),160-VR-001
 85593,78369,SULPHUR ABSORBERS (VESSEL REACTOR),160-VR-002A
 85594,78369,SULPHUR ABSORBERS (VESSEL REACTOR),160-VR-002B
@@ -27529,8 +27537,8 @@
 107776,107739,OFFGAS COOLERS&T HEX (DUPLEX & 316L),150-ES-019
 107779,107739,DIESEL SPONGE WATER COOLERS&T HEX (DUPLEX & 316L),150-ES-036
 107930,107739,OffGas Compressor,150-CR-002
-108066,107739,Fractionator Offgas(2Phase)/GAS,150-PSV-0027A 
-108067,107739,Fractionator Offgas(2Phase)/GAS,150-PSV-0027B 
+108066,107739,Fractionator Offgas(2Phase)/GAS,150-PSV-0027A
+108067,107739,Fractionator Offgas(2Phase)/GAS,150-PSV-0027B
 108415,107739,CONTROL VALVE,150-FV-0004
 108434,107739,ON-OFF VALVE,150-XV-0163
 111255,107739,FLOW ELEMENT,150-FE-0074
@@ -27791,8 +27799,8 @@
 113196,107760,TRANSMITTER_PRESSURE,150-PT-0181
 113197,107760,CONTROL VALVE,150-PV-0180
 113209,107760,LEVEL GAUGE,150-LG-0096
-108036,107761,Wax(2Phase) / Gas,150-PSV-0001A 
-108037,107761,Wax(2Phase) / Gas,150-PSV-0001B 
+108036,107761,Wax(2Phase) / Gas,150-PSV-0001A
+108037,107761,Wax(2Phase) / Gas,150-PSV-0001B
 108404,107761,TRANSMITTER_DP ,150-PDT-0003
 108405,107761,TRANSMITTER_TEMPERATURE,150-TT-0001
 108408,107761,PRESSURE GAUGE,150-PG-0001
@@ -27893,8 +27901,8 @@
 110377,107765,ON-OFF VALVE,150-XV-0142
 115341,107765,SAMPLE POINT,150-SC-009
 107773,107766,HLPS VAPOR WATER COOLERS&T HEX (DUPLEX & 316L),150-ES-009
-108051,107766,CLPS Liquid(M) / LIQUID,150-PSV-0014A 
-108052,107766,CLPS Liquid(M) / LIQUID,150-PSV-0014B 
+108051,107766,CLPS Liquid(M) / LIQUID,150-PSV-0014A
+108052,107766,CLPS Liquid(M) / LIQUID,150-PSV-0014B
 110382,107766,TRANSMITTER_DP FLOW,150-FT-0047
 110383,107766,TRANSMITTER_DP FLOW,150-FT-0047A
 110384,107766,TRANSMITTER_DP FLOW,150-FT-0047B
@@ -28139,7 +28147,7 @@
 114754,107788,PRESSURE GAUGE,150-PG-0344
 114755,107788,PRESSURE GAUGE,150-PG-0345
 224307,107788,Dimister separator,150-PSV-1375(0375)
-224308,107788,Dimister separator,150-PSV-0376
+224308,107788,Dimister separator,150-PSV-0376(0312)
 114737,107789,DP,150-LT-0381
 114749,107789,BIMETAL,150-TG-0317
 114758,107789,PRESSURE GAUGE,150-PG-0348
@@ -41481,7 +41489,7 @@
 175448,175190,Rotating Supervisor,Ma'murov Faruxjon
 175449,175190,Instrumentation Junior Technician,Muhammadiev Sardor
 175450,175190,Static Junior Technician,Muhammadiyev Kamoliddin
-175451,175190,Instrumentation Technician,Norboev Faxriddin
+175451,175190,Instrumentation Technician,Norboev Faxriddin Mamasoatovich
 175452,175190,Instrumentation Engineer,Ochilov Mirsoat
 175453,175190,Instrumentation Engineer,Qosimov Marufjon
 175454,175190,Electrical Junior Technician,Shaymardonov Sherzod
@@ -41535,13 +41543,11 @@
 223241,175191,Inst Junior technique,Eshqobilov Quvonch
 223461,175191,Junior electrician PWU,Baxriyev Sunnatbek
 223882,175191,Junior electrical technician,Norov Siroj Djurayevich
-175214,175192,Analyzer Junior Technician,G‘aybullayev Maqsudjon
 175219,175192,Maintenance Planner (U&O),Xaydorov Mirsaid
-175229,175192,Analyzer Technician,Abdiyev Abdirashid
 175230,175192,Static Junior Technician,Abdujabborov Sherzod
 175231,175192,Rotating Engineer,Abidov Ilxom
 175232,175192,Electrical supervisor,Aliqulov Komil
-175233,175192,Analyzer Supervisor,Aminov Navruzbek
+175233,175192,Analyser Supervisor,Aminov Navruzbek
 175234,175192,Static Technician,Ashrapov Kamolliddin
 175237,175192,Instrumentation Engineer,Barotov Muxlis
 175240,175192,Field Manager - U&O,Boyqobilov Avazbek
@@ -41549,13 +41555,13 @@
 175243,175192,Instrumentation Engineer,Davlatov Quvonchbek
 175244,175192,Instrumentation Junior Technician,Do`stqobilov Shohruh Hamdam o`g`li
 175246,175192,Electrical Engineer,Farmonov Farhod
-175247,175192,Analyzer Technician,Farmonov Lazizbek
+175247,175192,Analyser Technician,Farmonov Lazizbek
 175248,175192,Rotating Technician ,Fayzullayev Shaxzod
 175250,175192,Rotating Supervisor ,Kulnazarov Dilmurot
 175251,175192,Rotating Technician ,Lapasov G'anijon
 175252,175192,Electrical Technician,Mavlonov Ulug'bek
 175254,175192,Rotating Engineer,Moyliyev Nurbek
-175255,175192,Static Technician ,Norboyev Faxriddin
+175255,175192,Static Technician ,Norboyev Faxriddin Abdumalik o'g'li
 175256,175192,Instrumentation Junior Technician,Ochilov Suxrobbek
 175259,175192,Electrical Engineer,Qoraboyev Bahrom
 175261,175192,Electrical Technician,Sa`dullayev Elbek
@@ -41568,6 +41574,7 @@
 218563,175192,Junior planner,Asrorxonov Abusoleh Qutbiddinovich
 220889,175192,Rotating Junior technician,Buriev Muhsin 
 220890,175192,Rotating Junior technician,Ubaydullayev Doston
+222593,175192,Analyser Junior Technician,Raxmatov Sardor Sunnatilla o'g'li
 222679,175192,Static Junior technician,Abduholiqov Ilyos Turdiyevich
 223883,175192,Junior Electrical Technician ,Mamadiev Xumoyun Azamat o'gli
 224367,175192,Stat junior technician,Azimov Alisher Morqa o'g'li
@@ -41594,7 +41601,7 @@
 208836,208767,Machine Monitoring System,MMS
 208837,208767,Safety Instrumented System,SIS
 207283,208822,Manager of Routine Maintenance Manager,To'lqin Berdiev
-208819,208822,Deputy of Maintenance Manager,Shakhzod Mamasadikov
+208819,208822,Maintenance Manager,Shaxzod Mamasadikov Abdukaxxarovich
 208821,208822,Maintenance Manager,Gareth Jones Bryan
 209264,208822,Cost Controller,Isxakov Timur Iminjanovich
 218363,208822,Deputy of Manager of Routine Maintenance Manager,Pardayev Aliyor Dusnazarovich
@@ -44637,6 +44644,7 @@
 86266,211454,STEAM REFORMER FURNACE PKAGE,160-AT-0012B
 86267,211454,STEAM REFORMER FURNACE PKAGE,160-AT-0012C
 86268,211454,STEAM REFORMER FURNACE PKAGE,160-AT-0012D
+225610,211471,To lift equipments or things,Special tools
 85756,211474,Total Sulphur Analyzer,160-AT-0001
 85867,211474,CH4 Analyzer,160-AT-0002
 85976,211474,CO Analyzer,160-AT-0004
@@ -44821,8 +44829,10 @@
 220009,217826,Analyzer LLF,SGU analyzer LLF
 220040,217826,Ex Visual Inspection,Ex Visual
 175208,218224,Instrumentation Senior Engineer,Abdizoirov Islom
+175229,218224,Analyzer Technician,Abdiyev Abdirashid
 175438,218224,Electrical Junior Technician,Choriyev Akrom
 175442,218224,Electrical Supervisor,Hasanov Sherzod
+218312,218224,Incident Management and Investigation Coordinator,O'mrzaqov G'anisher Boynazarovich
 218358,218224,Analyzer Engineer,Umbarov Asqarjon Sayfiddinovich 
 218360,218224,Rotating Equipment engineer,Boymatov Nurmuxammad Almardon o'g'li
 218361,218224,Rotating Equipment engineer,Boymuradov Bobur Jamol o'g'li
@@ -44859,6 +44869,7 @@
 218397,218224,Junior Technician,Bozorov Uyg'un Qodir o'gli
 223459,218224,Rotating /Technical Specialist,Xurramov Temurbek
 218562,218245,Junior specialist,Arslonov Javohir Ruslanovich
+221030,218245,Trainee,Temurov Mirjahon Jamshid o'g'li
 221652,218245,Head of department,	Kholmatov Shokhrukh Furqat o'g'li
 221653,218245,Specialist,Matchanova Shaxnaz Irkinovna
 221654,218245,Specialist,Yuldashev Jaxongir Anvarovich
@@ -44933,11 +44944,14 @@
 222185,218247,specialist,Achilov Azam
 222186,218247,junior specialist,Jabborov Rustam
 224002,218247,Specialist,Narmetov Sardor Botirali o'g'li
+220061,218248,Specialist,Azimov Javohir Odil o'g'li
 221427,218248,Leading Accountant,Ibragimov Jahongir Tillayevich
 221428,218248,Accountant,Orziyev Shahzodbek Xoliqul o'g'li
 221429,218248,Accountant,Kattaboyev Zafar Safarovich
 221748,218248,Lead Accountant,Majidov Zafar Sheraliyevich
 221749,218248,Accountant,Rahimov Jamshid Musurmonovich
+226176,218248,Accountant,Mirxodjayev Sharafutdin Sayfutdinovich
+219744,218249,Junior specialist,Rixsiboyeva Nodira Umar qizi
 221664,218249,Senior specialist,Khaydarov Makhammadjon Khusaynovich
 221665,218249,Specialist,Ibrokhimov Alisher Khasan o'g'li
 221666,218249,Junior specialist,Tojiev Khamro Erkaboevich
@@ -44986,12 +45000,10 @@
 219741,218257,Translation and testing of employee knowledge,Miraxmedova Saodat Shuxratovna
 219742,218257,Specialist,Pirnazarova Gulnoza Abidbekovna
 219743,218257,Leading specialist,Baymuradov Farxod Yakubovich
-219744,218257,Junior specialist,Rixsiboyeva Nodira Umar qizi
 219745,218257,Specialist,Djurayev Doniyor Xasanovich
 219746,218257,Junior specialist,Shonazarova Aziza Shuhrat qizi
 219747,218257,Junior specialist,Davranova Soxiba Suvonovna
 219748,218257,Junior specialist,Bektemirov Sardor Xusan o'g'li
-220061,218257,Specialist,Azimov Javohir Odil o'g'li
 218313,218261,Driver (Crane),Abdimajidov Avazbek Abdusalom o'g'li
 218314,218261,Leading Dispacher,Abduraxmonov Abdulloh Olimovich
 218315,218261,Vehicle Driver,Abrayev Zufar  Sadullayevich
@@ -45231,8 +45243,6 @@
 218480,218266,Shift engineer,Hamroyev Shahzod Mehriddinovich
 218481,218266,Operator,Ikromov Akbar Isroil o'g'li
 218482,218266,Shift engineer,Isroilov Rustamjon Ilg`orjon o`g`li
-218483,218266,Shift leader,Jalilov Jasur Xalilovich
-218484,218266,Shift leader,Jumanov  Laziz Ergash o`g`li
 218485,218266,Shift leader,Kenjayev Abbos Erkin o`g`li
 218486,218266,Operator,Ko`charov Yusufjon Baxtiyor o`g`li
 218487,218266,Shift engineer,Latipov Islombek Usmonovich
@@ -45343,7 +45353,6 @@
 218720,218267,Field operator,Rajabov Shahzod Ilhom o’g’li
 218721,218267,Field operator,Rasulov Abdulazizxon Lukmon o`g`li
 218722,218267,Senior field operator	,Rasulov Alisher Abdimuratovich
-218723,218267,Foreman,Raximov Baxtishod Ilxom o`g`li
 218724,218267,Boardman,Raxmatov Umidjon Umirzoq o`g`li
 218725,218267,Boardman,Rustamov Temir Abdurasul o`g`li
 218726,218267,Boardman,Ruziboyev Turg`unjon Alimovich
@@ -45393,7 +45402,6 @@
 222590,218268,railway dispatcher,Xakimov Anvar Xakinovich
 222591,218268,Operator,Diyarov Farrux Zakirovich
 222592,218268,Operator,Shodmonov Nuriddin Normurot o'g'li
-222593,218268,Operator,Raxmatov Sardor Sunnatilla o'g'li
 222594,218268,Operator,Zulfiqorov Nabijon Sharofiddin o'g'li
 222595,218268,Operator,Ashurov Nurbek Sobirovich
 222596,218268,Head of Department,Muhammadiyev Jaloliddin Abdizoir o'g'li
@@ -45429,7 +45437,6 @@
 223453,218268,Trainee,Choriyev Muhriddin
 223454,218268,Trainee,Qo`ldoshev Nuriddin
 223455,218268,Trainee,Choriyev Behruz
-219882,218269,Foreman,Qarshiyev Akmal Rahmon o`g`li
 221498,218269,Главный специалист	,Akram Raxmatullaev
 221499,218269,"руководитель группы ПБ, ОТ и ТБ	",Alisher Sakhobutdinov
 221500,218269,Руководитель группы проектного финансирования	,Aybek Nazarbaev
@@ -45476,21 +45483,23 @@
 219710,218272,PLC Technician,Alovuddinov Kamoliddin Yahyo o'g'li
 219760,218272,Technician PLC,Eshboyev Qambar Gulboyevich
 222585,218272,Technician PLC,Jo`rayev Husniddin Abdig'ani o'g'li
-218308,218273,Senior Process Safety Specialist,Saparniyazov Kaxarman Kaliyevich
-218309,218273,Process Safety Specialist,Rustamov Zoir XXX
+218303,218273,Head of department,Sharipov Jobirbek Shahrilloyevich
+218309,218273,Process Safety Engineer,Rustamov Zoir XXX
 218310,218273,Document / Process Safety Information Controller,Tursunniyozov Davron Olimovich
 218311,218273,MOC coordinator,Xalilov Shahboz Qosim o'g'li
-218312,218273,Incident Management and Investigation Coordinator,O'mrzaqov G'anisher Boynazarovich
+218483,218273,Senior Process Hazard and Risk Analysis Engineer,Jalilov Jasur Xalilovich
 218295,218274,Head of department,Xayrullayev Asilbek Akmalovich
-218296,218274,Leading engineer,Boltayev Sanjar Rustam o'g'li
 218297,218274,Unit Engineer,Jo`rayev Aloviddin Ozodovich
 218298,218274,Unit Engineer,Maxsetov Bekzat Rustem o'g'li
 218300,218274,Unit Engineer,Ramazonov Rustam Rasul o'g'li
-218302,218274,Plant Material Balance Engineer,Ro'ziyev Alisher Axtamovich
-218303,218274,Leading engineer,Sharipov Jobirbek Shahrilloyevich
 218305,218274,Unit Engineer,Umirov Baxtiyor Sharipovich
 218306,218274,Unit Engineer,Uralov Sardor Ximmatovich
 218307,218274,Unit Engineer,Xaitov Umid Shuxratovich
+218484,218274,Shift leader,Jumanov  Laziz Ergash o`g`li
+218723,218274,Foreman,Raximov Baxtishod Ilxom o`g`li
+219882,218274,Lead engineer,Qarshiyev Akmal Rahmon o`g`li
+221533,218274,Unit Engineer,Qudratov Ulug'bek Majid o'g'li
+224211,218274,Unit engineer,Abdivaitov Shohruh Marat o'g'li
 222571,218294,Specialist,G'aniyev Anvar Yaxyoyevich
 222572,218294,Leading specialist,Rayimxo'jayev Usmonxo'ja Odilxo'ja o'g'li
 222633,218294,Junior specialist,Maxmarajabov Mirjalol Berdimurod o'g'li
@@ -45514,7 +45523,6 @@
 210577,218533,Mechanical Engineer Static,Eshmuratov Arslon Raxmatovich
 218513,218533,Trainee,Mardonov Bobur Husniddin o'g'li
 218514,218533,Trainee,Quvondiqov Akobir Raxmatullo o'g'li
-218560,218533,Trainee,Abdujamilov Javohir Abduganiyevich
 218565,218533,Trainee,Badalova Nozima Dusiyar qizi
 218566,218533,Trainee,Baysunov Akbar Ahmedovich
 218568,218533,Trainee,Ergashov Oybek Nizomiddin o`g`li
@@ -45560,7 +45568,6 @@
 220968,218533,Trainee,Yun Igor Valerianovich
 221028,218533,Trainee,Soltanov Ilhom Hayitmurat o'g'lu
 221029,218533,Trainee,Asadullayev Ulug'bek Sharofiddin o'g'li
-221030,218533,Trainee,Temurov Mirjahon Jamshid o'g'li
 222189,218533,Trainee,Toshbvoyev Xasan Mamatqobil o`g`li
 222190,218533,Trainee,G`ulomov Jahongir Norboy o`g`li
 222191,218533,Trainee,Qudratov Qilichbek Rustam o`g`li
@@ -45574,7 +45581,6 @@
 223557,218533,Trainee,Boltayev Shoxruh
 223878,218533,Trainee,Niyozov Abror Choriyevich
 224003,218533,Trainee,Kenjayev Shoxboz Erkin o'g'li
-224211,218533,Trainee,Abdivaitov Shohruh Marat o'g'li
 224212,218533,Trainee,Qurbonov Sadriddin Xomid o'g'li
 224213,218533,Trainee,Abayev Shahboz Rashid o'g'li
 224214,218533,Trainee,Hazratqulov Nabijon Javlonovich
@@ -45590,6 +45596,13 @@
 225180,218533,Trainee,Atajonov Shohzod Bolta o`g`li
 225181,218533,Trainee,Sotivoldiyev Shoxruhmirzo Dilmurodjon o`g`li
 225182,218533,Trainee,Zulunov Abbos To`lqinjon o`g`li
+225799,218533,Trainee,"Begimqulov Sanjarbek Abdullayevich,"
+225800,218533,Trainee,"Xudoyshukurov Abror Abdug`appor o`g`li,"
+225801,218533,Trainee,Xolboyev Elnur Shukrullo og`li
+226175,218533,Trainee,Abdurahimov Shunqor Erkinovich
+226238,218533,Trainee,Qobulov Abdivohid Rashid o'g'li
+226239,218533,Trainee,Shopulatov Jaloliddin Furqat o'g'li
+226240,218533,Trainee,Jonqabilov Ramozon Mengliboyevich
 219753,219752,Head of turnaround planning,Pan Aleksandr Sergeyevich
 219754,219752,Senior Planner,Azizbek Narziev G'aybullayevich
 219755,219752,Maintenance Planner,Bobomurodov Xurshid G'olibjon o'g'li
@@ -45623,6 +45636,7 @@
 220912,220906,"Combustion air blower,  Flame scanners air dryer package,  External recycle gas from", Ex Visual Train 2 Group 7
 220913,220906,"Fuel gas from 120-VD-013 to burner block and back-up gas fuel from unit 78 to burner block, ",Visual Train 2 Group 8
 220914,220906,"ATR feed burner block, Prereformer feed burner block",Visual Train 2 Group 9
+218560,221516,Trainee,Abdujamilov Javohir Abduganiyevich
 219987,221516,Junior specialist,Karimova Guli
 221519,221516,Mehnat muhofazasi va xavfsilik texnikasi bo'yicha yetakchi mutaxassis,Abdig`aniyev Raxmiddin Raxmatullayevich
 221520,221516,Sanoat xavfsizligi bo'yicha muhandis,Ashurov Bekzod Xudoynazarovich
@@ -45638,7 +45652,6 @@
 221530,221516,Xavfsilik texnikasi bo'yicha yetakchi muhandis,Musurmonov Jamol Sheraliyevich
 221531,221516,Shifokor,Qodirov Shokir Amirovich
 221532,221516,Bo'lim boshlig'i ,Qorayev Boybo'ri Quchqorovich
-221533,221516,Xavfsizlik texnikasi muhandisi,Qudratov Ulug'bek Majid o'g'li
 221534,221516,Mehnat muhofazasi va xavfsilik texnikasi bo'yicha yetakchi mutaxassis,Sadatov Ixtiyor Olimovich
 221535,221516,Shifokor ,Shodiyev Mirsulton Ravil o'g'li
 221536,221516,Xavfsilik texnikasi bo'yicha yetakchi muhandis,Tirkashov Jumanazar Kenjayevich
@@ -45652,6 +45665,7 @@
 224340,221516,Junior Specialist,Omonov Sukhrob Mumin ugli 
 224341,221516,HSE specialist,Egamberdiev Alisher Sayibovich
 224342,221516,specialist,Yusupova Mukhayyo Yakhyoyeva 
+226019,221516,Specialist,Qo'chqorov Shoxrux Shuxrat o'g'li 
 108510,222240,Analyser transmitter,150-AT-0001A
 108511,222240,Analyser transmitter,150-AT-0001B
 108512,222240,Analyser transmitter,150-AT-0001C

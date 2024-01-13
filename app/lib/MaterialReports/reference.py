@@ -6,11 +6,7 @@ import numpy as np
 # Фильтры для отделения transactions отдела
 department_Filters = {
     'rmpd':[
-        {"field":'isRMPD', "operator":"==", "value":"'yes'"}, 
-        "&", 
-        {"field":'Reserved By', "operator":"!=", "value":"'Mirjakhon Toirov'"}, 
-        "&",
-        {"field":'Reserved By', "operator":"!=", "value":"'Bobur Aralov'"}
+        {"field":'isRMPD_planner', "operator":"==", "value":"'yes'"}, 
     ],
     'cofe':[ 
         {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
@@ -32,9 +28,9 @@ is_014 = ['06935','05841','07139','05230','04189','03494','02799','05749','01738
 '02853','01403','01574','01576','01577','01582','01360','01361','01364','01365','01429','01407','00691','00692','00693','00694','00695','00700','00703','00702','00705','00706','00707','00708',
 '01350','01371','01380','01381','01383','01384','01385','01386','01394', '01395','01396','01398','01399','01589','01639','01606','01620','02835','00189','00745','00140','00230','00738','05232',
 '05231','00899','00155','00114','00157','00526','00113','01201','01202','01203','01204','06340','02911','02912','02913','07481','07407','07473','07403','02802','03229','05305','06122','06332',
-'06900','07497','07883','07882','09300','07331','05831','05328', '09767', '09327', '09326', '01875','04183', '09359', '02811', '07626','07627','07628', '07629', '07616', '07617']
-
-
+'06900','07497','07883','07882','09300','07331','05831','05328', '09767', '09327', '09326', '01875','04183', '09359', '02811', '07626','07627','07628', '07629', '07616', '07617', '10920',
+'08008', '03014', '06326', '07483', '09297',
+]
 
 
 
@@ -83,7 +79,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
   targetDF = transacts.loc[ (transacts['Is Master Work Order']=='yes') & (~(transacts['Reservation Number'].isin(inactive_Master_Reservations))) ]
 
   if targetDF.loc[ targetDF['Catalogue Transaction Action Name']=='Return to Stock' ].size != 0:
-    print('there are master reservations with return to stock\n', targetDF.loc[ targetDF['Catalogue Transaction Action Name']!='Issue' ])
+    print('there ARE master reservations with return to stock\n', targetDF.loc[ targetDF['Catalogue Transaction Action Name']!='Issue' ])
   else:
     print('there are NO master reservations with return to stock')
 
@@ -96,7 +92,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
 
 
-  childSpares = spares.loc[ (spares['Group WO number']!=0) & (spares['Spares Comment'].str.isnumeric()) ].copy()
+  childSpares = spares.loc[ (~spares['Spares Comment'].isna()) & (spares['Spares Comment'].str.isnumeric()) ].copy()
   childSpares['Spares Comment'] = childSpares['Spares Comment'].astype(float)
 
 
@@ -112,7 +108,6 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
 
   for i, MR in MRs.iterrows():
-
     if  childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].size != 0:
       checkHasValues = True
       for i, childSpare in childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].iterrows():
@@ -126,7 +121,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
           'master Reservation Qty' : MR['Quantity'],
           'master Reservation reservYear' : MR['reservYear'],
           'master Reservation reservMonth' : MR['reservMonth'],
-          'is new transaction':'yes'
+          'is child transaction':'yes'
         }, index=[0])
         for key in childSpare.index:
           record[key] = childSpare[key]
@@ -144,7 +139,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
           'master Reservation Qty' : MR['Quantity'],
           'master Reservation reservYear' : MR['reservYear'],
           'master Reservation reservMonth' : MR['reservMonth'],
-          'is new transaction':'no'
+          'is child transaction':'no'
         }, index=[0])
 
         Limits = pd.concat([Limits, record]).reset_index(drop=True)
@@ -152,9 +147,9 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
 
   if checkHasValues == False:
-    print('no changes in related WOs')
+    print('no changes in limits')
     return transacts
-  print('there are changes in related WOs')
+  print('there are changes in limits')
 
 
 
@@ -183,9 +178,9 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
 
   transacts=transacts.drop(targetDF.index)
-  counter = -10000
-  for i, childSpare in Limits.loc[ Limits['is new transaction']=='yes' ].iterrows():
-    counter+=1
+  counter = -9999
+  for i, childSpare in Limits.loc[ Limits['is child transaction']=='yes' ].iterrows():
+    counter-=1
     pseudoTransaction = pd.DataFrame({
       'Код товара':childSpare['master Reservation Material Code'],
       'Материал':childSpare['master Reservation material'],
@@ -204,6 +199,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
       'Объект':childSpare['Asset Number'],                              
       'Catalogue Transaction Action Name':'Issue'
     }, index=[0])
+    
     transacts = pd.concat([transacts, pseudoTransaction]).reset_index(drop=True)
   
 

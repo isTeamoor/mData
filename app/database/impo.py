@@ -38,25 +38,20 @@ requisitionItems = pd.read_csv("app/database/csv/ccc_rq_reqItems.csv",     encod
 approvalPath     = pd.read_csv("app/database/csv/ccc_rq_approvalPath.csv", encoding="utf-8")
 
 
-contactID.insert(1, 'Reserved By',      contactID['First Name'] + " " + contactID['Last Name'])
-contactID.insert(1, 'Created By',       contactID['First Name'] + " " + contactID['Last Name'])
-contactID.insert(1, 'Requisitioned By', contactID['First Name'] + " " + contactID['Last Name'])
-contactID.insert(1, 'Completed By',     contactID['First Name'] + " " + contactID['Last Name'])
-contactID.insert(1, 'Cancelled By',     contactID['First Name'] + " " + contactID['Last Name'])
-contactID.insert(1, 'Requisition line By',     contactID['First Name'] + " " + contactID['Last Name'])
-
-
+contactID.insert(1, 'Reserved By',         contactID['First Name'] + " " + contactID['Last Name'])
+contactID.insert(1, 'Created By',          contactID['First Name'] + " " + contactID['Last Name'])
+contactID.insert(1, 'Requisitioned By',    contactID['First Name'] + " " + contactID['Last Name'])
+contactID.insert(1, 'Completed By',        contactID['First Name'] + " " + contactID['Last Name'])
+contactID.insert(1, 'Cancelled By',        contactID['First Name'] + " " + contactID['Last Name'])
+contactID.insert(1, 'Requisition line By', contactID['First Name'] + " " + contactID['Last Name'])
 
 
 
 isMasterWO['Is Master Work Order'] = 'yes'
 
 
-
-
 woNumbers = wo[['Work Order ID', 'Work Order Number']].copy()
 woNumbers.insert(1, 'Group WO number', woNumbers['Work Order Number'])
-
 
 
 ### Иногда есть две записи для 1 WO, из-за предыдущих reopening. Поэтому берется только последняя.

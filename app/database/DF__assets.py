@@ -26,7 +26,7 @@ for row in assets.index:
 ### 2. Показать все объекты, относящиеся к SGU
 def unitChildren():
     SGU = 77437
-    assetNumberlist = []
+    assetNumberlist = ['SGU',]
 
     def goThroughTree(assetID):
         subList = []

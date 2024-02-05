@@ -58,13 +58,6 @@
 93267,93232,MALEIC ACID DOSING PUMPS,145-PR-008 A
 93268,93232,MALEIC ACID DOSING PUMPS,145-PR-008 B
 172646,172762,TBD,B04-PDP-05-02-02B-8R
-172647,172762,TBD,B07-PDP-06-01
-172648,172762,TBD,B07-UPDP-06-01
-172649,172762,TBD,B09-PDP-06-01
-172650,172762,TBD,B10-HVAC-05-01A-01B-2
-172651,172762,TBD,B10-HVAC-05-01B-01A-2
-172652,172762,TBD,B10-LP-06-01-01A-4R
-172653,172762,TBD,B10-MDB-05-01-04B-2R
 172654,172762,TBD,B10-PDP-05-01
 172655,172762,TBD,B10-PDP-05-02
 172656,172762,TBD,B10-PDP-05-03
@@ -79,6 +72,7 @@
 172727,172762,TBD,B30-WO-08
 172728,172762,TBD,B30-WO-09
 175623,172762,Gas Detector,B19-GF-0001
+175626,172762,Gas Detector,B20-GF-0001
 211223,172762,Gas Detector,B19-GF-0001 
 175189,175188,SGU Maintenance,Maintenance(SGU)
 208782,175189,Rotating Technician,Akramov Xurshid Ne'matulloyevich
@@ -145,6 +139,7 @@
 218399,175192,Static Engineer,Eshmuratov Arslonbek Rahmatovich
 208566,208767,EWS for MAC/BAC,100-EWS-001
 208964,208767,EWS for MAC/BAC,100-EWS-001
+208821,208822,Maintenance Manager,Gareth Jones Bryan
 214346,209664,F&G Supervisor ,Taniyev Rustam
 214359,209664,F&G Supervisor ,Taniyev Rustam
 214940,214932,Head of Department,Jonibek Ismatulloyev
@@ -165,6 +160,7 @@
 220948,218533,Trainee,Azimov Alisher Morqa o'g'li
 220964,218533,Trainee,Suyunov Mansur Baxodir o’g’li
 222188,218533,Trainee,Baxronov Axror Shokir o`g`li
+223275,223248,GTL Chinoz Deputy Terminal chief,Tulekov Oybek Saparaliyevich
 77405,0,Uzbekistan GTL LLC,UzGTL Rev II
 95139,710,OIL FILTER,120-CC-101-XF-01B
 94946,721,STEAM CONDENSATE DRUM FOR 20-ES- 104,120-VD-108
@@ -2426,7 +2422,6 @@
 51759,9830,PRESSURE INDICATOR TRANSMITTER,173-PT-0149
 53696,9830,Cooling Water(L) / LIQUID,173-PSV-0001
 53709,9830,HP Control Oil/ Liquid,173-PSV-0156
-79045,9830,GENERATOR B,173-XP-001B
 79097,9830,CONTROL OIL FAN COOLER ELECTRIC MOTOR,173-XP-001A-EA-130-M
 79098,9830,OIL CLARIFIER SKID (FEEDER SUPPLY),173-XP-001A-PG-110-M
 79099,9830,GENERATOR JACKING OIL PUMP MOTOR NDE BEARING,173-XP-001A-PG-120-M
@@ -5353,6 +5348,9 @@
 226023,78368,DW External Recycle Gas / Gas,150-PSV-0732
 226024,78368,Vapor Mixture  / GAS ,150-PSV-0784
 226025,78368,Vapor Mixture  / GAS ,150-PSV-0785
+226824,78368,Pressure Control Valve,150-PCV-0292
+226825,78368,Pressure Control Valve,150-PCV-0293
+227204,78368,Pressure Differential Transmitter,150-PDT-0748
 85592,78369,HYDROGENATOR (VESSEL REACTOR),160-VR-001
 85593,78369,SULPHUR ABSORBERS (VESSEL REACTOR),160-VR-002A
 85594,78369,SULPHUR ABSORBERS (VESSEL REACTOR),160-VR-002B
@@ -5548,6 +5546,7 @@
 175186,78373,"14""-SHM-M1AS-72009-08-EW",I64391889
 175187,78373,"46""- SHM-B1AK-72009-81-HS ",I65472712
 211343,78373,Fire Zone,FZ-10
+226298,78373,Plate type H.E,172-EP-001B
 79043,78374,GENERATOR,173-XP-001
 79046,78374,???,173-XP-002
 85350,78374,MANUAL CALL POINT,173-MCP-0001
@@ -6262,6 +6261,27 @@
 224323,78387,AIR CONDITIONERs-4 CAMP (VAHTOVIY PASYOLKA 2) of HVAC System (for 6 months: includes -25 equipment.),AIR CONDITIONERs-4 CAMP (VAHTOVIY PASYOLKA 2)
 224670,78387,"""AIR CONDITIONERs-7 GTL площадка ва B08 (54 pcs/20 pcs)""","""AIR CONDITIONERs-7 GTL площадка ва B08"
 224671,78387,Exhaust fan for ABK  (25 equipment),Exhaust fan for ABK  (25 equipment)
+226295,78387,office where maintenance use as a repair shop,Hitachi
+226828,78387,Перечень оборудования системы пожарной сигнализации внутри зданий завода UzGTL которым требуется сервисное обслуживание и ремонт /List of equipment of the fire alarm system inside the UzGTL plant that requires maintenance and repair-1(Equipment 4441						,List of equipment of the FGS inside GTL
+226829,78387,"Interface Module, (For monitoring Gas detector) / Интерфейсный модуль(для мониторинга газовых детекторов) - PM (Equipment 218 pcs)","Interface Module, (For monitoring Gas detector) "
+226830,78387,"Addressable Module Box W/ IS Barrier in safe location, for MCP / Блок адресного модуля с барьером искр безопасности для MCP( Equipment 20pcs)",Addressable Module Box W
+226832,78387, List of equipment for the fire alarm system for the guardhouse and checkpoints that requires maintenance and repair ( Equipments 202pcs), Guardhouse  and checkpoints
+226833,78387,List of fire alarm system equipment for steam turbine generator control containers that requires maintenance and repair (Equipment 90pcs),Steam turbine generator control containers FAS
+227229,78387, List of equipment of fire alarm system equipment’s for the Substation-2 (В16) and operator shelter buildings that require maintenance and repair,FGS equipments in Substation-2 B16
+227230,78387,List of fire alarm system equipment in the building of the administrative and household complex (AHC) that require maintenance and repair (Equipments 901 pcs),FGS equipment in ABK 
+227231,78387,"The list of fire alarm system equipment in the buildings of the ""Жайрон"" warehouse that require maintenance and repair( Equipments 113 pcs)","FAS equipments in ""Жайрон"" warehouse "
+227232,78387,List of fire alarm equipment for buildings of warehouses for storage of material assets that require maintenance and repair (Equipment 597 pcs),FAS equipments in Warehouse
+227233,78387,List of equipment of the fire alarm system of a Campus that require maintenance and repair (Equipment 1733 pcs),FAS equipments in Campus
+227234,78387,List of fire alarm system equipment for Units that require maintenance and repair (Equipments 573pcs and  11000metres),FAS equipments in the UNITs
+227235,78387,Junction Box / Распределительные коробки (Equipments 84pcs),Junction Box
+227236,78387,"Interface Module, (For monitoring Gas detector) (Equipments 218 pcs)",Interface Module in plant
+227239,78387, List of fire alarm system equipment for analyzer shelters that require maintenance and repair,FAS equipment for analyzer shelters
+227240,78387, List of fire alarm system equipment for the building of the Tashkent office of the UzGTL plant that requires maintenance and repair (Equipments 137 pcs),FAS equipment for the Tashkent office
+227241,78387,List of equipment of the fire fighting (extinguishing) system inside the UzGTL plant that require maintenance and repair,FFS inside the UzGTL  plant
+227242,78387, List of equipment of the fire fighting (extinguishing) system for steam turbine generator that require service maintenance and repair ( Equipments 62pcs),FFS for steam turbine
+227243,78387,List of equipment of the Fire extinguishing system (FM200) of the building of Substation-2 (B16) that require service maintenance and repair (Equipment ,FES of the building of Substation
+227296,78387,List of equipment of the firefighting (extinguishing) system inside the UzGTL plant that require service maintenance and repair (Equipments 386),Firefighting (extinguishing) system inside the UzG
+227297,78387,Office where left from EE,Top Office Maintenance
 99581,78388,RAILCAR LOADING AREA HC SPILLAGE DRAIN DRUM,184-VD-001
 99836,78388,Weight Transmitter,184-WT-0001
 211351,78388,Fire Zone,FZ-19
@@ -6625,6 +6645,7 @@
 223163,78425,Suction Filter,175-XP-001-ST02
 223231,79042,Suction Filter,173-XP-001B-ST01
 9830,79043,GENERATOR A,173-XP-001A 
+79045,79043,GENERATOR B,173-XP-001B
 78719,79045,L.O RESERVOIR,173-XP-001B-TK-10
 78720,79045,L.O. RUN DOWN TANK,173-XP-001B-TK-20
 78721,79045,H.P. C. O. RESERVOIR,173-XP-001B-TK-30
@@ -6803,6 +6824,7 @@
 78737,79047,CONDENSATE DRUM PUMP,173-XP-002A-PC-01B
 78738,79047,CONDENSATE DRUM PUMP,173-XP-002A-PC-01C
 78742,79047,DUCT DRAIN POT PUMP,173-XP-002A-PC-02A
+78743,79047,DUCT DRAIN POT PUMP,173-XP-002A-PC-02B
 78744,79047,DUCT DRAIN POT PUMP,173-XP-002B-PC-02A
 78746,79047,AIR COOLED CONDENSER FAN ,173-XP-002A-EA-01-11
 78747,79047,AIR COOLED CONDENSER FAN ,173-XP-002A-EA-01-12
@@ -7115,7 +7137,6 @@
 78739,79048,CONDENSATE DRUM PUMP,173-XP-002B-PC-01A
 78740,79048,CONDENSATE DRUM PUMP,173-XP-002B-PC-01B
 78741,79048,CONDENSATE DRUM PUMP,173-XP-002B-PC-01C
-78743,79048,DUCT DRAIN POT PUMP,173-XP-002A-PC-02B
 78745,79048,DUCT DRAIN POT PUMP,173-XP-002B-PC-02B
 78886,79048,AIR COOLED CONDENSER BUNDLE,173-XP-002B-K-01-1
 78887,79048,AIR COOLED CONDENSER BUNDLE,173-XP-002B-K-02-1
@@ -7580,6 +7601,7 @@
 171348,79957,Grounding Pits,130-GP
 171370,79957,Emergency Lighting groups,130-EML
 171392,79957,Lightning Protection points,130-LGP
+226796,79957,AirCraft Warning Light,130-ACWL-06-01
 79962,79958,Distribution Boards,140-DB
 79963,79958,Welding Outlet,140-WO
 79964,79958,Cathodic Protection,140-CP
@@ -7663,6 +7685,8 @@
 25637,79961,LIGHTING PANEL,135-LP-06-02                  
 25644,79961,UPS AC PDB FOR PROCESS DRYER PKG,135-XP-002-UPDP-06-01         
 25646,79961,SOCKET OUTLET PANEL,135-SOP-06-01                 
+226821,79961,Socket Outlet Panel,130-SOP-06-01
+226822,79961,Socket Outlet Panel,130-SOP-06-02
 91245,79962,MAIN DISTRIBUTION PANEL (SS-05),140-LP-06-01
 91247,79962,ELEC. HEAT TRACING DISTRIBUTION BOARD(FOR WINTERIZATION),140-ETDB-05-01
 91248,79962,ELEC. HEAT TRACING DISTRIBUTION BOARD(FOR WINTERIZATION),140-ETDB-05-02
@@ -7693,6 +7717,7 @@
 171352,79975,Grounding Pits,150-GP
 171374,79975,Emergency Lighting groups,150-EML
 171396,79975,Lightning Protection points,150-LGP
+226795,79975,AirCraft warning Light,150-ACWL-06-01
 79980,79976,The Other equipments,145-DB
 79981,79976,The Other equipments,145-WO
 79982,79976,The Other equipments,145-CP
@@ -8523,7 +8548,7 @@
 172297,80004,TBD,171-XP-012-XF-02E-M-05A-6R
 172298,80004,TBD,171-XP-012-XX-01A-M-05A-5R
 172299,80004,TBD,171-XP-012-XX-01B-M-05B-5R
-172301,80004,TBD,171-XP-013-CB-05-HE05A-05B-6F
+172301,80004,TBD,171-XP-013-CB-05-HE05-05B-6F
 172303,80004,TBD,171-XP-013-CB-05-PG05A-M-07A-3F
 172304,80004,TBD,171-XP-013-CB-05-XX01-M-05A-5R
 172305,80004,TBD,171-XP-013-CB-05-XX02-M-05B-6F
@@ -10088,6 +10113,8 @@
 81300,80903,Sample Connection,135-SC-021
 94895,80903,Fire Zone,FireZone-04
 211338,80903,Fire Zone,FZ-04
+226800,80903,UPS Power Distribution Panel,135-XP-002-UPDP-06-01         
+226801,80903,POWER DISTRIBUTION PANEL,135-PDP-06-02
 38889,80904,SIGHT GLASS,135-SG-0506
 38933,80904,LEVEL GAUGE,135-LG-0504
 39014,80904,TRANSMITTER_DP LEVEL,135-LT-0502
@@ -11056,6 +11083,8 @@
 39886,81120,THERMOWELL,135-TW-0404
 39887,81124,THERMOWELL,135-TW-0408
 39888,81125,THERMOWELL,135-TW-0409
+227300,81131,Temperature Switch,135-TS-0400
+227301,81132,Temperature Switch,135-TS-0404
 39043,81136,TRANSMITTER DP,135-PDT-0401
 40159,81136,VALVE LIMIT SWITCH,135-KZSH-0401A
 40160,81136,VALVE LIMIT SWITCH,135-KZSL-0401A
@@ -13516,6 +13545,7 @@
 171383,82922,Emergency Lighting groups,181-EML
 171405,82922,Lightning Protection points,181-LGP
 172767,82922,TBD,181-CP
+226798,82922,AirCraft Warning Light,181-RF-001ACWL-06-01
 83527,82923,TRANSMITTER_DP LEVEL,181-LT-0012
 83528,82923,TRANSMITTER_PRESSURE,181-PT-0009
 83529,82923,TRANSMITTER_TEMPERATURE,181-TT-0005
@@ -15043,6 +15073,8 @@
 84530,84536,MEMBRANE TANK SLUICE GATE,177-MZLL-0175-0
 84531,84536,MEMBRANE TANK SLUICE GATE,177-MHL-0175-0
 84548,84536,PRESSURE GAUGE,177-SC-016
+226299,84536,Analyser,177-AT-0740
+226300,84536,Analyser,177-AT-0750
 83686,84537,UREA EXTRACTION FAN,177-XP-002-CB-01
 83720,84537,UREA SCISSORS TYPE LIFT,177-XP-002-XX-01
 83721,84537,UREA BAG LIFTING DEVICE,177-XP-002-XX-02
@@ -17114,6 +17146,7 @@
 171355,86636,Grounding Pits,172-GP
 171377,86636,Emergency Lighting groups,172-EML
 171399,86636,Lightning Protection points,172-LGP
+226797,86636,AirCraft Warning Light,172--ACWL-06-01
 87038,86637,Transformator Rectifier,172-TCP-05-01
 87039,86637,Positive junction Box,172-PJB-42
 87040,86637,Anode junction Box,172-AJB-41
@@ -17493,6 +17526,8 @@
 172395,86640,TBD,172-ЕА-005-М19-VSD-02A-3R
 172396,86640,TBD,172-ЕА-005-М21-02A-3R
 172397,86640,TBD,172-ЕА-005-М35-02A-5R
+226816,86640,Main Distribution Board,03-MDB-05-03
+226817,86640,Welding Main Distribution Board,03-WMDB-05-01
 122415,86666,Process Condensate Polisher Supply Pumps Motor,172-PC-001A-M
 122579,86666,PRESSURE GAUGE,172-PG-0015
 122416,86667,Process Condensate Polisher Supply Pumps Motor,172-PC-001B-M
@@ -25507,6 +25542,7 @@
 100933,99578,ANTIOXIDANT ADDITIVE AGITATOR ,184-XP-002-XA-01
 100929,99579,LUBRICITY ENHANCER ADDITIVE DOSING PUMP ,184-XP-003-PD-01 A
 100930,99579,LUBRICITY ENHANCER ADDITIVE AGITATOR ,184-XP-003-XA-01
+226364,99579,Pressure Safety valve,184-PSV-0754
 99593,99581,DRAIN TANK PUMP,184-PC-009
 100088,99581,LOCAL INDICATOR,184-LI-0016L
 100089,99581,LOCAL INDICATOR,184-LI-0020L
@@ -41276,6 +41312,13 @@
 172764,172761,Cathodic Protection,191-CP
 172765,172761,Welding Outlet,191-WO
 172766,172761,Substation-08,SS-08
+172647,172762,TBD,B07-PDP-06-01
+172648,172762,TBD,B07-UPDP-06-01
+172649,172762,TBD,B09-PDP-06-01
+172650,172762,TBD,B10-HVAC-05-01A-01B-2
+172651,172762,TBD,B10-HVAC-05-01B-01A-2
+172652,172762,TBD,B10-LP-06-01-01A-4R
+172653,172762,TBD,B10-MDB-05-01-04B-2R
 172664,172762,TBD,B20-HVAC-05-01A-07B-3R
 172665,172762,TBD,B20-HVAC-05-01B-07A-2R
 172666,172762,TBD,B20-LP-06-01-07B-4F
@@ -41330,16 +41373,27 @@
 172725,172762,TBD,B30-WO-06
 175624,172762,Gas Detector,B19-GF-0002
 175625,172762,Gas Detector,B19-GT-0001
-175626,172762,Gas Detector,B20-GF-0001
 175627,172762,Gas Detector,B20-GF-0002
 175628,172762,Gas Detector,B20-GT-0001
 175629,172762,Gas Detector,B20-GT-0002
-211224,172762,Gas Detector,B19-GF-0002 
 211225,172762,Gas Detector,B20-GF-0001 
-211226,172762,Gas Detector,B20-GF-0002 
-211250,172762,Gas Detector,B19-GT-0001
-211252,172762,Gas Detector,B20-GT-0001 
-211253,172762,Gas Detector,B20-GT-0002 
+226802,172762,TBD,B04-PDP-05-02-02B-8R
+226803,172762,TBD,B10-PDP-05-01
+226804,172762,TBD,B10-PDP-05-02
+226805,172762,TBD,B10-PDP-05-03
+226806,172762,TBD,B10-PDP-06-01
+226807,172762,TBD,B10-PDP-06-01-03A-3F
+226808,172762,TBD,B10-PDP-06-02
+226809,172762,TBD,B10-PDP-06-02-03B-3F
+226810,172762,TBD,B10-UPDP-06-01
+226811,172762,TBD,B11-PDP-06-01
+226812,172762,TBD,B11-UPDP-06-01
+226813,172762,TBD,B30-WO-07
+226814,172762,TBD,B30-WO-08
+226815,172762,TBD,B30-WO-09
+226818,172762,Main Distribution Board,B10-MDB-05-01
+226819,172762,Main Distribution Board,B30-MDB-05-01
+226820,172762,Main Distribution Board,B30-WMDB-05-01
 172632,172763,TBD,191-ELP-06-01
 172633,172763,TBD,191-ETDB-05-01
 172634,172763,TBD,191-ETDB-05-02
@@ -41544,11 +41598,10 @@
 223461,175191,Junior electrician PWU,Baxriyev Sunnatbek
 223882,175191,Junior electrical technician,Norov Siroj Djurayevich
 175219,175192,Maintenance Planner (U&O),Xaydorov Mirsaid
-175230,175192,Static Junior Technician,Abdujabborov Sherzod
+175230,175192,Static Technician,Abdujabborov Sherzod
 175231,175192,Rotating Engineer,Abidov Ilxom
 175232,175192,Electrical supervisor,Aliqulov Komil
 175233,175192,Analyser Supervisor,Aminov Navruzbek
-175234,175192,Static Technician,Ashrapov Kamolliddin
 175237,175192,Instrumentation Engineer,Barotov Muxlis
 175240,175192,Field Manager - U&O,Boyqobilov Avazbek
 175242,175192,Instrument Supervisor,Chorshanbiev Zufar
@@ -41568,7 +41621,6 @@
 175262,175192,Electrical Junior Technician,Toshniyozov Farrux
 175265,175192,Instrumentation Technician,Umurzoqov Yusuf
 175266,175192,Static Engineer ,Xolmurodov Xurshid
-175267,175192,Instrumentation Junior Technician,Xolmurodov Ziyodullo Jola o`g`li
 175269,175192,Static supervisor,Yarashev Javlon
 218398,175192,Instrumentation Junior Technician,Norov Abbosjon Avaz o'g'li
 218563,175192,Junior planner,Asrorxonov Abusoleh Qutbiddinovich
@@ -41577,6 +41629,8 @@
 222593,175192,Analyser Junior Technician,Raxmatov Sardor Sunnatilla o'g'li
 222679,175192,Static Junior technician,Abduholiqov Ilyos Turdiyevich
 223883,175192,Junior Electrical Technician ,Mamadiev Xumoyun Azamat o'gli
+224212,175192,Analyser Junior Technician,Qurbonov Sadriddin Xomid o'g'li
+224216,175192,Analyser Junior Technician,Qahramonov Baxtiyor Ergash o`g`li
 224367,175192,Stat junior technician,Azimov Alisher Morqa o'g'li
 224368,175192,Stat junior technician,Ro'zimatov Eldor Ravshan o'g'li 
 224369,175192,Roto junior technician,Nomozov Maqsud Alisher o'g'li
@@ -41602,9 +41656,9 @@
 208837,208767,Safety Instrumented System,SIS
 207283,208822,Manager of Routine Maintenance Manager,To'lqin Berdiev
 208819,208822,Maintenance Manager,Shaxzod Mamasadikov Abdukaxxarovich
-208821,208822,Maintenance Manager,Gareth Jones Bryan
 209264,208822,Cost Controller,Isxakov Timur Iminjanovich
 218363,208822,Deputy of Manager of Routine Maintenance Manager,Pardayev Aliyor Dusnazarovich
+222922,208822,Deputy of MM,Eshmatov Xasan Axmedovich
 224040,208822,CMMS Engineer,Toshpulatov Ma'ruf O'rin o'g'li
 224289,208822,Storeman,Tilovov Rustam Safar o'g'li
 208838,208828,OWS for MAC/BAC (Train-1),110-OWS-CC150-01
@@ -44644,7 +44698,7 @@
 86266,211454,STEAM REFORMER FURNACE PKAGE,160-AT-0012B
 86267,211454,STEAM REFORMER FURNACE PKAGE,160-AT-0012C
 86268,211454,STEAM REFORMER FURNACE PKAGE,160-AT-0012D
-225610,211471,To lift equipments or things,Special tools
+225610,211471,For daily and permanent usage ,Special tools
 85756,211474,Total Sulphur Analyzer,160-AT-0001
 85867,211474,CH4 Analyzer,160-AT-0002
 85976,211474,CO Analyzer,160-AT-0004
@@ -44951,6 +45005,9 @@
 221748,218248,Lead Accountant,Majidov Zafar Sheraliyevich
 221749,218248,Accountant,Rahimov Jamshid Musurmonovich
 226176,218248,Accountant,Mirxodjayev Sharafutdin Sayfutdinovich
+226782,218248,Leading accountant,Sodiqov Yorqin Bahodirovich
+226783,218248,Accountant,Tohirov Muzaffar Mahmud o`g`li
+226784,218248,Deputy head of accountant,Tulekov Oybek Saparaliyevich
 219744,218249,Junior specialist,Rixsiboyeva Nodira Umar qizi
 221664,218249,Senior specialist,Khaydarov Makhammadjon Khusaynovich
 221665,218249,Specialist,Ibrokhimov Alisher Khasan o'g'li
@@ -44975,6 +45032,8 @@
 218536,218254,HR specilaist,Tillyaev Sardor Bobirjon o`g`li
 218537,218254,Deputy HR head,Berdiyev Kamoliddin Usmonovich
 218538,218254,Head of HR department,Muminov Elyor Murotaliyevich
+226407,218254,Lead HR Engineer,Abduxakimova Nargiza Abdukaxarovna
+226408,218254,HR Engineer,Yeshmuratova Zulayxa Askarovna
 175263,218255,Electrical Junior Technician,Toshturdiyev Shohislom
 218516,218255,Process Engineer,Abdigoppar Abdikhalilov
 218517,218255,Specialist,Abror Boltayev
@@ -45287,6 +45346,7 @@
 221482,218266,Operator,Usmonov To`lqin Alimboyevich
 221483,218266,Operator,Yo`ldoshev Vohidjon To`xta o`g`li
 218581,218267,Trainee,Xudoyorov Ravshan Eshnazar o`g`li
+218590,218267,Field operator,Tojiboyev Abdulaziz Ulug`bekovich
 218657,218267,Field operator,Abdullayev Shahzodbek Husniddin o`g`li
 218658,218267,Field operator,Abdumuminov Ramazon Asadovich
 218659,218267,Field operator,Allaberdiyev Iskandar Isoq o'g'li
@@ -45381,10 +45441,13 @@
 220934,218267,Trainee,Temirov Jahongir Yoqub o'g'li
 220935,218267,Trainee,Beshimov Jahongir Lutfullayevich
 220943,218267,Trainee,Jamshedov Doniyor Buzurgmexrovovich
+220950,218267,Field Operator,Abdulvahobov Sayfulla Abdulla o'g'li
 220960,218267,Trainee,Raxmatullayev Kozimjon Salim o’g’li
 220969,218267,Trainee,Xalilov Edem  Ablyazovich
 221027,218267,Trainee,Ravshanov Shaxriyor Muhiddin o'g'li
+221029,218267,Field operator,Asadullayev Ulug'bek Sharofiddin o'g'li
 221517,218267,Operator,Saidov O'lmas Toshkentovich
+227302,218267,Field operator,Abdimuminov G'ayrat Nasrulla o'g'li
 218301,218268,Unit Engineer,Ramazonov Ulug`bek Erkin o`g`li
 220955,218268,Operator,Sanjarov Amal Sanjar o'g'li
 220956,218268,Operator,Seytekov Axmet Muxametjan uli
@@ -45465,6 +45528,7 @@
 219683,218270,Plant Inspector,Nuriddinov Bobur Husniddin o`g`li
 219684,218270,Plant Inspector,Qarshiyev Mirjalol Ne`mat o`g`li
 219685,218270,Plant Inspector,Raximov Jasurbek Botir o'g'li
+175267,218272,Instrumentation Junior Technician,Xolmurodov Ziyodullo Jola o`g`li
 219695,218272,Head of department,Hudayarov Bekzod Malikovich
 219696,218272,ICSS/PLC Supervisor,Turopov Oybek Rustamovich
 219697,218272,DCS engineer,Khudayberdiev Sardor G'ayrat o'g'li
@@ -45504,7 +45568,6 @@
 222572,218294,Leading specialist,Rayimxo'jayev Usmonxo'ja Odilxo'ja o'g'li
 222633,218294,Junior specialist,Maxmarajabov Mirjalol Berdimurod o'g'li
 222921,218294,Leading specialist,Nortojiyev Elbek Salamovich
-222922,218294,Head of department,Eshmatov Xasan Axmedovich
 222923,218294,Senior specialist of Localization and Expansion of Cooperative Relations,Xoliqov Abdumalik Saydullayevich
 218453,218452,industrial equipment coordinator  ,Xushnazarov Shohboz
 218454,218452,Head ,Tilovov Akbar 
@@ -45538,7 +45601,6 @@
 218583,218533,Trainee,Sheraliyev Ulug`bek Eshpulatovich
 218584,218533,Trainee,Tilavov Shohijahon Abduxalil o`g`li
 218589,218533,Trainee,Karimov Qobiljon Ismoilovich
-218590,218533,Trainee,Tojiboyev Abdulaziz Ulug`bekovich
 220933,218533,Trainee,Soatqulov Ilyos Ravshan o'g'li
 220936,218533,Trainee,Nomozov Maxsudbek Alisher o'g'li
 220937,218533,Trainee,Ziyayev Adilbek Polatbay uli
@@ -45551,7 +45613,6 @@
 220946,218533,Trainee,Baymuradov Umidjon Najmidinovich
 220947,218533,Trainee,Abdusalimov Baxtishod O'ktam o'g'li
 220949,218533,Trainee,Abdiraxmonov Otabek Bahodir o'g'li
-220950,218533,Trainee,Abdulvahobov Sayfulla Abdulla o'g'li
 220951,218533,Trainee,Abduhalilov Shuhrat G'ayrat o'g'li
 220952,218533,Trainee,Abdullayev Shohzod Abduraxmon o'g'li
 220953,218533,Trainee,Beshimov Umidjon To'lqin o'g'li
@@ -45567,7 +45628,6 @@
 220967,218533,Trainee,Melikov Maksim Vagifovich
 220968,218533,Trainee,Yun Igor Valerianovich
 221028,218533,Trainee,Soltanov Ilhom Hayitmurat o'g'lu
-221029,218533,Trainee,Asadullayev Ulug'bek Sharofiddin o'g'li
 222189,218533,Trainee,Toshbvoyev Xasan Mamatqobil o`g`li
 222190,218533,Trainee,G`ulomov Jahongir Norboy o`g`li
 222191,218533,Trainee,Qudratov Qilichbek Rustam o`g`li
@@ -45581,11 +45641,9 @@
 223557,218533,Trainee,Boltayev Shoxruh
 223878,218533,Trainee,Niyozov Abror Choriyevich
 224003,218533,Trainee,Kenjayev Shoxboz Erkin o'g'li
-224212,218533,Trainee,Qurbonov Sadriddin Xomid o'g'li
 224213,218533,Trainee,Abayev Shahboz Rashid o'g'li
 224214,218533,Trainee,Hazratqulov Nabijon Javlonovich
 224215,218533,Trainee,Toshev Mansurjon Muxammad o'g'li
-224216,218533,Trainee,Qahramonov Baxtiyor Ergash o`g`li
 224217,218533,Trainee,Erkinov Jambul To`lqin o`g`li
 224663,218533,Trainee,Do'stmurodov G'ofurjon Ulash o'g'li
 224664,218533,Trainee,O'rinov Muslimbek Sherqul o'g'li
@@ -45603,6 +45661,7 @@
 226238,218533,Trainee,Qobulov Abdivohid Rashid o'g'li
 226239,218533,Trainee,Shopulatov Jaloliddin Furqat o'g'li
 226240,218533,Trainee,Jonqabilov Ramozon Mengliboyevich
+175234,219752,Static Technician,Ashrapov Kamolliddin
 219753,219752,Head of turnaround planning,Pan Aleksandr Sergeyevich
 219754,219752,Senior Planner,Azizbek Narziev G'aybullayevich
 219755,219752,Maintenance Planner,Bobomurodov Xurshid G'olibjon o'g'li
@@ -45707,7 +45766,6 @@
 223228,223227,Suction Filter,172-PC-002C-ST08
 220289,223248,Shift coordinator,Baratov Yorkin Nosirovich
 223274,223248,Head of GTL Chinoz Terminal,Baratov Yorqin Nosirovich
-223275,223248,GTL Chinoz Deputy Terminal chief,Tulekov Oybek Saparaliyevich
 223276,223248,Deputy for corporate and Commerce Affairs,Azizov Хusan Abdumannopovich
 223277,223248,Chief coordinator for  product control,Izatullaev Soyibjon Saydilla o'g'li
 223278,223248,Shift chief,Ikromov Sherbekjon Ruziniyozovich

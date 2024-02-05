@@ -38,13 +38,18 @@ requisitionItems = pd.read_csv("app/database/csv/ccc_rq_reqItems.csv",     encod
 approvalPath     = pd.read_csv("app/database/csv/ccc_rq_approvalPath.csv", encoding="utf-8")
 
 
+requests                  = pd.read_csv("app/database/csv/ccc_rt_requests.csv", encoding="utf-8")
+priorityAnswer            = pd.read_csv("app/database/csv/ccc_rt_priorityAnswer.csv", encoding="utf-8")
+priorityAnswerDescription = pd.read_csv("app/database/csv/ccc_rt_priorityAnswersDescription.csv", encoding="utf-8")
+
+
 contactID.insert(1, 'Reserved By',         contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Created By',          contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Requisitioned By',    contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Completed By',        contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Cancelled By',        contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Requisition line By', contactID['First Name'] + " " + contactID['Last Name'])
-
+contactID.insert(1, 'Requested By',        contactID['First Name'] + " " + contactID['Last Name'])
 
 
 isMasterWO['Is Master Work Order'] = 'yes'

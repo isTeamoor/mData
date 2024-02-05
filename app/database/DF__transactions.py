@@ -33,21 +33,6 @@ transactions.rename(columns={'User Defined Text Box1': 'Material Code'}, inplace
 transactions['Material Code'] = transactions['Material Code'].astype(str)
 
 
-###Exception for 5-digits items given to AP########################################################
-transactions.loc [ transactions['Catalogue Transaction ID'] == 102616, 'Material Code'] = '012185'
-transactions.loc [ transactions['Catalogue Transaction ID'] == 102615, 'Material Code'] = '012186'
-transactions.loc [ transactions['Catalogue Transaction ID'] == 103010, 'Material Code'] = '012187'
-
-#transactions.loc [ transactions['Catalogue Transaction ID'] == 104246, 'Material Code'] = '016784' #Проволка 1ММ нержавеющая сталь
-#transactions.loc [ transactions['Catalogue Transaction ID'] == 103854, 'Material Code'] = '013222' #PUMP BEARING FOR 160-PC-001A/B
-#transactions.loc [ transactions['Catalogue Transaction ID'] == 103853, 'Material Code'] = '013213' #PUMP BEARING FOR 160-PC-001A/B
-#transactions.loc [ transactions['Catalogue Transaction ID'] == 103367, 'Material Code'] = '014383' #ALUMINIUM TAPE (50MM X 55M) TAPE A
-#transactions.loc [ transactions['Catalogue Transaction ID'] == 103211, 'Material Code'] = '011857' #316L SS WND GRAPH FILL CS I/R CS O
-
-transactions.loc [ transactions['Catalogue Transaction ID'].isin([102616,102615,103010,104246,103854,103853,103367,103211 ]), 'transactMonth' ] = 12
-#transactions  = transactions.loc [ transactions['Catalogue Transaction ID'].isin([102616,102615,103010,104246,103854,103853,103367,103211 ]) ]
-###################################################################################################
-
 transactions  = transactions.loc [ (transactions['Material Code'].str.len() != 5) ]  # пятизначными обозначаются Initial spare parts
 
 transactions['Material Code'] = transactions['Material Code'].map(lambda x: x.strip()) # удаление пробелов и табуляции

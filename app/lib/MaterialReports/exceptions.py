@@ -1,17 +1,12 @@
 def corrections(transactions):
     transacts = transactions.copy()
 
-    transacts.loc [ transacts['Catalogue Transaction ID'] == 103005, 'transactMonth'] = 12 #Мирсаид хайдаров в декабре возврат письмо
-    transacts.loc [ transacts['Catalogue Transaction ID'] == 104529, 'transactMonth'] = 11 #Мирсаид хайдаров наждачная бумага возврат перевзял
-
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 # 9356 - Высокотемпературный силиконовый герметик "TYTAN"(часть уже списана до меня)
     transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6 # 7633 - Рулон оцинкованный ГОСТ 14918-80 Ст08пс Zn120,  0,65x1250 БТ н/обр.(часть уже списана до меня)
 
     transacts.loc[ transacts['WO №'] == 76705, 'Is Master Work Order' ] = '' # Миржахон по ошибке сделал WO master. он уже закрыт
     transacts.loc[ transacts['WO №'] == 81769, 'Work Order Status Description' ] = 'OnHand' # Миржахон по ошибке закрыл master wo
-
-    transacts.loc[ transacts['Reservation Number'] == 3768, 'isRMPD' ] = 'yes' #Закрыт в декабре
-    
+   
     return transacts
 
 
@@ -27,7 +22,7 @@ inactive_Reservations= [
 3413, 3420, 3422, 3424, 3428, 3434, 3455, 3457, 3460, 3470, 3472, 3475, 3479, 3482, 3483, 3486, 3490, 3513, 3516, 3519, 3521, 3524, 3552, 3591, 3597, 3767, 4480, 3545, 4119, 4623, 
 4754, 5310, 5374, 5416, 4481, 4552, 1774, 4244, 1222, 1442, 1755, 1776, 1948, 2646, 4385, 4756, 5246, 5415, 1777, 2647, 4053, 4154, 4196, 4246, 4386, 4398, 4462, 4619, 4707, 4747, 
 4755, 5417, 1791, 2323, 4749, 2916, 3020, 3097, 3180, 3184, 3544, 3624, 4047, 3910, 4401, 4037, 4081, 4115, 5430, 4118, 4140, 4397, 4402, 5248, 5249, 4403, 4465, 4404, 4461, 4621, 
-4705, 5247, 5312, 5375, 4406, 4464, 4706, 4822, 4823, 4824, 4825, 5250, 5373, 5548, 1402, 2885, 4760, 4762, 4764, 4360, 3031, 7659
+4705, 5247, 5312, 5375, 4406, 4464, 4706, 4822, 4823, 4824, 4825, 5250, 5373, 5548, 1402, 2885, 4760, 4762, 4764, 4360, 3031, 7659, 8729, 8728,
 ]
 
 
@@ -43,9 +38,7 @@ extra = {
         
     'rmpd':{
         'begin':[],
-        'currentMonth':[
-            {'Код товара':'11064','Reservation Number':-2,'WO №':-2,'closedMonth':12,'closedYear':12,'Work Order Status Description':'Closed','Материал':'Никель 13','Ед.изм.':'тн','Quantity':0.6494,'Отдел':'RMPD','Reserved By':"Mirsaid Xaydorov Baxtiyor o'g'li",'Asset Description':'undefined', 'Объект':'undefined'},
-        ],
+        'currentMonth':[],
         'currentReturn':[
             ### !!! Qty со знаком "-"/Reservation number should be the same as original position!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             ]
@@ -54,17 +47,16 @@ extra = {
         'begin':[
             #Постоянно на балансе 3 балона газа
             {'Код товара':'05943','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':'Газ сжиженный ПБФ','Ед.изм.':'бал','Quantity':3,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'06933','Reservation Number':-4,'WO №':-4,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':100,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
+            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':26,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
+            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':1,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':74,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
+            
             # По результатам инвентаризации - "LPG"
-            {'Код товара':'05237','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"PIPE 1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.9,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05236','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"PIPE 1-1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.8,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
+            {'Код товара':'05237','Reservation Number':-4,'WO №':-4,'closedMonth':1,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"PIPE 1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.9,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
+            {'Код товара':'05236','Reservation Number':-5,'WO №':-5,'closedMonth':1,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"PIPE 1-1/2', SCH 160, A106- B, BE, B36.10M MR0103 SEAMLESS, / Труба бесшовная",'Ед.изм.':'м','Quantity':0.8,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
         ],
         'currentMonth':[
-            {'Код товара':'06326','Reservation Number':-5,'WO №':-5,'closedMonth':12,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Дырокол На 35 листов",'Ед.изм.':'шт','Quantity':1,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'07483','Reservation Number':-6,'WO №':-6,'closedMonth':12,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А4",'Ед.изм.':'пачка','Quantity':5,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05243','Reservation Number':-7,'WO №':-7,'closedMonth':12,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Пружина для переплета пластиковая 25 мм",'Ед.изм.':'пачка','Quantity':1,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'05244','Reservation Number':-8,'WO №':-8,'closedMonth':12,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"Пружина для переплета пластиковая 12 мм",'Ед.изм.':'пачка','Quantity':1,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'09683','Reservation Number':-9,'WO №':-9,'closedMonth':12,'closedYear':2023,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':9.937,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
+            {'Код товара':'06933','Reservation Number':-6,'WO №':-6,'closedMonth':1,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':28,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
+            {'Код товара':'06933','Reservation Number':-7,'WO №':-7,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':72,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
         ],
         'currentReturn':[
             ### !!! Qty со знаком "-"/Reservation number should be the same as original position!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

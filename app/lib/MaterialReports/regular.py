@@ -148,6 +148,9 @@ def matReport(repMonth, repYear, department, transactions):
           ), 'Кол-во конец' ] = rep['Кол-во начало'] + rep['Кол-во приход'] - rep['Кол-во возврат']
 
 
+  ###Exception do not consider diesel's price
+  rep.loc[rep['Код товара']=='06933', 'Цена'] = 0
+  ##########################################################
 
   ### 9. Вычисление сумм
   rep['Сумма начало']  = rep['Кол-во начало']  * rep['Цена']
@@ -155,6 +158,9 @@ def matReport(repMonth, repYear, department, transactions):
   rep['Сумма расход']  = rep['Кол-во расход']  * rep['Цена']
   rep['Сумма 014']     = rep['Кол-во 014']     * rep['Цена']
   rep['Сумма конец']   = rep['Кол-во конец']   * rep['Цена']
+
+
+
 
 
 
@@ -175,12 +181,18 @@ def matReport(repMonth, repYear, department, transactions):
 
 
   ### 12. Подготовка итогового материального отчёта
+  rep = rep.loc[~rep['Account'].isna()]
   rep.fillna({'Код товара':'undefined','Account':'undefined','Материал':'undefined',
               'Ед.изм.':'undefined','Цена':-1 }, inplace=True)
 
   matRep = rep.groupby(['Код товара','Account','Материал','Ед.изм.','Цена']).sum()
   matRep.reset_index(drop=False, inplace=True)
   matRep = matRep[['Account','Код товара','Материал','Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход','Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец',]]
+  ####################################################################Exception due to difference in price of Argon set by 1c
+  if department == 'cofe':
+    matRep.loc[matRep['Код товара']=='11062', 'Сумма начало'] = 1792410.71
+    matRep.loc[matRep['Код товара']=='11062', 'Сумма приход'] = 4047767.86
+  ####################################################################
 
   ### Cуммирующие строки
   for acc in matRep['Account'].unique():

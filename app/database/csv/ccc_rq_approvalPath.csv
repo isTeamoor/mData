@@ -21,9 +21,9 @@
 20,U&O Instrument
 21,U&O Electrical
 22,U&O Analyser
-23,CofE Maintenance
+23,CofE (Workshop)
 24,Con-Mon
-25,CofE Default
+25,CofE (Insul/Scaff)
 26,SLU Default
 27,SGU Default
 28,PWU Default
@@ -42,7 +42,7 @@
 41,Product Storage& Export
 42,Automation
 43,IT dept
-46,Business Development 
+46,Project Management
 47,Synthesis Gas Unit
 48,Synthesis Liquid Unit
 49,Product Work-up Unit

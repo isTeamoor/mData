@@ -32,7 +32,6 @@ transactions.rename(columns={'User Defined Text Box1': 'Material Code'}, inplace
 
 transactions['Material Code'] = transactions['Material Code'].astype(str)
 
-
 transactions  = transactions.loc [ (transactions['Material Code'].str.len() != 5) ]  # пятизначными обозначаются Initial spare parts
 
 transactions['Material Code'] = transactions['Material Code'].map(lambda x: x.strip()) # удаление пробелов и табуляции

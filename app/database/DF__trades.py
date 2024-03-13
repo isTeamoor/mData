@@ -27,9 +27,12 @@ trades = trades.drop(unused.index)
 trades['Actual Cost']    = trades['Actual Duration Hours'] * trades['Hourly Rate']
 trades['Estimated Cost'] = trades['Estimated Duration Hours'] * trades['Hourly Rate']
 
+cofe_trades = ['WELDER','INSULATE','Scaffolder','PIPING JUNIOR','Metrology Engineer','HVAC ENG','JET TECH','SUPV PSV','Fire and Gas engineer','WELD ENG','Field instrumentation Junior technician','Valve technician','Workshop machinist junior','F&G Supervisor','HVAC Supervisor','Piping Engineer','Work Shop machinist']
+trades['isCofETrade'] = trades['Trade Code Description'].copy().map(lambda x: 'yes' if x in cofe_trades else 'no')
+
 
 trades = trades[[
-'Work Order ID', 'Trade Code Description', 
+'Work Order ID', 'Trade Code Description', 'isCofETrade',
 'Estimated Duration Hours', 'Actual Duration Hours','Hourly Rate', 'Estimated Cost', 'Actual Cost', 
 'Work Order Number','Work Order Status Description','raisedYear', 'raisedMonth',
 'Work Order Component Description', 'Job Code Major Description', 'Account Code', 'Account Code Description', 

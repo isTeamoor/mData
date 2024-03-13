@@ -1011,6 +1011,37 @@
 95306,sta,sta,,2
 95307,2516,2516,,2
 95308,.1,.1,,2
+95313,49533,49533,,2
+95316,0000303,0000303,,2
+95349,0051,0051,,2
+95350,557710,557710,,2
+95361,tyt,tyt,,2
+95364,Tsh 6.1-00203849-59:2008 ,"Tsh 6.1-00203849-59:2008 Азот (газ ҳолда, 40 литр, сиғими 6,2 м3 баллонда)",,2
+95372,Куртка мужская с логотипо,Куртка мужская с логотипом,,2
+95440,6152,6152,,2
+95444,Serv_00316,Serv_00316,,2
+95445,услуги гибридной почты че,услуги гибридной почты через сайт hybrid.pochta.uz,,2
+95449,Газ сжиженный ПБФ,Газ сжиженный ПБФ,,2
+95450,р,р,,2
+95451,526002,526002,,2
+95453,45334,45334,,2
+95455,tytan,tytan,,2
+95762,00054624,00054624,,2
+95763,0055837,0055837,,2
+95764,WIM00555837,0055837,,2
+95812,56249,56249,,2
+95830,Serv_005,Regarding the signing of the contract with for the training of the employees of the Uzbekistan GTL plant in the training courses on labor protection,,2
+95864,5383,5383,,2
+95868,wim5472,wim5472,,2
+95871,56267,56267,,2
+95875,,"Спец.обувь мужские для рабочих,ГОСТ 28507-99",,2
+95878,WIM0050765	,WIM0050765	,,2
+95879,53570,53570,,2
+96260,,WIM0043569,,2
+96261,,WIM0043569,,2
+96262,,WIM0043569,,2
+96264,,WIM0043569,,2
+96266,0055845,0055845,,2
 6666,WIM0000001,120-PC-003A/B/ TSP 4X2-9/ Mechanical SEAL,3284,8
 6667,WIM0000002,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 21,76/Ea",2179,2
 6668,WIM0000003,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 36,26/Ea",2180,2
@@ -1830,7 +1861,7 @@
 8367,WIM0001702,Shaft seal ring 32 314D112-17188-01 / Уплотниетльное кольцо вала,4758,2
 8368,WIM0001703,"SITOP PSE200U 10 A Selectivity module / Модуль селективности / 6EP1961-2BA41 / SITOP PSE200U 10 A, 4Х-КАНАЛЬНЫЙ МОДУЛЬ СЕЛЕКТИВНОСТИ, ВХОД: =24 В, ВЫХОД: =24 В/10 А, ПОКАНАЛЬНАЯ НАСТРОЙКА ВЫХОДОВ НА ТОК 3-10 А, СО СТАТУСНЫМ СООБЩЕНИЕМ ДЛЯ КАНАЛА",3475,2
 8369,WIM0001704,"Size: 1 1/2"" (Size: 40mm) Gasket, 316 SS WND FLEXIBLE GRAPHITE FILL 316 SS I/R 316 SS O/R RF B16.20 CL300 4.5MM thickness (3.2MM RING) Spiral Wound",4897,2
-8370,WIM0001705,"Size: 1 1/2"" (Size: 40mm) Gasket, 316L SS WND GRAPH FILL 316L SS I/R 316L SS O/R RF B16.20 CL600 4.5MM thickness (3.2MM RING)Shaft seal ring",4921,2
+8370,WIM0001705,"Size: 1 1/2"" (Size: 40mm) Gasket, 316L SS WND GRAPH FILL 316L SS I/R 316L SS O/R RF B16.20 CL600 4.5MM thickness (3.2MM RING) Spiral Wound",4921,2
 8371,WIM0001706,"Size: 1 1/2"" (Size: 40mm) Gasket, 316L SS WND GRAPH FILL 316L SS I/R CS O/R RF B16.20 CL150 4.5MM thickness (3.2MM RING) Spiral Wound",4847,2
 8372,WIM0001707,"Size: 1 1/2"" (Size: 40mm) Gasket, 316L SS WND GRAPH FILL 316L SS I/R CS O/R RF B16.20 CL300 4.5MM thickness (3.2MM RING) Spiral Wound",4863,2
 8373,WIM0001708,"Size: 1 1/2"" (Size: 40mm) Gasket, 316L SS WND GRAPH FILL 316L SS I/R CS O/R RF B16.20 CL600 4.5MM thickness (3.2MM RING) Spiral Wound",4933,2
@@ -2402,8 +2433,8 @@
 9089,WIM0002424,"Формующая головка 1/8""x40/5/32""x32/3/16""x24/5/16""x18/3/8""x16/7/16""x141/2""x13/9/16""x125/8""x11/3/4""x107/8""x9/1""",4788,2
 9090,WIM0002425,"Холодная сварка Гладкая лента толщ от 0,2мм до 0,6мм шир от 10мм до 70мм гофрированная лента толщ от 0,2мм до 1,0 мм шир от8 мм до 40мм/Tape fum graph",4789,17
 9094,WIM0002429,"Шланг для ремонта и эксплуатации 250 0С/12 бар/(1"")/15m /Flexible hoses for Utility stations",4801,2
-9095,WIM0002430,Eachанга изолируюшая оперативная ШОИ-10кв,158,2
-9096,WIM0002431,Eachанга изолируюшая оперативная ШОИ-35 кВ,159,2
+9095,WIM0002430,Штанга изолируюшая оперативная ШОИ-10кв,158,2
+9096,WIM0002431,Штанга изолируюшая оперативная ШОИ-35 кВ,159,2
 9099,WIM0002434,Graese Mobilith SHC 100 / Смазка,O0005217,17
 9100,WIM0002435,Oil Mobil Delvac Modem 10W 40 CP /Масло,O0005215,20
 9101,WIM0002436,Oil Mobil Glygoyle 150,O0005211,20
@@ -4684,21 +4715,6 @@
 50501,WIM0043827,FILTER BAG (NOMEX) SizeΦ200 x 800L,12209,8
 50502,WIM0043828,SEAT PLATE Sizet58 x Φ1670 x 170H,12210,2
 50503,WIM0043829,SEAT PLATE Sizet58 x Φ1670 x 170H,12211,2
-50504,WIM0043830,"MANWAY NOZZLE GASKET 24"" ASME 300# SizeM1(24"" ASME 300#)",12212,2
-50505,WIM0043831,"DESICCANT REMOVAL NOZZLE GASKET 10"" ASME 300# Size(10"" ASME 300#)",12213,2
-50507,WIM0043833,"MANWAY NOZZLE GASKET 24"" ASME 300# Size(24"" ASME 300#)",12215,2
-50508,WIM0043834,"DESICCANT REMOVAL NOZZLE GASKET 10"" ASME 300# Size10"" ASME 300#",12216,2
-50509,WIM0043835,"MANWAY / TAIL GAS INLET NOZZLE BOLT & NUT24"" ASME 300# STUD BOLT W/H HEX NUT A193 GRB7 W/A194 GR2H - 1-1/2"" × 250mm Size1/2-8UNx250L",12217,8
-50510,WIM0043836,"DESICCANT REMOVAL NOZZLE BOLT & NUT10"" ASME 300# STUD BOLT W/H HEX NUT A193 GRB7 W/A194 GR2H - 1"" × 180mm SizeU1-8UNx180L",12218,8
-50511,WIM0043837,"MANWAY / TAIL GAS INLET NOZZLE BOLT & NUT24"" ASME 300# STUD BOLT W/H HEX NUT A193 GRB7 W/A194 GR2H -1-1/2"" × 250mm Size1/2-8UNx250L",12219,8
-50512,WIM0043838,"MANWAY / TAIL GAS INLET NOZZLE BOLT & NUT24"" ASME 300# STUD BOLT W/H HEX NUT A193 GRB7 W/A194 GR2H - 1-1/2"" × 250mm Size1/2-8UNx250L",12220,8
-50513,WIM0043839,"DESICCANT REMOVAL NOZZLE BOLT & NUT10"" ASME 300# STUD BOLT W/H HEX NUT A193 GRB7 W/A194 GR2H - 1"" × 180mm SizeU1-8UNx180L",12221,8
-50514,WIM0043840,"BEARING, IRT-300C-4MW-A.S (SUJ2) (135x59 - 2EA) (205x53 - 2 EA) SizeIRT-300C-4WM",12222,2
-50515,WIM0043841,"BEARING, IRT-300C-4MW-A.S (SUJ2) (135x52 - 1 EA) SizeIRT-300C-4WM",12223,2
-50516,WIM0043842,BELT 14GTV-3136-20 Size14GTV-3136-20,12224,2
-50517,WIM0043843,FAN BLADE 4.3A-2438-06-SML-TS,12225,2
-50518,WIM0043844,ACS 800 Safety Torque off option + 0967,12226,2
-50519,WIM0043845,Gasket 1-R: sus 316 LH/316 LF Graflex /0-R: CS / 4.5 T RF ASME/ANSI 300LB 16B,12227,2
 50520,WIM0043846,REAMER 1 BOLT+1 NUT FOR MIDDLE SKIRT M33XL206,O0010466,8
 50521,WIM0043847,NON ASBESTOS FOR LADDER L75XW150XT5,O0010467,2
 50522,WIM0043848,SHOULDER 1B/1N/1W FOR LADDER M16XL70,O0010468,8
@@ -4819,7 +4835,7 @@
 50687,WIM0043966,Молекулярная сита 75мм,O0006297,2
 50688,WIM0043967,Оксид ртути 100гр,O0006299,14
 50689,WIM0043968,Перчатки трикотажные для защиты от внешних воздействий,O0006161,15
-50690,WIM0043969,питьевая вода в бутылях емкостью 18.9л,963,2
+50690,WIM0043969,"Питьевая вода в бутылях емкостью 18,9 л",963,2
 50691,WIM0043970,"Полимерная плёнка марки ""У"" ва ""Т""",O0006157,17
 50692,WIM0043971,Половая тряпка 130-150см,O0006160,12
 50693,WIM0043972,Промывалька 1л /Артикул: 12009161 или аналог,O0006290,2
@@ -5576,83 +5592,9 @@
 51624,WIM0044747,n. 2 PHOTOSENSOR SWITCH VL180 (83711),12922,8
 51625,WIM0044748,"n. 5 FLANGE GASKET SPIROMET SWIE 2""  (82473)",12923,8
 51626,WIM0044749,n. 1 SWTICH POWER SUPPLY QIUNT-PS/1AC/24VDC 20A (83518),12924,8
-51627,WIM0044750,Stud B/Heavy Hex. 2NS / 130-XP-124/224 M1  for Condensor Package,12925,8
-51628,WIM0044751,Stud B/Heavy Hex. 2NS / 130-XP-124/224 A1  for Condensor Package,12926,8
-51629,WIM0044752,Gasket / 130-XP-124/224 A1  for Condensor Package,12927,2
-51630,WIM0044753,Stud B/Heavy Hex. 2NS / 130-XP-124/224 A2  for Condensor Package,12928,8
-51631,WIM0044754,Gasket / 130-XP-124/224 A2  for Condensor Package,12929,2
-51632,WIM0044755,Stud B/Heavy Hex. 2NS / 130-XP-124/224 A3  for Condensor Package,12930,8
-51633,WIM0044756,Gasket / 130-XP-124/224 A3  for Condensor Package,12931,2
-51634,WIM0044757,Stud B/Heavy Hex. 2NS / 130-XP-124/224 B1  for Condensor Package,12932,8
-51635,WIM0044758,Gasket / 130-XP-124/224 B1  for Condensor Package,12933,2
-51636,WIM0044759,Stud B/Heavy Hex. 2NS / 130-XP-124/224 B1  for Condensor Package,12934,8
-51637,WIM0044760,Stud B/Heavy Hex. 2NS / 130-XP-124/224 D1  for Condensor Package,12935,8
-51638,WIM0044761,Gasket / 130-XP-124/224 D1  for Condensor Package,12936,2
-51639,WIM0044762,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 T1,T2  for Condensor Package",12937,8
-51640,WIM0044763,"Gasket / 130-XP-124/224 T1,T2  for Condensor Package",12938,2
-51641,WIM0044764,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 G1,G2  for Condensor Package",12939,8
-51642,WIM0044765,"Gasket / 130-XP-124/224 G1,G2  for Condensor Package",12940,2
-51643,WIM0044766,Stud B/Heavy Hex. 2NS / 130-XP-124/224 A6  for Condensor Package,12941,8
-51644,WIM0044767,Gasket / 130-XP-124/224 A6  for Condensor Package,12942,2
-51645,WIM0044768,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 L1,L3  for Condensor Package",12943,8
-51646,WIM0044769,"Gasket / 130-XP-124/224 L1,L3  for Condensor Package",12944,2
-51647,WIM0044770,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 L2,L4  for Condensor Package",12945,8
-51648,WIM0044771,"Gasket / 130-XP-124/224 L2,L4  for Condensor Package",12946,2
-51649,WIM0044772,Stud B/Heavy Hex. 2NS / 130-XP-124/224 P1  for Condensor Package,12947,8
-51650,WIM0044773,Gasket / 130-XP-124/224 P1  for Condensor Package,12948,2
-51651,WIM0044774,Stud B/Heavy Hex. 2NS / 130-XP-124/224 V1  for Condensor Package,12949,8
-51652,WIM0044775,Gasket / 130-XP-124/224 V1  for Condensor Package,12950,2
-51653,WIM0044776,Stud B/Heavy Hex. 2NS / 130-XP-124/224 A4  for Condensor Package,12951,8
-51654,WIM0044777,Gasket / 130-XP-124/224 A4  for Condensor Package,12952,2
-51655,WIM0044778,Stud B/Heavy Hex. 2NS / 130-XP-124/224 A5  for Condensor Package,12953,8
-51656,WIM0044779,Gasket / 130-XP-124/224 A5  for Condensor Package,12954,2
-51657,WIM0044780,Stud B/Heavy Hex. 2NS / 130-XP-124/224 A7  for Condensor Package,12955,8
-51658,WIM0044781,Gasket / 130-XP-124/224 A7  for Condensor Package,12956,2
-51659,WIM0044782,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 W1,W2  for Condensor Package",12957,8
-51660,WIM0044783,"Gasket / 130-XP-124/224 W1,W2  for Condensor Package",12958,2
-51661,WIM0044784,"STUD BOLT/2HHN, U1-1/8""*8UNC*155L, 130-XP-124/224",12959,2
-51662,WIM0044785,"STUD BOLT/2HHN, U5/8""*11UNC*90L, 130-XP-124/224",12960,2
-51663,WIM0044786,"STUD BOLT/2HHN, U5/8""*11UNC*95L, 130-XP-124/224",12961,2
-51664,WIM0044787,"STUD BOLT/2HHN, U1-1/4""*8UNC*180L, 130-XP-124/224",12962,2
 51665,WIM0044788,"NOZZLE GASKET, T4.5 x 2""*ASME 150# RF., 130-XP-124/224",12963,2
 51666,WIM0044789,"NOZZLE GASKET, T4.5 x 2""*ASME 300# RF., 130-XP-124/224",12964,2
 51667,WIM0044790,"NOZZLE GASKET, T4.5 x 6""*ASME 150# RF., 130-XP-124/224",12965,2
-51668,WIM0044791,"STUD BOLT/2HHN, U1-1/8""*8UNC*155L, 173-XP-002A/B",12966,2
-51669,WIM0044792,"STUD BOLT/2HHN, U3/4""*10UNC*110L, 173-XP-002A/B",12967,2
-51670,WIM0044793,"HEX.B/N/PW, M12*35L, 130-XP-124/224",12968,2
-51671,WIM0044794,"HEX.B/N/PW, M16*40L, 130-XP-124/224",12969,2
-51672,WIM0044795,"HEX.B/N/PW, M16*50L, 130-XP-124/224",12970,2
-51673,WIM0044796,"HEX.B/N/PW, M16*55L, 130-XP-124/224",12971,2
-51674,WIM0044797,"HEX.B/N/TW, M16*55L, 130-XP-124/224",12972,2
-51675,WIM0044798,"HEX.B/N/PW, M16*60L, 130-XP-124/224",12973,2
-51676,WIM0044799,"HEX.B/N/TW, M16*60L,, 130-XP-124/224",12974,2
-51677,WIM0044800,"HEX.B/N/PW, M16*80L, 130-XP-124/224",12975,2
-51678,WIM0044801,"HEX.B/N/PW, M4*40L, 130-XP-124/224",12976,2
-51679,WIM0044802,"HEX.B/N/2PW, M20*50L, 130-XP-124/224",12977,2
-51680,WIM0044803,"HEX.B/N/2PW, M20*55L, 130-XP-124/224",12978,2
-51681,WIM0044804,"HEX.B/N/2PW, M20*60L, 130-XP-124/224",12979,2
-51682,WIM0044805,"HEX.B/N/PW/TW, M20*60L, 130-XP-124/224",12980,2
-51683,WIM0044806,"HEX.B/N/2PW, M22*65L, 130-XP-124/224",12981,2
-51684,WIM0044807,"HEX.B/N/2PW, M16*70L, 130-XP-124/224",12982,2
-51685,WIM0044808,"HEX.B/N/PW, M12*35L, 130-XP-124/224",12983,2
-51686,WIM0044809,"HEX.B/N/PW, M16*40L, 130-XP-124/224",12984,2
-51687,WIM0044810,"HEX.B/N/PW, M16*50L, 130-XP-124/224",12985,2
-51688,WIM0044811,"HEX.B/N/TW, M16*55L, 130-XP-124/224",12986,2
-51689,WIM0044812,"HEX.B/N/TW, M16*60L, 130-XP-124/224",12987,2
-51690,WIM0044813,"HEX.B/N/PW, M4*40L, 130-XP-124/224",12988,2
-51691,WIM0044814,"HEX.B/N/2PW, M20*55L, 130-XP-124/224",12989,2
-51692,WIM0044815,"HEX.B/N/2PW, M20*60L, 130-XP-124/224",12990,2
-51693,WIM0044816,"HEX.B/N/TW/PW, M20*60L, 130-XP-124/224",12991,2
-51694,WIM0044817,"HEX.B/N/2PW, M20*50L, 130-XP-124/224",12992,2
-51695,WIM0044818,"HEX.B/N/2PW, M20*55L, 130-XP-124/224",12993,2
-51696,WIM0044819,"HEX.B/N/2PW, M22*65L, 130-XP-124/224",12994,2
-51697,WIM0044820,"HEX.B/N/PW, M12*35L, 130-XP-124/224",12995,2
-51698,WIM0044821,"HEX.B/N/PW, M16*40L, 130-XP-124/224",12996,2
-51699,WIM0044822,"HEX.B/N/PW, M16*50L, 130-XP-124/224",12997,2
-51700,WIM0044823,"HEX.B/N/PW, M16*55L, 130-XP-124/224",12998,2
-51701,WIM0044824,"HEX.B/N/PW, M16*80L, 130-XP-124/224",12999,2
-51702,WIM0044825,"HEX.B/N/PW. M4*40L, 130-XP-124/224",13000,2
-51703,WIM0044826,"HEX.B/N/PW, M12*35L, 173-XP-002A/B",13001,2
 51704,WIM0044827,BUNDLE DEVICE FOR 120-CC-101 Y1811-03 (S.369-17 OF 18),13002,8
 51705,WIM0044828,BUNDLE DEVICE FOR 120-CC-101 Y1811-04 (S.369-17 OF 18),13003,8
 51706,WIM0044829,WRENCH FOR R/M COUPLING FOR 120-CC-101 Y1811-96 (S.369-17 OF 18),13004,2
@@ -5879,17 +5821,7 @@
 51931,WIM0045054,COUPLING REPAIR KIT FOR 150-PC-004,13229,8
 51932,WIM0045055,COUPLING REPAIR KIT FOR 183-PC-007,13230,8
 51933,WIM0045056,COUPLING REPAIR KIT FOR 160-PC-001A/B,13231,2
-51934,WIM0045057,Casing gasket,13232,2
 51935,WIM0045058,M/S repair kit,13233,2
-51936,WIM0045059,Coupling repair kit,13234,2
-51937,WIM0045060,Coupling repair kit,13235,2
-51938,WIM0045061,Coupling repair kit,13236,2
-51939,WIM0045062,Pump bearing,13237,2
-51940,WIM0045063,Pump bearing,13238,2
-51941,WIM0045064,Pump bearing,13239,2
-51942,WIM0045065,Motor bearing,13240,2
-51943,WIM0045066,Motor bearing,13241,2
-51944,WIM0045067,Motor bearing,13242,2
 51945,WIM0045068,Casing & Impeller,13243,2
 51946,WIM0045069,CASING GASKET FOR FOR 150-PC-004,13244,8
 51947,WIM0045070,CASING GASKET FOR 183-PC-007,13245,8
@@ -6005,28 +5937,7 @@
 52057,WIM0045180,MOTOR BEARING FOR 176-PC-035A/B,13355,2
 52058,WIM0045181,MOTOR BEARING FOR 176-PC-036A/B,13356,2
 52059,WIM0045182,CASING GASKET  FOR 184-PC-009,13357,2
-52060,WIM0045183,CASING GASKET FOR 145-PC-002A/B,13358,2
-52061,WIM0045184,CASING GASKET FOR 145-PC-022A/B,13359,2
-52062,WIM0045185,CASING GASKET FOR 150-PC-005A/B,13360,2
-52063,WIM0045186,CASING GASKET FOR 150-PC-050A/B,13361,2
-52064,WIM0045187,CASING GASKET FOR 150-PC-008A/B,13362,2
-52065,WIM0045188,CASING GASKET FOR 150-PC-011A/B,13363,2
-52066,WIM0045189,CASING GASKET FOR 150-PC-014A/B,13364,2
-52067,WIM0045190,CASING GASKET FOR 150-PC-015A/B,13365,2
-52068,WIM0045191,CASING GASKET FOR 150-PC-016,13366,2
-52069,WIM0045192,CASING GASKET FOR 150-PC-017A/B,13367,2
-52070,WIM0045193,CASING GASKET FOR 150-PC-018A/B,13368,2
-52071,WIM0045194,CASING GASKET FOR 150-PC-019A/B,13369,2
-52072,WIM0045195,CASING GASKET FOR 183-PC-006,13370,2
-52073,WIM0045196,CASING GASKET FOR 150-PC-007A/B,13371,2
-52074,WIM0045197,CASING GASKET FOR 150-PC-010A/B,13372,2
-52075,WIM0045198,CASING GASKET FOR 145-PC-001A/B,13373,2
-52076,WIM0045199,CASING GASKET FOR 150-PC-001A/B,13374,2
 52077,WIM0045200,CASING GASKET FOR 150-PC-002A/B,13375,2
-52078,WIM0045201,CASING GASKET FOR 150-PC-013A/B,13376,2
-52079,WIM0045202,CASING GASKET FOR 150-PC-012A/B,13377,2
-52080,WIM0045203,CASING GASKET FOR 150-PC-020A/B,13378,2
-52081,WIM0045204,CASING GASKET FOR 183-PC-005A/B,13379,2
 52082,WIM0045205,Casing gasket,13380,2
 52083,WIM0045206,Casing gasket,13381,2
 52084,WIM0045207,Casing gasket,13382,2
@@ -8450,7 +8361,7 @@
 86062,WIM0047537,"SPARE PART: GASKET FOR Y-GLOBE VALVE 6"" 150#",14750,2
 86063,WIM0047538,SPARE PART: AOV,14751,2
 86064,WIM0047539,"METSO ND 9200, AI, HART (2X01004/01-000) (S. 1015/ 1 OF 2)",14752,2
-86065,WIM0047540,"METSO ND 9200, AI, HART (2X01004/02-000) (S. 1015/ 1 OF 2)",14753,2
+86065,WIM0047540,"METSO ND 9200, AI, HART (2X01004/01-000) (S. 1015/ 1 OF 2)",14753,2
 86066,WIM0047541,"TOPWORX, 73 SERIES, PROXIMITY GO, SS (2X05004/01-000) (S. 1015/ 1 OF 2)",14754,2
 86067,WIM0047542,BALANCE SEAL 4.242 (117344/98-E01) (S. 1015/ 1 OF 2),14755,2
 86068,WIM0047543,BALANCE SEAL RETAINER 4.242 (123250/19-T01006) (S. 1015/ 1 OF 2),14756,2
@@ -8728,10 +8639,7 @@
 86340,WIM0047815,125A EX PROOF MOBILE SOCKET WITH WHEEL PRE512RRA6+PRE512PR (K17M035143202) (S.1122 / 4 OF 5 PKG),15028,8
 86341,WIM0047816,857912506 8579/12-506 PLUG FOR WELDING SOCKET (COO: Germany) (S.1122 / 4 OF 5 PKG),15029,8
 86342,WIM0047817,125A EX PROOF MOBILE SOCKET WITH WHEEL PRE512RRA6+PRE512PR (K17M035143202) (S.1122 / 5 OF 5 PKG),15030,8
-86343,WIM0047818,PLUG FOR ABOVE RECEPTACLES (14.3.8) (S. 790/ 1 OF 2),15031,2
 86344,WIM0047819,PLUG FOR ABOVE RECEPTACLES (14.3.12) (S. 790/ 2 OF 2),15032,2
-86345,WIM0047820,PLUG FOR WELDING SOCKET 63 A (14.3.10) (S. 879/ 2 OF 2),15033,2
-86346,WIM0047821,PLUG FOR CONVIENCE SOCKET SURFACE TYPE(IP65) (S. 996/ 1 OF 1),15034,2
 86347,WIM0047822,PLUG FOR WELDING SOCKET W/SWITCHED&INTERLOCKED () (S. 996/ 1 OF 1),15035,2
 86348,WIM0047823,"КАБЕЛЬ ВВГНГ(А)-LS 5X4ОК(N,PE)-0,66 ТУ 16.К121-018-2011 (EE-297 / 171650/21007352 / GPB-10-001 /   102 OF 111)",15036,34
 86349,WIM0047824,"КАБЕЛЬ ВВГНГ(А)-LS 5X16ОК(N,PE)-0,66 ТУ 16.К121-018-2011 (EE-297 / 172252/21006924 / GPB-10-001 /   86 OF 111)",15037,34
@@ -12758,18 +12666,18 @@
 90542,WIM0051741,Сыворотка против укуса ядовитого пауку каракурта,O0007880,19
 90543,WIM0051742,Сыворотка против укуса ядовитых змей.,O0007879,19
 90545,Serv_0000147,Signing a contract to send to one of the depots for the repair of special wagons for the purpose of the next mandatory technical inspection of wagon №76011246 which is on the balance sheet of the raw materials store for the transportation of sulfuric acid,,
-90558,WIM0051743,Сумка для ноутбука с логотипом  UNG Uzbekistan GTL,O0006114   ,2
-90559,WIM0051744,Ежедневник с нанесением логотипа UNG Uzbekistan GTL,O0006108   ,2
-90560,WIM0051745,Ручка с нанесением логотипа UNG Uzbekistan GTL (Сталь),O0006110   ,2
-90561,WIM0051746,Футляр для стальных ручек (Пластик),O0006111   ,2
+90558,WIM0051743,Сумка для ноутбука с логотипом  UNG Uzbekistan GTL,O0006114,2
+90559,WIM0051744,Ежедневник с нанесением логотипа UNG Uzbekistan GTL,O0006108,2
+90560,WIM0051745,Ручка с нанесением логотипа UNG Uzbekistan GTL (Сталь),O0006110,2
+90561,WIM0051746,Футляр для стальных ручек (Пластик),O0006111,2
 90562,WIM0051747,Термокружка с индикатором температуры с логотипом UNG Uzbekistan GTL,O0006112,2
-90563,WIM0051748,Внешний аккумулятор c нанесением логотипа UNG Uzbekistan GTL,O0006113   ,2
-90564,WIM0051749,Пакет с логотипом Uzbekistan GTL,O0006967   ,2
-90565,WIM0051750,Блокнот с логотипом UNG Uzbekistan GTL,O0006966   ,2
-90566,WIM0051751,Ручка с нанесением логотипа UNG Uzbekistan GTL (Пластик),O0006109   ,2
-90567,WIM0051752,Кружка логотипа UNG Uzbekistan GTL,O0006965   ,2
-90568,WIM0051753,Футболка с нанесением логотипа UNG Uzbekistan GTL,O0006115   ,2
-90569,WIM0051754,Кепка (бейсболка) с вышивкой логотипа UNG Uzbekistan GTL,O0006116   ,2
+90563,WIM0051748,Внешний аккумулятор c нанесением логотипа UNG Uzbekistan GTL,O0006113,2
+90564,WIM0051749,Пакет с логотипом Uzbekistan GTL,O0006967,2
+90565,WIM0051750,Блокнот с логотипом UNG Uzbekistan GTL,O0006966,2
+90566,WIM0051751,Ручка с нанесением логотипа UNG Uzbekistan GTL (Пластик),O0006109,2
+90567,WIM0051752,Кружка логотипа UNG Uzbekistan GTL,O0006965,2
+90568,WIM0051753,Футболка с нанесением логотипа UNG Uzbekistan GTL,O0006115,2
+90569,WIM0051754,Кепка (бейсболка) с вышивкой логотипа UNG Uzbekistan GTL,O0006116,2
 90572,Serv_0000148,"Training course for ""Installation and operation of solar photoelectric plants and water heating collectors"".",,2
 90573,WIM0051755,Прожектор светодиодный LED - 400 Вт,O0009236,2
 90574,WIM0051756,"труба ПЭ100 SDR26 200х7,7",O0009239,12
@@ -12977,7 +12885,7 @@
 90806,WIM0051944,Micrometr 25-50 mm ,,2
 90807,Serv_0000162,Operativ izolyatsiyalovchi shtanga ШОИ-10 kV,,2
 90808,Serv_0000163,Operativ izolyatsiyalovchi shtanga ШОИ-35 kV,,2
-90809,Serv_0000164,Dielektrik rezinali qo‘lqop,,2
+90809,Serv_0000164,"На оказание услуг по поверке инструментов и средств индивидуальной защиты, диэлектрический перчатки",,2
 90810,Serv_0000165,Dielektrik rezinali etik,,2
 90811,Serv_0000166,1000 V dan yuqori kuchlanish ko‘rsatgichlar ,,2
 90820,Serv_0000167,"Услуга на проведения по проектированию, поставку и отделочной работы учебного помещения в заведении Бухарского нефтегазового колледжа в г. Бухаре.",,2
@@ -13554,7 +13462,7 @@
 91425,WIM0052515,ACC-501991177-01 /02/03 Cable head Cable termination 1*240mm2/300mm2/400mm2,16508,2
 91426,WIM0052516,Bushing gasket for   1.6 MVA TR,16594,2
 91430,Serv_0000179,Сargo transportation service for Mechnical seal of 130-PC-005A/B,,2
-91431,WIM0052517,Перчатки резиновыехозяйственные ,O0008008	,2
+91431,WIM0052517,Перчатки резиновыехозяйственные ,O0008008,2
 91432,WIM0052518,Каска строительная (храповик) ,O0009298	,2
 91433,WIM0052519,"Каска защитная СОМЗ-55 ""FavoriT Trek""",O0009300,2
 91434,Serv_0000180,"PTFE lining for existing pipe spool / Фторопластовая футеровка для существующей катушки трубопровода  6"" 300# 3000 mm",,2
@@ -14347,7 +14255,7 @@
 92309,WIM0053270,ACID SOLUTION(80PPM) 1.8N H2SO4(1L)(S.1344/2 OF 2),16615,2
 92310,WIM0053271,ACID SOLUTION(40PPM) 1.8N H2SO4(1L)(S.1344/2 OF 2),16616,2
 92311,WIM0053272,ACID SOLUTION(15PPM) 1.8N H2SO4(1L)(S.1344/2 OF 2),16617,2
-92312,WIM0053273,ETHYLENE GLYCOL,16618,2
+92312,WIM0053273,ETHYLENE GLYCOL,16618,17
 92313,WIM0053274,PROPYLENE GLYCOL ,16619,2
 92314,WIM0053275,KHP POWDER (500 g) (S. 1344/ 2 OF 2),16611,2
 92349,Serv_0000218,Publication in journal,,2
@@ -14384,7 +14292,7 @@
 92393,WIM0053302,Body Gasket for Gate valve,,2
 92394,WIM0053303, Toroidal sensor ,,2
 92395,WIM0053304,Двухкамерный холодильник,,19
-92396,Serv_0000223,"""GTL Chinoz terminali""фаолияти давомида хосил бўладиган 2-3 хавфлилик синфига мансуб саноат чиқиндиларни утилизация қилиш хизматини амалга ошириш",,2
+92396,Serv_0000223,на техническое обследование и инструментальное исследование строительных конструкций Эстакады лёгкого типа для осмотра котлов-цистерн под налив светлых нефтепродуктов на “GTL Chinoz terminal”,,2
 92397,Serv_0000224,"""GTL Chinoz terminali"" хўжалик ичимлик сув таъминоти манбаларидан тахлил хизматини олиб бориш",,2
 92398,Serv_0000225,"""GTL Chinoz terminali"" учун Экологик меьёрий (ПДВ, ПДО, ПДС ва РСВ) хужжатларини ишлаб чиқиш ва Давлат экологик экспертизасидан ўтказиш ишларини амалга ошириш ",,2
 92403,WIM0053305,Globe glass for lighting,,2
@@ -14999,18 +14907,18 @@
 93085,ContractServ00044,Gas welding cutting with a thickness of 40mm to 50mm (work from 30 meters to 40 meters),,45
 93086,ContractServ00045,Gas welding cutting with a thickness of 40mm to 50mm (work from 40 meters to 50 meters),,45
 93087,ContractServ00046,Dismantling coating the surface of pipelines with aluminum sheets or galvanized steel,,44
-93088,ContractServ00047,Dismantling the insulation of pipelines,,23
+93088,ContractServ00047,Dismantling the insulation of pipelines,,44
 93089,ContractServ00048,Dismantling of foil pipelines,,44
 93090,ContractServ00049,Cleaning the surface of pipelines with metal brushes,,44
 93091,ContractServ00050,Pipe insulation with foil,,44
-93092,ContractServ00051,Pipeline insulation,,23
+93092,ContractServ00051,Pipeline insulation,,44
 93093,ContractServ00052,Covering the surface of pipelines with aluminum sheets or galvanized steel,,44
 93094,ContractServ00053,Dismantling coatinginsulation of flanged aluminum or galvanized sheet,,44
-93095,ContractServ00054,Dismantling the insulation of flange connections,,23
+93095,ContractServ00054,Dismantling the insulation of flange connections,,44
 93096,ContractServ00055,Removing the Flange Foil,,44
 93097,ContractServ00056,Cleaning the surface of flange connections with metal brushes,,44
 93098,ContractServ00057,Insulation of flange connections with foil,,44
-93099,ContractServ00058,Insulation flange connections,,23
+93099,ContractServ00058,Insulation flange connections,,44
 93100,ContractServ00059,Covering the surface of flange connections with aluminum sheets or galvanized steel,,44
 93101,ContractServ00060,Dismantling covering the surface of shut-off valves with aluminum sheets or galvanized steel,,2
 93102,ContractServ00061,Dismantling the insulation of shut-off valves,,2
@@ -16418,7 +16326,7 @@
 94641,WIM0055169,Лабораторный  халат мужской с брюками.,,7
 94642,WIM0055170,Лабораторный  халат женский с брюками.,,7
 94643,WIM0055171,Smoke & Heat Combi detector,,2
-94644,Serv_0000292,"Описание услуги и его технические характеристики: выполнение профилактических работ по контролю состояния газовой безопасности, а также аварийно-спасательных, оперативно-технических работ.",,
+94644,Serv_0000292,«Uzbekistan GTL» МЧЖ эҳтиёжлари учун газхавфсизлиги назорати (УзХК - 30 кишилик ) хизмати учун шартнома тузиш ,,
 94645,Serv_0000293,"""Оказание услуг по определение справедливой стоимости основных средств для правильного отражения в финансовой отчетности ООО «Uzbekistan GTL» в соответствие с Международными Стандартами Финансовой Отчетности""",,2
 94647,Serv_0000294,"GRE (Glass Reinforcedepoxy), GRP (Glass reinforced plastic), GRV (Glass reinforced vinylester) pipeline and equipments repairing ",,2
 94648,Serv_0000295,Course for installation and operation of solar photovoltaic power plants and water heating equipments,,2
@@ -17043,3 +16951,908 @@
 95301,WIM0055787,"X5979YGLBSPR005-0000-99 Control Valve - Spares C.B Y-Globe Valve Spares 5979-005-001 / Прокладки для предохранительного клапана, из резины.",O0011805,8
 95302,WIM0055788,"X5979YGLBSPR006-0000-99 Control Valve - Spares C.B Y-Globe Valve Spares 5979-006-001 / Прокладки для предохранительного клапана, из резины.",O0011806,8
 95303,WIM0055789,"31641331001244-0000-999 Control Valve - Spares SG Lock valve Model: ALR04 (10-100 psi) / Части клапана, комплект отделки.",O0011807,8
+95309,Serv_0000299,"Заключение договора с ООО ""Nano Telecom"" на предоставление телекоммуникационных услуг",,2
+95310,Serv_0000300,"Заключение договора с ООО ""Nova Group"" на предоставление телекоммуникационных услуг",,2
+95311,Serv_0000301,"Заключение договора с АК ""Узбектелеком"" на предоставление телекоммуникационных услуг",,2
+95312,Serv_0000302,"Заключение договора с АК ""Узбектелеком"" на предоставление услуг SIP телефонии",,2
+95314,Serv_0000303,"2024 йил учун қаттиқ маиший чиқиндиларни олиб чиқиш, жойлаштириш ва зарарсизлантириш учун шартнома тузиш",,2
+95315,Serv_0000304,"Regarding the signing of the contract for the training of the employees of the Uzbekistan GTL plant in the training courses of ""UNG training"" LLC",,2
+95317,WIM0055790,Ручка пластиковая с нанесением логотипа Uzbekistan GTL,O0012463,2
+95318,WIM0055791,Термокружка с индикатором температуры с логотипом UNG и Uzbekistan GTL,O0012464,2
+95319,WIM0055792,Кепка (бейсболка) с вышивкой логотипа Uzbekistan GTL,O0012465,2
+95320,WIM0055793,Футболка с нанесением логотипа Uzbekistan GTL,O0012466,2
+95321,WIM0055794,Блокнот с логотипом Uzbekistan GTL,O0012467,2
+95322,WIM0055795,"Пакеты, оформленные в стиле Заказчика",O0012468,2
+95323,WIM0055796,Кружка с нанесением логотипа Uzbekistan GTL,O0012469,2
+95324,WIM0055797,Ручка металлическая с нанесением логотипа Uzbekistan GTL,O0012470,2
+95325,WIM0055798,Футляр для ручек,O0012471,2
+95326,WIM0055799,Ежедневник с нанесением логотипа Uzbekistan GTL,O0012472,2
+95327,WIM0055800,Внешний аккумулятор c нанесением логотипа Uzbekistan GTL,O0012473,2
+95328,WIM0055801,Сумка для ноутбука с логотипом  Uzbekistan GTL,O0012474,2
+95329,WIM0055802,"[VW3FSDNN01] Size: 2"" (Size: 50mm) CHECK VA DP FLGD, SS A351-CF8M 316SS/HF(CoCr) TRIM - 316SS/INCONEL X-750 CL300 RF - FLGD DUAL PLATE API-594 B16.5 INT. SEAT (I107109614)",O0012440,2
+95330,WIM0055803,"[VW1FCBNN01] Size: 10"" (Size: 250mm) CHECK VA DP FLGD, CS A216-WCB 13CR/HF(CoCr) TRIM - 13CR/INCONEL X-750 CL150 RF - FLGD DUAL PLATE API-594 B16.5 INT. SEAT (I63785805)",O0012441,2
+95331,WIM0055804,"[VC8SCBNN01] Size: 1"" (Size: 25mm) CHECK VA LIFT RP, CS A105 13CR / HF(CoCr) TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT (I61386083)",O0012442,2
+95332,WIM0055805,"[VC8SCBNN02] Size: 3/4"" (Size: 20mm) CHECK VA LIFT RP, CS A105 HF(CoCr) TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT (I63486241)",O0012443,2
+95333,WIM0055806,"[VC8SCBNN02] Size: 1"" (Size: 25mm) CHECK VA LIFT RP, CS A105 HF(CoCr) TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT (I63486242)",O0012444,2
+95334,WIM0055807,"[VC8SSANN01] Size: 1"" (Size: 25mm) CHECK VA LIFT RP, SS A182-F304L 304SS TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT  (I63714293)",O0012445,2
+95335,WIM0055808,"[VC8SSDNN01] Size: 1"" (Size: 25mm) CHECK VA LIFT RP, SS A182-F316L 316SS / HF(CoCr) TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT (I63734694)",O0012446,2
+95336,WIM0055809,"[VC8SSDNN01] Size: 1 1/2"" (Size: 40mm) CHECK VA LIFT RP, SS A182-F316L 316SS / HF(CoCr) TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT (I63734695)",O0012447,2
+95337,WIM0055810,"[VC8SCBHN01] Size: 1"" (Size: 25mm) CHECK VA LIFT RP, CS A105 HF(CoCr) TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT H2 SERV.  (I63960996)",O0012448,2
+95338,WIM0055811,"BALL CHECK VALVE BB RB SPRING 1 1/2"" A105N DEGAS/F316-L/INT* -NACE- CL800 (I67887665)",O0012449,2
+95339,WIM0055812,"[VC8SSDHN01] Size: 3/4"" (Size: 20mm) CHECK VA LIFT RP, SS A182-F316L 316SS / HF(CoCr) TRIM - INCONEL X-750 CL800 SWE RP BALL TYPE BLTD CAP API-602 B16.11 INT. SEAT H2 SERV. (I78196541)",O0012450,2
+95340,WIM0055813,"[VK1FCBNN01] Size: 1 1/2"" (Size: 40mm) CHECK VA LINED, CS A216-WCB PTFE TRIM CL150 FF FP BALL TYPE SPLIT BODY MFR-STD B16.5 FULLY LINED PFA BODY & TRIM  (I65388354)",O0012451,2
+95341,WIM0055814,"[VK1FCBNN02] Size: 3/4"" (Size: 20mm) CHECK VA LINED, CS A216-WCB PTFE TRIM CL150 RF FP BALL TYPE SPLIT BODY MFR-STD B16.5 FULLY LINED PFA BODY & TRIM (I84284015)",O0012452,2
+95342,WIM0055815,"[VC3FCBNN02] Size: 2"" (Size: 50mm) CHECK VA SWING, CS A216-WCB HF(CoCr) TRIM - 13CR CL300 RF 125 AARH FP BLTD CAP API-600 B16.5 WELDD-IN RING (I64137215)",O0012453,2
+95343,WIM0055816,"SWING CHECK VALVE BB RB 1/2"" F316-L/F316-L/F316-L*  CL800 (I107423164)",O0012454,2
+95344,WIM0055817,"[VW1WSANN01] Size: 10"" (Size: 250mm) CHECK VA WAFER, SS A351-CF8 304SS TRIM - 304SS/INCONEL X-750 CL150 RF - WAFER DUAL PLATE API-594 B16.5 INT. SEAT (I63708646)",O0012455,2
+95345,WIM0055818,"[VW1WCBNN01] Size: 14"" (Size: 350mm) CHECK VA WAFER, CS A216-WCB 13CR/HF(CoCr) TRIM - 13CR/INCONEL X-750 CL150 RF - WAFER DUAL PLATE API-594 B16.5 INT. SEAT (I63750432)",O0012456,2
+95346,WIM0055819,"[VW1WCBNN01] Size: 4"" (Size: 100mm) CHECK VA WAFER, CS A216-WCB 13CR/HF(CoCr) TRIM - 13CR/INCONEL X-750 CL150 RF - WAFER DUAL PLATE API-594 B16.5 INT. SEAT (I63750436)",O0012457,2
+95347,WIM0055820,"[VK1WCBNN01] Size: 3"" (Size: 80mm) CHECK VA WAFER LINED, CS A216-WCB PFA TRIM - 304SS+PFA CL150 FF - WAFER REGP SINGLE PLATE MFR-STD B16.5 FULLY LINED PFA BODY & TRIM  (I72338220)",O0012458,2
+95348,WIM0055821,"[VW1FSANN01] CHECK VA DP FLGD, SS A351-CF8 304SS TRIM - 304SS/INCONEL X-750 CL150 RF - FLGD DUAL PLATE API-594 B16.5 INT. SEAT  (I280340829)",O0012475,2
+95351,ContractServ00091,Painting work (work at a height of up to 10 m),,44
+95352,ContractServ00092,Painting work (work at heights from 10 m to 20 m),,44
+95353,ContractServ00093,Painting work (work at a height of 20 m to 30 m),,44
+95354,ContractServ00094,Painting works (work at heights from 30 m to 40 m),,44
+95355,ContractServ00095,Painting work (work at a height of 40 m to 50 m),,44
+95356,ContractServ00096,Surface preparation and cleaning (work at heights up to 10 m),,44
+95357,ContractServ00097,Surface preparation and cleaning (work at heights from 10 m to 20 m),,44
+95358,ContractServ00098,Surface preparation and cleaning (work at heights from 20 m to 30 m),,44
+95359,ContractServ00099,Surface preparation and cleaning (work at heights from 30 m to 40 m),,44
+95360,ContractServ00100,Surface preparation and cleaning (work at heights from 40 m to 50 m),,44
+95362,WIM0055822,Туалетная бумага,,19
+95363,WIM0055823,Средство для мытья посуды,,2
+95365,WIM0055824,Средство для чистки керамических и других поверхностей (чистоль),,2
+95366,WIM0055825,Бирки для осмотра строительных лесов,,2
+95367,WIM0055826,Карта-вкладыш,,2
+95368,WIM0055827,Ручки для бирок ,,2
+95369,Serv_0000305,Заправка Кислород  газообразный цилиндрических газ баллонов,,2
+95370,WIM0055828,Редукторное масло MOBIL GEAR 600 XP 320 (208L),O0012477,20
+95371,WIM0055829,Редукторное масло MOBIL GEAR 600 XP 320 (16L),O0012476,20
+95373,Serv_0000306,«Uzbekistan GTL» МЧЖ эҳтиёжлари учун газ хавфи ишларини бажариш тугрисида,,2
+95374,WIM0055830,Салфетки для диспенсера,,19
+95375,WIM0055831,Жидкое мыло,,2
+95376,WIM0055832,Мыло хозяйственное,,2
+95377,WIM0055833,Сменный баллон для автоматического аэрозольного освежителя воздуха,,2
+95378,WIM0055834,Резиновые перчатки,,15
+95379,WIM0055835,Средство для мытьяунитаза,,2
+95380,WIM0055836,Средство для мытья полов,,2
+95381,WIM0055837,Тряпка типа Дельфин,,2
+95382,WIM0055838,Тряпка для мытья полов,,2
+95383,WIM0055839,Щетка для мытья окон с длинной ручкой,,2
+95384,WIM0055840,Швабра,,2
+95385,WIM0055841,Средство для мытья стекол и зеркал,,2
+95386,WIM0055842,Тряпка хозяйственная,,19
+95387,WIM0055843,Пакеты для мусора маленькие,,18
+95388,WIM0055844,Пакеты для мусора большие,,18
+95389,WIM0055845,Светильник потолочный светодиодный встраиваемый,,2
+95390,WIM0055846,Лампа светодиодная,,2
+95391,WIM0055847,Потолочный светильник круглый с драйвером,,2
+95392,WIM0055848,Блок питания для светодиодных лент,,2
+95393,WIM0055849,Блок питания для светодиодных лент,,2
+95394,WIM0055850,Backpack with tools,,2
+95395,WIM0055851,Buffer Solution 84 uS/cm ,,2
+95396,WIM0055852,Hydrogen generator deionization filter,,2
+95397,WIM0055853,Stabilized Formazin Turbidity Standard solution ,,2
+95398,WIM0055854,Buffer solution for NH3(ammonia) analyzer,,2
+95399,WIM0055855,scrubber for H2 purity,,2
+95400,WIM0055856,Rotameter (steam/water),,2
+95401,WIM0055857,NH3(ammonia) analyzer standard solution,,2
+95402,WIM0055858,"Electronics Stack, HART",,2
+95403,WIM0055859,Turbidity lamp assy,,2
+95404,WIM0055860,B-C oil for Oil in Water analyzer,,2
+95405,WIM0055861, Power line filter kit for for Zirconia analyzers,,2
+95406,WIM0055862,Leak detector,,2
+95407,WIM0055863,Special wiring for signal between the Sensor and board,,2
+95408,WIM0055864,FUSE for Bio Tector B7000i TOC analyzer,,2
+95409,WIM0055865,FUSE for Bio Tector B7000i TOC analyzer,,2
+95410,WIM0055866,FUSE for Bio Tector B7000i TOC analyzer,,2
+95411,WIM0055867,FUSE for Bio Tector B7000i TOC analyzer,,2
+95412,WIM0055868,FUSE for Bio Tector B7000i TOC analyzer,,2
+95413,WIM0055869,FUSE for Bio Tector B7000i TOC analyzer,,2
+95414,WIM0055870,FUSE for Bio Tector B7000i TOC analyzer,,2
+95415,WIM0055871,FUSE for Bio Tector B7000i TOC analyzer,,2
+95416,WIM0055872,FUSE for Bio Tector B7000i TOC analyzer,,2
+95417,WIM0055873,Display module,,2
+95418,WIM0055874,peltier element,,2
+95419,WIM0055875,peltier element,,2
+95420,WIM0055876,Turbidity sensor,,2
+95421,WIM0055877,O2 sensor,,2
+95422,WIM0055878,Termal Fuse F2 for Freezing Point Analyser,,2
+95423,WIM0055879,PCB Board,,2
+95424,WIM0055880,Moisture generator,,2
+95425,WIM0055881,Power supply module,,2
+95426,WIM0055882,Cell oven Assy,,2
+95427,WIM0055883,QCM Cell,,2
+95428,WIM0055884,Oven Heater (including TC),,2
+95429,WIM0055885,PCB Board,,2
+95430,WIM0055886,Filter,,2
+95431,WIM0055887,Purge/Pressurization System,,2
+95432,WIM0055888,"1"" Coupon",,2
+95433,WIM0055889,"1"" Coupon",,2
+95434,WIM0055890,ER Probe,,2
+95435,WIM0055891,Тестер нагрузки аккумуляторной батарей -типMegger TORKEL 910,,2
+95436,WIM0055892,Автошины (Для автобусов),,2
+95437,WIM0055893,Автошины (груза-пассажирского автомобиля),,2
+95438,WIM0055894,Автошины (микроавтобуса),,2
+95439,WIM0055895,Автошины (седельного тягача),,2
+95441,Serv_0000307,Regarding the signing of the contract for the training of the employees of the Uzbekistan GTL plant in the training course for driving Man lift transports,,2
+95442,Serv_0000308,"Service for design, supply of equipment and finishing work of educational classrooms in the Guzar special school No. 68",,2
+95443,Serv_0000309,"Service for the design and supply of equipment for a training room in the  ""UNG training"" LLC",,2
+95446,Serv_0000310,оказание почтовых услуг(гибридная почта) для нужд ООО«UzbekistanGTL»,,2
+95447,WIM0055896,Gloves / Перчатки-green-yellow / желто-зеленый,O0012478,15
+95448,WIM0055897,Тепловая пушка,O0012663,2
+95452,Serv_0000311,"Подготовка таблиц специального назначения финансовой отчетности ООО «Uzbekistan GTL»  за 12 месячный период, закончившийся 31 декабря 2023 года а также за 6 месячный период, закончившийся 30 июня 2024 года подготовленной в соответствие с Международными Ст",,2
+95454,WIM0055898,"Size: 4"" S-10S (Size:100mm Thk: 3.05mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397135)",O0012802,2
+95456,WIM0055899,"GROUNDING BUS BAR - TINNED COPPER BAR, 50mm x 6mm THK. - 2-HOLE TO BE 14mm DIA. FOR INSTALLATION- OTHER HOLE TO BE 11mm dia. FOR TERMINATION - WITH STAINLESS STEEL 304 BOLT, NUT, FLAT AND SPRING WASHERS",O0012422,2
+95457,WIM0055900,"GROUNDING BUS BAR - TINNED COPPER BAR, 50mm x 6mm THK. - 2-HOLE TO BE 14mm DIA. FOR INSTALLATION- OTHER HOLE TO BE 11mm dia. FOR TERMINATION - WITH STAINLESS STEEL 304 BOLT, NUT, FLAT AND SPRING WASHERS-",O0012423,2
+95458,WIM0055901,CABLE CONNECTOR COMPRESSION TYPE - MATERIAL : COPPER 240  Sqmm - 16 Sqmm / КАБЕЛЬНАЯ МУФТА ОБЖИМНОГО ТИПА - МАТЕРИАЛ:  МЕДЬ 240  КВ. ММ - 16 КВ. ММ (51.0 X 42.0) (S. 863/ 3 OF 6),O0012424,2
+95459,WIM0055902,"GROUNDING TERMINAL LUG - MATERIAL : TINNED COPPER - WITH STAINLESS STEEL 304 M10 BOLT, NUT, FLAT WASHER AND SPRING WASHERS - 1 HOLE TYPE CONDUCTOR SIZE  70 Sqmm / ",O0012425,2
+95460,WIM0055903,"CONDUIT BUSHING - MATERIAL : CAST IRON - THREAD : NPT  THREAD - WITH GROUNDING LUG (4 sqmm) 3/4"" / ВВОД КАБЕЛЕПРОВОДА - МАТЕРИАЛ: ЧУГУН - РЕЗЬБА : РЕЗЬБА КЛАССА NPT - С ПРОУШИНОЙ ЗАЗЕМЛЕНИЯ (4 КВ. ММ) 3/4""  (2,9) (S. 863/ 48 OF 50)",O0012426,2
+95461,WIM0055904,"LOCKNUT - MATERIAL : GALVAINZED STEEL - THREAD : NPT  THREAD 3/4"" / КОНТРГАЙКА - МАТЕРИАЛ: ОЦИНКОВАННАЯ СТАЛЬ - РЕЗЬБА : РЕЗЬБА КЛАССА NPT 3/4""  (2,11) (S. 863/ 48 OF 50)",O0012427,2
+95462,WIM0055905,"LOCKNUT - MATERIAL : GALVAINZED STEEL - THREAD : NPT  THREAD 2"" / КОНТРГАЙКА - МАТЕРИАЛ: ОЦИНКОВАННАЯ СТАЛЬ - РЕЗЬБА : РЕЗЬБА КЛАССА NPT 2"" (2,11) (S. 863/ 48 OF 50)",O0012428,2
+95463,WIM0055906," Cable gland shroud: E1FW-DNEX-63, DASD-A63 (Length: 217MM) / ЗАЩИТНЫЙ КОЖУХ ДЛЯ КАБЕЛЬНОГО ВВОДА, E1FW-DNEX-63, DASD-A63 (LENGTH : 217MM) (S. 863/ 4 OF 4)",O0012429,2
+95464,WIM0055907," Cable gland shroud: E1FW-DNEX-50A, DASD-A50 (Length: 185MM) / ЗАЩИТНЫЙ КОЖУХ ДЛЯ КАБЕЛЬНОГО ВВОДА, E1FW-DNEX-50A, DASD-A50 (LENGTH : 185MM) (S. 863/ 4 OF 4)",O0012430,2
+95465,WIM0055908," Cable gland shroud: E1FW-DNEX-50A, DASD-A50 (Length: 185MM) / ЗАЩИТНЫЙ КОЖУХ ДЛЯ КАБЕЛЬНОГО ВВОДА, E1FW-DNEX-50A, DASD-A50 (LENGTH : 185MM) (S. 863/ 4 OF 4)",O0012431,2
+95466,WIM0055909,SAC 240 EB/W MOL (L-03A) / СВЕТИЛЬНИК SAC 240 EB/W MOL (L-03A),O0012432,2
+95467,WIM0055910,"SAC 420 MM EB 1-10V DIMMING WITH PS12 DIFFUSER (L-02C) CEILING MOUNTED TYPE,(INDOOR USED) (L-02C) W/LAMP / СВЕТИЛЬНИК SAC 420 MM EB 1-10V, ЗАТЕМНЕНИЕ С PS12 ДИФФУЗОРОМ (L-02C) СВЕТИЛЬНИК ПОТОЛОЧНОГО ТИПА, (ДЛЯ ИСПОЛЬЗОВАНИЯ В ПОМЕЩЕНИИ) (L-02C) С ЛАМПОЙ",O0012433,2
+95468,WIM0055911,"SAC 420 MM EB EML 1-10V DIMMING WITH PS12 DIFFUSER (L-02D) CEILING MOUNTED TYPE-BATTERY BACKUP (60MIN), (INDOOR USED) (L-02D) W/LAMP / СВЕТИЛЬНИК SAC 420 MM EB 1-10V,",O0012434,2
+95469,WIM0055912,MULTI USER OUTLET FALSE FLOOR TYPE(12 PORT)-18 MODULES WITH STAINLESS STEEL COVER X 1 EA -CAT.6A UTP OUTLET MODULE X 12 EA - 2P+T 10/15A WHITE 2 MODULE X 3EA / ,O0012435,8
+95470,WIM0055913,OUTLET FALSE FLOOR TYPE (4 PORT)-12 MODULES WITH STAINLESS STEEL COVER X 1 EA - CAT.6A UTP OUTLET MODULE X 4 EA - 2P+t 10/15A WHITE 2 MODULE X 2 EA / ,O0012436,8
+95471,WIM0055914,"2)CEILING RECESSED MOUNTED TYPE-BATTERY BACKUP (30MIN),(INDOOR USED) (L-11B) / 2) СВЕТИЛЬНИК ВСТРАИВАЕМЫЙ В ПОТОЛОК С АВАРИЙНЫМ ПИТАНИЕМ ОТ АККУМУЛЯТОРА (НА 30 МИН.), (ДЛЯ ИСПОЛЬЗОВАНИЯ В ПОМЕЩЕНИИ) (L-11B)",O0012437,2
+95472,WIM0055915,"1) CEILING RECESSED MOUNTED TYPE,(INDOOR USED) (l-11A) / 1) СВЕТИЛЬНИК ВСТРАИВАЕМЫЙ В ПОТОЛОК, (ДЛЯ ИСПОЛЬЗОВАНИЯ В ПОМЕЩЕНИИ) (L-11A)",O0012438,2
+95473,WIM0055916," Cable gland shroud: E1FW-DNEX-20D(S)_LONG thread(35MM), DASD-A20-B(Length: 109MM) / ЗАЩИТНЫЙ КОЖУХ ДЛЯ КАБЕЛЬНОГО ВВОДА, E1FW-DNEX-20D(S)_ДЛИНА РЕЗЬБЫ (35 ММ), DASD-A20-B (LENGTH : 109MM) (S. 863/ 4 OF 4)",O0012439,2
+95474,WIM0055917,"Size: 3"" S-MFR (Size:80mm Thk: 3.1mm) 22.5 DEG ELL, RTRP GLASS FIBER REINFORCED VINYLESTER MFR-STD BSJ END  10 BAR (I105324989)",O0012523,2
+95475,WIM0055918,"Size: 4"" S-MFR (Size:100mm Thk: 2.3mm) 22.5 DEG ELL, RTRP GLASS FIBER REINFORCED EPOXY MFR-STD BELL END  13 BAR (I78311802)",O0012524,2
+95476,WIM0055919,"45 ELBOW - SW - 3000 LB - A182-F316L - 1/2"" (I10194376)",O0012525,2
+95477,WIM0055920,"Size: 1 1/2"" (Size: 40mm) 45 DEG ELL, SS A182-F316L SWE B16.11 CL3000 (I10194380)",O0012526,2
+95478,WIM0055921,"Size: 1 1/2"" S-MFR (Size:40mm Thk: 2.3mm) 45 DEG ELL, RTRP GLASS FIBER REINFORCED EPOXY MFR-STD BELL END  13 BAR (I108525601)",O0012527,2
+95479,WIM0055922,"Size: 3/4"" (Size: 20mm) 45 DEG ELL, CS A105 SWE B16.11 CL3000  (I5813944)",O0012528,2
+95480,WIM0055923,"Size: 1 1/2"" (Size: 40mm) 45 DEG ELL, CS A105 SWE B16.11 CL3000  (I5813947)",O0012529,2
+95481,WIM0055924,"Size: 1/2"" (Size: 15mm) 45 DEG ELL, CS A105 SWE B16.11 CL6000 (I5813949)",O0012530,2
+95482,WIM0055925,"Size: 1/2"" (Size: 15mm) 45 DEG ELL, CS A105 SWE B16.11 CL3000 (I5855907)",O0012531,2
+95483,WIM0055926,"Size: 1"" (Size: 25mm) 45 DEG ELL, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5928242)",O0012532,2
+95484,WIM0055927,"Size: 1 1/2"" (Size: 40mm) 45 DEG ELL, CS A105 FTE B16.11 CL3000 HOT DIP GALV.  (I5928244)",O0012533,2
+95485,WIM0055928,"Size: 2"" (Size: 50mm) 45 DEG ELL, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5928245)",O0012534,2
+95486,WIM0055929,"Size: 1 1/2"" (Size: 40mm) 45 DEG ELL, SS A182-F304L SWE B16.11 CL3000 (I6143892)",O0012535,2
+95487,WIM0055930,"Size: 1"" (Size: 25mm) 45 DEG ELL, CS A105 SWE B16.11 CL6000 H2 SERV. (I64078283)",O0012536,2
+95488,WIM0055931,"Size: 3/4"" (Size: 20mm) 45 DEG ELL, SS A182-F316L SWE B16.11 CL3000 H2 SERV. (I64173596)",O0012537,2
+95489,WIM0055932,"Size: 1 1/2"" (Size: 40mm) 45 DEG ELL, SS A182-F316L SWE B16.11 CL3000 H2 SERV. (I64173599)",O0012538,2
+95490,WIM0055933,"Size: 1/2"" (Size: 15mm) 45 DEG ELL, CS A105 SWE B16.11 CL3000 H2 SERV. (I64743611)",O0012539,2
+95491,WIM0055934,"Size: 1"" (Size: 25mm) 45 DEG ELL, CS A105 SWE B16.11 CL6000  (I6546552)",O0012540,2
+95492,WIM0055935,"Size: 4"" S-MFR (Size:100mm Thk: 2.3mm) 45 DEG ELL, RTRP GLASS FIBER REINFORCED EPOXY MFR-STD BELL END  13 BAR (I66919981)",O0012541,2
+95493,WIM0055936,"Size: 1 1/2"" S-80S (Size:40mm Thk: 5.08mm) 45 DEG ELL LR, SS A403-WP304L-S  BE B16.9 (I10273531)",O0012542,2
+95494,WIM0055937,"Size: 10"" S-10S (Size:250mm Thk: 4.19mm) 45 DEG ELL LR, SS A403-WP304L-WX  BE B16.9 (I10274804)",O0012543,2
+95495,WIM0055938,"Size: 10"" S-10S (Size:250mm Thk: 4.19mm) 45 DEG ELL LR, SS A403-WP316L-WX  BE B16.9 (I10285636)",O0012544,2
+95496,WIM0055939,"Size: 1"" S-80S (Size:25mm Thk: 4.55mm) 45 DEG ELL LR, SS A403-WP316L-S  BE B16.9 H2 SERV. (I109428923)",O0012545,2
+95497,WIM0055940,"Size: 6"" S-STD (Size:150mm Thk: 7.11mm) 45 DEG ELL LR, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I63959468)",O0012546,2
+95498,WIM0055941,"Size: 4"" S-XS (Size:100mm Thk: 8.56mm) 45 DEG ELL LR, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I64215682)",O0012547,2
+95499,WIM0055942,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) 45 DEG ELL LR, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77536079)",O0012548,2
+95500,WIM0055943,"Size: 6"" S-40S (Size:150mm Thk: 7.11mm) 45 DEG ELL LR, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77536120)",O0012549,2
+95501,WIM0055944,"Size: 2"" S-XS x 1"" S-160 (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 6.35mm) CON RED, AS A234-WP11-SMLS CL.1  BE B16.9 H2 SERV. (I104485164)",O0012550,2
+95502,WIM0055945,"Size: 4"" S-40S x 2"" S-40S (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 3.91mm) CON RED, SS A403-WP316L-S  BE B16.9 (I12448796)",O0012551,2
+95503,WIM0055946,"Size: 4"" S-40S x 3"" S-40S (Size1: 100mm Thk1: 6.02mm x Size2: 80mm Thk2: 5.49mm) CON RED, SS A403-WP316L-S  BE B16.9 (I13182343)",O0012552,2
+95504,WIM0055947,"Size: 6"" S-40S x 4"" S-40S (Size1: 150mm Thk1: 7.11mm x Size2: 100mm Thk2: 6.02mm) CON RED, SS A403-WP316L-S  BE B16.9 (I13182424)",O0012553,2
+95505,WIM0055948,"Size: 3"" S-STD x 2"" S-STD (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 3.91mm) CON RED, CS A234-WPB-SMLS  BE B16.9 (I19242622)",O0012554,2
+95506,WIM0055949,"Size: 3"" S-10S x 2"" S-10S (Size1: 80mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP316L-S  BE B16.9 (I19249503)",O0012555,2
+95507,WIM0055950,"Size: 4"" S-10S x 2"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP316L-S  BE B16.9 (I19249525)",O0012556,2
+95508,WIM0055951,"Size: 4"" S-10S x 3"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 80mm Thk2: 3.05mm) CON RED, SS A403-WP316L-S  BE B16.9 (I19249542)",O0012557,2
+95509,WIM0055952,"Size: 6"" S-10S x 4"" S-10S (Size1: 150mm Thk1: 3.4mm x Size2: 100mm Thk2: 3.05mm) CON RED, SS A403-WP316L-S  BE B16.9 (I19249584)",O0012558,2
+95510,WIM0055953,"Size: 8"" S-10S x 4"" S-10S (Size1: 200mm Thk1: 3.76mm x Size2: 100mm Thk2: 3.05mm) CON RED, SS A403-WP316L-WX  BE B16.9 (I19250328)",O0012559,2
+95511,WIM0055954,"Size: 6"" S-40S x 3"" S-10S (Size1: 150mm Thk1: 7.11mm x Size2: 80mm Thk2: 3.05mm) CON RED, SS A403-WP316L-S  BE B16.9 (I19304983)",O0012560,2
+95512,WIM0055955,"Size: 3"" S-STD x 2"" S-XS (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 5.54mm) CON RED, CS A234-WPB-SMLS  BE B16.9 (I19824801)",O0012561,2
+95513,WIM0055956,"Size: 4"" S-STD x 2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 5.54mm) CON RED, CS A234-WPB-SMLS  BE B16.9 (I19824851)",O0012562,2
+95514,WIM0055957,"Size: 4"" S-STD x 3"" S-STD (Size1: 100mm Thk1: 6.02mm x Size2: 80mm Thk2: 5.49mm) CON RED, CS A234-WPB-SMLS HOT DIP GALV.  BE B16.9 (I19889843)",O0012563,2
+95515,WIM0055958,"Size: 4"" S-XS x 3"" S-XS (Size1: 100mm Thk1: 8.56mm x Size2: 80mm Thk2: 7.62mm) CON RED, CS A234-WPB-SMLS  BE B16.9 (I20305420)",O0012564,2
+95516,WIM0055959,"Size: 6"" S-40S x 4"" S-40S (Size1: 150mm Thk1: 7.11mm x Size2: 100mm Thk2: 6.02mm) CON RED, SS A403-WP304L-S  BE B16.9 (I20646270)",O0012565,2
+95517,WIM0055960,"CON RED A234WPB-S S-XXS - 2"" (I41907259)",O0012566,2
+95518,WIM0055961,"Size: 3"" S-40S x 2"" S-10S (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP304L-S  BE B16.9 (I42724995)",O0012567,2
+95519,WIM0055962,"Size: 3"" S-40S x 2"" S-10S (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP316L-S  BE B16.9 (I46402999)",O0012568,2
+95520,WIM0055963,"Size: 6"" S-40S x 4"" S-10S (Size1: 150mm Thk1: 7.11mm x Size2: 100mm Thk2: 3.05mm) CON RED, SS A403-WP316L-S  BE B16.9 (I46893053)",O0012569,2
+95521,WIM0055964,"Size: 1 1/2"" S-160 x 1/2"" S-160 (Size1: 40mm Thk1: 7.14mm x Size2: 15mm Thk2: 4.78mm) CON RED, SS A403-WP316/316L-S  BE B16.9 (I61023518)",O0012570,2
+95522,WIM0055965,"Size: 1 1/2"" S-XS x 3/4"" S-XS (Size1: 40mm Thk1: 5.08mm x Size2: 20mm Thk2: 3.91mm) CON RED, AS A234-WP9-SMLS CL.1  BE B16.9 H2 SERV. (I63425356)",O0012571,2
+95523,WIM0055966,"Size: 2"" S-STD x 1"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 25mm Thk2: 4.55mm) CON RED, AS A234-WP9-SMLS CL.1  BE B16.9 H2 SERV. (I63427372)",O0012572,2
+95524,WIM0055967,"Size: 2"" S-STD x 1"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 25mm Thk2: 4.55mm) CON RED, AS A234-WP11-SMLS CL.1  BE B16.9 H2 SERV. (I63455693)",O0012573,2
+95525,WIM0055968,"Size: 4"" S-STD x 3"" S-STD (Size1: 100mm Thk1: 6.02mm x Size2: 80mm Thk2: 5.49mm) CON RED, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I63557985)",O0012574,2
+95526,WIM0055969,"Size: 4"" S-XS x 3"" S-XS (Size1: 100mm Thk1: 8.56mm x Size2: 80mm Thk2: 7.62mm) CON RED, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I63573956)",O0012575,2
+95527,WIM0055970,"Size: 6"" S-XS x 3"" S-XS (Size1: 150mm Thk1: 10.97mm x Size2: 80mm Thk2: 7.62mm) CON RED, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I63574067)",O0012576,2
+95528,WIM0055971,"Size: 4"" S-STD x 2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 5.54mm) CON RED, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I64080248)",O0012577,2
+95529,WIM0055972,"Size: 3"" S-XS x 2"" S-XXS (Size1: 80mm Thk1: 7.62mm x Size2: 50mm Thk2: 11.07mm) CON RED, CS A234-WPB-SMLS  BE B16.9 (I64140517)",O0012578,2
+95530,WIM0055973,"Size: 8"" S-80S x 6"" S-40S (Size1: 200mm Thk1: 12.7mm x Size2: 150mm Thk2: 7.11mm) CON RED, SS A403-WP304L-WX  BE B16.9 (I64184806)",O0012579,2
+95531,WIM0055974,"Size: 3"" S-10S x 2"" S-10S (Size1: 80mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77536176)",O0012580,2
+95532,WIM0055975,"Size: 6"" S-40S x 4"" S-10S (Size1: 150mm Thk1: 7.11mm x Size2: 100mm Thk2: 3.05mm) CON RED, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77536297)",O0012581,2
+95533,WIM0055976,"Size: 3"" S-40S x 2"" S-10S (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77539176)",O0012582,2
+95534,WIM0055977,"Size: 4"" S-40S x 3"" S-40S (Size1: 100mm Thk1: 6.02mm x Size2: 80mm Thk2: 5.49mm) CON RED, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77539229)",O0012583,2
+95535,WIM0055978,"Size: 2"" S-XS x 1"" S-160 (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 6.35mm) CON RED, CS A234-WPB-SMLS  BE B16.9 (I77587368)",O0012584,2
+95536,WIM0055979,"Size: 10"" S-120 x 6"" S-120 (Size1: 250mm Thk1: 21.44mm x Size2: 150mm Thk2: 14.27mm) CON RED, SS A403-WP316L-WX  BE B16.9 H2 SERV. (I77964740)",O0012585,2
+95537,WIM0055980,"Size: 3"" S-10S x 2"" S-10S (Size1: 80mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP316L-S  BE B16.9 H2 SERV. (I78200343)",O0012586,2
+95538,WIM0055981,"CON RED A234WP11 CL.1 X-S - 1"" (I83498491)",O0012587,2
+95539,WIM0055982,"Size: 4"" S-120 x 2"" S-160 (Size1: 100mm Thk1: 11.13mm x Size2: 50mm Thk2: 8.74mm) CON RED, SS A403-WP316L-S  BE B16.9 H2 SERV. (I87351492)",O0012588,2
+95540,WIM0055983,"Size: 3"" S-40S x 2"" S-10S (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 2.77mm) CON RED, SS A403-WP316L-S  BE B16.9 H2 SERV. (I87372337)",O0012589,2
+95541,WIM0055984,"Size: 1 1/2"" S-160 x 1"" S-160 (Size1: 40mm Thk1: 7.14mm x Size2: 25mm Thk2: 6.35mm) CON RED, AS A234-WP11-SMLS CL.1  BE B16.9 (I87527674)",O0012590,2
+95542,WIM0055985,"Size: 2"" S-160 x 1"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 25mm Thk2: 6.35mm) CON RED, AS A234-WP11-SMLS CL.1  BE B16.9  (I87527708)",O0012591,2
+95543,WIM0055986,"Size: 2"" S-160 x 1 1/2"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 40mm Thk2: 7.14mm) CON RED, AS A234-WP11-SMLS CL.1  BE B16.9 (I87527728)",O0012592,2
+95544,WIM0055987,"Size: 3"" S-40S x 2"" S-40S (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 3.91mm) RED TEE, SS A403-WP316L-S  BE B16.9 (I13181482)",O0012593,2
+95545,WIM0055988,"Size: 3"" S-10S x 2"" S-10S (Size1: 80mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP304L-S  BE B16.9  (I14171070)",O0012594,2
+95546,WIM0055989,"Size: 3"" S-10S x 2"" S-10S (Size1: 80mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP316L-S  BE B16.9 (I19251365)",O0012595,2
+95547,WIM0055990,"Size: 4"" S-10S x 3"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 80mm Thk2: 3.05mm) RED TEE, SS A403-WP316L-S  BE B16.9 (I19251404)",O0012596,2
+95548,WIM0055991,"Size: 4"" S-STD x 2"" S-STD (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 3.91mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 (I19276718)",O0012597,2
+95549,WIM0055992,"Size: 4"" S-STD x 3"" S-STD (Size1: 100mm Thk1: 6.02mm x Size2: 80mm Thk2: 5.49mm) RED TEE, CS A234-WPB-SMLS  BE B16.9  (I19276770)",O0012598,2
+95550,WIM0055993,"Size: 3"" S-STD x 2"" S-STD (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 3.91mm) RED TEE, LTCS A420-WPL6-S  BE B16.9  (I19328798)",O0012599,2
+95551,WIM0055994,"Size: 4"" S-STD x 3"" S-STD (Size1: 100mm Thk1: 6.02mm x Size2: 80mm Thk2: 5.49mm) RED TEE, CS A234-WPB-SMLS HOT DIP GALV.  BE B16.9 (I19899752)",O0012600,2
+95552,WIM0055995,"Size: 4"" S-120 x 2"" S-160 (Size1: 100mm Thk1: 11.13mm x Size2: 50mm Thk2: 8.74mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 (I20820086)",O0012601,2
+95553,WIM0055996,"Size: 3"" S-STD x 2"" S-XS (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 (I22563714)",O0012602,2
+95554,WIM0055997,"Size: 4"" S-STD x 2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 (I22563768)",O0012603,2
+95555,WIM0055998,"Size: 1 1/2"" x 1"" (Size1: 40mm x Size2: 25mm) RED TEE, CS A105 SWE B16.11 CL6000 MR0103 (I27349501)",O0012604,2
+95556,WIM0055999,"Size: 3"" S-10S x 2"" S-10S (Size1: 80mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP304L-S  BE B16.9 MR0103 (I27937513)",O0012605,2
+95557,WIM0056000,"Size: 6"" S-10S x 3"" S-10S (Size1: 150mm Thk1: 3.4mm x Size2: 80mm Thk2: 3.05mm) RED TEE, SS A403-WP316L-S  BE B16.9 (I29753900)",O0012606,2
+95558,WIM0056001,"Size: 4"" S-10S x 2"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP316L-S  BE B16.9  (I30195276)",O0012607,2
+95559,WIM0056002,"Size: 4"" S-10S x 3"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 80mm Thk2: 3.05mm) RED TEE, SS A403-WP304L-S  BE B16.9 (I30656667)",O0012608,2
+95560,WIM0056003,"Size: 6"" S-10S x 3"" S-10S (Size1: 150mm Thk1: 3.4mm x Size2: 80mm Thk2: 3.05mm) RED TEE, SS A403-WP304L-S  BE B16.9 (I30656689)",O0012609,2
+95561,WIM0056004,"Size: 6"" S-XS x 3"" S-XS (Size1: 150mm Thk1: 10.97mm x Size2: 80mm Thk2: 7.62mm) RED TEE, CS A234-WPB-SMLS  BE B16.9  (I31153105)",O0012610,2
+95562,WIM0056005,"Size: 3 S-XS x 2 S-XXS (Size1: 80mm Thk1: 7.62mm x Size2: 50mm Thk2: 11.07mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 (I32705988)",O0012611,2
+95563,WIM0056006,"Size: 4"" S-10S x 2"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP304L-S  BE B16.9 (I39595464)",O0012612,2
+95564,WIM0056007,"Size: 4"" S-40S x 2"" S-10S (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP316L-S  BE B16.9 (I40778678)",O0012613,2
+95565,WIM0056008,"Size: 4"" S-40S x 2"" S-10S (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP304L-S  BE B16.9 (I41065477)",O0012614,2
+95566,WIM0056009,"Size: 3"" S-40S x 2"" S-10S (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP304L-S  BE B16.9 (I42725654)",O0012615,2
+95567,WIM0056010,"Size: 4"" S-STD x 3"" S-STD (Size1: 100mm Thk1: 6.02mm x Size2: 80mm Thk2: 5.49mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 MR0103 (I49319349)",O0012616,2
+95568,WIM0056011,"Size: 3"" S-XS x 2"" S-160 (Size1: 80mm Thk1: 7.62mm x Size2: 50mm Thk2: 8.74mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 MR0103 (I49438937)",O0012617,2
+95569,WIM0056012,"Size: 4"" S-XS x 3"" S-XS (Size1: 100mm Thk1: 8.56mm x Size2: 80mm Thk2: 7.62mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 MR0103 (I49439055)",O0012618,2
+95570,WIM0056013,"Size: 1"" x 3/4"" (Size1: 25mm x Size2: 20mm) RED TEE, CS A105 SWE B16.11 CL3000 (I5838291)",O0012619,2
+95571,WIM0056014,"Size: 1 1/2"" x 3/4"" (Size1: 40mm x Size2: 20mm) RED TEE, CS A105 SWE B16.11 CL3000  (I5838294)",O0012620,2
+95572,WIM0056015,"Size: 1 1/2"" x 1"" (Size1: 40mm x Size2: 25mm) RED TEE, CS A105 SWE B16.11 CL3000 (I5838295)",O0012621,2
+95573,WIM0056016,"Size: 1"" x 1/2"" (Size1: 25mm x Size2: 15mm) RED TEE, CS A105 SWE B16.11 CL6000 (I5838302)",O0012622,2
+95574,WIM0056017,"Size: 1"" x 3/4"" (Size1: 25mm x Size2: 20mm) RED TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5932256)",O0012623,2
+95575,WIM0056018,"Size: 1 1/2"" x 1/2"" (Size1: 40mm x Size2: 15mm) RED TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV.  (I5932260)",O0012624,2
+95576,WIM0056019,"Size: 1 1/2"" x 3/4"" (Size1: 40mm x Size2: 20mm) RED TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5932261)",O0012625,2
+95577,WIM0056020,"Size: 1 1/2"" x 1"" (Size1: 40mm x Size2: 25mm) RED TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5932262)",O0012626,2
+95578,WIM0056021,"Size: 1 1/2"" x 3/4"" (Size1: 40mm x Size2: 20mm) RED TEE, SS A182-F304L SWE B16.11 CL3000 (I6145275)",O0012627,2
+95579,WIM0056022,"Size: 1"" x 3/4"" (Size1: 25mm x Size2: 20mm) RED TEE, CS A105 SWE B16.11 CL3000 H2 SERV. (I63372136)",O0012628,2
+95580,WIM0056023,"Size: 1"" x 3/4"" (Size1: 25mm x Size2: 20mm) RED TEE, CS A105 SWE B16.11 CL6000 H2 SERV. MR0103 (I63550564)",O0012629,2
+95581,WIM0056024,"Size: 1 1/2"" x 3/4"" (Size1: 40mm x Size2: 20mm) RED TEE, CS A105 SWE B16.11 CL6000 (I6367076)",O0012630,2
+95582,WIM0056025,"Size: 4"" S-STD x 2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 MR0103 (I63790828)",O0012631,2
+95583,WIM0056026,"Size: 3"" S-STD x 2"" S-XS (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I64070389)",O0012632,2
+95584,WIM0056027,"Size: 4"" S-STD x 2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I64070454)",O0012633,2
+95585,WIM0056028,"Size: 3"" S-STD x 2"" S-XS (Size1: 80mm Thk1: 5.49mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I64096020)",O0012634,2
+95586,WIM0056029,"Size: 4"" S-STD x 2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I64096085)",O0012635,2
+95587,WIM0056030,"Size: 3"" S-XS x 2"" S-160 (Size1: 80mm Thk1: 7.62mm x Size2: 50mm Thk2: 8.74mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I64144786)",O0012636,2
+95588,WIM0056031,"Size: 4"" S-XS x 2"" S-160 (Size1: 100mm Thk1: 8.56mm x Size2: 50mm Thk2: 8.74mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I64144850)",O0012637,2
+95589,WIM0056032,"Size: 1"" x 3/4"" (Size1: 25mm x Size2: 20mm) RED TEE, SS A182-F316L SWE B16.11 CL3000 H2 SERV. (I64171964)",O0012638,2
+95590,WIM0056033,"Size: 4"" S-XS x 3"" S-STD (Size1: 100mm Thk1: 8.56mm x Size2: 80mm Thk2: 5.49mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I64205952)",O0012639,2
+95591,WIM0056034,"Size: 3"" S-XS x 2"" S-XS (Size1: 80mm Thk1: 7.62mm x Size2: 50mm Thk2: 5.54mm) RED TEE, AS A234-WP11-SMLS CL.1  BE B16.9 H2 SERV. (I64405013)",O0012640,2
+95592,WIM0056035,"Size: 1 1/2"" x 1"" (Size1: 40mm x Size2: 25mm) RED TEE, CS A105 SWE B16.11 CL6000 (I6568418)",O0012641,2
+95593,WIM0056036,"Size: 3"" S-MFR x 2"" S-MFR (Size1: 80mm Thk1: 2.3mm x Size2: 50mm Thk2: 2.3mm) RED TEE, RTRP GLASS FIBER REINFORCED EPOXY MFR-STD BELL END  13 BAR (I66920193)",O0012642,2
+95594,WIM0056037,"Size: 4"" S-MFR x 3"" S-MFR (Size1: 100mm Thk1: 2.3mm x Size2: 80mm Thk2: 2.3mm) RED TEE, RTRP GLASS FIBER REINFORCED EPOXY MFR-STD BELL END  13 BAR (I66920197)",O0012643,2
+95595,WIM0056038,"Size: 3"" S-XS x 2"" S-XS (Size1: 80mm Thk1: 7.62mm x Size2: 50mm Thk2: 5.54mm) RED TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I72155493)",O0012644,2
+95596,WIM0056039,"Size: 2"" S-MFR x 1"" S-MFR (Size1: 50mm Thk1: 3.3mm x Size2: 25mm Thk2: 2.3mm) RED TEE, RTRP GLASS FIBER REINFORCED VINYLESTER MFR-STD BSJ END  10 BAR (I77304006)",O0012645,2
+95597,WIM0056040,"Size: 2"" S-MFR x 1"" S-MFR (Size1: 50mm Thk1: 2.3mm x Size2: 25mm Thk2: 2.3mm) RED TEE, RTRP GLASS FIBER REINFORCED EPOXY MFR-STD BELL END  13 BAR (I77342587)",O0012646,2
+95598,WIM0056041,"Size: 3"" S-10S x 2"" S-10S (Size1: 80mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77533825)",O0012647,2
+95599,WIM0056042,"Size: 4"" S-10S x 2"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77533848)",O0012648,2
+95600,WIM0056043,"Size: 4"" S-10S x 3"" S-10S (Size1: 100mm Thk1: 3.05mm x Size2: 80mm Thk2: 3.05mm) RED TEE, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77533870)",O0012649,2
+95601,WIM0056044,"Size: 2"" S-MFR x 1 1/2"" S-MFR (Size1: 50mm Thk1: 2.3mm x Size2: 40mm Thk2: 2.3mm) RED TEE, RTRP GLASS FIBER REINFORCED VINYLESTER MFR-STD BSJ END  10 BAR (I79621562)",O0012650,2
+95602,WIM0056045,"Size: 4"" S-40S x 2"" S-10S (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 2.77mm) RED TEE, SS A403-WP316L-S  BE B16.9 H2 SERV. (I87337083)",O0012651,2
+95603,WIM0056046,"Size: 1"" x 3/4"" (Size1: 25mm x Size2: 20mm) RED TEE, SS A182-F316L SWE B16.11 CL3000 (I9937315)",O0012652,2
+95604,WIM0056047,"Size: 1 1/2"" x 1"" (Size1: 40mm x Size2: 25mm) RED TEE, SS A182-F316L SWE B16.11 CL3000 (I9937351)",O0012653,2
+95605,WIM0056048,"Size: 1 1/2"" (Size: 40mm) TH FLG, CS A105 RF 125 AARH B16.5 CL150 HOT DIP GALV. (I20888128)",O0012654,2
+95606,WIM0056049,"Size: 2"" (Size: 50mm) TH FLG, CS A105 RF 125 AARH B16.5 CL150 HOT DIP GALV. (I20888129)",O0012655,2
+95607,WIM0056050,"Size: 1"" (Size: 25mm) TH FLG, CS A105 FF B16.5 CL150 HOT DIP GALV. (I22636133)",O0012656,2
+95608,WIM0056051,"Size: 1"" (Size: 25mm) TH FLG, CS A105 RF 125 AARH B16.5 CL300 HOT DIP GALV. (I23851651)",O0012657,2
+95609,WIM0056052,"Size: 2"" (Size: 50mm) TH FLG, CS A105 RF 125 AARH B16.5 CL300 HOT DIP GALV. (I23851654)",O0012658,2
+95610,WIM0056053,"Size: 1/2"" (Size: 15mm) TH FLG, SS A182-F304L RF 125 AARH B16.5 CL150 (I46698615)",O0012659,2
+95611,WIM0056054,"Size: 1/2"" (Size: 15mm) TH FLG, SS A182-F304L RF 125 AARH B16.5 CL600 (I46698623)",O0012660,2
+95612,WIM0056055,"Size: 1/2"" (Size: 15mm) TH FLG, CS A105 RF 125 AARH B16.5 CL150 HOT DIP GALV. (I5932506)",O0012661,2
+95613,WIM0056056,"Size: 1"" (Size: 25mm) TH FLG, CS A105 RF 125 AARH B16.5 CL150 HOT DIP GALV.  (I5932524)",O0012662,2
+95614,WIM0056057,"Size: 3"" S-MFR (Size:75mm Thk: 8.1mm) 45 DEG ELL, PL HDPE / SDR11 MFR-STD PE  16 BAR (I49080505)",O0012521,2
+95615,WIM0056058,"EQUAL TEE - SW - 6000 LB - A105 - 1/2"" (MB-5950-0011)",O0012522,2
+95616,WIM0056059,"Size: 1/2"" S-160 (Size:15mm Thk: 4.78mm) WN FLG, SS A182-F316/316L RTJ B16.5 CL1500 (I107305889)",O0012669,2
+95617,WIM0056060,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 (I10753085) ",O0012670,2
+95618,WIM0056061,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 (I10753086)",O0012671,2
+95619,WIM0056062,"Size: 4"" S-10S (Size:100mm Thk: 3.05mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 (I10753087)",O0012672,2
+95620,WIM0056063,"Size: 8"" S-10S (Size:200mm Thk: 3.76mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 (I10753089)",O0012673,2
+95621,WIM0056064,"Size: 1 1/2"" S-160 (Size:40mm Thk: 7.14mm) WN FLG, SS A182-F316/316L RTJ B16.5 CL1500 (I109240890)",O0012674,2
+95622,WIM0056065,"Size: 3/4"" S-80S (Size:20mm Thk: 3.91mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL600 H2 SERV. (I109429026)",O0012675,2
+95623,WIM0056066,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 MR0103 (I27937652)",O0012676,2
+95624,WIM0056067,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL150 MR0103 (I33210005)",O0012677,2
+95625,WIM0056068,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, SS A182-F316/316L RTJ B16.5 CL1500 (I34002735)",O0012678,2
+95626,WIM0056069,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F316L FF B16.5 CL150 (I36600181)",O0012679,2
+95627,WIM0056070,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F316L FF B16.5 CL150 (I36600200)",O0012680,2
+95628,WIM0056071,"Size: 4"" S-10S (Size:100mm Thk: 3.05mm) WN FLG, SS A182-F316L FF B16.5 CL150 (I36600203)",O0012681,2
+95629,WIM0056072,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) WN FLG, CS SA105 RF 125 AARH B16.5 CL300 (I48649200)",O0012682,2
+95630,WIM0056073,"Size: 2"" S-STD (Size:50mm Thk: 3.91mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I5885166)",O0012683,2
+95631,WIM0056074,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I5885294)",O0012684,2
+95632,WIM0056075,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I5885327)",O0012685,2
+95633,WIM0056076,"Size: 6"" S-STD (Size:150mm Thk: 7.11mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I5885368)",O0012686,2
+95634,WIM0056077,ASME 600 WN RF  STD 3 A105 N B (I5885682),O0012687,2
+95635,WIM0056078,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 (I5885715)",O0012688,2
+95636,WIM0056079,"Size: 6"" S-STD (Size:150mm Thk: 7.11mm) WN FLG, CS A105 FF B16.5 CL150 (I5886144)",O0012689,2
+95637,WIM0056080,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, CS A105 RTJ B16.5 CL900 (I5886899)",O0012690,2
+95638,WIM0056081,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL150 (I6145640)",O0012691,2
+95639,WIM0056082,"Size: 4"" S-40S (Size:100mm Thk: 6.02mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 (I6295147)",O0012692,2
+95640,WIM0056083,"Size: 1"" S-XS (Size:25mm Thk: 4.55mm) WN FLG, AS A182-F9 RF 125 AARH B16.5 CL300 H2 SERV. (I63422728)",O0012693,2
+95641,WIM0056084,"Size: 2"" S-STD (Size:50mm Thk: 3.91mm) WN FLG, AS A182-F9 RF 125 AARH B16.5 CL300 H2 SERV. (I63422912)",O0012694,2
+95642,WIM0056085,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) WN FLG, AS A182-F9 RF 125 AARH B16.5 CL300 H2 SERV. (I63423045)",O0012695,2
+95643,WIM0056086,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, AS A182-F9 RF 125 AARH B16.5 CL300 H2 SERV. (I63423079)",O0012696,2
+95644,WIM0056087,"Size: 1"" S-XS (Size:25mm Thk: 4.55mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL300 H2 SERV. (I63452108)",O0012697,2
+95645,WIM0056088,"Size: 3/4"" S-80S (Size:20mm Thk: 3.91mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 O2 SERV. (I63498402)",O0012698,2
+95646,WIM0056089,"Size: 3/4"" S-XS (Size:20mm Thk: 3.91mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 H2 SERV. (I63523478)",O0012699,2
+95647,WIM0056090,"Size: 1"" S-XS (Size:25mm Thk: 4.55mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 H2 SERV. (I63523487)",O0012700,2
+95648,WIM0056091,AN 600 WN RF XS 2 A182F11CL2 (I63523671),O0012701,2
+95649,WIM0056092,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 H2 SERV. (I63523806)",O0012702,2
+95650,WIM0056093,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 MR0103 (I63536388)",O0012703,2
+95651,WIM0056094,"Size: 4"" S-XS (Size:100mm Thk: 8.56mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 MR0103 (I63536418)",O0012704,2
+95652,WIM0056095,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 H2 SERV. (I63538229)",O0012705,2
+95653,WIM0056096,"Size: 4"" S-XS (Size:100mm Thk: 8.56mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 H2 SERV. (I63538264)",O0012706,2
+95654,WIM0056097,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, CS SA105 RTJ B16.5 CL1500 (I63541777)",O0012707,2
+95655,WIM0056098,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 H2 SERV. MR0103 (I63547182)",O0012708,2
+95656,WIM0056099,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 H2 SERV. MR0103 (I63547216)",O0012709,2
+95657,WIM0056100,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 H2 SERV. MR0103 (I63571378)",O0012710,2
+95658,WIM0056101,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 H2 SERV. MR0103 (I63571416)",O0012711,2
+95659,WIM0056102,"Size: 4"" S-XS (Size:100mm Thk: 8.56mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 H2 SERV. MR0103 (I63571450)",O0012712,2
+95660,WIM0056103,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 MR0103 (I63795774)",O0012713,2
+95661,WIM0056104,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 MR0103 (I63795805)",O0012714,2
+95662,WIM0056105,"Size: 2"" S-STD (Size:50mm Thk: 3.91mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 H2 SERV. (I63953262)",O0012715,2
+95663,WIM0056106,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 H2 SERV. (I63953329)",O0012716,2
+95664,WIM0056107,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 H2 SERV. (I64077801)",O0012717,2
+95665,WIM0056108,"Size: 2"" S-XXS (Size:50mm Thk: 11.07mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 MR0103 (I64163441)",O0012718,2
+95666,WIM0056109,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) WN FLG, CS A105 RTJ B16.5 CL900 H2 SERV. (I64357089)",O0012719,2
+95667,WIM0056110,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) WN FLG, AS A182-F11 CL.2 RTJ B16.5 CL1500 H2 SERV. (I64408427)",O0012720,2
+95668,WIM0056111,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, AS A182-F11 CL.2 RTJ B16.5 CL900 H2 SERV. (I64408567)",O0012721,2
+95669,WIM0056112,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 MR0103 (I64686589)",O0012722,2
+95670,WIM0056113,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, AS A182-F11 CL.2 RTJ B16.5 CL1500 H2 SERV. (I64687463)",O0012723,2
+95671,WIM0056114,"Size: 1/2"" S-80S (Size:15mm Thk: 3.73mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 O2 SERV. (I64747593)",O0012724,2
+95672,WIM0056115,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, SS A182-F321H RTJ B16.5 CL1500 (I65010883)",O0012725,2
+95673,WIM0056116,"Size: 3"" S-160 (Size:80mm Thk: 11.13mm) WN FLG, CS A105 RTJ B16.5 CL900 (I6573238)",O0012726,2
+95674,WIM0056117,"Size: 10"" S-10S (Size:250mm Thk: 4.19mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL150 (I6864063)",O0012727,2
+95675,WIM0056118,"Size: 3/4"" S-XS (Size:20mm Thk: 3.91mm) WN FLG, AS A182-F9 RF 125 AARH B16.5 CL150 H2 SERV. (I77376675)",O0012728,2
+95676,WIM0056119,"Size: 2"" S-STD (Size:50mm Thk: 3.91mm) WN FLG, AS A182-F9 RF 125 AARH B16.5 CL150 H2 SERV. (I77376870)",O0012729,2
+95677,WIM0056120,"Size: 6"" S-STD (Size:150mm Thk: 7.11mm) WN FLG, AS A182-F9 RF 125 AARH B16.5 CL150 H2 SERV. (I77377046)",O0012730,2
+95678,WIM0056121,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, CS A105 RTJ B16.5 CL1500 H2 SERV. MR0103 (I77380091)",O0012731,2
+95679,WIM0056122,"Size: 3/4"" S-XS (Size:20mm Thk: 3.91mm) WN FLG, NA B564-N04400 RF 125 AARH B16.5 CL600 O2 SERV. (I77465360)",O0012732,2
+95680,WIM0056123,"Size: 1"" S-XS (Size:25mm Thk: 4.55mm) WN FLG, NA B564-N04400 RF 125 AARH B16.5 CL600 O2 SERV. (I77465364)",O0012733,2
+95681,WIM0056124,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, CS A105 RTJ B16.5 CL1500 MR0103 (I77575400)",O0012734,2
+95682,WIM0056125,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 H2 SERV. (I77580971)",O0012735,2
+95683,WIM0056126,"Size: 3"" S-40S (Size:80mm Thk: 5.49mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 H2 SERV. (I77581004)",O0012736,2
+95684,WIM0056127,"Size: 4"" S-40S (Size:100mm Thk: 6.02mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 H2 SERV. (I77581010)",O0012737,2
+95685,WIM0056128,"Size: 6"" S-40S (Size:150mm Thk: 7.11mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 H2 SERV. (I77581016)",O0012738,2
+95686,WIM0056129,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 H2 SERV. (I77582808)",O0012739,2
+95687,WIM0056130,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 H2 SERV. (I77582834)",O0012740,2
+95688,WIM0056131,"Size: 2"" S-10 (Size:50mm Thk: 2.77mm) WN FLG, NA B564-N04400 RF 125 AARH B16.5 CL600 O2 SERV. (I77586076)",O0012741,2
+95689,WIM0056132,"Size: 3"" S-10 (Size:80mm Thk: 3.05mm) WN FLG, NA B564-N04400 RF 125 AARH B16.5 CL600 O2 SERV. (I77586084)",O0012742,2
+95690,WIM0056133,"Size: 4"" S-10S (Size:100mm Thk: 3.05mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 H2 SERV. (I77778850)",O0012743,2
+95691,WIM0056134,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, SS A182-F316L RTJ B16.5 CL2500 H2 SERV. (I77930679)",O0012744,2
+95692,WIM0056135,"Size: 3"" S-160 (Size:80mm Thk: 11.13mm) WN FLG, SS A182-F316L RTJ B16.5 CL2500 H2 SERV. (I77930689)",O0012745,2
+95693,WIM0056136,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, SS A182-F316L RTJ B16.5 CL1500 H2 SERV. (I77974271)",O0012746,2
+95694,WIM0056137,"Size: 3"" S-160 (Size:80mm Thk: 11.13mm) WN FLG, SS A182-F316L RTJ B16.5 CL1500 H2 SERV. (I77974281)",O0012747,2
+95695,WIM0056138,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 H2 SERV. (I78199491)",O0012748,2
+95696,WIM0056139,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 H2 SERV. (I78199518)",O0012749,2
+95697,WIM0056140,"Size: 4"" S-10S (Size:100mm Thk: 3.05mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 H2 SERV. (I78199522)",O0012750,2
+95698,WIM0056141,"Size: 1/2"" S-XS (Size:15mm Thk: 3.73mm) WN FLG, NA B564-N04400 RF 125 AARH B16.5 CL600 O2 SERV. (I78235432)",O0012751,2
+95699,WIM0056142,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL300 H2 SERV. (I78383884)",O0012752,2
+95700,WIM0056143,"Size: 3/4"" S-XS (Size:20mm Thk: 3.91mm) WN FLG, AS A182-F11 CL.1 RF 125 AARH B16.5 CL600 HIGH TEMP. (I83496904)",O0012753,2
+95701,WIM0056144,AN 600  WN   RF XS 1 A182F11CL1  (I83496913),O0012754,2
+95702,WIM0056145,"Size: 4"" S-XS (Size:100mm Thk: 8.56mm) WN FLG, AS A182-F11 CL.1 RF 125 AARH B16.5 CL600 HIGH TEMP. (I83497243)",O0012755,2
+95703,WIM0056146,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, CS A105 RTJ B16.5 CL900 H2 SERV. (I83551978)",O0012756,2
+95704,WIM0056147,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL600 H2 SERV. (I84326436)",O0012757,2
+95705,WIM0056148,"Size: 3"" S-40S (Size:80mm Thk: 5.49mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL600 H2 SERV. (I84326473)",O0012758,2
+95706,WIM0056149,"Size: 4"" S-40S (Size:100mm Thk: 6.02mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL600 H2 SERV. (I84326480)",O0012759,2
+95707,WIM0056150,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, CS A105 RF 125 AARH B16.5 CL150 HOT DIP GALV. (I8999062)",O0012760,2
+95708,WIM0056151,"Size: 6"" S-STD (Size:150mm Thk: 7.11mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 HOT DIP GALV. (I9000139)",O0012761,2
+95709,WIM0056152,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F316L RTJ B16.5 CL1500 (I9198100)",O0012762,2
+95710,WIM0056153,"Size: 2"" S-80S (Size:50mm Thk: 5.54mm) WN FLG, SS A182-F316L RTJ B16.5 CL1500 (I9198106)",O0012763,2
+95711,WIM0056154,"Size: 4"" S-80S (Size:100mm Thk: 8.56mm) WN FLG, SS A182-F316L RTJ B16.5 CL1500 (I9198160)",O0012764,2
+95712,WIM0056155,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 (I9199739)",O0012765,2
+95713,WIM0056156,"Size: 3"" S-40S (Size:80mm Thk: 5.49mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL600 (I9199790)",O0012766,2
+95714,WIM0056157,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL600 (I9200787)",O0012767,2
+95715,WIM0056158,"Size: 4"" S-40S (Size:100mm Thk: 6.02mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL600 (I9200849)",O0012768,2
+95716,WIM0056159,"Size: 3/4"" S-XS (Size:20mm Thk: 3.91mm) WN FLG, CS A105 RTJ B16.5 CL2500 (I9263311)",O0012769,2
+95717,WIM0056160,"Size: 1"" S-XS (Size:25mm Thk: 4.55mm) WN FLG, CS A105 RTJ B16.5 CL2500 (I9263325)",O0012770,2
+95718,WIM0056161,"Size: 3/4"" S-160 (Size:20mm Thk: 5.56mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 (I9318891)",O0012771,2
+95719,WIM0056162,"Size: 1"" S-160 (Size:25mm Thk: 6.35mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 (I9318900)",O0012772,2
+95720,WIM0056163,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 (I9319073)",O0012773,2
+95721,WIM0056164,"Size: 4"" S-XS (Size:100mm Thk: 8.56mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 (I9319234)",O0012774,2
+95722,WIM0056165,"Size: 8"" S-100 (Size:200mm Thk: 15.09mm) WN FLG, AS A182-F11 CL.2 RF 125 AARH B16.5 CL600 (I9319290)",O0012775,2
+95723,WIM0056166,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, CS A105 RF B16.5 CL1500 (I9349299)",O0012776,2
+95724,WIM0056167,"Size: 10"" S-30 (Size:250mm Thk: 7.8mm) WN FLG, CS A105 RF 125 AARH B16.5 CL150 (I9350490)",O0012777,2
+95725,WIM0056168,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) WN FLG, CS A105 RF 125 AARH B16.5 CL150 (I9350612)",O0012778,2
+95726,WIM0056169,ASME 150 WN RF  STD 2 A105 N B (I9350615),O0012779,2
+95727,WIM0056170,ASME 150 WN RF  XS 2 A105 N B (I9350616),O0012780,2
+95728,WIM0056171,"Size: 1/2"" S-160 (Size:15mm Thk: 4.78mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I9350835)",O0012781,2
+95729,WIM0056172,ASME 300 WN RF  XXS 1/2 A105 N B (I9350842),O0012782,2
+95730,WIM0056173,"Size: 1 1/2"" S-XXS (Size:40mm Thk: 10.15mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I9350876)",O0012783,2
+95731,WIM0056174,"Size: 12"" S-30 (Size:300mm Thk: 8.38mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I9350921)",O0012784,2
+95732,WIM0056175,"Size: 2"" S-XXS (Size:50mm Thk: 11.07mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I9351017)",O0012785,2
+95733,WIM0056176,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, CS A105 RF 125 AARH B16.5 CL300 (I9351136)",O0012786,2
+95734,WIM0056177,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) WN FLG, CS A105 RTJ B16.5 CL1500 (I9351849)",O0012787,2
+95735,WIM0056178,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 (I9352381)",O0012788,2
+95736,WIM0056179,"Size: 4"" S-XS (Size:100mm Thk: 8.56mm) WN FLG, CS A105 RF 125 AARH B16.5 CL600 (I9352412)",O0012789,2
+95737,WIM0056180,"Size: 4"" S-STD (Size:100mm Thk: 6.02mm) WN FLG, LTCS A350-LF2 CL.1 RF 125 AARH B16.5 CL300 (I9375087)",O0012790,2
+95738,WIM0056181,"Size: 3"" S-40S (Size:80mm Thk: 5.49mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL150 (I9394775)",O0012791,2
+95739,WIM0056182,"Size: 3/4"" S-80S (Size:20mm Thk: 3.91mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL150 (I9395146)",O0012792,2
+95740,WIM0056183,"Size: 16"" S-10S (Size:400mm Thk: 4.78mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL150 (I9395174)",O0012793,2
+95741,WIM0056184,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL150 (I9395206)",O0012794,2
+95742,WIM0056185,"Size: 4"" S-40S (Size:100mm Thk: 6.02mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL150 (I9395211)",O0012795,2
+95743,WIM0056186,"Size: 6"" S-10S (Size:150mm Thk: 3.4mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL150 (I9395218)",O0012796,2
+95744,WIM0056187,"Size: 8"" S-10S (Size:200mm Thk: 3.76mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL150 (I9395222)",O0012797,2
+95745,WIM0056188,"Size: 1 1/2"" S-80S (Size:40mm Thk: 5.08mm) WN FLG, SS A182-F304L RF 125 AARH B16.5 CL300 (I9396670)",O0012798,2
+95746,WIM0056189,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397109)",O0012799,2
+95747,WIM0056190,"Size: 2"" S-40S (Size:50mm Thk: 3.91mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397110)",O0012800,2
+95748,WIM0056191,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397131)",O0012801,2
+95749,WIM0056192,"Size: 4"" S-40S (Size:100mm Thk: 6.02mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397136)",O0012803,2
+95750,WIM0056193,"Size: 6"" S-40S (Size:150mm Thk: 7.11mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397144)",O0012804,2
+95751,WIM0056194,"Size: 8"" S-10S (Size:200mm Thk: 3.76mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397147)",O0012805,2
+95752,WIM0056195,"Size: 8"" S-40S (Size:200mm Thk: 8.18mm) WN FLG, SS A182-F316L RF 125 AARH B16.5 CL300 (I9397148)",O0012806,2
+95753,WIM0056196,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) WN FLG, SS A182-F51 RF 125 AARH B16.5 CL300 (I9397522)",O0012807,2
+95754,WIM0056197,"Size: 2"" S-40S (Size:50mm Thk: 3.91mm) WN FLG, SS A182-F304L FF B16.5 CL150 (I9414275)",O0012808,2
+95755,WIM0056198,"Alumina balls DIA 50mm (2"") DURITAL K99 BALLS/Алюбитовые шары диаметром 50 мм (2"")     DURITAL K99 BALLS",O0012664,17
+95756,WIM0056199,"Alumina balls DIA 75mm (3"")     DURITAL K99 BALLS / Алюбитовые шары диаметром 75 мм (3"")     DURITAL K99 BALLS",O0012665,17
+95757,WIM0056200,"Denstone® 2000 Support Media, 13mm(1/2'')/Опорная среда Denstone® 2000, 13 мм (1/2'')",O0012666,17
+95758,WIM0056201,Цеолит  /Zeolite NaX,O0012667,17
+95759,WIM0056202,Оксид алюминия/Aluminum oxide Al2O3,O0012668,17
+95760,WIM0056203,Projector/Прожектор,O0012519,2
+95761,WIM0056204,Metal halide lamp / Металлогалогенная лампа 400W,O0012518,2
+95765,Serv_0000312,"Заключение договора с ООО ""UNICON.UZ""",,2
+95766,WIM0056205,Grinding disc / Диск обдирочный /180mm*8mm*22mm,O0012479,2
+95767,WIM0056206,Grinding disc / Диск обдирочный /180mm*6mm*22mm,O0012480,2
+95768,WIM0056207,"Cut off disc / Отрезной диск / 180mm*1,8mm*22,2mm",O0012481,2
+95769,WIM0056208,Disc with sand papers / Диск с наждачной бумагой / 100*16,O0012482,2
+95770,WIM0056209,"Steel Cutting disc / Отрезной диск по металу / 405mm*4mm*25,4mm",O0012483,2
+95771,WIM0056210,Cut off disc / Отрезной диск / 100mm*1mm*16mm,O0012484,2
+95772,WIM0056211,Cutting distc / Отрезные диски / 355*3*25.4 KSC6504,O0012485,2
+95773,WIM0056212,Rope / Веревка / 13mm/100m,O0012486,18
+95774,WIM0056213,Polypropylene Rope / Полипропиленовая веревка / yellow/black ,O0012487,18
+95775,WIM0056214,Cable Warning Tape / Лента предупреждения о кабеле / N/A,O0012488,18
+95776,WIM0056215,"Twin welding hose / Двойной сварочный шланг / 100m, 8mm",O0012489,18
+95777,WIM0056216,"Paint brush / Кисть / ""SMATO"" - 4"" ",O0012490,2
+95778,WIM0056217,"Paint brush / Кисть / ""SMATO"" - 2"" ",O0012491,2
+95779,WIM0056218,Argon reducer / Аргон редуктор / EX-702A,O0012492,2
+95780,WIM0056219,Propane regulator / Пропановый регулятор / ,O0012493,2
+95781,WIM0056220,Oxygen regulator / Кислородный регулятор,O0012494,2
+95782,WIM0056221,Welding mask / Сварочная маска / black,O0012495,2
+95783,WIM0056222,Wire brush / Металличесая щетка / SMATO,O0012496,2
+95784,WIM0056223,Welding pants / Сварочные штаны / blue,O0012497,2
+95785,WIM0056224,Earplugs / Затычки для ушей / 3M,O0012498,2
+95786,WIM0056225,Welding clothes / Сварочная одежда,O0012499,2
+95787,WIM0056226,Welding gloves / Сварочные перчатки,O0012500,2
+95788,WIM0056227,Half face piece respirator / Респиратор на половину лица - 3M,O0012501,2
+95789,WIM0056228,American masking tape / Американский малярный скотч - 50mm,O0012502,2
+95790,WIM0056229,Plastic broom / Метла из пластика - Корейский,O0012503,2
+95791,WIM0056230,Cut off disc / Отрезной диск - 100mm*6mm*16mm,O0012504,2
+95792,WIM0056231,"Paint brush / Кисть-""SMATO"" - 3""",O0012505,2
+95793,WIM0056232,"Paint brush/Кисть-""SMATO"" - 1""",O0012506,2
+95794,WIM0056233,"Flux cored wire ""Hyundai""/Порошковая проволока ""Hyundai"" - SF-71 (15kg/ кг)",O0012507,18
+95795,WIM0056234,Electrode Holder/Сварочный держатель N/A 600A,O0012508,2
+95796,WIM0056235,Wire/Проволока Metal/ металлическая,O0012509,18
+95797,WIM0056236,"Отрезной диск ""TURON"" 400mm*4mm*32mm",O0012510,2
+95798,WIM0056237,Welding Earth Clamp/Cварочный зажим заземления 500А,O0012511,2
+95799,WIM0056238,Welding mask glass/Сварочное стекло маски dark ,O0012512,2
+95800,WIM0056239,Acid gas cartridge for mask/ Фильтр от маски 6003К,O0012513,2
+95801,WIM0056240,Portable electrode dry oven/Переносная электродная печь ,O0012514,2
+95802,WIM0056241,Tale chalk Hanshin/Мел сварщика тальковый ханшин,O0012515,2
+95803,WIM0056242,CO2 nozzle / Сопло CO2,O0012516,2
+95804,WIM0056243,Hook/Крюк,O0012517,2
+95805,WIM0056244,MH lamp / Металлогалогенная лампа 1000W Korea,O0012520,2
+95806,WIM0056245,CHEVRON Catalyst (ICR-452) ISODEWAXING catalayst,,24
+95807,WIM0056246,GSK-10,,24
+95808,WIM0056247,GSK-19,,24
+95809,WIM0056248,GSK-6A,,24
+95810,WIM0056249,Электромобиль,,2
+95811,Serv_0000313,Разработка рабочего проекта (РП) для осуществления строительно-монтажных работ в ООО «Uzbekistan GTL-Chinoz terminal»,,2
+95813,Serv_0000314,"Re-registration of railways on the balance sheet of Uzbekistan GTL LLC, freight warehouse Jaron and monitoring their current condition.",,2
+95814,Serv_0000315,Regarding the signing of the contract with for the training of the employees of the Uzbekistan GTL plant in the training courses on labor protection,,2
+95815,WIM0056250,MemKare KL 500 (Лимонная кислота),O0012816,17
+95828,WIM0056251,Пакет,O0011808,2
+95829,Serv_0000316,"Услуга ""Перевозка пассажиров автомобильным транспортом""",,2
+95831,Serv_0000317,Performing Environmental Monitoring services at the facilities of Uzbekistan GTL LLC and nearby settlements.,,2
+95832,Serv_0000318,Лицензия Office365 E3,,2
+95833,WIM0056252,ЖЕЛЕЗНОДОРОЖНОЙ ВЕСЫ,,2
+95834,WIM0056253,ПЕРСОНАЛЬНОГО КОМПЬЮТЕРАДЛЯ ОПЕРАТОРА ,,2
+95835,WIM0056254,	Вода питьевая в бутылях емкостью 19-20 л (с предоставлением во временное пользование оборудования для розлива воды (кулеров) в кол-ве не менее 7 шт,,2
+95836,WIM0056255,"Вода питьевая без газа 0,5 л",,2
+95855,WIM0056256,Сухие сливки для добавления в кофе ,,51
+95856,WIM0056257,Сахар-песок,,17
+95857,WIM0056258,Чай черный пакетированный,,19
+95858,WIM0056259,Чай черный,,19
+95859,WIM0056260,Чай зеленый пакетированный,,19
+95860,WIM0056261,Чай зеленый,,19
+95861,WIM0056262,Растворимый кофе,,19
+95862,WIM0056263,Кофе в зернах,,17
+95863,WIM0056264,Салфетки бумажные ,,2
+95865,Serv_0000319,Signing a contract with the university of World economy and diplomacy for the training of Company's employees in courses,,2
+95866,Serv_0000320,Calibration of laboratory equipment,,2
+95867,WIM0056265,Кефир,,2
+95869,WIM0056266,Cortrol OS5601 (DRB) / Поглотитель кислорода,O0012829,17
+95870,WIM0056267,"Denstone® 2000 Support Media, 25mm(1'') / Опорная среда Denstone® 2000,  25 мм (1'')",O0012830,17
+95872,WIM0056268,Моноблок в комплекте,,2
+95873,WIM0056269,Камера видеонаблюдения (внутренняя),,2
+95874,WIM0056270,Камера видеонаблюдения (внешняя),,2
+95876,Serv_0000321,O'zbekiston Respublikasi Toshkent viloyati boshqarmasi Milliy gvardiya qo'riqlash xizmati,,2
+95877,Serv_0000322,«Uzbekistan GTL» MChJ «GTL Chinoz terminali» va Toshkent ofisidagi birlamchi o’t o’chirish vositalarini restavratsiya qilish va qayta to’ldirish,,2
+95880,WIM0056271,ACS 800 Safety Torque off option + 0967,O0011170,2
+95881,WIM0056272,Gasket 1-R: sus 316 LH/316 LF Graflex /0-R: CS / 4.5 T RF ASME/ANSI 300LB 16B,O0011171,2
+95882,WIM0056273,"MANWAY NOZZLE GASKET M1(24"" ASME 300#) HPK-18-02",O0011065,2
+95883,WIM0056274,"DESICCANT REMOVAL NOZZLE GASKET 10"" ASME 300# HPK-18-02",O0011066,2
+95884,WIM0056275,"MANWAY / TAIL GAS INLET NOZZLE BOLT & NUT24"" ASME 300# STUD BOLT W/H HEX NUT A193 GRB7 W/A194 GR2H - 1-1/2""-8UN×250mm HPK-18-02",O0011067,8
+95885,WIM0056276,"DESICCANT REMOVAL NOZZLE BOLT & NUT10"" ASME 300# STUD BOLT W/H HEX NUT A193 GRB7 W/A194 GR2H - 1""-8UN×180mm HPK-18-02",O0011068,8
+95886,WIM0056277,"BEARING, IRT-300C-4MW-A.S (SUJ2) (135x59 - 2EA) (205x53 - 2 EA) HPK-18-02",O0011069,8
+95887,WIM0056278,"BEARING, IRT-300C-4MW-A.S(5214) (SUJ2) (135x52 - 1 EA) HPK-18-02",O0011070,2
+95888,WIM0056279,BELT 14GTV-3136-20 HPK-18-02,O0011071,2
+95889,WIM0056280,FAN BLADE 4.3A-2438-06-SML-TS HPK-18-02,O0011072,2
+95890,WIM0056281,"ZYL-ROLLENLAGER NU 310, CYLINDRICAL ROLLER BEARING (180) 130-XP-124/224-PC-02A/B",O0011073,2
+95891,WIM0056282,ANGULAR CONTACT BEAR 7310B (190) 130-XP-124/224-PC-02A/B,O0011074,2
+95892,WIM0056283,CYL ROLLER BEARING NU 312 E (200) 130-XP-124/224-PC-01A/B,O0011075,2
+95893,WIM0056284,Angular contact ball bearing 7312B-UA (210) 130-XP-124/224-PC-01A/B,O0011076,2
+95894,WIM0056285,SET OF GASKETS 130-XP-124/224-PC-02A/B,O0011077,2
+95895,WIM0056286,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 M1  for Condensor Package (1-1/4"" x 8UN x 185L)",O0011078,8
+95896,WIM0056287,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 A1  for Condensor Package (3/4"" x 10UNC x 135L)",O0011079,8
+95897,WIM0056288,"Gasket / 130-XP-124/224 A1  for Condensor Package (t4.5 x 8"" ASME CL.150)",O0011080,2
+95898,WIM0056289,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 A2  for Condensor Package (5/8"" x 11UN x 110L)",O0011081,8
+95899,WIM0056290,"Gasket / 130-XP-124/224 A2  for Condensor Package (t4.5 x 3"" ASME CL.150)",O0011082,2
+95900,WIM0056291,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 A3  for Condensor Package (5/8"" x 11UN x 95L)",O0011083,8
+95901,WIM0056292,"Gasket / 130-XP-124/224 A3  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011084,2
+95902,WIM0056293,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 B1  for Condensor Package (3/4"" x 10UNC x 110L)",O0011085,8
+95903,WIM0056294,"Gasket / 130-XP-124/224 B1  for Condensor Package (t4.5 x 6"" ASME CL.150)",O0011086,2
+95904,WIM0056295,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 B1  for Condensor Package (3/4"" x 10UNC x 125L)",O0011087,8
+95905,WIM0056296,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 D1  for Condensor Package (5/8"" x 11UN x 95L)",O0011088,8
+95906,WIM0056297,"Gasket / 130-XP-124/224 D1  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011089,2
+95907,WIM0056298,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 T1,T2  for Condensor Package (5/8"" x 11UN x 95L)",O0011090,8
+95908,WIM0056299,"Gasket / 130-XP-124/224 T1,T2  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011091,2
+95909,WIM0056300,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 G1,G2  for Condensor Package (5/8"" x 11UNC x 95L)",O0011092,8
+95910,WIM0056301,"Gasket / 130-XP-124/224 G1,G2  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011093,2
+95911,WIM0056302,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 A6  for Condensor Package (5/8"" x 11UNC x 110L)",O0011094,8
+95912,WIM0056303,"Gasket / 130-XP-124/224 A6  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011095,2
+95913,WIM0056304,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 L1,L3  for Condensor Package (3/4"" x 10UN x 120L)",O0011096,8
+95914,WIM0056305,"Gasket / 130-XP-124/224 L1,L3  for Condensor Package (t4.5 x 4"" ASME CL.300)",O0011097,2
+95915,WIM0056306,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 L2,L4  for Condensor Package (3/4"" x 10UN x 120L)",O0011098,8
+95916,WIM0056307,"Gasket / 130-XP-124/224 L2,L4  for Condensor Package (t4.5 x 4"" ASME CL.300)",O0011099,2
+95917,WIM0056308,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 P1  for Condensor Package (5/8"" x 11UNC x 95L)",O0011100,8
+95918,WIM0056309,"Gasket / 130-XP-124/224 P1  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011101,2
+95919,WIM0056310,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 V1  for Condensor Package (5/8"" x 11UNC x 95L)",O0011102,8
+95920,WIM0056311,"Gasket / 130-XP-124/224 V1  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011103,2
+95921,WIM0056312,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 A4  for Condensor Package (5/8"" x 11UNC x 115L)",O0011104,8
+95922,WIM0056313,"Gasket / 130-XP-124/224 A4  for Condensor Package (t4.5 x 4"" ASME CL.150)",O0011105,2
+95923,WIM0056314,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 A5  for Condensor Package (5/8"" x 11UNC x 110L)",O0011106,8
+95924,WIM0056315,"Gasket / 130-XP-124/224 A5  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011107,2
+95925,WIM0056316,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 A7  for Condensor Package (3/4"" x 10UNC x 130L)",O0011108,8
+95926,WIM0056317,"Gasket / 130-XP-124/224 A7  for Condensor Package (t4.5 x 6"" ASME CL.150)",O0011109,2
+95927,WIM0056318,"Stud B/Heavy Hex. 2NS / 130-XP-124/224 W1,W2  for Condensor Package (5/8"" x 11UNC x 95L)",O0011110,8
+95928,WIM0056319,"Gasket / 130-XP-124/224 W1,W2  for Condensor Package (t4.5 x 2"" ASME CL.300)",O0011111,2
+95929,WIM0056320,"STUD BOLT/2HHN, U1-1/8""*8UNC*155L, 130-XP-124/224 ( U1-1/8""*8UNC*155L)",O0011112,2
+95930,WIM0056321,"STUD BOLT/2HHN, U5/8""*11UNC*90L, 130-XP-124/224 (U5/8""*11UNC*90L)",O0011113,2
+95931,WIM0056322,"STUD BOLT/2HHN, U5/8""*11UNC*95L, 130-XP-124/224 (U5/8""*11UNC*95L)",O0011114,2
+95932,WIM0056323,"STUD BOLT/2HHN, U1-1/4""*8UNC*180L, 130-XP-124/224 (U1-1/4""*8UNC*180L)",O0011115,2
+95933,WIM0056324,"STUD BOLT/2HHN, U1-1/8""*8UNC*155L, 173-XP-002A/B (U1-1/8""*8UNC*155L)",O0011116,2
+95934,WIM0056325,"STUD BOLT/2HHN, U3/4""*10UNC*110L, 173-XP-002A/B ( U3/4""*10UNC*110L)",O0011117,2
+95935,WIM0056326,"HEX.B/N/PW, M12*35L, 130-XP-124/224",O0011118,2
+95936,WIM0056327,"HEX.B/N/PW, M16*40L, 130-XP-124/224",O0011119,2
+95937,WIM0056328,"HEX.B/N/PW, M16*50L, 130-XP-124/224",O0011120,2
+95938,WIM0056329,"HEX.B/N/PW, M16*55L, 130-XP-124/224",O0011121,2
+95939,WIM0056330,"HEX.B/N/TW, M16*55L, 130-XP-124/224",O0011122,2
+95940,WIM0056331,"HEX.B/N/PW, M16*60L, 130-XP-124/224",O0011123,2
+95941,WIM0056332,"HEX.B/N/TW, M16*60L,, 130-XP-124/224",O0011124,2
+95942,WIM0056333,"HEX.B/N/PW, M16*80L, 130-XP-124/224",O0011125,2
+95943,WIM0056334,"HEX.B/N/PW, M4*40L, 130-XP-124/224",O0011126,2
+95944,WIM0056335,"HEX.B/N/2PW, M20*50L, 130-XP-124/224",O0011127,2
+95945,WIM0056336,"HEX.B/ M20*55L, 130-XP-124/224",O0011128,2
+95946,WIM0056337,"HEX.B/N/2PW, M20*60L, 130-XP-124/224",O0011129,2
+95947,WIM0056338,"HEX.B/N/PW/TW, M20*60L, 130-XP-124/224",O0011130,2
+95948,WIM0056339,"HEX.B/N/2PW, M22*65L, 130-XP-124/224",O0011131,2
+95949,WIM0056340,"HEX.B/N/2PW, M16*70L, 130-XP-124/224",O0011132,2
+95950,WIM0056341,"HEX.B/N/TW, M16*60L, 130-XP-124/224",O0011133,2
+95951,WIM0056342,"HEX.B/N/2PW, M20*55L, 130-XP-124/224",O0011134,2
+95952,WIM0056343,"HEX.B/N/TW/PW, M20*60L, 130-XP-124/224",O0011135,2
+95953,WIM0056344,"HEX.B/N/PW. M4*40L, 130-XP-124/224",O0011136,2
+95954,WIM0056345,"HEX.B/N/PW, M12*35L, 173-XP-002A/B",O0011137,2
+95955,WIM0056346,Casing gasket - ID394XOD415X4.5t mm 145-PC-050,O0011138,2
+95956,WIM0056347,Coupling repair kit 145-PC-020A/B,O0011139,2
+95957,WIM0056348,Coupling repair kit 145-PC-026A/B,O0011140,2
+95958,WIM0056349,Coupling repair kit 145-PC-050,O0011141,2
+95959,WIM0056350,Pump bearing 6215C3 / 7213 BDB 145-PC-020A/B,O0011142,8
+95960,WIM0056351,Pump bearing 6211C3 / 7211 BDB 145-PC-026A/B,O0011143,8
+95961,WIM0056352,Pump bearing 6211C3 / 7211 BDB 145-PC-050,O0011144,8
+95962,WIM0056353,Motor bearing 6316 MC3 / 6316 MC3 145-PC-020A/B,O0011145,8
+95963,WIM0056354,Motor bearing 6312 ZC3 / 6310 ZC3 145-PC-026A/B,O0011146,8
+95964,WIM0056355,Motor bearing 6313 C3 / 6313 C3 145-PC-050,O0011147,8
+95965,WIM0056356,CASING GASKET FOR 145-PC-002A/B TSP2X1-11C,O0011148,2
+95966,WIM0056357,CASING GASKET FOR 145-PC-022A/B TSP6X3-27A,O0011149,2
+95967,WIM0056358,CASING GASKET FOR 150-PC-005A/B TSP10X6-26,O0011150,2
+95968,WIM0056359,CASING GASKET FOR 150-PC-050A/B TSP2X1-11A,O0011151,2
+95969,WIM0056360,CASING GASKET FOR 150-PC-008A/B TSP8X6-13,O0011152,2
+95970,WIM0056361,CASING GASKET FOR 150-PC-011A/B TSP2X1-9AL,O0011153,2
+95971,WIM0056362,CASING GASKET FOR 150-PC-014A/B TSP4X3-17,O0011154,2
+95972,WIM0056363,CASING GASKET FOR 150-PC-015A/B TSP6X3-17,O0011155,2
+95973,WIM0056364,CASING GASKET FOR 150-PC-016 TSP2X1-9LE,O0011156,2
+95974,WIM0056365,CASING GASKET FOR 150-PC-017A/B TSP6X4-16,O0011157,2
+95975,WIM0056366,CASING GASKET FOR 150-PC-018A/B TSP6X3-17,O0011158,2
+95976,WIM0056367,CASING GASKET FOR 150-PC-019A/B TSP3X2-15,O0011159,2
+95977,WIM0056368,CASING GASKET FOR 183-PC-006 TSP4X3-9,O0011160,2
+95978,WIM0056369,CASING GASKET FOR 150-PC-007A/B TDSP8X6-13,O0011161,2
+95979,WIM0056370,CASING GASKET FOR 150-PC-010A/B TDSP8X6-13 ,O0011162,8
+95980,WIM0056371,CASING GASKET FOR 145-PC-001A/B TDSP6X4-13,O0011163,8
+95981,WIM0056372,"CASING GASKET FOR 150-PC-001A/B RSMP-B8X6-13A,12S",O0011164,8
+95982,WIM0056373,"CASING GASKET FOR 150-PC-002A/B RSMP-B8X6-13A,11S",O0011165,8
+95983,WIM0056374,"CASING GASKET FOR 150-PC-013A/B RSMP-B8X6-13A,6S",O0011166,8
+95984,WIM0056375,"CASING GASKET FOR 150-PC-012A/B RSMP-B6X3-10,9S",O0011167,8
+95985,WIM0056376,CASING GASKET FOR 150-PC-020A/B TDP12X10-26,O0011168,8
+95986,WIM0056377,CASING GASKET FOR 183-PC-005A/B TDSP8X4-22 ,O0011169,8
+95987,WIM0056378,"Size: 3/4"" S-160 x 1/2"" S-160 (Size1: 20mm Thk1: 5.56mm x Size2: 15mm Thk2: 4.78mm) CON SWG, CS A234-WPB-SMLS  PBE MSS-SP-95 (I14049549)",O0012874,2
+95988,WIM0056379,"C/SWAGE - PBE - S160 - S160 - A234-WPB - 1"" - 1/2"" (I14049620)",O0012875,2
+95989,WIM0056380,"Size: 1 1/2"" S-160 x 3/4"" S-160 (Size1: 40mm Thk1: 7.14mm x Size2: 20mm Thk2: 5.56mm) CON SWG, CS A234-WPB-SMLS  PBE MSS-SP-95 (I14049849)",O0012876,2
+95990,WIM0056381,"Size: 1 1/2"" S-160 x 1"" S-160 (Size1: 40mm Thk1: 7.14mm x Size2: 25mm Thk2: 6.35mm) CON SWG, CS A234-WPB-SMLS  PBE MSS-SP-95 (I14049913)",O0012877,2
+95991,WIM0056382,"Size: 1"" S-160 x 3/4"" S-160 (Size1: 25mm Thk1: 6.35mm x Size2: 20mm Thk2: 5.56mm) CON SWG, CS A234-WPB-SMLS  PLE x TSE MSS-SP-95 (I14050439)",O0012878,2
+95992,WIM0056383,"C/SWAGE - PLE-TSE - S160 - A234-WPB - 1-1/2"" - 1"" (I14050660)",O0012879,2
+95993,WIM0056384,"Size: 1"" S-XS x 3/4"" S-XS (Size1: 25mm Thk1: 4.55mm x Size2: 20mm Thk2: 3.91mm) CON SWG, CS A234-WPB-SMLS  PBE MSS-SP-95 (I19243280)",O0012880,2
+95994,WIM0056385,"Size: 1 1/2"" S-XS x 1"" S-XS (Size1: 40mm Thk1: 5.08mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS  PBE MSS-SP-95 (I19243392) ",O0012881,2
+95995,WIM0056386,"Size: 2"" S-STD x 1"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I19243488)",O0012882,2
+95996,WIM0056387,"Size: 2"" S-STD x 1 1/2"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 40mm Thk2: 5.08mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I19243528)",O0012883,2
+95997,WIM0056388,"Size: 3"" S-STD x 1 1/2"" S-XS (Size1: 80mm Thk1: 5.49mm x Size2: 40mm Thk2: 5.08mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I19243689)",O0012884,2
+95998,WIM0056389,"Size: 2"" S-XS x 3/4"" S-XS (Size1: 50mm Thk1: 5.54mm x Size2: 20mm Thk2: 3.91mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I20306010)",O0012885,2
+95999,WIM0056390,"Size: 2"" S-XS x 1"" S-XS (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I20306043)",O0012886,2
+96000,WIM0056391,"Size: 1 1/2"" S-80S x 3/4"" S-80S (Size1: 40mm Thk1: 5.08mm x Size2: 20mm Thk2: 3.91mm) CON SWG, SS A403-WP304L-S  PBE MSS-SP-95 (I20646345)",O0012887,2
+96001,WIM0056392,"Size: 1"" S-XS x 1/2"" S-XS (Size1: 25mm Thk1: 4.55mm x Size2: 15mm Thk2: 3.73mm) CON SWG, CS A234-WPB-SMLS HOT DIP GALV.  TBE MSS-SP-95 (I20906870)",O0012888,2
+96002,WIM0056393,"Size: 1"" S-XS x 3/4"" S-XS (Size1: 25mm Thk1: 4.55mm x Size2: 20mm Thk2: 3.91mm) CON SWG, CS A234-WPB-SMLS HOT DIP GALV.  TBE MSS-SP-95 (I20906904) ",O0012889,2
+96003,WIM0056394,"Size: 1 1/2"" S-XS x 1/2"" S-XS (Size1: 40mm Thk1: 5.08mm x Size2: 15mm Thk2: 3.73mm) CON SWG, CS A234-WPB-SMLS HOT DIP GALV.  TBE MSS-SP-95 (I20906953)",O0012890,2
+96004,WIM0056395,"Size: 1 1/2"" S-XS x 1"" S-XS (Size1: 40mm Thk1: 5.08mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS HOT DIP GALV.  TBE MSS-SP-95 (I20907021)",O0012891,2
+96005,WIM0056396,"Size: 1"" S-XS x 1/2"" S-XS (Size1: 25mm Thk1: 4.55mm x Size2: 15mm Thk2: 3.73mm) CON SWG, CS A234-WPB-SMLS  PBE MSS-SP-95 (I20907385) ",O0012892,2
+96006,WIM0056397,"Size: 2"" S-STD x 1/2"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 15mm Thk2: 3.73mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I20907886)",O0012893,2
+96007,WIM0056398,"Size: 4"" S-STD x 1 1/2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 40mm Thk2: 5.08mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I21412700)",O0012894,2
+96008,WIM0056399,"Size: 2"" S-XS x 1"" S-XS (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS HOT DIP GALV.  TBE MSS-SP-95 (I21865169)",O0012895,2
+96009,WIM0056400,"Size: 2"" S-XS x 1 1/2"" S-XS (Size1: 50mm Thk1: 5.54mm x Size2: 40mm Thk2: 5.08mm) CON SWG, CS A234-WPB-SMLS HOT DIP GALV.  TBE MSS-SP-95 (I21865208)",O0012896,2
+96010,WIM0056401,"Size: 4"" S-STD x 2"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 50mm Thk2: 5.54mm) CON SWG, CS A234-WPB-SMLS HOT DIP GALV.  BLE x TSE MSS-SP-95 (I22490200)",O0012897,2
+96011,WIM0056402,"Size: 2"" S-XS x 1"" S-XS (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 4.55mm) CON SWG, LTCS A420-WPL6-S  BLE x PSE MSS-SP-95 (I22609600)",O0012898,2
+96012,WIM0056403,"Size: 2"" S-XS x 3/4"" S-160 (Size1: 50mm Thk1: 5.54mm x Size2: 20mm Thk2: 5.56mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I22617255)",O0012899,2
+96013,WIM0056404,"Size: 2"" S-XS x 1"" S-160 (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 6.35mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I22617287)",O0012900,2
+96014,WIM0056405,"Size: 3"" S-STD x 1 1/2"" S-160 (Size1: 80mm Thk1: 5.49mm x Size2: 40mm Thk2: 7.14mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I22617464) ",O0012901,2
+96015,WIM0056406,"Size: 2"" S-160 x 3/4"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 20mm Thk2: 5.56mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I23382206)",O0012902,2
+96016,WIM0056407,"Size: 2"" S-160 x 1"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 25mm Thk2: 6.35mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I23382235)",O0012903,2
+96017,WIM0056408,"Size: 2"" S-160 x 1 1/2"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 40mm Thk2: 7.14mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I23382269) ",O0012904,2
+96018,WIM0056409,"Size: 1 1/2"" S-80S x 1/2"" S-80S (Size1: 40mm Thk1: 5.08mm x Size2: 15mm Thk2: 3.73mm) CON SWG, SS A403-WP316L-S  PBE MSS-SP-95 (I24303983)",O0012905,2
+96019,WIM0056410,"Size: 1 1/2"" S-80S x 1"" S-80S (Size1: 40mm Thk1: 5.08mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP316L-S  PBE MSS-SP-95 (I24303988)",O0012906,2
+96020,WIM0056411,"Size: 4"" S-STD x 1"" S-XS (Size1: 100mm Thk1: 6.02mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I26610928)",O0012907,2
+96021,WIM0056412,"Size: 1 1/2"" S-160 x 1"" S-160 (Size1: 40mm Thk1: 7.14mm x Size2: 25mm Thk2: 6.35mm) CON SWG, CS A234-WPB-SMLS  PBE MSS-SP-95 MR0103 (I27364378)",O0012908,2
+96022,WIM0056413,"Size: 2"" S-160 x 1"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 25mm Thk2: 6.35mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 MR0103 (I27364485)",O0012909,2
+96023,WIM0056414,"Size: 2"" S-XXS x 1"" S-XXS (Size1: 50mm Thk1: 11.07mm x Size2: 25mm Thk2: 9.09mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 (I28621614)",O0012910,2
+96024,WIM0056415,"Size: 2"" S-10S x 3/4"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 20mm Thk2: 3.91mm) CON SWG, SS A403-WP304L-S  BLE x PSE MSS-SP-95 (I35266076)",O0012911,2
+96025,WIM0056416,"Size: 2"" S-10S x 1"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP304L-S  BLE x PSE MSS-SP-95 (I35266079)",O0012912,2
+96026,WIM0056417,"Size: 3"" S-10S x 1"" S-80S (Size1: 80mm Thk1: 3.05mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP304L-S  BLE x PSE MSS-SP-95 (I35266095)",O0012913,2
+96027,WIM0056418,"Size: 2"" S-10S x 3/4"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 20mm Thk2: 3.91mm) CON SWG, SS A403-WP316L-S  BLE x PSE MSS-SP-95 (I36600288)",O0012914,2
+96028,WIM0056419,"Size: 2"" S-10S x 1"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP316L-S  BLE x PSE MSS-SP-95 (I36600290)",O0012915,2
+96029,WIM0056420,"Size: 2"" S-XS x 3/4"" S-160 (Size1: 50mm Thk1: 5.54mm x Size2: 20mm Thk2: 5.56mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 MR0103 (I49641832) ",O0012916,2
+96030,WIM0056421,"Size: 2"" S-XS x 1"" S-160 (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 6.35mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 MR0103 (I49641865)",O0012917,2
+96031,WIM0056422,"Size: 2"" S-10S x 1"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP316L-S  BLE x PSE MSS-SP-95 MR0103 (I51807729)",O0012918,2
+96032,WIM0056423,"Size: 1"" S-160 x 3/4"" S-160 (Size1: 25mm Thk1: 6.35mm x Size2: 20mm Thk2: 5.56mm) CON SWG, CS SA234-WPB-SMLS  PBE MSS-SP-95 (I54806756)",O0012919,2
+96033,WIM0056424,"Size: 2"" S-STD x 3/4"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 20mm Thk2: 3.91mm) CON SWG, LTCS A420-WPL6-S  BLE x PSE MSS-SP-95 (I55040744)",O0012920,2
+96034,WIM0056425,"Size: 2"" S-STD x 1"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 25mm Thk2: 4.55mm) CON SWG, LTCS A420-WPL6-S  BLE x PSE MSS-SP-95 (I55040776) ",O0012921,2
+96035,WIM0056426,"Size: 2"" S-160 x 1"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 25mm Thk2: 6.35mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 H2 SERV. MR0103 (I63574567)",O0012922,2
+96036,WIM0056427,"Size: 2"" S-STD x 1"" S-XS (Size1: 50mm Thk1: 3.91mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 H2 SERV. (I63956125)",O0012923,2
+96037,WIM0056428,"Size: 1 1/2"" S-80S x 1"" S-80S (Size1: 40mm Thk1: 5.08mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP316L-S  PBE MSS-SP-95 H2 SERV. (I64177040)",O0012924,2
+96038,WIM0056429,"Size: 2"" S-XS x 1"" S-XS (Size1: 50mm Thk1: 5.54mm x Size2: 25mm Thk2: 4.55mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 H2 SERV. (I64212314)",O0012925,2
+96039,WIM0056430,"Size: 2"" S-XS x 1 1/2"" S-XS (Size1: 50mm Thk1: 5.54mm x Size2: 40mm Thk2: 5.08mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 H2 SERV. (I64212356)",O0012926,2
+96040,WIM0056431,"Size: 2"" S-160 x 3/4"" S-160 (Size1: 50mm Thk1: 8.74mm x Size2: 20mm Thk2: 5.56mm) CON SWG, CS SA234-WPB-SMLS  BLE x PSE MSS-SP-95 (I64376295)",O0012927,2
+96041,WIM0056432,"Size: 2"" S-10S x 1"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A815-WP-S S31803  BLE x PSE MSS-SP-95 (I64585659)",O0012928,2
+96042,WIM0056433,"Size: 2"" S-10S x 3/4"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 20mm Thk2: 3.91mm) CON SWG, SS A403-WP304L-S  BLE x PSE MSS-SP-95 H2 SERV. (I77536354)",O0012929,2
+96043,WIM0056434,"Size: 2"" S-10S x 1"" S-80S (Size1: 50mm Thk1: 2.77mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP304L-S  BLE x PSE MSS-SP-95 H2 SERV. (I77536363)",O0012930,2
+96044,WIM0056435,"Size: 3"" S-10S x 1"" S-80S (Size1: 80mm Thk1: 3.05mm x Size2: 25mm Thk2: 4.55mm) CON SWG, SS A403-WP304L-S  BLE x PSE MSS-SP-95 H2 SERV. (I77536401)",O0012931,2
+96045,WIM0056436,"C/SWAGE - BLE-PSE - S10S - S80S - A403-WP316L_HS SERV - 2"" - 1"" (I78201572)",O0012932,2
+96046,WIM0056437,"Size: 2"" S-STD x 1 1/2"" S-160 (Size1: 50mm Thk1: 3.91mm x Size2: 40mm Thk2: 7.14mm) CON SWG, CS A234-WPB-SMLS  BLE x PSE MSS-SP-95 H2 SERV. MR0103 (I87364954)",O0012933,2
+96047,WIM0056438,"Size: 1/2"" (Size: 15mm) TEE, SS A182-F316L SWE B16.11 CL3000 (I10021231) ",O0012934,2
+96048,WIM0056439,"Size: 3/4"" (Size: 20mm) TEE, SS A182-F316L SWE B16.11 CL3000 (I10021234)",O0012935,2
+96049,WIM0056440,"Size: 1"" (Size: 25mm) TEE, SS A182-F316L SWE B16.11 CL3000 (I10021237)",O0012936,2
+96050,WIM0056441,"Size: 1 1/2"" (Size: 40mm) TEE, SS A182-F316L SWE B16.11 CL3000 (I10021244)",O0012937,2
+96051,WIM0056442,"Size: 2"" S-40S (Size:50mm Thk: 3.91mm) TEE, SS A403-WP316L-S  BE B16.9 (I10885830)",O0012938,2
+96052,WIM0056443,"Size: 4"" S-40S (Size:100mm Thk: 6.02mm) TEE, SS A403-WP316L-S  BE B16.9 (I10886108)",O0012939,2
+96053,WIM0056444,"Size: 3/4"" S-80S (Size:20mm Thk: 3.91mm) TEE, SS A403-WP316L-S  BE B16.9 H2 SERV. (I109428952)",O0012940,2
+96054,WIM0056445,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) TEE, CS A234-WPB-SMLS  BE B16.9 (I13945069)",O0012941,2
+96055,WIM0056446,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) TEE, SS A403-WP304L-S  BE B16.9 (I14171519) ",O0012942,2
+96056,WIM0056447,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) TEE, SS A403-WP304L-S  BE B16.9 (I14171537)",O0012943,2
+96057,WIM0056448,"Size: 2"" S-STD (Size:50mm Thk: 3.91mm) TEE, CS A234-WPB-SMLS  BE B16.9 (I19247540)",O0012944,2
+96058,WIM0056449,TEE A234WPB-S STD (I19247570),O0012945,2
+96059,WIM0056450,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) TEE, SS A403-WP316L-S  BE B16.9 (I19252100)",O0012946,2
+96060,WIM0056451,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) TEE, SS A403-WP316L-S  BE B16.9 (I19252107)",O0012947,2
+96061,WIM0056452,"Size: 4"" S-10S (Size:100mm Thk: 3.05mm) TEE, SS A403-WP316L-S  BE B16.9 (I19252110)",O0012948,2
+96062,WIM0056453,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) TEE, CS A234-WPB-SMLS  BE B16.9 (I19828593)",O0012949,2
+96063,WIM0056454,"Size: 3"" S-XS (Size:80mm Thk: 7.62mm) TEE, CS A234-WPB-SMLS  BE B16.9 (I20309060)",O0012950,2
+96064,WIM0056455,"Size: 6"" S-40S (Size:150mm Thk: 7.11mm) TEE, SS A403-WP304L-S  BE B16.9 (I20647820)",O0012951,2
+96065,WIM0056456,"Size: 3/4"" S-160 (Size:20mm Thk: 5.56mm) TEE, AS A234-WP11-SMLS CL.1  BE B16.9 (I21905883)",O0012952,2
+96066,WIM0056457,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) TEE, LTCS A420-WPL6-S  BE B16.9 (I22606622) ",O0012953,2
+96067,WIM0056458,"EQUAL TEE - SW - 6000 LB - A105_MR0103 - 3/4"" (I27359399)",O0012954,2
+96068,WIM0056459,"Size: 1"" (Size: 25mm) TEE, CS A105 SWE B16.11 CL6000 MR0103 (I27359400) ",O0012955,2
+96069,WIM0056460,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) TEE, CS A234-WPB-SMLS  BE B16.9 MR0103 (I27370329)",O0012956,2
+96070,WIM0056461,"Size: 2"" S-XXS (Size:50mm Thk: 11.07mm) TEE, CS A234-WPB-SMLS  BE B16.9 (I27966691)",O0012957,2
+96071,WIM0056462,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) TEE, SS A403-WP316L-S  BE B16.9 MR0103 (I33210360)",O0012958,2
+96072,WIM0056463,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) TEE, SS A815-WP-S S31803  BE B16.9 (I42890942)",O0012959,2
+96073,WIM0056464,"Size: 3/4"" S-80S (Size:20mm Thk: 3.91mm) TEE, SS A403-WP316L-S  BE B16.9 (I46889072)",O0012960,2
+96074,WIM0056465,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) TEE, AS A234-WP11-SMLS CL.1  BE B16.9 (I47469953)",O0012961,2
+96075,WIM0056466,"Size: 3/4"" (Size: 20mm) TEE, CS SA105 SWE B16.11 CL3000 (I48308545) ",O0012962,2
+96076,WIM0056467,"Size: 2"" S-XS (Size:50mm Thk: 5.54mm) TEE, CS A234-WPB-SMLS  BE B16.9 MR0103 (I49344245)",O0012963,2
+96077,WIM0056468,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) TEE, CS A234-WPB-SMLS  BE B16.9 MR0103 (I49344366) ",O0012964,2
+96078,WIM0056469,"Size: 3/4"" (Size: 20mm) TEE, CS A105 SWE B16.11 CL3000 (I5840590)",O0012965,2
+96079,WIM0056470,"Size: 1"" (Size: 25mm) TEE, CS A105 SWE B16.11 CL3000 (I5840591) ",O0012966,2
+96080,WIM0056471,"Size: 1 1/2"" (Size: 40mm) TEE, CS A105 SWE B16.11 CL3000 (I5840593)",O0012967,2
+96081,WIM0056472,"Size: 1/2"" (Size: 15mm) TEE, CS A105 SWE B16.11 CL6000 (I5840595) ",O0012968,2
+96082,WIM0056473,"Size: 1/2"" (Size: 15mm) TEE, CS A105 SWE B16.11 CL3000 (I5881874) ",O0012969,2
+96083,WIM0056474,"Size: 1"" (Size: 25mm) TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5932357) ",O0012970,2
+96084,WIM0056475,"Size: 1 1/2"" (Size: 40mm) TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5932359) ",O0012971,2
+96085,WIM0056476,"Size: 2"" (Size: 50mm) TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (I5932360)",O0012972,2
+96086,WIM0056477,"Size: 1/2"" (Size: 15mm) TEE, SS A182-F304L SWE B16.11 CL3000 (I6145400) ",O0012973,2
+96087,WIM0056478,"Size: 3/4"" (Size: 20mm) TEE, SS A182-F304L SWE B16.11 CL3000 (I6145401) ",O0012974,2
+96088,WIM0056479,"Size: 1 1/2"" (Size: 40mm) TEE, SS A182-F304L SWE B16.11 CL3000 (I6145404)",O0012975,2
+96089,WIM0056480,"Size: 3/4"" S-XS (Size:20mm Thk: 3.91mm) TEE, AS A234-WP9-SMLS CL.1  BE B16.9 H2 SERV. (I63424279)",O0012976,2
+96090,WIM0056481,"Size: 1 1/2"" S-XS (Size:40mm Thk: 5.08mm) TEE, AS A234-WP9-SMLS CL.1  BE B16.9 H2 SERV. (I63424316)",O0012977,2
+96091,WIM0056482,"Size: 2"" S-STD (Size:50mm Thk: 3.91mm) TEE, AS A234-WP9-SMLS CL.1  BE B16.9 H2 SERV. (I63424498)",O0012978,2
+96092,WIM0056483,"Size: 1"" (Size: 25mm) TEE, CS A105 SWE B16.11 CL6000 H2 SERV. MR0103 (I63555791)",O0012979,2
+96093,WIM0056484,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. MR0103 (I63562883)",O0012980,2
+96094,WIM0056485,"Size: 3/4"" (Size: 20mm) TEE, CS A105 SWE B16.11 CL6000 (I6367822)",O0012981,2
+96095,WIM0056486,"EQUAL TEE - SW - 3000 LB - A105_H2 SERV - 3/4"" (I63953442)",O0012982,2
+96096,WIM0056487,"Size: 1"" (Size: 25mm) TEE, CS A105 SWE B16.11 CL3000 H2 SERV. (I63953443)",O0012983,2
+96097,WIM0056488,"Size: 2"" S-STD (Size:50mm Thk: 3.91mm) TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I63960048)",O0012984,2
+96098,WIM0056489,"Size: 3"" S-STD (Size:80mm Thk: 5.49mm) TEE, CS A234-WPB-SMLS  BE B16.9 H2 SERV. (I63960086)",O0012985,2
+96099,WIM0056490,"Size: 1"" (Size: 25mm) TEE, CS A105 SWE B16.11 CL6000 H2 SERV. (I64078291)",O0012986,2
+96100,WIM0056491,"Size: 1"" S-MFR (Size:25mm Thk: 2.3mm) TEE, RTRP GLASS FIBER REINFORCED POLYESTER MFR-STD BSJ END  12 BAR (I64158181)",O0012987,2
+96101,WIM0056492,"Size: 3/4"" (Size: 20mm) TEE, SS A182-F316L SWE B16.11 CL3000 H2 SERV. (I64175965)",O0012988,2
+96102,WIM0056493,"Size: 1"" (Size: 25mm) TEE, SS A182-F316L SWE B16.11 CL3000 H2 SERV. (I64175966)",O0012989,2
+96103,WIM0056494,"Size: 1 1/2"" (Size: 40mm) TEE, SS A182-F316L SWE B16.11 CL3000 H2 SERV. (I64175968)",O0012990,2
+96104,WIM0056495,"Size: 4"" S-120 (Size:100mm Thk: 11.13mm) TEE, SS A403-WP316L-S  BE B16.9 H2 SERV. (I64178116)",O0012991,2
+96105,WIM0056496,"Size: 3/4"" (Size: 20mm) TEE, SS A182-F321H SWE B16.11 CL3000 (I64438014)",O0012992,2
+96106,WIM0056497,"Size: 1/2"" S-XS (Size:15mm Thk: 3.73mm) TEE, AS A234-WP9-SMLS CL.1  BE B16.9 H2 SERV. (I64729801)",O0012993,2
+96107,WIM0056498,"Size: 1/2"" (Size: 15mm) TEE, CS A105 SWE B16.11 CL3000 H2 SERV. (I64743613)",O0012994,2
+96108,WIM0056499,"Size: 1"" (Size: 25mm) TEE, CS A105 SWE B16.11 CL6000 (I6568780) ",O0012995,2
+96109,WIM0056500,"Size: 1 1/2"" (Size: 40mm) TEE, CS A105 SWE B16.11 CL6000 (I6568782)",O0012996,2
+96110,WIM0056501,"Size: 2"" S-MFR (Size:50mm Thk: 2.3mm) TEE, RTRP GLASS FIBER REINFORCED VINYLESTER MFR-STD BSJ END  10 BAR (I77303912)",O0012997,2
+96111,WIM0056502,"Size: 2"" S-10S (Size:50mm Thk: 2.77mm) TEE, SS A403-WP304L-S  BE B16.9 H2 SERV. (I77536965)",O0012998,2
+96112,WIM0056503,"Size: 2"" S-160 (Size:50mm Thk: 8.74mm) TEE, SS A403-WP316L-S  BE B16.9 H2 SERV. (I77974475)",O0012999,2
+96113,WIM0056504,TEE A403WP316L-S H2 SERV S-10S (I78202969),O0013000,2
+96114,WIM0056505,"Size: 3"" S-10S (Size:80mm Thk: 3.05mm) TEE, SS A403-WP316L-S  BE B16.9 H2 SERV. (I78202982)",O0013001,2
+96115,WIM0056506,"Size: 3/4"" (Size: 20mm) TEE, LTCS A350-LF2 CL.1 SWE B16.11 CL3000 (I9862728)",O0013002,2
+96116,WIM0056507,"Size: 1"" (Size: 25mm) TEE, LTCS A350-LF2 CL.1 SWE B16.11 CL3000 (I9862732) ",O0013003,2
+96117,WIM0056508,"Size:1.375"" x 320mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264361)",O0013004,2
+96118,WIM0056509,"Size:1.25"" x 275mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264219)  ",O0013005,2
+96119,WIM0056510,"Size:1.375"" x 345mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264366)  ",O0013006,2
+96120,WIM0056511,"Size:1.125"" x 195mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264065)  ",O0013007,2
+96121,WIM0056512,"Size:.875"" x 155mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263803)  ",O0013008,2
+96122,WIM0056513,"Size:.5"" x 70mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263628)",O0013009,2
+96123,WIM0056514,"Size:.5"" x 115mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170099)",O0013010,2
+96124,WIM0056515,"Size:1.125"" x 230mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869897)",O0013011,2
+96125,WIM0056516,"Size:.5"" x 80mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 O2 SERV. (I63501369)",O0013012,2
+96126,WIM0056517,"Size:.75"" x 125mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS SA193 GR B7 W/SA194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I63991564)",O0013013,2
+96127,WIM0056518,"Size:1.25"" x 500mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170764)",O0013014,2
+96128,WIM0056519,"Size:1.25"" x 345mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264233)  ",O0013015,2
+96129,WIM0056520,"Size:.5"" x 75mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263629)",O0013016,2
+96130,WIM0056521,"Size:.75"" x 100mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263696)",O0013017,2
+96131,WIM0056522,"Size:1"" x 190mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263932)",O0013018,2
+96132,WIM0056523,"Size:.875"" x 135mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170298)",O0013019,2
+96133,WIM0056524,"Size:.625"" x 155mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170143)",O0013020,2
+96134,WIM0056525,"Size:1.125"" x 210mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264068)",O0013021,2
+96135,WIM0056526,"Size:.875"" x 150mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170301)",O0013022,2
+96136,WIM0056527,"Size:.75"" x 125mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869525)  ",O0013023,2
+96137,WIM0056528,"Size:.875"" x 220mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263816)  ",O0013024,2
+96138,WIM0056529,"Size:1"" x 265mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263947)  ",O0013025,2
+96139,WIM0056530,"Size:.75"" x 105mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263697)",O0013026,2
+96140,WIM0056531,"Size:.75"" x 245mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263725)",O0013027,2
+96141,WIM0056532,"Size:.5"" x 65mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263627)  ",O0013028,2
+96142,WIM0056533,"Size:.625"" x 80mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435503)  ",O0013029,2
+96143,WIM0056534,"Size:.75"" x 210mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435529)",O0013030,2
+96144,WIM0056535,"Size:.875"" x 160mm BOLT/NUTS, STUD BOLT W/H HEX NUT NA B408 N08811 W/B564 N08811  B18.2.1/B18.2.2 (I64778405)",O0013031,2
+96145,WIM0056536,"Size:.75"" x 250mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170225)",O0013032,2
+96146,WIM0056537,"Size:.75"" x 270mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170229)",O0013033,2
+96147,WIM0056538,"Size:1"" x 165mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170427)",O0013034,2
+96148,WIM0056539,"Size:1"" x 235mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170441)",O0013035,2
+96149,WIM0056540,"Size:1"" x 260mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170446)",O0013036,2
+96150,WIM0056541,"Size:1"" x 415mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170477)",O0013037,2
+96151,WIM0056542,"Size:.75"" x 190mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263714)",O0013038,2
+96152,WIM0056543,"Size:.75"" x 200mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263716)",O0013039,2
+96153,WIM0056544,"Size:.5"" x 70mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170126)",O0013040,2
+96154,WIM0056545,"Size:.625"" x 170mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170146)",O0013041,2
+96155,WIM0056546,"Size:.625"" x 190mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170150)",O0013042,2
+96156,WIM0056547,"Size:.625"" x 195mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170151)",O0013043,2
+96157,WIM0056548,"Size:.625"" x 200mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170152)",O0013044,2
+96158,WIM0056549,"Size:.75"" x 125mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170200)",O0013045,2
+96159,WIM0056550,"Size:.75"" x 130mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170201)",O0013046,2
+96160,WIM0056551,"Size:1.25"" x 275mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63436031)",O0013047,2
+96161,WIM0056552,"Size:.625"" x 90mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869518)",O0013048,2
+96162,WIM0056553,"Size:.75"" x 135mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869527)",O0013049,2
+96163,WIM0056554,"Size:.75"" x 115mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS SA193 GR B7 W/SA194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I63991562)",O0013050,2
+96164,WIM0056555,"Size:.75"" x 120mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS SA193 GR B7 W/SA194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I63991563)",O0013051,2
+96165,WIM0056556,"Size:1.375"" x 360mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS SA193 GR B7 W/SA194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I63992233)",O0013052,2
+96166,WIM0056557,"Size:.625"" x 115mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37132787)",O0013053,2
+96167,WIM0056558,"Size:.875"" x 65mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263903)",O0013054,2
+96168,WIM0056559,"Size:1.125"" x 180mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264062)",O0013055,2
+96169,WIM0056560,"Size:1.5"" x 385mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264513)",O0013056,2
+96170,WIM0056561,"Size:.625"" x 80mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37132842)",O0013057,2
+96171,WIM0056562,"Size:.875"" x 150mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37132946)",O0013058,2
+96172,WIM0056563,"Size:1"" x 170mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37133070)",O0013059,2
+96173,WIM0056564,"Size:.5"" x 130mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263604)",O0013060,2
+96174,WIM0056565,"Size:.625"" x 145mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263643)",O0013061,2
+96175,WIM0056566,"Size:1"" x 255mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263945)",O0013062,2
+96176,WIM0056567,"Size:.625"" x 105mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170133)",O0013063,2
+96177,WIM0056568,"Size:.5"" x 65mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170125)",O0013064,2
+96178,WIM0056569,"Size:.5"" x 165mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170109)",O0013065,2
+96179,WIM0056570,"Size:.5"" x 100mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170096)",O0013066,2
+96180,WIM0056571,"Size:1.375"" x 290mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 O2 SERV. (I63502096)",O0013067,2
+96181,WIM0056572,"Size:1.25"" x 275mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37133357) ",O0013068,2
+96182,WIM0056573,"Size:1.5"" x 290mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37133631)  ",O0013069,2
+96183,WIM0056574,"Size:.5"" x 95mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170131)",O0013070,2
+96184,WIM0056575,"Size:1"" x 295mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170453)",O0013071,2
+96185,WIM0056576,"Size:.875"" x 185mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170308)",O0013072,2
+96186,WIM0056577,"Size:.875"" x 215mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170314)",O0013073,2
+96187,WIM0056578,"Size:.5"" x 70mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435438)",O0013074,2
+96188,WIM0056579,"Size:.625"" x 180mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170148)",O0013075,2
+96189,WIM0056580,"Size:.5"" x 80mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435440)",O0013076,2
+96190,WIM0056581,"Size:.75"" x 100mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435507)",O0013077,2
+96191,WIM0056582,"Size:.875"" x 170mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435617)",O0013078,2
+96192,WIM0056583,"Size:1"" x 205mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435747)",O0013079,2
+96193,WIM0056584,"Size:1.125"" x 230mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435884)",O0013080,2
+96194,WIM0056585,"Size:.75"" x 130mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS SA193 GR B7 W/SA194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I63991565)",O0013081,2
+96195,WIM0056586,"Size:.875"" x 200mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS SA193 GR B7 W/SA194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I63991675)",O0013082,2
+96196,WIM0056587,"Size:.875"" x 285mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263829)",O0013083,2
+96197,WIM0056588,"Size:.875"" x 290mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263830)",O0013084,2
+96198,WIM0056589,"Size:1"" x 260mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263946)",O0013085,2
+96199,WIM0056590,"Size:1.125"" x 265mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264079)",O0013086,2
+96200,WIM0056591,"Size:1.25"" x 190mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264202)",O0013087,2
+96201,WIM0056592,"Size:.5"" x 115mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263601)",O0013088,2
+96202,WIM0056593,"Size:.625"" x 75mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263691)",O0013089,2
+96203,WIM0056594,"Size:.875"" x 205mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263813)",O0013090,2
+96204,WIM0056595,"Size:1"" x 100mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I82773392)",O0013091,2
+96205,WIM0056596,"Size:.625"" x 275mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263669)",O0013092,2
+96206,WIM0056597,"Size:.625"" x 80mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869516)",O0013093,2
+96207,WIM0056598,"Size:.75"" x 95mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170289)",O0013094,2
+96208,WIM0056599,"Size:.75"" x 205mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263717)",O0013095,2
+96209,WIM0056600,"Size:.75"" x 215mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263719)",O0013096,2
+96210,WIM0056601,"  M-BOLT M20X80, WITH 2 HEX.NUT & WASHER / ASTM A325 (FULL THREAD) (I38664506)",O0013097,2
+96211,WIM0056602,"Size:1"" x 170mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869753)",O0013098,2
+96212,WIM0056603,"Size:1.25"" x 255mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37133353)",O0013099,2
+96213,WIM0056604,"Size:.75"" x 130mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263702)",O0013100,2
+96214,WIM0056605,"Size:.625"" x 100mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170132)",O0013101,2
+96215,WIM0056606,STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLOURO CARBON COATED B18.2.1/B18.2.2 (I64170315),O0013102,2
+96216,WIM0056607,"Size:.625"" x 85mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435504)",O0013103,2
+96217,WIM0056608,"Size:1.375"" x 325mm BOLT/NUTS, STUD BOLT W/H HEX NUT SS A193 GR B8M CL.2 W/A194 GR 8M  B18.2.1/B18.2.2 (I37133499)  ",O0013104,2
+96218,WIM0056609,"Size:U2-1/2"" X 560mmSTUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLOURO CARBON COATED B18.2.1/B18.2.2 (I49431808)",O0013105,2
+96219,WIM0056610,"Size:1.625"" x 440mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I69305372)  ",O0013106,2
+96220,WIM0056611,"Size:1.25"" x 305mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63436037)  ",O0013107,2
+96221,WIM0056612,"Size:1.5"" x 320mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS SA193 GR B7 W/SA194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I63992364)  ",O0013108,2
+96222,WIM0056613,"Size:5/8"" x 85mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263693)  ",O0013109,2
+96223,WIM0056614,"Size:.75"" x 115mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435510)  ",O0013110,2
+96224,WIM0056615,"Size:1.125"" x 200mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264066)  ",O0013111,2
+96225,WIM0056616,"Size:1.125"" x 205mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264067)  ",O0013112,2
+96226,WIM0056617,"Size:.875"" x 140mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263800)  ",O0013113,2
+96227,WIM0056618,"  A-19 4"", STAINLESS STEEL 2-BOLT PIPE CLAMP, SEE HEC SUP'T STD A-19 (I38666188)",O0013114,2
+96228,WIM0056619,"Size:.75"" x 150mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263706)",O0013115,2
+96229,WIM0056620,"Size:.875"" x 155mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435614)",O0013116,2
+96230,WIM0056621,"Size:.625"" x 140mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170140)",O0013117,2
+96231,WIM0056622,"Size:1.5"" x 430mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264522)",O0013118,2
+96232,WIM0056623,"Size:1.125"" x 195mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869890)",O0013119,2
+96233,WIM0056624,"Size:.875"" x 150mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263802)  ",O0013120,2
+96234,WIM0056625,"Size:.625"" x 100mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263634)  ",O0013121,2
+96235,WIM0056626,"Size:.75"" x 160mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263708)  ",O0013122,2
+96236,WIM0056627,"Size:1.875"" x 400mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264924)  ",O0013123,2
+96237,WIM0056628,"Size:1"" x 145mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263923)  ",O0013124,2
+96238,WIM0056629,"Size:.875"" x 80mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263911)",O0013125,2
+96239,WIM0056630,"Size:1.125"" x 240mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264074)  ",O0013126,2
+96240,WIM0056631,"Size:.625"" x 290mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263672)",O0013127,2
+96241,WIM0056632,"Size:1.375"" x 315mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264360)",O0013128,2
+96242,WIM0056633,"Size:1.25"" x 250mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264214)  ",O0013129,2
+96243,WIM0056634,"Size:1.25"" x 270mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264218)  ",O0013130,2
+96244,WIM0056635,"Size:1.375"" x 280mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264353)  ",O0013131,2
+96245,WIM0056636,"Size:.625"" x 120mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435448)  ",O0013132,2
+96246,WIM0056637,"Size:.75"" x 130mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435513)  ",O0013133,2
+96247,WIM0056638,"Size:1.125"" x 210mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435880)  ",O0013134,2
+96248,WIM0056639,"Size:1.125"" x 255mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435889)  ",O0013135,2
+96249,WIM0056640,"Size:1.5"" x 315mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63436311)  ",O0013136,2
+96250,WIM0056641,"Size:.75"" x 120mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869524)  ",O0013137,2
+96251,WIM0056642,"Size:1.125"" x 225mm BOLT/NUTS, STUD BOLT W/H HEX NUT LTCS A320 GR L7 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63869896)  ",O0013138,2
+96252,WIM0056643,"Size:1.75"" x 415mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49264792)  ",O0013139,2
+96253,WIM0056644,"Size:1"" x 210mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I49263936)  ",O0013140,2
+96254,WIM0056645,"Size:1.5"" x 315mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 O2 SERV. (I63502240) ",O0013141,2
+96255,WIM0056646,"Size:1.125"" x 425mm BOLT/NUTS, STUD BOLT W/H HEX NUT W/PL WSHR AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 (I64170611)",O0013142,2
+96256,WIM0056647,"Size:.625"" x 140mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B16 W/A194 GR 7 FLUORO CARBON COATED B18.2.1/B18.2.2 (I63435452)  ",O0013143,2
+96257,WIM0056648,"Size:.75"" x 135mm BOLT/NUTS, STUD BOLT W/H HEX NUT AS A193 GR B7 W/A194 GR 2H FLUORO CARBON COATED B18.2.1/B18.2.2 O2 SERV. (I63501443)",O0013144,2
+96258,WIM0056649,Item code ISL19608760024. Термостат - TG A.R./TR-CU-EAC- 0A-300A-C/SET 35AC. 21TE000033,O0009587,2
+96259,WIM0056650,Item code ISL19608760025. Термостат - TG M.R./TR-CU-EAC- 120A-300A-C/SET 120AC. 21TE000034,O0009588,2
+96263,WIM0056651,Interior of an aircraft warning light,O0012845,8
+96265,Serv_0000323,"Техническая ревизия, профилактическое обслуживание газорегуляторного пункта, установленного на территории, прилегающей к Ташкентскому офису.",,26
+96267,WIM0056652,Аккумуляторные батареи 150 Ah,,2
+96268,WIM0056653,Порошок стиральный(пачка 10 kg),O0013360,2
+96269,WIM0056654,Cable 500V Tin CU/MGT-XLPE/OS/LSZH/LSZH 1.5SQ X 2P / Кабель 500 В Tin CU/MGT-XLPE/OS/LSZH/LSZH 1.5SQ X 2P - U00-T3A-2P-1.5-005 - 1640mm x 90mm x 1640mm,O0013364,12
+96270,WIM0056655,"KOBELCO Электроды LB-52U ф3,2мм",O0013361,17
+96271,WIM0056656,"KOBELCO Электроды LB-52U ф2,6мм",O0013362,17
+96272,WIM0056657,"KOBELCO Электроды LB-52U ф4,0мм",O0013363,17
+96273, ,"Техническая ревизия, профилактическое обслуживание газорегуляторного пункта, установленного на территории, прилегающей к Ташкентскому офису.",,2
+96274,Serv_0000324,"""O'zMMI"" DM va ""SHGKM"" MCHJ da qiyoslash imkoni bo'lmagan o'lchash vositalarini tanlov asosida boshqa akkreditlangan laboratoriyalarda qiyoslashga shartnoma tuzish to'g'risida",,2

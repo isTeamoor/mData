@@ -37,19 +37,6 @@ spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit
 spares.loc [ (spares['Account Code']=='100000000012') & (spares['Reserved By']=="To'lqin Berdiyev Omonovich"), 'Short Department Name'] = '4AP'
 
 
-
-#### Exception due to my mistake
-spares.loc[ (spares['Work Order Number'].isin([82863,82299,81549,81548])) 
-           & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'closedYear' ] = 2024
-spares.loc[ (spares['Work Order Number'].isin([82863,82299,81549,81548])) 
-           & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'closedMonth' ] = 1
-
-spares.loc[ (spares['Work Order Number'].isin([65047, 65049])) 
-           & (spares['Work Order Spare Description']=='Цилиндр теплоизоляционный ТЕХНО 120 1200х60,3х40мм'), 'closedYear' ] = 2024
-spares.loc[ (spares['Work Order Number'].isin([65047, 65049]))  
-           & (spares['Work Order Spare Description']=='Цилиндр теплоизоляционный ТЕХНО 120 1200х60,3х40мм'), 'closedMonth' ] = 1
-
-
 ### Exception 
 spares.loc[ (spares['Work Order Number']==85413) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.933
 spares.loc[ (spares['Work Order Number']==84124) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 1.866

@@ -8,17 +8,18 @@ from . import exceptions, reference
 
 
 def matReport(repMonth, repYear, department, transactions):
-
+  
   ### 1. Подготовка DF Transactions
   transactions = exceptions.corrections(transactions)
   
   transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
                                   & (~transactions['Reservation Number'].isin(exceptions.inactive_Reservations))
                                   ].copy()
-
+  
   transactions = filterDF(transactions, reference.department_Filters[department])
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
+  
 
 
   
@@ -188,10 +189,20 @@ def matReport(repMonth, repYear, department, transactions):
   matRep = rep.groupby(['Код товара','Account','Материал','Ед.изм.','Цена']).sum()
   matRep.reset_index(drop=False, inplace=True)
   matRep = matRep[['Account','Код товара','Материал','Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход','Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец',]]
-  ####################################################################Exception due to difference in price of Argon set by 1c
-  if department == 'cofe':
-    matRep.loc[matRep['Код товара']=='11062', 'Сумма начало'] = 1792410.71
-    matRep.loc[matRep['Код товара']=='11062', 'Сумма приход'] = 4047767.86
+  
+  #############Exception due to additional costs set by 1c
+  if department == 'rmpd':
+    matRep.loc[matRep['Код товара']=='12207', 'Сумма начало'] = 1868409.06
+    matRep.loc[matRep['Код товара']=='12207', 'Сумма приход'] = 2839603.92
+
+    matRep.loc[matRep['Код товара']=='12208', 'Сумма начало'] = 1868409.06
+    matRep.loc[matRep['Код товара']=='12208', 'Сумма приход'] = 2839603.92
+
+    matRep.loc[matRep['Код товара']=='12209', 'Сумма начало'] = 1868409.06
+    matRep.loc[matRep['Код товара']=='12209', 'Сумма приход'] = 2839603.92
+
+    matRep.loc[matRep['Код товара']=='12210', 'Сумма начало'] = 1868409.06
+    matRep.loc[matRep['Код товара']=='12210', 'Сумма приход'] = 2839603.92
   ####################################################################
 
   ### Cуммирующие строки
@@ -235,11 +246,13 @@ def matReport(repMonth, repYear, department, transactions):
 
 
   ### 14. Представление списание для е-doc
-  view_wOff = dalolat.copy()
-  view_wOff.reset_index(drop=False, inplace=True)
-  view_wOff = view_wOff.loc [ view_wOff['Кол-во расход'] !=0 ] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]   
-  view_wOff_SGU = view_wOff.loc [ view_wOff['Объект'].isin(unitChildren()) ]
-  view_wOff_notSGU = view_wOff.loc [ ~view_wOff['Объект'].isin(unitChildren()) ]
+  raw_wOff = dalolat.copy()
+  raw_wOff.reset_index(drop=False, inplace=True)
+  view_wOff_notSGU = raw_wOff.loc[raw_wOff['Отдел']!='4AP'].copy()
+  view_wOff_SGU = raw_wOff.loc[raw_wOff['Отдел']=='4AP'].copy()
+  view_wOff_notSGU = view_wOff_notSGU.loc [ view_wOff_notSGU['Кол-во расход'] !=0 ] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]   
+  view_wOff_SGU = view_wOff_SGU.loc [ view_wOff_SGU['Кол-во расход'] !=0 ] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]  
+
 
   view_wOff_SGU_G = view_wOff_SGU.copy()
   view_wOff_notSGU_G = view_wOff_notSGU.copy()

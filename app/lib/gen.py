@@ -21,11 +21,15 @@ def filterDF(df,  filters = 'all' ):
     return df.query(conditionString(filters))
 
 
-name = "Mansur Xasanov Tulqin o'g'li"
 filters = {
     'maintenance':[
         {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
     ],
-    
+    'CofE_trades':[
+        {"field":'Trade Code Description', "operator":"in", "value":"['WELDER','INSULATE','Scaffolder','PIPING JUNIOR','Metrology Engineer','HVAC ENG','JET TECH','SUPV PSV','Fire and Gas engineer','WELD ENG','Field instrumentation Junior technician','Valve technician','Workshop machinist junior','F&G Supervisor','HVAC Supervisor','Piping Engineer','Work Shop machinist']"},
+    ], 
+    'CofE_spares':[
+        {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
+    ], 
 }
 

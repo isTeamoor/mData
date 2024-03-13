@@ -2,9 +2,12 @@ import xlsxwriter
 import re
 import pandas as pd
 from . import hub
-from ..gen import filterDF
+from ..gen import filterDF, filters
 from ...database.DF__wo import wo
 from ...database.DF__spares import spares
+from ...database.DF__trades import trades
+from ...database.DF__budget import budget_cofe, months
+
 
 
 def oneLine(workbook, sheetName, sectionName, seriesName, index = 1 ):
@@ -85,7 +88,67 @@ def rooted(workbook, sheetName, sectionName, seriesName, header):
 
 
 def writeExcel():
-    workbook = xlsxwriter.Workbook('СС report for D.xlsx')
+    ### KPI report CofE
+    workbook = xlsxwriter.Workbook('CofE.xlsx')
+    categorized(workbook, 'ByStatus', 'WO_raised_number_by_Status', 'ByStatus')
+    oneLine(workbook, 'ByStatus', 'WO_raised_number_total', 'raised', 8)
+
+    categorized(workbook, 'ByStatus ByJobTypes', 'WO_raised_number_by_JobTypes', 'Raised ByJobTypes')
+    categorized(workbook, 'ByStatus ByJobTypes', 'WO_closed_number_by_JobTypes', 'Closed ByJobTypes', 20)
+    categorized(workbook, 'ByStatus ByPriority', 'WO_raised_number_by_Priority', 'Raised ByPriority')
+    categorized(workbook, 'ByStatus ByPriority', 'WO_closed_number_by_Priority', 'Closed ByPriority', 12)
+
+    categorized(workbook, 'Used Trades', 'Trades_used', 'Used Labour Resources')
+
+    oneLine(workbook, 'S-curve', 'Planed_cost_CofE', 'budget')
+    oneLine(workbook, 'S-curve', 'Actual_cost_material_CofE', 'material cost', 2)
+    oneLine(workbook, 'S-curve', 'Actual_cost_labour_CofE', 'labour cost',3)
+
+    cofe_matCost = filterDF(spares, filters['CofE_spares'])
+    cofe_labCost = filterDF(trades, filters['CofE_trades'])
+    cofe_matCost = cofe_matCost.loc[ cofe_matCost['reservYear'] == 2023, ['Account Code', 'Account Code Description', 'Actual Cost', 'reservMonth'] ]
+    cofe_labCost = cofe_labCost.loc[ cofe_labCost['raisedYear'] == 2023, ['Account Code', 'Account Code Description', 'Actual Cost', 'raisedMonth'] ]
+
+    cofe_matCost_12 = cofe_matCost.loc[ cofe_matCost['reservMonth'] == 12].groupby(['Account Code', 'Account Code Description']).sum().copy()
+    cofe_labCost_12 = cofe_labCost.loc[ cofe_labCost['raisedMonth'] == 12].groupby(['Account Code', 'Account Code Description']).sum().copy()
+    cofe_matCost_12.reset_index(drop=False, inplace=True)
+    cofe_labCost_12.reset_index(drop=False, inplace=True)
+    cofe_matCost_12.rename(columns={'Actual Cost':'December Material Cost'}, inplace=True)
+    cofe_labCost_12.rename(columns={'Actual Cost':'December Labour Cost'}, inplace=True)
+    cofe_matCost_12 = cofe_matCost_12 [['Account Code Description','Account Code', 'December Material Cost']]
+    cofe_labCost_12 = cofe_labCost_12 [['Account Code Description','Account Code', 'December Labour Cost']]
+
+    cofe_matCost = cofe_matCost.loc[ cofe_matCost['reservMonth'] <= 12].groupby(['Account Code', 'Account Code Description']).sum()
+    cofe_labCost = cofe_labCost.loc[ cofe_labCost['raisedMonth'] <= 12].groupby(['Account Code', 'Account Code Description']).sum()
+    cofe_matCost.reset_index(drop=False, inplace=True)
+    cofe_labCost.reset_index(drop=False, inplace=True)
+    cofe_matCost.rename(columns={'Actual Cost':'Total Material Cost'}, inplace=True)
+    cofe_labCost.rename(columns={'Actual Cost':'Total Labour Cost'}, inplace=True)
+    cofe_matCost = cofe_matCost [['Account Code Description','Account Code', 'Total Material Cost']]
+    cofe_labCost = cofe_labCost [['Account Code Description','Account Code', 'Total Labour Cost']]
+    
+    
+    
+    budgetTable_cofe = budget_cofe.loc[budget_cofe['Account Code Description']!='Total'].merge(cofe_matCost, how = 'outer', on = ['Account Code', 'Account Code Description'])
+    budgetTable_cofe = budgetTable_cofe.merge(cofe_matCost_12, how = 'outer', on = ['Account Code', 'Account Code Description'])
+    budgetTable_cofe = budgetTable_cofe.merge(cofe_labCost, how = 'outer', on = ['Account Code', 'Account Code Description'])
+    budgetTable_cofe = budgetTable_cofe.merge(cofe_labCost_12, how = 'outer', on = ['Account Code', 'Account Code Description'])
+    budgetTable_cofe.fillna(0, inplace=True)
+    budgetTable_cofe['Dec Cumulative budget'] = budgetTable_cofe.apply(lambda x: sum([x[i] for i in months ]), axis=1)
+    budgetTable_cofe['December Сost'] = budgetTable_cofe['December Labour Cost'] + budgetTable_cofe['December Material Cost']
+    budgetTable_cofe['Total Сost'] = budgetTable_cofe['Total Labour Cost'] + budgetTable_cofe['Total Material Cost']
+    budgetTable_cofe['Remaining budget'] = budgetTable_cofe['Summary'] - budgetTable_cofe['Total Сost']
+    budgetTable_cofe = budgetTable_cofe[['Account Code','Account Code Description','Summary','Remaining budget','Dec Cumulative budget','Total Сost','Total Material Cost','Total Labour Cost', 'Dec','December Сost','December Material Cost','December Labour Cost']]
+    budgetTable_cofe.loc[len(budgetTable_cofe)] = budgetTable_cofe.sum(numeric_only=True)
+    budgetTable_cofe.loc[len(budgetTable_cofe)-1, 'Account Code Description'] = 'Total'
+    budgetTable_cofe.to_excel('budgetCofe.xlsx')
+    workbook.close()
+
+
+
+
+    ### Annual report for D
+    '''workbook = xlsxwriter.Workbook('СС report for D.xlsx')
     oneLine(workbook, 'Overall Cost', 'materialCost_total', 'Mat.cost "by reservDate"')
     categorized(workbook, 'By Priority', 'materialCost_total_by_Priority', '$ Priority')
     categorized(workbook, 'By Priority', 'WO_raised_number_by_Priority', 'WO Priority', 11)
@@ -182,5 +245,4 @@ def writeExcel():
 
     modDF.to_excel('matCost by assets.xlsx')
     eqpt.loc[~eqpt.index.isin(usedTags)].to_excel('unusedEqptTags.xlsx')
-
-
+    '''

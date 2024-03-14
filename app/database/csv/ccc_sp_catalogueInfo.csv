@@ -1042,6 +1042,10 @@
 96262,,WIM0043569,,2
 96264,,WIM0043569,,2
 96266,0055845,0055845,,2
+96275,tyt,tyt,,2
+96276,,LRB mat 40,,2
+96277,0053779,0053779,,2
+96468,7189,7189,,2
 6666,WIM0000001,120-PC-003A/B/ TSP 4X2-9/ Mechanical SEAL,3284,8
 6667,WIM0000002,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 21,76/Ea",2179,2
 6668,WIM0000003,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 36,26/Ea",2180,2
@@ -14299,7 +14303,7 @@
 92404,WIM0053306,Complete mechanical seal with Duplex 2205 internals and with F port modification for 130-PC-032A/B,,2
 92405,WIM0053307,Diaphragm (FKM Seal) of Everlasting valves,,2
 92406,WIM0053308,Кофе в зернах,,19
-92407,WIM0053309,Сахар,,17
+92407,WIM0053309,Сахар белый свекловичный в твердом состоянии без вкусоароматических или красящих добавок,O0013481,17
 92408,Serv_0000226,"Uzbekistan GTL MCHJ, Chinoz terminal , Admin building and Campus  HVAC systems technical service for 2023 and 2024 year",,2
 92409,WIM0053310,"Цилиндр теплоизоляционный ТЕХНО 120 1200х88,9х50мм",O0009374,12
 92410,WIM0053311,Автошина 385/65-R22.5 ATR65,O0009856,2
@@ -17856,3 +17860,204 @@
 96272,WIM0056657,"KOBELCO Электроды LB-52U ф4,0мм",O0013363,17
 96273, ,"Техническая ревизия, профилактическое обслуживание газорегуляторного пункта, установленного на территории, прилегающей к Ташкентскому офису.",,2
 96274,Serv_0000324,"""O'zMMI"" DM va ""SHGKM"" MCHJ da qiyoslash imkoni bo'lmagan o'lchash vositalarini tanlov asosida boshqa akkreditlangan laboratoriyalarda qiyoslashga shartnoma tuzish to'g'risida",,2
+96278,Serv_0000325,Халқаро стандартларни E-FOND орқали сотиб олиш,,2
+96279,Serv_0000326,"Халқаро стандартларни четдан сотиб олиб, таржима қилиш",,2
+96280,Serv_0000327,"ASTM (American Society for Testing Materials) нинг 5 бўлимида келтирилган стандартларни сотиб олиш, ва таржима қилиш",,2
+96281,WIM0056658,"C/SWAGE - PBE - XS - XS - A234-WPB - 1"" - 1/2"" (MB-5950-0009)",O0012862,2
+96282,WIM0056659,"C/SWAGE - BLE-PSE - STD - S160 - A234-WPB - 3"" - 1/2"" (MB-5950-0012)",O0012863,2
+96283,WIM0056660,"Size: 3/4"" (Size: 20mm) TEE, CS A105 FTE B16.11 CL3000 HOT DIP GALV. (MB-5950-0250)",O0012864,2
+96284,WIM0056661,"Rake Blade/Rubber / Наклонная лопасть, резина - 176-XX-008 (t12 x 100 x 1000L)",O0013521,2
+96285,WIM0056662,"V-Belt (SPZ 1412) / V-образный ремень (SPZ 1412) - 176-XP-005,176-XP-007 (10x1412Ld)",O0013522,2
+96286,WIM0056663,"Wear Plate (D202~D212) / Износостойкая пластина (D202~D212) - 176-XP-005,176-XP-007 (240x98x5)",O0013523,2
+96287,WIM0056664,"Main Bearing Oil Seal (105 x 130 x 12 TC) / Масляное уплотнение основного подшипника (105 x 130 x 12 TC) - 176-XP-005,176-XP-007 (105 x 130 x 12 TC)",O0013524,2
+96288,WIM0056665,"Blower Bearing(#5208) / Подшипник воздуходува (#5208) - 176-XP-013-CB-01A/B,176-XP-013-CB-02A/B (OD:80 ID:40 Thicknees :30mm)",O0013525,2
+96289,WIM0056666,"Blower Bearing(NU208) / Подшипник воздуходува (NU208) - 176-XP-013-CB-01A/B,176-XP-013-CB-02A/B (OD:80 ID:40 Thicknees:15mm)",O0013526,2
+96290,WIM0056667,"Motor Bearing(6208ZZ) / Подшипник двигателя (6208ZZ) - 176-XP-013-CB-01A/B,176-XP-013-CB-02A/B (OD:80 ID:40 Thicknees:18mm)",O0013527,2
+96291,WIM0056668,Casing Gasket for Centrifugal Pump / Прокладка обшивки для центробежного насоса - 176-XP-002-PC-01AB (Ø258.5(I.D) X Ø275(O.D)X1t),O0013528,2
+96292,WIM0056669,"Casing Gasket for Centrifugal Pump / Прокладка обшивки для центробежного насоса - 177-XP-005-PC-01AB,177-XP-005-PC-02AB (Ø214(I.D) X Ø230(O.D)X1t)",O0013529,2
+96293,WIM0056670,Coupling Repair Kit for Centrifugal Pump / Комплект для ремонта муфты центробежного насоса - 176-XP-002-PC-01AB,O0013530,8
+96294,WIM0056671,"Coupling Repair Kit for Centrifugal Pump / Комплект для ремонта муфты центробежного насоса - 177-XP-005-PC-01AB,177-XP-005-PC-02AB",O0013531,8
+96295,WIM0056672,Pump Bearing (#6310 / #7310) for Centrifugal Pump / Подшипник насоса (#6310 / #7310) центробежного насоса - 176-XP-002-PC-01AB,O0013532,8
+96296,WIM0056673,"Pump Bearing (#6207 / #5306) for Centrifugal Pump / Подшипник насоса (#6207 / #5306) центробежного насоса - 177-XP-005-PC-01AB,177-XP-005-PC-02AB",O0013533,8
+96297,WIM0056674,Motor Bearing (#6309ZC3) for Centrifugal Pump / Подшипник двигателя (#6309ZC3) центробежного насоса - 176-XP-002-PC-01AB,O0013534,8
+96298,WIM0056675,"Motor Bearing (#6208ZC3) for Centrifugal Pump / Подшипник двигателя (#6208ZC3) центробежного насоса - 177-XP-005-PC-01AB,177-XP-005-PC-02AB",O0013535,8
+96299,WIM0056676,Fan Bearing / Подшипник вентилятора - 177-XP-005-CB-01 A/B (210mm x 200mm x 50mm #6318 ),O0013536,2
+96300,WIM0056677,Fan Bearing / Подшипник вентилятора - 177-XP-005-CB-01 A/B (60mm x 60mm x 40mm #6314C3),O0013537,2
+96301,WIM0056678,Carbon Ring for Shaft Seal / Графитовое кольцо для уплотнения вала - 177-XP-005-CB-01 A/B (135Φx105Φx6L),O0013538,8
+96302,WIM0056679,Coupling Disc Pack / Пакет дисков муфты - 177-XP-005-CB-01 A/B (170Φ),O0013539,8
+96303,WIM0056680,Fan Bearing / Подшипник вентилятора - 177-XP-002-CB-01 (75mm x 75mm x 45mm #6315 (1ea) / #6313(1ea)),O0013540,8
+96304,WIM0056681,Motor Bearing / Подшипник двигателя - 177-XP-002-CB-01 (55mm x 55mm x 40mm #6309(2ea)),O0013541,2
+96305,WIM0056682,Pulley / Шкив - 177-XP-002-CB-01,O0013542,2
+96306,WIM0056683,"Gasket Spiral Wound 1"" #300 / Прокладка спирально-навитая 1"" #300 - 176-XP-010-TK-01,176-XP-011-TK-01 (316L SS WND GRAPH FILL 316L SS I/R CS O/R RF B16.20 CL150 4.5MM THK (3.2MM RING) SPR WND)",O0013543,2
+96307,WIM0056684,"Gasket Spiral Wound 2"" #150 / Прокладка спирально-навитая 2"" #150 - 176-XP-010-TK-01,176-XP-011-TK-01 (316L SS WND GRAPH FILL 316L SS I/R CS O/R RF B16.20 CL150 4.5MM THK (3.2MM RING) SPR WND)",O0013544,2
+96308,WIM0056685,"Gasket Spiral Wound 2"" #300 / Прокладка спирально-навитая 2"" #300 - 176-XP-010-TK-01,176-XP-011-TK-01 (316L SS WND GRAPH FILL 316L SS I/R CS O/R RF B16.20 CL150 4.5MM THK (3.2MM RING) SPR WND)",O0013545,2
+96309,WIM0056686,"ADC Casing Gasket for Submersible Pump / прокладка обшивки ADC для погружного насоса - 176-XP-012-PC-01A/B,176-XP-013-PC-01A/B,176-XP-014-PC-01A/B,176-XP-019-PC-01A/B,176-XP-022-PC-01A/B,176-XP-023-PC-01A/B,176-XP-024-PC-01A/B,176-XP-025-PC-01A/B,",O0013546,2
+96310,WIM0056687,"Diffuser / Диффузор - Anoxic Zone 3,Anoxic Zone 4,Primary Aeration,Secondary  Aeration,Aeration Pond (N/A)",O0013547,2
+96311,WIM0056688,"Gasket 6"" 150 RF / Прокладка 6"" 150 RF - Anoxic Zone 3,Anoxic Zone 4,Primary Aeration (316L SS)",O0013548,2
+96312,WIM0056689,"Gasket 4"" 150 RF / Прокладка 4"" 150 RF - Secondary  Aeration (316L SS)",O0013549,2
+96313,WIM0056690,Name plate for Level Transmitter / Паспортная табличка для трансмиттера уровня - 177-LI-0590L,O0013550,2
+96314,WIM0056691,Name plate for Flow Instrument / Паспортная табличка для расходомера - 177-FI-0530L,O0013551,2
+96315,WIM0056692,Name plate for Flow Instrument / Паспортная табличка для расходомера - 177-FI-0540L,O0013552,2
+96316,WIM0056693,"TAG NO.SC-14 GASKET D. M. J, F:G, JM:316L SS / Идентификационный № SC-14 Прокладка D. M. J, F:G, JM:316L SS - 181-ES-001 (t3xO.D639xI.D613)",O0013553,2
+96317,WIM0056694,"TAG NO.SC-16 GASKET D. M. J, F:G, JM:316L SS / Идентификационный № SC-16 Прокладка D. M. J, F:G, JM:316L SS - 181-ES-001 (t3xO.D751xI.D725)",O0013554,2
+96318,WIM0056695,"TAG NO.SC-46 GASKET D.M.J, F:G, JM:GRA. FILLED(316L SS) / Идентификационный № SC-46 Прокладка D.M.J, F:G, JM:GRA. FILLED(316L SS) - 181-ES-001 (t3xO.D573xI.D553)",O0013555,2
+96319,WIM0056696,"TAG NO.SC-51 GASKET D.M.J, F:G, JM:GRA. FILLED(316L SS) / Идентификационный № SC-51Прокладка D.M.J, F:G, JM:GRA. FILLED(316L SS) - 181-ES-001 (t3xO.D639xI.D613 )",O0013556,2
+96320,WIM0056697,"TAG NO.SC-52 GASKET D.M.J, F:G, JM:GRA. FILLED(316L SS) / Идентификационный № SC-52Прокладка D.M.J, F:G, JM:GRA. FILLED(316L SS) - 181-ES-001 (t3xO.D639xI.D613)",O0013557,2
+96321,WIM0056698,"TAG NO.SC-116 GASKET S.W, H:316L SS, F:G, I&O:CS / Идентификационный № SC-116Прокладка спирально-навитая, H:316L SS, F:G, I&O:CS - 181-ES-001 (2""xASME 150 #xRF t4.5 )",O0013558,2
+96322,WIM0056699,"TAG NO.SC-117 GASKET S.W, H:316L SS, F:G, I&O:CS / Идентификационный № SC-117Прокладка спирально-навитая, H:316L SS, F:G, I&O:CS - 181-ES-001 (2""xASME 150 #xRF t4.5 )",O0013559,2
+96323,WIM0056700,"TAG NO.SC-118 GASKET S.W, H:316L SS, F:G, I&O:CS / Идентификационный № SC-118Прокладка спирально-навитая, H:316L SS, F:G, I&O:CS - 181-ES-001 (2""xASME 150 #xRF t4.5 )",O0013560,2
+96324,WIM0056701,"TAG NO.SC-119 GASKET S.W, H:316L SS, F:G, I&O:CS / Идентификационный № SC-119Прокладка спирально-навитая, H:316L SS, F:G, I&O:CS - 181-ES-001 (2""xASME 150 #xRF t4.5 )",O0013561,2
+96325,WIM0056702,"TAG NO.SC-129 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-129Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (1"" X 8UNC X 200L)",O0013562,8
+96326,WIM0056703,"TAG NO.SC-136 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-136Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (1"" X 8UNC X 260L)",O0013563,8
+96327,WIM0056704,"TAG NO.SC-149 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-149Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (3/4"" X 10UNC X 180L)",O0013564,8
+96328,WIM0056705,"TAG NO.SC-165 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-165Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (5/8"" X 11UNC X 90L)",O0013565,8
+96329,WIM0056706,"TAG NO.SC-166 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-166Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (5/8"" X 11UNC X 90L)",O0013566,8
+96330,WIM0056707,"TAG NO.SC-167 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-167Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (5/8"" X 11UNC X 90L)",O0013567,8
+96331,WIM0056708,"TAG NO.SC-168 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-168Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (5/8"" X 11UNC X 90L)",O0013568,8
+96332,WIM0056709,"TAG NO.SC-222 STUD B/2H.NS SA193-B7/SA194-2H / Идентификационный № SC-222Шпилька, 2 шестигранные гайки SA193-B7/SA194-2H - 181-ES-001 (1"" X 8UNC X 250L)",O0013569,8
+96333,WIM0056710,"175-VD-001, GASKET (GRAPHITE(FILLER) / HOOP(316LS.S) / INNER(C.S) / OUTER(C.S)) - 175-VD-001 SP3-011 (t4.5x24""xASME 150#xRF)",O0013570,2
+96334,WIM0056711,"175-VD-001, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING - 175-VD-001 SP4-011 (U 1 1/4x8UN x190L)",O0013571,8
+96335,WIM0056712,"TAG NO.SC-45 GASKET S.W, H:316L SS, F:G, I:316L SS, O:CS / Идентификационный № SC-45 Прокладка спирально-навитая, H:316L SS, F:G, I:316L SS, O:CS - 177-TK-003 (T4.5 X 24"" ASME 150# RF)",O0013572,2
+96336,WIM0056713,"TAG NO.SC-47 GASKET S.W, H:316L SS, F:G, I:316L SS, O:CS / Идентификационный № SC-47 Прокладка спирально-навитая, H:316L SS, F:G, I:316L SS, O:CS - 177-TK-003 (T4.5 X 3"" ASME 300# RF)",O0013573,2
+96337,WIM0056714,"TAG NO.SC-92 STUD B/HEAVY HEX. 2NS SA193-B7/SA194-2H(FLUOROCARBON COATING) / Идентификационный № S-92 Шпилька, 2 утолщенные шестигранные гайки SA193-B7/SA194-2H (с фторуглеродным покрытием) - 177-TK-003 (U 1 1/4-8UN X 190L)",O0013574,8
+96338,WIM0056715,"TAG NO.SC-93 STUD B/HEAVY HEX. 2NS SA193-B7/SA194-2H(FLUOROCARBON COATING) / Идентификационный № S-93 Шпилька, 2 утолщенные шестигранные гайки SA193-B7/SA194-2H (с фторуглеродным покрытием) - 177-TK-003 (U 5/8-11UNC X 95L)",O0013575,8
+96339,WIM0056716,"TAG NO.SC-94 STUD B/HEAVY HEX. 2NS SA193-B7/SA194-2H(FLUOROCARBON COATING) / Идентификационный № S-94 Шпилька, 2 утолщенные шестигранные гайки SA193-B7/SA194-2H (с фторуглеродным покрытием) - 177-TK-003 (U 3/4-10UNC X 125L)",O0013576,8
+96340,WIM0056717,"172-VD-001, GASKET FILLER(GRAPHITE)/HOOP(316L S.S)/INNER(C.S)/OUTER(C.S) / 172-VD-001, прокладканаполнитель (графит), обод (нержавеющая сталь 316L), внутреннее кольцо (углеродистая сталь), ",O0013577,2
+96341,WIM0056718,"172-VD-001, GASKET FILLER(GRAPHITE)/HOOP(316L S.S)/INNER(C.S)/OUTER(C.S) / 172-VD-001, прокладканаполнитель (графит), обод (нержавеющая сталь 316L), внутреннее кольцо (углеродистая сталь), ",O0013578,2
+96342,WIM0056719,"173-VD-001A/B, GASKET FILLER(GRAPHITE)/HOOP(316L S.S)/INNER(C.S)/OUTER(C.S) / 173-VD-001A/B, прокладка наполнитель (графит), обод (нержавеющая сталь 316L), внутреннее кольцо (углеродистая сталь), ",O0013579,2
+96343,WIM0056720,"178-VD-002, GASKET FILLER(GRAPHITE)/HOOP(316L S.S)/INNER(316 S.S)/OUTER(C.S) / 178-VD-002, прокладканаполнитель (графит), обод (нержавеющая сталь 316L), внутреннее кольцо (нержавеющая сталь 316L), ",O0013580,2
+96344,WIM0056721,"178-VD-002, GASKET FILLER(GRAPHITE)/HOOP(316L S.S)/INNER(316 S.S)/OUTER(C.S) / 178-VD-002, прокладканаполнитель (графит), обод (нержавеющая сталь 316L), внутреннее кольцо (нержавеющая сталь 316L),",O0013581,2
+96345,WIM0056722,"178-VD-003, GASKET FILLER(GRAPHITE)/HOOP(316L S.S)/INNER(316L S.S)/OUTER(C.S) / 178-VD-003, прокладканаполнитель (графит), обод (нержавеющая сталь 316L), внутреннее кольцо (нержавеющая сталь 316L), ",O0013582,2
+96346,WIM0056723,"178-VD-003, GASKET FILLER(GRAPHITE)/HOOP(316L S.S)/INNER(316L S.S)/OUTER(C.S) / 178-VD-003, прокладканаполнитель (графит), обод (нержавеющая сталь 316L), внутреннее кольцо (нержавеющая сталь 316L), ",O0013583,2
+96347,WIM0056724,"172-VD-001, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING / 172-VD-001, шпилька, 2 утолщенные шестигранные гайки (SA193-B7/SA194-2H)_фторуглеродное покрытие - SP2-051 (U 1 1/4x8UN x190L)",O0013584,8
+96348,WIM0056725,"172-VD-001, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING / 172-VD-001, шпилька, 2 утолщенные шестигранные гайки (SA193-B7/SA194-2H)_фторуглеродное покрытие - SP2-052 (U 3/4x10UNC x120L)",O0013585,8
+96349,WIM0056726,"173-VD-001A/B, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING / 173-VD-001A/B, шпилька, 2 утолщенные шестигранные гайки (SA193-B7/SA194-2H)_фторуглеродное покрытие - SP2-053 (U 1 1/2x8UN x245L)",O0013586,8
+96350,WIM0056727,"178-VD-002, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING / 178-VD-002, шпилька, 2 утолщенные шестигранные гайки (SA193-B7/SA194-2H)_фторуглеродное покрытие - SP2-054 (U 1 1/4x8UN x200L)",O0013587,8
+96351,WIM0056728,"178-VD-002, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING / 178-VD-002, шпилька, 2 утолщенные шестигранные гайки (SA193-B7/SA194-2H)_фторуглеродное покрытие - SP2-055 (U 5/8x11UNC x95L)",O0013588,8
+96352,WIM0056729,"178-VD-003, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING / 178-VD-003, шпилька, 2 утолщенные шестигранные гайки (SA193-B7/SA194-2H)_фторуглеродное покрытие - SP2-056 (U 1 7/8x8UN x 350L)",O0013589,8
+96353,WIM0056730,"178-VD-003, STUD B/HEAVY HEX. 2NS (SA193-B7/SA194-2H)_FLUOROCABON COATING / 178-VD-003, шпилька, 2 утолщенные шестигранные гайки (SA193-B7/SA194-2H)_фторуглеродное покрытие - SP2-057 (U 3/4x10UNC x 145L)",O0013590,8
+96354,WIM0056731,"Spiral Wound Gasket/ASME B16.20-2012/24""-300# RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-300# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и",O0013591,2
+96355,WIM0056732,"Spiral Wound Gasket/ASME B16.20-2012/8""-300# RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring - 145-VD-001AB / Прокладка спирально-навитая ASME B16.20-2012/8""-300# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013592,2
+96356,WIM0056733,"Spiral Wound Gasket/ASME B16.20-2012/2""-600# RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/2""-600# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013593,2
+96357,WIM0056734,"Spiral Wound Gasket/ASME B16.20-2012/2""-150#  RF /Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/2""-150#  RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013594,2
+96358,WIM0056735,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013595,2
+96359,WIM0056736,Spiral Wound Gasket/ASME B16.20-2012/8''-300# BL RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8''-300# BL RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ,O0013596,2
+96360,WIM0056737,"Spiral Wound Gasket/ASME B16.20-2012/2""-300# RF /Flexicarb + 316L With S.S 316L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/2""-300# RF  Flexicarb и 316L с внутренним кольцом из нержавеющей стали 316L и ",O0013597,2
+96361,WIM0056738,Spiral Wound Gasket/ASME B16.20-2012/8''-300# BL RF/Flexicarb + 316L With S.S 316L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8''-300# BL RF Flexicarb и 316L с внутренним кольцом из нержавеющей стали 316L и ,O0013598,2
+96362,WIM0056739,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и",O0013599,2
+96363,WIM0056740,"Spiral Wound Gasket/ASME B16.20-2012/12""-150# RF/Flexicarb + 316L With S.S 316L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/12""-150# RF Flexicarb и 316L с внутренним кольцом из нержавеющей стали 316L и ",O0013600,2
+96364,WIM0056741,"Spiral Wound Gasket/ASME B16.20-2012/24""-300# RF /Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-300# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013601,2
+96365,WIM0056742,Spiral Wound Gasket/ASME B16.20-2012/8''-300#  RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8''-300#  RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ,O0013602,2
+96366,WIM0056743,"Spiral Wound Gasket/ASME B16.20-2012/8""-150# RF /Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013603,2
+96367,WIM0056744,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013604,2
+96368,WIM0056745,"    Spiral Wound Gasket/ASME B16.20-2012/24""-150#  RF /Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring /     Прокладка спирально-навитая ASME B16.20-2012/24""-150#  RF Flexicarb и 317L с внутренним кольцом из нержавеющей стали 317L и ",O0013605,2
+96369,WIM0056746,"Spiral Wound Gasket/ASME B16.20-2012/8""-150# RF /Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150# RF Flexicarb и ",O0013606,2
+96370,WIM0056747,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 317L With S.S 317L Inner Ring&CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и ",O0013607,2
+96371,WIM0056748,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 316L With CS Inner Ring&Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и ",O0013608,2
+96372,WIM0056749,"Spiral Wound Gasket/ASME B16.20-2012/8""-150#  RF /Flexicarb + 316L With CS Inner Ring&Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150#  RF  Flexicarb и ",O0013609,2
+96373,WIM0056750,"Spiral Wound Gasket/ASME B16.20-2012/8""-150#  RF /Flexicarb + 316L With 316L Inner Ring& CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150#  RF Flexicarb и ",O0013610,2
+96374,WIM0056751,"Spiral Wound Gasket/ASME B16.20-2012/8""-150#  RF /Flexicarb + 316L With 316L Inner Ring& CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150#  RF Flexicarb и )",O0013611,2
+96375,WIM0056752,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 316L With 316L Inner Ring& CS Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и )",O0013612,2
+96376,WIM0056753,"Spiral Wound Gasket/ASME B16.20-2012/8""-150#  RF /Flexicarb + 316L With CS Inner Ring&Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150#  RF  Flexicarb и ",O0013613,2
+96377,WIM0056754,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 316L With CS Inner Ring&Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и ",O0013614,2
+96378,WIM0056755,"Spiral Wound Gasket/ASME B16.20-2012/8""-150#  RF /Flexicarb + 316L With CS Inner Ring&Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150#  RF  Flexicarb и",O0013615,2
+96379,WIM0056756,"Spiral Wound Gasket/ASME B16.20-2012/8""-150#  RF /Flexicarb + 316L With CS Inner Ring&Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/8""-150#  RF  Flexicarb и ",O0013616,2
+96380,WIM0056757,"Spiral Wound Gasket/ASME B16.20-2012/24""-150# RF/Flexicarb + 316L With CS Inner Ring&Outer Ring / Прокладка спирально-навитая ASME B16.20-2012/24""-150# RF Flexicarb и ",O0013617,2
+96381,WIM0056758,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/2""-8UN-245/SA-193 Gr.B7/Coating Fluorocarbon/ Болт с полной резьбой ASME B18.31.2-2014/1-1/2""-8UN-245/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-001AB (1-1/2""-8UN-245)",O0013618,2
+96382,WIM0056759,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/2""-8UN/SA-194 Gr.2H/Coating Fluorocarbon/ Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/2""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-001AB (1-1/2""-8UN)",O0013619,2
+96383,WIM0056760, Bolt/ASME B18.2.3.6M-2010/M20x2.5 L=100/SA-193 Gr.B7/Coating Fluorocarbon/ Болт ASME B18.2.3.6M-2010/M20x2.5 L=100/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-001AB (M20x2.5 L=100),O0013620,2
+96384,WIM0056761,Metric Heavy Hex Nut/ASME B18.2.4.6M-2010/M20x2.5/SA-194 Gr.2H/Coating Fluorocarbon / Метрическая утолщенная шестигранная гайка ASME B18.2.4.6M-2010/M20x2.5/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-001AB (M20x2.5),O0013621,2
+96385,WIM0056762,"Full Thread Screw Bolt/ASME B18.31.2-2014/7/8""-9UNC-155/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/7/8""-9UNC-155/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-001AB (7/8""-9UNC-155)",O0013622,2
+96386,WIM0056763,"Heavy Hex Nut/ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H/Coating Fluorocarbon/ Утолщенная шестигранная гайка ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-001AB (7/8""-9UNC)",O0013623,2
+96387,WIM0056764,"Full Thread Screw Bolt/ASME B18.31.2-2014/5/8""-11UNC-125/SA-193 Gr.B7/Coating Fluorocarbon/ Болт с полной резьбой ASME B18.31.2-2014/5/8""-11UNC-125/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-001AB (5/8""-11UNC-125)",O0013624,2
+96388,WIM0056765,"Heavy Hex Nut/ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-001AB (5/8""-11UNC)",O0013625,2
+96389,WIM0056766,"Full Thread Screw Bolt/ASME B18.31.2-2014/1""-8UN-145L/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1""-8UN-145L/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-009 (1""-8UN-145L)",O0013626,2
+96390,WIM0056767,"Heavy Hex Nut/ASME B18.2.2-2015/1""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-009 (1""-8UN)",O0013627,2
+96391,WIM0056768,"Full Thread Screw Bolt/ASME B18.31.2-2014/5/8""-11UNC-90L/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/5/8""-11UNC-90L/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-009 (5/8""-11UNC-90L)",O0013628,2
+96392,WIM0056769,"Heavy Hex Nut/ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-009 (5/8""-11UNC)",O0013629,2
+96393,WIM0056770,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-009 (1-1/4""-8UN-180)",O0013630,2
+96394,WIM0056771,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-009 (1-1/4""-8UN)",O0013631,2
+96395,WIM0056772,"Full Thread Screw Bolt/ASME B18.31.2-2014/5/8""-11UNC-95/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/5/8""-11UNC-95/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-010 (5/8""-11UNC-95)",O0013632,2
+96396,WIM0056773,"Heavy Hex Nut/ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-010 (5/8""-11UNC)",O0013633,2
+96397,WIM0056774,"Full Thread Screw Bolt/ASME B18.31.2-2014/7/8""-9UNC-145/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/7/8""-9UNC-145/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-010 (7/8""-9UNC-145)",O0013634,2
+96398,WIM0056775,"Heavy Hex Nut/ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-010 (7/8""-9UNC)",O0013635,2
+96399,WIM0056776,"Full Thread Screw Bolt/ASME B18.31.2-2014/5/8""-11UNC-95/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/5/8""-11UNC-95/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-011 (5/8""-11UNC-95)",O0013636,2
+96400,WIM0056777,"Heavy Hex Nut/ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/5/8""-11UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-011 (5/8""-11UNC)",O0013637,2
+96401,WIM0056778,"Full Thread Screw Bolt/ASME B18.31.2-2014/7/8""-9UNC-145/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/7/8""-9UNC-145/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-011 (7/8""-9UNC-145)",O0013638,2
+96402,WIM0056779,"Heavy Hex Nut/ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-011 (7/8""-9UNC)",O0013639,2
+96403,WIM0056780,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-013 (1-1/4""-8UN-180)",O0013640,2
+96404,WIM0056781,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-013 (1-1/4""-8UN)",O0013641,2
+96405,WIM0056782,"Full Thread Screw Bolt/ASME B18.31.2-2014/5/8""-11UNC-90/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/5/8""-11UNC-90/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-014 (5/8""-11UNC-90)",O0013642,2
+96406,WIM0056783,"Heavy Hex Nut/ASME B18.2.2-2015/5/8""-11UNC /SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/5/8""-11UNC /SA-194 Gr.2H фторуглеродное покрытие - 145-VD-014 (5/8""-11UNC)",O0013643,2
+96407,WIM0056784,"Full Thread Screw Bolt/ASME B18.31.2-2014/7/8""-9UNC-135/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/7/8""-9UNC-135/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-014 (7/8""-9UNC-135)",O0013644,2
+96408,WIM0056785,"Heavy Hex Nut/ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-014 (7/8""-9UNC)",O0013645,2
+96409,WIM0056786,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/2""-8UN-245/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/2""-8UN-245/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-019 (1-1/2""-8UN-245)",O0013646,2
+96410,WIM0056787,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/2""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/2""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-019 (1-1/2""-8UN)",O0013647,2
+96411,WIM0056788,"Full Thread Screw Bolt/ASME B18.31.2-2014/7/8""-9UNC-150/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/7/8""-9UNC-150/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-019 (7/8""-9UNC-150)",O0013648,2
+96412,WIM0056789,"Heavy Hex Nut/ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/7/8""-9UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-019 (7/8""-9UNC)",O0013649,2
+96413,WIM0056790,"Full Thread Screw Bolt/ASME B18.31.2-2014/3/4""-10UNC-115/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/3/4""-10UNC-115/SA-193 Gr.B7 фторуглеродное покрытие - 145-TK-005 (3/4""-10UNC-115)",O0013650,2
+96414,WIM0056791,"Heavy Hex Nut/ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-TK-005 (3/4""-10UNC)",O0013651,2
+96415,WIM0056792,"Full Thread Screw Bolt/ASME B18.31.2-2014/1.125""-8UN-160L/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1.125""-8UN-160L/SA-193 Gr.B7 фторуглеродное покрытие - 145-TK-005 (1.125""-8UN-160L)",O0013652,2
+96416,WIM0056793,"Heavy Hex Nut/ASME B18.2.2-2015/1.125""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1.125""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-TK-005 (1.125""-8UN)",O0013653,2
+96417,WIM0056794,"Full Thread Screw Bolt/ASME B18.31.2-2014/1 1/4""-8UN-180L/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1 1/4""-8UN-180L/SA-193 Gr.B7 фторуглеродное покрытие - 145-TK-005 (1 1/4""-8UN-180L)",O0013654,2
+96418,WIM0056795,"Heavy Hex Nut/ASME B18.2.2-2015/1 1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1 1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-TK-005 (1 1/4""-8UN)",O0013655,2
+96419,WIM0056796,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 145-TK-005 (1-1/4""-8UN-180)",O0013656,2
+96420,WIM0056797,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-TK-005 (1-1/4""-8UN)",O0013657,2
+96421,WIM0056798,"Full Thread Screw Bolt/ASME B18.31.2-2014/3/4""-10UNC-115/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/3/4""-10UNC-115/SA-193 Gr.B7 фторуглеродное покрытие - 145-TK-006 (3/4""-10UNC-115)",O0013658,2
+96422,WIM0056799,"Heavy Hex Nut/ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-TK-006 (3/4""-10UNC)",O0013659,2
+96423,WIM0056800,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 145-TK-006 (1-1/4""-8UN-180)",O0013660,2
+96424,WIM0056801,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-TK-006 (1-1/4""-8UN)",O0013661,2
+96425,WIM0056802,"Full Thread Screw Bolt/ASME B18.31.2-2014/3/4""-10UNC-115L/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/3/4""-10UNC-115L/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-007 (3/4""-10UNC-115L)",O0013662,2
+96426,WIM0056803,"Heavy Hex Nut/ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-007 (3/4""-10UNC)",O0013663,2
+96427,WIM0056804,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 145-VD-007 (1-1/4""-8UN-180)",O0013664,2
+96428,WIM0056805,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 145-VD-007 (1-1/4""-8UN)",O0013665,2
+96429,WIM0056806,"Full Thread Screw Bolt/ASME B18.31.2-2014/3/4""-10UNC-115L/SA-193 Gr.B7/Coating Fluorocarbon/ Болт с полной резьбой ASME B18.31.2-2014/3/4""-10UNC-115L/SA-193 Gr.B7 фторуглеродное покрытие - 150-VD-019 (3/4""-10UNC-115L)",O0013666,2
+96430,WIM0056807,"Heavy Hex Nut/ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H фторуглеродное покрытие - 150-VD-019 (3/4""-10UNC)",O0013667,2
+96431,WIM0056808,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 150-VD-019 (1-1/4""-8UN-180)",O0013668,2
+96432,WIM0056809,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 150-VD-019 (1-1/4""-8UN)",O0013669,2
+96433,WIM0056810,"Full Thread Screw Bolt/ASME B18.31.2-2014/3/4""-10UNC-115/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/3/4""-10UNC-115/SA-193 Gr.B7 фторуглеродное покрытие - 150-VD-027 (3/4""-10UNC-115)",O0013670,2
+96434,WIM0056811,"Heavy Hex Nut/ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H фторуглеродное покрытие - 150-VD-027 (3/4""-10UNC)",O0013671,2
+96435,WIM0056812,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 150-VD-027 (1-1/4""-8UN-180)",O0013672,2
+96436,WIM0056813,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 150-VD-027 (1-1/4""-8UN)",O0013673,2
+96437,WIM0056814,"Full Thread Screw Bolt/ASME B18.31.2-2014/3/4""-10UNC-115L/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/3/4""-10UNC-115L/SA-193 Gr.B7 фторуглеродное покрытие - 150-VD-033 (3/4""-10UNC-115L)",O0013674,2
+96438,WIM0056815,"Heavy Hex Nut/ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/3/4""-10UNC/SA-194 Gr.2H фторуглеродное покрытие - 150-VD-033 (3/4""-10UNC)",O0013675,2
+96439,WIM0056816,"Full Thread Screw Bolt/ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7/Coating Fluorocarbon / Болт с полной резьбой ASME B18.31.2-2014/1-1/4""-8UN-180/SA-193 Gr.B7 фторуглеродное покрытие - 150-VD-033 (1-1/4""-8UN-180)",O0013676,2
+96440,WIM0056817,"Heavy Hex Nut/ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H/Coating Fluorocarbon / Утолщенная шестигранная гайка ASME B18.2.2-2015/1-1/4""-8UN/SA-194 Gr.2H фторуглеродное покрытие - 150-VD-033 (1-1/4""-8UN)",O0013677,2
+96441,WIM0056818,"Leaf set MVWCD 2000/1500/88/2x19 (316L) / Запасные части для напорного пластинчатого фильтра, набор ""листьев""",O0013329,8
+96442,WIM0056819,"O-ring D=34,52x3,53 mm, Kalrez 6375 / Запасные части для напорного пластинчатого фильтра, резиновые уплотнения",O0013330,2
+96443,WIM0056820,"Vibrator set type 1 HF, incl., counter weights / Запасные части для напорного пластинчатого фильтра, вибратор типа 1 HF, включая противовесы",O0013331,2
+96444,WIM0056821,"Guide bush MVWDCD 2000L=449 mm - 316L / Запасные части для напорного пластинчатого фильтра, направляющая втулка",O0013332,2
+96445,WIM0056822,"Vibrator bar 38 x 1500 mm - 316L / Запасные части для напорного пластинчатого фильтра, вибратор",O0013333,2
+96446,WIM0056823,"Vibrator adjusting nut 1 inch-SS / Запасные части для напорного пластинчатого фильтра, регулировочная гайка вибратора 1 дюйм, изделия из черных металлов",O0013334,2
+96447,WIM0056824,"Vibrator split ring SS / Запасные части для напорного пластинчатого фильтра, разъемное кольцо вибратора, изделия из черных металлов",O0013335,2
+96448,WIM0056825,"Vibrator bush D=54,38 x 120SS / Запасные части для напорного пластинчатого фильтра, втулка вибратора, изделия из черных металлов",O0013336,2
+96449,WIM0056826,"Shaft retaining ring D=70 x 2,5mm / Запасные части для напорного пластинчатого фильтра, стопорные кольца вала из черных металлов",O0013337,2
+96450,WIM0056827,"O-ring D=72,62x3,53 mm, Kalrez 6375 / Запасные части для напорного пластинчатого фильтра, резиновые уплотнения",O0013338,2
+96451,WIM0056828,"O-ring D=31,34x3,53 mm, Kalrez 6375 / Запасные части для напорного пластинчатого фильтра, резиновые уплотнения",O0013339,2
+96452,WIM0056829,"Vibrator bearing bush GG25 / Запасные части для напорного пластинчатого фильтра, втулка подшипника вибратора, изделия из черных металлов",O0013340,2
+96453,WIM0056830,"Damping ring D=60/25 x 16mm 40* shore / Запасные части для напорного пластинчатого фильтра, демпфирующее кольцо из непористой резины прочие",O0013341,2
+96454,WIM0056831,"O-ring D=81,92x5,33 mm, Kalrez 6375 / Запасные части для напорного пластинчатого фильтра, резиновые уплотнения",O0013342,2
+96455,WIM0056832,"Bearing bush D100/78 x 34-GG25 / Запасные части для напорного пластинчатого фильтра, подшипниковая втулка, изделия из черных металлов",O0013343,2
+96456,WIM0056833,"O-ring D=24,00x4,00 mm, Kalrez 6375 / Запасные части для напорного пластинчатого фильтра, резиновые уплотнения",O0013344,2
+96457,WIM0056834,"Bearing bush D50/25,2 x 42-GG25 / Запасные части для напорного пластинчатого фильтра, подшипниковая втулка, изделия из черных металлов",O0013345,2
+96458,WIM0056835,"Bearing bush D70/42,2 x 42-GG25 / Запасные части для напорного пластинчатого фильтра, подшипниковая втулка, изделия из черных металлов",O0013346,2
+96459,WIM0056836,"Shaft retaining ring D=25 x 1,2mm / Запасные части для напорного пластинчатого фильтра, стопорные кольца вала из черных металлов",O0013347,2
+96460,WIM0056837,"Vibrator lock nut 1inch-SS / Запасные части для напорного пластинчатого фильтра, контргайка вибратора 1 дюйм, изделия из черных металлов",O0013348,2
+96461,WIM0056838,"Vibrator bearing bush PEEK+30%CF / Запасные части для напорного пластинчатого фильтра, втулка подшипника вибратора",O0013349,2
+96462,WIM0056839,"Bearing bush D=102/78 x 34 PEEK+30%CF / Запасные части для напорного пластинчатого фильтра, втулка подшипника",O0013350,2
+96463,WIM0056840,"Bearing bush D=50/25,2 x 42 PEEK+30%CF / Запасные части для напорного пластинчатого фильтра, втулка подшипника",O0013351,2
+96464,WIM0056841,"Bearing bush D=70/42,2 x 42 PEEK+30%CF / Запасные части для напорного пластинчатого фильтра, втулка подшипника",O0013352,2
+96465,WIM0056842,"Ring D=50/26 x 3, rotary cyl. / Запасные части для напорного пластинчатого фильтра, уплотнители из технической пластмассы",O0013353,2
+96466,WIM0056843,"O-ring D=46,00x5,00 mm, Kalrez 6375 / Запасные части для напорного пластинчатого фильтра, резиновые уплотнения",O0013354,2
+96467,WIM0056844,"O-ring D=41,00x4,00 mm, Kalrez 6375 / Запасные части для напорного пластинчатого фильтра, резиновые уплотнения",O0013355,2
+96469,Serv_0000328,Internal Inspection of 130-VR-105 / 130-VR- 205 LTFT Reactor including Phased Array Ultrasonic Testing (PAUT),,2
+96470,Serv_0000329,ЕЭИСВО,,2
+96471,WIM0056845,LED Projektor 1000W ,,8
+96472,WIM0056846,Kontaktor,,8
+96473,WIM0056847,Fotorele,,2
+96474,WIM0056848,Harakat sensori (датчик движения),,8
+96475,WIM0056849,Nokonechnik,,2
+96476,WIM0056850,Zazemliniya kabel,,52
+96477,WIM0056851,Anker bolt,,8
+96478,WIM0056852,Termal uzatish qog'ozi (yorliqlar),,18
+96479,WIM0056853,Ribbon - termal uzatish uchun siyoh lentasi,,18

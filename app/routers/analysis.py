@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from .. import models
-from ..lib.Analysis import hub
+from ..lib.Analysis import hub,checkBugs
 from ..lib.Analysis.toExcel import writeExcel
 #from ..lib.purch import purchs
 
@@ -19,6 +19,11 @@ def getVal(section: str):
 @router.get('/toExcel')
 def writeAnalysisReport():
     writeExcel()
+    return {'done':'True'}
+
+@router.get('/check')
+def fix():
+    checkBugs.check()
     return {'done':'True'}
 
 @router.get('/purch')

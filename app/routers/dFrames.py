@@ -6,6 +6,7 @@ from ..database import DF__wo
 from ..database import DF__requisitions
 from ..database import DF__assets
 from ..database import DF__requests
+from ..database import DF__tasks
 
 
 router = APIRouter(
@@ -47,4 +48,9 @@ def dframe_assetChildren():
 def dframe_requests():
     DF__requests.requests.to_excel('requests.xlsx')
     return {'requests':'ok'}
+
+@router.get('/tasks')
+def dframe_tasks():
+    DF__tasks.tasks.to_excel('tasks.xlsx')
+    return {'tasks':'ok'}
 

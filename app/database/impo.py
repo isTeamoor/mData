@@ -9,6 +9,8 @@ status       = pd.read_csv("app/database/csv/ccc_wo_status.csv",       encoding=
 jobType      = pd.read_csv("app/database/csv/ccc_wo_jobType.csv",      encoding="utf-8")
 isMasterWO   = pd.read_csv("app/database/csv/ccc_wo_isMasterWO.csv",   encoding="utf-8")
 closedDates  = pd.read_csv("app/database/csv/ccc_wo_closedDates.csv",  encoding="utf-8")
+tasks        = pd.read_csv("app/database/csv/ccc_wo_tasks.csv",  encoding="utf-8")
+taskStatus   = pd.read_csv("app/database/csv/ccc_wo_taskStatus.csv",  encoding="utf-8")
 
 
 spares           = pd.read_csv("app/database/csv/ccc_sp_spares.csv",           encoding="utf-8")
@@ -53,6 +55,7 @@ contactID.insert(1, 'Requested By',        contactID['First Name'] + " " + conta
 
 
 isMasterWO['Is Master Work Order'] = 'yes'
+taskStatus['Is Completed'] = 'yes'
 
 
 woNumbers = wo[['Work Order ID', 'Work Order Number']].copy()

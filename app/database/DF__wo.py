@@ -60,4 +60,4 @@ wo = wo[['Work Order ID', 'Work Order Number', 'Work Order Status Description','
         'Priority Description','Department Name','Short Department Name','Discipline','isMaintenance', 'isRMPD', 'Department Description', 'Job Type Description','Created By',
         'Asset Description','Asset Number', 'Asset ID', 'Parent Asset ID',
         'Is Master Work Order', 'Is Group Work Order', 'Group WO number', 
-        'WO Account Code Name','WO Account Code Description','Work Order Description',]]
+        'WO Account Code Name','WO Account Code Description','Work Order Description','Raised Date Time']]

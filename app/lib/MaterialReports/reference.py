@@ -161,7 +161,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
   if checkHasValues == False:
     print('no changes in limits')
     return transacts
-  print('there are changes in limits')
+  print('there ARE changes in limits')
 
 
 
@@ -241,7 +241,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
   Limits[['master Reservation Reserved By',	'master WO №',	'master WO Status',	'master Reservation №',	'master Reservation reservMonth',	'master Reservation Material Code',
           'master Reservation material',	'master Reservation Qty',	'Work Order Spare Description',	'Estimated Quantity',	'Work Order Number',	'Work Order Description',	
-          'Work Order Status Description',	'Asset Description',	'Asset Number']].to_excel('limits.xlsx')
-  Limits2.to_excel('limits2.xlsx')
+          'Work Order Status Description','closedMonth','closedYear',	'Asset Description',	'Asset Number']].to_excel('limits.xlsx', index=False)
+  Limits2.to_excel('limits2.xlsx', index=False)
   return transacts
 

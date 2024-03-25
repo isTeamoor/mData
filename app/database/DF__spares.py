@@ -37,19 +37,6 @@ spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit
 spares.loc [ (spares['Account Code']=='100000000012') & (spares['Reserved By']=="To'lqin Berdiyev Omonovich"), 'Short Department Name'] = '4AP'
 
 
-### Exception 
-spares.loc[ (spares['Work Order Number']==85413) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.933
-spares.loc[ (spares['Work Order Number']==84124) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 1.866
-spares.loc[ (spares['Work Order Number']==86345) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.933
-spares.loc[ (spares['Work Order Number']==82418) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.933
-spares.loc[ (spares['Work Order Number']==85463) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.933
-spares.loc[ (spares['Work Order Number']==85465) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.933
-spares.loc[ (spares['Work Order Number']==83927) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.933
-spares.loc[ (spares['Work Order Number']==80700) & (spares['Work Order Spare Description']=='Аргон газообразный'), 'Estimated Quantity' ] = 1.866
-spares.loc[ (spares['Work Order Number']==85424) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 3.732
-spares.loc[ (spares['Work Order Number']==86510) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 1.866
-spares.loc[ (spares['Work Order Number']==86773) & (spares['Work Order Spare Description']=='Аргон газ особой чистоты 6.0 ТУ 2114-003-37924839-2016 (99,9999%)'), 'Estimated Quantity' ] = 0.472
-
 
 spares = spares[[
 'Work Order Spare ID', 'Work Order ID', 'Work Order Spare Description', 'Reservation Number', 'reservYear', 'reservMonth', 'Reserved By', 'isRMPD_planner',

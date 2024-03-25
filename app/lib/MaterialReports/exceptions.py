@@ -1,15 +1,9 @@
 def corrections(transactions):
     transacts = transactions.copy()
 
-    transacts.loc[ transacts['Reservation Number'] == 782, 'Quantity' ] = 3 # 3 баллон ПБФ
-
-    transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 # 9356 - Высокотемпературный силиконовый герметик "TYTAN"(часть уже списана до меня)
+    transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 #Бобур должен закрыть зависимые WO
     transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6 # 7633 - Рулон оцинкованный ГОСТ 14918-80 Ст08пс Zn120,  0,65x1250 БТ н/обр.(часть уже списана до меня)
 
-    transacts.loc[ transacts['WO №'] == 76705, 'Is Master Work Order' ] = '' # Миржахон по ошибке сделал WO master. он уже закрыт
-
-    transacts.loc[ transacts['Reservation Number'].isin([8797, 7735, 8840, 8931]) , 'Отдел' ] = 'SLU`' # Миржахон перешел в SLU, погрешность фильтра департментов
-   
     return transacts
 
 
@@ -32,13 +26,16 @@ inactive_Reservations= [
 inactive_Master_Reservations  = [
 ### CofE
 787,788,846,851,857,904,905,908,935,954,986,1009,1129,1311,1312,1313,1314,1341,1342,1343,1424,1426,1439,1443,1551,1560,1593,1594,1598,1599,1603,1629,1631,1697,1698,1710,1848,
-1849,1852,2278,2307,2335,2648,2649,2679,2816,2908,2955,2956,2957,2959,3146,3147,3148,3203,3204,5527,5528,5536,
+1849,1852,2278,2307,2335,2648,2649,2679,2816,2908,2955,2956,2957,2959,3146,3147,3148,3203,3204,5527,5528,5536,782,6161,6162,7657,
+6744,6766,6773,6828,6917,6985,7104,7299,7300,7301,7554,
+7910,7911,7912,7913,7914,7915,7916,7917,7918,7919,7920,7921,7922,7923,7963,7964,7965,8068,8140,8141,8228,8580,9083,9318,9407,9454,9511,
 ]
 
 
 extra = {
     #{'Код товара':'0','Reservation Number':-,'WO №':-,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"",'Ед.изм.':'','Quantity':0,'Отдел':'','Reserved By':"",'Asset Description':'undefined', 'Объект':'undefined'},
-        
+    # Current Return Qty со знаком "-"/Reservation number should be the same as original position!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
     'rmpd':{
         'begin':[
             {'Код товара':'12814','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Алюминий",'Ед.изм.':'кг','Quantity':5.3,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
@@ -46,24 +43,13 @@ extra = {
             {'Код товара':'12815','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Нержавекеющая сталь",'Ед.изм.':'кг','Quantity':0.84,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
         'currentMonth':[],
-        'currentReturn':[
-            ### !!! Qty со знаком "-"/Reservation number should be the same as original position!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            ]
+        'currentReturn':[]
     },
     'cofe':{
         'begin':[
-            #Постоянно на балансе 3 балона газа
-#            {'Код товара':'05943','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':'Газ сжиженный ПБФ','Ед.изм.':'бал','Quantity':3,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'06933','Reservation Number':-1,'WO №':-1,'closedMonth':2,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':98,'Отдел':'CofE','Reserved By':'Mirjakhon Toirov','Asset Description':'CofE', 'Объект':'CofE'},
-            {'Код товара':'09683','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.09,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'09683','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.8049,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             ],
-        'currentMonth':[
-            {'Код товара':'09683','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.7149,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
-            {'Код товара':'07536','Reservation Number':-4,'WO №':-4,'closedMonth':2,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Перфофайл , формат : А4",'Ед.изм.':'пачка','Quantity':1,'Отдел':'cofe','Reserved By':"E-doc",'Asset Description':'E-doc', 'Объект':'E-doc'},
-            {'Код товара':'07483','Reservation Number':-5,'WO №':-5,'closedMonth':2,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А4",'Ед.изм.':'пачка','Quantity':8,'Отдел':'cofe','Reserved By':"E-doc",'Asset Description':'E-doc', 'Объект':'E-doc'},
-        ],
-        'currentReturn':[
-            ### !!! Qty со знаком "-"/Reservation number should be the same as original position!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        ]
+        'currentMonth':[],
+        'currentReturn':[]
     },
 }

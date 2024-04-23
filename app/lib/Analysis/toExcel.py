@@ -86,7 +86,7 @@ def an_workorders():
     gen.categorized(workbook, 'By Priority', 'wo_raised_Priority_monthly', 'Raised in 2023', index=24, type='monthly', year=2023)
     gen.categorized(workbook, 'By Priority', 'wo_open_Priority_monthly', 'Not Closed WOs in 2023', index=36, type='monthly', year=2023)
     gen.categorized(workbook, 'By Priority', 'wo_raised_Priority_monthly', 'Raised in 2024', index=46, type='monthly', year=2024)
-    gen.categorized(workbook, 'By Priority', 'wo_open_Priority_monthly', 'Not Closed WOs in 2024', index=54, type='monthly', year=2024)
+    gen.categorized(workbook, 'By Priority', 'wo_open_Priority_monthly', 'Not Closed WOs in 2024', index=60, type='monthly', year=2024)
 
     gen.categorized(workbook, 'By JobType', 'wo_raised_JobType_yearly', 'Raised WOs', index=1, type='yearly')
     gen.categorized(workbook, 'By JobType', 'wo_open_JobType_yearly', 'Not Closed WOs', index=23, type='yearly')

@@ -141,7 +141,7 @@ def sorted_matcost_assets(df, filters=[]):
 def sorted_woRaised_assets(df, filters=[]):
     df = gen.filterDF(wo, filters)
 
-    df = df[['Work Order ID','Job Type Description', 'Asset Description','Asset Number', 'raisedMonth']]
+    df = df[['Job Type Description', 'Asset Description','Asset Number', 'raisedMonth']]
 
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     CM = ['Corrective', 'Corrective after STPdM']
@@ -149,25 +149,13 @@ def sorted_woRaised_assets(df, filters=[]):
     OT = ['PPE','Special Tooling','Rework','Construction/Commissioning Works','Administration','Service for Air Product','Vehicle Reservations',
           'undefined', 'Capital or Project Initiatives','Non-Maintanence Reservations', '03']
 
-
-
-
-
-
-
-
-
-
-
-
-
     df.loc[:, ['Total raised', 'PMs raised', 'CMs raised', 'OTs raised','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']] = 0
 
 
     modDF = df.copy()
     for i in df.index:
         modDF.loc[i,'Total raised' ] = 1
-        modDF.loc[ i, months[df.loc[i, 'raisedMonth'] - 1] ] = 1
+        modDF.loc[i, months[df.loc[i, 'raisedMonth'] - 1] ] = 1
         if df.loc[i, 'Job Type Description'] in CM:
             modDF.loc[i,'CMs raised'] = 1
         if df.loc[i, 'Job Type Description'] in PM:

@@ -17,6 +17,8 @@ requisitions['Total Expected Price'] = requisitions['Requisitioned Quantity'] * 
 
 
 requisitions = requisitions.loc [ requisitions['Cancelled Date Time'].isna() ]
+requisitions.fillna({'Approval Path Name':'undefined'}, inplace=True)
+
 
 
 
@@ -30,18 +32,25 @@ requisitions['requiredYear']  = requisitions['Required By Date Time'].dt.year
 requisitions['requiredMonth'] = requisitions['Required By Date Time'].dt.month
 
 
-
-
-requisitions = requisitions.loc [ requisitions['raisedYear']==2023]
+### Фильтр по годам
+#requisitions = requisitions.loc [ requisitions['raisedYear']==2023]
 #requisitions = requisitions.loc [ requisitions['requiredYear']==2023]
+#######################################################################
 
 
 
 
-maintenanceApprovalPath = ['SLU Default', 'PWU Default', 'Maintenance', 'CofE department', 'Routine Maintenance Department', 'CofE', 'Civil Department', 
-                           'Material Control Department', 'Turnaround', 'Contract Services Deparment', 'CofE Default','Civil']
-requisitions = requisitions.loc [ requisitions['Approval Path Name'].isin(maintenanceApprovalPath)]
-
+maintenance_ApprovalPath = ['SLU Default','PWU Default','Maintenance','Other Departments','CofE department','Routine Maintenance Department',
+    'CofE','Civil Department','Material Control Department','Turnaround','Contract Services Deparment','Civil','CofE (Insul/Scaff)']
+maintenance_Users = ['Abbos Meyliyev Ziyatovich','Abusoleh Asrorxonov Qutbiddinovich',"Alisher Xaydarov Keldiyor o'g'li","Asomiddin Soibov Abdilaziz o'g'li",
+    "Atobek Karimov Axmad o'g'li",'Avazbek Boyqobilov Nazaraliyevich','Azizbek Berdiev','Azizjon Soibov','Bobur Aralov','Davron Khidirov',
+    'Dilmurat Kulnazarov Jumayevich','Doston Normuminov','Farkhod Kholmatov','Ganisher Umrzaqov ','Ilyos Sadullayev','Islom Abdizoirov Abduraxmonovich',
+    "Jahongir Xudoyorov Zokir o'g'li","Jasur Erkinov To'lqinjon o'g'li",'Javlon Yarashev','Jurabek Berdialiev ','Kamoljon Ismoilov','Khurshid Bobomurodov',
+    "Komil Aliqulov Ahmad o'g'li","Mansur Xasanov Tulqin o'g'li","Maruf Toshpulatov O'rin og'li",'Mirjakhon Toirov','Mirjalol Kudirov',
+    'Mirjalol Kudirov Urozovich',"Nurbek Xoliqulov Bahodir o'g'li","O'ktam Ilhomov Omon o'g'li","O'ktam Omonov",'Orif Bekmirzayev',
+    "Sarvar Rahmonov Ruslan o'g'li","Shaxriyor Nuriddinov Navruz ug'li",'Sheroz Yusupov','Shohboz Xushnazarov',"Shohzod Yuldoshev Shuhrat o'g'li",
+    'Ulugbek  Xamroyev Maksudovich',"Umar Dusnazarov Doniyor o'g'li",'Xasan Eshmatov',"Zufar Chorshanbiyev Muzafar o'g'li",]
+requisitions = requisitions.loc [ (requisitions['Approval Path Name'].isin(maintenance_ApprovalPath)) | (requisitions['Created By'].isin(maintenance_Users))]
 
 
 
@@ -53,7 +62,6 @@ for RequisitionNumber, group in requisitions.groupby('Requisition Number'):
         counter += 1
 
 
-requisitions = requisitions[['Requisition Line Description','Requisition Description','Approval Path Name',
- 'Requisition line By','Requisitioned By','Created By',
+requisitions = requisitions[['Requisition Line Description','Requisition Description','Approval Path Name','Created By',
  'Requisitioned Quantity', 'UOMDescription', 'Expected Purchase Price','Total Expected Price',
  'Requisition Number','mergeNumber', 'requiredYear', 'requiredMonth', 'raisedYear', 'raisedMonth', 'Completed Date Time',]]

@@ -2,7 +2,9 @@ from fastapi import APIRouter
 from .. import models
 from ..lib.Analysis import hub,checkBugs
 from ..lib.Analysis.toExcel import writeExcel
+from ..database.DF__wo import wo
 #from ..lib.purch import purchs
+
 
 
 router = APIRouter(

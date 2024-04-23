@@ -15,7 +15,7 @@ def matReport(repMonth, repYear, department, transactions):
   transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
                                   & (~transactions['Reservation Number'].isin(exceptions.inactive_Reservations))
                                   ].copy()
-  
+
   transactions = filterDF(transactions, reference.department_Filters[department])
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
@@ -99,6 +99,17 @@ def matReport(repMonth, repYear, department, transactions):
 
 
 
+  cheQ = rep[['Код товара',	'Материал',	'Кол-во начало',	'Кол-во приход',	'Цена',	'Qty1',	'Sum1',	'Qty2',	'Sum2']]
+  cheQ = cheQ.groupby(['Код товара',	'Материал',	'Цена',	'Qty1',	'Sum1',	'Qty2',	'Sum2']).sum()
+  cheQ.reset_index(inplace=True, drop=False)
+  cheQ.to_excel('cheQ.xlsx', index=False)
+
+
+
+
+
+
+
   ### 6. Поле "Расход"
   rep['Кол-во расход'] =  rep['Кол-во начало'] + rep['Кол-во приход'] # Если списываются
 
@@ -151,6 +162,9 @@ def matReport(repMonth, repYear, department, transactions):
 
   ###Exception do not consider diesel's price
   rep.loc[rep['Код товара']=='06933', 'Цена'] = 0
+  ##########################################################
+  ###Exception price due to 1C
+  rep.loc[rep['Код товара']=='07139', 'Цена'] = 213392.86
   ##########################################################
 
   ### 9. Вычисление сумм
@@ -255,15 +269,15 @@ def matReport(repMonth, repYear, department, transactions):
 
 
 
-  check.to_excel('2. check.xlsx')
-  matRep.to_excel('3. matRep.xlsx')
+  check.to_excel('2. check.xlsx', index=False)
+  matRep.to_excel('3. matRep.xlsx', index=False)
   dalolat.to_excel('4. dalolat.xlsx')
-  view_014.to_excel('4. view_014.xlsx')
-  view_014_G.to_excel('4. view_014_G.xlsx')
-  view_wOff_SGU.to_excel('4. view_wOff_SGU.xlsx')
-  view_wOff_notSGU.to_excel('4. view_wOff_notSGU.xlsx')
-  view_wOff_SGU_G.to_excel('4. view_wOff_SGU_G.xlsx')
-  view_wOff_notSGU_G.to_excel('4. view_wOff_notSGU_G.xlsx')
+  view_014.to_excel('4. view_014.xlsx', index=False)
+  view_014_G.to_excel('4. view_014_G.xlsx', index=False)
+  view_wOff_SGU.to_excel('4. view_wOff_SGU.xlsx', index=False)
+  view_wOff_notSGU.to_excel('4. view_wOff_notSGU.xlsx', index=False)
+  view_wOff_SGU_G.to_excel('4. view_wOff_SGU_G.xlsx', index=False)
+  view_wOff_notSGU_G.to_excel('4. view_wOff_notSGU_G.xlsx', index=False)
   reference.OneCW()
   
     

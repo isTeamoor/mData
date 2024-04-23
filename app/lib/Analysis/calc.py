@@ -1,165 +1,189 @@
 import pandas as pd 
 from ...lib import gen
 from ...database.DF__wo import wo
-from ...database.DF__assets import byAssets
+from ...database.DF__assets import byAssets, checkRelationships
 
 
-##############################
-###-     Sub Functions    -###
-##############################
-def sub_fieldTotal(df, theField, action):
+### Сумма/количество по 1 полю dataframe
+def fieldTotal(df, theField, action, filters=[]):
+    df = gen.filterDF(df, filters)
+
     if action == 'sum':
         output = df[theField].sum()
     if action == 'count':
         output = df[theField].count()
     output = int(output)
-    return output 
 
-def groupby_1(df, groupField, valueField, action):
-    output = df[[groupField, valueField]].groupby(groupField)[valueField]
-
-    if action == 'count':
-        output = output.count()
-    if action == 'sum':
-        output = output.sum()
-
-    output.sort_index(ascending=True, inplace=True)
-    output = output.to_dict()
-    return output
-
-def groupby_2(df, groupField, subgroupField, valueField, action):
-    output = {}
-    for name, content in df[[groupField, subgroupField, valueField]].groupby(groupField):
-        output[name] = groupby_1(content, subgroupField, valueField, action)
-    return output
-
-def groupby_3(df, groupField, subgroupField, lastgroupField, valueField, action):
-    output = {}
-    for name, content in df[[groupField, subgroupField, lastgroupField, valueField]].groupby(groupField):
-        output[name] = groupby_2(content, subgroupField, lastgroupField, valueField, action)
-    return output
-
-def proportion(obj):
-    newObj = {}
-    isContainer = False
-
-    for key, value in obj.items():
-        if type(value) == dict:
-            isContainer = True
-            newObj[key] = proportion(value)
-
-    if not isContainer:
-        summary = sum(obj.values())
-        for key, value in obj.items():
-            newObj[key] = round(obj[key]/summary*100, 1) if summary > 0 else 0
-    return newObj
-
-def simpleCumulate(obj):
-    newObj = {}
-    isContainer = False
-
-    for key, value in obj.items():
-        if type(value) == dict:
-            isContainer = True
-            newObj[key] = simpleCumulate(value)
-
-    if not isContainer:
-        summary = 0
-        print(obj.keys())
-        for key, value in obj.items():
-            summary += value
-            newObj[key] = summary
-
-    return newObj
-
-def cumulate(obj, prevMonthly={}):
-    newObj = {}
-    isContainer = False
-
-    for key, value in obj.items():
-        if type(value) == dict:
-            isContainer = True
-            newObj[key] = cumulate(value, newObj[list(newObj.keys())[-1]] if len(newObj.keys())>0 else {})
-
-    if not isContainer:
-        for key, value in obj.items():
-            newObj[key] = (value) + (prevMonthly[key] if key in prevMonthly else 0)
-
-        for key, value in prevMonthly.items():
-            if key not in newObj:
-                newObj[key] = value
-
-    return newObj
+    return {'data':output}
 
 
-
-
-##############################
-###-     Main Functions   -###
-##############################
-
-
-def fieldTotal(df, theField, action, filters=[]):
+### Сумма/количество по 1 полю dataframe с разделением по годам 
+def fieldTotal_yearly(df, yearfield, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
-    return {'data':sub_fieldTotal(df, theField, action)}
 
-def fieldTotal_by_year(df, yearfield, theField, action, filters=[]):
-    df = gen.filterDF(df, filters)
-    data = groupby_1(df, yearfield, theField, action)
+    data = gen.groupby_1(df, yearfield, theField, action)
     output = {'data': data, 
-              'proportion':proportion(data),
-              'cumulative':simpleCumulate(data)}
+              'proportion':gen.proportion(data),
+              'cumulative':gen.simpleCumulate(data)}
+    
     return output
 
-def fieldTotal_by_year_month(df, yearfield, monthfield, theField, action, filters=[]):
+
+### Сумма/количество по 1 полю dataframe с разделением по годам и месяцам
+def fieldTotal_monthly(df, yearfield, monthfield, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
-    data = groupby_2(df, yearfield, monthfield, theField, action)
+
+    data = gen.groupby_2(df, yearfield, monthfield, theField, action)
     output = {'data':data, 
-              'proportion':proportion(data), 
-              'cumulative':simpleCumulate(data)}
+              'proportion':gen.proportion(data), 
+              'cumulative':gen.simpleCumulate(data)}
+    
     return output
 
-def fieldTotal_by_Assets_year(df, yearfield, theField, action, filters=[]):
+
+### Сумма/количество по 2 полям dataframe с разделением по годам
+def coupleFields_yearly(df, yearfield, categoryField, valueField, action, filters=[]):
     df = gen.filterDF(df, filters)
+
+    data = gen.groupby_2(df, yearfield, categoryField, valueField, action)
+    output = {'data':data, 
+              'proportion':gen.proportion(data),
+              'cumulative':gen.cumulate(data)}
+    
+    return output
+
+
+### Сумма/количество по 2 полям dataframe с разделением по годам и месяцам
+def coupleFields_monthly(df, yearfield, monthfield, categoryField, valueField, action, filters=[]):
+    df = gen.filterDF(df, filters)
+
+    data = gen.groupby_3(df, yearfield, monthfield, categoryField, valueField, action)
+    output = {'data':data, 
+              'proportion':gen.proportion(data),
+              'cumulative':gen.cumulate(data)}
+    
+    return output
+
+
+### Сумма/количество по 1 полю dataframe по Assets (rooted) с разделением по годам
+def fieldTotal_Assets_yearly(df, yearfield, theField, action, filters=[]):
+    df = gen.filterDF(df, filters)
+
     output = {}
-    for year, group in df[[yearfield, theField, 'Asset ID']].groupby(yearfield):
+    for year, group in df[[yearfield, 'Asset ID', theField]].groupby(yearfield):
         source = group.groupby('Asset ID')[theField]
         if action == 'count':
             source = source.count()
         if action == 'sum':
             source = source.sum()
         output[year] = byAssets(source, theField)
+
     output = {'data':output}
     return output
 
-def fieldTotal_by_Assets_year_month(df, yearfield, monthfield, theField, action, filters=[]):
+
+### Сумма/количество по 1 полю dataframe по Assets (rooted) с разделением по годам и месяцам
+def fieldTotal_Assets_monthly(df, yearfield, monthfield, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
+
     output = {}
-    for year, content in df[[yearfield, monthfield, theField, 'Asset ID']].groupby(yearfield):
+    for year, content in df[[yearfield, monthfield, 'Asset ID', theField]].groupby(yearfield):
         output[year] = {}
-        for month, group in content[[monthfield, theField, 'Asset ID']].groupby(monthfield):
-            source = group.groupby('Asset ID')[theField]
+        for month, group in content[[monthfield, 'Asset ID', theField]].groupby(monthfield):
+            source = group.groupby('Asset ID')
             if action == 'count':
                 source = source.count()
             if action == 'sum':
                 source = source.sum()
             output[year][month] = byAssets(source, theField)
+
     output = {'data':output}
     return output
 
-def coupleFields_by_year(df, yearfield, categoryField, valueField, action, filters=[]):
-    df = gen.filterDF(df, filters)
-    data = groupby_2(df, yearfield, categoryField, valueField, action)
-    output = {'data':data, 
-              'proportion':proportion(data),
-              'cumulative':cumulate(data)}
-    return output
 
-def coupleFields_by_year_month(df, yearfield, monthfield, categoryField, valueField, action, filters=[]):
-    df = gen.filterDF(df, filters)
-    data = groupby_3(df, yearfield, monthfield, categoryField, valueField, action)
-    output = {'data':data, 
-              'proportion':proportion(data),
-              'cumulative':cumulate(data)}
-    return output
+### Сортировка материальных расходов по assets с детализацией по JobTypes
+def sorted_matcost_assets(df, filters=[]):
+    CM = ['Corrective', 'Corrective after STPdM']
+    PM = ['Strategy', 'Strategy Predictive Monitoring/Fault Diagnostic', 'Operational Jobs', 'Modifications','Strategy Preventative','Condition Based Monitoring','Strategy Look Listen Feel']
+    OT = ['PPE','Special Tooling','Rework','Construction/Commissioning Works','Administration','Service for Air Product','Vehicle Reservations',
+          'undefined', 'Capital or Project Initiatives','Non-Maintanence Reservations', '03']
 
+    df = gen.filterDF(df, filters)
+
+
+    df.loc[:, ['Total cost', 'PMs cost', 'CMs cost', 'OTs cost']] = 0
+
+    modDF = df.copy()
+    for i in df.index:
+        modDF.loc[i,'Total cost' ] = df.loc[i,'Actual Cost']
+        if df.loc[i, 'Job Type Description'] in CM:
+            modDF.loc[i,'CMs cost'] = df.loc[i,'Actual Cost']
+        if df.loc[i, 'Job Type Description'] in PM:
+            modDF.loc[i,'PMs cost'] = df.loc[i,'Actual Cost']
+        if df.loc[i, 'Job Type Description'] in OT:
+            modDF.loc[i,'OTs cost'] = df.loc[i,'Actual Cost']
+    
+    
+    modDF = modDF.groupby(['Asset Description', 'Asset Number',]).sum()
+    modDF.reset_index(drop=False, inplace=True)
+
+    modDF['CMs'] = modDF['CMs cost']/ modDF['Total cost']
+    modDF['PMs'] = modDF['PMs cost']/ modDF['Total cost']
+    modDF['OTs'] = modDF['OTs cost']/ modDF['Total cost']
+    
+    modDF = modDF[['Asset Description', 'Asset Number', 'Total cost', 'CMs', 'PMs', 'OTs','CMs cost', 'PMs cost', 'OTs cost']]
+    modDF = modDF.sort_values(by=['Total cost'], ascending = False)
+
+    return modDF
+
+
+### Сортировка количества raised WO по assets с детализацией по JobTypes
+def sorted_woRaised_assets(df, filters=[]):
+    df = gen.filterDF(wo, filters)
+
+    df = df[['Work Order ID','Job Type Description', 'Asset Description','Asset Number', 'raisedMonth']]
+
+    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    CM = ['Corrective', 'Corrective after STPdM']
+    PM = ['Strategy', 'Strategy Predictive Monitoring/Fault Diagnostic', 'Operational Jobs', 'Modifications','Strategy Preventative','Condition Based Monitoring','Strategy Look Listen Feel']
+    OT = ['PPE','Special Tooling','Rework','Construction/Commissioning Works','Administration','Service for Air Product','Vehicle Reservations',
+          'undefined', 'Capital or Project Initiatives','Non-Maintanence Reservations', '03']
+
+
+
+
+
+
+
+
+
+
+
+
+
+    df.loc[:, ['Total raised', 'PMs raised', 'CMs raised', 'OTs raised','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']] = 0
+
+
+    modDF = df.copy()
+    for i in df.index:
+        modDF.loc[i,'Total raised' ] = 1
+        modDF.loc[ i, months[df.loc[i, 'raisedMonth'] - 1] ] = 1
+        if df.loc[i, 'Job Type Description'] in CM:
+            modDF.loc[i,'CMs raised'] = 1
+        if df.loc[i, 'Job Type Description'] in PM:
+            modDF.loc[i,'PMs raised'] = 1
+        if df.loc[i, 'Job Type Description'] in OT:
+            modDF.loc[i,'OTs raised'] = 1
+
+
+    modDF = modDF.groupby(['Asset Description', 'Asset Number']).sum()
+    modDF.reset_index(drop=False, inplace=True)
+
+    modDF['CMs'] = modDF['CMs raised']/ modDF['Total raised']
+    modDF['PMs'] = modDF['PMs raised']/ modDF['Total raised']
+    modDF['OTs'] = modDF['OTs raised']/ modDF['Total raised']
+
+    modDF = modDF[['Asset Description', 'Asset Number', 'Total raised', 'CMs', 'PMs', 'OTs','CMs raised', 'PMs raised', 'OTs raised', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']]
+    modDF = modDF.sort_values(by=['Total raised'], ascending = False)
+
+    return modDF

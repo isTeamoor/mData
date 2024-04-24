@@ -36,7 +36,8 @@ def fieldTotal_monthly(df, yearfield, monthfield, theField, action, filters=[]):
     data = gen.groupby_2(df, yearfield, monthfield, theField, action)
     output = {'data':data, 
               'proportion':gen.proportion(data), 
-              'cumulative':gen.simpleCumulate(data)}
+              'cumulative':gen.simpleCumulate(data),
+              'simple_solidCumulative':gen.simple_solidCumulate(data)}
     
     return output
 
@@ -60,7 +61,8 @@ def coupleFields_monthly(df, yearfield, monthfield, categoryField, valueField, a
     data = gen.groupby_3(df, yearfield, monthfield, categoryField, valueField, action)
     output = {'data':data, 
               'proportion':gen.proportion(data),
-              'cumulative':gen.cumulate(data)}
+              'cumulative':gen.cumulate(data),
+              'solidCumulative':gen.solidCumulate(data)}
     
     return output
 

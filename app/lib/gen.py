@@ -114,6 +114,54 @@ def cumulate(obj, prevMonthly={}):
     return newObj
 
 
+def simple_solidCumulate(obj, prevYear={}):
+    newObj = {}
+    isContainer = False
+
+    for key, value in obj.items():
+        if type(value) == dict:
+            isContainer = True
+            newObj[key] = simple_solidCumulate(value, newObj[ list(newObj.keys())[-1] ] if len(newObj.keys())>0 else {})
+
+    if not isContainer:
+        summary = prevYear[ list(prevYear.keys())[-1] ] if len( prevYear.keys() )>0 else 0
+        for key, value in obj.items():
+            summary += value
+            newObj[key] = summary
+
+    return newObj
+
+#print('preveee: ', prev if not newObj else newObj[ list(newObj.keys())[-1] ] )
+#print('\nkey: ', key, '\nvalue: ', value, '\nprev: ', prev, '\nnewobj: ', newObj)
+def solidCumulate(obj, prev={}):
+    newObj = {}
+    isContainer = False
+    isSubContainer = False
+
+    for key, value in obj.items():
+        if type(value) == dict:
+            isSubContainer = True
+            for k, v in value.items():
+                if type(v) == dict:
+                    isContainer = True
+                    isSubContainer = False
+
+        if isContainer:
+            newObj[key] = solidCumulate(value, newObj[ list( newObj.keys() )[-1] ] if len(newObj.keys())>0 else {})
+
+        if isSubContainer:
+            prevPeriod = prev[ list( prev.keys() )[-1] ] if prev else {}
+            newObj[key] = solidCumulate(value, prevPeriod if not newObj else newObj[ list(newObj.keys())[-1] ])
+
+        if not isContainer and not isSubContainer:
+            newObj[key] = value + (prev[key] if key in prev else 0)
+            for i,x in prev.items():
+                if i not in newObj:
+                    newObj[i] = x
+
+    return newObj
+
+
 
 def fillExcelSheet(workbook, sheetname, df):
     worksheet = workbook.add_worksheet(sheetname)

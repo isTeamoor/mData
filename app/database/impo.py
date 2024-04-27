@@ -1,7 +1,5 @@
 import pandas as pd
 
-budget       = pd.read_excel("app/database/csv/budget.xlsx")
-
 wo           = pd.read_csv("app/database/csv/ccc_wo_wo.csv",           encoding="utf-8")
 priority     = pd.read_csv("app/database/csv/ccc_wo_priority.csv",     encoding="utf-8")
 departments  = pd.read_csv("app/database/csv/ccc_wo_departments.csv",  encoding="utf-8")

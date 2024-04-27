@@ -163,9 +163,6 @@ def matReport(repMonth, repYear, department, transactions):
   ###Exception do not consider diesel's price
   rep.loc[rep['Код товара']=='06933', 'Цена'] = 0
   ##########################################################
-  ###Exception price due to 1C
-  rep.loc[rep['Код товара']=='07139', 'Цена'] = 213392.86
-  ##########################################################
 
   ### 9. Вычисление сумм
   rep['Сумма начало']  = rep['Кол-во начало']  * rep['Цена']
@@ -199,7 +196,6 @@ def matReport(repMonth, repYear, department, transactions):
   rep = rep.loc[~rep['Account'].isna()]
   rep.fillna({'Код товара':'undefined','Account':'undefined','Материал':'undefined',
               'Ед.изм.':'undefined','Цена':-1 }, inplace=True)
-
   matRep = rep.groupby(['Код товара','Account','Материал','Ед.изм.','Цена']).sum()
   matRep.reset_index(drop=False, inplace=True)
   matRep = matRep[['Account','Код товара','Материал','Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход','Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец',]]
@@ -215,7 +211,6 @@ def matReport(repMonth, repYear, department, transactions):
 
 
 
-
   ### 13. Подготовка Акта ввода в эксплуатацию (внутренний)
   dalolat = rep.loc[ rep['Кол-во расход']>0 ].copy()
   dalolat['Кол-во расход'] = dalolat['Кол-во расход'] - dalolat['Кол-во возврат']
@@ -225,8 +220,6 @@ def matReport(repMonth, repYear, department, transactions):
   
   dalolat = dalolat[['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By','Цена', 'Сумма расход']]
   dalolat = dalolat.groupby(['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By',]).sum()
-
-  
 
 
 

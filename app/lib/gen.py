@@ -131,8 +131,7 @@ def simple_solidCumulate(obj, prevYear={}):
 
     return newObj
 
-#print('preveee: ', prev if not newObj else newObj[ list(newObj.keys())[-1] ] )
-#print('\nkey: ', key, '\nvalue: ', value, '\nprev: ', prev, '\nnewobj: ', newObj)
+
 def solidCumulate(obj, prev={}):
     newObj = {}
     isContainer = False

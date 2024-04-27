@@ -1,48 +1,41 @@
-from .impo import budget
 import pandas as pd
 
-
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-
-budget['Account Code'] = budget['Account Code'].astype('str')
-
-
-for month in months:
-    budget[month] = budget[month].fillna(0)
-
-
-budget = budget[['Account Code', 'Account Code Description','Total','Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov','Dec']]
-
-
-
-
-
-
-
-budget_cofe = pd.DataFrame(
+outsourceBudg = pd.DataFrame(
     [
-        ['Departmental Training',        '210500000000', 1000, 1000,8000,0,1000,1000,1000,8000,1000,1000,1000,1000],
-        ['Maintenance Scaffolding',      '210108010000', 30000,30000,30000,20000,20000,20000,20000,20000,20000,20000,20000,20001],
-        ['Maintenance Insulation',       '210108020000', 50000,	100000,	100000,	100000,	100000,	100000,	100000,	100000,	100000,	100000,	100000,	100000],
-        ['Smaller Modifications',        '210109140000', 10000,	10000,	5000,	5000,	5000,	5000,	5000,	10000,	10000,	10000,	10000,	10000],
-        ['Mechanical Services',          '210109090000', 1292,	1292,	1292,	1292,	1292,	1292,	1292,	1292,	1292,	1292,	1292,	1292],
-        ['Maintenance Welding',          '210109010000', 20000,	20000,	20000,	20000, 20000,	20000,	20000,	20000,	20000,	20000,	20000,	20000],
-        ['Electrical Spares',	         '210109030000', 2000,	2000,	2000,	2000,	2000,	2000,	2000,	2000,	2000,	2000,	2000,	2000],
-        ['General Maintenance Material', '210109130000', 4000,	4000,	4000,	4000,	4000,	4000,	4000,	4000,	4000,	4000,	4000,	4000],
-        ['Lubricants',                   '210106100000', 3000,	3000,	3000,	3000,	3000,	3000,	3000,	3000,	3000,	3000,	3000,	3000],
-        ['Lab Equipment <$5000 USD',     '210110010000', 50000,	50000,	50000,	22000,	12000,	11000,	10000,	10000,	10000,	10000,	10000,	10000],
-        ['Tools Equipment <$5000 USD',   '210110040000', 800000,	800000,	200000,	200000,	200000,	100000,	100000,	100000,	100000,	100000,	100000,	100000]
-    ],
-    columns = ['Account Code Description', 'Account Code', *months]
+        {'Currency':'uzs','Company name':'UNGM-DR', 'SoW':'Rotating Services','Contract':'UZGTL-CON-2262','opex':'-','working capital':'+','capex':'-','Total':1320000000, 'Jan':110000000, 'Feb':110000000, 'Mar':110000000, 'Apr':110000000, 'May':110000000, 'Jun':110000000, 'Jul':110000000, 'Aug':110000000, 'Sep':110000000, 'Oct':110000000, 'Nov':110000000, 'Dec':110000000},
+        {'Currency':'uzs','Company name':'UZPROMARM', 'SoW':'Valve repair Services','Contract':'UZGTL-CON-2677','opex':'-','working capital':'+','capex':'-','Total':400000000, 'Jan':0, 'Feb':0, 'Mar':100000000, 'Apr':0, 'May':0, 'Jun':100000000, 'Jul':0, 'Aug':0, 'Sep':100000000, 'Oct':0, 'Nov':0, 'Dec':100000000},
+        {'Currency':'uzs','Company name':'Uzbekximmash', 'SoW':'Rotating Services','Contract':'UZGTL-CON-2487','opex':'-','working capital':'+','capex':'-','Total':600000000, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':200000000, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':200000000, 'Nov':0, 'Dec':200000000},
+        {'Currency':'uzs','Company name':'Maxsusenergogaz', 'SoW':'Mechanical services','Contract':'UZGTL-CON-23-904','opex':'-','working capital':'+','capex':'-','Total':1500000000, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':600000000, 'May':0, 'Jun':0, 'Jul':0, 'Aug':300000000, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':600000000},
+        {'Currency':'uzs','Company name':'Maxsusenergogaz', 'SoW':'Scaffolding','Contract':'UZGTL-CON-23-984','opex':'-','working capital':'+','capex':'-','Total':1800000000, 'Jan':250000000, 'Feb':250000000, 'Mar':200000000, 'Apr':100000000, 'May':100000000, 'Jun':100000000, 'Jul':100000000, 'Aug':100000000, 'Sep':100000000, 'Oct':200000000, 'Nov':100000000, 'Dec':200000000},
+        {'Currency':'uzs','Company name':'Maxsusenergogaz', 'SoW':'Insulation ','Contract':'UZGTL-CON-23-985','opex':'-','working capital':'+','capex':'-','Total':1900000000, 'Jan':250000000, 'Feb':250000000, 'Mar':100000000, 'Apr':100000000, 'May':100000000, 'Jun':100000000, 'Jul':100000000, 'Aug':100000000, 'Sep':100000000, 'Oct':100000000, 'Nov':300000000, 'Dec':300000000},
+        {'Currency':'uzs','Company name':'Maxsusenergogaz', 'SoW':'Welding & painting','Contract':'UZGTL-CON-23-182','opex':'-','working capital':'+','capex':'-','Total':3600000000, 'Jan':300000000, 'Feb':300000000, 'Mar':300000000, 'Apr':300000000, 'May':300000000, 'Jun':300000000, 'Jul':300000000, 'Aug':300000000, 'Sep':300000000, 'Oct':300000000, 'Nov':300000000, 'Dec':300000000},
+        {'Currency':'uzs','Company name':'Maxsusenergogaz', 'SoW':'HVAC','Contract':'UZGTL-CON-23-826','opex':'+','working capital':'-','capex':'-','Total':4800000000, 'Jan':400000000, 'Feb':400000000, 'Mar':400000000, 'Apr':400000000, 'May':400000000, 'Jun':400000000, 'Jul':400000000, 'Aug':400000000, 'Sep':400000000, 'Oct':400000000, 'Nov':400000000, 'Dec':400000000},
+        {'Currency':'uzs','Company name':'Maxsusenergogaz', 'SoW':'FGS','Contract':'UZGTL-CON-23-093','opex':'+','working capital':'-','capex':'-','Total':3480000000, 'Jan':290000000, 'Feb':290000000, 'Mar':290000000, 'Apr':290000000, 'May':290000000, 'Jun':290000000, 'Jul':290000000, 'Aug':290000000, 'Sep':290000000, 'Oct':290000000, 'Nov':290000000, 'Dec':290000000},
+        {'Currency':'uzs','Company name':'SGCC', 'SoW':'Additional Services','Contract':'UZGTL-CON-2988','opex':'-','working capital':'+','capex':'-','Total':600000000, 'Jan':50000000, 'Feb':50000000, 'Mar':50000000, 'Apr':50000000, 'May':50000000, 'Jun':50000000, 'Jul':50000000, 'Aug':50000000, 'Sep':50000000, 'Oct':50000000, 'Nov':50000000, 'Dec':50000000},
+        {'Currency':'uzs','Company name':'Jet Washing equipment', 'SoW':'Additional Services','Contract':'????','opex':'-','working capital':'+','capex':'-','Total':100000000, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':50000000, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':50000000},
+        {'Currency':'uzs','Company name':'Oil analysis', 'SoW':'Additional Services','Contract':'????','opex':'+','working capital':'-','capex':'-','Total':800000000, 'Jan':200000000, 'Feb':0, 'Mar':0, 'Apr':200000000, 'May':0, 'Jun':0, 'Jul':200000000, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':200000000, 'Dec':0},
+        {'Currency':'usd','Company name':'Team industrial services', 'SoW':'Static services','Contract':'UZGTL-CON-2751','opex':'-','working capital':'+','capex':'-','Total':500000, 'Jan':0, 'Feb':0, 'Mar':125000, 'Apr':0, 'May':0, 'Jun':125000, 'Jul':0, 'Aug':0, 'Sep':125000, 'Oct':0, 'Nov':0, 'Dec':125000},
+        {'Currency':'usd','Company name':'HIMA', 'SoW':'Instrumentation Services','Contract':'UZGTL-CON-2250','opex':'+','working capital':'-','capex':'-','Total':144374, 'Jan':144374, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Mitsubishi', 'SoW':'Rotating Services','Contract':'UZGTL-CON-2019','opex':'-','working capital':'+','capex':'-','Total':200000, 'Jan':0, 'Feb':0, 'Mar':100000, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':100000, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Siemens', 'SoW':'Rotating Services','Contract':'????','opex':'-','working capital':'+','capex':'-','Total':200000, 'Jan':0, 'Feb':0, 'Mar':100000, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':100000, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'ABB Service', 'SoW':'Electrical Services','Contract':'UZGTL-CON-24-006','opex':'+','working capital':'-','capex':'-','Total':50000, 'Jan':50000, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Siemens', 'SoW':'VSD repair service','Contract':'????','opex':'+','working capital':'-','capex':'-','Total':50000, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':50000, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'NDE Inspection services', 'SoW':'Additional Services','Contract':'????','opex':'-','working capital':'+','capex':'-','Total':200000, 'Jan':0, 'Feb':0, 'Mar':100000, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':100000, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Doosan', 'SoW':'PAUT for LTFT reactors','Contract':'????','opex':'-','working capital':'-','capex':'+','Total':200000, 'Jan':0, 'Feb':0, 'Mar':100000, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':100000, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Sasol', 'SoW':'License fee','Contract':'????','opex':'+','working capital':'-','capex':'-','Total':25197561, 'Jan':17197561, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':8000000, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Sasol', 'SoW':'Licensor service','Contract':'????','opex':'+','working capital':'-','capex':'-','Total':697846, 'Jan':0, 'Feb':697846, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'ESA(Sasol, HTAS, Chevron)', 'SoW':'ESA/TSA','Contract':'UZGTL-CON-0026','opex':'+','working capital':'-','capex':'-','Total':7165848, 'Jan':597154, 'Feb':597154, 'Mar':597154, 'Apr':597154, 'May':597154, 'Jun':597154, 'Jul':597154, 'Aug':597154, 'Sep':597154, 'Oct':597154, 'Nov':597154, 'Dec':597154},
+        {'Currency':'usd','Company name':'Emerson', 'SoW':'Vendor commissioning services','Contract':'UZGTL-CON-2142','opex':'-','working capital':'-','capex':'+','Total':63661, 'Jan':63661, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Maintenance Experts', 'SoW':'CMMS','Contract':'UZGTL-CON-23-433','opex':'+','working capital':'-','capex':'-','Total':73027, 'Jan':6085, 'Feb':6085, 'Mar':6085, 'Apr':6085, 'May':6085, 'Jun':6085, 'Jul':6085, 'Aug':6085, 'Sep':6085, 'Oct':6085, 'Nov':6085, 'Dec':6085},
+        {'Currency':'usd','Company name':'Nol-Tec Systems', 'SoW':'Vendor commissioning services','Contract':'UZGTL-CON-1799','opex':'-','working capital':'-','capex':'+','Total':43000, 'Jan':43000, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'GE Oil and Gas', 'SoW':'Vendor commissioning services','Contract':'UZGTL-CON-1790','opex':'-','working capital':'-','capex':'+','Total':415896, 'Jan':415896, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'usd','Company name':'Severn Glocon', 'SoW':'Instrumentation Services','Contract':'UZGTL-CON-2599','opex':'-','working capital':'+','capex':'-','Total':300000, 'Jan':0, 'Feb':100000, 'Mar':0, 'Apr':0, 'May':0, 'Jun':100000, 'Jul':0, 'Aug':0, 'Sep':100000, 'Oct':0, 'Nov':0, 'Dec':0}
+    ]
 )
-budget_cofe.loc[len(budget_cofe)] = budget_cofe.sum(numeric_only=True)
-budget_cofe.loc[len(budget_cofe)-1, 'Account Code Description'] = 'Total'
-budget_cofe['Summary'] = budget_cofe.sum(axis=1, numeric_only=True)
 
-
-budget_cofe_mod = pd.DataFrame()
-for i, row in budget_cofe.loc[budget_cofe['Account Code Description']!='Total'].iterrows():
-    for m, month in enumerate(months):
-        record = pd.DataFrame({'Account Code Description':row['Account Code Description'], 'month':m+1, 'value':row[month], 'year':2023}, index=[0])
-        budget_cofe_mod = pd.concat([budget_cofe_mod, record]).reset_index(drop=True)
+outsourceBudg_usd = outsourceBudg.copy()
+for i in outsourceBudg_usd.loc[ outsourceBudg_usd['Currency']=='uzs' ].index:
+    for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Total']:
+        outsourceBudg_usd.loc[i,m] = outsourceBudg_usd.loc[i,m] / 12500
+outsourceBudg_usd.loc[len(outsourceBudg_usd)]=outsourceBudg_usd.sum(numeric_only=True)
+outsourceBudg_usd.loc[len(outsourceBudg_usd)-1, 'Company name'] = 'Summary'

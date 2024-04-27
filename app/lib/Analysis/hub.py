@@ -3,7 +3,6 @@ from ...lib import gen
 from ...database.DF__wo import wo
 from ...database.DF__spares import spares
 from ...database.DF__trades import trades
-from ...database.DF__budget import budget_cofe_mod
 from ...database.DF__requisitions import requisitions
 
 

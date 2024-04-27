@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from .. import models
 from ..database.DF__transactions import transactions
 from ..lib.MaterialReports import regular
-from ..lib.KPI.report import draw_report
+from ..lib.KPI import report
 
 
 router = APIRouter(
@@ -18,5 +18,6 @@ def get_matrep(month:int, department:str):
 
 @router.get('/kpiReport')
 def get_kpirep():
-    data = draw_report()
-    return data
+    #data = draw_report()
+    report.test()
+    return {'/kpiReport':'ok'}

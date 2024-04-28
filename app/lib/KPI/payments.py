@@ -1,8 +1,8 @@
 import pandas as pd
-from ...database.DF__budget import outsourceBudg, outsourceBudg_usd
+from ...database.DF__budget import outsourceBudg
 
 
-def getPayments():
+def getPayments(department=False):
     payments = pd.read_excel('1c.xls')
 
     payments['Дата оплаты'] = pd.to_datetime(payments['Дата оплаты'], format="%d.%m.%Y")
@@ -29,7 +29,11 @@ def getPayments():
 
     payments = payments.loc[ (payments['Status'] == 'Оплачен полностью') & ( payments['paidYear'] == 2024) ][['Initiator','Currency','Company name','Contract','Scope','paidMonth','Sum']]
 
-
+    '''
+    ### Exception старый контракт с 2023 года Махсусэнергогаз. Последняя оплата была в январе, стоимость закрыта
+    payments.loc[ payments['Contract'] == 'UZGTL-CON-2858', 'Contract' ] = 'UZGTL-CON-23-984'
+    ############################################################################################################
+    '''
 
 
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -102,15 +106,9 @@ def getPayments():
             payments.loc[i,m] = payments.loc[i,m] * 1.07
 
 
-    return payments
-
-
-
-def departmentPayments(department):
-    payments = getPayments()
-
-    payments = payments.loc[ payments['Department'] == department ]
-
+    
+    if department:
+        payments = payments.loc[ payments['Department'] == department ]
 
 
     payments.loc[ payments.index[-1] + 1 ] = payments.loc[ payments['Currency'] == 'uzs' ].sum(numeric_only=True)
@@ -130,7 +128,197 @@ def departmentPayments(department):
 
     
     payments.loc[ payments.index[-1]+1 ] = payments.loc[ payments['Company name'].isin(['Summary local contracts in usd', 'Summary foreign contracts in usd']) ].sum(numeric_only=True)
-    payments.loc[ payments.index[-1], 'Company name'] = 'Summary all payments in usd'
+    payments.loc[ payments.index[-1], 'Company name'] = 'Summary all contracts in usd'
 
 
-    payments.to_excel('payments.xlsx')
+    return payments   
+
+
+def summaryData(department = False):
+    payments = getPayments(department)
+
+    output = pd.DataFrame([
+        {'':'Total budget, usd'},
+        {'':'Total paid, usd'},
+        {'':'Total budget used, %'},
+
+        {'':'Local contracts budget, usd'},
+        {'':'Local contracts budget paid, usd'},
+        {'':'Local contracts budget used, %'},
+
+        {'':'Local contracts budget, uzs'},
+        {'':'Local contracts budget paid, uzs'},
+        {'':'Local contracts budget used, %'},
+
+        {'':'Foreign contracts budget, usd'},
+        {'':'Foreign contracts budget paid, usd'},
+        {'':'Foreign contracts budget used, %'},
+    ])
+
+    struct = [
+        'Summary all contracts in usd',
+        'Summary all contracts in usd',
+        '',
+        'Summary local contracts in usd',
+        'Summary local contracts in usd',
+        '',
+        'Summary local contracts in uzs',
+        'Summary local contracts in uzs',
+        '',
+        'Summary foreign contracts in usd',
+        'Summary foreign contracts in usd',
+        ''
+    ]
+
+    
+    for m in ['Sum', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+        for i in range(0, 12, 3):
+            output.loc[ i, m ] = outsourceBudg.loc[ outsourceBudg['Company name'] == struct[i], m ].item()
+        for i in range(1, 12, 3):
+            output.loc[ i, m ] = payments.loc[ payments['Company name'] == struct[i], m ].item() 
+        for i in range(2, 12, 3):
+            output.loc[ i, m ] = output.loc[ i-1, m ].item() / output.loc[ i-2, m ].item()
+
+    output.loc[ 12, '' ] = 'Cumulative'
+    
+    for i in range(0, 12):
+        output.loc[ i + 13, '' ] = output.loc[ i, '' ]
+        sum = 0
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            sum += output.loc[ i, m ].item()
+            output.loc[ i + 13, m ] = sum 
+    
+    for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+        for i in range(15, 25, 3):
+            output.loc[ i, m ] = output.loc[ i-1, m ].item() / output.loc[ i-2, m ].item()
+    
+
+    output.to_excel('summaryData.xlsx')
+
+
+def detailedData(department = False):
+    payments = getPayments(department)
+
+    output = pd.DataFrame([{'Contract':'Local contracts execution:'},])
+    
+    i = -2
+    for x in outsourceBudg.loc[ outsourceBudg['Currency'] == 'uzs' ].index:
+        i += 3
+        for m in ['Company name', 'Contract', 'Sum', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            output.loc[ i, m ] = outsourceBudg.loc[ x, m ]
+            if payments.loc[ payments['Contract'] == outsourceBudg.loc[ x, 'Contract' ] ].empty:
+                output.loc[ i + 1, m ] = 0
+            else:
+                output.loc[ i + 1, m ] = payments.loc[ payments['Contract'] == outsourceBudg.loc[ x, 'Contract' ], m ].item()
+            output.loc[ i + 2, m ] = (output.loc[ i + 1, m ] /  output.loc[ i, m ]) if m not in ['Company name', 'Contract'] else ''
+
+    for x in payments.loc[ (~(payments['Contract'].isin(outsourceBudg['Contract']))) & (payments['Currency'] == 'uzs') ].index:
+        i += 3
+        for m in ['Company name', 'Contract', 'Sum', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            output.loc[ i, m ] = 0
+            output.loc[ i + 1, m ] = payments.loc[ x, m ]
+            output.loc[ i + 2, m ] = 0
+
+
+
+
+    i += 3
+    output.loc[ i, 'Contract' ] = 'Foreign contracts execution:'
+
+    i -= 2
+    for x in outsourceBudg.loc[ outsourceBudg['Currency'] == 'usd' ].index:
+        i += 3
+        for m in ['Company name', 'Contract', 'Sum', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            output.loc[ i, m ] = outsourceBudg.loc[ x, m ]
+            if payments.loc[ payments['Contract'] == outsourceBudg.loc[ x, 'Contract' ] ].empty:
+                output.loc[ i + 1, m ] = 0
+            else:
+                output.loc[ i + 1, m ] = payments.loc[ payments['Contract'] == outsourceBudg.loc[ x, 'Contract' ], m ].item()
+            output.loc[ i + 2, m ] = (output.loc[ i + 1, m ] /  output.loc[ i, m ]) if m not in ['Company name', 'Contract'] else ''
+
+    for x in payments.loc[ (~(payments['Contract'].isin(outsourceBudg['Contract']))) & ( (payments['Currency'] == 'usd') | (payments['Currency'] == 'eur') ) ].index:
+        i += 2
+        for m in ['Company name', 'Contract', 'Sum', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            output.loc[ i, m ] = 0
+            output.loc[ i + 1, m ] = payments.loc[ x, m ]
+            output.loc[ i + 2, m ] = 0
+
+
+    
+    ### Cumulative
+
+    i += 1
+    output.loc[ i, 'Contract' ] = 'Local contracts cumulative execution:'
+    
+    start_index = output.loc[ output['Contract'] == 'Local contracts execution:' ].index.to_list()[0] + 1
+    finish_index = output.loc[ output['Contract'] == 'Foreign contracts execution:' ].index.to_list()[0]
+
+    
+    for x in range(start_index, finish_index, 3):
+        i += 1
+        output.loc[ i, 'Company name' ] = output.loc[ x, 'Company name' ]
+        output.loc[ i, 'Contract' ] = output.loc[ x, 'Contract' ]
+        sum = 0
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            sum += output.loc[ x, m ]
+            output.loc[ i, m ] = sum
+        
+        i += 1
+        output.loc[ i, 'Company name' ] = output.loc[ x + 1, 'Company name' ]
+        output.loc[ i, 'Contract' ] = output.loc[ x + 1, 'Contract' ]
+        sum = 0
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            sum += output.loc[ x + 1, m ]
+            output.loc[ i, m ] = sum
+
+        i += 1
+        output.loc[ i, 'Company name' ] = ''
+        output.loc[ i, 'Contract' ] = ''
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            if output.loc[ i-2, m ].item() != 0:
+                output.loc[ i, m ] = output.loc[ i-1, m ].item() / output.loc[ i-2, m ].item()
+            else:
+                output.loc[ i, m ] = 0
+
+
+
+
+    i += 1
+    output.loc[ i, 'Contract' ] = 'Foreign contracts cumulative execution:'
+    
+    start_index = output.loc[ output['Contract'] == 'Foreign contracts execution:' ].index.to_list()[0] + 1
+    finish_index = output.loc[ output['Contract'] == 'Local contracts cumulative execution:' ].index.to_list()[0]
+
+    
+    for x in range(start_index, finish_index, 3):
+        i += 1
+        output.loc[ i, 'Company name' ] = output.loc[ x, 'Company name' ]
+        output.loc[ i, 'Contract' ] = output.loc[ x, 'Contract' ]
+        sum = 0
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            sum += output.loc[ x, m ]
+            output.loc[ i, m ] = sum
+        
+        i += 1
+        output.loc[ i, 'Company name' ] = output.loc[ x + 1, 'Company name' ]
+        output.loc[ i, 'Contract' ] = output.loc[ x + 1, 'Contract' ]
+        sum = 0
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            sum += output.loc[ x + 1, m ]
+            output.loc[ i, m ] = sum
+
+        i += 1
+        output.loc[ i, 'Company name' ] = ''
+        output.loc[ i, 'Contract' ] = ''
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
+            if output.loc[ i-2, m ].item() != 0:
+                output.loc[ i, m ] = output.loc[ i-1, m ].item() / output.loc[ i-2, m ].item()
+            else:
+                output.loc[ i, m ] = 0
+
+    
+
+    output = output[['Company name', 'Contract', 'Sum', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']]
+    output.to_excel('detailedData.xlsx')
+    
+    

@@ -16,8 +16,8 @@ def get_matrep(month:int, department:str):
     regular.matReport(repMonth=month, repYear=2024, department = department, transactions=transactions)
     return {'/matReport':'ok'}
 
+
 @router.get('/kpiReport')
 def get_kpirep():
-    #data = draw_report()
-    report.test()
+    data = report.draw_report()
     return {'/kpiReport':'ok'}

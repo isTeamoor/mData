@@ -1,20 +1,30 @@
 def corrections(transactions):
     transacts = transactions.copy()
+    transacts = transacts.loc[ transacts['Код товара']!='00nan']
 
-    transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162 #Бобур должен закрыть зависимые WO
-    transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6 # 7633 - Рулон оцинкованный ГОСТ 14918-80 Ст08пс Zn120,  0,65x1250 БТ н/обр.(часть уже списана до меня)
+    transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162
+    transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6
 
+    #Корректировка после перехода Миржахона
+    transacts.loc[ transacts['WO №'].isin([52090, 84634, 94411]), 'Reserved By' ] = 'MJ'
+    transacts.loc[ transacts['Reservation Number'].isin([6801,7605,7609,6802,6804,6805,6806,7237,7244,7604,7608,7238,7245,7611,7612,7650,7651,8477,8478,9088,9089,9092,7992,7993,8333,
+                                                         8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'MJ'
+    
 
-    transacts = transacts.loc[~( transacts['Reservation Number'].isin([9018,9177,9178,9179,9180,9181,8768,9047,10058]) )]#Transactions (5-digits) without Material code 
+    #Перенос возвратов на другой месяц из-за позднего письма
+    transacts.loc[ transacts['Reservation Number'] == 9507, 'closedMonth' ] = 5 #Gator
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 109520, 'transactMonth' ] = 5 #Gator
 
+    transacts.loc[ transacts['Reservation Number'] == 9954, 'closedMonth' ] = 5 #Аргон
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 111233, 'Quantity' ] = 23.25 #Аргон
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 111527, 'transactMonth' ] = 5 #Аргон
 
-    transacts.loc[ transacts['Catalogue Transaction ID'].isin([109016,109017,109018,109019]), 'closedMonth' ] = 3 #WO закрыт в январе, а отдали запчасть только в марте
-    transacts.loc[ transacts['Catalogue Transaction ID'].isin([109016,109017,109018,109019]), 'Отдел' ] = "SLU" #WO закрыт в январе, а отдали запчасть только в марте
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 109847, 'transactMonth' ] = 5 #TYTAN
 
-    transacts.loc[ transacts['Reservation Number'] == 9393, 'Отдел' ] = 'SLU' #Подшипниковый инструмент, взял Миржахон для рутин'
+    transacts.loc[ transacts['Reservation Number'] == 9503, 'closedMonth' ] = 5 #Спец.обувь
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 109835, 'transactMonth' ] = 5 #Спец.обувь
 
     return transacts
-
 
 
 inactive_Reservations= [
@@ -37,7 +47,7 @@ inactive_Master_Reservations  = [
 787,788,846,851,857,904,905,908,935,954,986,1009,1129,1311,1312,1313,1314,1341,1342,1343,1424,1426,1439,1443,1551,1560,1593,1594,1598,1599,1603,1629,1631,1697,1698,1710,1848,
 1849,1852,2278,2307,2335,2648,2649,2679,2816,2908,2955,2956,2957,2959,3146,3147,3148,3203,3204,5527,5528,5536,782,6161,6162,7657,
 6744,6766,6773,6828,6917,6985,7104,7299,7300,7301,7554,
-#7910,7911,7912,7913,7914,7915,7916,7917,7918,7919,7920,7921,7922,7923,7963,7964,7965,8068,8140,8141,8228,9083,9318,9407,9454,9511,
+8580,#7910,7911,7912,7913,7914,7915,7916,7917,7918,7919,7920,7921,7922,7923,7963,7964,7965,8068,8140,8141,8228,9083,9318,9407,9454,9511,
 ]
 
 
@@ -51,18 +61,21 @@ extra = {
             {'Код товара':'12813','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Мис",'Ед.изм.':'кг','Quantity':7.87,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             {'Код товара':'12815','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Нержавекеющая сталь",'Ед.изм.':'кг','Quantity':0.84,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
-        'currentMonth':[],
+        'currentMonth':[
+            {'Код товара':'16797','Reservation Number':-4,'WO №':-4,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Свинец 13",'Ед.изм.':'тн','Quantity':0.299,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+        ],
         'currentReturn':[]
     },
     'cofe':{
         'begin':[
-            {'Код товара':'09683','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.8049,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'09683','Reservation Number':-1,'WO №':-1,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.8049,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             ],
         'currentMonth':[
-            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':3,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':100,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
-            {'Код товара':'07483','Reservation Number':-3,'WO №':-3,'closedMonth':3,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А4",'Ед.изм.':'пачка','Quantity':4,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Offcie consumables', 'Объект':'Offcie consumables'},
-            {'Код товара':'06949','Reservation Number':-4,'WO №':-4,'closedMonth':3,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага листовая для офисной техники Sylvamo Svetocopy А3 80гр",'Ед.изм.':'пачка','Quantity':2,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Offcie consumables', 'Объект':'Offcie consumables'},
-        
+            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':120,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':20,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+            {'Код товара':'07483','Reservation Number':-4,'WO №':-4,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А4",'Ед.изм.':'пачка','Quantity':13,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Offcie consumables', 'Объект':'Offcie consumables'},
+            {'Код товара':'16801','Reservation Number':-5,'WO №':-5,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Веник",'Ед.изм.':'шт','Quantity':5,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Offcie consumables', 'Объект':'Offcie consumables'},
+            {'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':27.6001,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
         'currentReturn':[]
     },

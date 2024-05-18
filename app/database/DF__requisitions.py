@@ -20,6 +20,10 @@ requisitions = requisitions.loc [ requisitions['Cancelled Date Time'].isna() ]
 requisitions.fillna({'Approval Path Name':'undefined'}, inplace=True)
 
 
+### Exception old unused TAR requisitions. Must be cancelled in CMMS by Ulugbek Hamroyev
+requisitions = requisitions.loc[ ~(requisitions['Requisition Number'].isin([763,839,842,845,1267,1326])) ]
+###########################################################################################################
+
 
 
 

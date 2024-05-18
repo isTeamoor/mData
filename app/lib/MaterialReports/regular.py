@@ -1,6 +1,5 @@
 import pandas as pd
 from ...database.DF__spares import spares
-from ...database.DF__assets import unitChildren
 from ..gen import filterDF
 from . import exceptions, reference
 
@@ -8,23 +7,20 @@ from . import exceptions, reference
 
 
 def matReport(repMonth, repYear, department, transactions):
-  
   ### 1. Подготовка DF Transactions
   transactions = exceptions.corrections(transactions)
+
+  transactions  = transactions.loc[ transactions['Catalogue Transaction Action Name'].isin(['Issue', 'Return to Stock']) ]
   
-  transactions  = transactions.loc[ ((transactions['Catalogue Transaction Action Name'] == 'Issue') | (transactions['Catalogue Transaction Action Name'] == 'Return to Stock'))
-                                  & (~transactions['Reservation Number'].isin(exceptions.inactive_Reservations))
-                                  ].copy()
+  transactions  = transactions.loc[ ~(transactions['Reservation Number'].isin(exceptions.inactive_Reservations)) ]
 
   transactions = filterDF(transactions, reference.department_Filters[department])
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
-  
+  transactions.to_excel('trans.xlsx')
 
 
   
-
-
   ### 2. Выборка транзакций на начало отчётного периода
   begin = transactions.loc[ 
     (
@@ -188,7 +184,6 @@ def matReport(repMonth, repYear, department, transactions):
 
   ### 11. Базовый файл с детализацией по Reservations
   check = rep.copy()
-
 
 
 

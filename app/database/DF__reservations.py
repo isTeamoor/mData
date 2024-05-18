@@ -2,10 +2,7 @@ import pandas as pd
 from .impo import reservations, contactID
 
 
-
-
 reservations = reservations.loc[  reservations['Cancelled By Contact ID'].isna()  ].copy()
-
 
 
 reservations['Completed Date Time'] = pd.to_datetime(reservations['Completed Date Time'], format="%d/%m/%Y %H:%M:%S %p")
@@ -26,7 +23,10 @@ rmpd_planners = ['Ulugbek  Xamroyev Maksudovich',
                  'Avazbek Boyqobilov Nazaraliyevich',
                  'Mansur Buriyev Jurayevich',
                  'Farruxjon Mamurov',
-                 "To'lqin Berdiyev Omonovich"]
+                 "To'lqin Berdiyev Omonovich",
+                 'Mirjakhon Toirov']
 reservations['isRMPD_planner'] = reservations['Reserved By'].copy().map(lambda x: 'yes' if x in rmpd_planners else 'no')
+
+
 
 reservations = reservations[['Work Order Spare ID', 'Reservation Number', 'reservYear','reservMonth', 'Reserved By','isRMPD_planner']]

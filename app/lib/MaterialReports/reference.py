@@ -2,39 +2,16 @@ import pandas as pd
 import numpy as np
 
 
-
 # Фильтры для отделения transactions отдела
 department_Filters = {
-    'rmpd':[
-        {"field":'isRMPD_planner', "operator":"==", "value":"'yes'"}, 
-        "|",
-        [
-          {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
-          "&",
-          [
-            {"field":'Отдел', "operator":"==", "value":"'SLU'"},
-            "|",
-            {"field":'Отдел', "operator":"==", "value":"'Routine Maintenance Planning Department'"},
-            "|",
-            {"field":'Отдел', "operator":"==", "value":"'U&O'"},
-          ]
-        ]
-    ],
-    'cofe':[ 
-        [
-          {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
-          "&",
-          [
-            {"field":'Отдел', "operator":"!=", "value":"'SLU'"},
-            "&",
-            {"field":'Отдел', "operator":"!=", "value":"'Routine Maintenance Planning Department'"},
-            "&",
-            {"field":'Отдел', "operator":"!=", "value":"'U&O'"},
-          ]
-        ],
-        "|",
-        {"field":'Reserved By', "operator":"==", "value":"'Bobur Aralov'"},
-    ],
+    'rmpd':[ {"field":'isRMPD_planner', "operator":"==", "value":"'yes'"},
+             "&",
+             {"field":'Reserved By', "operator":"!=", "value":"'MJ'"} 
+           ],
+    'cofe':[ {"field":'Reserved By', "operator":"==", "value":"'Bobur Aralov'"},
+             "|",
+             {"field":'Reserved By', "operator":"==", "value":"'MJ'"} 
+           ]
 }
 
 
@@ -53,9 +30,8 @@ is_014 = ['06935','05841','07139','05230','04189','03494','02799','05749','01738
 '01350','01371','01380','01381','01383','01384','01385','01386','01394', '01395','01396','01398','01399','01589','01639','01606','01620','02835','00189','00745','00140','00230','00738','05232',
 '05231','00899','00155','00114','00157','00526','00113','01201','01202','01203','01204','06340','02911','02912','02913','07481','07407','07473','07403','02802','03229','05305','06122','06332',
 '06900','07497','07883','07882','09300','07331','05831','05328', '09767', '09327', '09326', '01875','04183', '09359', '02811', '07626','07627','07628', '07629', '07616', '07617', '10920',
-'08008', '03014', '06326', '07483', '09297','00704','05824','09605','09606','09859','12414','09608', '09607', '01517', '02838', '07536', '12478','05750','11063','06949','02794',
+'08008', '03014', '06326', '07483', '09297','00704','05824','09605','09606','09859','12414','09608', '09607', '01517', '02838', '07536', '12478','05750','11063','06949','02794', 
 ]
-
 
 
 
@@ -89,12 +65,14 @@ def OneC():
 
   return output.loc[ ~output['Name'].isna(), ['Account', 'Код товара', 'Цена','Qty1','Sum1','Qty2','Sum2'] ]
 
+
 # Читает и распечатывает накладную из 1С
 def OneCW():
   waybill = pd.read_excel("1. 1CW.xlsx")
   waybill = waybill[['Unnamed: 6','Unnamed: 1','Unnamed: 11','Unnamed: 23','Unnamed: 15','Unnamed: 24']].iloc[16:]
   waybill = waybill.loc[~waybill['Unnamed: 6'].isnull()]
   waybill.to_excel('4. waybill.xlsx', index=False)
+
 
 # Transactions из сгруппированных WO расщепляются с учётом spares из зависимых WO
 def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear):
@@ -110,22 +88,14 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
   
   # Master Reservations с реальным Qty, учитывающим уменьшение от Return to Stock
-  MRs = targetDF.copy().groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth', 'Отдел','Reserved By','WO №','reservYear',
-                                 'reservMonth','Asset Description', 'Объект','closedYear']).sum()
+  MRs = targetDF.copy().groupby(['Reservation Number','Код товара','Материал','Ед.изм.','Work Order Status Description','closedMonth', 
+                                 'Отдел','Reserved By','WO №','reservYear', 'reservMonth','Asset Description', 'Объект','closedYear']).sum()
   MRs.reset_index(drop=False, inplace=True)
 
 
 
   childSpares = spares.loc[ (~spares['Spares Comment'].isna()) & (spares['Spares Comment'].str.isnumeric()) ].copy()
   childSpares['Spares Comment'] = childSpares['Spares Comment'].astype(float)
-
-  ### Exception 07634 master wo 52090 5387 MRes closed month suddenly must be changed
-  childSpares.loc[ (childSpares['Work Order Number']==90239) & (childSpares['Spares Comment']==5387), 'closedMonth' ] = 3
-  #####################################################################################################################
-  ### Exception 11062 -1.1 Overused limit from MR-8580
-  childSpares.loc[ (childSpares['Work Order Number']==85424) & (childSpares['Spares Comment']==8580), 'Estimated Quantity' ] = 2.9
-  #####################################################################################################################
-
 
 
 
@@ -201,14 +171,10 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
 
 
-
-
-
-
-  transacts=transacts.drop(targetDF.index)
+  transacts = transacts.drop(targetDF.index)
   counter = -9999
   for i, childSpare in Limits.loc[ Limits['is child transaction']=='yes' ].iterrows():
-    counter-=1
+    counter -= 1
     pseudoTransaction = pd.DataFrame({
       'Код товара':childSpare['master Reservation Material Code'],
       'Материал':childSpare['master Reservation material'],

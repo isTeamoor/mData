@@ -1,6 +1,6 @@
 def corrections(transactions):
-    transacts = transactions.copy()
-    transacts = transacts.loc[ transacts['Код товара']!='00nan']
+    transacts = transactions.loc[ transactions['Код товара']!='00nan'].copy()
+
 
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162
     transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6

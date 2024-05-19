@@ -17,7 +17,6 @@ def matReport(repMonth, repYear, department, transactions):
   transactions = filterDF(transactions, reference.department_Filters[department])
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
-  transactions.to_excel('trans.xlsx')
 
 
   
@@ -42,7 +41,7 @@ def matReport(repMonth, repYear, department, transactions):
       )
     )
   ].copy()
-
+  
 
   ### 3. Выборка транзакций за отчётный период
   current = transactions.loc[ (transactions['transactMonth'] == repMonth) & (transactions['transactYear'] == repYear) 
@@ -77,9 +76,15 @@ def matReport(repMonth, repYear, department, transactions):
   begin        .reset_index(drop=False, inplace=True)
   current      .reset_index(drop=False, inplace=True)
   currentReturn.reset_index(drop=False, inplace=True)
+
+
+
+  ### Если в одном месяце взяли и сразу вернули
+  for i,row in current.iterrows():
+      if row['Reservation Number'] in currentReturn['Reservation Number'].unique():
+          current.loc[ current['Reservation Number']==row['Reservation Number'], 'Кол-во приход' ] = row['Кол-во приход'] - currentReturn.loc[ currentReturn['Reservation Number']==row['Reservation Number'], 'Кол-во возврат' ].item()
+          currentReturn = currentReturn.loc[ currentReturn['Reservation Number']!=row['Reservation Number'] ]
   
-
-
 
 
   ### 5. Объединение "на начало" и "приход" и "возврат"
@@ -262,8 +267,8 @@ def matReport(repMonth, repYear, department, transactions):
   dalolat.to_excel('4. dalolat.xlsx')
   view_014.to_excel('4. view_014.xlsx', index=False)
   view_014_G.to_excel('4. view_014_G.xlsx', index=False)
-  view_wOff_SGU.to_excel('4. view_wOff_SGU.xlsx', index=False)
-  view_wOff_notSGU.to_excel('4. view_wOff_notSGU.xlsx', index=False)
+  #view_wOff_SGU.to_excel('4. view_wOff_SGU.xlsx', index=False)
+  #view_wOff_notSGU.to_excel('4. view_wOff_notSGU.xlsx', index=False)
   view_wOff_SGU_G.to_excel('4. view_wOff_SGU_G.xlsx', index=False)
   view_wOff_notSGU_G.to_excel('4. view_wOff_notSGU_G.xlsx', index=False)
   reference.OneCW()

@@ -36,7 +36,7 @@ def dframe_transactions():
     return {'transactions':'ok'}
 
 @router.get('/requisitions')
-def dframe_transactions():
+def dframe_requisitions():
     DF__requisitions.requisitions.to_excel('requisitions.xlsx', index=False)
     return {'requisitions':'ok'}
 

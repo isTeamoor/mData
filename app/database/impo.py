@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 wo           = pd.read_csv("app/database/csv/ccc_wo_wo.csv",           encoding="utf-8")
 priority     = pd.read_csv("app/database/csv/ccc_wo_priority.csv",     encoding="utf-8")
 departments  = pd.read_csv("app/database/csv/ccc_wo_departments.csv",  encoding="utf-8")
@@ -7,8 +8,8 @@ status       = pd.read_csv("app/database/csv/ccc_wo_status.csv",       encoding=
 jobType      = pd.read_csv("app/database/csv/ccc_wo_jobType.csv",      encoding="utf-8")
 isMasterWO   = pd.read_csv("app/database/csv/ccc_wo_isMasterWO.csv",   encoding="utf-8")
 closedDates  = pd.read_csv("app/database/csv/ccc_wo_closedDates.csv",  encoding="utf-8")
-tasks        = pd.read_csv("app/database/csv/ccc_wo_tasks.csv",  encoding="utf-8")
-taskStatus   = pd.read_csv("app/database/csv/ccc_wo_taskStatus.csv",  encoding="utf-8")
+tasks        = pd.read_csv("app/database/csv/ccc_wo_tasks.csv",        encoding="utf-8")
+taskStatus   = pd.read_csv("app/database/csv/ccc_wo_taskStatus.csv",   encoding="utf-8")
 
 
 spares           = pd.read_csv("app/database/csv/ccc_sp_spares.csv",           encoding="utf-8")
@@ -38,8 +39,8 @@ requisitionItems = pd.read_csv("app/database/csv/ccc_rq_reqItems.csv",     encod
 approvalPath     = pd.read_csv("app/database/csv/ccc_rq_approvalPath.csv", encoding="utf-8")
 
 
-requests                  = pd.read_csv("app/database/csv/ccc_rt_requests.csv", encoding="utf-8")
-priorityAnswer            = pd.read_csv("app/database/csv/ccc_rt_priorityAnswer.csv", encoding="utf-8")
+requests                  = pd.read_csv("app/database/csv/ccc_rt_requests.csv",                   encoding="utf-8")
+priorityAnswer            = pd.read_csv("app/database/csv/ccc_rt_priorityAnswer.csv",             encoding="utf-8")
 priorityAnswerDescription = pd.read_csv("app/database/csv/ccc_rt_priorityAnswersDescription.csv", encoding="utf-8")
 
 

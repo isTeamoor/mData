@@ -33,18 +33,18 @@ outsourceBudg = pd.DataFrame(
     ]
 )
 outsourceBudg.loc[ outsourceBudg.index[-1] + 1 ] = outsourceBudg.loc[ outsourceBudg['Currency'] == 'uzs' ].sum(numeric_only=True)
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Company name'] = 'Summary local contracts in uzs'
+outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary local contracts in uzs'
 
 last_index = outsourceBudg.index[-1] + 1
 for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
-    outsourceBudg.loc[ last_index, m ] = outsourceBudg.loc[ outsourceBudg['Company name'] == 'Summary local contracts in uzs', m ].item() / 12500
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Company name'] = 'Summary local contracts in usd'
+    outsourceBudg.loc[ last_index, m ] = outsourceBudg.loc[ outsourceBudg['Contract'] == 'Summary local contracts in uzs', m ].item() / 12500
+outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary local contracts in usd'
 
 outsourceBudg.loc[ outsourceBudg.index[-1] + 1 ] = outsourceBudg.loc[ outsourceBudg['Currency'] == 'usd' ].sum(numeric_only=True)
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Company name'] = 'Summary foreign contracts in usd'
+outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary foreign contracts in usd'
 
-outsourceBudg.loc[ outsourceBudg.index[-1]+1 ] = outsourceBudg.loc[ outsourceBudg['Company name'].isin(['Summary local contracts in usd', 'Summary foreign contracts in usd']) ].sum(numeric_only=True)
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Company name'] = 'Summary all contracts in usd'
+outsourceBudg.loc[ outsourceBudg.index[-1]+1 ] = outsourceBudg.loc[ outsourceBudg['Contract'].isin(['Summary local contracts in usd', 'Summary foreign contracts in usd']) ].sum(numeric_only=True)
+outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary all contracts in usd'
 
 
 

@@ -1,14 +1,14 @@
 def corrections(transactions):
-    transacts = transactions.loc[ transactions['Код товара']!='00nan'].copy()
+    transacts = transactions.loc[ transactions['Код товара']!='00nan'].copy() #Постоянное исключение для материальных отчётов
 
 
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162
     transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6
 
     #Корректировка после перехода Миржахона
-    transacts.loc[ transacts['WO №'].isin([52090, 84634, 94411]), 'Reserved By' ] = 'MJ'
+    transacts.loc[ (transacts['WO №'].isin([52090, 84634, 94411])) & (transacts['Reserved By']=='Mirjakhon Toirov'), 'Reserved By' ] = 'Mirjahon Toirov CofE'
     transacts.loc[ transacts['Reservation Number'].isin([6801,7605,7609,6802,6804,6805,6806,7237,7244,7604,7608,7238,7245,7611,7612,7650,7651,8477,8478,9088,9089,9092,7992,7993,8333,
-                                                         8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'MJ'
+                                                         8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'Mirjahon Toirov CofE'
     
 
     #Перенос возвратов на другой месяц из-за позднего письма
@@ -23,6 +23,21 @@ def corrections(transactions):
 
     transacts.loc[ transacts['Reservation Number'] == 9503, 'closedMonth' ] = 5 #Спец.обувь
     transacts.loc[ transacts['Catalogue Transaction ID'] == 109835, 'transactMonth' ] = 5 #Спец.обувь
+
+
+    """#Корректировка возврат по письму. Спорные вопросы с Шахзодбеком взаимозачет кирим возврат   !!!! Можно удалить для мая
+    transacts.loc[ transacts['Reservation Number'] == 10494, 'Quantity' ] = 0 #Шлифовальный диск
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 116785, 'Quantity' ] = 0 #Шлифовальный диск
+
+    transacts.loc[ transacts['Reservation Number'] == 10493, 'Quantity' ] = 0 #Абразивный круг
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 116786, 'Quantity' ] = 0 #Абразивный круг
+
+    transacts.loc[ transacts['Reservation Number'] == 10490, 'Quantity' ] = 0 #Абразивный отрезной круг
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 116784, 'Quantity' ] = 0 #Абразивный отрезной круг
+
+    transacts.loc[ transacts['Reservation Number'] == 10491, 'Quantity' ] = 0 #Круг абразивный арми
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 116787, 'Quantity' ] = 0 #Круг абразивный арми
+    """
 
     return transacts
 
@@ -47,7 +62,13 @@ inactive_Master_Reservations  = [
 787,788,846,851,857,904,905,908,935,954,986,1009,1129,1311,1312,1313,1314,1341,1342,1343,1424,1426,1439,1443,1551,1560,1593,1594,1598,1599,1603,1629,1631,1697,1698,1710,1848,
 1849,1852,2278,2307,2335,2648,2649,2679,2816,2908,2955,2956,2957,2959,3146,3147,3148,3203,3204,5527,5528,5536,782,6161,6162,7657,
 6744,6766,6773,6828,6917,6985,7104,7299,7300,7301,7554,
-8580,#7910,7911,7912,7913,7914,7915,7916,7917,7918,7919,7920,7921,7922,7923,7963,7964,7965,8068,8140,8141,8228,9083,9318,9407,9454,9511,
+8580,
+#52090:
+5388, 5877,6964,
+#84634:
+7910, 7912, 7913, 7915, 7916, 7918, 7919, 7920, 7921, 7922, 7923, 7963, 7694, 7965, 8068, 8140, 8141, 8228, 9083, 9318, 9511, 
+#94411:
+10138, 10340,10341,
 ]
 
 

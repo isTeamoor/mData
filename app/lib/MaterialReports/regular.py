@@ -43,14 +43,20 @@ def matReport(repMonth, repYear, department, transactions):
   ].copy()
   
 
+
+
   ### 3. Выборка транзакций за отчётный период
   current = transactions.loc[ (transactions['transactMonth'] == repMonth) & (transactions['transactYear'] == repYear) 
                              & (transactions['Catalogue Transaction Action Name']=='Issue') ].copy()
+
+
 
   ### 4. Возвраты за отчётный период
   currentReturn = transactions.loc[ (transactions['transactMonth'] == repMonth) & (transactions['transactYear'] == repYear)
                                    & (transactions['Catalogue Transaction Action Name']=='Return to Stock') ].copy()
   
+
+
 
   for row in exceptions.extra[department]['begin']:
       newRow = pd.DataFrame(row, index=[0])
@@ -63,9 +69,13 @@ def matReport(repMonth, repYear, department, transactions):
       currentReturn = pd.concat([currentReturn, newRow]).reset_index(drop=True)
 
 
+
+
   currentReturn['Quantity'] = currentReturn['Quantity'].map(lambda x: -x) ### Qty "положительные"
 
 
+
+  ### Скорее всего группировка нужна только для begin, чтобы уменьшить на количество возврата в предыдущие периоды
   begin        .rename(columns={'Quantity':'Кол-во начало'}, inplace=True)
   current      .rename(columns={'Quantity':'Кол-во приход'}, inplace=True)
   currentReturn.rename(columns={'Quantity':'Кол-во возврат'}, inplace=True)
@@ -95,17 +105,18 @@ def matReport(repMonth, repYear, department, transactions):
   rep.fillna({'Кол-во начало':0,'Кол-во приход':0,'Кол-во возврат':0,'Цена':0}, inplace=True)
 
   rep['is014'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in reference.is_014 else '')
+  rep['iswOff'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in reference.is_wOff else '')
 
 
 
-
-
-  cheQ = rep[['Код товара',	'Материал',	'Кол-во начало',	'Кол-во приход',	'Цена',	'Qty1',	'Sum1',	'Qty2',	'Sum2']]
-  cheQ = cheQ.groupby(['Код товара',	'Материал',	'Цена',	'Qty1',	'Sum1',	'Qty2',	'Sum2']).sum()
+  ### Файл для проверки соответствия количества в rep и 1с
+  cheQ = rep[['Код товара',	'Материал',	'Кол-во начало',	'Кол-во приход',	'Qty1',	'Qty2',	]].copy()
+  cheQ = cheQ.groupby(['Код товара',	'Материал',	'Qty1',	'Qty2',	]).sum()
   cheQ.reset_index(inplace=True, drop=False)
-  cheQ.to_excel('cheQ.xlsx', index=False)
-
-
+  cheQ = cheQ[['Код товара',	'Материал',	'Кол-во начало','Qty1',	'Кол-во приход','Qty2']]
+  cheQ.insert(6, 'Dif_начало', cheQ['Кол-во начало'] - cheQ['Qty1'])
+  cheQ.insert(7, 'Dif_приход', cheQ['Кол-во приход'] - cheQ['Qty2'])
+  cheQ.insert(8, 'Dif_all', cheQ['Dif_начало'] + cheQ['Dif_приход'])
 
 
 
@@ -149,6 +160,7 @@ def matReport(repMonth, repYear, department, transactions):
 
 
 
+
   ### 8. Поле "на Конец"
   rep['Кол-во конец'] = 0 # Если списываются
   rep.loc[(rep['Work Order Status Description'] != 'Closed') 
@@ -161,9 +173,13 @@ def matReport(repMonth, repYear, department, transactions):
           ), 'Кол-во конец' ] = rep['Кол-во начало'] + rep['Кол-во приход'] - rep['Кол-во возврат']
 
 
+
+
   ###Exception do not consider diesel's price
   rep.loc[rep['Код товара']=='06933', 'Цена'] = 0
   ##########################################################
+
+
 
   ### 9. Вычисление сумм
   rep['Сумма начало']  = rep['Кол-во начало']  * rep['Цена']
@@ -172,27 +188,22 @@ def matReport(repMonth, repYear, department, transactions):
   rep['Сумма 014']     = rep['Кол-во 014']     * rep['Цена']
   rep['Сумма конец']   = rep['Кол-во конец']   * rep['Цена']
 
+
+
+
   ### Exception different prices in 1c
   if department == 'cofe':
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 47265.04  if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 47265.04  if x['Код товара']=='11062' and x['Кол-во начало']>0  else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 47265.04  if x['Код товара']=='11062' and x['Кол-во конец']>0  else x['Сумма конец'], axis=1)
-
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 50000  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 50000  if x['Код товара']=='11062' and x['Кол-во приход']>0  else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 50000  if x['Код товара']=='11062' and x['Кол-во приход']>0  else x['Сумма конец'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 50000     if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 46772.4   if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
+      rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец']  * 50000     if x['Код товара']=='11062' else x['Сумма конец'],  axis=1)
 
   if department == 'rmpd':
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 211131.6  if x['Код товара']=='07139' else x['Сумма начало'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 211131.6  if x['Код товара']=='07139' and x['Кол-во начало']>0  else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 211131.6  if x['Код товара']=='07139' and x['Кол-во конец']>0  else x['Сумма конец'], axis=1)
-
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 213392.86  if x['Код товара']=='07139' else x['Сумма приход'], axis=1)
-      rep['Сумма 014'] = rep.apply(lambda x: x['Кол-во 014'] * 213392.86  if x['Код товара']=='07139' and x['Кол-во приход']>0  else x['Сумма 014'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 213392.86  if x['Код товара']=='07139' and x['Кол-во приход']>0  else x['Сумма конец'], axis=1)
-
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 213392.86 if x['Код товара']=='07139' else x['Сумма приход'], axis=1)
+      rep['Сумма 014']    = rep.apply(lambda x: x['Кол-во 014']    * 208870.44 if x['Код товара']=='07139' else x['Сумма 014'], axis=1)
+      rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец']  * 213392.86 if x['Код товара']=='07139' else x['Сумма конец'],  axis=1)
   ##########################################################
-
 
 
 
@@ -200,7 +211,7 @@ def matReport(repMonth, repYear, department, transactions):
   ### 10. Завершение подготовки базового DF
   rep = rep[['Account','Код товара','Материал', 'Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход',
               'Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец', 'Reservation Number','Work Order Status Description',
-              'closedMonth','Отдел','Reserved By','is014','WO №','reservYear','reservMonth','Asset Description', 'Объект', 'Кол-во возврат']]
+              'closedMonth','Отдел','Reserved By','is014','iswOff','WO №','Asset Description', 'Объект', 'Кол-во возврат']]
 
 
 
@@ -210,31 +221,32 @@ def matReport(repMonth, repYear, department, transactions):
 
 
 
+
   ### 12. Подготовка итогового материального отчёта
-  rep = rep.loc[~rep['Account'].isna()]
+  rep = rep.loc[ ~rep['Account'].isna() ]
   rep.fillna({'Код товара':'undefined','Account':'undefined','Материал':'undefined',
               'Ед.изм.':'undefined','Цена':-1 }, inplace=True)
   matRep = rep.groupby(['Код товара','Account','Материал','Ед.изм.','Цена']).sum()
   matRep.reset_index(drop=False, inplace=True)
   matRep = matRep[['Account','Код товара','Материал','Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход','Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец',]]
   
-
-
   ### Cуммирующие строки
   for acc in matRep['Account'].unique():
-      matRep.loc[len(matRep)] = matRep.loc[ matRep['Account']==acc ].sum(numeric_only=True)
-      matRep.loc[len(matRep)-1, 'Account'] = acc
-  matRep.loc[len(matRep)] = matRep.loc[ matRep['Материал'].isna() ].sum(numeric_only=True)
-  matRep.loc[len(matRep)-1, 'Материал'] = 'Жами'
+      matRep.loc[ len(matRep)] = matRep.loc[ matRep['Account']==acc ].sum(numeric_only=True)
+      matRep.loc[ len(matRep)-1, 'Account'] = acc
+  matRep.loc[ len(matRep) ] = matRep.loc[ matRep['Материал'].isna() ].sum(numeric_only=True)
+  matRep.loc[ len(matRep)-1, 'Материал'] = 'Жами'
+
+
 
 
 
   ### 13. Подготовка Акта ввода в эксплуатацию (внутренний)
-  dalolat = rep.loc[ rep['Кол-во расход']>0 ].copy()
+  dalolat = rep.loc[ (rep['Кол-во расход']>0) & (rep['iswOff']!='yes') ].copy()
   dalolat['Кол-во расход'] = dalolat['Кол-во расход'] - dalolat['Кол-во возврат']
   dalolat = dalolat.loc [ dalolat['Кол-во расход'] !=0 ]
   
-  dalolat['Кол-во всего'] = dalolat['Код товара'].copy().map(  lambda x: dalolat.loc[dalolat['Код товара'] == x, 'Кол-во расход'].sum() )
+  dalolat['Кол-во всего'] = dalolat['Код товара'].copy().map(  lambda x: dalolat.loc[ dalolat['Код товара'] == x, 'Кол-во расход' ].sum() )
   
   dalolat = dalolat[['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By','Цена', 'Сумма расход']]
   dalolat = dalolat.groupby(['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By',]).sum()
@@ -242,53 +254,64 @@ def matReport(repMonth, repYear, department, transactions):
 
 
 
-  ### 14. Представление 014 для е-doc
-  view_014 = rep.loc[ rep['Кол-во 014']>0 ].copy()
-  view_014.insert(1,'Примечание', 'Reserved by '+view_014['Reserved By']+' WO № '+view_014['WO №'].astype(str)+' Reservation № '+view_014['Reservation Number'].astype(str))
-  view_014 = view_014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014','Примечание']]
-
-  view_014_G = view_014.copy()
-  view_014_G['Объект'] = ''
-  view_014_G = view_014_G.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
-  view_014_G.reset_index(drop=False, inplace=True)
-  view_014_G = view_014_G[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014','Примечание']]
-
-
-
-
-
-  ### 14. Представление списание для е-doc
-  raw_wOff = dalolat.copy()
+  ### 14. Файл списание
+  raw_wOff = rep.loc[ rep['Кол-во расход']>0 ].copy()
+  raw_wOff['Кол-во расход'] = raw_wOff['Кол-во расход'] - raw_wOff['Кол-во возврат']
+  raw_wOff = raw_wOff.loc [ raw_wOff['Кол-во расход'] !=0 ]
+  
+  raw_wOff = raw_wOff[['Код товара', 'Материал', "Ед.изм.",'Цена','Кол-во расход', 'Сумма расход',"Отдел"]]
+  raw_wOff = raw_wOff.groupby(['Код товара', 'Материал',"Ед.изм.",'Цена', "Отдел"]).sum()
   raw_wOff.reset_index(drop=False, inplace=True)
-  view_wOff_notSGU = raw_wOff.loc[raw_wOff['Отдел']!='4AP'].copy()
-  view_wOff_SGU = raw_wOff.loc[raw_wOff['Отдел']=='4AP'].copy()
-  view_wOff_notSGU = view_wOff_notSGU.loc [ view_wOff_notSGU['Кол-во расход'] !=0 ] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]   
-  view_wOff_SGU = view_wOff_SGU.loc [ view_wOff_SGU['Кол-во расход'] !=0 ] [['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]  
+
+  raw_wOff['Объект'] = ''
+
+  wOff_Mn = raw_wOff.loc[ raw_wOff['Отдел']!='4AP' ].copy()
+  wOff_Ap = raw_wOff.loc[ raw_wOff['Отдел']=='4AP' ].copy()
+  
+
+  wOff_Ap = wOff_Ap.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
+  wOff_Mn = wOff_Mn.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
+
+  wOff_Ap.reset_index(drop=False, inplace=True)
+  wOff_Mn.reset_index(drop=False, inplace=True)
+
+  wOff_Ap = wOff_Ap[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]
+  wOff_Mn = wOff_Mn[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]
 
 
-  view_wOff_SGU_G = view_wOff_SGU.copy()
-  view_wOff_notSGU_G = view_wOff_notSGU.copy()
-  view_wOff_SGU_G['Объект'] = ''
-  view_wOff_notSGU_G['Объект'] = ''
-  view_wOff_SGU_G = view_wOff_SGU_G.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
-  view_wOff_notSGU_G = view_wOff_notSGU_G.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
-  view_wOff_SGU_G.reset_index(drop=False, inplace=True)
-  view_wOff_notSGU_G.reset_index(drop=False, inplace=True)
-  view_wOff_SGU_G = view_wOff_SGU_G[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]
-  view_wOff_notSGU_G = view_wOff_notSGU_G[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]
+
+
+  ### 14. Раздача
+  handover = rep.loc[ (rep['Кол-во 014']>0)
+                      |
+                      (
+                         (rep['Кол-во расход']>0) & (rep['iswOff']=='yes')
+                      ) 
+                     ].copy()
+
+  handover.insert(1,'Примечание', 'Reserved by '+handover['Reserved By']+' WO № '+handover['WO №'].astype(str)+' Reservation № '+handover['Reservation Number'].astype(str))
+  handover = handover[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014','Кол-во расход', 'Примечание']]
 
 
 
 
+  ### 14. Ввод в эксплуатацию
+  to014 = rep.loc[ rep['Кол-во 014']>0 ].copy()
+  to014 = to014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014']]
+  to014['Объект'] = ''
+  to014 = to014.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
+  to014.reset_index(drop=False, inplace=True)
+  to014 = to014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014']]
+
+
+  cheQ.to_excel('cheQ.xlsx', index=False)
   check.to_excel('2. check.xlsx', index=False)
   matRep.to_excel('3. matRep.xlsx', index=False)
   dalolat.to_excel('4. dalolat.xlsx')
-  view_014.to_excel('4. view_014.xlsx', index=False)
-  view_014_G.to_excel('4. view_014_G.xlsx', index=False)
-  #view_wOff_SGU.to_excel('4. view_wOff_SGU.xlsx', index=False)
-  #view_wOff_notSGU.to_excel('4. view_wOff_notSGU.xlsx', index=False)
-  view_wOff_SGU_G.to_excel('4. view_wOff_SGU_G.xlsx', index=False)
-  view_wOff_notSGU_G.to_excel('4. view_wOff_notSGU_G.xlsx', index=False)
+  handover.to_excel('4. handover.xlsx', index=False)
+  to014.to_excel('4. 014.xlsx', index=False)
+  wOff_Ap.to_excel('4. wOff_AP.xlsx', index=False)
+  wOff_Mn.to_excel('4. wOff_Mn.xlsx', index=False)
   reference.OneCW()
   
     

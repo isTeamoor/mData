@@ -47,7 +47,7 @@ maintenance_ApprovalPath = ['SLU Default', 'PWU Default', 'Maintenance','CofE de
 requisitions = requisitions.loc [ requisitions['Approval Path Name'].isin(maintenance_ApprovalPath)]
 
 
-
+### mergeNumber не обязателен, можно удалить
 requisitions['mergeNumber'] = ''
 for RequisitionNumber, group in requisitions.groupby('Requisition Number'):
     counter = 0

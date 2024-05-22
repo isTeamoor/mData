@@ -2,22 +2,26 @@ import pandas as pd
 from ...database.DF__budget import outsourceBudg
 
 
-def getPayments(department=False):
+def getPayments():
     payments = pd.read_excel('1c.xls')
+
+
 
     payments['Дата оплаты'] = pd.to_datetime(payments['Дата оплаты'], format="%d.%m.%Y")
     payments['paidYear']  = payments['Дата оплаты'].dt.year
     payments['paidMonth'] = payments['Дата оплаты'].dt.month
 
+
+
     payments.rename(columns={
-                            'Статус': 'Status', 
-                            'Контрагент': 'Company name', 
-                            'Валюта':'Currency', 
-                            'Номер.1':'Contract', 
-                            'Сумма':'Sum',
-                            'Инициатор':'Initiator',
-                            'Назначение платежа':'Scope'
-                            }, inplace=True)
+                        'Статус': 'Status', 
+                        'Контрагент': 'Company name', 
+                        'Валюта':'Currency', 
+                        'Номер.1':'Contract', 
+                        'Сумма':'Sum',
+                        'Инициатор':'Initiator',
+                        'Назначение платежа':'Scope'
+                        }, inplace=True)
     
     payments['Currency'].replace({
                                 'USD': 'usd', 
@@ -26,6 +30,9 @@ def getPayments(department=False):
                                 }, inplace=True)
     
     payments['Contract'] = payments['Contract'].str.upper()
+
+
+
 
     payments = payments.loc[ (payments['Status'] == 'Оплачен полностью') & ( payments['paidYear'] == 2024) ][['Initiator','Currency','Company name','Contract','Scope','paidMonth','Sum']]
 
@@ -36,6 +43,7 @@ def getPayments(department=False):
     '''
 
 
+    ### Распределение по месяцам суммы оплаты в заависимости от PaidMonth
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     payments[[*months]] = 0
     for i in payments.index:
@@ -43,11 +51,12 @@ def getPayments(department=False):
 
 
 
+    ### Пометка Outsource контрактов
     payments.loc[ payments['Initiator'] == 'Отдел контрактных услуг', 'Department'] = 'outsource'
     payments.loc[ payments['Contract'].isin(outsourceBudg['Contract'].unique()), 'Department'] = 'outsource'
 
 
-
+    ### Пометка RMPD контрактов
     payments.loc[ (
                       (payments['Initiator'] == 'Отдел планирования ремонтных работ')
                     | (payments['Initiator'] == 'Отдел планирования регулярного технического обслуживания')
@@ -58,7 +67,7 @@ def getPayments(department=False):
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='rmpd', 'Contract' ].unique()) , 'Department'] = 'rmpd'
 
 
-
+    ### Пометка CofE контрактов
     payments.loc[ (payments['Initiator'] == 'Отдел центра передового опыта')
                   & 
                   (payments['Department']!='outsource')
@@ -66,76 +75,66 @@ def getPayments(department=False):
                   (payments['Department']!='rmpd'), 'Department'] = 'cofe'
     
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='cofe', 'Contract' ].unique() ), 'Department'] = 'cofe'
+ 
 
-
-
-    payments.loc[ (payments['Initiator'] == 'Гражданско-строительный отдел')
-                 & 
-                  (payments['Department']!='outsource')
-                 & 
-                  (payments['Department']!='rmpd')
-                 & 
-                  (payments['Department']!='cofe'), 'Department'] = 'civil'
-    
-    payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='civil', 'Contract' ].unique() ), 'Department'] = 'civil'
-    
-
-
+    ### Пометка MTK контрактов
     payments.loc[ (payments['Initiator'] == 'Отдел материально-технического контроля')
                  & 
                   (payments['Department']!='outsource')
                  & 
                   (payments['Department']!='rmpd')
                  & 
-                  (payments['Department']!='cofe')
-                 & 
-                  (payments['Department']!='civil'), 'Department'] = 'mtk'
+                  (payments['Department']!='cofe'), 'Department'] = 'mtk'
     
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='mtk', 'Contract' ].unique() ), 'Department'] = 'mtk'
 
 
 
-
+    ### Суммирование по каждому контракту, удаление не относящихся к maintenance 
     payments = payments.groupby(['Department','Currency','Contract','Company name']).sum()
     payments.reset_index(drop=False, inplace=True)
     payments = payments[['Department',	'Currency',	'Contract',	'Company name',	'Sum',	'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']]
 
 
+
+    ### EUR -> USD
     for i in payments.loc[ payments['Currency']=='eur' ].index:
         for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
             payments.loc[i,m] = payments.loc[i,m] * 1.07
 
+    return payments
 
-    
+
+def sumPayments(df, department=False):    
+    payments = df.copy()
+
     if department:
         payments = payments.loc[ payments['Department'] == department ]
 
 
     payments.loc[ payments.index[-1] + 1 ] = payments.loc[ payments['Currency'] == 'uzs' ].sum(numeric_only=True)
-    payments.loc[ payments.index[-1], 'Company name'] = 'Summary local contracts in uzs'
+    payments.loc[ payments.index[-1], 'Contract'] = 'Summary local contracts in uzs'
 
 
     last_index = payments.index[-1] + 1
     for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
-        payments.loc[ last_index, m ] = payments.loc[ payments['Company name'] == 'Summary local contracts in uzs', m ].item() / 12500
-    payments.loc[ payments.index[-1], 'Company name'] = 'Summary local contracts in usd'
-
+        payments.loc[ last_index, m ] = payments.loc[ payments['Contract'] == 'Summary local contracts in uzs', m ].item() / 12500
+    payments.loc[ payments.index[-1], 'Contract'] = 'Summary local contracts in usd'
 
 
     payments.loc[ payments.index[-1] + 1 ] = payments.loc[ (payments['Currency'] == 'usd') | (payments['Currency'] == 'eur') ].sum(numeric_only=True)
-    payments.loc[ payments.index[-1], 'Company name'] = 'Summary foreign contracts in usd'
-
+    payments.loc[ payments.index[-1], 'Contract'] = 'Summary foreign contracts in usd'
 
     
-    payments.loc[ payments.index[-1]+1 ] = payments.loc[ payments['Company name'].isin(['Summary local contracts in usd', 'Summary foreign contracts in usd']) ].sum(numeric_only=True)
-    payments.loc[ payments.index[-1], 'Company name'] = 'Summary all contracts in usd'
+    payments.loc[ payments.index[-1]+1 ] = payments.loc[ payments['Contract'].isin(['Summary local contracts in usd', 'Summary foreign contracts in usd']) ].sum(numeric_only=True)
+    payments.loc[ payments.index[-1], 'Contract'] = 'Summary all contracts in usd'
 
-
+    payments.to_excel('sumpaym.xlsx')
     return payments   
 
 
 def summaryData(department = False):
-    payments = getPayments(department)
+    payments = sumPayments(department)
 
     output = pd.DataFrame([
         {'':'Total budget, usd'},
@@ -170,16 +169,29 @@ def summaryData(department = False):
         ''
     ]
 
+    budgetSRC = {
+        'outsource':outsourceBudg
+    }
+    budget = budgetSRC[department]
+
     
+
+
     for m in ['Sum', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
         for i in range(0, 12, 3):
-            output.loc[ i, m ] = outsourceBudg.loc[ outsourceBudg['Company name'] == struct[i], m ].item()
+            output.loc[ i, m ] = budget.loc[ budget['Contract'] == struct[i], m ].item()
         for i in range(1, 12, 3):
-            output.loc[ i, m ] = payments.loc[ payments['Company name'] == struct[i], m ].item() 
+            output.loc[ i, m ] = payments.loc[ payments['Contract'] == struct[i], m ].item() 
         for i in range(2, 12, 3):
             output.loc[ i, m ] = output.loc[ i-1, m ].item() / output.loc[ i-2, m ].item()
 
+
+
+
     output.loc[ 12, '' ] = 'Cumulative'
+    
+
+
     
     for i in range(0, 12):
         output.loc[ i + 13, '' ] = output.loc[ i, '' ]

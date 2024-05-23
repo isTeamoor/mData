@@ -24,20 +24,28 @@ def corrections(transactions):
     transacts.loc[ transacts['Reservation Number'] == 9503, 'closedMonth' ] = 5 #Спец.обувь
     transacts.loc[ transacts['Catalogue Transaction ID'] == 109835, 'transactMonth' ] = 5 #Спец.обувь
 
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 116788, 'transactMonth' ] = 5 #Круг абразивный арми
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 116789, 'transactMonth' ] = 5 #Круг абразивный арми
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 116790, 'transactMonth' ] = 5 #Круг абразивный арми
 
-    """#Корректировка возврат по письму. Спорные вопросы с Шахзодбеком взаимозачет кирим возврат   !!!! Можно удалить для мая
+
+    #Корректировка возврат по письму. Спорные вопросы с Шахзодбеком взаимозачет кирим возврат
+    # В майском проверить и можно удалить 
+    """ 
     transacts.loc[ transacts['Reservation Number'] == 10494, 'Quantity' ] = 0 #Шлифовальный диск
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116785, 'Quantity' ] = 0 #Шлифовальный диск
-
+    
     transacts.loc[ transacts['Reservation Number'] == 10493, 'Quantity' ] = 0 #Абразивный круг
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116786, 'Quantity' ] = 0 #Абразивный круг
-
+    
     transacts.loc[ transacts['Reservation Number'] == 10490, 'Quantity' ] = 0 #Абразивный отрезной круг
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116784, 'Quantity' ] = 0 #Абразивный отрезной круг
-
+    
     transacts.loc[ transacts['Reservation Number'] == 10491, 'Quantity' ] = 0 #Круг абразивный арми
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116787, 'Quantity' ] = 0 #Круг абразивный арми
     """
+    
+    
 
     return transacts
 

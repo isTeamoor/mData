@@ -2,15 +2,17 @@ from fastapi import APIRouter
 from ..database.DF__transactions import transactions
 from ..database.DF__requisitions import requisitions
 from ..lib.MaterialReports import regular
-from ..lib.Requisitions import reqData
-from ..lib.KPI import report
-
-
+from ..lib.Statistics import report
+from ..lib.PO import reqData
+from ..lib.PO import payments
+from ..lib.Utils import checkBugs
+from ..lib.Utils import checkStore
 
 router = APIRouter(
-    prefix="/reports",
+    prefix="/report",
     tags=['Reports']
 )
+
 
 
 @router.get('/matReport/{month}/{department}')
@@ -23,7 +25,22 @@ def get_reqs():
     reqData.divide_source(requisitions)
     return {'/requisitions':'ok'}
 
-@router.get('/kpiReport')
-def get_kpirep():
-    data = report.draw_report()
-    return {'/kpiReport':'ok'}
+@router.get('/payments/{department}')
+def get_payments(department:str):
+    data = payments.draw_report(department = department)
+    return {'/payments':'ok'}
+
+@router.get('/toExcel')
+def writeAnalysisReport():
+    report.writeExcel()
+    return {'done':'True'}
+
+@router.get('/checkbugs')
+def fix():
+    checkBugs.check()
+    return {'done':'True'}
+
+@router.get('/checkstore')
+def fix():
+    checkStore.exec()
+    return {'done':'True'}

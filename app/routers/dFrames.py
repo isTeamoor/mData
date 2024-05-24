@@ -40,11 +40,6 @@ def dframe_requisitions():
     DF__requisitions.requisitions.to_excel('requisitions.xlsx', index=False)
     return {'requisitions':'ok'}
 
-@router.get('/assetChildren')
-def dframe_assetChildren():
-    print(DF__assets.unitChildren())
-    return {'assetChildren':DF__assets.AssetsRelationships}
-
 @router.get('/requests')
 def dframe_requests():
     DF__requests.requests.to_excel('requests.xlsx', index=False)
@@ -59,4 +54,9 @@ def dframe_tasks():
 def dframe_budgets():
     DF__budget.outsourceBudg.to_excel('outsourceBudg.xlsx', index=False)
     return {'budgets':'ok'}
+
+@router.get('/assetChildren')
+def dframe_assetChildren():
+    print(DF__assets.unitChildren())
+    return {'assetChildren':DF__assets.AssetsRelationships}
 

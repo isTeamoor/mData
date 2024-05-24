@@ -1,7 +1,8 @@
 import pandas as pd 
 from ...lib import gen
+from . import subF
 from ...database.DF__wo import wo
-from ...database.DF__assets import byAssets, checkRelationships
+from ...database.DF__assets import byAssets
 
 
 ### Сумма/количество по 1 полю dataframe
@@ -16,56 +17,54 @@ def fieldTotal(df, theField, action, filters=[]):
 
     return {'data':output}
 
-
 ### Сумма/количество по 1 полю dataframe с разделением по годам 
 def fieldTotal_yearly(df, yearfield, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
 
-    data = gen.groupby_1(df, yearfield, theField, action)
+    data = subF.groupby_1(df, yearfield, theField, action)
     output = {'data': data, 
-              'proportion':gen.proportion(data),
-              'cumulative':gen.simpleCumulate(data)}
+              'proportion':subF.proportion(data),
+              'cumulative':subF.simpleCumulate(data)}
     
     return output
-
 
 ### Сумма/количество по 1 полю dataframe с разделением по годам и месяцам
 def fieldTotal_monthly(df, yearfield, monthfield, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
 
-    data = gen.groupby_2(df, yearfield, monthfield, theField, action)
+    data = subF.groupby_2(df, yearfield, monthfield, theField, action)
     output = {'data':data, 
-              'proportion':gen.proportion(data), 
-              'cumulative':gen.simpleCumulate(data),
-              'simple_solidCumulative':gen.simple_solidCumulate(data)}
+              'proportion':subF.proportion(data), 
+              'cumulative':subF.simpleCumulate(data),
+              'simple_solidCumulative':subF.simple_solidCumulate(data)}
     
     return output
+
+
 
 
 ### Сумма/количество по 2 полям dataframe с разделением по годам
 def coupleFields_yearly(df, yearfield, categoryField, valueField, action, filters=[]):
     df = gen.filterDF(df, filters)
 
-    data = gen.groupby_2(df, yearfield, categoryField, valueField, action)
+    data = subF.groupby_2(df, yearfield, categoryField, valueField, action)
     output = {'data':data, 
-              'proportion':gen.proportion(data),
-              'cumulative':gen.cumulate(data)}
+              'proportion':subF.proportion(data),
+              'cumulative':subF.cumulate(data)}
     
     return output
-
 
 ### Сумма/количество по 2 полям dataframe с разделением по годам и месяцам
 def coupleFields_monthly(df, yearfield, monthfield, categoryField, valueField, action, filters=[]):
     df = gen.filterDF(df, filters)
 
-    data = gen.groupby_3(df, yearfield, monthfield, categoryField, valueField, action)
+    data = subF.groupby_3(df, yearfield, monthfield, categoryField, valueField, action)
     output = {'data':data, 
-              'proportion':gen.proportion(data),
-              'cumulative':gen.cumulate(data),
-              'solidCumulative':gen.solidCumulate(data)}
+              'proportion':subF.proportion(data),
+              'cumulative':subF.cumulate(data),
+              'solidCumulative':subF.solidCumulate(data)}
     
     return output
-
 
 ### Сумма/количество по 1 полю dataframe по Assets (rooted) с разделением по годам
 def fieldTotal_Assets_yearly(df, yearfield, theField, action, filters=[]):
@@ -82,6 +81,8 @@ def fieldTotal_Assets_yearly(df, yearfield, theField, action, filters=[]):
 
     output = {'data':output}
     return output
+
+
 
 
 ### Сумма/количество по 1 полю dataframe по Assets (rooted) с разделением по годам и месяцам
@@ -101,6 +102,8 @@ def fieldTotal_Assets_monthly(df, yearfield, monthfield, theField, action, filte
 
     output = {'data':output}
     return output
+
+
 
 
 ### Сортировка материальных расходов по assets с детализацией по JobTypes
@@ -137,7 +140,6 @@ def sorted_matcost_assets(df, filters=[]):
     modDF = modDF.sort_values(by=['Total cost'], ascending = False)
 
     return modDF
-
 
 ### Сортировка количества raised WO по assets с детализацией по JobTypes
 def sorted_woRaised_assets(df, filters=[]):

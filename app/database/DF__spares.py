@@ -2,6 +2,7 @@ from .impo import spares, customFields, uom
 from .DF__wo import wo
 from .DF__woComponent import woComponent
 from .DF__reservations import reservations
+from .DF__assets import unitChildren
 
 
 
@@ -35,6 +36,8 @@ spares['Actual Cost']    = spares['Actual Quantity'] * spares['Estimated Unit Co
 spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit Cost']
 
 spares.loc [ (spares['Account Code']=='100000000012') & (spares['Reserved By']=="To'lqin Berdiyev Omonovich"), 'Short Department Name'] = '4AP'
+spares.loc [ (spares['Asset Number']).isin(unitChildren()) & (spares['Short Department Name']!='4AP'), 'Short Department Name' ] = '4AP_free'
+
 
 
 

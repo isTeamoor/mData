@@ -38,8 +38,6 @@ def corrections(transactions):
     transacts.loc[ transacts['Reservation Number'] == 10493, 'Quantity' ] = 0 #Абразивный круг
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116786, 'Quantity' ] = 0 #Абразивный круг
     
-    transacts.loc[ transacts['Reservation Number'] == 10490, 'Quantity' ] = 0 #Абразивный отрезной круг
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 116784, 'Quantity' ] = 0 #Абразивный отрезной круг
     
     transacts.loc[ transacts['Reservation Number'] == 10491, 'Quantity' ] = 0 #Круг абразивный арми
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116787, 'Quantity' ] = 0 #Круг абразивный арми
@@ -71,12 +69,14 @@ inactive_Master_Reservations  = [
 1849,1852,2278,2307,2335,2648,2649,2679,2816,2908,2955,2956,2957,2959,3146,3147,3148,3203,3204,5527,5528,5536,782,6161,6162,7657,
 6744,6766,6773,6828,6917,6985,7104,7299,7300,7301,7554,
 8580,
+"""
 #52090:
 5388, 5877,6964,
 #84634:
 7910, 7912, 7913, 7915, 7916, 7918, 7919, 7920, 7921, 7922, 7923, 7963, 7694, 7965, 8068, 8140, 8141, 8228, 9083, 9318, 9511, 
 #94411:
-10138, 10340,10341,
+10138, 10340, 10341,
+"""
 ]
 
 
@@ -91,20 +91,18 @@ extra = {
             {'Код товара':'12815','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Нержавекеющая сталь",'Ед.изм.':'кг','Quantity':0.84,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
         'currentMonth':[
-            {'Код товара':'16797','Reservation Number':-4,'WO №':-4,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Свинец 13",'Ед.изм.':'тн','Quantity':0.299,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'21883','Reservation Number':-4,'WO №':-4,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.7095,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
         'currentReturn':[]
     },
     'cofe':{
         'begin':[
-            {'Код товара':'09683','Reservation Number':-1,'WO №':-1,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.8049,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
-            ],
+            {'Код товара':'06933','Reservation Number':-1,'WO №':-1,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':20,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+        ],
         'currentMonth':[
-            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':120,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
-            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':20,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
-            {'Код товара':'07483','Reservation Number':-4,'WO №':-4,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А4",'Ед.изм.':'пачка','Quantity':13,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Offcie consumables', 'Объект':'Offcie consumables'},
-            {'Код товара':'16801','Reservation Number':-5,'WO №':-5,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Веник",'Ед.изм.':'шт','Quantity':5,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Offcie consumables', 'Объект':'Offcie consumables'},
-            {'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':4,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':27.6001,'Отдел':'cofe','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':80,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':140,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+            {'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':29.431,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
         'currentReturn':[]
     },

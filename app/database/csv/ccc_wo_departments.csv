@@ -74,7 +74,7 @@
 94,Cofe-FGS,Fire Gas System Support
 95,Cofe-HVAC,High Ventilation and Air Conditioner support
 96,Cofe-Welding,Welding Support
-97,Cofe-INSUL/SCAF,Insulation & Scaffolding support
+97,Cofe-INSUL,Insulation support
 98,Cofe-Electrical,Electrical Support
 99,Cofe-Steam Tracing,Steam Tracing Support
 100,Cofe-Stat (Machinist),Machinist Support
@@ -84,3 +84,4 @@
 104,Quality Control,Quality Control Department
 105,Trainee Sector,Trainee Sector
 106,ETL Maintenance,Electrotechnical Laboratory team of Maintenance
+107,Cofe-Scaff,Scaffolding support

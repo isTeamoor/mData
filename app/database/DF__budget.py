@@ -1,5 +1,6 @@
 import pandas as pd
 
+### 2. Бюджет Outsource
 outsourceBudg = pd.DataFrame(
     [
         {'Currency':'uzs','Company name':'UNGM-DR', 'SoW':'Rotating Services','Contract':'UZGTL-CON-2262','opex':'-','working capital':'+','capex':'-','Sum':1320000000, 'Jan':110000000, 'Feb':110000000, 'Mar':110000000, 'Apr':110000000, 'May':110000000, 'Jun':110000000, 'Jul':110000000, 'Aug':110000000, 'Sep':110000000, 'Oct':110000000, 'Nov':110000000, 'Dec':110000000},
@@ -29,22 +30,60 @@ outsourceBudg = pd.DataFrame(
         {'Currency':'usd','Company name':'Maintenance Experts', 'SoW':'CMMS','Contract':'UZGTL-CON-23-433','opex':'+','working capital':'-','capex':'-','Sum':73027, 'Jan':6085, 'Feb':6085, 'Mar':6085, 'Apr':6085, 'May':6085, 'Jun':6085, 'Jul':6085, 'Aug':6085, 'Sep':6085, 'Oct':6085, 'Nov':6085, 'Dec':6085},
         {'Currency':'usd','Company name':'Nol-Tec Systems', 'SoW':'Vendor commissioning services','Contract':'UZGTL-CON-1799','opex':'-','working capital':'-','capex':'+','Sum':43000, 'Jan':43000, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
         {'Currency':'usd','Company name':'GE Oil and Gas', 'SoW':'Vendor commissioning services','Contract':'UZGTL-CON-1790','opex':'-','working capital':'-','capex':'+','Sum':415896, 'Jan':415896, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
-        {'Currency':'usd','Company name':'Severn Glocon', 'SoW':'Instrumentation Services','Contract':'UZGTL-CON-2599','opex':'-','working capital':'+','capex':'-','Sum':300000, 'Jan':0, 'Feb':100000, 'Mar':0, 'Apr':0, 'May':0, 'Jun':100000, 'Jul':0, 'Aug':0, 'Sep':100000, 'Oct':0, 'Nov':0, 'Dec':0}
+        {'Currency':'usd','Company name':'Severn Glocon', 'SoW':'Instrumentation Services','Contract':'UZGTL-CON-2599','opex':'-','working capital':'+','capex':'-','Sum':300000, 'Jan':0, 'Feb':100000, 'Mar':0, 'Apr':0, 'May':0, 'Jun':100000, 'Jul':0, 'Aug':0, 'Sep':100000, 'Oct':0, 'Nov':0, 'Dec':0},
+    
+    
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':20900000000, 'Jan':1850000000, 'Feb':1650000000, 'Mar':1550000000, 'Apr':2400000000, 'May':1350000000, 'Jun':1450000000, 'Jul':1550000000, 'Aug':1650000000, 'Sep':1450000000, 'Oct':1650000000, 'Nov':1750000000, 'Dec':2600000000},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in usd','opex':'','working capital':'','capex':'','Sum':1672000, 'Jan':148000, 'Feb':132000, 'Mar':124000, 'Apr':192000, 'May':108000, 'Jun':116000, 'Jul':124000, 'Aug':132000, 'Sep':116000, 'Oct':132000, 'Nov':140000, 'Dec':208000},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary foreign contracts in usd','opex':'','working capital':'','capex':'','Sum':35501213, 'Jan':18517731, 'Feb':1401085, 'Mar':1128239, 'Apr':603239, 'May':603239, 'Jun':828239, 'Jul':603239, 'Aug':8753239, 'Sep':1128239, 'Oct':603239, 'Nov':603239, 'Dec':728239},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary all contracts in usd','opex':'','working capital':'','capex':'','Sum':37173213, 'Jan':18665731, 'Feb':1533085, 'Mar':1252239, 'Apr':795239, 'May':711239, 'Jun':944239, 'Jul':727239, 'Aug':8885239, 'Sep':1244239, 'Oct':735239, 'Nov':743239, 'Dec':936239},
     ]
 )
-outsourceBudg.loc[ outsourceBudg.index[-1] + 1 ] = outsourceBudg.loc[ outsourceBudg['Currency'] == 'uzs' ].sum(numeric_only=True)
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary local contracts in uzs'
-
-last_index = outsourceBudg.index[-1] + 1
-for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
-    outsourceBudg.loc[ last_index, m ] = outsourceBudg.loc[ outsourceBudg['Contract'] == 'Summary local contracts in uzs', m ].item() / 12500
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary local contracts in usd'
-
-outsourceBudg.loc[ outsourceBudg.index[-1] + 1 ] = outsourceBudg.loc[ outsourceBudg['Currency'] == 'usd' ].sum(numeric_only=True)
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary foreign contracts in usd'
-
-outsourceBudg.loc[ outsourceBudg.index[-1]+1 ] = outsourceBudg.loc[ outsourceBudg['Contract'].isin(['Summary local contracts in usd', 'Summary foreign contracts in usd']) ].sum(numeric_only=True)
-outsourceBudg.loc[ outsourceBudg.index[-1], 'Contract'] = 'Summary all contracts in usd'
 
 
 
+### 2. Бюджет RMPD
+rmpdBudg = pd.DataFrame(
+    [
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in usd','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary foreign contracts in usd','opex':'','working capital':'','capex':'','Sum':11489985, 'Jan':957499, 'Feb':957499, 'Mar':957499, 'Apr':957499, 'May':957499, 'Jun':957499, 'Jul':957499, 'Aug':957499, 'Sep':957499, 'Oct':957499, 'Nov':957499, 'Dec':957499},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary all contracts in usd','opex':'','working capital':'','capex':'','Sum':11489985, 'Jan':957499, 'Feb':957499, 'Mar':957499, 'Apr':957499, 'May':957499, 'Jun':957499, 'Jul':957499, 'Aug':957499, 'Sep':957499, 'Oct':957499, 'Nov':957499, 'Dec':957499},
+    ]
+)
+
+
+
+### 3. Бюджет CofE
+cofeBudg = pd.DataFrame(
+    [
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in usd','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary foreign contracts in usd','opex':'','working capital':'','capex':'','Sum':2325230, 'Jan':193770, 'Feb':193770, 'Mar':193770, 'Apr':193770, 'May':193770, 'Jun':193770, 'Jul':193770, 'Aug':193770, 'Sep':193770, 'Oct':193770, 'Nov':193770, 'Dec':193770},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary all contracts in usd','opex':'','working capital':'','capex':'','Sum':2325230, 'Jan':193770, 'Feb':193770, 'Mar':193770, 'Apr':193770, 'May':193770, 'Jun':193770, 'Jul':193770, 'Aug':193770, 'Sep':193770, 'Oct':193770, 'Nov':193770, 'Dec':193770},
+    ]
+)
+
+
+
+### 4. Бюджет TAR
+tarBudg = pd.DataFrame(
+    [
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in usd','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary foreign contracts in usd','opex':'','working capital':'','capex':'','Sum':19000000, 'Jan':1583333, 'Feb':1583333, 'Mar':1583333, 'Apr':1583333, 'May':1583333, 'Jun':1583333, 'Jul':1583333, 'Aug':1583333, 'Sep':1583333, 'Oct':1583333, 'Nov':1583333, 'Dec':1583333},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary all contracts in usd','opex':'','working capital':'','capex':'','Sum':19000000, 'Jan':1583333, 'Feb':1583333, 'Mar':1583333, 'Apr':1583333, 'May':1583333, 'Jun':1583333, 'Jul':1583333, 'Aug':1583333, 'Sep':1583333, 'Oct':1583333, 'Nov':1583333, 'Dec':1583333},
+    ]
+)
+
+
+
+### 5. Бюджет MTK
+mtkBudg = pd.DataFrame(
+    [
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':924000000, 'Jan':77000000, 'Feb':77000000, 'Mar':77000000, 'Apr':77000000, 'May':77000000, 'Jun':77000000, 'Jul':77000000, 'Aug':77000000, 'Sep':77000000, 'Oct':77000000, 'Nov':77000000, 'Dec':77000000},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in usd','opex':'','working capital':'','capex':'','Sum':73920, 'Jan':6160, 'Feb':6160, 'Mar':6160, 'Apr':6160, 'May':6160, 'Jun':6160, 'Jul':6160, 'Aug':6160, 'Sep':6160, 'Oct':6160, 'Nov':6160, 'Dec':6160},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary foreign contracts in usd','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
+        {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary all contracts in usd','opex':'','working capital':'','capex':'','Sum':73920, 'Jan':6160, 'Feb':6160, 'Mar':6160, 'Apr':6160, 'May':6160, 'Jun':6160, 'Jul':6160, 'Aug':6160, 'Sep':6160, 'Oct':6160, 'Nov':6160, 'Dec':6160},
+    ]
+)

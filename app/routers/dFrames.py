@@ -53,6 +53,10 @@ def dframe_tasks():
 @router.get('/budget')
 def dframe_budgets():
     DF__budget.outsourceBudg.to_excel('outsourceBudg.xlsx', index=False)
+    DF__budget.rmpdBudg.to_excel('rmpdBudg.xlsx', index=False)
+    DF__budget.tarBudg.to_excel('tarBudg.xlsx', index=False)
+    DF__budget.mtkBudg.to_excel('mtkBudg.xlsx', index=False)
+    DF__budget.cofeBudg.to_excel('cofeBudg.xlsx', index=False)
     return {'budgets':'ok'}
 
 @router.get('/assetChildren')

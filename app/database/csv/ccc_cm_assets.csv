@@ -230,6 +230,7 @@
 224216,175192,Analyser Junior Technician,Qahramonov Baxtiyor Ergash o`g`li
 245226,175192,Analyzer Junior Technician,G‘aybullayev Maqsudjon
 245235,175192,Electrical Supervisor,Axmedov Ibroxim
+245239,175192,Maintenance Planner ,Maxmudov Foziljon
 245276,175192,Instrument Engineer,Kayimov Mailik Buronovich
 208566,208767,EWS for MAC/BAC,100-EWS-001
 208964,208767,EWS for MAC/BAC,100-EWS-001
@@ -46720,10 +46721,8 @@
 175262,175192,Electrical Junior Technician,Toshniyozov Farrux
 175265,175192,Instrumentation Technician,Umurzoqov Yusuf
 175266,175192,Static Engineer ,Xolmurodov Xurshid
-175269,175192,Static supervisor,Yarashev Javlon
 175466,175192,Static Engineer,Xushvaqtov Erkin
 218398,175192,Instrumentation Junior Technician,Norov Abbosjon Avaz o'g'li
-218463,175192,Instrument Coordinator,Yusupov Sheroz
 218563,175192,Junior planner,Asrorxonov Abusoleh Qutbiddinovich
 220889,175192,Rotating Junior technician,Buriev Muhsin 
 220890,175192,Rotating Junior technician,Ubaydullayev Doston
@@ -46736,7 +46735,6 @@
 224445,175192,Electrical junior technician,Baxronov Axror Shokir o'g'li
 224756,175192,Static Junior technician,G`oziyev Jamshid Yaxshiboyevich
 227859,175192,Analyser Junior Technician,Xayrullayev Elyor Baxtiyor o'g'li
-245239,175192,Maintenance Planner ,Maxmudov Foziljon
 245240,175192,Static Supervisor ,O'mrzaqov G'anisher
 245241,175192,Instrumentation Engineer,Raximov Jamoljon
 245336,175192,Analyser Junior Technician,Qahramonov Baxtiyor Ergash o`g`li
@@ -53901,6 +53899,7 @@
 251500,217848,Solar panels,SP-Parking-360 kW
 175208,218224,Instrumentation Senior Engineer,Abdizoirov Islom
 175229,218224,Analyzer Technician,Abdiyev Abdirashid
+175269,218224,Static supervisor,Yarashev Javlon
 175438,218224,Electrical Junior Technician,Choriyev Akrom
 175442,218224,Electrical Supervisor,Hasanov Sherzod
 218312,218224,Incident Management and Investigation Coordinator,O'mrzaqov G'anisher Boynazarovich
@@ -54766,6 +54765,7 @@
 218458,218452,Rotating Coordinator,Yuldashev Sherzodjon
 218461,218452,Scaff/Insul Coordinator,	Saxibov Shokir
 218462,218452,Electrical Coordinator,	Yusupov Timur
+218463,218452,Instrument Coordinator,Yusupov Sheroz
 218460,218454,	Scaff/Insul Coordinator,Saxibov Shokir
 175213,218533,Instrumentation Junior Technician,Shodiyev Shoxruh
 175238,218533,Trainee,Bo`riyev Muhsin Baxrom o`g`li

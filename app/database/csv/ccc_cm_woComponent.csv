@@ -89021,8 +89021,8 @@
 94873,69,Electrical Spares,18041,3
 94874,69,Electrical Spares,18041,
 94875,75,Electrical Services,18047,
-94876,75,Electrical Services,18047,
-94877,69,Electrical Spares,18041,
+94876,75,Electrical Services,18047,3
+94877,69,Electrical Spares,18041,3
 94878,76,Mechanical Services,18048,3
 94879,76,Mechanical Services,18048,3
 94880,76,Mechanical Services,18048,3
@@ -91613,8 +91613,8 @@
 97466,76,Mechanical Services,18048,3
 97467,78,Mechanical Static spares,18050,
 97468,65,Maintenance Insulation,18037,
-97469,78,Mechanical Static spares,18050,
-97470,78,Mechanical Static spares,18050,
+97469,101,Air Product Spares,18203,
+97470,101,Air Product Spares,18203,
 97471,71,Instrument Spares,18043,3
 97472,68,Maintenance Rotating Services,18040,
 97473,68,Maintenance Rotating Services,18040,
@@ -91625,7 +91625,7 @@
 97478,65,Maintenance Insulation,18037,3
 97479,65,Maintenance Insulation,18037,
 97480,65,Maintenance Insulation,18037,
-97481,79,Instrumentation Services,,
+97481,79,Instrumentation Services,18051,3
 97482,71,Instrument Spares,18043,3
 97483,79,Instrumentation Services,18051,3
 97484,71,Instrument Spares,18043,3
@@ -91667,3 +91667,544 @@
 97520,75,Electrical Services,18047,
 97521,76,Mechanical Services,18048,3
 97522,76,Mechanical Services,18048,3
+97523,76,Mechanical Services,18048,3
+97524,78,Mechanical Static spares,18050,3
+97525,79,Instrumentation Services,18051,24
+97526,79,Instrumentation Services,18051,24
+97527,79,Instrumentation Services,18051,24
+97528,79,Instrumentation Services,18051,24
+97529,79,Instrumentation Services,18051,24
+97530,79,Instrumentation Services,18051,24
+97531,79,Instrumentation Services,18051,24
+97532,79,Instrumentation Services,18051,24
+97533,79,Instrumentation Services,18051,24
+97534,79,Instrumentation Services,18051,24
+97535,79,Instrumentation Services,18051,24
+97536,79,Instrumentation Services,18051,24
+97537,79,Instrumentation Services,18051,24
+97538,79,Instrumentation Services,18051,24
+97539,79,Instrumentation Services,18051,24
+97540,79,Instrumentation Services,18051,24
+97541,79,Instrumentation Services,18051,24
+97542,79,Instrumentation Services,18051,24
+97543,79,Instrumentation Services,18051,24
+97544,79,Instrumentation Services,18051,24
+97545,79,Instrumentation Services,18051,24
+97546,79,Instrumentation Services,18051,24
+97547,79,Instrumentation Services,18051,24
+97548,79,Instrumentation Services,18051,24
+97549,79,Instrumentation Services,18051,24
+97550,79,Instrumentation Services,18051,24
+97551,79,Instrumentation Services,18051,24
+97552,79,Instrumentation Services,18051,24
+97553,79,Instrumentation Services,18051,24
+97554,79,Instrumentation Services,18051,24
+97555,79,Instrumentation Services,18051,24
+97556,79,Instrumentation Services,18051,24
+97557,79,Instrumentation Services,18051,24
+97558,79,Instrumentation Services,18051,24
+97559,79,Instrumentation Services,18051,24
+97560,79,Instrumentation Services,18051,24
+97561,79,Instrumentation Services,18051,24
+97562,79,Instrumentation Services,18051,24
+97563,79,Instrumentation Services,18051,24
+97564,79,Instrumentation Services,18051,24
+97565,79,Instrumentation Services,18051,24
+97566,79,Instrumentation Services,18051,24
+97567,79,Instrumentation Services,18051,24
+97568,79,Instrumentation Services,18051,24
+97569,79,Instrumentation Services,18051,24
+97570,79,Instrumentation Services,18051,24
+97571,79,Instrumentation Services,18051,24
+97572,79,Instrumentation Services,18051,24
+97573,79,Instrumentation Services,18051,24
+97574,79,Instrumentation Services,18051,24
+97575,79,Instrumentation Services,18051,24
+97576,79,Instrumentation Services,18051,24
+97577,79,Instrumentation Services,18051,24
+97578,79,Instrumentation Services,18051,24
+97579,79,Instrumentation Services,18051,24
+97580,79,Instrumentation Services,18051,24
+97581,79,Instrumentation Services,18051,24
+97582,79,Instrumentation Services,18051,24
+97583,79,Instrumentation Services,18051,24
+97584,79,Instrumentation Services,18051,24
+97585,79,Instrumentation Services,18051,24
+97586,79,Instrumentation Services,18051,24
+97587,79,Instrumentation Services,18051,24
+97588,79,Instrumentation Services,18051,24
+97589,79,Instrumentation Services,18051,24
+97590,79,Instrumentation Services,18051,24
+97591,79,Instrumentation Services,18051,24
+97592,79,Instrumentation Services,18051,24
+97593,79,Instrumentation Services,18051,24
+97594,79,Instrumentation Services,18051,24
+97595,79,Instrumentation Services,18051,24
+97596,79,Instrumentation Services,18051,24
+97597,79,Instrumentation Services,18051,24
+97598,79,Instrumentation Services,18051,24
+97599,79,Instrumentation Services,18051,24
+97600,79,Instrumentation Services,18051,24
+97601,79,Instrumentation Services,18051,24
+97602,79,Instrumentation Services,18051,24
+97603,79,Instrumentation Services,18051,24
+97604,79,Instrumentation Services,18051,24
+97605,79,Instrumentation Services,18051,24
+97606,79,Instrumentation Services,18051,24
+97607,79,Instrumentation Services,18051,24
+97608,79,Instrumentation Services,18051,24
+97609,79,Instrumentation Services,18051,24
+97610,79,Instrumentation Services,18051,24
+97611,79,Instrumentation Services,18051,24
+97612,79,Instrumentation Services,18051,24
+97613,79,Instrumentation Services,18051,24
+97614,79,Instrumentation Services,18051,24
+97615,79,Instrumentation Services,18051,24
+97616,79,Instrumentation Services,18051,24
+97617,79,Instrumentation Services,18051,24
+97618,79,Instrumentation Services,18051,24
+97619,79,Instrumentation Services,18051,24
+97620,79,Instrumentation Services,18051,24
+97621,79,Instrumentation Services,18051,24
+97622,79,Instrumentation Services,18051,24
+97623,79,Instrumentation Services,18051,24
+97624,79,Instrumentation Services,18051,24
+97625,79,Instrumentation Services,18051,24
+97626,79,Instrumentation Services,18051,24
+97627,79,Instrumentation Services,18051,24
+97628,79,Instrumentation Services,18051,24
+97629,79,Instrumentation Services,18051,24
+97630,79,Instrumentation Services,18051,24
+97631,79,Instrumentation Services,18051,24
+97632,79,Instrumentation Services,18051,24
+97633,79,Instrumentation Services,18051,24
+97634,79,Instrumentation Services,18051,24
+97635,79,Instrumentation Services,18051,24
+97636,79,Instrumentation Services,18051,24
+97637,79,Instrumentation Services,18051,24
+97638,79,Instrumentation Services,18051,24
+97639,79,Instrumentation Services,18051,24
+97640,79,Instrumentation Services,18051,24
+97641,79,Instrumentation Services,18051,24
+97642,79,Instrumentation Services,18051,24
+97643,79,Instrumentation Services,18051,24
+97644,79,Instrumentation Services,18051,24
+97645,79,Instrumentation Services,18051,24
+97646,79,Instrumentation Services,18051,24
+97647,79,Instrumentation Services,18051,24
+97648,79,Instrumentation Services,18051,24
+97649,79,Instrumentation Services,18051,24
+97650,79,Instrumentation Services,18051,24
+97651,79,Instrumentation Services,18051,24
+97652,79,Instrumentation Services,18051,24
+97653,79,Instrumentation Services,18051,24
+97654,79,Instrumentation Services,18051,24
+97655,79,Instrumentation Services,18051,24
+97656,79,Instrumentation Services,18051,24
+97657,79,Instrumentation Services,18051,24
+97658,79,Instrumentation Services,18051,24
+97659,79,Instrumentation Services,18051,24
+97660,79,Instrumentation Services,18051,24
+97661,79,Instrumentation Services,18051,24
+97662,79,Instrumentation Services,18051,24
+97663,79,Instrumentation Services,18051,24
+97664,79,Instrumentation Services,18051,24
+97665,79,Instrumentation Services,18051,24
+97666,79,Instrumentation Services,18051,24
+97667,79,Instrumentation Services,18051,24
+97668,79,Instrumentation Services,18051,24
+97669,79,Instrumentation Services,18051,24
+97670,79,Instrumentation Services,18051,24
+97671,79,Instrumentation Services,18051,24
+97672,79,Instrumentation Services,18051,24
+97673,79,Instrumentation Services,18051,24
+97674,79,Instrumentation Services,18051,24
+97675,79,Instrumentation Services,18051,24
+97676,79,Instrumentation Services,18051,24
+97677,79,Instrumentation Services,18051,24
+97678,79,Instrumentation Services,18051,24
+97679,79,Instrumentation Services,18051,24
+97680,79,Instrumentation Services,18051,24
+97681,79,Instrumentation Services,18051,24
+97682,79,Instrumentation Services,18051,24
+97683,79,Instrumentation Services,18051,24
+97684,79,Instrumentation Services,18051,24
+97685,79,Instrumentation Services,18051,24
+97686,79,Instrumentation Services,18051,24
+97687,79,Instrumentation Services,18051,24
+97688,79,Instrumentation Services,18051,24
+97689,79,Instrumentation Services,18051,24
+97690,79,Instrumentation Services,18051,24
+97691,79,Instrumentation Services,18051,24
+97692,79,Instrumentation Services,18051,24
+97693,79,Instrumentation Services,18051,24
+97694,79,Instrumentation Services,18051,24
+97695,79,Instrumentation Services,18051,24
+97696,79,Instrumentation Services,18051,24
+97697,79,Instrumentation Services,18051,24
+97698,79,Instrumentation Services,18051,24
+97699,79,Instrumentation Services,18051,24
+97700,79,Instrumentation Services,18051,24
+97701,79,Instrumentation Services,18051,24
+97702,79,Instrumentation Services,18051,24
+97703,79,Instrumentation Services,18051,24
+97704,79,Instrumentation Services,18051,24
+97705,79,Instrumentation Services,18051,24
+97706,79,Instrumentation Services,18051,24
+97707,79,Instrumentation Services,18051,24
+97708,79,Instrumentation Services,18051,24
+97709,79,Instrumentation Services,18051,24
+97710,79,Instrumentation Services,18051,24
+97711,79,Instrumentation Services,18051,24
+97712,79,Instrumentation Services,18051,24
+97713,79,Instrumentation Services,18051,24
+97714,79,Instrumentation Services,18051,24
+97715,79,Instrumentation Services,18051,24
+97716,79,Instrumentation Services,18051,24
+97717,79,Instrumentation Services,18051,24
+97718,79,Instrumentation Services,18051,24
+97719,79,Instrumentation Services,18051,24
+97720,79,Instrumentation Services,18051,24
+97721,79,Instrumentation Services,18051,24
+97722,79,Instrumentation Services,18051,24
+97723,79,Instrumentation Services,18051,24
+97724,79,Instrumentation Services,18051,24
+97725,79,Instrumentation Services,18051,24
+97726,79,Instrumentation Services,18051,24
+97727,79,Instrumentation Services,18051,24
+97728,79,Instrumentation Services,18051,24
+97729,79,Instrumentation Services,18051,24
+97730,79,Instrumentation Services,18051,24
+97731,79,Instrumentation Services,18051,24
+97732,79,Instrumentation Services,18051,24
+97733,79,Instrumentation Services,18051,24
+97734,79,Instrumentation Services,18051,24
+97735,79,Instrumentation Services,18051,24
+97736,79,Instrumentation Services,18051,24
+97737,79,Instrumentation Services,18051,24
+97738,79,Instrumentation Services,18051,24
+97739,79,Instrumentation Services,18051,24
+97740,79,Instrumentation Services,18051,24
+97741,79,Instrumentation Services,18051,24
+97742,79,Instrumentation Services,18051,24
+97743,79,Instrumentation Services,18051,24
+97744,79,Instrumentation Services,18051,24
+97745,79,Instrumentation Services,18051,24
+97746,79,Instrumentation Services,18051,24
+97747,79,Instrumentation Services,18051,24
+97748,79,Instrumentation Services,18051,24
+97749,79,Instrumentation Services,18051,24
+97750,79,Instrumentation Services,18051,24
+97751,79,Instrumentation Services,18051,24
+97752,79,Instrumentation Services,18051,24
+97753,79,Instrumentation Services,18051,24
+97754,79,Instrumentation Services,18051,24
+97755,79,Instrumentation Services,18051,24
+97756,79,Instrumentation Services,18051,24
+97757,79,Instrumentation Services,18051,24
+97758,79,Instrumentation Services,18051,24
+97759,79,Instrumentation Services,18051,24
+97760,79,Instrumentation Services,18051,24
+97761,79,Instrumentation Services,18051,24
+97762,79,Instrumentation Services,18051,24
+97763,79,Instrumentation Services,18051,24
+97764,79,Instrumentation Services,18051,24
+97765,79,Instrumentation Services,18051,24
+97766,79,Instrumentation Services,18051,24
+97767,79,Instrumentation Services,18051,24
+97768,79,Instrumentation Services,18051,24
+97769,79,Instrumentation Services,18051,24
+97770,79,Instrumentation Services,18051,24
+97771,79,Instrumentation Services,18051,24
+97772,79,Instrumentation Services,18051,24
+97773,79,Instrumentation Services,18051,24
+97774,79,Instrumentation Services,18051,24
+97775,79,Instrumentation Services,18051,24
+97776,79,Instrumentation Services,18051,24
+97777,79,Instrumentation Services,18051,24
+97778,79,Instrumentation Services,18051,24
+97779,79,Instrumentation Services,18051,24
+97780,79,Instrumentation Services,18051,24
+97781,79,Instrumentation Services,18051,24
+97782,79,Instrumentation Services,18051,24
+97783,79,Instrumentation Services,18051,24
+97784,79,Instrumentation Services,18051,24
+97785,79,Instrumentation Services,18051,24
+97786,79,Instrumentation Services,18051,24
+97787,79,Instrumentation Services,18051,24
+97788,79,Instrumentation Services,18051,24
+97789,79,Instrumentation Services,18051,24
+97790,79,Instrumentation Services,18051,24
+97791,79,Instrumentation Services,18051,24
+97792,79,Instrumentation Services,18051,24
+97793,79,Instrumentation Services,18051,24
+97794,79,Instrumentation Services,18051,24
+97795,79,Instrumentation Services,18051,24
+97796,79,Instrumentation Services,18051,24
+97797,79,Instrumentation Services,18051,24
+97798,79,Instrumentation Services,18051,24
+97799,79,Instrumentation Services,18051,24
+97800,79,Instrumentation Services,18051,24
+97801,79,Instrumentation Services,18051,24
+97802,79,Instrumentation Services,18051,24
+97803,79,Instrumentation Services,18051,24
+97804,79,Instrumentation Services,18051,24
+97805,96,Personal Protective Equipment,18188,
+97806,65,Maintenance Insulation,18037,
+97807,92,Piping (Steam tracing),18048,
+97808,64,Maintenance Scaffolding,18036,
+97809,76,Mechanical Services,18048,
+97810,78,Mechanical Static spares,18050,
+97811,93,Jet Wash Cleaning,18048,
+97812,79,Instrumentation Services,18051,
+97813,68,Maintenance Rotating Services,18040,
+97814,68,Maintenance Rotating Services,18040,
+97815,68,Maintenance Rotating Services,18040,
+97816,68,Maintenance Rotating Services,18040,
+97817,68,Maintenance Rotating Services,18040,
+97818,76,Mechanical Services,18048,3
+97819,66,Maintenance Welding,18038,3
+97820,76,Mechanical Services,18048,3
+97821,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,5
+97822,75,Electrical Services,18047,5
+97823,75,Electrical Services,18047,5
+97824,79,Instrumentation Services,18051,5
+97825,79,Instrumentation Services,18051,5
+97826,79,Instrumentation Services,18051,5
+97827,79,Instrumentation Services,18051,5
+97828,79,Instrumentation Services,18051,5
+97829,79,Instrumentation Services,18051,5
+97830,79,Instrumentation Services,18051,5
+97831,79,Instrumentation Services,18051,5
+97832,79,Instrumentation Services,18051,5
+97833,79,Instrumentation Services,18051,5
+97834,79,Instrumentation Services,18051,5
+97835,79,Instrumentation Services,18051,5
+97836,79,Instrumentation Services,18051,5
+97837,79,Instrumentation Services,18051,5
+97838,79,Instrumentation Services,18051,5
+97839,79,Instrumentation Services,18051,5
+97840,79,Instrumentation Services,18051,5
+97841,79,Instrumentation Services,18051,5
+97842,79,Instrumentation Services,18051,5
+97843,79,Instrumentation Services,18051,5
+97844,79,Instrumentation Services,18051,5
+97845,79,Instrumentation Services,18051,5
+97846,79,Instrumentation Services,18051,5
+97847,79,Instrumentation Services,18051,5
+97848,79,Instrumentation Services,18051,5
+97849,79,Instrumentation Services,18051,5
+97850,79,Instrumentation Services,18051,5
+97851,79,Instrumentation Services,18051,5
+97852,79,Instrumentation Services,18051,5
+97853,79,Instrumentation Services,18051,5
+97854,79,Instrumentation Services,18051,5
+97855,79,Instrumentation Services,18051,5
+97856,79,Instrumentation Services,18051,5
+97857,79,Instrumentation Services,18051,5
+97858,79,Instrumentation Services,18051,5
+97859,79,Instrumentation Services,18051,5
+97860,79,Instrumentation Services,18051,5
+97861,79,Instrumentation Services,18051,5
+97862,79,Instrumentation Services,18051,5
+97863,79,Instrumentation Services,18051,5
+97864,79,Instrumentation Services,18051,5
+97865,79,Instrumentation Services,18051,5
+97866,79,Instrumentation Services,18051,5
+97867,79,Instrumentation Services,18051,5
+97868,79,Instrumentation Services,18051,5
+97869,79,Instrumentation Services,18051,5
+97870,79,Instrumentation Services,18051,5
+97871,79,Instrumentation Services,18051,5
+97872,79,Instrumentation Services,18051,5
+97873,79,Instrumentation Services,18051,5
+97874,79,Instrumentation Services,18051,5
+97875,79,Instrumentation Services,18051,5
+97876,79,Instrumentation Services,18051,
+97877,79,Instrumentation Services,18051,
+97878,79,Instrumentation Services,18051,
+97879,79,Instrumentation Services,18051,
+97880,79,Instrumentation Services,18051,
+97881,79,Instrumentation Services,18051,
+97882,79,Instrumentation Services,18051,
+97883,79,Instrumentation Services,18051,
+97884,79,Instrumentation Services,18051,
+97885,79,Instrumentation Services,18051,
+97886,79,Instrumentation Services,18051,
+97887,79,Instrumentation Services,18051,
+97888,79,Instrumentation Services,18051,
+97889,79,Instrumentation Services,18051,
+97890,79,Instrumentation Services,18051,
+97891,79,Instrumentation Services,18051,
+97892,79,Instrumentation Services,18051,
+97893,79,Instrumentation Services,18051,
+97894,79,Instrumentation Services,,
+97895,79,Instrumentation Services,,
+97896,79,Instrumentation Services,,
+97897,79,Instrumentation Services,,
+97898,79,Instrumentation Services,,
+97899,79,Instrumentation Services,,
+97900,79,Instrumentation Services,,
+97901,79,Instrumentation Services,,
+97902,79,Instrumentation Services,,
+97903,79,Instrumentation Services,,
+97904,79,Instrumentation Services,,
+97905,79,Instrumentation Services,,
+97906,79,Instrumentation Services,,
+97907,79,Instrumentation Services,,
+97908,79,Instrumentation Services,,
+97909,79,Instrumentation Services,,
+97910,79,Instrumentation Services,,
+97911,79,Instrumentation Services,,
+97912,79,Instrumentation Services,,
+97913,79,Instrumentation Services,,
+97914,79,Instrumentation Services,,
+97915,79,Instrumentation Services,,
+97916,79,Instrumentation Services,,
+97917,79,Instrumentation Services,,
+97918,79,Instrumentation Services,,
+97919,79,Instrumentation Services,,
+97920,79,Instrumentation Services,,
+97921,79,Instrumentation Services,,
+97922,79,Instrumentation Services,,
+97923,79,Instrumentation Services,,
+97924,79,Instrumentation Services,,
+97925,79,Instrumentation Services,,
+97926,79,Instrumentation Services,,
+97927,79,Instrumentation Services,,
+97928,79,Instrumentation Services,,
+97929,79,Instrumentation Services,,
+97930,79,Instrumentation Services,,
+97931,79,Instrumentation Services,18051,
+97932,79,Instrumentation Services,18051,
+97933,79,Instrumentation Services,18051,
+97934,79,Instrumentation Services,18051,
+97935,79,Instrumentation Services,18051,
+97936,79,Instrumentation Services,18051,
+97937,79,Instrumentation Services,18051,
+97938,65,Maintenance Insulation,18037,
+97939,92,Piping (Steam tracing),18048,
+97940,64,Maintenance Scaffolding,18036,
+97941,76,Mechanical Services,18048,
+97942,78,Mechanical Static spares,18050,
+97943,93,Jet Wash Cleaning,18048,
+97944,79,Instrumentation Services,18051,
+97945,65,Maintenance Insulation,18037,
+97946,65,Maintenance Insulation,18037,3
+97947,65,Maintenance Insulation,18037,3
+97948,101,Air Product Spares,18203,
+97949,101,Air Product Spares,18203,
+97950,71,Instrument Spares,18043,3
+97951,79,Instrumentation Services,18051,3
+97952,65,Maintenance Insulation,18037,3
+97953,95,Analyser Services,18051,3
+97954,101,Air Product Spares,18203,
+97955,79,Instrumentation Services,18051,3
+97956,101,Air Product Spares,18203,
+97957,101,Air Product Spares,18203,
+97958,65,Maintenance Insulation,18037,
+97959,78,Mechanical Static spares,18050,
+97960,64,Maintenance Scaffolding,18036,
+97961,65,Maintenance Insulation,18037,
+97962,65,Maintenance Insulation,18037,3
+97963,65,Maintenance Insulation,18037,
+97964,65,Maintenance Insulation,18037,3
+97965,65,Maintenance Insulation,18037,
+97966,65,Maintenance Insulation,18037,
+97967,65,Maintenance Insulation,18037,
+97968,92,Piping (Steam tracing),18048,
+97969,92,Piping (Steam tracing),18048,
+97970,92,Piping (Steam tracing),18048,
+97971,65,Maintenance Insulation,18037,3
+97972,69,Electrical Spares,18041,3
+97973,75,Electrical Services,18047,3
+97974,65,Maintenance Insulation,18037,
+97975,93,Jet Wash Cleaning,18048,
+97976,76,Mechanical Services,18048,3
+97977,78,Mechanical Static spares,18050,3
+97978,65,Maintenance Insulation,18037,3
+97979,64,Maintenance Scaffolding,18036,3
+97980,71,Instrument Spares,18043,3
+97981,79,Instrumentation Services,18051,3
+97982,71,Instrument Spares,18043,3
+97983,79,Instrumentation Services,18050,3
+97984,71,Instrument Spares,18043,
+97985,79,Instrumentation Services,18051,
+97986,71,Instrument Spares,18043,
+97987,79,Instrumentation Services,18051,
+97988,76,Mechanical Services,18048,
+97989,78,Mechanical Static spares,18050,
+97990,71,Instrument Spares,18043,3
+97991,79,Instrumentation Services,18051,3
+97992,71,Instrument Spares,18043,
+97993,79,Instrumentation Services,18051,
+97994,71,Instrument Spares,18043,
+97995,79,Instrumentation Services,18051,
+97996,79,Instrumentation Services,,
+97997,68,Maintenance Rotating Services,18040,
+97998,73,Mechanical Rotating Spares,18045,
+97999,68,Maintenance Rotating Services,18040,
+98000,73,Mechanical Rotating Spares,18045,
+98001,68,Maintenance Rotating Services,18040,
+98002,73,Mechanical Rotating Spares,18045,
+98003,71,Instrument Spares,18043,
+98004,79,Instrumentation Services,18051,
+98005,71,Instrument Spares,18043,
+98006,79,Instrumentation Services,18051,
+98007,79,Instrumentation Services,18050,3
+98008,79,Instrumentation Services,18050,3
+98009,79,Instrumentation Services,18051,3
+98010,68,Maintenance Rotating Services,18040,
+98011,68,Maintenance Rotating Services,18040,
+98012,68,Maintenance Rotating Services,18040,
+98013,68,Maintenance Rotating Services,18040,
+98014,68,Maintenance Rotating Services,18040,
+98015,68,Maintenance Rotating Services,18040,
+98016,68,Maintenance Rotating Services,18040,
+98017,68,Maintenance Rotating Services,18040,
+98018,68,Maintenance Rotating Services,18040,
+98019,68,Maintenance Rotating Services,18040,
+98020,68,Maintenance Rotating Services,18040,
+98021,68,Maintenance Rotating Services,18040,
+98022,79,Instrumentation Services,18051,3
+98023,68,Maintenance Rotating Services,18040,
+98024,73,Mechanical Rotating Spares,18045,
+98025,68,Maintenance Rotating Services,18040,
+98026,73,Mechanical Rotating Spares,18045,
+98027,68,Maintenance Rotating Services,18040,
+98028,73,Mechanical Rotating Spares,18045,
+98029,68,Maintenance Rotating Services,18040,
+98030,73,Mechanical Rotating Spares,18045,
+98031,68,Maintenance Rotating Services,18040,
+98032,73,Mechanical Rotating Spares,18045,
+98033,68,Maintenance Rotating Services,18040,
+98034,73,Mechanical Rotating Spares,18045,
+98035,68,Maintenance Rotating Services,18040,
+98036,73,Mechanical Rotating Spares,18045,
+98037,68,Maintenance Rotating Services,18040,
+98038,73,Mechanical Rotating Spares,18045,
+98039,68,Maintenance Rotating Services,18040,
+98040,73,Mechanical Rotating Spares,18045,
+98041,68,Maintenance Rotating Services,18040,
+98042,73,Mechanical Rotating Spares,18045,
+98043,68,Maintenance Rotating Services,18040,
+98044,73,Mechanical Rotating Spares,18045,
+98045,68,Maintenance Rotating Services,18040,
+98046,73,Mechanical Rotating Spares,18045,
+98047,68,Maintenance Rotating Services,18040,
+98048,73,Mechanical Rotating Spares,18045,
+98049,75,Electrical Services,18047,3
+98050,97,ICSS/DCS/SIS/UCP/MMS/MES/FGS/FDM/BMS/ALMS,18067,8
+98051,65,Maintenance Insulation,18037,
+98052,76,Mechanical Services,18048,3
+98053,78,Mechanical Static spares,18050,3
+98054,65,Maintenance Insulation,18037,3
+98055,93,Jet Wash Cleaning,18048,3
+98056,75,Electrical Services,18047,3
+98057,76,Mechanical Services,18048,3
+98058,75,Electrical Services,18047,3
+98059,75,Electrical Services,18047,3
+98060,75,Electrical Services,18047,3
+98061,75,Electrical Services,18047,3
+98062,69,Electrical Spares,18041,3
+98063,76,Mechanical Services,18048,3

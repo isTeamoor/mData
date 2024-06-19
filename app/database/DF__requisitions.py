@@ -1,34 +1,34 @@
 import pandas as pd
-from .impo import requisitions, requisitionItems, contactID, approvalPath, uom
+from .impo import requisitions, requisitionItems, approvalPath, contactID, uom
 from .impo import assetIDcatalogID, catalogueInfo
 
 
 
-requisitions = requisitions.merge(contactID[['Contact ID','Requisitioned By']], how='left', left_on='Requisitioned By Contact ID', right_on='Contact ID', suffixes=('to_delete','to_delete'))
-requisitions = requisitions.merge(contactID[['Contact ID','Created By']], how='left', left_on='Created By Contact ID', right_on='Contact ID', suffixes=('to_delete','to_delete'))
+
+### 1. Merge reqlines & requisitions
 requisitions = requisitions.merge(approvalPath, how='left', on='Approval Path ID')
 
-
 requisitionItems = requisitionItems.merge(uom, how='left', on='UOMID')
-requisitionItems = requisitionItems.merge(contactID[['Contact ID','Requisition line By']], how='left', left_on='Created By Contact ID', right_on='Contact ID', suffixes=('to_delete','to_delete'))
 requisitionItems = requisitionItems.merge(assetIDcatalogID, how='left', on='Asset ID')
-requisitionItems = requisitionItems.merge(catalogueInfo[['Catalogue ID','Catalogue Number']],    how='left', on='Catalogue ID')
+requisitionItems = requisitionItems.merge(catalogueInfo[['Catalogue ID','Catalogue Number']], how='left', on='Catalogue ID')
+requisitionItems = requisitionItems.merge(contactID[['Contact ID','Created By']], how='left', left_on='Created By Contact ID', right_on='Contact ID', suffixes=('to_delete','to_delete'))
 
 requisitions = requisitionItems.merge(requisitions, how='outer', on='Requisition ID')
-requisitions['Total Expected Price'] = requisitions['Requisitioned Quantity'] * requisitions['Expected Purchase Price']
 
 
 
 
+### 2. Prepare dataFrame
 requisitions = requisitions.loc [ requisitions['Cancelled Date Time'].isna() ]
-requisitions.fillna({'Approval Path Name':'undefined'}, inplace=True)
 
+requisitions = requisitions.loc[ ~(requisitions['Requisition Line Description'].isna()) ]
+requisitions = requisitions.loc[ requisitions['Requisition Line Description'] != '/' ]
 
-### Exception old unused TAR requisitions. Must be cancelled in CMMS by Ulugbek Hamroyev
-requisitions = requisitions.loc[ ~(requisitions['Requisition Number'].isin([763,839,842,845,1267,1326])) ]
-###########################################################################################################
+requisitions.fillna({'Approval Path Name':'undefined',
+                     'Requisition Description':'undefined',
+                     'UOMDescription':'undefined'}, inplace=True)
 
-
+requisitions = requisitions.sort_values(by='Requisition Number', ascending=True)
 
 
 requisitions['Raised Date Time'] = pd.to_datetime(requisitions['Raised Date Time'], format="%d/%m/%Y %H:%M:%S %p")
@@ -40,35 +40,41 @@ requisitions['requiredYear']  = requisitions['Required By Date Time'].dt.year
 requisitions['requiredMonth'] = requisitions['Required By Date Time'].dt.month
 
 
+requisitions['Total Expected Price'] = requisitions['Requisitioned Quantity'] * requisitions['Expected Purchase Price']
 
 
-maintenance_ApprovalPath = ['SLU Default', 'PWU Default', 'Maintenance','CofE department','Routine Maintenance Department',
-    'CofE', 'Material Control Department', 'Turnaround','Contract Services Deparment', 'CofE (Insul/Scaff)']
+
+
+### 3. Фильтр на maintenance
+maintenance_ApprovalPath = ['Maintenance','Routine Maintenance Department',
+                            'SLU Default','PWU Default', 
+                            'CofE department','CofE','CofE (Insul/Scaff)',
+                            'Contract Services Deparment',
+                            'Material Control Department',
+                            'Turnaround'] #Localization
 requisitions = requisitions.loc [ requisitions['Approval Path Name'].isin(maintenance_ApprovalPath)]
 
-
-### mergeNumber не обязателен, можно удалить
-requisitions['mergeNumber'] = ''
-for RequisitionNumber, group in requisitions.groupby('Requisition Number'):
-    counter = 0
-    for i, row in group.iterrows():
-        requisitions.loc[ i, 'mergeNumber'] = str(RequisitionNumber) + "-" + str(counter)
-        counter += 1
+requisitions = requisitions.loc[ ~(requisitions['Requisition Number'].isin([763,839,842,845,1267,1326])) ] #old unused TAR requisitions
 
 
-requisitions = requisitions.sort_values(by=['Requisition Number', 'mergeNumber'], ascending=[True, True])
-
-requisitions = requisitions.loc[ ~(requisitions['Requisition Line Description'].isna()) ]
-requisitions = requisitions.loc[ requisitions['Requisition Line Description'] != '/' ]
-
-requisitions.fillna({'Requisition Description':'undefined',
-                     'UOMDescription':'undefined',}, inplace=True)
-
-
-# Производим замену управляющих символов в каждом значении столбца с помощью регулярного выражения
+### 4. Производим замену управляющих символов в каждом значении столбца с помощью регулярного выражения
 requisitions['Requisition Line Description'] = requisitions['Requisition Line Description'].replace({'\x02': ' '}, regex=True)
 
 
-requisitions = requisitions[['Requisition Line Description','Requisition Description','Approval Path Name','Created By',
- 'Requisitioned Quantity', 'UOMDescription', 'Expected Purchase Price','Total Expected Price',
- 'Requisition Number', 'requiredYear', 'requiredMonth', 'raisedYear', 'raisedMonth', 'Catalogue Number']] #'mergeNumber','Completed Date Time',
+
+
+### 5. Ready dataFrame
+requisitions.rename(columns={
+            'Requisition Line Description':'Item',
+            'requiredYear':'Required Year',
+            'requiredMonth':'Required Month',
+            'UOMDescription':'uom',
+            'Expected Purchase Price':'Expected Price per unit, usd',
+            'Total Expected Price':'Summary Expected Cost, usd'
+            }, inplace=True )
+
+requisitions = requisitions[['Item','Requisition Description','Approval Path Name','Created By',
+ 'Requisitioned Quantity', 'uom', 'Expected Price per unit, usd','Summary Expected Cost, usd',
+ 'Requisition Number', 'Required Year', 'Required Month', 'raisedYear', 'raisedMonth', 'Catalogue Number']]
+
+

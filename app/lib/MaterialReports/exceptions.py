@@ -16,13 +16,18 @@ def corrections(transactions):
     transacts.loc[ transacts['Catalogue Transaction ID'] == 109520, 'transactMonth' ] = 5 #Gator
 
     transacts.loc[ transacts['Reservation Number'] == 9954, 'closedMonth' ] = 5 #Аргон
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 111233, 'Quantity' ] = 23.25 #Аргон
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 111527, 'transactMonth' ] = 5 #Аргон
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 111233, 'Quantity' ] = 23.25 #Аргон корректировка количества, ранее часть уже была списана
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 111527, 'Quantity' ] = 0 #Аргон возврат по R-9954
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 119450, 'Quantity' ] = 0 #Аргон удалено из-за взаимозачета кирим
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 121442, 'Quantity' ] = 0 #Аргон удалено из-за взаимозачета кирим
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 123429, 'Quantity' ] = 0 #Аргон удалено из-за взаимозачета кирим
+
 
     transacts.loc[ transacts['Catalogue Transaction ID'] == 109847, 'transactMonth' ] = 5 #TYTAN
 
     transacts.loc[ transacts['Reservation Number'] == 9503, 'closedMonth' ] = 5 #Спец.обувь
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 109835, 'transactMonth' ] = 5 #Спец.обувь
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 109835, 'Quantity' ] = 0 #Спец.обувь возврат по R-9503
+    transacts.loc[ transacts['Catalogue Transaction ID'] == 123437, 'Quantity' ] = 0 #Спец.обувь удалено из-за взаимозачета кирим
 
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116788, 'transactMonth' ] = 5 #Круг абразивный арми
     transacts.loc[ transacts['Catalogue Transaction ID'] == 116789, 'transactMonth' ] = 5 #Круг абразивный арми

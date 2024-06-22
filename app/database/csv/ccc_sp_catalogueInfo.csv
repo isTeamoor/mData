@@ -1149,6 +1149,9 @@
 108869,WIM00685689,WIM00685689,,2
 108955,49103,49103,,2
 108958,0000382,POWER SUPLY,,2
+109708,цшь0054065,цшь0054065,,2
+109711,178-at-0002,178-at-0002,,2
+109712,hyf,hyf,,2
 6666,WIM0000001,120-PC-003A/B/ TSP 4X2-9/ Mechanical SEAL,3284,8
 6667,WIM0000002,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 21,76/Ea",2179,2
 6668,WIM0000003,"GASKET C.A.F THK.2 ММ. FOR 120-HF-101/201 Euro 36,26/Ea",2180,2
@@ -28946,7 +28949,7 @@
 108965,WIM0068703,Универсальный переходник-адаптер,,2
 108966,WIM0068704,Клин разжимной 150X80X40X2 Hilti 41910,O0024854   ,2
 108967,WIM0068705,Клин прямой(стопорный),O0024856,2
-108968,WIM0068706,Тонер-картридж Canon Toner C-EXV 49 оригинал,O0024859,2
+108968,WIM0068706,Тонер-картридж Canon Toner C-EXV 49 оригинал,O0024859,8
 108970,WIM0068708,"Тонер-картридж Canon Toner C-EXV 54 комплект (C,M,Y,K)",O0024860,8
 108971,Serv_0000384,"Course for ""Labor protection""",,2
 108972,WIM0068709,WASHERS M20 R40 / ШАЙБЫ M20 R40  (HP-0901-0033),O0024172,2
@@ -29634,3 +29637,56 @@
 109654,WIM0069391,Teflon for pre filter CHI01631 200x20Mx5T   ,O0024853,18
 109655,WIM0068707,RJ45 Connector,O0021511,2
 109656,Serv_0000385,"Fuqaro muhofazasi bo'yicha rahbar xodimlari, sardorlarni va ishchi xizmatchilarni o'qitish(xizmat ko'rsatish) shartnomasi_№66",,2
+109657,WIM0069392,Видеорегистратор NVR,,2
+109658,WIM0069393,Коммутатор PoE 24 порт,,2
+109659,WIM0069394,Коммутатор PoE 8 порт,,2
+109660,WIM0069395,Видеокамера PTZ,,2
+109661,WIM0069396,"Жесткий диск 3,5 HDD 6TB",,2
+109662,WIM0069397,Коробка распределительная,,2
+109663,WIM0069398,Источние бесперебойного питания (UPS) 2 кВт,,2
+109664,WIM0069399,Коммутационный шкаф 6U,,2
+109665,WIM0069400,Оптический кабель 4 волокна,,12
+109666,WIM0069401,Trim set for 130-FXV-2013,,8
+109667,WIM0069402,Repair kit for 130-FXV-2013,,8
+109668,WIM0069403,HV Bushing_55MVA,,2
+109669,WIM0069404,LV Bushing_55MVA,,2
+109670,WIM0069405,Oil Level Indicator_55MVA,,2
+109671,WIM0069406,Oil Temp. Indicator_55MVA,,2
+109672,WIM0069407,Winding Temp. Indicator_55MVA,,2
+109673,WIM0069408,Pressure Relief Device(MAIN)_55MVA,,2
+109674,WIM0069409,Buchholz Relay_55MVA,,2
+109675,WIM0069410,Rapid Pressure Rise Relay_55MVA,,2
+109676,WIM0069411,HV Bushing_20MVA,,2
+109677,WIM0069412,LV Bushing_20MVA,,2
+109678,WIM0069413,Oil Level Indicator_20MVA,,2
+109679,WIM0069414,Oil Temp. Indicator_20MVA,,2
+109680,WIM0069415,Winding Temp. Indicator_20MVA,,2
+109681,WIM0069416,Pressure Relief Device (MAIN)_20MVA,,2
+109682,WIM0069417,Buchholz Relay_20MVA,,2
+109683,WIM0069418,Rapid Pressure Rise Relay_20MVA,,2
+109684,WIM0069419,HV Bushing_25MVA,,2
+109685,WIM0069420,LV Bushing_25MVA,,2
+109686,WIM0069421,Oil Level Indicator_25MVA ,,2
+109687,WIM0069422,Oil Temp. Indicator_25MVA ,,2
+109688,WIM0069423,Winding Temp. Indicator_25MVA,,2
+109689,WIM0069424,Pressure Relief Device (MAIN)_25MVA,,2
+109690,WIM0069425,Buchholz Relay_25MVA,,2
+109691,WIM0069426,Rapid Pressure Rise Relay_25MVA,,2
+109692,WIM0069427,Breather for Main Conservator,,2
+109693,WIM0069428,HV Bushing_2.5MVA,,2
+109694,WIM0069429,LV Bushing_2.5MVA,,2
+109695,WIM0069430,Oil Level Indicator_2.5MVA,,2
+109696,WIM0069431,Oil Temp. Indicator_2.5MVA,,2
+109697,WIM0069432,Winding Temp. Indicator_2.5MVA,,2
+109698,WIM0069433,Pressure Relief Device(MAIN)_2.5MVA ,,2
+109699,WIM0069434,Dehydrating Breather ,,2
+109700,WIM0069435,Buchholz Relay_2.5MVA,,2
+109701,WIM0069436,HV Bushing_1.6MVA,,2
+109702,WIM0069437,LV Bushing_1.6MVA,,2
+109703,WIM0069438,Oil Level Indicator_1.6MVA,,2
+109704,WIM0069439,Oil Temp. Indicator_1.6MVA,,2
+109705,WIM0069440,Winding Temp. Indicator_1.6MVA,,2
+109706,WIM0069441,Pressure Relief Device (MAIN)_1.6MVA,,2
+109707,WIM0069442,Buchholz Relay_1.6MVA,,2
+109709,WIM0069443,Салфетки для диспенсера АВТОМАТ Z 20см ECO 180 шт (243,O0025518,2
+109710,Serv_0000386,O'zTest DM: якуний махсулотини сертификатлаш учун инспекция назорати,,2

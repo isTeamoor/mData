@@ -265,8 +265,8 @@ def matReport(repMonth, repYear, department, transactions):
 
   raw_wOff['Объект'] = ''
 
-  wOff_Mn = raw_wOff.loc[ raw_wOff['Отдел']!='4AP' ].copy()
-  wOff_Ap = raw_wOff.loc[ raw_wOff['Отдел']=='4AP' ].copy()
+  wOff_Mn = raw_wOff.loc[ (raw_wOff['Отдел']!='4AP') & (raw_wOff['Отдел']!='4AP_free') ].copy()
+  wOff_Ap = raw_wOff.loc[ (raw_wOff['Отдел']=='4AP') | (raw_wOff['Отдел']=='4AP_free') ].copy()
   
 
   wOff_Ap = wOff_Ap.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()

@@ -10,45 +10,9 @@ def corrections(transactions):
     transacts.loc[ transacts['Reservation Number'].isin([6801,7605,7609,6802,6804,6805,6806,7237,7244,7604,7608,7238,7245,7611,7612,7650,7651,8477,8478,9088,9089,9092,7992,7993,8333,
                                                          8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'Mirjahon Toirov CofE'
     
+    #Тулкинакя, будет возврат
+    transacts.loc[ transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]), 'Work Order Status Description' ] = 'Return'
 
-    #Перенос возвратов на другой месяц из-за позднего письма
-    transacts.loc[ transacts['Reservation Number'] == 9507, 'closedMonth' ] = 5 #Gator
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 109520, 'transactMonth' ] = 5 #Gator
-
-    transacts.loc[ transacts['Reservation Number'] == 9954, 'closedMonth' ] = 5 #Аргон
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 111233, 'Quantity' ] = 23.25 #Аргон корректировка количества, ранее часть уже была списана
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 111527, 'Quantity' ] = 0 #Аргон возврат по R-9954
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 119450, 'Quantity' ] = 0 #Аргон удалено из-за взаимозачета кирим
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 121442, 'Quantity' ] = 0 #Аргон удалено из-за взаимозачета кирим
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 123429, 'Quantity' ] = 0 #Аргон удалено из-за взаимозачета кирим
-
-
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 109847, 'transactMonth' ] = 5 #TYTAN
-
-    transacts.loc[ transacts['Reservation Number'] == 9503, 'closedMonth' ] = 5 #Спец.обувь
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 109835, 'Quantity' ] = 0 #Спец.обувь возврат по R-9503
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 123437, 'Quantity' ] = 0 #Спец.обувь удалено из-за взаимозачета кирим
-
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 116788, 'transactMonth' ] = 5 #Круг абразивный арми
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 116789, 'transactMonth' ] = 5 #Круг абразивный арми
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 116790, 'transactMonth' ] = 5 #Круг абразивный арми
-
-
-    #Корректировка возврат по письму. Спорные вопросы с Шахзодбеком взаимозачет кирим возврат
-    # В майском проверить и можно удалить 
-    """ 
-    transacts.loc[ transacts['Reservation Number'] == 10494, 'Quantity' ] = 0 #Шлифовальный диск
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 116785, 'Quantity' ] = 0 #Шлифовальный диск
-    
-    transacts.loc[ transacts['Reservation Number'] == 10493, 'Quantity' ] = 0 #Абразивный круг
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 116786, 'Quantity' ] = 0 #Абразивный круг
-    
-    
-    transacts.loc[ transacts['Reservation Number'] == 10491, 'Quantity' ] = 0 #Круг абразивный арми
-    transacts.loc[ transacts['Catalogue Transaction ID'] == 116787, 'Quantity' ] = 0 #Круг абразивный арми
-    """
-    
-    
 
     return transacts
 
@@ -95,20 +59,19 @@ extra = {
             {'Код товара':'12813','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Мис",'Ед.изм.':'кг','Quantity':7.87,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             {'Код товара':'12815','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Нержавекеющая сталь",'Ед.изм.':'кг','Quantity':0.84,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
-        'currentMonth':[
-            {'Код товара':'21883','Reservation Number':-4,'WO №':-4,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.7095,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
-        ],
+        'currentMonth':[],
         'currentReturn':[]
     },
     'cofe':{
         'begin':[
-            {'Код товара':'06933','Reservation Number':-1,'WO №':-1,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':20,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+            {'Код товара':'06933','Reservation Number':-1,'WO №':-1,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':80,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+            {'Код товара':'09683','Reservation Number':-2,'WO №':-2,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':0.035,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
         'currentMonth':[
-            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':80,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
-            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':140,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
-            {'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':5,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':29.431,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
-        ],
+            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':100,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
+            {'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':14.709,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'09683','Reservation Number':-5,'WO №':-5,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':10.621,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
+            ],
         'currentReturn':[]
     },
 }

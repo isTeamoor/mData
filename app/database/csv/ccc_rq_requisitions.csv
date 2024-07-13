@@ -188,7 +188,7 @@
 199,342,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,8/05/2023 11:55:06 AM,35,8/05/2023 11:55:06 AM
 200,343,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,8/05/2023 11:58:03 AM,35,8/05/2023 11:58:03 AM
 201,344,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,8/05/2023 11:59:17 AM,35,8/05/2023 11:59:17 AM
-202,345,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,29/05/2023 12:00:34 PM,35,8/05/2023 12:00:34 PM
+202,345,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,29/05/2023 12:00:34 PM,40,8/05/2023 12:00:34 PM
 203,348,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,22/05/2023 12:05:19 PM,40,8/05/2023 12:05:19 PM
 204,350,Ер участкасининг (Завод худуди) геодезик ўлчов натижасида топографик хариталарини тайёрлаш,10/05/2023 9:16:28 AM,35,10/05/2023 9:16:28 AM
 205,352,Drinking water supply and sewage system materials,12/06/2023 2:56:47 PM,33,11/05/2023 2:56:47 PM
@@ -856,7 +856,7 @@
 867,1383,Regarding the procurement of DPT (Dye-penetrant testing) consumables for conducting inspections ,29/01/2024 9:38:22 AM,59,29/01/2024 9:38:22 AM
 868,1384,GSM grafigiga asosan,29/01/2024 11:30:37 AM,53,29/01/2024 11:30:37 AM
 869,1386,Приобретения ноутбуков и SSL сертификата,30/01/2024 11:58:40 AM,70,30/01/2024 11:58:40 AM
-870,1385,Zavod markaziy laboratoriyasi xodimlarini ISO/IEC 17025 standarti bo'yicha Akkreditatsiya markazida o'qitishg,30/01/2024 11:38:18 AM,40,30/01/2024 11:38:18 AM
+870,1385,ISO/IEC 17034 talablariga ko'ra ishlab chiqarilgan standard namunalarni xarid qilish,30/01/2024 11:38:18 AM,40,30/01/2024 11:38:18 AM
 871,1387,Заявка на закупку стройматериалов для строительно-ремонтных работ.,27/02/2024 2:40:05 PM,31,30/01/2024 2:40:05 PM
 872,1389,«Uzbekistan GTL» МЧЖ эҳтиёжлари учун газхавфсизлиги назорати (УзХК - 30 кишилик ) хизмати учун шартнома тузиш ,5/02/2024 9:54:38 AM,71,5/02/2024 9:54:38 AM
 873,1390,Заключение договоров на телекоммуникационные услуги,5/02/2024 11:12:33 AM,70,5/02/2024 11:12:33 AM
@@ -1163,3 +1163,50 @@
 1175,1826,Сертификатлаштирилган махсулотларни навбатдаги ипспекция назоратдиан утказиш буйича,20/06/2024 11:51:04 AM,,20/06/2024 11:51:04 AM
 1176,1827,Сертификатлаштирилган махсулотларни навбатдаги ипспекция назоратдиан утказиш буйича,20/06/2024 11:55:05 AM,83,20/06/2024 11:55:05 AM
 1177,1828,Сертификатлаштирилган махсулотларни навбатдаги ипспекция назоратдиан утказиш буйича,20/06/2024 12:08:48 PM,83,20/06/2024 12:08:48 PM
+1178,1832,Заявка на закупку ковра и пылесоса,21/06/2024 11:52:52 AM,39,21/06/2024 11:52:52 AM
+1179,1833,Базисные линейные нормы расхода топлива для транспортных средств и специальной техники:,1/07/2024 1:32:46 PM,51,21/06/2024 1:32:46 PM
+1180,1831,,21/06/2024 11:49:09 AM,40,21/06/2024 11:49:09 AM
+1181,1834,,21/10/2024 2:43:50 PM,53,21/06/2024 2:43:50 PM
+1182,1837,"For the ensure the continuous operation of these control valve, as well as for the continuous operation of the plant",24/07/2024 11:04:26 AM,53,24/06/2024 11:04:26 AM
+1183,1836,to ensure continuous of the loading arms (184-XX-001/002/007/008A-I),25/07/2024 10:57:10 AM,53,24/06/2024 10:57:10 AM
+1184,1841,Cпециальная швабра для очистки солнечные панели на объекте ООО «Uzbekistan GTL»,24/06/2024 3:59:49 PM,75,24/06/2024 3:59:49 PM
+1185,1842,Mahsulot yuklangan Export Vagon-sisternalarini xavfsizlik chora tadbirlariga muvofiq plomba qilish uchun,25/06/2024 10:00:25 AM,41,25/06/2024 10:00:25 AM
+1186,1843,Темир йўл орқали ташишда вагон цистерналарга бўлган эхтиёжни ижарага олинадиган вагонлар билан таъминлаш учун шартнома тузиш.,25/06/2024 10:21:48 AM,41,25/06/2024 10:21:48 AM
+1187,1845,Тошкент офис ходиларини тоза ичимлик суви билан таънимлаш,25/06/2024 2:50:49 PM,39,25/06/2024 2:50:49 PM
+1188,1846,"Вода природная питьевая объемом в бутылях ёмкостью 18,9-20 литров",25/06/2024 5:12:56 PM,80,25/06/2024 5:12:56 PM
+1189,1847,Uzbekistan GTL MCHJ korxonasi ehtiyochi uchun Ko'pik yetkazuvchi yong'in o'chirish mashinasi xarid talabnomasi ,15/07/2024 12:00:00 AM,71,24/06/2024 12:00:00 AM
+1190,1848,Installation of a degassing line is required.,26/07/2024 8:33:13 AM,46,26/06/2024 8:33:13 AM
+1191,1851,Modification of wax rundown lines between FT reactor and Wax rundown drum,26/07/2024 9:04:02 AM,46,26/06/2024 9:04:02 AM
+1192,1853,"A stamp to ensure the quality, quantity, and safety of products loaded into rail cars ",26/06/2024 11:35:26 AM,41,26/06/2024 11:35:26 AM
+1193,1854,,26/06/2024 2:55:20 PM,,26/06/2024 2:55:20 PM
+1194,1855,,26/06/2024 2:58:12 PM,,26/06/2024 2:58:12 PM
+1195,1857,Zavod markaziy laboratoriyasi xodimlarini ISO/IEC 17025 standarti bo'yicha Akkreditatsiya sohasida xizmat ko'rsatish uchun,28/06/2024 10:55:27 AM,40,28/06/2024 10:55:27 AM
+1196,1860,Depot repair of a private tank car intended for the transportation of sulfuric acid for the next year 2024.,28/06/2024 4:11:25 PM,41,28/06/2024 4:11:25 PM
+1197,1861,"""Uzbekistan GTL"" MCHJ ehtiyoji uchun kapital ta'mirlash jarayonida ishtirok edadigan xodimlar uchun 100% li paxta matoli maxsus ishchi kiyim xarid qilish talabnomasi ",5/07/2024 5:14:23 PM,71,28/06/2024 5:14:23 PM
+1198,1863,,1/07/2024 6:26:30 AM,80,1/07/2024 6:26:30 AM
+1199,1864,,15/03/2024 10:00:00 AM,,1/07/2024 2:07:27 PM
+1200,1865,,15/03/2024 10:00:00 AM,,1/07/2024 2:07:27 PM
+1201,1866,,15/03/2024 10:00:00 AM,,1/07/2024 2:07:27 PM
+1202,1867,,15/03/2024 10:00:00 AM,,1/07/2024 2:07:28 PM
+1203,1868,,15/03/2024 10:00:00 AM,,1/07/2024 2:07:28 PM
+1204,1869,,15/03/2024 10:00:00 AM,,1/07/2024 2:07:29 PM
+1205,1870,Spare parts for control valves,1/10/2024 12:00:00 AM,56,2/07/2024 8:39:06 AM
+1206,1871,to ensure continuous of the pressure gauges (176-PG-0532/0533),3/08/2024 12:00:00 AM,53,3/07/2024 10:11:50 AM
+1207,1872,to ensure continuous of the pressure gauges (171-PG-0220/0226),3/08/2024 12:00:00 AM,53,3/07/2024 11:03:41 AM
+1208,1873,to ensure continuous of the pressure gauges (150-PG-0193/0195),3/08/2024 12:00:00 AM,53,3/07/2024 11:17:11 AM
+1209,1874,to ensure continuous of the pressure differential gauges (150-PDG-0916/0917),3/08/2024 12:00:00 AM,53,3/07/2024 11:19:38 AM
+1210,1875,These courses are required for professional development of employees,4/07/2024 9:08:28 AM,38,4/07/2024 9:08:28 AM
+1211,1876,Приобретения Zoom Workplace Pro лицензии,4/07/2024 4:36:13 PM,70,4/07/2024 4:36:13 PM
+1212,1877,UZbekistoan GTL MCHJ korxonasi ehtiyoji uchun banner xarid qilish buyurtmasi ,10/07/2024 9:12:32 AM,71,5/07/2024 9:12:32 AM
+1213,1878,Uzbekistan GTL MCHJ ehtiyoji uchun xavfsizlik texnikasi bannerlari xarid qilish buyurtmasi ,10/07/2024 10:21:22 AM,71,5/07/2024 10:21:22 AM
+1214,1879,Texnologik namunalarni Boshqa laboratoriyalarda tahlillarini amalga oshirish uchun,5/07/2024 11:19:44 AM,40,5/07/2024 11:19:44 AM
+1215,1880,NDE consumables required for all DPT inspections,15/07/2024 2:06:00 PM,59,8/07/2024 2:06:00 PM
+1216,1881,Электрооборудования для использования и замены в административно-бытовом корпусе и вахтовом поселке ООО «Uzbekistan GTL»,8/07/2024 2:37:53 PM,75,8/07/2024 2:37:53 PM
+1217,1882,Uzbekistan GTL korxonasi issiqxona gazlarini hisoblash xizmatini amalga oshirish uchun shartnoma tuzish bo'yicha xarid talabnomasi  ,8/08/2024 4:27:27 PM,71,8/07/2024 4:27:27 PM
+1218,1883,,9/07/2024 12:00:00 AM,,9/07/2024 5:07:09 PM
+1219,1885,These courses are required for professional development of employees,9/07/2024 8:50:29 PM,38,9/07/2024 8:50:29 PM
+1220,1886,Zavod markaziy Laboratoriyasida priborlarni kalibrlash uchun,10/07/2024 3:49:18 PM,40,10/07/2024 3:49:18 PM
+1221,1887,Произвести расчеты для каждого типа автошин. 1) HYUNDAI XCIENT 6X4 Мусоровоз 2) HYUNDAY H1 MINIBUS 12 SEA Микроавтобус 3) KIA Frontier K2700 D/CAB Грузопассажирский 4) MAN CLA 16.230 4X2 BB CS14UX ST-174 Кран-манипулятор 5) UAT SCTF U330 01 Полуприцеп,11/07/2024 9:50:53 AM,51,11/07/2024 9:50:53 AM
+1222,1888,Приобретения лицензий Zoom Workplace + Room Connector,11/07/2024 5:04:40 PM,70,11/07/2024 5:04:40 PM
+1223,1889,“GTL Chinoz terminali” иш ўринларининг меҳнат шароитлари бўйича аттестациясини ташкил қилиш,12/07/2024 9:23:28 AM,80,12/07/2024 9:23:28 AM
+1224,1892,,12/07/2024 11:10:04 AM,,12/07/2024 11:10:04 AM

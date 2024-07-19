@@ -70,7 +70,7 @@ extra = {
         'currentMonth':[
             {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':100,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
             {'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':14.709,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
-            {'Код товара':'09683','Reservation Number':-5,'WO №':-5,'closedMonth':0,'closedYear':0,'Work Order Status Description':'OnHand','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':10.621,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'09683','Reservation Number':-5,'WO №':-5,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':10.621,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
             ],
         'currentReturn':[]
     },

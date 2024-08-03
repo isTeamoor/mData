@@ -11,7 +11,11 @@ def corrections(transactions):
                                                          8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'Mirjahon Toirov CofE'
     
     #Тулкинакя, будет возврат
-    transacts.loc[ transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]), 'Work Order Status Description' ] = 'Return'
+    transacts.loc[ transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]), 'closedMonth' ] = 7
+
+    #Электроды кг -> тн
+    transacts.loc[ transacts['Код товара']=='05140', 'Quantity' ] /= 1000
+    transacts.loc[ transacts['Код товара']=='05140', 'Ед.изм.' ] == 'тн'
 
 
     return transacts
@@ -63,15 +67,16 @@ extra = {
         'currentReturn':[]
     },
     'cofe':{
-        'begin':[
-            {'Код товара':'06933','Reservation Number':-1,'WO №':-1,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':80,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
-            {'Код товара':'09683','Reservation Number':-2,'WO №':-2,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':0.035,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
-        ],
+        'begin':[],
         'currentMonth':[
-            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL ",'Ед.изм.':'л','Quantity':100,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'diesel', 'Объект':'diesel'},
-            {'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':14.709,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
-            {'Код товара':'09683','Reservation Number':-5,'WO №':-5,'closedMonth':6,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'т','Quantity':10.621,'Отдел':'cofe','Reserved By':"cofe",'Asset Description':'Metall', 'Объект':'Metall'},
-            ],
+            {'Код товара':'06933','Reservation Number':-1,'WO №':-1,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':240,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':60,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'16801','Reservation Number':-3,'WO №':-3,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Веник",'Ед.изм.':'шт','Quantity':4,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Xidirov Davron', 'Объект':'Xidirov Davron'},
+            {'Код товара':'06949','Reservation Number':-4,'WO №':-4,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага листовая для офисной техники Sylvamo Svetocopy А3 80гр",'Ед.изм.':'пачка','Quantity':2,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Xidirov Davron, Ochilov Abbos', 'Объект':'Xidirov Davron, Ochilov Abbos'},
+            {'Код товара':'07483','Reservation Number':-5,'WO №':-5,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А4",'Ед.изм.':'пачка','Quantity':6,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Xidirov Davron, Ochilov Abbos, Haydarov Jahongir, Xamidov Jahongir, Nurmatov Nurbek, Bolliyev Elmurod', 'Объект':'Xidirov Davron, Ochilov Abbos, Haydarov Jahongir, Xamidov Jahongir, Nurmatov Nurbek, Bolliyev Elmurod'},
+            {'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':13.642,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Metall', 'Объект':'Metall'},
+        
+        ],
         'currentReturn':[]
     },
 }

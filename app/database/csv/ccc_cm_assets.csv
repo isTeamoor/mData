@@ -19386,7 +19386,7 @@
 85237,84589,VALVE CLOSE,176-MZSL-0014B
 85240,84589,MOTOR OPERATED VALVE,176-MOV-0016
 85272,84589,PRESSURE GAUGE,176-SC-006
-85273,84589,TEMPERATURE GAUGE,176-PC-001A/B 
+85273,84589,TEMPERATURE GAUGE,176-PG-0011/0012 
 228897,84589,MOTOR OPERATED VALVE,176-XX-0014A
 228898,84589,MOTOR OPERATED VALVE,176-XX-0014B
 84634,84590,CLEAN STORM WATER POND PUMP,176-PC-001B
@@ -46729,6 +46729,7 @@
 229536,174964,Other departments,Public Relations 
 231120,174964,Other departments,Marketing
 252365,174964,Management of UZGTL,Management
+258084,174964,Other departments,Material Technical Recourses Managemen Department 
 175190,175188,SLU Maintenance team,Maintenance(SLU)
 175191,175188,PWU Maintenance,Maintenance(PWU)
 175192,175188,U&O Maintenance,Maintenance(U&O)
@@ -54024,7 +54025,6 @@
 251496,217848,Solar panels,SP-ADM-90 kW
 251500,217848,Solar panels,SP-Parking-360 kW
 175208,218224,Instrumentation Senior Engineer,Abdizoirov Islom
-175229,218224,Analyzer Technician,Abdiyev Abdirashid
 175269,218224,Static supervisor,Yarashev Javlon
 175438,218224,Electrical Junior Technician,Choriyev Akrom
 175442,218224,Electrical Supervisor,Hasanov Sherzod
@@ -54280,6 +54280,8 @@
 224288,218246,Plumber,Yuldashev Diyor Abduraxmon o'g'li
 236423,218246,Maid,Bo'riyeva Dilnora Jurayevna
 236424,218246,Maid,Xolmuratova Shaxodat Maxmarajabovna
+258022,218246,Cleaner,Xoliqova Xadicha Sayfulla qizi
+175229,218247,Specialist,Abdiyev Abdirashid
 221657,218247,Specialist,Sultanov Bexzod Farruxovich
 222184,218247,senior specialist,Maxmatkulov Jakhongir
 222185,218247,specialist,Achilov Azam
@@ -54419,7 +54421,6 @@
 219774,218262,Field operator,Davlatov Xolbek Choriyevich
 219775,218262,Process engineer,Elmurodov Mansur G`ulomovich
 219776,218262,Boardman,Eshpo`latov Alisher Eshdovlat o`g`li
-219777,218262,Process engineer,G`oziyev Jamolbek Jurayevich
 219778,218262,Field operator,Gurbanov Muxammet Gulamjanovich
 219779,218262,Boardman,Hayitov Musurmon To`lagan-o`g`li
 219780,218262,Field operator,Izzaev Mirzohid Jo`ra o`g`li
@@ -54758,6 +54759,8 @@
 225799,218267,Trainee,"Begimqulov Sanjarbek Abdullayevich,"
 227302,218267,Field operator,Abdimuminov G'ayrat Nasrulla o'g'li
 228814,218267,Specialist,Allaberdiyev Iskandar Isoq o'g'li
+245143,218267,Operator,Murodov Boburshoh Botir o'g'li
+245146,218267,Operator,Bekiyev Bahodir Toshniyozovich
 218301,218268,Unit Engineer,Ramazonov Ulug`bek Erkin o`g`li
 218518,218268,Lead Specialist,Jalil Egamberdiyev
 220947,218268,Operator,Abdusalimov Baxtishod O'ktam o'g'li
@@ -54814,6 +54817,7 @@
 223453,218268,Trainee,Choriyev Muhriddin
 223454,218268,Trainee,Qo`ldoshev Nuriddin
 223455,218268,Trainee,Choriyev Behruz
+258203,218268,Dispatcher for loading and transporting products to wagons,G'aybullayev Axror Shavkat o'g'li
 221498,218269,Главный специалист	,Akram Raxmatullaev
 221499,218269,"руководитель группы ПБ, ОТ и ТБ	",Alisher Sakhobutdinov
 221500,218269,Руководитель группы проектного финансирования	,Aybek Nazarbaev
@@ -54861,7 +54865,6 @@
 219760,218272,Technician PLC,Eshboyev Qambar Gulboyevich
 222585,218272,Technician PLC,Jo`rayev Husniddin Abdig'ani o'g'li
 218303,218273,Head of department,Sharipov Jobirbek Shahrilloyevich
-218309,218273,Process Safety Engineer,Rustamov Zoir XXX
 218310,218273,Document / Process Safety Information Controller,Tursunniyozov Davron Olimovich
 218311,218273,MOC coordinator,Xalilov Shahboz Qosim o'g'li
 218483,218273,Senior Process Hazard and Risk Analysis Engineer,Jalilov Jasur Xalilovich
@@ -54967,10 +54970,8 @@
 230290,218533,Trainee,Jumanov Shohzod Rahmonqul o‘g‘li 
 230292,218533,Trainee,Choriyev Mirkomil Urol oʻgʻli
 234430,218533,Trainee,Mamasadikov Javlonbek Shavkat o`g`li
-245143,218533,Trainee,Murodov Boburshoh Botir o'g'li
 245144,218533,Trainee,Nekkiyev Shonazar Shoniyoz o'g'li
 245145,218533,Trainee,Abdig'afforov Xurshid Abdiroziq o'g'li
-245146,218533,Trainee,Bekiyev Bahodir Toshniyozovich
 245147,218533,Trainee,Orolov Zokirjon O'roq o'g'li
 245148,218533,Trainee,Eshmuminov Obidjon Avaz o'g'li
 245149,218533,Trainee,Jurayev Behruz Firuz o'g'li
@@ -54978,6 +54979,8 @@
 245151,218533,Trainee,Ismatullayev Abdurasul Abdulla o'g'li
 245152,218533,Trainee,Qahramonov Ramziddin Ilhom o'g'li
 245305,218533,Trainee,Baxronov Axror Shokir o`g`li
+258101,218533,Trainee,Qurbonaliyev Jahongir Ergash
+258102,218533,Trainee,Maqsadqulov Ma'ruf Yaxshiboy
 175234,219752,Static Technician,Ashrapov Kamolliddin
 175463,219752,Senior Planner,Xamroyev Ulug'bek
 219754,219752,Head,Azizbek Narziev G'aybullayevich
@@ -57304,3 +57307,5 @@
 252551,252549,Main Electricial Lines,L-GTL-2-35kV
 253310,253309,Pressure Switch,172-LPS-0681
 253311,253309,Pressure Switch,172-HPS-0680
+218309,258084,Specialist,Rustamov Zoir XXX
+219777,258084,Head of Department,G`oziyev Jamolbek Jurayevich

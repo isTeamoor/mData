@@ -1,14 +1,14 @@
 import pandas as pd
 from ...database.DF__spares import spares
 from ..gen import filterDF
-from . import exceptions, reference
+from . import exceptions, reference, yaroqsiz
 
 
 
 
-def matReport(repMonth, repYear, department, transactions):
+def matReport(repMonth, repYear, department, transacts):
   ### 1. Подготовка DF Transactions
-  transactions = exceptions.corrections(transactions)
+  transactions = exceptions.corrections(transacts)
 
   transactions  = transactions.loc[ transactions['Catalogue Transaction Action Name'].isin(['Issue', 'Return to Stock']) ]
   
@@ -315,3 +315,25 @@ def matReport(repMonth, repYear, department, transactions):
   reference.OneCW()
   
     
+
+  ### 15. Yaroqsiz to Metall
+  met = dalolat.copy()
+  met.reset_index(drop = False, inplace = True)
+
+  met = met.loc[ (met['Отдел']!='4AP') & (met['Отдел']!='4AP_free') ]
+
+  met.insert(2, 'info', met['Кол-во расход'].astype(str) + ' ' + met['Ед.изм.'] + ' [ ' + met['Объект'] + ' ] WO-' + met['WO №'].astype(str) + ' by: ' + met['Reserved By'] + "\n")
+  met = met.groupby(['Код товара', 'Материал'])[['info', 'Кол-во расход']].sum()
+  met.reset_index(drop = False, inplace = True)
+
+
+  if department == 'rmpd':
+      yaroq = yaroqsiz.execute(transacts)
+      yaroq = yaroq.merge(met, how='outer', on='Код товара')
+
+      yaroq = reference.metLib(yaroq)
+
+      yaroq = yaroq[['Номер файла','Номер документа','Код товара','Количество (из акта)','Кол-во расход','info','Материал (из акта)','Материал',	
+                     'На уничтожение','В повторное использование','На металл','Алюминий, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг']]
+      
+      yaroq.to_excel('5. yaroq.xlsx', index=False)

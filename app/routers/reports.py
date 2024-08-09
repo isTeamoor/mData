@@ -17,7 +17,7 @@ router = APIRouter(
 
 @router.get('/matReport/{month}/{department}')
 def get_matrep(month:int, department:str):
-    regular.matReport(repMonth=month, repYear=2024, department = department, transactions=transactions)
+    regular.matReport(repMonth=month, repYear=2024, department = department, transacts=transactions)
     return {'/matReport':'ok'}
 
 @router.get('/requisitions')

@@ -233,6 +233,7 @@
 245235,175192,Electrical Supervisor,Axmedov Ibroxim
 245239,175192,Maintenance Planner ,Maxmudov Foziljon
 245276,175192,Instrument Engineer,Kayimov Mailik Buronovich
+245336,175192,Analyser Junior Technician,Qahramonov Baxtiyor Ergash o`g`li
 208566,208767,EWS for MAC/BAC,100-EWS-001
 208964,208767,EWS for MAC/BAC,100-EWS-001
 208821,208822,Maintenance Manager,Gareth Jones Bryan
@@ -6437,6 +6438,7 @@
 252220,78372,Crystallizer Process Condensate Pump,171-XP-013-PC-013B
 252221,78372,Crystallizer Centrate Pump,171-XP-013-PC-014
 254157,78372,Sample connection,171-SC-112
+258291,78372,LeveL transmitter,171-LT-0004
 86702,78373,Superheated Steam Desuperheater,172-XH-001
 86746,78373,HP Steam Boiler Package,172-XP-006A
 86763,78373,HP Steam Boiler Package,172-XP-006B
@@ -46821,7 +46823,6 @@
 175230,175192,Static Technician,Abdujabborov Sherzod
 175231,175192,Rotating Engineer,Abidov Ilxom
 175232,175192,Electrical supervisor,Aliqulov Komil
-175233,175192,Analyser Supervisor,Aminov Navruzbek
 175237,175192,Instrumentation Engineer,Barotov Muxlis
 175242,175192,Field Manager (U&O/PS&E),Chorshanbiev Zufar
 175243,175192,Instrumentation Engineer,Davlatov Quvonchbek
@@ -46848,6 +46849,7 @@
 220889,175192,Rotating Junior technician,Buriev Muhsin 
 220890,175192,Rotating Junior technician,Ubaydullayev Doston
 222593,175192,Analyser Technician,Raxmatov Sardor Sunnatilla o'g'li
+222633,175192,Junior specialist,Maxmarajabov Mirjalol Berdimurod o'g'li
 222679,175192,Static Junior technician,Abduholiqov Ilyos Turdiyevich
 223883,175192,Junior Electrical Technician ,Mamadiev Xumoyun Azamat o'gli
 224003,175192,Junior instrumentation technician,Kenjayev Shoxboz Erkin o'g'li
@@ -46857,9 +46859,7 @@
 224445,175192,Electrical junior technician,Baxronov Axror Shokir o'g'li
 224756,175192,Static Junior technician,G`oziyev Jamshid Yaxshiboyevich
 227859,175192,Analyser Junior Technician,Xayrullayev Elyor Baxtiyor o'g'li
-245240,175192,Static Supervisor ,O'mrzaqov G'anisher
 245241,175192,Instrumentation Engineer,Raximov Jamoljon
-245336,175192,Analyser Junior Technician,Qahramonov Baxtiyor Ergash o`g`li
 175279,175777,Chain Blocks for SLU,CHBks
 175630,175777,PPE for hot surfaces (Polymer gloves),Polymer gloves
 175762,175777,Special tools,SPtools
@@ -54025,6 +54025,7 @@
 251496,217848,Solar panels,SP-ADM-90 kW
 251500,217848,Solar panels,SP-Parking-360 kW
 175208,218224,Instrumentation Senior Engineer,Abdizoirov Islom
+175233,218224,Analyser Supervisor,Aminov Navruzbek
 175269,218224,Static supervisor,Yarashev Javlon
 175438,218224,Electrical Junior Technician,Choriyev Akrom
 175442,218224,Electrical Supervisor,Hasanov Sherzod
@@ -54064,6 +54065,7 @@
 218396,218224,Junior Technician,Yuldoshev Jaloliddin Bahodir o'gli
 218397,218224,Junior Technician,Bozorov Uyg'un Qodir o'gli
 223459,218224,Rotating /Technical Specialist,Xurramov Temurbek
+245240,218224,Static Supervisor ,O'mrzaqov G'anisher
 245284,218224,Analyzer Specialist,Hamrayev Adham G'ayrat o'g'li
 245285,218224,Electrician,Berdimurodov Alisher G'oyimnazar o'g'li
 245286,218224,Electrician,Zulfiqorov Alisher Isaevich
@@ -54885,7 +54887,6 @@
 245280,218274,Plant Material Balance Engineer,Ro'ziyev Alisher Axtamovich
 222571,218294,Specialist,G'aniyev Anvar Yaxyoyevich
 222572,218294,Leading specialist,Rayimxo'jayev Usmonxo'ja Odilxo'ja o'g'li
-222633,218294,Junior specialist,Maxmarajabov Mirjalol Berdimurod o'g'li
 222921,218294,Leading specialist,Nortojiyev Elbek Salamovich
 222923,218294,Senior specialist of Localization and Expansion of Cooperative Relations,Xoliqov Abdumalik Saydullayevich
 218453,218452,industrial equipment coordinator  ,Xushnazarov Shohboz

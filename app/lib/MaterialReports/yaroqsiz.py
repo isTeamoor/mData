@@ -68,6 +68,8 @@ def execute(transacts):
         if os.path.isfile(os.path.join(directory_path, file)):
             files.append(file)
 
+            
+
 
     ### 2. Собирает в dataframe все файлы из директории
     tables = []

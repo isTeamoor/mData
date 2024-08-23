@@ -337,3 +337,5 @@ def matReport(repMonth, repYear, department, transacts):
                      'На уничтожение','В повторное использование','На металл','Алюминий, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг']]
       
       yaroq.to_excel('5. yaroq.xlsx', index=False)
+
+      

@@ -1,5 +1,131 @@
 import pandas as pd
 
+def getPPE():
+    ### 1. Создание DataFrame список сотрудников из штатного расписания
+    stuff = pd.read_excel('МТХКР бўлими тузилмаси 09.08.2024.xlsx')
+    stuff.columns = stuff.iloc[2]
+    stuff = stuff.iloc[3:133]
+
+    stuff['Лавозим mod'] = stuff['Лавозим'].apply(lambda x: x.split('/')[0])
+    stuff['Лавозим mod'] = stuff['Лавозим mod'].apply(lambda x: x.split(' (')[0])
+    stuff['Лавозим mod'].replace({
+        "Участка бошлиғи SLU": "Участка бошлиғи",
+        "Участка бошлиғи U&O": "Участка бошлиғи",
+        "Участка бошлиғи PWU": "Участка бошлиғи",
+        }, inplace=True)
+
+    stuff.to_excel('stuff.xlsx', index=False)
+
+
+    ### 2. Создание DataFrame нормарасход СИЗ
+    ppe = pd.read_excel('Келишув_учун_СИЗлар_руйхати_таклифлар_2.xlsx')
+    ppe.columns = ['#','Name','Quantity', "UOM", 'Period','1','2']
+    ppe = ppe[['#','Name','Quantity', "UOM", 'Period']]
+    ppe = ppe.iloc[2981:3615]
+
+    # Удаление ненужных строк
+    ppe = ppe.loc[ppe['Name']!="Qo'shimcha"]
+    ppe = ppe.loc[ppe['#']!="Elektrotexnika laboratoriyasi"]
+
+    # Форматирование названий СИЗ (+название должностей)
+    ppe['Name'] = ppe['Name'].apply(lambda x: x.strip())
+    ppe['Name'].replace({
+        'Kombenizon (Bir martalik)':'Kombinzon  1 martalik',
+        "Plash Suvdan (Yomg'irdan) himoya qilish uchun)":"Plash  Suvdan (Yomg'irdan) himoya qilish uchun"}, inplace = True)
+    ppe['Name'] = ppe['Name'].apply(lambda x: x.strip() if 'Qishgi maxsus kiyim' not in x else "Qishgi maxsus kiyim  (Qishda tashqi ishlarda qo'shimcha umumiy ishlab chiqarish ifloslanishidan va mexanik ta'sirlardan himoya qilish uchun")
+
+    # Замена названий штатных единиц, чтобы привести их в соответствие с df stuff
+    ppe['Name'].replace({
+        "Bo'lim boshlig'i": "Бўлим бошлиғи",
+        "Bo'lim boshlig'I o'rinbosari": "Бўлим бошлиғи ўринбосари",
+        "KTXKBT bo'yicha yetakchi muhandis (Kompyuterlashtirilgan texnik xizmat ko'rsatishni boshqarish tizimi)": "Техник хизмат кўрсатишни компютерлаштирилган бошқарув тизими етакчи мухандиcи",
+        "KTXKBT muhandisi (Kompyuterlashtirilgan texnik xizmat ko'rsatishni boshqarish tizimi)": "Техник хизмат кўрсатишни компютерлаштирилган бошқарув тизими техниги",
+        "Xarajatlar nazoratchisi": "Харажатлар назоратчиси",
+        "Omborchi": "Омборчи",
+        "Ish yurituvchi": "Иш юритувчи",
+        "Uchastka boshlig'i": "Участка бошлиғи",
+        "Statik uskunalar kichik  texnigi": "Статик ускуналар кичик техниги",
+        "Statik uskunalar texnigi": "Статик ускуналар техниги",
+        "Statik uskunalar muhandisi": "Статик ускуналар муҳандиси",
+        "Statik uskunalar yetakchi mutaxassisi": "Статик ускуналар етакчи мутахассиси",
+        "Elektr uskunalari muhandisi": "Электр ускуналари муҳандиси",
+        "Elektr uskunalari yetakchi mutaxassisi": "Электр ускуналари етакчи мутахассиси",
+        "Elektr uskunalari texnigi": "Электр ускуналари техниги",
+        "Elektr uskunalari kichik texnigi": "Электр ускуналари кичик техниги",
+        "Analizator bo`yicha yetakchi mutaxassis": "Анализаторлар етакчи мутахассиси",
+        "Analizator bo`yicha texnik mutaxassis": "Анализаторлар техниги",
+        "Analizator bo'yicha muhandis": "Анализаторлар мухадниси",
+        "Analizator bo'yicha kichik texnik mutaxassis": "Анализаторлар кичик техниги",
+        "Aylanuvchi mexanizmlar yetakchi mutaxassisi": "Айланувчи механизмлар етакчи мутахассиси",
+        "Aylanuvchi mexanizmlar muhandisi": "Айланувчи механизмлар муҳандиси",
+        "Aylanuvchi mexanizmlar bo'yicha texnik mutaxassis": "Айланувчи механизмлар техниги",
+        "Aylanuvchi mexanizmlar bo'yicha kichik texnik mutaxassis": "Айланувчи механизмлар кичик техниги",
+        "Nazorat o‘lchash asboblari yetakchi mutaxassisi": "Назорат ўлчаш асбоблари етакчи мутахассиси",
+        "Nazorat o‘lchash asboblari muhandisi": "Назорат ўлчаш асбоблари муҳандиси",
+        "Nazorat o‘lchash asboblari texnigi": "Назорат ўлчаш асбоблари техниги",
+        "Nazorat o‘lchash asboblari kichik texnigi": "Назорат ўлчаш асбоблари кичик техниги",
+        "Moylash mahsulotlarini hisobini yuritish va ehtiyot qismlar nazorati bo'yicha bosh mutaxassis": "Мойлаш маҳсулотлари ва эхтиёт қисмлар назорати бўйича бош мутахассиси",
+        "Texnik xizmat ko'rsatishni rejalashtirish mutaxassisi": "Техник хизмат кўрсатишни режалаштириш етакчи мутахассиси",
+        "Texnik xizmat ko'rsatishni rejalashtirish kichik mutaxassisi": "Техник хизмат кўрсатишни режалаштириш кичик мутахассиси",
+        "Elektrotexnika laboratoriyasi boshlig'i": "Электротехника лабораторияси бошлиғи",
+        "Elektr muhandisi": "Электротехника лабораторияси муҳандиси",
+        "Elektromontyor": "Электротехника лабораторияси электромонтёри",
+        "Yetakchi muhandis": "Электротехника лабораторияси етакчи мутахассиси"
+    }, inplace=True)
+
+
+    # Получение списка названий только штатных единиц
+    stuff_name = ppe.loc[ ~(ppe['#'].isna()) ].copy()
+    stuff_name = stuff_name.loc[ stuff_name['Name']!="Maxsus kiyim (Antistatik xususiyatlarga ega bo'lgan umumiy ishlab chiqarish ifloslanishi va mexanik ta'sirlardan himoya qilish uchun)" ]
+    #stuff_name.to_excel('stuff_name.xlsx', index=False)
+    aims = stuff_name['Name'].unique()
+
+    
+    # Добавления поля groups для дальнешейго заполнения вниз группирующего значения
+    ppe['groups'] = ppe['Name'].copy().apply(lambda x: x if x in aims else None )
+    ppe['groups'].fillna(method='ffill', inplace=True)
+
+    #ppe.to_excel('ppe.xlsx', index=False)
+
+
+    # Создание списка с кусками датафрейма норма расхода, сгруппированных по каждой штатке
+    all_items = []
+    for group_name, group_data in ppe.groupby('groups'):
+        df = group_data.iloc[1:].copy()
+        df['person'] = group_name
+        all_items.append(df)
+
+    all_items = pd.concat(all_items)
+    all_items.to_excel('all_items.xlsx')
+
+    # Перебор всех сотруднииков по списку, с добавлением для каждого датафрейма с нормой расхода для штатки
+    result = []
+    for i, row in stuff.iterrows():
+        item = all_items.loc[ all_items['person']==row['Лавозим mod'] ]
+        result.append(item)
+
+    result = pd.concat(result)
+
+    # Создание суммарного и детализированных файлов
+    total_RPMD = result.groupby('Name')['Quantity'].sum()
+    result = result.groupby(['Name','person','Period','UOM',]).sum()
+
+    total_RPMD.to_excel('total_RMPD.xlsx')
+    result.to_excel('result.xlsx')
+
+
+
+
+
+"""
+stuff_name = ppe.loc[ ~(ppe['#'].isna()) ].copy()
+stuff_name = stuff_name.loc[ stuff_name['Name']!="Maxsus kiyim (Antistatik xususiyatlarga ega bo'lgan umumiy ishlab chiqarish ifloslanishi va mexanik ta'sirlardan himoya qilish uchun)" ]
+stuff_name.to_excel('stuff_name.xlsx', index=False)
+"""
+
+
+
+
 ### 2. Бюджет Outsource
 outsourceBudg = pd.DataFrame(
     [

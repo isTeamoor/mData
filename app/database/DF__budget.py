@@ -106,25 +106,37 @@ def getPPE():
 
     result = pd.concat(result)
 
-    # Создание суммарного и детализированных файлов
-    total_RPMD = result.groupby('Name')['Quantity'].sum()
+    
+
     result = result.groupby(['Name','person','Period','UOM',]).sum()
+    result.to_excel('result-old.xlsx')
+
+    result.reset_index(drop=False, inplace=True)
+    result['Freq'] = result['Period'].copy()
+    result['Freq'].replace({
+        'yaroqsiz holatga kelguncha':0.5,
+        '3 yilda  1 marta':0.5,
+        '1 yilda  1 marta':1,
+        '1 yilda  2 marta':2,
+        '5 yilda  1 marta':0.2,
+        '2 yilda  1 marta':0.5,
+        '1 yilda 1 marta':1,
+        '6 oyda1 marta':2,
+        '6 oyda 1 marta':2
+    }, inplace=True)
+
+    result['Qnty mod'] = result.apply(lambda x: x['Freq']*x['Quantity'], axis=1)
+    result['Qnty mod'] = result.apply(lambda x: 12*x['Quantity'] 
+                                      if x['Name']=="Qo'lqop  (Mexanik ta'sirlardan (jarohatlar, kesilishlardan) himoya qilish uchun)"
+                                      else x['Qnty mod'], axis=1)
+    
+
+    # Создание суммарного и детализированных файлов
+    total_RPMD = result.groupby(['Name','Freq','Period'])[['Qnty mod','Quantity']].sum()
 
     total_RPMD.to_excel('total_RMPD.xlsx')
-    result.to_excel('result.xlsx')
-
-
-
-
-
-"""
-stuff_name = ppe.loc[ ~(ppe['#'].isna()) ].copy()
-stuff_name = stuff_name.loc[ stuff_name['Name']!="Maxsus kiyim (Antistatik xususiyatlarga ega bo'lgan umumiy ishlab chiqarish ifloslanishi va mexanik ta'sirlardan himoya qilish uchun)" ]
-stuff_name.to_excel('stuff_name.xlsx', index=False)
-"""
-
-
-
+    """result = result.groupby(['Name','person','Freq','UOM',]).sum()
+    result.to_excel('result-old.xlsx')"""
 
 ### 2. Бюджет Outsource
 outsourceBudg = pd.DataFrame(
@@ -166,9 +178,7 @@ outsourceBudg = pd.DataFrame(
     ]
 )
 
-
-
-### 2. Бюджет RMPD
+### 3. Бюджет RMPD
 rmpdBudg = pd.DataFrame(
     [
         {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
@@ -178,9 +188,7 @@ rmpdBudg = pd.DataFrame(
     ]
 )
 
-
-
-### 3. Бюджет CofE
+### 4. Бюджет CofE
 cofeBudg = pd.DataFrame(
     [
         {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
@@ -190,9 +198,7 @@ cofeBudg = pd.DataFrame(
     ]
 )
 
-
-
-### 4. Бюджет TAR
+### 5. Бюджет TAR
 tarBudg = pd.DataFrame(
     [
         {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0},
@@ -202,9 +208,7 @@ tarBudg = pd.DataFrame(
     ]
 )
 
-
-
-### 5. Бюджет MTK
+### 6. Бюджет MTK
 mtkBudg = pd.DataFrame(
     [
         {'Currency':'','Company name':'', 'SoW':'','Contract':'Summary local contracts in uzs','opex':'','working capital':'','capex':'','Sum':924000000, 'Jan':77000000, 'Feb':77000000, 'Mar':77000000, 'Apr':77000000, 'May':77000000, 'Jun':77000000, 'Jul':77000000, 'Aug':77000000, 'Sep':77000000, 'Oct':77000000, 'Nov':77000000, 'Dec':77000000},

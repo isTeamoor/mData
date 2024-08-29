@@ -3,8 +3,6 @@ from .impo import requisitions, requisitionItems, approvalPath, contactID, uom
 from .impo import assetIDcatalogID, catalogueInfo
 
 
-
-
 ### 1. Merge reqlines & requisitions
 requisitions = requisitions.merge(approvalPath, how='left', on='Approval Path ID')
 

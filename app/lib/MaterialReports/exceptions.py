@@ -67,16 +67,9 @@ extra = {
         'currentReturn':[]
     },
     'cofe':{
-        'begin':[],
-        'currentMonth':[
-            {'Код товара':'06933','Reservation Number':-1,'WO №':-1,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':240,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':60,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'16801','Reservation Number':-3,'WO №':-3,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Веник",'Ед.изм.':'шт','Quantity':4,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Xidirov Davron', 'Объект':'Xidirov Davron'},
-            {'Код товара':'06949','Reservation Number':-4,'WO №':-4,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага листовая для офисной техники Sylvamo Svetocopy А3 80гр",'Ед.изм.':'пачка','Quantity':2,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Xidirov Davron, Ochilov Abbos', 'Объект':'Xidirov Davron, Ochilov Abbos'},
-            {'Код товара':'07483','Reservation Number':-5,'WO №':-5,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А4",'Ед.изм.':'пачка','Quantity':6,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Xidirov Davron, Ochilov Abbos, Haydarov Jahongir, Xamidov Jahongir, Nurmatov Nurbek, Bolliyev Elmurod', 'Объект':'Xidirov Davron, Ochilov Abbos, Haydarov Jahongir, Xamidov Jahongir, Nurmatov Nurbek, Bolliyev Elmurod'},
-            {'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':7,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':13.642,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Metall', 'Объект':'Metall'},
-        
+        'begin':[{'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':60,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
         ],
+        'currentMonth':[],
         'currentReturn':[]
     },
 }

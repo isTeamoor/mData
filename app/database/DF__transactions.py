@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from .DF__spares import spares
 from .impo import transactions, assetIDcatalogID, stockOnHand, stockReserved, catalogueInfo, uom
 
@@ -26,8 +27,6 @@ transactions['Quantity'] = transactions['Quantity'].map(lambda x: -x) #Issue с�
 
 
 
-
-
 transactions.rename(columns={'User Defined Text Box1': 'Material Code'}, inplace=True)
 
 transactions['Material Code'] = transactions['Material Code'].astype(str)
@@ -44,7 +43,7 @@ spares = spares[[
 'Work Order Spare ID', 'Reservation Number', 'reservYear', 'reservMonth', 'Reserved By', 'isRMPD_planner',
 'Work Order Number','Work Order Status Description','raisedYear', 'raisedMonth',
 'closedYear', 'closedMonth', 'Short Department Name', 'isRMPD','Created By',
-'Is Master Work Order', 'Is Group Work Order', 'Group WO number','Spares Comment','Employee WOSpares', 'Asset Description','Asset Number'
+'Is Master Work Order', 'Is Group Work Order', 'Group WO number','Spares Comment','Employee WOSpares', 'Asset Description','Asset Number','Estimated Cost',
 ]]
 transactions = transactions.merge(spares, how='left', on='Work Order Spare ID')
 
@@ -66,4 +65,9 @@ transactions = transactions[[
 'closedYear', 'closedMonth', 'Отдел', 'isRMPD', 'Created By',
 'Is Master Work Order', 'Is Group Work Order', 'Group WO number',
 'Spares Comment', 'Employee WOSpares', 'Stock On Hand','Total Quantity Reserved',
+'isInitial_part?','Estimated Cost',
 ]]
+
+
+
+

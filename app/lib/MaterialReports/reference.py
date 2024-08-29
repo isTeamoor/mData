@@ -54,8 +54,6 @@ def metLib(inputDF):
 
     ### Subproducts
     src = pd.read_excel('yaroq-template.xlsx')
-    print(src)
-    print()
 
     #df['На уничтожение']            = df.apply(lambda x: src.loc[ src['Код товара'] == x['Код товара'], 'На уничтожение' ].unique()[0] if src.loc[ src['Код товара'] == x['Код товара'], 'На уничтожение' ].unique() else 'gavno', axis = 1)
     #df['В повторное использование'] = df.apply(lambda x: src.loc[ src['Код товара'] == x['Код товара'], 'В повторное использование' ].unique()[0] if src.loc[ src['Код товара'] == x['Код товара'], 'В повторное использование' ].unique() else 'gavno', axis = 1)

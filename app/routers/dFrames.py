@@ -32,7 +32,11 @@ def dframe_wo():
 
 @router.get('/transactions')
 def dframe_transactions():
-    DF__transactions.transactions.to_excel('transactions.xlsx', index=False)
+    #DF__transactions.transactions.to_excel('transactions.xlsx', index=False)
+    #print(DF__transactions.prices['Код товара'])
+    DF__transactions.transmod.to_excel('transMod_4AP.xlsx', index=False)
+    DF__transactions.prices.to_excel('prices.xlsx', index=False)
+    
     return {'transactions':'ok'}
 
 @router.get('/requisitions')

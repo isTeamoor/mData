@@ -65,7 +65,7 @@ transactions = transactions[[
 'closedYear', 'closedMonth', 'Отдел', 'isRMPD', 'Created By',
 'Is Master Work Order', 'Is Group Work Order', 'Group WO number',
 'Spares Comment', 'Employee WOSpares', 'Stock On Hand','Total Quantity Reserved',
-'isInitial_part?','Estimated Cost',
+'Estimated Cost',
 ]]
 
 

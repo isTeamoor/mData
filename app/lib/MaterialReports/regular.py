@@ -329,9 +329,9 @@ def matReport(repMonth, repYear, department, transacts):
 
   if department == 'rmpd':
       yaroq = yaroqsiz.execute(transacts)
+      
       yaroq = yaroq.merge(met, how='outer', on='Код товара')
-
-      yaroq = reference.metLib(yaroq)
+      yaroq = yaroqsiz.metLib(yaroq)
 
       yaroq = yaroq[['Номер файла','Номер документа','Код товара','Количество (из акта)','Кол-во расход','info','Материал (из акта)','Материал',	
                      'На уничтожение','В повторное использование','На металл','Алюминий, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг']]

@@ -3,7 +3,7 @@ def corrections(transactions):
 
 
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162
-    transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.6
+    transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.598
 
     """#Проблема взаимозачета. Был возврат и взята новая запчасть
     transacts.loc[ transacts['Reservation Number'] == 12789, 'transactMonth'  ] = 7
@@ -11,6 +11,9 @@ def corrections(transactions):
 
     #Доп кислород, переделывали с бобуром талабнома
     transacts.loc[ transacts['Reservation Number'] == 12521, 'Quantity'  ] = 11.41  """
+
+    #Корректировка рулон цинковый 0.002 разница
+    transacts.loc[ transacts['Reservation Number'] == 11217, 'Quantity'  ] = 0
 
 
     #Корректировка после перехода Миржахона
@@ -83,6 +86,7 @@ extra = {
         ],
         'currentMonth':[
             {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':9,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':180,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'09683','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.036,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
         ],
         'currentReturn':[]
     },

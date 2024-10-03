@@ -190,14 +190,12 @@ def matReport(repMonth, repYear, department, transacts):
 
 
 
-  """
+  
   ### Exception different prices in 1c
   if department == 'cofe':
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 47265.04  if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 50000     if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 46772.4   if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
-      rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец']  * 50000     if x['Код товара']=='11062' else x['Сумма конец'],  axis=1)
-
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 50000     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 53571.4   if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
+  """
   if department == 'rmpd':
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 211131.6  if x['Код товара']=='07139' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 213392.86 if x['Код товара']=='07139' else x['Сумма приход'], axis=1)
@@ -205,6 +203,7 @@ def matReport(repMonth, repYear, department, transacts):
       rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец']  * 213392.86 if x['Код товара']=='07139' else x['Сумма конец'],  axis=1)
   ##########################################################
   """
+  
 
 
 

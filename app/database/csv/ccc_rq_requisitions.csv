@@ -370,7 +370,7 @@
 381,620,,1/07/2023 10:00:00 AM,,12/07/2023 2:30:05 PM
 382,621,,1/07/2023 10:00:00 AM,,12/07/2023 2:30:05 PM
 383,619,Zavod markaziy Laboratoriyasida tahlillar o'tkazish uchun,19/07/2023 2:28:00 PM,40,12/07/2023 2:28:00 PM
-384,622,"to ensure continuous operating of the Sulphuric Acid Pumps(187-PC-002A/B),Caustic Soda Transfer Pumps(187-PC-004A/B)",11/08/2023 3:06:06 PM,53,12/07/2023 3:06:06 PM
+384,622,to ensure continuous operating of pumps,1/01/2025 12:00:00 AM,53,12/07/2023 3:06:06 PM
 385,624,Almashtirish va modiy texnik bazani yaratish uchun,12/07/2023 5:01:53 PM,53,12/07/2023 5:01:53 PM
 386,623,Gas chromatograph kalonkalarini qurutish uchun regeneratsiya pechi,13/08/2023 4:52:53 PM,53,12/07/2023 4:52:53 PM
 387,625,,12/07/2023 5:07:47 PM,,12/07/2023 5:07:47 PM
@@ -1277,7 +1277,7 @@
 1289,1990,,7/08/2024 10:43:05 AM,40,7/08/2024 10:43:05 AM
 1290,1993,,7/08/2024 11:57:44 AM,40,7/08/2024 11:57:44 AM
 1291,1996,To maintain and install trays within the 140-VC- 002 column,1/11/2024 3:34:40 PM,56,7/08/2024 3:34:40 PM
-1292,1995,to purchase standard and VIP gifts for guests,1/11/2024 2:08:13 PM,67,7/08/2024 2:08:13 PM
+1292,1995,to purchase gifts for guests,1/11/2024 2:08:13 PM,67,7/08/2024 2:08:13 PM
 1293,1998,Услуги на на проведение строительных работ асфальта-бетонного дорожного покрытия,9/08/2024 8:30:44 AM,54,8/08/2024 8:30:44 AM
 1294,1999,Заявка для договора по оказанию услуг по питанию сотрудникам завода,8/08/2024 11:09:56 AM,39,8/08/2024 11:09:56 AM
 1295,2000,Toshkent ofis binosi uchun kerakli bo'lgan xo'jalik tovarlarini sotib olish uchun buyurtma,8/08/2024 2:59:48 PM,39,8/08/2024 2:59:48 PM
@@ -1329,3 +1329,48 @@
 1341,2065,Fire equipments for GTL Chinoz Terminal ,11/09/2024 1:46:25 AM,80,11/09/2024 1:46:25 AM
 1342,2066,Kimyoviy reagentlarni yuklash uchun foydalaniladigan diafragmali pnevmatik nasos,11/09/2024 2:16:33 PM,41,11/09/2024 2:16:33 PM
 1343,2067,Based on Vendor recommendation and top management agreement,11/12/2024 12:00:00 AM,53,11/09/2024 2:27:54 PM
+1344,2068,Обязательное страхование гражданской ответственности работодателя,12/10/2024 5:10:29 PM,66,12/09/2024 5:10:29 PM
+1345,2071,Toshkent ofis binosi uchun kerakli bo'lgan xo'jalik tovarlarini sotib olish uchun buyurtma,13/09/2024 11:39:19 AM,39,13/09/2024 11:39:19 AM
+1346,2072,Toshkent ofis binosi uchun kerakli bo'lgan xo'jalik tovarlarini sotib olish uchun buyurtma,13/09/2024 11:43:42 AM,39,13/09/2024 11:43:42 AM
+1347,2073,Zavod markaziy laboratoriyasi xodimlarini ISO/IEC 17025 standarti bo'yicha Akkreditatsiya markazida o'qitish,13/09/2024 3:52:23 PM,40,13/09/2024 3:52:23 PM
+1348,2074,To purchase a monitor module for the plant’s fire alarm system,16/09/2024 1:56:12 PM,75,16/09/2024 1:56:12 PM
+1349,2075,Mahsulot saqlash rezervuarlarni sathini o'lchash uchun roletka,16/09/2024 2:10:21 PM,41,16/09/2024 2:10:21 PM
+1350,2077,Приобретение услуги по получению сертификата соответствия на производимую продукцию,16/09/2024 2:41:03 PM,,16/09/2024 2:41:03 PM
+1351,2079,Приобретение услуги по получению сертификата соответствия на производимую продукцию.,17/09/2024 8:52:04 AM,83,17/09/2024 8:52:04 AM
+1352,2081,Texnogen chiqindilarni(filter cake) qayta ishlab tarkibidan qimmatbaho metallarni ajratish uchun sinov labaratoriyasini yaratish.,24/09/2024 3:20:16 PM,58,17/09/2024 3:20:16 PM
+1353,2083,"на закупку товаров для обновления товарно-материальных ценностей, входящих во 2-ю группу Госрезерва в «GTL Chinoz Terminal»",17/09/2024 4:02:09 PM,80,17/09/2024 4:02:09 PM
+1354,2084,Заявка на закупку резиновых ковриков,18/09/2024 2:52:53 PM,39,18/09/2024 2:52:53 PM
+1355,2085,,19/09/2024 10:35:01 AM,40,19/09/2024 10:35:01 AM
+1356,2087,,19/09/2024 11:24:35 AM,,19/09/2024 11:24:35 AM
+1357,2088,Metrology attestation of custody flow metering skids in Unit 78 ,19/11/2024 12:09:02 PM,75,19/09/2024 12:09:02 PM
+1358,2089,Заявка на закупку саженцев,19/09/2024 1:48:30 PM,39,19/09/2024 1:48:30 PM
+1359,2090,UZbekistan GTL MCHJ ehtiyojlari uchun tibbiyot binosiga mebellar xarid qilish talabnomasi ,19/09/2024 3:48:47 PM,71,19/09/2024 3:48:47 PM
+1360,2091,Spare parts for ABB VSD panels of Uzbekistan GTL plant.,20/09/2024 8:59:04 AM,53,20/09/2024 8:59:04 AM
+1361,2092,Service of Variable Speed Drives,20/09/2024 9:28:58 AM,53,20/09/2024 9:28:58 AM
+1362,2093,Soundproofing Room  (The noise level is above the norm in the main equipment of substations. Abnormal noise affects the health of shift electrician).,21/10/2024 10:23:43 AM,46,20/09/2024 10:23:43 AM
+1363,2094,скамейка,20/09/2024 11:51:20 AM,80,20/09/2024 11:51:20 AM
+1364,2095,"""Uzbekistan Gtl"" Ma'muriy binosiga tegishli Gaz taqsimlash punktiga 1 yillik xizmat ko'rsatish",20/09/2024 11:59:18 AM,39,20/09/2024 11:59:18 AM
+1365,2096,Для Закупку расходных материалов для выполнения сварочных работ,20/09/2024 2:04:02 PM,75,20/09/2024 2:04:02 PM
+1366,2097,"Аксессуары, необходимые для электрогазосварщиков",20/09/2024 2:27:38 PM,75,20/09/2024 2:27:38 PM
+1367,2098,Grounding clamp tester for testing lightning and grounding system,20/09/2024 2:45:28 PM,53,20/09/2024 2:45:28 PM
+1368,2099,Норма расхода для дизель генератор и доставка раций на ремонт,20/09/2024 4:33:24 PM,70,20/09/2024 4:33:24 PM
+1369,2100,Mechanical repair service for repairing/replacing leaky bundle tubes of air-cooled heat exchangers SLU,1/01/2025 12:00:00 AM,53,20/09/2024 5:17:29 PM
+1370,2101,Uzbekistan GTL MCHJ ehtiyojlari uchun birlamchi yong'in o'chirgichlari qayta to'ldirish uchun xarid talabnomasi ,23/09/2024 9:46:16 AM,71,23/09/2024 9:46:16 AM
+1371,2102,Ремонт специальной техники и транспортных средств,30/09/2024 10:45:49 AM,51,23/09/2024 10:45:49 AM
+1372,2103,,7/06/2023 12:00:00 AM,,23/09/2024 12:13:36 PM
+1373,2105,Заявка на закупку саженцев,23/09/2024 5:01:26 PM,39,23/09/2024 5:01:26 PM
+1374,2106,,24/09/2024 8:35:50 AM,40,24/09/2024 8:35:50 AM
+1375,2107,,24/09/2024 12:00:00 AM,,24/09/2024 8:58:52 AM
+1376,2108,,24/09/2024 12:00:00 AM,,24/09/2024 8:58:53 AM
+1377,2109,,24/09/2024 12:00:00 AM,,24/09/2024 8:58:53 AM
+1378,2110,,24/09/2024 12:00:00 AM,,24/09/2024 8:58:54 AM
+1379,2111,,24/09/2024 12:00:00 AM,,24/09/2024 8:58:54 AM
+1380,2112,,24/09/2024 12:00:00 AM,,24/09/2024 8:58:54 AM
+1381,2113,Aвтоматизированную информационную систему для заполнения грузовых таможенных деклараций,24/09/2024 9:46:11 AM,30,24/09/2024 9:46:11 AM
+1382,2114,to replace a faulty UCSB controller of 173-XP-001B-GEP-01 Generator Excitation Panel,4/10/2024 9:54:16 AM,60,24/09/2024 9:54:16 AM
+1383,2115,,24/09/2024 11:15:17 AM,40,24/09/2024 11:15:17 AM
+1384,2116,Журнал инструктажа ,24/09/2024 2:49:15 PM,,24/09/2024 2:49:15 PM
+1385,2118,Панели управления и аксессуары необходимы для интеграции систем пожарной сигнализации в зданиях,24/09/2024 4:39:53 PM,75,24/09/2024 4:39:53 PM
+1386,2123,LPG mahsulotini sertigikatlash,27/09/2024 2:26:05 PM,83,27/09/2024 2:26:05 PM
+1387,2122,для создания наружных баннер-стеллы в Кукдала Кашдарьинской об.,27/09/2024 12:49:56 PM,89,27/09/2024 12:49:56 PM
+1388,2125,Welding electrode /Consumables,30/09/2024 4:15:04 PM,56,30/09/2024 4:15:04 PM

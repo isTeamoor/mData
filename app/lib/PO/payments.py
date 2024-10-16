@@ -156,7 +156,7 @@ def sumPayments(department=False):
     sum_row['Contract'] = 'Summary all contracts in usd'
     payments.loc[ len(payments) ] = sum_row
 
-
+    payments.to_excel(f'{department}.xlsx')
     return payments   
 
 ### Отчёт об использовании бюджета (%), с cumulative

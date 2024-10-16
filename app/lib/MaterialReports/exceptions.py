@@ -1,25 +1,25 @@
 def corrections(transactions):
-    transacts = transactions.loc[ transactions['Код товара']!='00nan'].copy() #Постоянное исключение для материальных отчётов
+    ### 1.Постоянные исключения для материальных отчётов
+    transacts = transactions.loc[ transactions['Код товара']!='00nan'].copy() 
+    #Электроды кг -> тн
+    transacts.loc[ transacts['Код товара']=='05140', 'Quantity' ] /= 1000
+    transacts.loc[ transacts['Код товара']=='05140', 'Ед.изм.' ] == 'тн'
 
-
+    #До перехода Миржахона, часть материала была уже списана
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162
     transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.598
-
-    """#Проблема взаимозачета. Был возврат и взята новая запчасть
-    transacts.loc[ transacts['Reservation Number'] == 12789, 'transactMonth'  ] = 7
-    transacts.loc[ transacts['Reservation Number'] == 11217, 'Quantity'  ] = 0
-
-    #Доп кислород, переделывали с бобуром талабнома
-    transacts.loc[ transacts['Reservation Number'] == 12521, 'Quantity'  ] = 11.41  """
-
-    #Корректировка рулон цинковый 0.002 разница
-    transacts.loc[ transacts['Reservation Number'] == 11217, 'Quantity'  ] = 0
-
 
     #Корректировка после перехода Миржахона
     transacts.loc[ (transacts['WO №'].isin([52090, 84634, 94411])) & (transacts['Reserved By']=='Mirjakhon Toirov'), 'Reserved By' ] = 'Mirjahon Toirov CofE'
     transacts.loc[ transacts['Reservation Number'].isin([6801,7605,7609,6802,6804,6805,6806,7237,7244,7604,7608,7238,7245,7611,7612,7650,7651,8477,8478,9088,9089,9092,7992,7993,8333,
                                                          8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'Mirjahon Toirov CofE'
+
+    #Корректировка рулон цинковый 0.002 разница
+    transacts.loc[ transacts['Reservation Number'] == 11217, 'Quantity'  ] = 0
+    
+
+
+    ### 2.Временные исключения для материальных отчётов
     
     #Тулкинакя, будет возврат на склад
     transacts.loc[ transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]), 'closedMonth' ] = 10
@@ -27,10 +27,6 @@ def corrections(transactions):
                    &
                    (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 10
 
-    #Электроды кг -> тн
-    transacts.loc[ transacts['Код товара']=='05140', 'Quantity' ] /= 1000
-    transacts.loc[ transacts['Код товара']=='05140', 'Ед.изм.' ] == 'тн'
-    
 
     return transacts
 
@@ -87,6 +83,7 @@ extra = {
         'currentMonth':[
             {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':9,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо",'Ед.изм.':'л','Quantity':180,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             {'Код товара':'09683','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.036,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
+            {'Код товара':'13688','Reservation Number':-4,'WO №':-4,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Кислород газообразный",'Ед.изм.':'м³','Quantity':0.12,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Корректировка Кислород', 'Объект':'Корректировка Кислород'},
         ],
         'currentReturn':[]
     },

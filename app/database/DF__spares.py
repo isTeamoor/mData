@@ -51,6 +51,19 @@ spares = spares.drop(unused.index)
 spares['Actual Cost']    = spares['Actual Quantity'] * spares['Estimated Unit Cost']
 spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit Cost']
 
+
+### Exception корректировка handover certificate
+spares.loc [ (spares['Work Order Number'].isin([120127, ]))
+            &(spares['Work Order Spare Description'] == 'Аргон газообразный'), 'Asset Number'] = 'SGU'
+spares.loc [ spares['Reservation Number'].isin([13288, 13365]), 'Asset Number'] = 'SGU'
+spares.loc [ (spares['Work Order Number'].isin([121188, ]))
+            &(spares['Work Order Spare Description'] == 'Абразивный отрезной круг Т41 d 125*1,0*22мм'), 'Asset Number'] = 'WorkShop'
+spares.loc [ spares['Reservation Number'].isin([13487, ]), 'Asset Number'] = 'SGU'
+
+spares.loc [ (spares['Work Order Number'].isin([120127, ]))
+            &(spares['Work Order Spare Description'] == 'Аргон газообразный'), 'closedMonth'] = 10
+spares.loc [ spares['Reservation Number'].isin([13288, 13365]), 'closedMonth'] = 10
+
 spares.loc [ (spares['Account Code']=='100000000012') & (spares['Reserved By']=="To'lqin Berdiyev Omonovich"), 'Short Department Name'] = '4AP'
 spares.loc [ (spares['Asset Number']).isin(unitChildren()) & (spares['Short Department Name']!='4AP'), 'Short Department Name' ] = '4AP_free'
 

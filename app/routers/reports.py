@@ -27,7 +27,14 @@ def get_reqs():
 
 @router.get('/payments/{department}')
 def get_payments(department:str):
-    data = payments.draw_report(department = department)
+    payments.getPayments()
+    payments.sumPayments('outsource')
+    payments.sumPayments('rmpd')
+    payments.sumPayments('cofe')
+    payments.sumPayments('tar')
+    payments.sumPayments('mtk')
+    payments.sumPayments()
+    #data = payments.draw_report(department = department)
     return {'/payments':'ok'}
 
 @router.get('/toExcel')

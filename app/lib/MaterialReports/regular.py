@@ -193,8 +193,10 @@ def matReport(repMonth, repYear, department, transacts):
   
   ### Exception different prices in 1c
   if department == 'cofe':
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 50000     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 52198.5     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 53571.4   if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 51479.26   if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 53571.4   if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
   """
   if department == 'rmpd':
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 211131.6  if x['Код товара']=='07139' else x['Сумма начало'], axis=1)
@@ -333,7 +335,7 @@ def matReport(repMonth, repYear, department, transacts):
       yaroq = yaroqsiz.metLib(yaroq)
 
       yaroq = yaroq[['Номер файла','Номер документа','Код товара','Количество (из акта)','Кол-во расход','info','Материал (из акта)','Материал',	
-                     'На уничтожение','В повторное использование','На металл','Алюминий, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг']]
+                     'На уничтожение','В повторное использование','На металл','Алюминий, кг','Медь, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг']]
       
       yaroq.to_excel('5. yaroq.xlsx', index=False)
 

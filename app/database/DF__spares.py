@@ -4,21 +4,6 @@ from .DF__woComponent import woComponent
 from .DF__reservations import reservations
 from .DF__assets import unitChildren
 
-"""
-### 1. Добавление Код Материала
-spares.rename(columns={'Asset ID':'Spare ID'}, inplace=True)
-assetIDcatalogID = assetIDcatalogID.copy()
-assetIDcatalogID.rename(columns={'Asset ID':'Catalog Spare ID'}, inplace=True)
-spares = spares.merge(assetIDcatalogID, how='left', left_on='Spare ID', right_on='Catalog Spare ID')
-spares = spares.merge(catalogueInfo,    how='left', on='Catalogue ID')
-spares.rename(columns={'User Defined Text Box1': 'Material Code'}, inplace=True)
-spares['Material Code'] = spares['Material Code'].astype(str)
-spares['isInitial_part?'] = 'no'
-spares.loc [ (spares['Material Code'].str.len() == 5), 'isInitial_part?' ] = 'yes'
-spares['Material Code'] = spares['Material Code'].map(lambda x: x.strip()) # удаление пробелов и табуляции
-spares['Material Code'] = spares['Material Code'].map(lambda x: '0000'+ x if len(x)==1 else '000'+ x if len(x)==2 else '00'+ x if len(x)==3 else '0' + x if len(x)==4 else x[-5:] )
-"""
-
 
 spares = spares.merge(reservations, on='Work Order Spare ID',     how='left')
 spares = spares.merge(woComponent,  on='Work Order Component ID', how='left')
@@ -52,17 +37,18 @@ spares['Actual Cost']    = spares['Actual Quantity'] * spares['Estimated Unit Co
 spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit Cost']
 
 
-### Exception корректировка handover certificate
+### Exception корректировка handover certificate CofE
 spares.loc [ (spares['Work Order Number'].isin([120127, ]))
             &(spares['Work Order Spare Description'] == 'Аргон газообразный'), 'Asset Number'] = 'SGU'
-spares.loc [ spares['Reservation Number'].isin([13288, 13365]), 'Asset Number'] = 'SGU'
-spares.loc [ (spares['Work Order Number'].isin([121188, ]))
-            &(spares['Work Order Spare Description'] == 'Абразивный отрезной круг Т41 d 125*1,0*22мм'), 'Asset Number'] = 'WorkShop'
-spares.loc [ spares['Reservation Number'].isin([13487, ]), 'Asset Number'] = 'SGU'
-
 spares.loc [ (spares['Work Order Number'].isin([120127, ]))
             &(spares['Work Order Spare Description'] == 'Аргон газообразный'), 'closedMonth'] = 10
+
+spares.loc [ spares['Reservation Number'].isin([13288, 13365]), 'Asset Number'] = 'SGU'
 spares.loc [ spares['Reservation Number'].isin([13288, 13365]), 'closedMonth'] = 10
+
+
+
+
 
 spares.loc [ (spares['Account Code']=='100000000012') & (spares['Reserved By']=="To'lqin Berdiyev Omonovich"), 'Short Department Name'] = '4AP'
 spares.loc [ (spares['Asset Number']).isin(unitChildren()) & (spares['Short Department Name']!='4AP'), 'Short Department Name' ] = '4AP_free'

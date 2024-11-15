@@ -9,6 +9,7 @@ from . import exceptions, reference, yaroqsiz
 def matReport(repMonth, repYear, department, transacts):
   ### 1. Подготовка DF Transactions
   transactions = exceptions.corrections(transacts)
+  
 
   transactions  = transactions.loc[ transactions['Catalogue Transaction Action Name'].isin(['Issue', 'Return to Stock']) ]
   
@@ -206,14 +207,14 @@ def matReport(repMonth, repYear, department, transacts):
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12481' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 3043.63   if x['Код товара']=='12481' else x['Сумма приход'], axis=1)
       rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 870.32   if x['Код товара']=='12481' else x['Сумма расход'], axis=1)
-  """
+  
   if department == 'rmpd':
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 211131.6  if x['Код товара']=='07139' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 213392.86 if x['Код товара']=='07139' else x['Сумма приход'], axis=1)
-      rep['Сумма 014']    = rep.apply(lambda x: x['Кол-во 014']    * 208870.44 if x['Код товара']=='07139' else x['Сумма 014'], axis=1)
-      rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец']  * 213392.86 if x['Код товара']=='07139' else x['Сумма конец'],  axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12478' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 1268.179   if x['Код товара']=='12478' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 1106.5906   if x['Код товара']=='12478' else x['Сумма конец'], axis=1)
   ##########################################################
-  """
+
   
 
 

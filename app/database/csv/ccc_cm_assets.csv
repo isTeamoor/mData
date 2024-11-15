@@ -275,6 +275,7 @@
 245237,218224,Electrical Junior Technician,Bozorov Daler
 245238,218224,Electrical Junior Technician,Hamdamov Muxammadali
 245242,218224,Electrical Junior Technician,Xurramov Bekzod
+226782,218248,Leading accountant,Sodiqov Yorqin Bahodirovich
 218517,218255,Specialist,Abror Boltayev
 218519,218255,Specialist, Shohabbos Hazratkulov
 218520,218255,Specialist, Sherbekjon Ikromov
@@ -6536,6 +6537,8 @@
 91193,78373,TRANSMITTER_PRESSURE,172-EA-001A
 91194,78373,TRANSMITTER_DP ,172-EA-006A
 91195,78373,TRANSMITTER_DP ,172-EA-006B
+122319,78373,Plate type H.E,172-EP-001A
+122320,78373,Plate type H.E,172-EP-001B
 122322,78373,Plate type H.E,172-EP-002B
 122324,78373,Plate type H.E,172-EP-003B
 122354,78373,Combined condensate storage tank,172-TK-003
@@ -8596,6 +8599,8 @@
 248718,78382,STROKE UNIT MOTOR,184-FIC-0004BB
 248719,78382,STROKE UNIT MOTOR,184-FIC-0004CA
 248720,78382,STROKE UNIT MOTOR,184-FIC-0004CB
+262880,78382,Grounding Pit,B35-GP-05
+262881,78382,Grounding Pit,B35-GP-06
 99497,78384,SULFURIC ACID TANK,187-TK-001
 99498,78384,CAUSTIC SODA STORAGE TANK,187-TK-002
 99504,78384,Nitrogen(G) / GAS,187-PSV-0001
@@ -19104,7 +19109,7 @@
 83847,84537,Urea Dosing Package (Urea Bridge Breaker) Motor,177-XP-002-XX-06-M
 172550,84537,TBD,177-XP-002-HE-01
 172551,84537,TBD,177-XP-002-HE-02
-172552,84537,TBD,177-XP-002-HE-03
+172552,84537,PHOSPHORIC ACID DOSING TANK ELECTRIC HEATER,177-XP-002-HE-03
 83731,84538,Portable Drum Pump,177-XP-004-PX-01
 172555,84538,TBD,177-XP-004-HE-01
 172556,84538,TBD,177-XP-004-HE-02
@@ -28648,6 +28653,7 @@
 238773,93270,LEVEL SWITCH,145-LSH-0835
 238774,93270,LEVEL SWITCH,145-LSL-0836
 238775,93270,LEVEL SWITCH,145-SSL-0071
+262068,93270,TBD,145-XP-010-XX-13
 93975,93271,LAMP_LOCAL,145-HL-0071L
 93976,93271,HAND SWITCH_LOCAL,145-HS-0071L
 171991,93272,TBD,145-XP-042-M-01
@@ -45923,12 +45929,10 @@
 121845,122316,AIR BLOWER FOR MMF ENCLOSURE FAN B MOTOR,171-XP-012-XX-01B-M
 121989,122317,TRANSMITTER_D/P,171-PDT-0220
 122054,122318,LEVEL SWITCH_FLOAT,171-LSL-0234
-122320,122319,Plate type H.E,172-EP-001B
 122371,122319,Combined Condensate(L) / LIQUID,172-PSV-0015
 122514,122319,Temperature Gauge,172-TG-0020
 122515,122319,Temperature Gauge,172-TG-0021
 122516,122319,Temperature Gauge,172-TG-0022
-122319,122320,Plate type H.E,172-EP-001A
 122372,122320,Combined Condensate(L) / LIQUID,172-PSV-0016
 122373,122321,Cooling Water(L) / LIQUID,172-PSV-0017
 122446,122321,Temperature Transmitter,172-TT-0012
@@ -46803,6 +46807,7 @@
 218459,175190,Trainee,Aminov Shoxrux Fozil o'g'li
 220945,175190,Trainee,Davronov Mirjalol Shavkatjon o'g'li
 221544,175190,Analyzer  Technician,Shaxrizod Orziyev
+223878,175190,electric junior technician,Niyozov Abror Choriyevich
 224217,175190,Analyzer technician ,Erkinov Jambul To`lqin o`g`li
 260779,175190,electric junior technician,Tayloqov Shahzod
 175194,175191,Analyzer Supervisor,Normuminov Doston Almardon o'g'li
@@ -54094,7 +54099,6 @@
 218396,218224,Junior Technician,Yuldoshev Jaloliddin Bahodir o'gli
 218397,218224,Junior Technician,Bozorov Uyg'un Qodir o'gli
 220889,218224,Rotating Junior technician,Bo'riyev Muhsin Baxrom o'g'li
-223459,218224,Rotating /Technical Specialist,Xurramov Temurbek
 245240,218224,Static Supervisor ,O'mrzaqov G'anisher
 245284,218224,Analyzer Specialist,Hamrayev Adham G'ayrat o'g'li
 245285,218224,Electrician,Berdimurodov Alisher G'oyimnazar o'g'li
@@ -54324,11 +54328,10 @@
 221427,218248,Leading Accountant,Ibragimov Jahongir Tillayevich
 221428,218248,Accountant,Orziyev Shahzodbek Xoliqul o'g'li
 221429,218248,Accountant,Kattaboyev Zafar Safarovich
-221498,218248,Главный специалист	,Raxmatullayev Akram Xurmatjanovich
+221498,218248,Payments and Banking Operations Group Leader,Raxmatullayev Akram Xurmatjanovich
 221748,218248,Lead Accountant,Majidov Zafar Sheraliyevich
 221749,218248,Accountant,Rahimov Jamshid Musurmonovich
 226176,218248,Accountant,Mirxodjayev Sharafutdin Sayfutdinovich
-226782,218248,Leading accountant,Sodiqov Yorqin Bahodirovich
 226783,218248,Accountant,Tohirov Muzaffar Mahmud o`g`li
 231084,218248,Accountant,Xudayberdiyev Mansur Togaynazarovich
 231085,218248,Specialist,Merzayev Sardor Samadillayevich
@@ -54339,6 +54342,8 @@
 260762,218248,Accountant,Qayumov Shohruh Nurmuhammad o'g'li
 260763,218248,Accountant,To`laganov Nurbek Jahongir o'g'li
 260764,218248,Accountant,Norturayev Mansurbek Obid o'g'li
+262770,218248,Accountant,Raximov Doniyor Sevarovich
+262771,218248,Accountant,Saidova Ra'no Abdullayevna
 219744,218249,Junior specialist,Rixsiboyeva Nodira Umar qizi
 221664,218249,Senior specialist,Khaydarov Makhammadjon Khusaynovich
 221665,218249,Specialist,Ibrokhimov Alisher Khasan o'g'li
@@ -54346,6 +54351,7 @@
 221667,218249,Junior specialist,Murodullayeva Mashkhura Ulug'bek qizi
 221668,218249,Specialist,Khamidullaev Timur Begdullayevich
 221669,218249,Senior specialist,Mansurov Mamurjon Mansur o'g'li
+262809,218249,Leading Specialist,Qudratov Sherzod Kamolovich
 221508,218250,Специалист	,Saidislom Abduraximov
 220001,218252,Junior specialist,Rakhimov Bokhodir Pardaevich
 220002,218252,Junior specialist,Rakhimov Akhror Dustyor o'g'li
@@ -54364,6 +54370,7 @@
 231792,218253,Security,Kurbanov Anvarbek Gulomovich
 231793,218253,Security,Nurboboyev Oybek Abduxakimovich
 231794,218253,Security,Jo'rayev Sherzod Maxmudovich
+262726,218253,Security,Ruziyev Elyor G‘ulomovich
 218533,218254,other departments,Trainee Sector
 218534,218254,HR junior specilaist,Tilovov Tursunpo`lat Ne`matilla o`g`li
 218535,218254,HR specilaist,Aralov Zuhriddin G`ulom og`li
@@ -54383,6 +54390,7 @@
 225160,218255,Specialist ,Aktamov Islom Aslom o'g'li
 225161,218255,Project Coordinator,Xalimov Sarvar Sur'at o'g'li
 252366,218255,Civil Engineer,To'rayev Muxammadali Yusup o'g'li
+262761,218255,Project Portfolio and Capital Budget Administer Specialist,Saydullayev Shoxzod Panji o'g'li
 224926,218256,CFO Consultant,Shamsiyev Behzod Dilshodovich
 224927,218256,Head of the Treasury department,Urazimbetov Dilshod Dauletbayevich
 224928,218256,Specialist,Abdumuradov Shaxzod Ilxomovich
@@ -54398,6 +54406,7 @@
 219748,218257,Chief specialist,Husanov Akrom Oktyabr o'g'li
 219755,218257,Assistant of CEO,Bobomurodov Xurshid G'olibjon o'g'li
 229568,218257,Specialist,Zaynutdinova Rushana Maratovna
+262781,218257,Junior Specialist,Ochilov Komil Qobil o'g'li
 218313,218261,Driver (Crane),Abdimajidov Avazbek Abdusalom o'g'li
 218314,218261,Leading Dispacher,Abduraxmonov Abdulloh Olimovich
 218315,218261,Vehicle Driver,Abrayev Zufar  Sadullayevich
@@ -54975,7 +54984,6 @@
 223554,218533,Trainee,Abdumo'minov G'ayrat
 223555,218533,Trainee,Annamurodov Shoxruh
 223556,218533,Trainee,Luqmonov Bunyod
-223878,218533,Trainee,Niyozov Abror Choriyevich
 224213,218533,Trainee,Abayev Shahboz Rashid o'g'li
 224367,218533,Stat junior technician,Azimov Alisher Morqa o'g'li
 224666,218533,Trainee,Narziyev Suyun Sadin o'g'li
@@ -55007,6 +55015,7 @@
 259220,218533,Trainee,Botirov Sarvar Bahodir o'g'li
 259833,218533,Trainee,Suyunov O'rol Eshnazar o'g'li
 261321,218533,Trainee,Samijonov Muhammadnosir Shuhratjon o'g'li
+262769,218533,Trainee,Ro'ziqulov Jasur Dilshod o'g'li
 175234,219752,Static Technician,Ashrapov Kamoliddin Badriddin o'g'li
 175463,219752,Senior Planner,Xamroyev Ulug'bek Maksudovich
 175467,219752,Planner,Yuldoshev Shohzod Shuhrat o'g'li
@@ -57246,8 +57255,8 @@
 248945,248911,Grounding Pit,B35-GP-04
 249045,248911,Grounding Pit,B35-GP-09
 249046,248911,Grounding Pit,B35-GP-10
-249090,248911,Grounding Pit,B35-GP-007
-249091,248911,Grounding Pit,B35-GP-008
+249090,248911,Grounding Pit,B35-GP-07
+249091,248911,Grounding Pit,B35-GP-08
 249122,248911,Grounding Pit,B35-GP-01
 249123,248911,Grounding Pit,B35-GP-02
 249921,248911,O/S SH-5.OFF,B35-FB-0041
@@ -57349,6 +57358,7 @@
 218309,258084,Specialist,Rustamov Zoir XXX
 218563,258084,Junior planner,Asrorxonov Abusoleh Qutbiddinovich
 219777,258084,Head of Department,G`oziyev Jamolbek Jurayevich
+223459,258084,Junior Specialist,XurramTemurbek Sattorali o'g'li
 258996,258995,Trainee,Akbarov Samandar Said o'g'li
 258997,258995,Trainee,Alisherov A'zam Sayfulla o'g'li
 258998,258995,Trainee,Amrillayev Ma'rufjon Faxriddin o'g'li

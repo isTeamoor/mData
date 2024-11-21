@@ -19,7 +19,6 @@ def matReport(repMonth, repYear, department, transacts):
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
 
-
   
   ### 2. Выборка транзакций на начало отчётного периода
   begin = transactions.loc[ 
@@ -213,6 +212,13 @@ def matReport(repMonth, repYear, department, transacts):
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 1268.179   if x['Код товара']=='12478' else x['Сумма приход'], axis=1)
       rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
       rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 1106.5906   if x['Код товара']=='12478' else x['Сумма конец'], axis=1)
+
+      #Труба (30394) из тн -> м 
+      rep['Ед.изм.'] = rep.apply(lambda x: 'м' if x['Код товара']=='30394' else x['Ед.изм.'], axis=1)
+      rep['Кол-во приход'] = rep.apply(lambda x: x['Кол-во приход'] * 142.5   if x['Код товара']=='30394' else x['Кол-во приход'], axis=1)
+      rep['Кол-во конец'] = rep.apply(lambda x: x['Кол-во конец'] * 142.5   if x['Код товара']=='30394' else x['Кол-во конец'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 169319.6359649123   if x['Код товара']=='30394' else x['Сумма приход'], axis=1)
+      rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец'] * 169319.6359649123    if x['Код товара']=='30394' else x['Сумма конец'], axis=1)
   ##########################################################
 
   

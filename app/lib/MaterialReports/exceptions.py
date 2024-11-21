@@ -3,7 +3,7 @@ def corrections(transactions):
     transacts = transactions.loc[ transactions['Код товара']!='00nan'].copy() 
     #Электроды кг -> тн
     transacts.loc[ transacts['Код товара']=='05140', 'Quantity' ] /= 1000
-    transacts.loc[ transacts['Код товара']=='05140', 'Ед.изм.' ] == 'тн'
+    transacts.loc[ transacts['Код товара']=='05140', 'Ед.изм.' ] = 'тн'
 
     #До перехода Миржахона, часть материала была уже списана
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162
@@ -22,13 +22,17 @@ def corrections(transactions):
     ### 2.Временные исключения для материальных отчётов
     
     #Тулкинакя, будет возврат на склад
-    transacts.loc[ transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]), 'closedMonth' ] = 11
+    transacts.loc[ transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]), 'Work Order Status Description' ] = 'Pending for return'
     transacts.loc[ (transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]))
                    &
-                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 11
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2026
     
     #Это ОС
     transacts = transacts.loc[ transacts['Reservation Number'] != 15589 ]
+
+    #Ошибка в данных CMMS
+    transacts.loc[ transacts['Reservation Number'].isin([13244,13245]), 'closedYear' ] = 2024
+    transacts.loc[ transacts['Reservation Number'].isin([13244,13245]), 'closedMonth' ] = 11
 
 
 

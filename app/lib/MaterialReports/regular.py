@@ -192,7 +192,7 @@ def matReport(repMonth, repYear, department, transacts):
 
   
   ### Exception different prices in 1c
-  if department == 'cofe':
+  """if department == 'cofe':
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 53571.42853     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 53348.3258   if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
       rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 53571.4285   if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
@@ -206,13 +206,13 @@ def matReport(repMonth, repYear, department, transacts):
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12481' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 3043.63   if x['Код товара']=='12481' else x['Сумма приход'], axis=1)
       rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 870.32   if x['Код товара']=='12481' else x['Сумма расход'], axis=1)
-  
+  """
   if department == 'rmpd':
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12478' else x['Сумма начало'], axis=1)
+      """rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12478' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 1268.179   if x['Код товара']=='12478' else x['Сумма приход'], axis=1)
       rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
       rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 1106.5906   if x['Код товара']=='12478' else x['Сумма конец'], axis=1)
-
+      """
       #Труба (30394) из тн -> м 
       rep['Ед.изм.'] = rep.apply(lambda x: 'м' if x['Код товара']=='30394' else x['Ед.изм.'], axis=1)
       rep['Кол-во приход'] = rep.apply(lambda x: x['Кол-во приход'] * 142.5   if x['Код товара']=='30394' else x['Кол-во приход'], axis=1)

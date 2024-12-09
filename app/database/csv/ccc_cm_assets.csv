@@ -254,6 +254,7 @@
 208566,208767,EWS for MAC/BAC,100-EWS-001
 208964,208767,EWS for MAC/BAC,100-EWS-001
 208821,208822,Maintenance Manager,Gareth Jones Bryan
+245275,208822,Maintenance Manager,Gareth Jones Bryan
 209670,209664,Valve supervisor,Yusupov farrux
 214346,209664,F&G Supervisor ,Taniyev Rustam
 214359,209664,F&G Supervisor ,Taniyev Rustam
@@ -8551,6 +8552,8 @@
 248720,78382,STROKE UNIT MOTOR,184-FIC-0004CB
 262880,78382,Grounding Pit,B35-GP-05
 262881,78382,Grounding Pit,B35-GP-06
+263114,78382,Pressure Safety Valve for Foam system,184-PSV-001B
+263115,78382,Pressure Safety Valve for Foam system,184-PSV-001A
 99497,78384,SULFURIC ACID TANK,187-TK-001
 99498,78384,CAUSTIC SODA STORAGE TANK,187-TK-002
 99504,78384,Nitrogen(G) / GAS,187-PSV-0001
@@ -46256,6 +46259,8 @@
 172764,172761,Cathodic Protection,191-CP
 172765,172761,Welding Outlet,191-WO
 172766,172761,Substation-08,SS-08
+263116,172761,Pressure Safety Valve for Foam system,191-PSV-001A
+263117,172761,Pressure Safety Valve for Foam system,191-PSV-001B
 172647,172762,TBD,B07-PDP-06-01
 172648,172762,TBD,B07-UPDP-06-01
 172649,172762,TBD,B09-PDP-06-01
@@ -46525,6 +46530,7 @@
 221544,175190,Analyzer  Technician,Shaxrizod Orziyev
 223878,175190,electric junior technician,Niyozov Abror Choriyevich
 224217,175190,Analyzer technician ,Erkinov Jambul To`lqin o`g`li
+258102,175190,Rotating junior technician,Maqsadqulov Ma'ruf Yaxshiboy
 260779,175190,electric junior technician,Tayloqov Shahzod
 175194,175191,Analyzer Supervisor,Normuminov Doston Almardon o'g'li
 175196,175191,Rotating Technician,Zamonov Oxunjon Noxim o'g'li
@@ -46574,7 +46580,7 @@
 175237,175192,Instrumentation Engineer,Barotov Muxlis
 175242,175192,Field Manager (U&O/PS&E),Chorshanbiev Zufar
 175243,175192,Instrumentation Engineer,Davlatov Quvonchbek
-175244,175192,Instrumentation Junior Technician,Do`stqobilov Shohruh Hamdam o`g`li
+175244,175192,Instrumentation Technician,Do`stqobilov Shohruh Hamdam o`g`li
 175247,175192,Analyser Technician,Farmonov Lazizbek
 175248,175192,Rotating Technician ,Fayzullayev Shaxzod
 175250,175192,Rotating Supervisor ,Kulnazarov Dilmurod
@@ -46638,7 +46644,6 @@
 222922,208822,Deputy of MM,Eshmatov Xasan Axmedovich
 224040,208822,CMMS Engineer,Toshpulatov Ma'ruf O'rin o'g'li
 224289,208822,Storeman,Tilovov Rustam Safar o'g'li
-245275,208822,Maintenance Manager,Gareth Jones Bryan
 248559,208822,Document controller,Nosirov Nurbek Fazliddin o'g'li
 208838,208828,OWS for MAC/BAC (Train-1),110-OWS-CC150-01
 208839,208828,OWS for MAC/BAC (Train-2),110-OWS-CC250-01
@@ -52004,6 +52009,8 @@
 236425,209664,Valve Engineer,Nazarov Fazliddin To'ra o'gli
 245151,209664,Hvac tachinician,Ismatullayev Abdurasul Abdulla o'g'li
 245152,209664,Hvac technician,Qahramonov Ramziddin Ilhom o'g'li
+258617,209664,Trainee,Davlatov Sanjarbek Toyir o'g'li
+259022,209664,Document controller,Xurramov Asilbek To'ra o'g'li
 259190,209664,Insulation worker,Abdiraxmanov Ziyadulla O'ktam o'g'li
 259191,209664,Jet wash technician,Tuychiyev Akrom Naim o'g'li
 259223,209664,Piping junior,Suyunov Farid Sag'dulla o'g'li
@@ -54124,6 +54131,7 @@
 219755,218257,Assistant of CEO,Bobomurodov Xurshid G'olibjon o'g'li
 229568,218257,Specialist,Zaynutdinova Rushana Maratovna
 262781,218257,Junior Specialist,Ochilov Komil Qobil o'g'li
+263030,218259,Legal councel,Qudratov Farruh Pirmatovich
 218313,218261,Driver (Crane),Abdimajidov Avazbek Abdusalom o'g'li
 218314,218261,Leading Dispacher,Abduraxmonov Abdulloh Olimovich
 218315,218261,Vehicle Driver,Abrayev Zufar  Sadullayevich
@@ -54529,6 +54537,7 @@
 230292,218267,Field Operator ,Choriyev Mirkomil Urol oʻgʻli
 245143,218267,Operator,Murodov Boburshoh Botir o'g'li
 245146,218267,Operator,Bekiyev Bahodir Toshniyozovich
+259003,218267,Operator,Bozorboyev Umidjon Kenjaboy o'g'li
 218301,218268,Unit Engineer,Ramazonov Ulug`bek Erkin o`g`li
 218518,218268,Lead Specialist,Jalil Egamberdiyev
 220947,218268,Operator,Abdusalimov Baxtishod O'ktam o'g'li
@@ -54719,12 +54728,10 @@
 245150,218533,Trainee,Arabov Tursunmurod Elmurodovich
 245305,218533,Trainee,Baxronov Axror Shokir o`g`li
 258101,218533,Trainee,Qurbonaliyev Jahongir Ergash
-258102,218533,Trainee,Maqsadqulov Ma'ruf Yaxshiboy
 258613,218533,Trainee,Xoliyev Bahrom Arziqulovich
 258614,218533,Trainee,Ro'ziyev Asadbek Abdialim o'g'li
 258615,218533,Trainee,Xo'jatov Sanjar Azamatovich
 258616,218533,Trainee,Yoqubov Aziz To'lqin o'g'li
-258617,218533,Trainee,Davlatov Sanjarbek Toyir o'g'li
 258995,218533,Other departments,Trainee Sector 1
 259220,218533,Trainee,Botirov Sarvar Bahodir o'g'li
 259833,218533,Trainee,Suyunov O'rol Eshnazar o'g'li
@@ -57079,7 +57086,6 @@
 259000,258995,Trainee,Baxodirov Shoxjaxon Xalil o'g'li
 259001,258995,Trainee,Begmatov To'lqin Elmurod o'g'li
 259002,258995,Trainee,Boltayev Kamronbek Odil o'g'li
-259003,258995,Trainee,Bozorboyev Umidjon Kenjaboy o'g'li
 259004,258995,Trainee,Bozorov Ikromjon Baxodir o'g'li
 259006,258995,Trainee,Jabborov Asadbek Xoltura o'g'li
 259007,258995,Trainee,Kenjayev Akmal Choriyor o'g'li
@@ -57097,7 +57103,6 @@
 259019,258995,Trainee,Shamiyev Ergashjon Fayzullo o'g'li
 259020,258995,Trainee,To'raqulov Samandar Sami o'g'li
 259021,258995,Trainee,Ubaydullayev Jamshid Ali o'g'li
-259022,258995,Trainee,Xurramov Asilbek To'ra o'g'li
 259023,258995,Trainee,Xurramov Muhammadali Dilmuord o'g'li
 259024,258995,Trainee,Yangiboyev Qosim Ravshan o'g'li
 259025,258995,Trainee,Yangiboyev Shaxzod Yunus o'g'li

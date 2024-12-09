@@ -29,7 +29,7 @@ for row in assets.index:
 ### 2. Показать все объекты, относящиеся к SGU
 def unitChildren():
     SGU = 77437
-    assetNumberlist = ['SGU',]
+    assetNumberlist = ['SGU','UzGTL AP','Air Products']
 
     def goThroughTree(assetID):
         subList = []

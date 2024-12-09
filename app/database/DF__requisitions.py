@@ -35,7 +35,7 @@ requisitions['raisedMonth'] = requisitions['Raised Date Time'].dt.month
 
 requisitions['Required By Date Time'] = pd.to_datetime(requisitions['Required By Date Time'], format="%d/%m/%Y %H:%M:%S %p")
 requisitions['requiredYear']  = requisitions['Required By Date Time'].dt.year
-requisitions['requiredMonth'] = requisitions['Required By Date Time'].dt.month
+requisitions['Required Month'] = requisitions['Required By Date Time'].dt.month
 
 
 requisitions['Total Expected Price'] = requisitions['Requisitioned Quantity'] * requisitions['Expected Purchase Price']
@@ -65,7 +65,7 @@ requisitions['Requisition Line Description'] = requisitions['Requisition Line De
 requisitions.rename(columns={
             'Requisition Line Description':'Item',
             'requiredYear':'Required Year',
-            'requiredMonth':'Required Month',
+            'Required Month':'Required Month',
             'UOMDescription':'uom',
             'Expected Purchase Price':'Expected Price per unit, usd',
             'Total Expected Price':'Summary Expected Cost, usd'

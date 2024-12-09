@@ -1,215 +1,172 @@
 from . import calc
-from ...lib import gen
+from ...lib.gen import flt
 from ...database.DF__wo import wo
 from ...database.DF__spares import spares
 from ...database.DF__trades import trades
 from ...database.DF__requisitions import requisitions
 
 
-filter_lib ={
-    'maintenance':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-    ],
-    'maintenance_reserv_in_2024':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-        "&",
-        {"field":'reservYear', "operator":"==", "value":"2024"}
-    ],
-    'maintenance_reserv_in_2023':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-        "&",
-        {"field":'reservYear', "operator":"==", "value":"2023"}
-    ],
-    'maintenance_raised_in_2024':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-        "&",
-        {"field":'raisedYear', "operator":"==", "value":"2024"}
-    ],
-    'maintenance_raised_in_2023':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-        "&",
-        {"field":'raisedYear', "operator":"==", "value":"2023"}
-    ],
-    'maintenance_closed_WO':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-        "&",
-        {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
-    ],
-    'maintenance_open_WO':[
-        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
-        "&",
-        {"field":'Work Order Status Description', "operator":"!=", "value":"'Closed'"},
-        "&",
-        {"field":'Work Order Status Description', "operator":"!=", "value":"'Cancelled'"},
-    ],
-    'CofE_trades':[
-        {"field":'Trade Code Description', "operator":"in", "value":"['WELDER','INSULATE','Scaffolder','PIPING JUNIOR','Metrology Engineer','HVAC ENG','JET TECH','SUPV PSV','Fire and Gas engineer','WELD ENG','Field instrumentation Junior technician','Valve technician','Workshop machinist junior','F&G Supervisor','HVAC Supervisor','Piping Engineer','Work Shop machinist']"},
-    ], 
-    'CofE_spares':[
-        {"field":'Reserved By', "operator":"==", "value":"'Mirjakhon Toirov'"},
-    ], 
-}
-
-
 dataLib = {
-    #################################################
-    ###-          Requisitions Analysis          -###
-    #################################################
+    ### Requisitions Analysis
+    #1. Raised requisitions
     'rq_raised_yearly':{
         'f':calc.fieldTotal_yearly, 
-        'args':[requisitions, 'raisedYear', 'Total Expected Price', 'sum']},
+        'args':[requisitions, 'raisedYear', 'Summary Expected Cost, usd', 'sum']},
     'rq_raised_monthly':{
         'f':calc.fieldTotal_monthly, 
-        'args':[requisitions, 'raisedYear','raisedMonth', 'Total Expected Price', 'sum']},
-    'rq_required_yearly':{
-        'f':calc.fieldTotal_yearly, 
-        'args':[requisitions, 'requiredYear', 'Total Expected Price', 'sum']},
-    'rq_required_monthly':{
-        'f':calc.fieldTotal_monthly, 
-        'args':[requisitions, 'requiredYear','requiredMonth', 'Total Expected Price', 'sum']},
+        'args':[requisitions, 'raisedYear','raisedMonth', 'Summary Expected Cost, usd', 'sum']},
     'rq_raised_Departments_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[requisitions, 'raisedYear','Approval Path Name', 'Total Expected Price', 'sum']},
-    'rq_required_Departments_yearly':{
-        'f':calc.coupleFields_yearly, 
-        'args':[requisitions, 'requiredYear','Approval Path Name', 'Total Expected Price', 'sum']},
+        'args':[requisitions, 'raisedYear','Approval Path Name', 'Summary Expected Cost, usd', 'sum']},
     'rq_raised_Departments_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[requisitions, 'raisedYear','raisedMonth','Approval Path Name', 'Total Expected Price', 'sum']},
+        'args':[requisitions, 'raisedYear','raisedMonth','Approval Path Name', 'Summary Expected Cost, usd', 'sum']},
+    #2. Required requisitions
+    'rq_required_yearly':{
+        'f':calc.fieldTotal_yearly, 
+        'args':[requisitions, 'Required Year', 'Summary Expected Cost, usd', 'sum']},
+    'rq_required_monthly':{
+        'f':calc.fieldTotal_monthly, 
+        'args':[requisitions, 'Required Year','Required Month', 'Summary Expected Cost, usd', 'sum']},
+    'rq_required_Departments_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[requisitions, 'Required Year','Approval Path Name', 'Summary Expected Cost, usd', 'sum']},
     'rq_required_Departments_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[requisitions, 'requiredYear','requiredMonth','Approval Path Name', 'Total Expected Price', 'sum']},
+        'args':[requisitions, 'Required Year','Required Month','Approval Path Name', 'Summary Expected Cost, usd', 'sum']},
 
-    #################################################
-    ###-              Spares Analysis            -###
-    #################################################
+
+
+    ### Spares Analysis
+    #1. Spares cost total
     'sp_reserved_yearly':{
         'f':calc.fieldTotal_yearly, 
-        'args':[spares, 'reservYear', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'Actual Cost', 'sum', [flt['maintenance']] ]},
     'sp_reserved_monthly':{
         'f':calc.fieldTotal_monthly, 
-        'args':[spares, 'reservYear', 'reservMonth','Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'reservMonth','Actual Cost', 'sum', [flt['maintenance']]]},
+    
     'sp_reserved_Priority_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[spares, 'reservYear', 'Priority Description', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'Priority Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
     'sp_reserved_Priority_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[spares, 'reservYear', 'reservMonth', 'Priority Description', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'reservMonth', 'Priority Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    
     'sp_reserved_JobType_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[spares, 'reservYear', 'Job Type Description', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'Job Type Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
     'sp_reserved_JobType_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[spares, 'reservYear', 'reservMonth', 'Job Type Description', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'reservMonth', 'Job Type Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    
     'sp_reserved_Discipline_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[spares, 'reservYear', 'Department Name', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'Department Name', 'Actual Cost', 'sum', [flt['maintenance']]]},
     'sp_reserved_Discipline_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[spares, 'reservYear', 'reservMonth', 'Department Name', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'reservMonth', 'Department Name', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    
     'sp_reserved_Department_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[spares, 'reservYear', 'Short Department Name', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'Short Department Name', 'Actual Cost', 'sum', [flt['maintenance']]]},
     'sp_reserved_Department_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[spares, 'reservYear', 'reservMonth', 'Short Department Name', 'Actual Cost', 'sum', filter_lib['maintenance']]},
+        'args':[spares, 'reservYear', 'reservMonth', 'Short Department Name', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    
+    #2. Spares cost by assets
     'sp_reserved_Assets_yearly':{
         'f':calc.fieldTotal_Assets_yearly, 
-        'args':[spares, 'reservYear', 'Actual Cost', 'sum', filter_lib['maintenance']]},
-    'sp_reserved_Assets_sorted_2023':{
-        'f':calc.sorted_matcost_assets, 
-        'args':[spares, filter_lib['maintenance_reserv_in_2023']]},
+        'args':[spares, 'reservYear', 'Actual Cost', 'sum', [flt['maintenance']]]},
     'sp_reserved_Assets_sorted_2024':{
         'f':calc.sorted_matcost_assets, 
-        'args':[spares, filter_lib['maintenance_reserv_in_2024']]},
-    #################################################
-    ###-            Work Orders Analysis         -###
-    #################################################
+        'args':[spares, [ flt['maintenance'],"&",flt['reserved_2024'] ]  ]},
+
+
+
+    ### Work Orders Analysis
+
+    #1. Raised WO
     'wo_raised_yearly':{
         'f':calc.fieldTotal_yearly, 
-        'args':[wo, 'raisedYear', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_closed_yearly':{
-        'f':calc.fieldTotal_yearly, 
-        'args':[wo, 'raisedYear', 'Work Order Number', 'count', filter_lib['maintenance_closed_WO']]},
-    
+        'args':[wo, 'raisedYear', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Priority_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Priority Description', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_Priority_yearly':{
-        'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Priority Description', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
+        'args':[wo, 'raisedYear', 'Priority Description', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Priority_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Priority Description', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_Priority_monthly':{
-        'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Priority Description', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
-
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Priority Description', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_JobType_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Job Type Description', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_JobType_yearly':{
-        'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Job Type Description', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
+        'args':[wo, 'raisedYear', 'Job Type Description', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_JobType_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Job Type Description', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_JobType_monthly':{
-        'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Job Type Description', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
-    
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Job Type Description', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Discipline_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Department Name', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_Discipline_yearly':{
-        'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Department Name', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
+        'args':[wo, 'raisedYear', 'Department Name', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Discipline_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Department Name', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_Discipline_monthly':{
-        'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Department Name', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
-
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Department Name', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Department_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Short Department Name', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_Department_yearly':{
-        'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Short Department Name', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
+        'args':[wo, 'raisedYear', 'Short Department Name', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Department_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Short Department Name', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_Department_monthly':{
-        'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Short Department Name', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
-
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Short Department Name', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Planer_yearly':{
         'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Created By', 'Work Order Number', 'count', filter_lib['maintenance']]},
-    'wo_open_Planer_yearly':{
-        'f':calc.coupleFields_yearly, 
-        'args':[wo, 'raisedYear', 'Created By', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
+        'args':[wo, 'raisedYear', 'Created By', 'Work Order Number', 'count', [flt['maintenance']]]},
     'wo_raised_Planer_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Created By', 'Work Order Number', 'count', filter_lib['maintenance']]},
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Created By', 'Work Order Number', 'count', [flt['maintenance']]]},
+
+    #2. Not Closed WO
+    'wo_open_yearly':{
+        'f':calc.fieldTotal_yearly, 
+        'args':[wo, 'raisedYear', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ] ]},
+    'wo_open_Priority_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[wo, 'raisedYear', 'Priority Description', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_Priority_monthly':{
+        'f':calc.coupleFields_monthly, 
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Priority Description', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_JobType_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[wo, 'raisedYear', 'Job Type Description', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_JobType_monthly':{
+        'f':calc.coupleFields_monthly, 
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Job Type Description', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_Discipline_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[wo, 'raisedYear', 'Department Name', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_Discipline_monthly':{
+        'f':calc.coupleFields_monthly, 
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Department Name', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_Department_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[wo, 'raisedYear', 'Short Department Name', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_Department_monthly':{
+        'f':calc.coupleFields_monthly, 
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Short Department Name', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
+    'wo_open_Planer_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[wo, 'raisedYear', 'Created By', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
     'wo_open_Planer_monthly':{
         'f':calc.coupleFields_monthly, 
-        'args':[wo, 'raisedYear', 'raisedMonth', 'Created By', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]},
+        'args':[wo, 'raisedYear', 'raisedMonth', 'Created By', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]},
 
+    #3. WO by assets
     'wo_raised_Assets_yearly':{
         'f':calc.fieldTotal_Assets_yearly, 
-        'args':[wo, 'raisedYear', 'Work Order Number', 'count', filter_lib['maintenance']]},    
+        'args':[wo, 'raisedYear', 'Work Order Number', 'count', [flt['maintenance']]]},    
     'wo_open_Assets_yearly':{
         'f':calc.fieldTotal_Assets_yearly, 
-        'args':[wo, 'raisedYear', 'Work Order Number', 'count', filter_lib['maintenance_open_WO']]}, 
+        'args':[wo, 'raisedYear', 'Work Order Number', 'count', [ flt['maintenance'],"&",flt['notclosed'],"&",flt['notcancelled'] ]]}, 
     
-    'wo_raised_Assets_sorted_2023':{
-        'f':calc.sorted_woRaised_assets, 
-        'args':[wo, filter_lib['maintenance_raised_in_2023']]},
     'wo_raised_Assets_sorted_2024':{
         'f':calc.sorted_woRaised_assets, 
-        'args':[wo, filter_lib['maintenance_raised_in_2024']]},
+        'args':[wo, [ flt['maintenance'],"&",flt['raised_2024'] ] ]},
 }
 
 

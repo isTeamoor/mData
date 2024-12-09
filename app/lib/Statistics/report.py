@@ -2,111 +2,121 @@ import xlsxwriter
 from . import hub
 from .. import gen
 from . import subF
+from .subF import oneLine, categorized, rooted, fillExcelSheet
 from ...database.DF__wo import wo
 from ...database.DF__spares import spares
 from ...database.DF__requisitions import requisitions
 
 
-
-
 def an_requisitions():
     workbook = xlsxwriter.Workbook('reqs.xlsx')
 
-    subF.oneLine(workbook, 'Total Expected Price', 'rq_raised_yearly', 'Raised', year = 2024, index=1, type = 'yearly')
-    subF.oneLine(workbook, 'Total Expected Price', 'rq_required_yearly', 'Required', year = 2024, index=2, type = 'yearly', headers=False)
-    subF.oneLine(workbook, 'Total Expected Price', 'rq_raised_monthly', 'Raised in 2023', year=2023, index=5, type='monthly')
-    subF.oneLine(workbook, 'Total Expected Price', 'rq_raised_monthly', 'Raised in 2024', year=2024, index=6, type='monthly', headers=False)
-    subF.oneLine(workbook, 'Total Expected Price', 'rq_required_monthly', 'Required in 2023', year=2023, index=7, type='monthly', headers=False)
-    subF.oneLine(workbook, 'Total Expected Price', 'rq_required_monthly', 'Required in 2024', year=2024, index=8, type='monthly', headers=False)
+    sheetName = 'Total Expected Price'
+    oneLine(workbook, sheetName, src='rq_raised_yearly',    title='Raised',           type='yearly',  index=1,  headers=True)
+    oneLine(workbook, sheetName, src='rq_required_yearly',  title='Required',         type='yearly',  index=3,  headers=True)
+    oneLine(workbook, sheetName, src='rq_raised_monthly',   title='Raised in 2023',   type='monthly', index=6,  headers=True,  year=2023)
+    oneLine(workbook, sheetName, src='rq_raised_monthly',   title='Raised in 2024',   type='monthly', index=7,  headers=False, year=2024)
+    oneLine(workbook, sheetName, src='rq_required_monthly', title='Required in 2023', type='monthly', index=8,  headers=False, year=2023)
+    oneLine(workbook, sheetName, src='rq_required_monthly', title='Required in 2024', type='monthly', index=9,  headers=False, year=2024)
+    oneLine(workbook, sheetName, src='rq_required_monthly', title='Required in 2025', type='monthly', index=10, headers=False, year=2025)
 
-    subF.categorized(workbook, 'By departments', 'rq_raised_Departments_yearly', 'Raised', index=1, type='yearly')
-    subF.categorized(workbook, 'By departments', 'rq_required_Departments_yearly', 'Required', index=22, type='yearly')
-    subF.categorized(workbook, 'By departments', 'rq_raised_Departments_monthly', 'Raised in 2023', index=43, type='monthly', year=2023)
-    subF.categorized(workbook, 'By departments', 'rq_required_Departments_monthly', 'Required in 2023', index=63, type='monthly', year=2023)
-    subF.categorized(workbook, 'By departments', 'rq_raised_Departments_monthly', 'Raised in 2024', index=83, type='monthly', year=2024)
-    subF.categorized(workbook, 'By departments', 'rq_required_Departments_monthly', 'Required in 2024', index=94, type='monthly', year=2024)
+    sheetName = 'By departments'
+    categorized(workbook, sheetName, src='rq_raised_Departments_yearly',    title='Raised',           type='yearly',  index=1)
+    categorized(workbook, sheetName, src='rq_required_Departments_yearly',  title='Required',         type='yearly',  index=22)
+    categorized(workbook, sheetName, src='rq_raised_Departments_monthly',   title='Raised in 2023',   type='monthly', index=43, year=2023)
+    categorized(workbook, sheetName, src='rq_required_Departments_monthly', title='Required in 2023', type='monthly', index=63, year=2023)
+    categorized(workbook, sheetName, src='rq_raised_Departments_monthly',   title='Raised in 2024',   type='monthly', index=83, year=2024)
+    categorized(workbook, sheetName, src='rq_required_Departments_monthly', title='Required in 2024', type='monthly', index=94, year=2024)
 
     workbook.close()
 
 def an_spares():
     workbook = xlsxwriter.Workbook('matCost.xlsx')
 
-    subF.oneLine(workbook, 'Total', 'sp_reserved_yearly', 'Material Cost', year = 2024, index=1, type = 'yearly')
-    subF.oneLine(workbook, 'Total', 'sp_reserved_monthly', 'in 2023', year=2023, index=4, type='monthly')
-    subF.oneLine(workbook, 'Total', 'sp_reserved_monthly', 'in 2024', year=2024, index=5, type='monthly', headers=False)
+    sheetName = 'Total'
+    oneLine(workbook, sheetName, src='sp_reserved_yearly',  title='Material Cost', type='yearly',  index=1, headers=True)
+    print('working')
+    oneLine(workbook, sheetName, src='sp_reserved_monthly', title='in 2024',       type='monthly', index=5, headers=False, year=2024)
 
-    subF.rooted(workbook, 'By Assets 2023', 'sp_reserved_Assets_yearly', 'Actual Cost','Material Cost', year = 2023)
-    subF.rooted(workbook, 'By Assets 2024', 'sp_reserved_Assets_yearly', 'Actual Cost','Material Cost', year = 2024)
+    sheetName = 'By Assets 2023'
+    rooted(workbook, sheetName, src='sp_reserved_Assets_yearly', title='Actual Cost', header='Material Cost', year = 2024)
 
-    subF.categorized(workbook, 'By Priority', 'sp_reserved_Priority_yearly', 'Material Cost', index=1, type='yearly')
-    subF.categorized(workbook, 'By Priority', 'sp_reserved_Priority_monthly', 'in 2023', index=12, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Priority', 'sp_reserved_Priority_monthly', 'in 2024', index=23, type='monthly', year=2024)
+    sheetName = 'By Priority'
+    categorized(workbook, sheetName, src='sp_reserved_Priority_yearly',  title='Material Cost', type='yearly',  index=1)
+    categorized(workbook, sheetName, src='sp_reserved_Priority_monthly', title='in 2024',       type='monthly', index=23, year=2024)
 
-    subF.categorized(workbook, 'By JobType', 'sp_reserved_JobType_yearly', 'Material Cost', index=1, type='yearly')
-    subF.categorized(workbook, 'By JobType', 'sp_reserved_JobType_monthly', 'in 2023', index=21, type='monthly', year=2023)
-    subF.categorized(workbook, 'By JobType', 'sp_reserved_JobType_monthly', 'in 2024', index=39, type='monthly', year=2024)
+    sheetName = 'By JobType'
+    categorized(workbook, sheetName, src='sp_reserved_JobType_yearly',  title='Material Cost', type='yearly',  index=1)
+    categorized(workbook, sheetName, src='sp_reserved_JobType_monthly', title='in 2024',       type='monthly', index=39, year=2024)
 
-    subF.categorized(workbook, 'By Department', 'sp_reserved_Department_yearly', 'Material Cost', index=1, type='yearly')
-    subF.categorized(workbook, 'By Department', 'sp_reserved_Department_monthly', 'in 2023', index=19, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Department', 'sp_reserved_Department_monthly', 'in 2024', index=36, type='monthly', year=2024)
+    sheetName = 'By Department'
+    categorized(workbook, sheetName, src='sp_reserved_Department_yearly', title='Material Cost', type='yearly', index=1)
+    categorized(workbook, sheetName, src='sp_reserved_Department_monthly', title='in 2024',      type='monthly', index=36, year=2024)
 
-    subF.categorized(workbook, 'By Discipline', 'sp_reserved_Discipline_yearly', 'Material Cost', index=1, type='yearly')
-    subF.categorized(workbook, 'By Discipline', 'sp_reserved_Discipline_monthly', 'in 2023', index=33, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Discipline', 'sp_reserved_Discipline_monthly', 'in 2024', index=64, type='monthly', year=2024)
+    sheetName = 'By Discipline'
+    categorized(workbook, sheetName, src='sp_reserved_Discipline_yearly', title='Material Cost', type='yearly', index=1)
+    categorized(workbook, sheetName, src='sp_reserved_Discipline_monthly', title='in 2024',      type='monthly', index=64, year=2024)
 
-    subF.fillExcelSheet(workbook, 'Top Expensive 2023', hub.getVal('sp_reserved_Assets_sorted_2023'))
-    subF.fillExcelSheet(workbook, 'Top Expensive 2024', hub.getVal('sp_reserved_Assets_sorted_2024'))
+    sheetName = 'Top Expensive 2024'
+    fillExcelSheet(workbook, sheetName, hub.getVal('sp_reserved_Assets_sorted_2024'))
 
     workbook.close()
 
 def an_workorders():
     workbook = xlsxwriter.Workbook('workOrders.xlsx')
 
-    subF.oneLine(workbook, 'Total', 'wo_raised_yearly', 'Raised WOs', year = 2024, index=1, type = 'yearly')
-    subF.oneLine(workbook, 'Total', 'wo_closed_yearly', 'Closed WOs', year = 2024, index=2, type = 'yearly', headers=False)
+    sheetName = 'Total'
+    oneLine(workbook, 'Total', src='wo_raised_yearly', title='Raised WOs', type = 'yearly',year = 2024, index=1, headers=True)
+    oneLine(workbook, 'Total', src='wo_open_yearly', title='Not Closed WOs', type = 'yearly', year = 2024, index=3, headers=True)
 
-    subF.rooted(workbook, 'By Assets 2023', 'wo_raised_Assets_yearly', 'Work Order Number','Raised WOs', year = 2023)
-    subF.rooted(workbook, 'By Assets 2024', 'wo_raised_Assets_yearly', 'Work Order Number','Raised WOs', year = 2024)
-    subF.rooted(workbook, 'Not Closed by Assets 2023', 'wo_open_Assets_yearly', 'Work Order Number','Not Closed WOs', year = 2023)
-    subF.rooted(workbook, 'Not Closed by Assets 2024', 'wo_open_Assets_yearly', 'Work Order Number','Not Closed WOs', year = 2024)
+    sheetName = 'By Assets 2024'
+    rooted(workbook, sheetName, src='wo_raised_Assets_yearly', title='Work Order Number',header='Raised WOs', year = 2024)
 
-    subF.categorized(workbook, 'By Planer', 'wo_raised_Planer_yearly', 'Raised WOs', index=1, type='yearly')
-    subF.categorized(workbook, 'By Planer', 'wo_open_Planer_yearly', 'Not Closed WOs', index=57, type='yearly')
-    subF.categorized(workbook, 'By Planer', 'wo_raised_Planer_monthly', 'Raised in 2023', index=94, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Planer', 'wo_open_Planer_monthly', 'Not Closed WOs in 2023', index=138, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Planer', 'wo_raised_Planer_monthly', 'Raised in 2024', index=170, type='monthly', year=2024)
-    subF.categorized(workbook, 'By Planer', 'wo_open_Planer_monthly', 'Not Closed WOs in 2024', index=196, type='monthly', year=2024)
+    sheetName = 'Not Closed by Assets 2024'
+    rooted(workbook, sheetName, src='wo_open_Assets_yearly', title='Work Order Number',header='Not Closed WOs', year = 2024)
 
-    subF.categorized(workbook, 'By Priority', 'wo_raised_Priority_yearly', 'Raised WOs', index=1, type='yearly')
-    subF.categorized(workbook, 'By Priority', 'wo_open_Priority_yearly', 'Not Closed WOs', index=14, type='yearly')
-    subF.categorized(workbook, 'By Priority', 'wo_raised_Priority_monthly', 'Raised in 2023', index=24, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Priority', 'wo_open_Priority_monthly', 'Not Closed WOs in 2023', index=36, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Priority', 'wo_raised_Priority_monthly', 'Raised in 2024', index=46, type='monthly', year=2024)
-    subF.categorized(workbook, 'By Priority', 'wo_open_Priority_monthly', 'Not Closed WOs in 2024', index=60, type='monthly', year=2024)
+    sheetName = 'By Planer'
+    categorized(workbook, sheetName, src='wo_raised_Planer_yearly', title='Raised WOs', type='yearly', index=1, )
+    categorized(workbook, sheetName, src='wo_open_Planer_yearly', title='Not Closed WOs', type='yearly',index=57, )
+    categorized(workbook, sheetName, src='wo_raised_Planer_monthly', title='Raised in 2023', type='monthly', index=94, year=2023)
+    categorized(workbook, sheetName, src='wo_open_Planer_monthly', title='Not Closed WOs in 2023', type='monthly', index=138, year=2023)
+    categorized(workbook, sheetName, src='wo_raised_Planer_monthly', title='Raised in 2024', type='monthly', index=170, year=2024)
+    categorized(workbook, sheetName, src='wo_open_Planer_monthly', title='Not Closed WOs in 2024', type='monthly', index=196, year=2024)
 
-    subF.categorized(workbook, 'By JobType', 'wo_raised_JobType_yearly', 'Raised WOs', index=1, type='yearly')
-    subF.categorized(workbook, 'By JobType', 'wo_open_JobType_yearly', 'Not Closed WOs', index=23, type='yearly')
-    subF.categorized(workbook, 'By JobType', 'wo_raised_JobType_monthly', 'Raised in 2023', index=42, type='monthly', year=2023)
-    subF.categorized(workbook, 'By JobType', 'wo_open_JobType_monthly', 'Not Closed WOs in 2023', index=62, type='monthly', year=2023)
-    subF.categorized(workbook, 'By JobType', 'wo_raised_JobType_monthly', 'Raised in 2024', index=77, type='monthly', year=2024)
-    subF.categorized(workbook, 'By JobType', 'wo_open_JobType_monthly', 'Not Closed WOs in 2024', index=97, type='monthly', year=2024)
+    sheetName = 'By Priority'
+    categorized(workbook, sheetName, src='wo_raised_Priority_yearly', title='Raised WOs', type='yearly', index=1, )
+    categorized(workbook, sheetName, src='wo_open_Priority_yearly', title='Not Closed WOs', type='yearly', index=14, )
+    categorized(workbook, sheetName, src='wo_raised_Priority_monthly', title='Raised in 2023', type='monthly', index=24, year=2023)
+    categorized(workbook, sheetName, src='wo_open_Priority_monthly', title='Not Closed WOs in 2023', type='monthly', index=36, year=2023)
+    categorized(workbook, sheetName, src='wo_raised_Priority_monthly', title='Raised in 2024', type='monthly', index=46, year=2024)
+    categorized(workbook, sheetName, src='wo_open_Priority_monthly', title='Not Closed WOs in 2024', type='monthly', index=60, year=2024)
 
-    subF.categorized(workbook, 'By Discipline', 'wo_raised_Discipline_yearly', 'Raised WOs', index=1, type='yearly')
-    subF.categorized(workbook, 'By Discipline', 'wo_open_Discipline_yearly', 'Not Closed WOs', index=36, type='yearly')
-    subF.categorized(workbook, 'By Discipline', 'wo_raised_Discipline_monthly', 'Raised in 2023', index=67, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Discipline', 'wo_open_Discipline_monthly', 'Not Closed WOs in 2023', index=102, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Discipline', 'wo_raised_Discipline_monthly', 'Raised in 2024', index=131, type='monthly', year=2024)
-    subF.categorized(workbook, 'By Discipline', 'wo_open_Discipline_monthly', 'Not Closed WOs in 2024', index=156, type='monthly', year=2024)
+    sheetName = 'By JobType'
+    categorized(workbook, sheetName, src='wo_raised_JobType_yearly', title='Raised WOs', type='yearly', index=1, )
+    categorized(workbook, sheetName, src='wo_open_JobType_yearly', title='Not Closed WOs', type='yearly', index=23, )
+    categorized(workbook, sheetName, src='wo_raised_JobType_monthly', title='Raised in 2023', type='monthly', index=42, year=2023)
+    categorized(workbook, sheetName, src='wo_open_JobType_monthly', title='Not Closed WOs in 2023', type='monthly', index=62, year=2023)
+    categorized(workbook, sheetName, src='wo_raised_JobType_monthly', title='Raised in 2024', type='monthly', index=77, year=2024)
+    categorized(workbook, sheetName, src='wo_open_JobType_monthly', title='Not Closed WOs in 2024', type='monthly', index=97, year=2024)
 
-    subF.categorized(workbook, 'By Department', 'wo_raised_Department_yearly', 'Raised WOs', index=1, type='yearly')
-    subF.categorized(workbook, 'By Department', 'wo_open_Department_yearly', 'Not Closed WOs', index=20, type='yearly')
-    subF.categorized(workbook, 'By Department', 'wo_raised_Department_monthly', 'Raised in 2023', index=35, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Department', 'wo_open_Department_monthly', 'Not Closed WOs in 2023', index=54, type='monthly', year=2023)
-    subF.categorized(workbook, 'By Department', 'wo_raised_Department_monthly', 'Raised in 2024', index=69, type='monthly', year=2024)
-    subF.categorized(workbook, 'By Department', 'wo_open_Department_monthly', 'Not Closed WOs in 2024', index=82, type='monthly', year=2024)
+    sheetName = 'By Discipline'
+    categorized(workbook, sheetName, src='wo_raised_Discipline_yearly', title='Raised WOs', type='yearly', index=1, )
+    categorized(workbook, sheetName, src='wo_open_Discipline_yearly', title='Not Closed WOs', type='yearly', index=36, )
+    categorized(workbook, sheetName, src='wo_raised_Discipline_monthly', title='Raised in 2023', type='monthly', index=67, year=2023)
+    categorized(workbook, sheetName, src='wo_open_Discipline_monthly', title='Not Closed WOs in 2023', type='monthly', index=102, year=2023)
+    categorized(workbook, sheetName, src='wo_raised_Discipline_monthly', title='Raised in 2024', type='monthly', index=131, year=2024)
+    categorized(workbook, sheetName, src='wo_open_Discipline_monthly', title='Not Closed WOs in 2024', type='monthly', index=156, year=2024)
 
-    subF.fillExcelSheet(workbook, 'Top Served 2023', hub.getVal('wo_raised_Assets_sorted_2023'))
-    subF.fillExcelSheet(workbook, 'Top Served 2024', hub.getVal('wo_raised_Assets_sorted_2024'))
+    sheetName = 'By Department'
+    categorized(workbook, sheetName, src='wo_raised_Department_yearly', title='Raised WOs', type='yearly', index=1, )
+    categorized(workbook, sheetName, src='wo_open_Department_yearly', title='Not Closed WOs', type='yearly', index=20, )
+    categorized(workbook, sheetName, src='wo_raised_Department_monthly', title='Raised in 2023', type='monthly', index=35, year=2023)
+    categorized(workbook, sheetName, src='wo_open_Department_monthly', title='Not Closed WOs in 2023', type='monthly', index=54, year=2023)
+    categorized(workbook, sheetName, src='wo_raised_Department_monthly', title='Raised in 2024', type='monthly', index=69, year=2024)
+    categorized(workbook, sheetName, src='wo_open_Department_monthly', title='Not Closed WOs in 2024', type='monthly', index=82, year=2024)
+
+    sheetName = 'Top Served 2024'
+    fillExcelSheet(workbook, sheetName, hub.getVal('wo_raised_Assets_sorted_2024'))
 
     workbook.close()
 

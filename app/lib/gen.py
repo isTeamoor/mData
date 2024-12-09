@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from .Statistics import hub
 
 
 def filterDF(df,  filters = 'all' ):
@@ -21,3 +20,26 @@ def filterDF(df,  filters = 'all' ):
     print(conditionString(filters))
     return df.query(conditionString(filters))
 
+flt = {
+    'maintenance':
+        {"field":'isMaintenance', "operator":"==", "value":"'yes'"},
+    'reserved_2023':
+        {"field":'reservYear', "operator":"==", "value":"2023"},
+    'reserved_2024':
+        {"field":'reservYear', "operator":"==", "value":"2024"},
+    'raised_2023':
+        {"field":'raisedYear', "operator":"==", "value":"2023"},
+    'raised_2024':
+        {"field":'raisedYear', "operator":"==", "value":"2024"},
+
+    'closed':
+        {"field":'Work Order Status Description', "operator":"==", "value":"'Closed'"},
+    'notclosed':
+        {"field":'Work Order Status Description', "operator":"!=", "value":"'Closed'"},
+    'cancelled':
+        {"field":'Work Order Status Description', "operator":"==", "value":"'Cancelled'"},
+    'notcancelled':
+        {"field":'Work Order Status Description', "operator":"!=", "value":"'Cancelled'"},
+
+    
+}

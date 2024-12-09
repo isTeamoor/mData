@@ -31,7 +31,7 @@ def groupby_3(df, groupField, subgroupField, lastgroupField, valueField, action)
 
 
 
-
+#Вычисления в пределах одного блока(словаря)
 def proportion(obj):
     newObj = {}
     isContainer = False
@@ -47,7 +47,6 @@ def proportion(obj):
             newObj[key] = round(obj[key]/summary*100, 1) if summary > 0 else 0
 
     return newObj
-
 def simpleCumulate(obj):
     newObj = {}
     isContainer = False
@@ -65,6 +64,7 @@ def simpleCumulate(obj):
 
     return newObj
 
+#Суммирует значения для категорий на низшем уровне вложенности (месяц + месяц)
 def cumulate(obj, prevMonthly={}):
     newObj = {}
     isContainer = False
@@ -84,6 +84,7 @@ def cumulate(obj, prevMonthly={}):
 
     return newObj
 
+#Суммирует значения (без категорий) с переходом на следующий год
 def simple_solidCumulate(obj, prevYear={}):
     newObj = {}
     isContainer = False
@@ -132,6 +133,7 @@ def solidCumulate(obj, prev={}):
 
 
 
+
 def fillExcelSheet(workbook, sheetname, df):
     worksheet = workbook.add_worksheet(sheetname)
     df = df.fillna(0)
@@ -144,31 +146,33 @@ def fillExcelSheet(workbook, sheetname, df):
     
 
 
-def oneLine(workbook, sheetname, sectionname, seriesname, year, index, type, headers = True):
-    source = hub.getVal(sectionname)
+def oneLine(workbook, sheetname, src, title, type, index, headers, year=0):
 
+    ### 1. Источник данных
+    source = hub.getVal(src)
+
+
+    ### 2. Создает новый лист если index=1
     if index == 1:
         worksheet = workbook.add_worksheet(sheetname)
     else:
         worksheet = workbook.get_worksheet_by_name(sheetname)
 
-    worksheet.write(index+1, 0, seriesname)
-    worksheet.write(index+1, 14, seriesname +' Cumulative')
 
-    periods = []
-    data = {}
-    if type == 'yearly':
-        periods = source['data'].keys()
-        data = source['data']
-        cumuldata = source['cumulative']
-    if type == 'monthly':
-        periods = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        data = source['data'][year]
-        cumuldata = source['cumulative'][year]
+    ### 3. Записывает title - название серии
+    worksheet.write(index+1, 0, title)
+    worksheet.write(index+1, 14, 'Cumulative '+title)
+
+
+    periods   = source['data'].keys() if type == 'yearly' else ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    data      = source['data']        if type == 'yearly' else source['data'][year]
+    cumuldata = source['cumulative']  if type == 'yearly' else source['cumulative'][year]
+
+
     for i, val in enumerate(periods):
         if type == 'yearly':
-            worksheet.write(index+1, i+1, data[val] if val in data else 0)
-            worksheet.write(index+1, i+15, cumuldata[val] if val in cumuldata else 0)
+            worksheet.write(index+1, i+1, data[val])
+            worksheet.write(index+1, i+15, cumuldata[val])
         if type == 'monthly':
             worksheet.write(index+1, i+1, data[i+1] if i+1 in data else 0)
             worksheet.write(index+1, i+15, cumuldata[i+1] if i+1 in cumuldata else 0)
@@ -177,39 +181,46 @@ def oneLine(workbook, sheetname, sectionname, seriesname, year, index, type, hea
             worksheet.write(index, i+1, val)
             worksheet.write(index, i+15, val)
 
-def categorized(workbook, sheetname, sectionname, seriesname, index, type, year=2024):
-    source = hub.getVal(sectionname)
+def categorized(workbook, sheetname, src, title, type, index, year=0):
 
+    ### 1. Источник данных
+    source = hub.getVal(src)
+
+    ### 2. Создает новый лист если index=1
     if index == 1:
         worksheet = workbook.add_worksheet(sheetname)
     else:
         worksheet = workbook.get_worksheet_by_name(sheetname)
 
-    worksheet.write(index, 0, seriesname)
-    worksheet.write(index, 14, seriesname +' Cumulative')
+    ### 3. Вписывает название серии данных
+    worksheet.write(index, 0, title)
+    worksheet.write(index, 14, title +' Cumulative')
 
-    periods = []
-    if type == 'yearly':
-        periods = source['data'].keys()
-    if type == 'monthly':
-        periods = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+    periods = source['data'].keys() if type == 'yearly' else ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    
 
     rowNumbers = {}
     row = index+1
+
     for i, val in enumerate(periods):
+
         if type == 'yearly':
             data = source['data'][val]
             cumuldata = source['cumulative'][val]
         if type == 'monthly':
             data = source['data'][year][i+1] if i+1 in source['data'][year] else {}
             cumuldata = source['cumulative'][year][i+1] if i+1 in source['cumulative'][year] else {}
+            
         for key in data.keys():
             if key not in rowNumbers:
                 rowNumbers[key] = row
                 row += 1
             worksheet.write(rowNumbers[key], i+1, data[key])
+
         for key in cumuldata.keys():
             worksheet.write(rowNumbers[key], i+15, cumuldata[key])
+
         worksheet.write(index, i+1, val)
         worksheet.write(index, i+15, val)
 
@@ -217,9 +228,9 @@ def categorized(workbook, sheetname, sectionname, seriesname, index, type, year=
         worksheet.write(value, 0, key)
         worksheet.write(value, 14, key)
             
-def rooted(workbook, sheetName, sectionName, seriesName, header, year = 2024):
+def rooted(workbook, sheetName, src, title, header, year = 2024):
     worksheet = workbook.add_worksheet(sheetName) 
-    source = hub.getVal(sectionName)
+    source = hub.getVal(src)
     source = source['data'][year]
 
     worksheet.write('A1', 'Lvl')
@@ -231,13 +242,13 @@ def rooted(workbook, sheetName, sectionName, seriesName, header, year = 2024):
         worksheet.write(index, 0, lvl)
         worksheet.write(index, 1, src['description'])
         worksheet.write(index, 2, src['assetNumber'])
-        worksheet.write(index, 3, src[seriesName])
+        worksheet.write(index, 3, src[title])
 
         lvl += 1
         index += 1
 
         for key in src.keys():
-            if key not in ['description', 'assetNumber', seriesName]:
+            if key not in ['description', 'assetNumber', title]:
                 index = rooting(src[key], index, lvl)
         return index
     rooting(source, 1, 0)

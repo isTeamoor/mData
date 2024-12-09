@@ -12,9 +12,11 @@ assets = assets.loc[ ~assets['Asset ID'].isin(errorIDs) ]
 
 ### 1. Объект, показывающий наследников каждого asset
 AssetsRelationships = {}
+#################################Exception#########################
 assets.loc [ assets['Asset ID']==234549, 'Parent Asset ID' ] = 77405
 assets.loc [ assets['Asset ID']==227351, 'Parent Asset ID' ] = 77405
 assets.loc [ assets['Asset ID']==222192, 'Parent Asset ID' ] = 77405
+####################################################################
 for row in assets.index:
     parent      = int(assets.loc[row,"Parent Asset ID"])
     asset       = int(assets.loc[row,"Asset ID"])

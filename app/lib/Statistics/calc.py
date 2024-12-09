@@ -66,6 +66,9 @@ def coupleFields_monthly(df, yearfield, monthfield, categoryField, valueField, a
     
     return output
 
+
+
+
 ### Сумма/количество по 1 полю dataframe по Assets (rooted) с разделением по годам
 def fieldTotal_Assets_yearly(df, yearfield, theField, action, filters=[]):
     df = gen.filterDF(df, filters)
@@ -81,9 +84,6 @@ def fieldTotal_Assets_yearly(df, yearfield, theField, action, filters=[]):
 
     output = {'data':output}
     return output
-
-
-
 
 ### Сумма/количество по 1 полю dataframe по Assets (rooted) с разделением по годам и месяцам
 def fieldTotal_Assets_monthly(df, yearfield, monthfield, theField, action, filters=[]):
@@ -110,7 +110,7 @@ def fieldTotal_Assets_monthly(df, yearfield, monthfield, theField, action, filte
 def sorted_matcost_assets(df, filters=[]):
     CM = ['Corrective', 'Corrective after STPdM']
     PM = ['Strategy', 'Strategy Predictive Monitoring/Fault Diagnostic', 'Operational Jobs', 'Modifications','Strategy Preventative','Condition Based Monitoring','Strategy Look Listen Feel']
-    OT = ['PPE','Special Tooling','Rework','Construction/Commissioning Works','Administration','Service for Air Product','Vehicle Reservations',
+    OT = ['PPE','Special Tooling','Rework','Construction/Commissioning Works','Administration','Service for Air Product','Vehicle Reservations','Technical Queries/Questions',
           'undefined', 'Capital or Project Initiatives','Non-Maintanence Reservations', '03']
 
     df = gen.filterDF(df, filters)

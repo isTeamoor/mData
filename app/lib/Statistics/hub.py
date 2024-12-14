@@ -21,6 +21,9 @@ dataLib = {
     'rq_raised_Departments_monthly':{
         'f':calc.coupleFields_monthly, 
         'args':[requisitions, 'raisedYear','raisedMonth','Approval Path Name', 'Summary Expected Cost, usd', 'sum']},
+    'rq_raised_Planer_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[requisitions, 'raisedYear','Created By', 'Summary Expected Cost, usd', 'sum']},
     #2. Required requisitions
     'rq_required_yearly':{
         'f':calc.fieldTotal_yearly, 

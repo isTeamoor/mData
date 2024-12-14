@@ -34,6 +34,19 @@ def corrections(transactions):
     #Не списывать CofE 4 AP
     transacts.loc[ transacts['Reservation Number'].isin([17113,16761,17100]), 'closedMonth' ] = 12
 
+    #Забыл, списать в декабре
+    transacts.loc[ transacts['Reservation Number'].isin([17048,]), 'closedMonth' ] = 12
+
+    #Возврат 2 гаскета Мансур хасанов
+    transacts.loc[ (transacts['Reservation Number'].isin([15594,]))
+                   &
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 11
+    #Возврат 8 и 4 гаскета Мансур хасанов Жду письмо
+    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedMonth' ] = 12
+    transacts.loc[ (transacts['Reservation Number'].isin([15581,15582,]))
+                   &
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 12
+
 
     #Ошибка в данных CMMS
     transacts.loc[ transacts['Reservation Number'].isin([13244,13245]), 'closedYear' ] = 2024
@@ -42,6 +55,7 @@ def corrections(transactions):
     transacts.loc[ transacts['Reservation Number'].isin([15545,]), 'Quantity' ] *= -1
     #транзакции почему то позже отчётного месяца
     transacts.loc[ transacts['Reservation Number'].isin([17445,17444,17446,17179,17447]), 'transactMonth' ] = 11
+    
 
 
 
@@ -103,7 +117,7 @@ extra = {
         ],
         'currentMonth':[
             #Бумага а4
-            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':6,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':4,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
             #Алюминий 14{'Код товара':'29422','Reservation Number':-6,'WO №':-6,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Алюмин 14",'Ед.изм.':'т','Quantity':1.9202,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Никель{'Код товара':'11064','Reservation Number':-7,'WO №':-7,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Никель",'Ед.изм.':'т','Quantity':1.1104,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Медь 13{'Код товара':'21883','Reservation Number':-8,'WO №':-8,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.1639,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
@@ -237,7 +251,7 @@ extra = {
             {'Код товара':'06933','Reservation Number':-5,'WO №':-5,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':301.47,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
-            #{'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':21.624,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
+            {'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':24.244,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
         
             #Аргонбаллон
             {'Код товара':'01874','Reservation Number':-7,'WO №':-7,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Аргон баллон 50л",'Ед.изм.':'шт','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Аргон баллон', 'Объект':'Аргон баллон'},

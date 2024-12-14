@@ -28,6 +28,9 @@ def an_requisitions():
     categorized(workbook, sheetName, src='rq_raised_Departments_monthly',   title='Raised in 2024',   type='monthly', index=83, year=2024)
     categorized(workbook, sheetName, src='rq_required_Departments_monthly', title='Required in 2024', type='monthly', index=94, year=2024)
 
+    sheetName = 'By planers'
+    categorized(workbook, sheetName, src='rq_raised_Planer_yearly',    title='Raised',           type='yearly',  index=1)
+
     workbook.close()
 
 def an_spares():

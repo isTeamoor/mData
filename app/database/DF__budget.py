@@ -141,7 +141,7 @@ def getPPE():
 ### 2. Бюджет Outsource
 outsourceBudg = pd.DataFrame(
     [
-        {'Currency':'uzs','Company name':'UNGM-DR', 'SoW':'Rotating Services','Contract':'UZGTL-CON-2262','opex':'-','working capital':'+','capex':'-','Sum':1320000000, 'Jan':110000000, 'Feb':110000000, 'Mar':110000000, 'Apr':110000000, 'May':110000000, 'Jun':110000000, 'Jul':110000000, 'Aug':110000000, 'Sep':110000000, 'Oct':110000000, 'Nov':110000000, 'Dec':110000000},
+        {'Currency':'uzs','Company name':'UNGM-DR', 'SoW':'Rotating Services','Contract':'03-0007/22/UZGTL-CON-2262','opex':'-','working capital':'+','capex':'-','Sum':1320000000, 'Jan':110000000, 'Feb':110000000, 'Mar':110000000, 'Apr':110000000, 'May':110000000, 'Jun':110000000, 'Jul':110000000, 'Aug':110000000, 'Sep':110000000, 'Oct':110000000, 'Nov':110000000, 'Dec':110000000},
         {'Currency':'uzs','Company name':'UZPROMARM', 'SoW':'Valve repair Services','Contract':'UZGTL-CON-2677','opex':'-','working capital':'+','capex':'-','Sum':400000000, 'Jan':0, 'Feb':0, 'Mar':100000000, 'Apr':0, 'May':0, 'Jun':100000000, 'Jul':0, 'Aug':0, 'Sep':100000000, 'Oct':0, 'Nov':0, 'Dec':100000000},
         {'Currency':'uzs','Company name':'Uzbekximmash', 'SoW':'Rotating Services','Contract':'UZGTL-CON-2487','opex':'-','working capital':'+','capex':'-','Sum':600000000, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':200000000, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':200000000, 'Nov':0, 'Dec':200000000},
         {'Currency':'uzs','Company name':'Maxsusenergogaz', 'SoW':'Mechanical services','Contract':'UZGTL-CON-23-904','opex':'-','working capital':'+','capex':'-','Sum':1500000000, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':600000000, 'May':0, 'Jun':0, 'Jul':0, 'Aug':300000000, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':600000000},

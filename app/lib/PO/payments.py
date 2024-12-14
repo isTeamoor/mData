@@ -18,7 +18,8 @@ def getPayments():
 
     payments['Currency'].replace({'USD': 'usd', 
                                   'сум': 'uzs',
-                                  'Евро':'eur'}, inplace=True)
+                                  'Евро':'eur',
+                                  'Рубль':'rub'}, inplace=True)
     
 
     payments['Contract'] = payments['Contract'].str.upper()
@@ -56,12 +57,18 @@ def getPayments():
         for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
             payments.loc[i,m] = payments.loc[i,m] * 1.07
 
+    # RUB -> USD
+    for i in payments.loc[ payments['Currency']=='rub' ].index:
+        for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
+            payments.loc[i,m] = payments.loc[i,m] * 100
+
 
 
 
     ### 3. Пометка контрактов по отделам
     # Outsource
     payments.loc[ payments['Contract'].isin(outsourceBudg['Contract'].unique()), 'Department'] = 'outsource'
+    payments.loc[ payments['Contract'].isin(['CON-0025','CON-0027']), 'Department'] = 'outsource'
     payments.loc[ payments['Initiator'] == 'Отдел контрактных услуг', 'Department'] = 'outsource'
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='outsource', 'Contract' ].unique() ) , 'Department'] = 'outsource'
 
@@ -129,7 +136,7 @@ def sumPayments(department=False):
 
 
     ### 1. Фильтр по департаменту
-    if department:
+    if department and department!='overall':
         payments = payments.loc[ payments['Department'] == department ]
 
 
@@ -146,7 +153,9 @@ def sumPayments(department=False):
 
 
     # Сумма по валютным контрактам в долларах
-    sum_row = payments[ (payments['Currency'] == 'usd') | (payments['Currency'] == 'eur') ].sum(numeric_only=True)
+    sum_row = payments[ (payments['Currency'] == 'usd') 
+                       | (payments['Currency'] == 'eur')
+                       | (payments['Currency'] == 'rub') ].sum(numeric_only=True)
     sum_row['Contract'] = 'Summary foreign contracts in usd'
     payments.loc[ len(payments) ] = sum_row
 
@@ -156,7 +165,12 @@ def sumPayments(department=False):
     sum_row['Contract'] = 'Summary all contracts in usd'
     payments.loc[ len(payments) ] = sum_row
 
-    payments.to_excel(f'{department}.xlsx')
+    if department == 'overall':
+        payments.to_excel('overall.xlsx')
+    if department and department!='overall':
+        payments.to_excel(f'{department}.xlsx')
+
+        
     return payments   
 
 ### Отчёт об использовании бюджета (%), с cumulative
@@ -235,7 +249,6 @@ def summaryData(budget, department = False):
             else:
                 output.loc[ i, m ] = output.loc[ i-1, m ].item() / output.loc[ i-2, m ].item() * 100
             
-    
     return output
 
 ### Отчёт об использовании средств по каждому контракту, с cumulative
@@ -306,7 +319,6 @@ def detailedData(budget_src, type, cur, department = False):
 
 
 def draw_report(department = False):
-    
     ### 1. В зависимости от департамента выбирается соответствующий dataFrame бюджета
     budgetSRC = {
         'outsource':outsourceBudg,
@@ -315,10 +327,9 @@ def draw_report(department = False):
         'tar': tarBudg,
         'mtk': mtkBudg
     }
-
     budget = budgetSRC[department]
 
-
+    
     ### 2. Печать отчётов
     sumPayments(department).to_excel(f'{department}_payments.xlsx', index=False)
     summaryData(budget, department).to_excel(f'{department}_summary.xlsx', index=False)

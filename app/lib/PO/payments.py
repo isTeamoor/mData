@@ -153,9 +153,7 @@ def sumPayments(department=False):
 
 
     # Сумма по валютным контрактам в долларах
-    sum_row = payments[ (payments['Currency'] == 'usd') 
-                       | (payments['Currency'] == 'eur')
-                       | (payments['Currency'] == 'rub') ].sum(numeric_only=True)
+    sum_row = payments[payments['Currency'].isin(['usd', 'eur', 'rub'])].sum(numeric_only=True)
     sum_row['Contract'] = 'Summary foreign contracts in usd'
     payments.loc[ len(payments) ] = sum_row
 
@@ -340,4 +338,3 @@ def draw_report(department = False):
 
         detailedData(budget, 'monthly', 'foreign', department).to_excel(f'{department}_foreign_monthly.xlsx', index=False)
         detailedData(budget, 'cumulative', 'foreign', department).to_excel(f'{department}_foreign_cumulative.xlsx', index=False)
-    

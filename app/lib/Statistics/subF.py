@@ -158,7 +158,6 @@ def oneLine(workbook, sheetname, src, title, type, index, headers, year=0):
     else:
         worksheet = workbook.get_worksheet_by_name(sheetname)
 
-
     ### 3. Записывает title - название серии
     worksheet.write(index+1, 0, title)
     worksheet.write(index+1, 14, 'Cumulative '+title)

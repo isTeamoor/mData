@@ -1,7 +1,7 @@
 ﻿Approval Path ID,Approval Path Name
 1,SLU Rotating
-2,SGU Rotating
-3,Maintenance Requests
+2,00
+3,0
 4,PWU Rotating
 5,U&O Rotating
 6,TAR Request
@@ -13,74 +13,98 @@
 12,PWU Instrument
 13,PWU Electrical
 14,PWU Analyser
-15,SGU Static
-16,SGU Instrument
-17,SGU Electrical
-18,SGU Analyser
+15,16
+16,15
+17,14
+18,19
 19,U&O Static
 20,U&O Instrument
 21,U&O Electrical
 22,U&O Analyser
-23,CofE (Workshop)
-24,Con-Mon
-25,CofE (Insul/Scaff)
-26,SLU Default
-27,SGU Default
-28,PWU Default
-29,U&O Default
-30,Procurement Department
-31,Civil
-32,Reliability
-33,Maintenance
-34,Production
-35,Technical
-36,Other Departments
-37,Contract Services
-38,Human Resource
-39,Administration
+23,20
+24,Con-Mon Request
+25,21
+26,23
+27,22
+28,11
+29,77
+30,Procurement Department PR
+31,Civil Request
+32,Reliability Request
+33,7
+34,6
+35,5
+36,4
+37,Contract Services Request
+38,Human Resource PR
+39,Administration PR
 40,Central Laboratory
-41,Product Storage& Export
-42,Automation
-43,IT dept
+41,Product Storage& Export PR
+42,Automation Request
+43,2
 46,Project Management
-47,Synthesis Gas Unit
+47,3
 48,Synthesis Liquid Unit
 49,Product Work-up Unit
 50,Utilities and Off-sites Unit
 51,Motor transport Operation
 52,Production Management Department
 53,Routine Maintenance Department
-54,Civil Department
-55,CofE
-56,Turnaround
-57,Contract Services Deparment
+54,Civil Department PR
+55,CofE Request
+56,Turnaround PR
+57,Contract Services PR
 58,Localization
 59,Plant Integrity
-60,Reliability Department
-61,Automation Department
+60,Reliability Department PR
+61,Automation Department PR
 62,Process Engineering Department
 63,Sales
 64,Accounting & Corporate Reporting
-65,Planning Department
-66,Financial Department
+65,Planning Department PR
+66,Financial Department PR
 67,Consolidated information & Analytical
-68,Treasury and Project Management
+68,Treasury and Project Management PR
 69,Emergency situations and Security services
 70,IT department
-71,HSE department
-72,Project Office
-73,Information Security Department
-74,Legal Department
-75,CofE department
-76,Product Storage& Export Dept
-77,Material Control Department
+71,HSE Department
+72,Project Office PR
+73,Information Security Department PR
+74,Legal Department PR
+75,CofE Department PR
+76,Product Storage& Export Dept Request
+77,Material and Technical Control Department
 80,Chinoz Terminal
-81,Contract Service Requisition
 83,Technical Coordination Department
 84,Quality Control Department
 85,Process Safety Department
-86,PR Services
-87,ETL Maintenance
-88,Marketing 
+86,Public Services PR
+87,ETL Maintenance Request
+88,Marketing PR
 89,General affairs
-90,Chinoz Requests
+91,Administration
+92,Central Laboratory PR
+93,Project Management PR
+94,Synthesis Liquid Unit PR
+95,Product Work-up Unit PR
+96,Utilities and Off-sites Unit PR
+97,Motor transport Operation PR
+98,Production Management Department PR
+99,Routine Maintenance Department PR
+100,Localization PR
+101,Plant Integrity PR
+102,Process Engineering Department PR
+103,Sales PR
+104,Accounting & Corporate Reporting PR
+105,Consolidated information & Analytical PR
+106,Emergency situations and Security services PR
+107,IT department PR
+108,HSE Department PR
+109,Material and Technical Control Department PR
+110,Chinoz Terminal PR
+111,Technical Coordination Department PR
+112,Quality Control Department PR
+113,Process Safety Department PR
+114,General affairs PR
+115,Shipped products accounting department
+116,Shipped products accounting department PR

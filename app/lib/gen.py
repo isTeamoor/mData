@@ -41,5 +41,7 @@ flt = {
     'notcancelled':
         {"field":'Work Order Status Description', "operator":"!=", "value":"'Cancelled'"},
 
-    
+    'U&O':
+        {"field":'Short Department Name', "operator":"==", "value":"'U&O'"},
+
 }

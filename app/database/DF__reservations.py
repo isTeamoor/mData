@@ -14,6 +14,8 @@ reservations['reservMonth'] = reservations['Completed Date Time'].dt.month
 reservations = reservations.merge(contactID[['Contact ID', 'Reserved By']], how = 'left', left_on = 'Created By Contact ID', right_on = 'Contact ID')
 
 rmpd_planners = ['Ulugbek  Xamroyev Maksudovich',
+                 "Ulug'bek Xamroyev",
+                 'Ulugbek Khamroev',
                  "Mansur Xasanov Tulqin o'g'li",
                  "Sarvar Rahmonov Ruslan o'g'li",
                  'Abusoleh Asrorxonov Qutbiddinovich',
@@ -23,7 +25,9 @@ rmpd_planners = ['Ulugbek  Xamroyev Maksudovich',
                  'Mansur Buriyev Jurayevich',
                  'Farruxjon Mamurov',
                  "To'lqin Berdiyev Omonovich",
-                 'Mirjakhon Toirov']
+                 'Mirjakhon Toirov',
+                 'Mirjahon Toirov Ilxom o`g`li', 
+                 ]
 reservations['isRMPD_planner'] = reservations['Reserved By'].copy().map(lambda x: 'yes' if x in rmpd_planners else 'no')
 
 

@@ -48,10 +48,16 @@ dataLib = {
     'sp_reserved_monthly':{
         'f':calc.fieldTotal_monthly, 
         'args':[spares, 'reservYear', 'reservMonth','Actual Cost', 'sum', [flt['maintenance']]]},
+    'sp_reserved_monthly_U&O':{
+        'f':calc.fieldTotal_monthly, 
+        'args':[spares, 'reservYear', 'reservMonth','Actual Cost', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
     
     'sp_reserved_Priority_yearly':{
         'f':calc.coupleFields_yearly, 
         'args':[spares, 'reservYear', 'Priority Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    'sp_reserved_Priority_yearly_U&O':{
+        'f':calc.coupleFields_yearly, 
+        'args':[spares, 'reservYear', 'Priority Description', 'Actual Cost', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
     'sp_reserved_Priority_monthly':{
         'f':calc.coupleFields_monthly, 
         'args':[spares, 'reservYear', 'reservMonth', 'Priority Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
@@ -59,6 +65,9 @@ dataLib = {
     'sp_reserved_JobType_yearly':{
         'f':calc.coupleFields_yearly, 
         'args':[spares, 'reservYear', 'Job Type Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    'sp_reserved_JobType_yearly_U&O':{
+        'f':calc.coupleFields_yearly, 
+        'args':[spares, 'reservYear', 'Job Type Description', 'Actual Cost', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
     'sp_reserved_JobType_monthly':{
         'f':calc.coupleFields_monthly, 
         'args':[spares, 'reservYear', 'reservMonth', 'Job Type Description', 'Actual Cost', 'sum', [flt['maintenance']]]},
@@ -66,6 +75,9 @@ dataLib = {
     'sp_reserved_Discipline_yearly':{
         'f':calc.coupleFields_yearly, 
         'args':[spares, 'reservYear', 'Department Name', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    'sp_reserved_Discipline_yearly_U&O':{
+        'f':calc.coupleFields_yearly, 
+        'args':[spares, 'reservYear', 'Department Name', 'Actual Cost', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
     'sp_reserved_Discipline_monthly':{
         'f':calc.coupleFields_monthly, 
         'args':[spares, 'reservYear', 'reservMonth', 'Department Name', 'Actual Cost', 'sum', [flt['maintenance']]]},
@@ -81,9 +93,15 @@ dataLib = {
     'sp_reserved_Assets_yearly':{
         'f':calc.fieldTotal_Assets_yearly, 
         'args':[spares, 'reservYear', 'Actual Cost', 'sum', [flt['maintenance']]]},
+    'sp_reserved_Assets_yearly_U&O':{
+        'f':calc.fieldTotal_Assets_yearly, 
+        'args':[spares, 'reservYear', 'Actual Cost', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
     'sp_reserved_Assets_sorted_2024':{
         'f':calc.sorted_matcost_assets, 
         'args':[spares, [ flt['maintenance'],"&",flt['reserved_2024'] ]  ]},
+    'sp_reserved_Assets_sorted_2024_U&O':{
+        'f':calc.sorted_matcost_assets, 
+        'args':[spares, [ flt['maintenance'],"&",flt['reserved_2024'],"&",flt['U&O'] ]  ]},
 
 
 
@@ -170,6 +188,32 @@ dataLib = {
     'wo_raised_Assets_sorted_2024':{
         'f':calc.sorted_woRaised_assets, 
         'args':[wo, [ flt['maintenance'],"&",flt['raised_2024'] ] ]},
+
+
+
+
+    ### Actual manHours Analysis
+    #1. actH by assets
+    'tr_actH_Assets_yearly':{
+        'f':calc.fieldTotal_Assets_yearly, 
+        'args':[trades, 'raisedYear', 'Actual Duration Hours', 'sum', [flt['maintenance'],"&",flt['U&O']]]},  
+    'tr_actH_Assets_sorted_2024':{
+        'f':calc.sorted_trH_assets, 
+        'args':[trades, [ flt['maintenance'],"&",flt['raised_2024'],"&",flt['U&O'] ] ]},
+
+
+    'tr_actH_Priority_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[trades, 'raisedYear', 'Priority Description', 'Actual Duration Hours', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
+    'tr_actH_JobType_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[trades, 'raisedYear', 'Job Type Description', 'Actual Duration Hours', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
+    'tr_actH_Discipline_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[trades, 'raisedYear', 'Department Name', 'Actual Duration Hours', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
+    'tr_actH_TradeType_yearly':{
+        'f':calc.coupleFields_yearly, 
+        'args':[trades, 'raisedYear', 'Trade Code Description', 'Actual Duration Hours', 'sum', [flt['maintenance'],"&",flt['U&O']]]},
 }
 
 

@@ -60,7 +60,7 @@ def getPayments():
     # RUB -> USD
     for i in payments.loc[ payments['Currency']=='rub' ].index:
         for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
-            payments.loc[i,m] = payments.loc[i,m] * 100
+            payments.loc[i,m] = payments.loc[i,m] / 100
 
 
 

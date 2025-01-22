@@ -60,6 +60,28 @@ def an_spares():
     #categorized(workbook, sheetName, src='sp_reserved_Department_yearly', title='Material Cost', type='yearly', index=1)
     #categorized(workbook, sheetName, src='sp_reserved_Department_monthly', title='in 2024',      type='monthly', index=36, year=2024)  
 
+    workbook.close()
+
+
+
+
+    workbook = xlsxwriter.Workbook('U&O_matCost_2024.xlsx')
+
+    sheetName = 'Total'
+    oneLine(workbook, sheetName, src='sp_reserved_monthly_U&O', title='in 2024',       type='monthly', index=1, headers=True, year=2024)
+    oneLine(workbook, sheetName, src='sp_reserved_monthly_U&O', title='in 2023',       type='monthly', index=4, headers=True, year=2023)
+    
+    sheetName = 'By Assets'
+    rooted(workbook, sheetName, src='sp_reserved_Assets_yearly_U&O', title='Actual Cost', header='Material Cost', year = 2024)
+
+    sheetName = 'Top Expensive 2024'
+    fillExcelSheet(workbook, sheetName, hub.getVal('sp_reserved_Assets_sorted_2024_U&O'))
+
+    sheetName = 'By Priority'
+    categorized(workbook, sheetName, src='sp_reserved_Priority_yearly_U&O',  title='Material Cost', type='yearly',  index=1)
+
+    sheetName = 'By JobType'
+    categorized(workbook, sheetName, src='sp_reserved_JobType_yearly_U&O',  title='Material Cost', type='yearly',  index=1)
     
     workbook.close()
 
@@ -113,9 +135,33 @@ def an_workorders():
     
     workbook.close()
 
+def an_trades():
+    workbook = xlsxwriter.Workbook('U&O_trades_2024.xlsx')
+
+    sheetName = 'By Assets 2024'
+    rooted(workbook, sheetName, src='tr_actH_Assets_yearly', title='Actual Duration Hours', header='Actual manHours', year = 2024)
+
+    sheetName = 'Top Served 2024'
+    fillExcelSheet(workbook, sheetName, hub.getVal('tr_actH_Assets_sorted_2024'))
+
+    sheetName = 'By Priority'
+    categorized(workbook, sheetName, src='tr_actH_Priority_yearly', title='Actual manHours', type='yearly', index=1, )
+    
+    sheetName = 'By JobType'
+    categorized(workbook, sheetName, src='tr_actH_JobType_yearly', title='Actual manHours', type='yearly', index=1, )
+    
+    sheetName = 'By Discipline'
+    categorized(workbook, sheetName, src='tr_actH_Discipline_yearly', title='Actual manHours', type='yearly', index=1, )
+
+    sheetName = 'By TradeType'
+    categorized(workbook, sheetName, src='tr_actH_TradeType_yearly', title='Actual manHours', type='yearly', index=1, )
+
+    workbook.close()
+
 
 def writeExcel():
-    an_requisitions()
+    #an_requisitions()
     an_spares()
-    an_workorders()
+    #an_workorders()
+    an_trades()
 

@@ -44,6 +44,9 @@ priorityAnswer            = pd.read_csv("app/database/csv/ccc_rt_priorityAnswer.
 priorityAnswerDescription = pd.read_csv("app/database/csv/ccc_rt_priorityAnswersDescription.csv", encoding="utf-8")
 
 
+
+contactID.loc[ contactID['Contact ID']==1141,'Last Name' ] = 'Aralov Akbar o`g`li'
+contactID.loc[ contactID['Contact ID']==1463,'Last Name' ] = 'Toirov Ilxom o`g`li'
 contactID.insert(1, 'Reserved By',         contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Created By',          contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Requisitioned By',    contactID['First Name'] + " " + contactID['Last Name'])
@@ -65,3 +68,6 @@ woNumbers.insert(1, 'Group WO number', woNumbers['Work Order Number'])
 closedDates['Closed Date Time'] = pd.to_datetime(closedDates['Closed Date Time'], format="%d/%m/%Y %H:%M:%S %p")
 closedDates = closedDates.sort_values(by='Closed Date Time', ascending=False)
 closedDates = closedDates.drop_duplicates(subset='Work Order ID', keep='first')
+
+
+

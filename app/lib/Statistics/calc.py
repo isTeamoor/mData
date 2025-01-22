@@ -141,6 +141,40 @@ def sorted_matcost_assets(df, filters=[]):
 
     return modDF
 
+### Сортировка Actual manhours по assets с детализацией по JobTypes
+def sorted_trH_assets(df, filters=[]):
+    CM = ['Corrective', 'Corrective after STPdM']
+    PM = ['Strategy', 'Strategy Predictive Monitoring/Fault Diagnostic', 'Operational Jobs', 'Modifications','Strategy Preventative','Condition Based Monitoring','Strategy Look Listen Feel']
+    OT = ['PPE','Special Tooling','Rework','Construction/Commissioning Works','Administration','Service for Air Product','Vehicle Reservations','Technical Queries/Questions',
+          'undefined', 'Capital or Project Initiatives','Non-Maintanence Reservations', '03']
+
+    df = gen.filterDF(df, filters)
+
+
+    df.loc[:, ['Total mH', 'PMs mH', 'CMs mH', 'OTs mH']] = 0
+
+    modDF = df.copy()
+    for i in df.index:
+        modDF.loc[i,'Total mH' ] = df.loc[i,'Actual Duration Hours']
+        if df.loc[i, 'Job Type Description'] in CM:
+            modDF.loc[i,'CMs mH'] = df.loc[i,'Actual Duration Hours']
+        if df.loc[i, 'Job Type Description'] in PM:
+            modDF.loc[i,'PMs mH'] = df.loc[i,'Actual Duration Hours']
+        if df.loc[i, 'Job Type Description'] in OT:
+            modDF.loc[i,'OTs mH'] = df.loc[i,'Actual Duration Hours']
+    
+    
+    modDF = modDF.groupby(['Asset Description', 'Asset Number',]).sum()
+    modDF.reset_index(drop=False, inplace=True)
+
+    modDF['CMs'] = modDF['CMs mH']/ modDF['Total mH']
+    modDF['PMs'] = modDF['PMs mH']/ modDF['Total mH']
+    modDF['OTs'] = modDF['OTs mH']/ modDF['Total mH']
+    
+    modDF = modDF[['Asset Description', 'Asset Number', 'Total mH', 'CMs', 'PMs', 'OTs','CMs mH', 'PMs mH', 'OTs mH']]
+    modDF = modDF.sort_values(by=['Total mH'], ascending = False)
+
+    return modDF
 ### Сортировка количества raised WO по assets с детализацией по JobTypes
 def sorted_woRaised_assets(df, filters=[]):
     df = gen.filterDF(wo, filters)

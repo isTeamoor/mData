@@ -1,4 +1,4 @@
-from .impo import trades, tradeCodes
+from .impo import trades, tradeCodes, contactID
 from .DF__wo import wo
 from .DF__woComponent import woComponent
 
@@ -8,6 +8,9 @@ from .DF__woComponent import woComponent
 trades = trades.merge(wo,          on='Work Order ID',           how='left')
 trades = trades.merge(tradeCodes,  on='Trade Code ID',           how='left')
 trades = trades.merge(woComponent, on='Work Order Component ID', how='left')
+
+trades = trades.merge(contactID[['Contact ID', 'Trade Name']], how = 'left', left_on = 'Trade Contact ID', right_on = 'Contact ID')
+
 
 
 
@@ -32,9 +35,9 @@ trades['isCofETrade'] = trades['Trade Code Description'].copy().map(lambda x: 'y
 
 
 trades = trades[[
-'Work Order ID', 'Trade Code Description', 'isCofETrade',
+'Work Order ID', 'Trade Code Description', 'Trade Name','isCofETrade',
 'Estimated Duration Hours', 'Actual Duration Hours','Hourly Rate', 'Estimated Cost', 'Actual Cost', 
-'Work Order Number','Work Order Status Description','raisedYear', 'raisedMonth',
+'Work Order Number','Is Master Work Order','Work Order Status Description','raisedYear', 'raisedMonth',
 'Work Order Component Description', 'Job Code Major Description', 'Account Code', 'Account Code Description', 
 'closedYear', 'closedMonth', 'Priority Description', 'Department Name',
 'Short Department Name', 'isMaintenance', 'isRMPD',

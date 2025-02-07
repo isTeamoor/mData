@@ -49,11 +49,9 @@ def matReport(repMonth, repYear, department, transacts):
                              & (transactions['Catalogue Transaction Action Name']=='Issue') ].copy()
 
 
-
   ### 4. Возвраты за отчётный период
   currentReturn = transactions.loc[ (transactions['transactMonth'] == repMonth) & (transactions['transactYear'] == repYear)
                                    & (transactions['Catalogue Transaction Action Name']=='Return to Stock') ].copy()
-  
 
 
 

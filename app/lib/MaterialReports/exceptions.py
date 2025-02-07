@@ -21,10 +21,7 @@ def corrections(transactions):
                   ), 'Reserved By' ] = 'Mirjahon Toirov CofE'
     transacts.loc[ transacts['Reservation Number'].isin([6801,7605,7609,6802,6804,6805,6806,7237,7244,7604,7608,7238,7245,7611,7612,7650,7651,8477,8478,9088,9089,9092,7992,7993,8333,
                                                          8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'Mirjahon Toirov CofE'
-
-    #Корректировка рулон цинковый 0.002 разница
-    transacts.loc[ transacts['Reservation Number'] == 11217, 'Quantity'  ] = 0
-    
+   
 
 
     ### 2.Временные исключения для материальных отчётов
@@ -37,40 +34,42 @@ def corrections(transactions):
     
     #Это ОС
     transacts = transacts.loc[ ~(transacts['Reservation Number'].isin([15589,16946,
-                                                                       17501,17502,17503,17504,18755,])) ]
+                                                                       17501,17502,17503,17504,18755,20309,
+                                                                       20232])) ]
     
 
 
     #Не списывать CofE 4 AP
     transacts.loc[ transacts['Reservation Number'].isin([17113,16761,17100]), 'Work Order Status Description' ] = 'Pending for return'
 
-    #Забыл, списать в декабре
-    transacts.loc[ transacts['Reservation Number'].isin([17048,]), 'closedMonth' ] = 12
-
-    #Возврат 2 гаскета Мансур хасанов
-    transacts.loc[ (transacts['Reservation Number'].isin([15594,]))
-                   &
-                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 11
     #Возврат 8 и 4 гаскета Мансур хасанов Жду письмо
-    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'Work Order Status Description' ] = 'Pending for return'
+    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'Work Order Status Description' ] = 'Closed'
+    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedMonth' ] = 1
+    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedYear' ] = 2025
     transacts.loc[ (transacts['Reservation Number'].isin([15581,15582,]))
                    &
-                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2026
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2025
+    transacts.loc[ (transacts['Reservation Number'].isin([15581,15582,]))
+                   &
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 1
 
 
-    #Ошибка в данных CMMS
-    transacts.loc[ transacts['Reservation Number'].isin([13244,13245]), 'closedYear' ] = 2024
-    transacts.loc[ transacts['Reservation Number'].isin([13244,13245]), 'closedMonth' ] = 11
     #трубы с измененной ед.изм
     transacts.loc[ transacts['Reservation Number'].isin([15545,]), 'Quantity' ] *= -1
-    #транзакции почему то позже отчётного месяца
-    transacts.loc[ transacts['Reservation Number'].isin([17445,17444,17446,17179,17447]), 'transactMonth' ] = 11
 
     #Шохзод Юлдашев для SLU - он пока не в списке isRmpdPlaner
-    transacts.loc[ transacts['Reservation Number'].isin([19189,19146,19193,]), 'isRMPD_planner' ] = 'yes'
+    transacts.loc[ transacts['Reservation Number'].isin([19189,19146,19193,19666,19724,20441,19660,19679,21116,
+                                                         15560,19680,15145,20369,21117,]), 'isRMPD_planner' ] = 'yes'
 
     #Ошибочная транзакция спросил у складского Азизбека
     transacts = transacts.loc[ transacts['Reservation Number'] != 9793 ]
+    transacts = transacts.loc[ transacts['Reservation Number'] != 20791 ]
+
+    #Транзакция в январе, но дата февральская
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([146740, 146739]), 'transactMonth' ] = 1
+
+    #Проблема с возвратом Мирсаида
+    transacts.loc[ transacts['Reservation Number'].isin([19379,19380,19381,19382,19383,19384]), 'Work Order Status Description' ] = 'Pending for return'
 
 
 
@@ -97,7 +96,7 @@ inactive_Reservations= [
 7519,7520,7521,7522,7523,7758,
 2473,2475,2477,2479,2482,2484,2486,2567,3725,7502,7504,14740,14744,14747,14750,14754,14760,14763,14767,14781,14785,
 14742,14746,14749,14753,14756,14762,14765,14770,14783,14786,17034,17035,17036,17037,17039,17041,17042,17043,17044,17045,
-
+19732,19733,19734,19735,19736,19489,19488,19490,
 
 ]
 
@@ -131,13 +130,14 @@ extra = {
             {'Код товара':'12815','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Нержавекеющая сталь",'Ед.изм.':'кг','Quantity':0.84,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
 
             #Extra ppe (custom)
-            {'Код товара':'07139', 'Reservation Number':-4,'WO №':-4,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':'Спец.обувь мужские для рабочих,ГОСТ 28507-99', 'Ед.изм.':'пара', 'Quantity':2, 'Отдел':'RMPD','Reserved By':'RMPD','Asset Description':'Xasanov M, Shopulatov J', 'Объект':'Xasanov M, Shopulatov J'},
-            {'Код товара':'06899', 'Reservation Number':-5,'WO №':-5,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':'Куртка мужская с логотипом', 'Ед.изм.':'комплект', 'Quantity':1, 'Отдел':'RMPD','Reserved By':'RMPD','Asset Description':'Timur Isxakov', 'Объект':'Cost Controller'},
+            #{'Код товара':'07139', 'Reservation Number':-4,'WO №':-4,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':'Спец.обувь мужские для рабочих,ГОСТ 28507-99', 'Ед.изм.':'пара', 'Quantity':2, 'Отдел':'RMPD','Reserved By':'RMPD','Asset Description':'Xasanov M, Shopulatov J', 'Объект':'Xasanov M, Shopulatov J'},
+            #{'Код товара':'06899', 'Reservation Number':-5,'WO №':-5,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':'Куртка мужская с логотипом', 'Ед.изм.':'комплект', 'Quantity':1, 'Отдел':'RMPD','Reserved By':'RMPD','Asset Description':'Timur Isxakov', 'Объект':'Cost Controller'},
         
         ],
         'currentMonth':[
             #Бумага а4
-            #{'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':4,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':4,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            {'Код товара':'31158','Reservation Number':-5,'WO №':-5,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А3",'Ед.изм.':'пачка','Quantity':1,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
             
             #Met
             #Алюминий 14{'Код товара':'29422','Reservation Number':-6,'WO №':-6,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Алюмин 14",'Ед.изм.':'т','Quantity':1.9202,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
@@ -152,7 +152,7 @@ extra = {
             {'Код товара':'13688','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Кислород газообразный",'Ед.изм.':'м³','Quantity':0.12,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Корректировка Кислород', 'Объект':'Корректировка Кислород'},
             
             #Diesel
-            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':341.47,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':418,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
             #{'Код товара':'09683','Reservation Number':-2,'WO №':-2,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.036,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
@@ -160,14 +160,14 @@ extra = {
         ],
         'currentMonth':[
             #Бумага
-            #{'Код товара':'06944','Reservation Number':-3,'WO №':-3,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':4,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            {'Код товара':'06944','Reservation Number':-3,'WO №':-3,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':5,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Бумага', 'Объект':'Бумага'},
             
             #Diesel
-            {'Код товара':'06933','Reservation Number':-4,'WO №':-4,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':532,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-5,'WO №':-5,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':418,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-4,'WO №':-4,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':209,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-5,'WO №':-5,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':226,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
-            {'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':3.838,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
+            #{'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':3.838,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
         
             #Аргонбаллон
             #{'Код товара':'01874','Reservation Number':-7,'WO №':-7,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Аргон баллон 50л",'Ед.изм.':'шт','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Аргон баллон', 'Объект':'Аргон баллон'},

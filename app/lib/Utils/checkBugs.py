@@ -57,6 +57,6 @@ def check():
 
     ###Print
     reservBug.to_excel('reservBug.xlsx', index=False)
-    reservBug1.to_excel('reservBug1.xlsx', index=False)
-    openWO.to_excel('openWO.xlsx', index=False)
-    noAcc.to_excel('fix.xlsx', index=False)
+    #reservBug1.to_excel('reservBug1.xlsx', index=False)
+    #openWO.to_excel('openWO.xlsx', index=False)
+    #noAcc.to_excel('fix.xlsx', index=False)

@@ -54,6 +54,7 @@ contactID.insert(1, 'Completed By',        contactID['First Name'] + " " + conta
 contactID.insert(1, 'Cancelled By',        contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Requisition line By', contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Requested By',        contactID['First Name'] + " " + contactID['Last Name'])
+contactID.insert(1, 'Trade Name',          contactID['First Name'] + " " + contactID['Last Name'])
 
 
 isMasterWO['Is Master Work Order'] = 'yes'

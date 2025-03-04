@@ -257,6 +257,8 @@
 208964,208767,EWS for MAC/BAC,100-EWS-001
 208821,208822,Maintenance Manager,Gareth Jones Bryan
 245275,208822,Maintenance Manager,Gareth Jones Bryan
+208982,208828,Local IGV control panel for MAC/BAC (Train-1),110-LCP-IGV150
+208983,208828,Local IGV control panel for MAC/BAC (Train-2),110-LCP-IGV250
 209670,209664,Valve supervisor,Yusupov farrux
 214346,209664,F&G Supervisor ,Taniyev Rustam
 214359,209664,F&G Supervisor ,Taniyev Rustam
@@ -279,6 +281,7 @@
 245238,218224,Electrical Junior Technician,Hamdamov Muxammadali
 245242,218224,Electrical Junior Technician,Xurramov Bekzod
 226782,218248,Leading accountant,Sodiqov Yorqin Bahodirovich
+221508,218250,Специалист	,Saidislom Abduraximov
 218517,218255,Specialist,Abror Boltayev
 218519,218255,Specialist, Shohabbos Hazratkulov
 218520,218255,Specialist, Sherbekjon Ikromov
@@ -6218,6 +6221,7 @@
 246613,78370,Flow Element,183-FE-0001
 246614,78370,Flow Element,183-FE-0080
 246622,78370,Pressure Gauge,183-PG-0060
+266478,78370,Water MPS steam,183-XP-001
 78372,78371,Raw Water System,Unit 71
 78373,78371,Steam and Condensate System,Unit 72
 78374,78371,Power Generation System,Unit 73
@@ -12742,6 +12746,7 @@
 241984,80734,Fire Bell ,WR-FB-0032
 241985,80734,Fire Bell ,WR-FB-0033
 241986,80734,Fire Bell ,WR-FB-0034
+266630,80734,Exit Lighting group,WIM-EXL
 80738,80737,Chemical reagent storage shelter - temperature room,S05.1
 227923,80737,LIGHTING PANEL,S05-LP-06-01
 241277,80740,Local Control Panel ,JW-LCP-0001
@@ -13434,6 +13439,7 @@
 231669,80746,HVAC ROOM,B30-MCP-0001
 232599,80746,HVAC MCC,B30-HVAC-05-01
 232817,80746,SMOKE DETECTOR,B30-SD-0228
+266625,80746,Exit Lighting group,B30-EXL
 2776,80764,GAS DETECTOR,178-GT-0101
 2777,80764,GAS DETECTOR,178-GT-0102
 2779,80764,GAS DETECTOR,178-GF-0102
@@ -46501,6 +46507,7 @@
 208822,175188,Heads of departments,Non-routine staffs
 245220,175188,SGU Maintenance,Maintenance(SGU)
 260656,175188,Electrotechnical laboratory,Maintenance(ETL)
+266488,175188,Maintenance,UZGTL-220KV-Electrical substation
 175202,175190,Static Supervisor,Karimov Atobek Axmad o'g'li
 175228,175190,Electrical Engineer,Abdig`aniyev Valijon XXX
 175436,175190,Rotating  Engineer,Alaxaev Almaz Jaksilikovich
@@ -46538,6 +46545,7 @@
 221544,175190,Analyzer  Technician,Shaxrizod Orziyev
 223878,175190,Electric Junior Technician,Niyozov Abror Choriyevich
 224217,175190,Analyzer technician ,Erkinov Jambul To`lqinjon o`g`li
+245145,175190,Analyzer technician,Abdig'afforov Xurshid Abdiroziq o'g'li
 258102,175190,Rotating Junior Technician,Maqsadqulov Ma'ruf Yaxshiboy o'g'li
 260779,175190,Electric Junior Technician,Tayloqov Shahzod Abdurashid o'g'li
 175194,175191,Analyzer Supervisor,Normuminov Doston Almardon o'g'li
@@ -46766,9 +46774,8 @@
 208979,208828,EWS for Membrane Package,100-EWS-016
 208980,208828,EWS for MMS,100-EWS-017
 208981,208828,Special tools for PLC maintenance,100-TOOL-001
-208982,208828,Local IGV control panel for MAC/BAC (Train-1),110-LCP-IGV150
-208983,208828,Local IGV control panel for MAC/BAC (Train-2),110-LCP-IGV250
 209166,208828,EWS for MAC/BAC,100-EWS-001
+266491,208828,OWS for Back-up Air Compressor /Dryer Package,175-OWS-XP001-01
 209009,208829,AAM workstation,MCB-AAM-068
 209005,208830,BMS Engineer workstation,MCB-EWS-064
 209076,208830,BMS SYSTEM CABINET,R02-BMS-001
@@ -46841,6 +46848,7 @@
 209153,208831,TERMINATION PANEL CABINET,B18-TMP-002
 209157,208831,TERMINATION PANEL CABINET,B19-TMP-001
 209158,208831,TERMINATION PANEL CABINET,B19-TMP-002
+266490,208831,Operator workstation 4 Console 3,MCB-OWS-034
 209007,208832,FDM Engineer workstation,MCB-EWS-066
 209016,208832,RCI for FDM,R01-RCI-001
 209019,208832,RCI for FDM,R02-RCI-001
@@ -47277,6 +47285,7 @@
 229966,209167,Automatic disabled illuminate,B07-AD-0501
 231867,209167,SMOKE DETECTOR,B07-SD-0021
 232591,209167,HVAC MCC,B07-HVAC-05-01
+266620,209167,Exit Lighting group,B07-EXL
 211609,209168,AIR HANDLING UNIT,CLI-DAHU-01
 211610,209168,PRESSURIZATION UNIT,CLI-PU-01
 211611,209168,AIR COOLED CONDENSING UNIT,CLI-ACCU-01
@@ -47489,6 +47498,7 @@
 229566,209168,FIRE ALARM CONTROL PA,B09-FACP-0001
 229567,209168,DUCT SMOKE DETECTOR,B09-SD-0007
 232592,209168,HVAC MCC,B09-HVAC-05-01
+266621,209168,Exit Lighting group,B09-EXL
 211694,209169,AIR HANDLING UNIT,CTN-DAHU-01
 211695,209169,PRESSURIZATION UNIT,CTN-PU-01
 211696,209169,AIR COOLED CONDENSING UNIT,CTN-ACCU-01
@@ -47859,6 +47869,7 @@
 230207,209169,FIRE ALARM CONTROL PA,B10-FACP-0001
 232593,209169,HVAC MCC,B10-HVAC-05-01
 251499,209169,Solar panels,SP-Canteen-235kW
+266622,209169,Exit Lighting group,B10-EXL
 211844,209170,STEAM PUMPING TRAP,FSB-SPT-01
 211845,209170,STEAM PUMPING TRAP,FSB-SPT-02
 211846,209170,EXPANSION TANK,FSB-ET-01
@@ -48495,6 +48506,7 @@
 236934,209170,FIRE-BLDING,B11-FB-0002
 236935,209170,FIRE-BLDING,B11-FB-0001
 236936,209170,FIRE ALARM CONTROL PA,B11-FACP-0001
+266623,209170,Exit Lighting group,B11-EXL
 211979,209172,EXHAUST FAN,MCR-EFN-01A
 211980,209172,EXHAUST FAN,MCR-EFN-01B
 211981,209172,EXHAUST FAN,MCR-EFN-02
@@ -48782,6 +48794,7 @@
 250158,209172,AUTO/MANUAL SWITCH,B14-AM-0505
 250159,209172,AUTO/MANUAL SWITCH,B14-AM-0506
 251498,209172,Solar panels,SB-MCB-390 kW
+266624,209172,Exit Lighting group,B14-EXL
 212133,209173,HOT WATER DUCT HEATER,SS1-HDH-01
 212134,209173,HOT WATER DUCT HEATER,SS1-HDH-02
 212135,209173,HOT WATER DUCT HEATER,SS1-HDH-03
@@ -51556,6 +51569,7 @@
 235739,209194,GSS BLDING,B34-FB-0007
 235740,209194,GSS BLDING,B34-FB-0006
 235741,209194,GSS BLDING,B34-FB-0005
+266626,209194,Exit Lighting group,B34-EXL
 209284,209283,MONITOR HYDRANT,Fire Monitor
 209285,209283,Fire Water Deluge Valve ,FW Deluge Valve
 209286,209283,FOAM SYSTEM PACKAGE,Foam System
@@ -51950,6 +51964,8 @@
 209637,209288,Outdoor Hose Reel,183-OHR-025
 209638,209288,Outdoor Hose Reel,184-OHR-001
 209639,209288,Outdoor Hose Reel,184-OHR-002
+266479,209516,Pressure Safety Valve,183-PSV-002A
+266480,209517,Pressure Safety Valve,183-PSV-002B
 175258,209664,Instrumentation Junior Technician,Qiyomov Mansur Ahmad o'g'li
 209665,209664,Head of Department,Xudayshukurov Safarali Xolmamatovich
 209668,209664,F&G system Supervisor,Taniyev Rustam Tashmuratovich
@@ -52108,6 +52124,7 @@
 240331,209745,Fire Bell ,WSH-FB-0019
 251503,209745,Solar panels,SP-MRB-150 kW
 266008,209745,Work shop Solar water heater,WSH-SWH-001
+266629,209745,Work shop Exit Lighting group,WSH-EXL
 210005,209786,ESD stop (local) Button to 10-IS-1004,110-MPXS-202L
 209868,209820,Multiparameter Converter,110-FT-2003
 209871,209821,Differential Pressure Transmitter -Flow,110-FT-2009
@@ -52774,6 +52791,10 @@
 213552,211499,PRESSURE DIFFERENTIAL SWITCH,GSC-PDS-004
 213553,211499,PRESSURE DIFFERENTIAL SWITCH,GSC-PDS-005
 213554,211499,PRESSURE DIFFERENTIAL SWITCH,GSC-PDS-006
+266568,211499,Gas smoke chamber,B34-SD-0407
+266569,211499,Gas smoke chamber,B34-SD-0408
+266570,211499,Gas smoke chamber,B34-BR-0021
+266571,211499,GAS SMOKE CHAMBER,B34-FGH-0021A
 213632,211500,ANALYZERS SHELTER AIR CONDITIONER,120-AS-001-AC01
 213633,211501,ANALYZERS SHELTER AIR CONDITIONER,120-AS-002-AC01
 213634,211502,ANALYZERS SHELTER AIR CONDITIONER,120-AS-003-AC01
@@ -54075,11 +54096,15 @@
 264397,218246,Watchmen,Xolmurodov Soibnazar Mamatraim o'g'li
 175229,218247,Specialist,Abdiyev Abdirashid Zafar o'g'li
 221657,218247,Specialist,Sultanov Bexzod Farruxovich
-222184,218247,senior specialist,Maxmatqulov Jahongir Bahrom o'g'li
+222184,218247,Senior specialist,Maxmatqulov Jahongir Bahrom o'g'li
 222185,218247,specialist,Achilov A'zam Shakirjonovich
-222186,218247,junior specialist,Jabborov Rustam Amirqul o`g`li
+222186,218247,Junior Specialist,Jabborov Rustam Amirqul o`g`li
 224002,218247,Specialist,Narmetov Sardor Botirali o'g'li
 231796,218247,Specialist,Ubaydullaev Sarvar Asrorovich
+266474,218247,Head of Department,Tadjimov Akbarjon Fayzullayevich
+266475,218247,Specialist,Mustafin Marat Saidovich
+266476,218247,Junior Specialist,Arabjonov Akbar Adham o'g'li
+266477,218247,Senior specialist,Atajanov Ne'matjon Urazbayevich
 220061,218248,Specialist,Azimov Javohir Odil o'g'li
 221427,218248,Leading Accountant,Ibragimov Jahongir Tillayevich
 221428,218248,Accountant,Orziyev Shahzodbek Xoliqul o'g'li
@@ -54100,6 +54125,7 @@
 260764,218248,Accountant,Norturayev Mansurbek Obid o'g'li
 262770,218248,Accountant,Raximov Doniyor Sevarovich
 262771,218248,Accountant,Saidova Ra'no Abdullayevna
+266653,218248,Payments and Banking Operations Group Leading Accountant,Mirabdullaxojayeva Shaxrizoda Baxtiyarovna
 219744,218249,Junior specialist,Rixsiboyeva Nodira Umar qizi
 221664,218249,Senior specialist,Khaydarov Makhammadjon Khusaynovich
 221665,218249,Specialist,Ibrokhimov Alisher Khasan o'g'li
@@ -54108,7 +54134,13 @@
 221668,218249,Specialist,Khamidullaev Timur Begdullayevich
 221669,218249,Senior specialist,Mansurov Mamurjon Mansur o'g'li
 262809,218249,Leading Specialist,Qudratov Sherzod Kamolovich
-221508,218250,Специалист	,Saidislom Abduraximov
+266506,218250,Insurance senior specialist,Abduraimov Umid Muratovich
+266507,218250,Specialist,Chilek Iroda Shuxratovna
+266508,218250,Head of department,Argov Kirill Vladislavovich
+266509,218250,Deputy head of department,Turdialiyev Abdumalik Raxmonjon o'g'li
+266510,218250,Junior specialist,Murodilloyeva Mashhura Ulug'bek qizi
+266511,218250,Consultant on international standards of financial reporting,Mulaxmetova Oksana Ivanovna
+266512,218250,Senior specialist,A’zamov Alisher Nodirbek o'g'li
 220001,218252,Junior specialist,Rakhimov Bokhodir Pardaevich
 220002,218252,Junior specialist,Rakhimov Akhror Dustyor o'g'li
 220003,218252,Junior specialist,Makhmatkulov Doniyor Bakhtiyor o'g'li
@@ -54168,6 +54200,8 @@
 262781,218257,Junior Specialist,Ochilov Komil Qobil o'g'li
 266233,218257,Leading specialist,Qudratov Shoxrux Gulmurodovich
 263030,218259,Legal councel,Qudratov Farruh Pirmatovich
+266572,218259,Senior legal council,Mamajonova Xamida Mirsadikovna
+267071,218259,Head of Department,Miraxmedov Bekzod Alisherovich
 218313,218261,Driver (Crane),Abdimajidov Avazbek Abdusalom o'g'li
 218314,218261,Leading Dispacher,Abduraxmonov Abdulloh Olimovich
 218315,218261,Vehicle Driver,Abrayev Zufar  Sadullayevich
@@ -54759,7 +54793,6 @@
 226240,218533,Trainee,Jonqabilov Ramozon Mengliboyevich
 227837,218533,Trainee,Shaturov Abdumo`min Safarovich
 245144,218533,Trainee,Nekkiyev Shonazar Shoniyoz o'g'li
-245145,218533,Trainee,Abdig'afforov Xurshid Abdiroziq o'g'li
 245149,218533,Trainee,Jurayev Behruz Firuz o'g'li
 245150,218533,Trainee,Arabov Tursunmurod Elmurodovich
 245305,218533,Trainee,Baxronov Axror Shokir o`g`li
@@ -54775,6 +54808,7 @@
 262769,218533,Trainee,Ro'ziqulov Jasur Dilshod o'g'li
 263348,218533,Trainee,Normatov Javhoir Komil o'g'li
 264104,218533,Trainee,Qudratbekov Sardorbek Ulug'bek o'g'li
+266292,218533,Trainee,Nasilloyev Ziyodillo Otabekovich
 175234,219752,Static Technician,Ashrapov Kamoliddin Badriddin o'g'li
 175463,219752,Senior Planner,Xamroyev Ulug'bek Maksudovich
 175467,219752,Planner,Yuldoshev Shohzod Shuhrat o'g'li
@@ -55073,6 +55107,7 @@
 240374,226295,Manual Call Point ,HT-MCP-0005
 240375,226295,Fire Bell ,HT-FB-0001
 266009,226295,Hitachi Solar water heater,HT-SWH-001
+266627,226295,Exit Lighting group,Hit-EXL
 227352,227351,Custody transfer metering unit,CTM
 220421,228779,ACCU of HVAC System (for 6 months: includes -104 equipment.),ACCU-1
 220422,228779,ACCU of HVAC System (for 24 months: includes -20 equipment.),ACCU-2
@@ -56969,6 +57004,7 @@
 257985,240053,CAMP-TR-2A,CAMP-TR-2A
 257986,240053,CAMP-TR-2A,CAMP-TR-2B
 266011,240053,Campus solar water heater,CAMP-TSWH-001
+266628,240053,Exit Lighting group,Camp-EXL
 243816,243815,VIBRATION TRANDUCER,172-VE-3001Y
 244935,244934,PRESSURE GAUGE,172-PG-0672
 244953,244952,TEMPERATURE GAUGE,172-TG-0700
@@ -57182,3 +57218,15 @@
 219995,266021,quality control inspector,Mustafoyev Humoyun Ubaydulla o`g`li
 219999,266021,quality control inspector,Xamrayev Axat Xolliyarovich
 220000,266021,quality control inspector,Daminov Mirshod Abdijalil o`g`li
+266481,266478,Pressure Safety Valve,183-PSV-001A
+266482,266478,Pressure Safety Valve,183-PSV-001B
+266489,266488,Deputy head of department,Panjiyev Toshtemir Jumayevich
+266492,266488,SS Engineer ,Doliyev Uktam Sadatovich
+266493,266488,SS Engineer ,Karimov Abdulla Murodulla O’g’li
+266494,266488,SS Engineer ,Ruziyev Alisher Zokir O‘g‘li
+266495,266488,SS Accountant,G‘afforov G‘anisher Maxmadustovich
+266496,266488,SS Technician ,Elbekov Doston Rustam O’g’li
+266497,266488,SS Electrician,Holiqulov Nurbek Zarif O‘g‘li
+266498,266488,SS Electrician,Choʻyanov Bekzod Ziyodulla Oʻgʻli
+266499,266488,SS Electrician,Saparov Azizjon Xatam Oʻgʻli
+266500,266488,SS Electrician,Eshqurbonov Ural Qorjov Oʻgʻli

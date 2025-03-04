@@ -8,6 +8,7 @@ from ..database import DF__assets
 from ..database import DF__requests
 from ..database import DF__tasks
 from ..database import DF__budget
+from ..database import DF__reservations
 
 
 router = APIRouter(
@@ -29,6 +30,11 @@ def dframe_spares():
 def dframe_wo():
     DF__wo.wo.to_excel('wo.xlsx', index=False)
     return {'wo':'ok'}
+
+@router.get('/reservations')
+def dframe_wo():
+    DF__reservations.reservations.to_excel('reservations.xlsx', index=False)
+    return {'reservations':'ok'}
 
 @router.get('/transactions')
 def dframe_transactions():

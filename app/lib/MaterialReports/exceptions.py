@@ -1,11 +1,33 @@
 def corrections(transactions):
-    ### 1.Постоянные исключения для материальных отчётов
     transacts = transactions.loc[ transactions['Код товара']!='00nan'].copy() 
+
+
+
+    ### 1. Это ОС ##############################################################################################
+    #CofE
+    transacts = transacts.loc[ ~(transacts['Reservation Number'].isin([15589,20309,
+                                                                       20232,
+                                                                       22884,23146,23147,23148,23149,23150,23152,
+                                                                       ])) ]
+    #RMPD
+    transacts = transacts.loc[ ~(transacts['Reservation Number'].isin([16946,
+                                                                       17501,17502,17503,17504,18755,20232])) ]
+    ############################################################################################################
+
+
+
+
+    ### 2. Единицы измерения ###################################################################################
     #Электроды кг -> тн
     transacts.loc[ transacts['Код товара']=='05140', 'Quantity' ] /= 1000
     transacts.loc[ transacts['Код товара']=='05140', 'Ед.изм.' ] = 'тн'
+    ############################################################################################################
 
-    #До перехода Миржахона, часть материала была уже списана
+
+
+
+    ### 3. Переход Миржахона ###################################################################################
+    #Часть материала была уже списана до меня
     transacts.loc[ transacts['Reservation Number'] == 5388, 'Quantity' ] = 162
     transacts.loc[ transacts['Reservation Number'] == 4450, 'Quantity' ] = 4794.598
 
@@ -19,59 +41,62 @@ def corrections(transactions):
                     |
                     (transacts['Reserved By']=='Mirjahon Toirov Ilxom o`g`li')
                   ), 'Reserved By' ] = 'Mirjahon Toirov CofE'
+    
     transacts.loc[ transacts['Reservation Number'].isin([6801,7605,7609,6802,6804,6805,6806,7237,7244,7604,7608,7238,7245,7611,7612,7650,7651,8477,8478,9088,9089,9092,7992,7993,8333,
                                                          8334,8851,9140,9157,9160,9158,9162,9159,9161,7752,8475 ]), 'Reserved By' ] = 'Mirjahon Toirov CofE'
-   
+   ############################################################################################################
 
 
-    ### 2.Временные исключения для материальных отчётов
-    
-    #Тулкинакя, будет возврат на склад
+
+
+
+    ### 4. Возвраты #############################################################################################
+    #Листовые фильтры Мансур Хасанов, Тулкинакя
     transacts.loc[ transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]), 'Work Order Status Description' ] = 'Pending for return'
     transacts.loc[ (transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]))
                    &
                    (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2026
     
-    #Это ОС
-    transacts = transacts.loc[ ~(transacts['Reservation Number'].isin([15589,16946,
-                                                                       17501,17502,17503,17504,18755,20309,
-                                                                       20232])) ]
-    
-
-
-    #Не списывать CofE 4 AP
+    #Не списывать CofE 4 AP будут возвращать
     transacts.loc[ transacts['Reservation Number'].isin([17113,16761,17100]), 'Work Order Status Description' ] = 'Pending for return'
-
-    #Возврат 8 и 4 гаскета Мансур хасанов Жду письмо
+    
+    #Возврат 8 и 4 гаскета Мансур хасанов. Можно удалить в марте
     transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'Work Order Status Description' ] = 'Closed'
-    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedMonth' ] = 1
+    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedMonth' ] = 2
     transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedYear' ] = 2025
     transacts.loc[ (transacts['Reservation Number'].isin([15581,15582,]))
                    &
                    (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2025
     transacts.loc[ (transacts['Reservation Number'].isin([15581,15582,]))
                    &
-                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 1
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 2
+    
+    #!Проблема с возвратом Мирсаида
+    transacts.loc[ transacts['Reservation Number'].isin([19379,19380,19381,19382,19383,19384]), 'Work Order Status Description' ] = 'Pending for return'
 
+    #!Будет возврат Мирсаид Хайдоров GAS 900
+    transacts.loc[ transacts['Reservation Number'].isin([20053,]), 'closedMonth' ] = 2
+    ############################################################################################################
 
-    #трубы с измененной ед.изм
-    transacts.loc[ transacts['Reservation Number'].isin([15545,]), 'Quantity' ] *= -1
+    
+    
+
+    ### 5. Технические ошибки ##################################################################################
+    #Ошибочная транзакция спросил у складского Азизбека. Можно удалить в мартовском
+    transacts = transacts.loc[ transacts['Reservation Number'] != 9793 ]
+
+    #Транзакция в январе, но дата февральская
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([146740, 146739]), 'transactMonth' ] = 1
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([146739,]), 'reservMonth' ] = 1
+
+    #Корректировка аргон 11062. добавить +0.04 в приход в февральском (Reservation -19216, +23294)
+    transacts.loc[ transacts['Catalogue Transaction ID']==144682, 'Quantity' ] = 6.61
+    transacts.loc[ transacts['Catalogue Transaction ID']==149213, 'Quantity' ] = 12.64
 
     #Шохзод Юлдашев для SLU - он пока не в списке isRmpdPlaner
     transacts.loc[ transacts['Reservation Number'].isin([19189,19146,19193,19666,19724,20441,19660,19679,21116,
                                                          15560,19680,15145,20369,21117,]), 'isRMPD_planner' ] = 'yes'
-
-    #Ошибочная транзакция спросил у складского Азизбека
-    transacts = transacts.loc[ transacts['Reservation Number'] != 9793 ]
-    transacts = transacts.loc[ transacts['Reservation Number'] != 20791 ]
-
-    #Транзакция в январе, но дата февральская
-    transacts.loc[ transacts['Catalogue Transaction ID'].isin([146740, 146739]), 'transactMonth' ] = 1
-
-    #Проблема с возвратом Мирсаида
-    transacts.loc[ transacts['Reservation Number'].isin([19379,19380,19381,19382,19383,19384]), 'Work Order Status Description' ] = 'Pending for return'
-
-
+    ############################################################################################################
 
     return transacts
 
@@ -107,6 +132,10 @@ inactive_Master_Reservations  = [
 1849,1852,2278,2307,2335,2648,2649,2679,2816,2908,2955,2956,2957,2959,3146,3147,3148,3203,3204,5527,5528,5536,782,6161,6162,7657,
 6744,6766,6773,6828,6917,6985,7104,7299,7300,7301,7554,
 8580,
+### RMPD
+2823,12369,12370,12371,12373,12377,13012,16535,16536,16787,16827,16829,16830,17141,17148,17149,17150,17155,18700,
+18703,18896,18897,18907,18958,19103,19226,19295,19296,19297,19298,19308,19320,19333,19336,19398,19399,19409,19410,
+19445,19492,19512,19513,19613,19861,20146,20207,20208,20210,20251,20340,20342,20347,20360,23112,
 """
 #52090:
 5388, 5877,6964,
@@ -115,6 +144,8 @@ inactive_Master_Reservations  = [
 #94411:
 10138, 10340, 10341,
 """
+
+
 ]
 
 
@@ -152,7 +183,8 @@ extra = {
             {'Код товара':'13688','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Кислород газообразный",'Ед.изм.':'м³','Quantity':0.12,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Корректировка Кислород', 'Объект':'Корректировка Кислород'},
             
             #Diesel
-            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':418,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':166,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':2025,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':60,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
             #{'Код товара':'09683','Reservation Number':-2,'WO №':-2,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.036,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
@@ -160,17 +192,21 @@ extra = {
         ],
         'currentMonth':[
             #Бумага
-            {'Код товара':'06944','Reservation Number':-3,'WO №':-3,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':5,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            #{'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':5,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Бумага', 'Объект':'Бумага'},
             
             #Diesel
-            {'Код товара':'06933','Reservation Number':-4,'WO №':-4,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':209,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-5,'WO №':-5,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':226,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            #{'Код товара':'06933','Reservation Number':-5,'WO №':-5,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':209,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            #{'Код товара':'06933','Reservation Number':-6,'WO №':-6,'closedMonth':0,'closedYear':2024,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':226,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
             #{'Код товара':'09683','Reservation Number':-6,'WO №':-6,'closedMonth':12,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':3.838,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
         
             #Аргонбаллон
             #{'Код товара':'01874','Reservation Number':-7,'WO №':-7,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Аргон баллон 50л",'Ед.изм.':'шт','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Аргон баллон', 'Объект':'Аргон баллон'},
+            
+            #Половая тряпка
+            {'Код товара':'00094','Reservation Number':-7,'WO №':-7,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Половая тряпка",'Ед.изм.':'м','Quantity':100,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Половая тряпка', 'Объект':'Половая тряпка'},
+            
             ],
         'currentReturn':[]
     },

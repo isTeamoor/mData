@@ -37,16 +37,6 @@ spares['Actual Cost']    = spares['Actual Quantity'] * spares['Estimated Unit Co
 spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit Cost']
 
 
-### Exception корректировка handover certificate CofE
-spares.loc [ (spares['Work Order Number'].isin([120127, ]))
-            &(spares['Work Order Spare Description'] == 'Аргон газообразный'), 'Asset Number'] = 'SGU'
-spares.loc [ (spares['Work Order Number'].isin([120127, ]))
-            &(spares['Work Order Spare Description'] == 'Аргон газообразный'), 'closedMonth'] = 10
-
-spares.loc [ spares['Reservation Number'].isin([13288, 13365]), 'Asset Number'] = 'SGU'
-spares.loc [ spares['Reservation Number'].isin([13288, 13365]), 'closedMonth'] = 10
-
-
 
 
 

@@ -60,7 +60,7 @@ is_014 = [
 '33094','33095','33096','33097','33098','33099','33100','33101','33102','33103','33104',
 
 #Кабель (Бобур использовал 1 раз, не может вернуть)
-'15698',
+#'15698',
 ]
 
 is_wOff = ['09327', '09326', '07483', '12478', '09859',
@@ -130,9 +130,8 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
     ### Master Reservations с реальным Qty, учитывающим уменьшение от Return to Stock
     MRs = targetDF.copy().groupby(['Reservation Number', 'Код товара', 'Материал', 'Ед.изм.', 'Work Order Status Description', 'closedMonth',
                                    'Отдел', 'Reserved By', 'WO №', 'reservYear', 'reservMonth', 'Asset Description', 'Объект', 'closedYear',
-                                   'transactYear','transactMonth','Catalogue Number','isRMPD_planner','raisedYear','raisedMonth','isRMPD',]).sum()
+                                   'Catalogue Number','isRMPD_planner','raisedYear','raisedMonth','isRMPD',]).sum()
     MRs.reset_index(drop=False, inplace=True)
-
 
     ### Список spares с комментом-ссылкой на master Reservations
     childSpares = spares.loc[ (~spares['Spares Comment'].isna()) 
@@ -140,6 +139,15 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
                               (spares['Spares Comment'].str.isnumeric())
                             ].copy()
     childSpares['Spares Comment'] = childSpares['Spares Comment'].astype(float)
+
+    """### Exception overlimit Bobur
+    childSpares = childSpares.loc[ ~((childSpares['Work Order Number']==137430)
+                                  &
+                                  (childSpares['Spares Comment']==22611))]
+    childSpares.loc[ (childSpares['Work Order Number']==126413)
+                    &
+                    (childSpares['Spares Comment']==5387), 'Estimated Quantity'] = 8.74"""
+
 
 
 
@@ -265,6 +273,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
                                 & (targetDF['transactMonth'] == repMonth)
                                 & (targetDF['transactYear'] == repYear)
                                 ]
+        
 
         pseudoTransaction['Quantity'] = Limits2.loc[
                                                     Limits2['master Reservation №'] == MR['Reservation Number'], 'Remain Qty'
@@ -286,4 +295,5 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
             'master Reservation material',	'master Reservation Qty',	'Work Order Spare Description',	'Estimated Quantity',	'Work Order Number',	'Work Order Description',
             'Work Order Status Description', 'closedMonth', 'closedYear',	'Asset Description',	'Asset Number']].to_excel('limits.xlsx', index=False)
     Limits2.to_excel('limits2.xlsx', index=False)
+
     return transacts

@@ -15,9 +15,9 @@ transactions = transactions.merge(uom,              how='left', on='UOMID')
 
 
 
-transactions['Catalogue Transaction Date Time'] = pd.to_datetime(transactions['Catalogue Transaction Date Time'], format="%d/%m/%Y %H:%M:%S %p")
-transactions['transactYear']  = transactions['Catalogue Transaction Date Time'].dt.year
-transactions['transactMonth'] = transactions['Catalogue Transaction Date Time'].dt.month
+transactions['Created Date Time'] = pd.to_datetime(transactions['Created Date Time'], format="%d/%m/%Y %H:%M:%S %p")
+transactions['transactYear']  = transactions['Created Date Time'].dt.year
+transactions['transactMonth'] = transactions['Created Date Time'].dt.month
 
 
 

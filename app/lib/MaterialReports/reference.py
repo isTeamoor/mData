@@ -40,11 +40,11 @@ is_014 = [
 '01350', '01371', '01380', '01381', '01383', '01384', '01385', '01386', '01394', '01395', '01396', '01398', '01399', '01589', '01639', '01606', '01620', '02835', '00189', '00745', '00140', '00230', '00738', '05232',
 '05231', '00899', '00155', '00114', '00157', '00526', '00113', '01201', '01202', '01203', '01204', '06340', '02911', '02912', '02913', '07481', '07407', '07473', '07403', '02802', '03229', '05305', '06122', '06332',
 '06900', '07497', '07883', '07882', '09300', '07331', '05831', '09767', '01875', '04183', '09359', '02811', '07626', '07627', '07628', '07629', '07616', '07617', '10920', '05157', '28160', '28335', '09361', '09331',
-'08008', '03014', '06326', '00704', '05824', '09605', '09606', '12414', '09608', '01517', '02838', '11063', '02794', '10518', '12500', '27290', '24631', '06304', '06331', '12497', '12499', '19400', '09332',
+'03014', '06326', '00704', '05824', '09605', '09606', '12414', '09608', '01517', '02838', '11063', '02794', '10518', '12500', '27290', '24631', '06304', '06331', '12497', '12499', '19400', '09332',
 '01572', '01585', '30445', '05318', '01874', '06333', '16999', '02907', '31108', '05965', '29618', '02032', '02033', '18881', '21146', '26188', '02803', 
 '29764','29763','29762','29767','29768','29769','29770','29771','29772','29773','29774','29775','29776','29777','29778','29779','29780','29765','29766','29760','29759','29757','29755','29756',
 '29739','29740','29741','29742','29743','29744','29745','29746','29747','29748','29749','29750','29761','29733','29751','29752','29753','29758','29738','29731','29732','29737','29734','29735',
-'29736','29754',
+'29736','29754','33553',
 
 #инструменты от ЕЕ
 '30741','30742','30743','30744','30745','30746','30747','30748','30749','30750','30751','30752','30753','30754',
@@ -58,14 +58,23 @@ is_014 = [
 
 #Контейнеры
 '33094','33095','33096','33097','33098','33099','33100','33101','33102','33103','33104',
+'32795','32796','32797','32798','32799','32800','32801','32802','32803','32804','32805','32806','33152',
 
 #Кабель (Бобур использовал 1 раз, не может вернуть)
 #'15698',
+
+#Инструменты с TAR
+'03014','30640','31438','31438','31364','31365','24788','24787','00705','00706','00707','00708','00691','00692',
+'00693','00694','00695','00703','00702','00704','00701','30642','32399','32400','32401','32402','32403','32404',
+'32405','32406','32407','32408','32409','32410','32411','32412','32413','32414','32415','32416','32417','32418',
+'01619',
 ]
 
 is_wOff = ['09327', '09326', '07483', '12478', '09859',
-           '07536', '05328', '06949', '09607', '16801', '09360', '11316','09297']
+           '07536', '05328', '06949', '09607', '16801', '09360', '11316','09297','08008',]
 
+tempSave = [
+]#!Reservation number
 
 
 
@@ -113,18 +122,16 @@ def OneCW():
 def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear):
     transacts = transactions.copy()
 
+
+
+
     ### Список Master Reservations
     targetDF = transacts.loc[(transacts['Is Master Work Order'] == 'yes') 
                              & 
                              (~(transacts['Reservation Number'].isin(inactive_Master_Reservations)))
                              ]
 
-    ### Проверка, есть ли возвраты для Master Reservations
-    if targetDF.loc[targetDF['Catalogue Transaction Action Name'] == 'Return to Stock'].size != 0:
-        print('there ARE master reservations with return to stock\n',
-              targetDF.loc[targetDF['Catalogue Transaction Action Name'] != 'Issue'])
-    else:
-        print('there are NO master reservations with return to stock')
+
 
 
     ### Master Reservations с реальным Qty, учитывающим уменьшение от Return to Stock
@@ -132,6 +139,26 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
                                    'Отдел', 'Reserved By', 'WO №', 'reservYear', 'reservMonth', 'Asset Description', 'Объект', 'closedYear',
                                    'Catalogue Number','isRMPD_planner','raisedYear','raisedMonth','isRMPD',]).sum()
     MRs.reset_index(drop=False, inplace=True)
+
+
+
+
+    ### Возвращает transactMonth, transactYear из-за потери после группировки
+    for i, row in MRs.iterrows():
+        originalData = targetDF[(targetDF['Reservation Number'] == row['Reservation Number']) 
+                                &
+                                (targetDF['Catalogue Transaction Action Name'] == 'Issue')]
+        if len(originalData)>1:
+            print('Error, 2 times taken: ', row['Reservation Number'])
+            return
+        if len(originalData)==1:
+            MRs.at[i, 'transactMonth'] = originalData['transactMonth'].iloc[0]
+            MRs.at[i, 'transactYear']  = originalData['transactYear'].iloc[0]
+        else:
+            print('Error, not found: ', row['Reservation Number'])
+            return
+        
+
 
     ### Список spares с комментом-ссылкой на master Reservations
     childSpares = spares.loc[ (~spares['Spares Comment'].isna()) 
@@ -151,7 +178,6 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
 
 
-
     Limits = pd.DataFrame()
 
     checkHasValues = False
@@ -159,8 +185,10 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
 
 
     for i, MR in MRs.iterrows():
-        if childSpares.loc[childSpares['Spares Comment'] == MR['Reservation Number']].size != 0:
+        # Проверка - есть ли вобще изменения в лимите для каждой master Reservation
+        if childSpares.loc[ childSpares['Spares Comment'] == MR['Reservation Number'] ].size != 0:
             checkHasValues = True
+
             for i, childSpare in childSpares.loc[childSpares['Spares Comment'] == MR['Reservation Number']].iterrows():
                 record = pd.DataFrame({
                     'master WO №': MR['WO №'],
@@ -170,8 +198,8 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
                     'master Reservation material': MR['Материал'],
                     'master Reservation Material Code': MR['Код товара'],
                     'master Reservation Qty': MR['Quantity'],
-                    'master Reservation reservYear': MR['reservYear'],
-                    'master Reservation reservMonth': MR['reservMonth'],
+                    'master Reservation transactYear': MR['transactYear'],
+                    'master Reservation transactMonth': MR['transactMonth'],
                     'is child transaction': 'yes'
                 }, index=[0])
                 for key in childSpare.index:
@@ -188,18 +216,19 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
                 'master Reservation material': MR['Материал'],
                 'master Reservation Material Code': MR['Код товара'],
                 'master Reservation Qty': MR['Quantity'],
-                'master Reservation reservYear': MR['reservYear'],
-                'master Reservation reservMonth': MR['reservMonth'],
+                'master Reservation transactMonth': MR['transactMonth'],
+                'master Reservation transactYear': MR['transactYear'],
                 'is child transaction': 'no'
             }, index=[0])
 
             Limits = pd.concat([Limits, record]).reset_index(drop=True)
     
     
+    ### Если ни одного изменения не было, то отмена
     if checkHasValues == False:
         print('no changes in limits')
         return transacts
-    print('there ARE changes in limits')
+    print('limits were changed')
 
 
 
@@ -208,6 +237,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
     Limits.loc[ Limits['master Reservation Material Code']=='05140','Estimated Quantity' ] /= 1000
     Limits.loc[ Limits['master Reservation Material Code']=='05140','UOMDescription' ] = 'тн'
     #######################################################################################
+
 
 
 
@@ -247,8 +277,8 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
             'Work Order Status Description': childSpare['Work Order Status Description'],
             'closedMonth': childSpare['closedMonth'],
             'closedYear': childSpare['closedYear'],
-            'transactMonth': childSpare['master Reservation reservMonth'],
-            'transactYear': childSpare['master Reservation reservYear'],
+            'transactMonth':childSpare['master Reservation transactMonth'],
+            'transactYear': childSpare['master Reservation transactYear'],
             'Отдел': childSpare['Short Department Name'],
             'Reserved By': childSpare['master Reservation Reserved By'],
             'WO №': childSpare['Work Order Number'],
@@ -268,6 +298,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
             pseudoTransaction[field] = MR[field]
             pseudoTransaction['Catalogue Transaction Action Name'] = 'Issue'
 
+
         returned = targetDF.loc[(targetDF['Catalogue Transaction Action Name'] == 'Return to Stock')
                                 & (targetDF['Reservation Number'] == MR['Reservation Number'])
                                 & (targetDF['transactMonth'] == repMonth)
@@ -278,6 +309,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
         pseudoTransaction['Quantity'] = Limits2.loc[
                                                     Limits2['master Reservation №'] == MR['Reservation Number'], 'Remain Qty'
                                                     ].item() - returned['Quantity'].sum().item() 
+        
         pseudoTransaction = pd.DataFrame(pseudoTransaction, index=[0])
         transacts = pd.concat(
             [transacts, pseudoTransaction]).reset_index(drop=True)
@@ -291,7 +323,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
                 transacts = pd.concat(
                     [transacts, pseudoTransaction]).reset_index(drop=True)
 
-    Limits[['master Reservation Reserved By',	'master WO №',	'master WO Status',	'master Reservation №',	'master Reservation reservMonth',	'master Reservation Material Code',
+    Limits[['master Reservation Reserved By',	'master WO №',	'master WO Status',	'master Reservation №',	'master Reservation Material Code',
             'master Reservation material',	'master Reservation Qty',	'Work Order Spare Description',	'Estimated Quantity',	'Work Order Number',	'Work Order Description',
             'Work Order Status Description', 'closedMonth', 'closedYear',	'Asset Description',	'Asset Number']].to_excel('limits.xlsx', index=False)
     Limits2.to_excel('limits2.xlsx', index=False)

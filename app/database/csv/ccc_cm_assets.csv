@@ -8568,6 +8568,7 @@
 263115,78382,Pressure Safety Valve for Foam system,184-PSV-001A
 263502,78382,Air elemenator,184-AE-0320
 266281,78382,TRUCK WEIGH BRIDGE,184-XX-011
+267345,78382,Kerosene loading arm swivel joint,184-XX-007
 99497,78384,SULFURIC ACID TANK,187-TK-001
 99498,78384,CAUSTIC SODA STORAGE TANK,187-TK-002
 99504,78384,Nitrogen(G) / GAS,187-PSV-0001
@@ -15069,6 +15070,8 @@
 252378,81273,FLOW ELEMENT,135-FE-0009
 252379,81273,FLOW ELEMENT,135-FE-0900
 257488,81273,Blower Motor_Process Dryer Package,135-XP-002-CB-047-M
+267342,81273, Bearing for Fan Shaft,135-XP-002-EA-043-F01
+267343,81273,Bearing for Fan Shaft,135-XP-002-EA-043-F02
 81019,81274,PRESSURE GAUGE,135-PG-0920A
 81020,81274,PRESSURE GAUGE,135-PG-0920B
 81021,81274,PRESSURE GAUGE,135-PG-0920C
@@ -16526,7 +16529,7 @@
 82540,82450,2nd Working Holding Ejector,130-XP-124-XJ-03B
 171886,82450,TBD,130-XP-124-EA-02-M
 171887,82450,TBD,130-XP-124-EA-03-M
-171888,82450,TBD,130-XP-124-EA-04-M-VSD
+171888,82450,TBD,130-XP-124-EA-04-M
 247814,82450,PRESSURE TRANSMITTE																																																																																																																																									,130-PT-1470A
 247815,82450,PRESSURE TRANSMITTER,130-PT-1470B
 247816,82450,PRESSURE TRANSMITTER,130-PT-1470C
@@ -17573,6 +17576,7 @@
 83507,82932,VALVE LIMIT SWITCH,181-XZSL-0002
 83510,82932,PRESSURE GAUGE,181-PG-0008
 83452,82933,VSD for Vent Gas Blower B Motor,181-CC-001B-M
+267338,83057,VSD for Bio Sludge Decanter Centrifuge,176-XP-007-XX-01-M01-VSD-M
 257484,83494,Pressure Safety Valve,181-PSV-0101T
 82934,83599,Cooling water(L) / LIQUID,181-PSV-0001
 83606,83599,TEMPERATURE GAUGE,181-SC-001
@@ -19546,7 +19550,7 @@
 122826,84647,PRESSURE GAUGE,176-PG-0047
 122731,84648,CLARIFIED EFFLUENT WATER PUMP B MOTOR,176-PC-019B-M
 122823,84648,PRESSURE GAUGE,176-PG-0031
-122742,84649,JB FOR EFFLUENT TREATMENT AREA OILY WATER PUMP A MOTOR,176-PC-021A-M
+122742,84649,EFFLUENT TREATMENT AREA OILY WATER PUMP A MOTOR,176-PC-021A-M
 122801,84649,PRESSURE GAUGE,176-PG-0038
 122743,84650,JB FOR EFFLUENT TREATMENT AREA OILY WATER PUMP B MOTOR,176-PC-021B-M
 122802,84650,PRESSURE GAUGE,176-PG-0039
@@ -46595,7 +46599,7 @@
 175242,175192,Field Manager (U&O/PS&E),Chorshanbiev Zufar
 175243,175192,Instrumentation Engineer,Davlatov Quvonchbek
 175244,175192,Instrumentation Technician,Do`stqobilov Shohruh Hamdam o`g`li
-175247,175192,Analyser Technician,Farmonov Lazizbek
+175247,175192,Analyser Engineer,Farmonov Lazizbek
 175248,175192,Rotating Technician ,Fayzullayev Shaxzod
 175250,175192,Rotating Supervisor ,Kulnazarov Dilmurod
 175251,175192,Rotating Technician ,Lapasov G'anijon
@@ -53859,6 +53863,7 @@
 218394,218224,MMS junior technician,Qurbonov Arslonbek Akram o'gli
 218395,218224,Technician,Jovliyev A'zam Mirtoza o'gli
 218397,218224,Junior Technician,Bozorov Uyg'un Qodir o'gli
+219672,218224,Tech inspector,Ashirov Azamat Shermatovich
 220889,218224,Rotating Junior technician,Bo'riyev Muhsin Baxrom o'g'li
 245240,218224,Static Supervisor ,O'mrzaqov G'anisher
 245284,218224,Analyzer Specialist,Hamrayev Adham G'ayrat o'g'li
@@ -54094,6 +54099,7 @@
 264390,218246,Watchmen,Sharipov Shoxrux Baxtiyor o'g'li
 264391,218246,Watchmen,Kurbonov Yorkin Tursunboyevich
 264397,218246,Watchmen,Xolmurodov Soibnazar Mamatraim o'g'li
+267965,218246,Admin,Turg'unov Muhammadbek Axmad o'g'li
 175229,218247,Specialist,Abdiyev Abdirashid Zafar o'g'li
 221657,218247,Specialist,Sultanov Bexzod Farruxovich
 222184,218247,Senior specialist,Maxmatqulov Jahongir Bahrom o'g'li
@@ -54683,7 +54689,6 @@
 175198,218270,Rotating Engineer,Eshqobilov Azizjon Rustamovich
 218396,218270,Junior Technician,Yuldoshev Jaloliddin Bahodir o'gli
 219671,218270,Mechanical Engineer,Azimov Salohiddin Turamuradovich
-219672,218270,Welding Engineer,Ashirov Azamat Shermatovich
 219673,218270,Head of department,Bazarov Bekzod Shovkatovich
 219674,218270,Plant Inspector,Boymirzayev  Xumoyun Zafar o`g`li
 219676,218270,Inspection Engineer-Pipelines / Projects,Eshtemirov Farrux To`lqin o`g`li

@@ -1,5 +1,6 @@
 import pandas as pd
 from ...database.DF__spares import spares
+from ...database.DF__wo import wo
 from ..gen import filterDF
 from . import exceptions, reference, yaroqsiz
 
@@ -17,7 +18,13 @@ def matReport(repMonth, repYear, department, transacts):
   transactions = filterDF(transactions, reference.department_Filters[department])
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
+  transactions.to_excel('transCheck.xlsx')
 
+  
+  ### Exception
+  # CofE 1 Blind
+  transactions.loc[ (transactions['WO №']==84795) & (transactions['Код товара']=='31335'), 'closedMonth'] = 3
+  
   
   ### 2. Выборка транзакций на начало отчётного периода
   begin = transactions.loc[ 
@@ -93,17 +100,17 @@ def matReport(repMonth, repYear, department, transacts):
           currentReturn = currentReturn.loc[ currentReturn['Reservation Number']!=row['Reservation Number'] ]
   
 
-
   ### 5. Объединение "на начало" и "приход" и "возврат"
   rep = begin.merge(current,     how='outer', on=['Код товара','Материал','Ед.изм.','Reservation Number','Work Order Status Description','closedYear','closedMonth','Отдел','Reserved By','WO №','Asset Description','Объект',])
   rep = rep.merge(currentReturn, how='outer', on=['Код товара','Материал','Ед.изм.','Reservation Number','Work Order Status Description','closedYear','closedMonth','Отдел','Reserved By','WO №','Asset Description','Объект',])
-
+  
   rep = rep.merge(reference.OneC(), on = 'Код товара', how = 'outer')  #OneC.columns = ['Account', 'Код товара', 'Цена']
   rep.fillna({'Кол-во начало':0,'Кол-во приход':0,'Кол-во возврат':0,'Цена':0}, inplace=True)
 
-  rep['is014'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in reference.is_014 else '')
+  rep['is014'] = rep['Код товара'].map(lambda x: 'yes' if x in reference.is_014 else '')
+  rep['is014'] = rep.apply(lambda x: 'yes' if x['Reservation Number'] in reference.tempSave else x['is014'], axis=1)
   rep['iswOff'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in reference.is_wOff else '')
-
+  
 
 
   ### Файл для проверки соответствия количества в rep и 1с
@@ -193,15 +200,15 @@ def matReport(repMonth, repYear, department, transacts):
 
   if department == 'cofe':
       #Аргон 11062
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 53417.08791765379     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 53571.42938506462  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 52678.57133152174   if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 53485.2121456288  if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 53485.2121456288     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 54959.28941524796  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 53359.90191182208   if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 53747.25709954207  if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
       #Кислород 05733
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 9985.374049480561    if x['Код товара']=='05733' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 9982.86561081782  if x['Код товара']=='05733' else x['Сумма приход'], axis=1)
-      #rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 10580.357040   if x['Код товара']=='05733' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 9984.455057514166   if x['Код товара']=='05733' else x['Сумма конец'], axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 9984.455057514166   if x['Код товара']=='05733' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 10000  if x['Код товара']=='05733' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 10023.54074613579   if x['Код товара']=='05733' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 9962.927242130271   if x['Код товара']=='05733' else x['Сумма конец'], axis=1)
       """
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12481' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 3043.63   if x['Код товара']=='12481' else x['Сумма приход'], axis=1)
@@ -222,36 +229,18 @@ def matReport(repMonth, repYear, department, transacts):
       #rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 169319.6359649123   if x['Код товара']=='30394' else x['Сумма приход'], axis=1)
       #rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец'] * 169319.6359649123    if x['Код товара']=='30394' else x['Сумма конец'], axis=1)
 
-      """#31782
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 79904060.0425     if x['Код товара']=='31782' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 79933741.085  if x['Код товара']=='31782' else x['Сумма приход'], axis=1)
-      #rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1098.63   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 7998847.404166667   if x['Код товара']=='31782' else x['Сумма конец'], axis=1)
+      #32430
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 165183831.7    if x['Код товара']=='32430' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 164960617.4  if x['Код товара']=='32430' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 165072224.6   if x['Код товара']=='32430' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 165072224.6   if x['Код товара']=='32430' else x['Сумма конец'], axis=1)
       
-      #31784
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 4356085.18    if x['Код товара']=='31784' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 4357703.286666667   if x['Код товара']=='31784' else x['Сумма приход'], axis=1)
-      #rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1098.63   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 4357056.044   if x['Код товара']=='31784' else x['Сумма конец'], axis=1)
-      
-      #31789
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 67948837.385   if x['Код товара']=='31789' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 67974077.55833333   if x['Код товара']=='31789' else x['Сумма приход'], axis=1)
-      #rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1098.63   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 67963981.489   if x['Код товара']=='31789' else x['Сумма конец'], axis=1)
-      
-      #31790
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 209824.005375   if x['Код товара']=='31790' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 209940.916875   if x['Код товара']=='31790' else x['Сумма приход'], axis=1)
-      #rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1098.63   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 209875.9660416667   if x['Код товара']=='31790' else x['Сумма конец'], axis=1)
-      
-      #31791
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 3903760.6275   if x['Код товара']=='31791' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 3905210.715   if x['Код товара']=='31791' else x['Сумма приход'], axis=1)
-      #rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1098.63   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 3904243.99   if x['Код товара']=='31791' else x['Сумма конец'], axis=1)
-      """
+      #32786
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 99328340.08    if x['Код товара']=='32786' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: 5160714.29   if x['Код товара']=='32786' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 99480125.8   if x['Код товара']=='32786' else x['Сумма расход'], axis=1)
+      rep['Сумма конец']  = rep.apply(lambda x: 0   if x['Код товара']=='32786' else x['Сумма конец'], axis=1)
+      rep.to_excel('rep.xlsx')
   ##########################################################
 
 
@@ -264,7 +253,69 @@ def matReport(repMonth, repYear, department, transacts):
   rep = rep[['Account','Код товара','Материал', 'Ед.изм.','Цена','Кол-во начало','Сумма начало','Кол-во приход','Сумма приход',
               'Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец', 'Reservation Number','Work Order Status Description',
               'closedMonth','Отдел','Reserved By','is014','iswOff','WO №','Asset Description', 'Объект', 'Кол-во возврат']]
+  
 
+  ### !!! Exception steel angle 003 & 1040 accounts
+  rep = rep.loc[ rep['Код товара']!='29137']
+  row1 = {'Account':'003.1 (Материалы на складе)',
+          'Код товара':'29137',
+          'Материал':'STEEL ANGLE - MATERIAL : HOT DIP GALVANIZED 50 x 50 x 6T (5000nmm)  / Уголок из стали - материал: горячеоцинкованная сталь 50 x 50 x 6T (5000 мм)',
+          'Ед.изм.':'Meter',
+          'Цена':1,
+          'Кол-во начало':0,'Сумма начало':0,
+          'Кол-во приход':1000,'Сумма приход':1000,
+          'Кол-во расход':0,'Сумма расход':0,'Кол-во 014':0, 'Сумма 014':0,
+          'Кол-во конец':1000,'Сумма конец':1000, 
+          'Reservation Number':22838,
+          'Work Order Status Description':'Started','closedMonth':0,
+          'Отдел':'Cofe-Jet Wash','Reserved By':'Boburjon Aralov Akbar o`g`li',
+          'is014':'','iswOff':'','WO №':137433,'Asset Description':'Washing buy area ', 'Объект':'WBA', 'Кол-во возврат':0}
+  row2 = {'Account':'1040 (Запасные части)',
+          'Код товара':'29137',
+          'Материал':'STEEL ANGLE - MATERIAL : HOT DIP GALVANIZED 50 x 50 x 6T (5000nmm)  / Уголок из стали - материал: горячеоцинкованная сталь 50 x 50 x 6T (5000 мм)',
+          'Ед.изм.':'Meter',
+          'Цена':74323.4350833333,
+          'Кол-во начало':0,'Сумма начало':0,
+          'Кол-во приход':120,'Сумма приход':8918812.21,
+          'Кол-во расход':0,'Сумма расход':0,'Кол-во 014':0, 'Сумма 014':0,
+          'Кол-во конец':120,'Сумма конец':8918812.21, 
+          'Reservation Number':23322,
+          'Work Order Status Description':'Started','closedMonth':0,
+          'Отдел':'Cofe-Jet Wash','Reserved By':'Boburjon Aralov Akbar o`g`li',
+          'is014':'','iswOff':'','WO №':137433,'Asset Description':'Washing buy area ', 'Объект':'WBA', 'Кол-во возврат':0}
+  row3 = {'Account':'1040 (Запасные части)',
+          'Код товара':'29137',
+          'Материал':'STEEL ANGLE - MATERIAL : HOT DIP GALVANIZED 50 x 50 x 6T (5000nmm)  / Уголок из стали - материал: горячеоцинкованная сталь 50 x 50 x 6T (5000 мм)',
+          'Ед.изм.':'Meter',
+          'Цена':74323.4350833333,
+          'Кол-во начало':5,'Сумма начало':371617.18,
+          'Кол-во приход':0,'Сумма приход':0,
+          'Кол-во расход':5,'Сумма расход':371617.18,'Кол-во 014':0, 'Сумма 014':0,
+          'Кол-во конец':0,'Сумма конец':0, 
+          'Reservation Number':19432,
+          'Work Order Status Description':'Closed','closedMonth':2,
+          'Отдел':'Turnaround','Reserved By':'Kamoljon Ismoilov Yashinovich',
+          'is014':'','iswOff':'','WO №':133264,'Asset Description':'Fired Steam Superheater', 'Объект':'172-XP-007', 'Кол-во возврат':0}
+  row4 = {'Account':'1040 (Запасные части)',
+          'Код товара':'29137',
+          'Материал':'STEEL ANGLE - MATERIAL : HOT DIP GALVANIZED 50 x 50 x 6T (5000nmm)  / Уголок из стали - материал: горячеоцинкованная сталь 50 x 50 x 6T (5000 мм)',
+          'Ед.изм.':'Meter',
+          'Цена':74323.4350833333,
+          'Кол-во начало':5,'Сумма начало':371617.18,
+          'Кол-во приход':0,'Сумма приход':0,
+          'Кол-во расход':5,'Сумма расход':371617.18,'Кол-во 014':0, 'Сумма 014':0,
+          'Кол-во конец':0,'Сумма конец':0, 
+          'Reservation Number':20231,
+          'Work Order Status Description':'Closed','closedMonth':2,
+          'Отдел':'Turnaround','Reserved By':'Kamoljon Ismoilov Yashinovich',
+          'is014':'','iswOff':'','WO №':133264,'Asset Description':'Fired Steam Superheater', 'Объект':'172-XP-007', 'Кол-во возврат':0}
+
+  if department=='cofe':
+    rep = pd.concat([rep, pd.DataFrame(row1, index=[0])]).reset_index(drop=True)
+    rep = pd.concat([rep, pd.DataFrame(row2, index=[0])]).reset_index(drop=True)
+  if department=='rmpd':
+    rep = pd.concat([rep, pd.DataFrame(row3, index=[0])]).reset_index(drop=True)
+    rep = pd.concat([rep, pd.DataFrame(row4, index=[0])]).reset_index(drop=True)
 
 
 
@@ -340,8 +391,9 @@ def matReport(repMonth, repYear, department, transacts):
                                       if x['Код товара'] in yaroqsiz.notMet and x['Код товара'] not in reference.is_wOff else x['Comment'], axis=1)
     
     wOff_Mn['Comment'] = wOff_Mn.apply(lambda x: "Zaxira qism/material. Birinchi marta o'rnatilgan. Sarflangan dalolatnoma asosida foydalanilgan.Ushbu aktga ilova №1" 
-                                      if x['Код товара'] in yaroqsiz.moc else x['Comment'], axis=1)
+                                      if x['Код товара'] in yaroqsiz.moc_DF['Код товара'].unique() else x['Comment'], axis=1)
   ####################################################################################################
+  wOff_Mn['Сумма расход'] = wOff_Mn['Цена'] * wOff_Mn['Кол-во расход']
 
   wOff_Ap = wOff_Ap[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход']]
   wOff_Mn = wOff_Mn[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена', 'Кол-во расход', 'Сумма расход','Comment']]
@@ -388,23 +440,107 @@ def matReport(repMonth, repYear, department, transacts):
   ### 15. Yaroqsiz to Metall
   met = dalolat.copy()
   met.reset_index(drop = False, inplace = True)
+  
 
+
+  # Без AP
   met = met.loc[ (met['Отдел']!='4AP') & (met['Отдел']!='4AP_free') ]
 
+  # Добавляем WO Description
+  met = met.merge(wo[['Work Order Number','Work Order Description']], how = 'left', left_on='WO №', right_on='Work Order Number' )
+  
+  # Добавляем Info
   met.insert(2, 'info', met['Кол-во расход'].astype(str) + ' ' + met['Ед.изм.'] + ' [ ' + met['Объект'] + ' ] WO-' + met['WO №'].astype(str) + ' by: ' + met['Reserved By'] + "\n")
-  met = met.groupby(['Код товара', 'Материал'])[['info', 'Кол-во расход']].sum()
+
+
+  # Файл без группировки. Каждый Reservation отдельно
+  met2 = met[['Код товара','Материал','Ед.изм.',
+              'Кол-во всего','Кол-во расход',
+              'Asset Description','Объект',
+              'Reserved By','Reservation Number','Work Order Number','Work Order Description']].copy()
+
+
+  # Файл с группировкой. Суммирует расход для каждого кода
+  met = met.groupby(['Код товара','Материал'])[['info', 'Кол-во расход']].sum()
   met.reset_index(drop = False, inplace = True)
+  
 
 
   if department == 'rmpd':
       yaroq = yaroqsiz.execute(transacts)
+      yaroq = yaroq.merge(yaroqsiz.moc_DF, how='outer', on=['Код товара','Количество (из акта)','Номер документа','Номер файла','№','Материал (из акта)'])
+      yaroq.to_excel('check for moc.xlsx')
       
       yaroq = yaroq.merge(met, how='outer', on='Код товара')
       yaroq = yaroqsiz.metLib(yaroq)
 
       yaroq = yaroq[['Номер файла','Номер документа','Код товара','Количество (из акта)','Кол-во расход','info','Материал (из акта)','Материал',	
-                     'На уничтожение','В повторное использование','На металл','Алюминий, кг','Медь, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг']]
+                     'На уничтожение','В повторное использование','На металл','Алюминий, кг','Медь, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг',]]
       
       yaroq.to_excel('5. yaroq.xlsx', index=False)
+
+
+      ### Extra
+      yar = yaroq.loc[ ~(yaroq['Кол-во расход'].isna()) ]
+      yar = yar[['Код товара','Номер документа','Количество (из акта)']]
+      yar = yar.fillna({'Номер документа': "", 'Количество (из акта)': 0})
+      
+      yar = yar.groupby('Код товара', as_index=False).agg({
+      'Количество (из акта)': 'sum',  # Суммируем числа
+      'Номер документа': lambda x: ',\n'.join(x)  # Объединяем строки с переносом
+      })
+      yar.reset_index(drop = False, inplace = True)
+      
+
+      yar = yar.merge(met2, how='left', on='Код товара')
+      yar['Catalogue Number'] = yar['Код товара'].copy().apply(lambda x: ( transactions.loc[ transactions['Код товара']==x, 'Catalogue Number' ].unique() )[0]     if x in  transactions['Код товара'].unique() else "")
+      
+      
+      yar['test'] = yar['Кол-во всего'] - yar['Количество (из акта)']
+      yar_stat = yar.copy()
+
+      yar_full = yar.loc[yar['test']<=0]
+      yar_full = yar_full.groupby(['Код товара','Catalogue Number','Материал','Ед.изм.','Количество (из акта)','Номер документа',
+                         'Кол-во всего','Reservation Number','Кол-во расход','Asset Description','Объект','Reserved By','Work Order Number',
+                         'Work Order Description']).sum()
+      yar_full.to_excel('yar_full.xlsx')
+
+      yar = yar.loc[yar['test']>0]
+      yar = yar.groupby(['Код товара','Catalogue Number','Материал','Ед.изм.','Количество (из акта)','Номер документа',
+                         'Кол-во всего','Reservation Number','Кол-во расход','Asset Description','Объект','Reserved By','Work Order Number',
+                         'Work Order Description']).sum()
+      yar.to_excel('yar.xlsx')
+
+      yar_stat = yar_stat.groupby(['Код товара','Catalogue Number','Материал','Ед.изм.','Количество (из акта)','Кол-во всего',])[['Asset Description','Объект',]].sum()
+      yar_stat.reset_index(drop = False, inplace = True)
+      yar_stat['%']=yar_stat['Количество (из акта)']/yar_stat['Кол-во всего']
+
+      finished_acts = {
+         '14.03-16.03':['ORD-048/270-2025','ORD-048/76-2025','ORD-048/2340-2024','ORD-048/504-2025','ORD-048/510-2025',
+                  'ORD-048/513-2025','ORD-048/514-2025','ORD-048/515-2025','ORD-048/516-2025'],
+          '17.03':['ORD-048/521-2025','ORD-048/524-2025','ORD-048/530-2025','ORD-048/533-2025','ORD-048/534-2025',
+                   'ORD-048/535-2025','ORD-048/536-2025','ORD-048/538-2025','ORD-048/541-2025','ORD-048/542-2025',],
+          '18.03':['ORD-048/539-2025','ORD-048/541-2025','ORD-048/545-2025','ORD-048/546-2025','ORD-048/547-2025',
+                   'ORD-048/548-2025','ORD-048/550-2025','ORD-048/552-2025','ORD-048/556-2025','ORD-048/557-2025',],
+          '19.03':['ORD-048/560-2025','ORD-048/559-2025','ORD-048/533-2025','ORD-048/566-2025','ORD-048/568-2025',
+                   'ORD-048/241-2025','ORD-048/133-2025',],
+
+
+
+      }
+      for key, value in finished_acts.items():
+         yar_stat[key] = 0
+         for act in value:
+            print(act)
+            added = yaroq.loc[ yaroq['Номер документа'] == act ].copy()
+            print(added)
+            added = added.groupby('Код товара')[['Количество (из акта)','Материал']].sum()
+            added.reset_index(drop = False, inplace = True)
+            for index, row in added.iterrows():
+               yar_stat.loc[ yar_stat['Код товара']==row['Код товара'], key ] += row['Количество (из акта)']
+
+      yar_stat.to_excel('yar_stat.xlsx', index=False)
+
+
 
       

@@ -62,20 +62,34 @@ def corrections(transactions):
     
     #Возврат 8 и 4 гаскета Мансур хасанов. Можно удалить в марте
     transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'Work Order Status Description' ] = 'Closed'
-    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedMonth' ] = 2
+    transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedMonth' ] = 3
     transacts.loc[ transacts['Reservation Number'].isin([15581,15582,]), 'closedYear' ] = 2025
     transacts.loc[ (transacts['Reservation Number'].isin([15581,15582,]))
                    &
                    (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2025
     transacts.loc[ (transacts['Reservation Number'].isin([15581,15582,]))
                    &
-                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 2
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactMonth' ] = 3
     
     #!Проблема с возвратом Мирсаида
     transacts.loc[ transacts['Reservation Number'].isin([19379,19380,19381,19382,19383,19384]), 'Work Order Status Description' ] = 'Pending for return'
 
     #!Будет возврат Мирсаид Хайдоров GAS 900
     transacts.loc[ transacts['Reservation Number'].isin([20053,]), 'closedMonth' ] = 2
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([150792,]), 'transactMonth' ] = 2
+
+    #Шахзод Юлдошев ТАР - был возврат, но транзакции нет, переносим на март
+    transacts.loc[ transacts['Reservation Number'].isin([16445,]), 'closedMonth' ] = 3
+
+    #Миржахон Куртка мужская с логотипом ошибочная транзакция, в марте будет возврат, склад должен сделать return
+    transacts.loc[ transacts['Reservation Number'].isin([19721,]), 'closedMonth' ] = 3
+
+    #Сардор Холматов сказал, что хотят сделать возврат
+    transacts.loc[ transacts['Reservation Number'].isin([19899,19900]), 'closedMonth' ] = 3
+
+    #Мирсаид хайдоров Pipes все таки возврат в феврале
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([150856,150857]), 'transactMonth' ] = 2
+    
     ############################################################################################################
 
     
@@ -97,6 +111,77 @@ def corrections(transactions):
     transacts.loc[ transacts['Reservation Number'].isin([19189,19146,19193,19666,19724,20441,19660,19679,21116,
                                                          15560,19680,15145,20369,21117,]), 'isRMPD_planner' ] = 'yes'
     ############################################################################################################
+
+
+    ### 6. AP ##################################################################################################
+    #Condition of return
+    #transacts.loc[ transacts['Reservation Number'].isin([21130,]), 'Work Order Status Description' ] = 'Condition of return'
+    #Расходы rmpd на объект SGU
+    transacts.loc[ transacts['Reservation Number'].isin([17166,17167,17169,17170,17171,17172,17173,17174,
+                                                         17175,17176,17177,17178,17179,]), 'closedMonth' ] = 3
+    transacts.loc[ transacts['Reservation Number'].isin([17166,17167,17169,17170,17171,17172,17173,17174,
+                                                         17175,17176,17177,17178,17179,]), 'Отдел' ] = 'RMPD for AP'
+    #Handover есть, списать в марте
+    transacts.loc[ transacts['Reservation Number'].isin([21130,23106,23288,23386,23387,]), 'closedMonth' ] = 3
+
+    
+
+    ############################################################################################################
+
+
+    ### 7. TAR Blinds/Temp Save#################################################################################
+    #Blinds, для которых письма не сделаны. В файле TAR они в группе blind без заливки
+    #Закрытые в феврале, но нужно перенести списание на март
+    transacts.loc[ transacts['Reservation Number'].isin([
+        #Bunyod Luqmonov
+        15879,16545,
+    ]), 'closedMonth' ] = 3
+
+    
+
+    #Blinds, для которых сделаны письма. #В файле TAR расход отмечены уже синим.
+    #Закрытые в феврале, но нужно перенести списание на март
+    transacts.loc[ transacts['Reservation Number'].isin([
+        14616,14618,14620,14645,14660,14683,14665,14669,14675,14684,14687,14691,14692,14693,14809,16406,16407,
+        16408,16409,16413,18170,18487,18509,18171,18172,19474,
+        #47
+        16776,16771,16772,16774,16775,#!!! Есть 5-значный 16773
+        #50
+        16343,18117,18272,18273,18274,
+        #52
+        15906,15956,15958,15971,15974,16335,16483,16495,16500,16506,16546,16548,16740,16745,15039,15041,15042,
+        15148,15151,15153,15159,15160,15163,15173,15180,15182,15185,15878,15885,16547,16556,16741,16746,
+    ]), 'closedMonth' ] = 3
+
+
+
+    #Прочие материалы, для которых письма не сделаны (но обещают сделать)
+    #Закрытые в феврале, но нужно перенести списание на март
+    transacts.loc[ transacts['Reservation Number'].isin([
+        #Berdialiev jurabek
+        18008, 18009, 18010, 18011, 18031,
+        
+    ]), 'closedMonth' ] = 3
+
+    #Прочие материалы, для которых сделаны письма. #В файле TAR расход отмечены уже синим.
+    #Закрытые в феврале, но нужно перенести списание на март
+    transacts.loc[ transacts['Reservation Number'].isin([
+        #25
+        18000,
+        #28
+        18752,19523,18753,18754,18898,19063,19274,19064,19273,19386,19585,19387,19419,19420,19421,19422,19522,
+        20328,20329,
+        #31
+        18089,18090,18097,18281,18283,18285,18286,18287,18288,18289,18291,18292,18293,18295,18296,18297,18299,
+        18303,18309,18311,18313,18314,18315,18316,18317,18318,18319,18320,18321,18540,18541,18550,18551,18552,
+        18554,18557,18566,18594,18595,18622,
+        #33
+        18290,
+        #48
+        18696,18909,
+    ]), 'closedMonth' ] = 3
+    ############################################################################################################
+    
 
     return transacts
 
@@ -122,6 +207,7 @@ inactive_Reservations= [
 2473,2475,2477,2479,2482,2484,2486,2567,3725,7502,7504,14740,14744,14747,14750,14754,14760,14763,14767,14781,14785,
 14742,14746,14749,14753,14756,14762,14765,14770,14783,14786,17034,17035,17036,17037,17039,17041,17042,17043,17044,17045,
 19732,19733,19734,19735,19736,19489,19488,19490,
+22054,22055,22057,22058,22061,22064,22066,22068,22069,22081,
 
 ]
 
@@ -166,14 +252,16 @@ extra = {
         
         ],
         'currentMonth':[
-            #Бумага а4
-            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':4,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            #Бумага
+            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':9,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
             {'Код товара':'31158','Reservation Number':-5,'WO №':-5,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А3",'Ед.изм.':'пачка','Quantity':1,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
             
             #Met
             #Алюминий 14{'Код товара':'29422','Reservation Number':-6,'WO №':-6,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Алюмин 14",'Ед.изм.':'т','Quantity':1.9202,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Никель{'Код товара':'11064','Reservation Number':-7,'WO №':-7,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Никель",'Ед.изм.':'т','Quantity':1.1104,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Медь 13{'Код товара':'21883','Reservation Number':-8,'WO №':-8,'closedMonth':10,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.1639,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            #Свинец 13
+            {'Код товара':'16797','Reservation Number':-6,'WO №':-6,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Свинец 13",'Ед.изм.':'т','Quantity':0.527,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
         'currentReturn':[]
     },

@@ -18,8 +18,6 @@ def matReport(repMonth, repYear, department, transacts):
   transactions = filterDF(transactions, reference.department_Filters[department])
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
-  transactions.to_excel('transCheck.xlsx')
-
   
   ### Exception
   # CofE 1 Blind
@@ -108,10 +106,17 @@ def matReport(repMonth, repYear, department, transacts):
   rep.fillna({'Кол-во начало':0,'Кол-во приход':0,'Кол-во возврат':0,'Цена':0}, inplace=True)
 
   rep['is014'] = rep['Код товара'].map(lambda x: 'yes' if x in reference.is_014 else '')
-  rep['is014'] = rep.apply(lambda x: 'yes' if x['Reservation Number'] in reference.tempSave else x['is014'], axis=1)
-  rep['iswOff'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in reference.is_wOff else '')
   
+  rep['iswOff'] = rep['Код товара'].copy().map(lambda x: 'yes' if x in reference.is_wOff else '')
 
+  ### Перевод на временное хранение
+  #По номеру Reservation
+  rep['is014'] = rep.apply(lambda x: 'yes' if x['Reservation Number'] in reference.tempSave[department] else x['is014'], axis=1)
+  #По коду и WO№ в случае если reservation number отрицательный из-за лимитов
+  rep['is014'] = rep.apply(lambda x: 'yes' if 
+                           x['Код товара'] in reference.tempSaveLimits[department].keys()
+                           and 
+                           x['WO №'] == reference.tempSaveLimits[department][x['Код товара']]['wo'] else x['is014'], axis=1)
 
   ### Файл для проверки соответствия количества в rep и 1с
   cheQ = rep[['Код товара',	'Материал',	'Кол-во начало',	'Кол-во приход',	'Qty1',	'Qty2',	]].copy()
@@ -200,15 +205,15 @@ def matReport(repMonth, repYear, department, transacts):
 
   if department == 'cofe':
       #Аргон 11062
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 53485.2121456288     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 54959.28941524796  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 53359.90191182208   if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 53747.25709954207  if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 53747.25709954207     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 58035.71423512748  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 53571.42917629567  if x['Код товара']=='11062' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 58275.28366873065  if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
       #Кислород 05733
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 9984.455057514166   if x['Код товара']=='05733' else x['Сумма начало'], axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 9962.927242130271   if x['Код товара']=='05733' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 10000  if x['Код товара']=='05733' else x['Сумма приход'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 10023.54074613579   if x['Код товара']=='05733' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 9962.927242130271   if x['Код товара']=='05733' else x['Сумма конец'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 9943.122014018023  if x['Код товара']=='05733' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 10006.50766849585  if x['Код товара']=='05733' else x['Сумма конец'], axis=1)
       """
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12481' else x['Сумма начало'], axis=1)
       rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 3043.63   if x['Код товара']=='12481' else x['Сумма приход'], axis=1)
@@ -256,14 +261,14 @@ def matReport(repMonth, repYear, department, transacts):
   
 
   ### !!! Exception steel angle 003 & 1040 accounts
-  rep = rep.loc[ rep['Код товара']!='29137']
+  
   row1 = {'Account':'003.1 (Материалы на складе)',
           'Код товара':'29137',
           'Материал':'STEEL ANGLE - MATERIAL : HOT DIP GALVANIZED 50 x 50 x 6T (5000nmm)  / Уголок из стали - материал: горячеоцинкованная сталь 50 x 50 x 6T (5000 мм)',
           'Ед.изм.':'Meter',
           'Цена':1,
-          'Кол-во начало':0,'Сумма начало':0,
-          'Кол-во приход':1000,'Сумма приход':1000,
+          'Кол-во начало':1000,'Сумма начало':1000,
+          'Кол-во приход':0,'Сумма приход':0,
           'Кол-во расход':0,'Сумма расход':0,'Кол-во 014':0, 'Сумма 014':0,
           'Кол-во конец':1000,'Сумма конец':1000, 
           'Reservation Number':22838,
@@ -275,8 +280,8 @@ def matReport(repMonth, repYear, department, transacts):
           'Материал':'STEEL ANGLE - MATERIAL : HOT DIP GALVANIZED 50 x 50 x 6T (5000nmm)  / Уголок из стали - материал: горячеоцинкованная сталь 50 x 50 x 6T (5000 мм)',
           'Ед.изм.':'Meter',
           'Цена':74323.4350833333,
-          'Кол-во начало':0,'Сумма начало':0,
-          'Кол-во приход':120,'Сумма приход':8918812.21,
+          'Кол-во начало':120,'Сумма начало':8918812.21,
+          'Кол-во приход':0,'Сумма приход':0,
           'Кол-во расход':0,'Сумма расход':0,'Кол-во 014':0, 'Сумма 014':0,
           'Кол-во конец':120,'Сумма конец':8918812.21, 
           'Reservation Number':23322,
@@ -311,11 +316,12 @@ def matReport(repMonth, repYear, department, transacts):
           'is014':'','iswOff':'','WO №':133264,'Asset Description':'Fired Steam Superheater', 'Объект':'172-XP-007', 'Кол-во возврат':0}
 
   if department=='cofe':
+    rep = rep.loc[ rep['Код товара']!='29137']
     rep = pd.concat([rep, pd.DataFrame(row1, index=[0])]).reset_index(drop=True)
     rep = pd.concat([rep, pd.DataFrame(row2, index=[0])]).reset_index(drop=True)
-  if department=='rmpd':
+  """if department=='rmpd':
     rep = pd.concat([rep, pd.DataFrame(row3, index=[0])]).reset_index(drop=True)
-    rep = pd.concat([rep, pd.DataFrame(row4, index=[0])]).reset_index(drop=True)
+    rep = pd.concat([rep, pd.DataFrame(row4, index=[0])]).reset_index(drop=True)"""
 
 
 
@@ -409,20 +415,41 @@ def matReport(repMonth, repYear, department, transacts):
                          (rep['Кол-во расход']>0) & (rep['iswOff']=='yes')
                       ) 
                      ].copy()
-
+  handover = handover.loc[ ~(handover['Reservation Number'].isin(reference.tempSave[department])) ]
   handover.insert(1,'Примечание', 'Reserved by '+handover['Reserved By']+' WO № '+handover['WO №'].astype(str)+' Reservation № '+handover['Reservation Number'].astype(str))
   handover = handover[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014','Кол-во расход', 'Примечание']]
+
+  #TempSave handover
+  tempSaveHO = rep.loc[ (rep['Кол-во 014']>0)
+                      |
+                      (
+                         (rep['Кол-во расход']>0) & (rep['iswOff']=='yes')
+                      ) 
+                     ].copy()
+  tempSaveHO = tempSaveHO.loc[ tempSaveHO['Reservation Number'].isin(reference.tempSave[department]) ]
+  tempSaveHO.insert(1,'Примечание', 'Reserved by '+tempSaveHO['Reserved By']+' WO № '+tempSaveHO['WO №'].astype(str)+' Reservation № '+tempSaveHO['Reservation Number'].astype(str))
+  tempSaveHO = tempSaveHO[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014','Кол-во расход', 'Примечание']]
 
 
 
 
   ### 14. Ввод в эксплуатацию
   to014 = rep.loc[ rep['Кол-во 014']>0 ].copy()
+  to014 = to014.loc[ ~(to014['Reservation Number'].isin(reference.tempSave[department])) ]
   to014 = to014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014']]
   to014['Объект'] = ''
   to014 = to014.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
   to014.reset_index(drop=False, inplace=True)
   to014 = to014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014']]
+
+  #TempSave
+  tempSave = rep.loc[ rep['Кол-во 014']>0 ].copy()
+  tempSave = tempSave.loc[ tempSave['Reservation Number'].isin(reference.tempSave[department]) ] 
+  tempSave = tempSave[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014']]
+  tempSave['Объект'] = ''
+  tempSave = tempSave.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
+  tempSave.reset_index(drop=False, inplace=True)
+  tempSave = tempSave[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014']]
 
 
   cheQ.to_excel('cheQ.xlsx', index=False)
@@ -430,13 +457,14 @@ def matReport(repMonth, repYear, department, transacts):
   matRep.to_excel('3. matRep.xlsx', index=False)
   dalolat.to_excel('4. dalolat.xlsx')
   handover.to_excel('4. handover.xlsx', index=False)
+  tempSaveHO.to_excel('4. tempSaveHO.xlsx', index=False)
   to014.to_excel('4. 014.xlsx', index=False)
+  tempSave.to_excel('4. tempSave.xlsx', index=False)
   wOff_Ap.to_excel('4. wOff_AP.xlsx', index=False)
   wOff_Mn.to_excel('4. wOff_Mn.xlsx', index=False)
   reference.OneCW()
-  
     
-
+  
   ### 15. Yaroqsiz to Metall
   met = dalolat.copy()
   met.reset_index(drop = False, inplace = True)
@@ -469,7 +497,6 @@ def matReport(repMonth, repYear, department, transacts):
   if department == 'rmpd':
       yaroq = yaroqsiz.execute(transacts)
       yaroq = yaroq.merge(yaroqsiz.moc_DF, how='outer', on=['Код товара','Количество (из акта)','Номер документа','Номер файла','№','Материал (из акта)'])
-      yaroq.to_excel('check for moc.xlsx')
       
       yaroq = yaroq.merge(met, how='outer', on='Код товара')
       yaroq = yaroqsiz.metLib(yaroq)
@@ -477,7 +504,20 @@ def matReport(repMonth, repYear, department, transacts):
       yaroq = yaroq[['Номер файла','Номер документа','Код товара','Количество (из акта)','Кол-во расход','info','Материал (из акта)','Материал',	
                      'На уничтожение','В повторное использование','На металл','Алюминий, кг','Медь, кг','Нержавейка, кг','Черный металл, кг','Драг. металл, кг',]]
       
+
+      
+      yaroq_report = yaroq.copy()
+      yaroq_report = yaroq_report.loc[ ~(yaroq_report['info'].isna()) ]
+      yaroq_report = yaroq_report.fillna('')
+      yaroq_report['checksum'] = yaroq_report.apply(lambda x: yaroq_report.loc[ yaroq_report['Код товара']==x['Код товара'],
+                                                                                'Количество (из акта)' ].sum(), axis=1)
+      yaroq_report = yaroq_report.groupby(['Код товара','Материал','info',
+                                           'На уничтожение','В повторное использование','На металл',
+                                           'Кол-во расход','checksum',
+                                           'Номер документа','Номер файла','Материал (из акта)',]).sum()
+
       yaroq.to_excel('5. yaroq.xlsx', index=False)
+      yaroq_report.to_excel('5. yaroq_report.xlsx')
 
 
       ### Extra
@@ -516,14 +556,7 @@ def matReport(repMonth, repYear, department, transacts):
       yar_stat['%']=yar_stat['Количество (из акта)']/yar_stat['Кол-во всего']
 
       finished_acts = {
-         '14.03-16.03':['ORD-048/270-2025','ORD-048/76-2025','ORD-048/2340-2024','ORD-048/504-2025','ORD-048/510-2025',
-                  'ORD-048/513-2025','ORD-048/514-2025','ORD-048/515-2025','ORD-048/516-2025'],
-          '17.03':['ORD-048/521-2025','ORD-048/524-2025','ORD-048/530-2025','ORD-048/533-2025','ORD-048/534-2025',
-                   'ORD-048/535-2025','ORD-048/536-2025','ORD-048/538-2025','ORD-048/541-2025','ORD-048/542-2025',],
-          '18.03':['ORD-048/539-2025','ORD-048/541-2025','ORD-048/545-2025','ORD-048/546-2025','ORD-048/547-2025',
-                   'ORD-048/548-2025','ORD-048/550-2025','ORD-048/552-2025','ORD-048/556-2025','ORD-048/557-2025',],
-          '19.03':['ORD-048/560-2025','ORD-048/559-2025','ORD-048/533-2025','ORD-048/566-2025','ORD-048/568-2025',
-                   'ORD-048/241-2025','ORD-048/133-2025',],
+         '14.03-16.03':['ORD-048/270-2025','ORD-048/76-2025','ORD-048/2340-2024','ORD-048/504-2025',],
 
 
 

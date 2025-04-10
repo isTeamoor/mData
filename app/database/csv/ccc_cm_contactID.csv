@@ -12,7 +12,7 @@
 600,Sardor,Xudayberdiyev 
 601,Safar,Xolmanov Shavkatovich
 602,Olim,Alikulov
-603,Habib,Aminov
+603, Xabib,Aminov Normatovich
 604,Zakhriddin,Almurodov
 605,Sherzod,Qamriddinov
 606,Azizjon,Rasulov 
@@ -41,7 +41,7 @@
 629,Begzod,Buriev
 630,Shokhrukh,Buriev
 631,Dilnur,Choriev
-632,Shoxrux,Shodiev
+632,Shoxruh,Shodiyev Erkin o`g`li
 633,Arslonbek,Qurbonov
 634,Shuhrat,Ulashev 
 635,Hamza,Yo`ldoshev 
@@ -56,7 +56,7 @@
 644,Аzizjon,Eshkobilov
 645,Javlonbek,Quziyev 
 646,Farrukh,Eshtemirov
-647,Bobur,Eshmurodov 
+647,Bobur,Eshmurodov Ramazon o`g`li
 648,Islom,Eshpulatov Eshpulatovich
 649,Farrukh,Eshtemirov
 650,Abdulaziz,Esonov
@@ -142,7 +142,7 @@
 730,Asror,Xusanov Mahmarayim o'g'li
 731,Alisher,Mansurov
 732,Konstantin,Matsukatov
-733,Baxtiyor,Orziyev
+733,Baxtiyor,Orziyev Baxrom o`g`li
 734,Usmon,Mavlonov
 735,Abdulla,Nasriddinov Nasriddin o'g'li
 736,Diyor,O`ljaev 
@@ -159,10 +159,10 @@
 747,Akbar,Kenjayev Shavkat o'g'li
 748,Sherzod,Musurmonov Ismoil o'g'li
 749,Yulduz,Tuxtayeva
-750,Adham,Raxmonov
+750,Adxam,Raxmonov Boqiyevich
 751,Аbdulla,Nasriddinov
-752,Og'abek,Serobov
-753,Fazliddin,Nazarov
+752,Og'abek,Serobov Isroil o`g`li
+753,Fazliddin,Nazarov To`ra o`g`li
 754,Samandar,Nazarov 
 755,Fakhriddin,Norboev
 756,Umidjon,Norboev
@@ -184,8 +184,8 @@
 772,Shomurod ,Imomov 
 773,Ulugbek,Pirimkulov
 774,Shavkat,Primov
-775,Ravshan,Quvvatov
-776,Otabek,Mamadaminov
+775,Ravshan,Quvatov Yorqin o`g`li
+776,Otabek,Mamadaminov Rashid o`g`li
 777,Oybek,Rajabov Chori o'g'li
 778,To`lqin,Boyqulov 
 779,Jamshid,Gafurov
@@ -229,7 +229,7 @@
 817,Davron,Tursunniyozov
 818,Adham,Tursunov
 819,Ulugbek,Tursunov
-820,Ruslan,omonov
+820,Ruslan,Omanov Bahodir o`g`li
 821,Shukhrat,Ulashev
 822,Diyor,Uljaev
 823,Elbek,Umarov
@@ -247,13 +247,13 @@
 835,Shokhzod,Yuldoshev
 836,Tilovmurod,Yuldoshev
 837,Fazliddin,Nazarov To'ra o'g'li
-838,Sheroz,Yusupov
+838,Sheroz,Yusupov Baxtiyor o`g`li
 839,Bobirbek,Normamatov Botir o'g'li
 840,Sharofiddin,Ziyodullaev
 841,Alisher,Berdimurodov
 842,Rakhmiddin,Аbdiganiev
 843,Salohiddin,Azimov Turamuradovich
-844,Ilkhom,Аbidov
+844, Ilxom,Abidov Turdikulovich
 845,Ziyadulla,Аralov
 846,Аzamat,Аshirov
 847,Kamoliddin,Аshrapov
@@ -543,12 +543,12 @@
 1133,UZGTL-HDC-MEC-PO-0090,Nuovo Pignone International SRL> Baker Huges 
 1136,Nurbek,Nurmatov Dehqonqulovich
 1137,Abbos,Meyliyev Ziyatovich
-1138,Abbos,Oktyabrov
+1138,Abbos,Oktyabrov Uyg`un o`g`li
 1139,Akmal,Almardonov Abduhomidovich
 1140,Abbos,Ochilov Botir o'g'li
 1141,Boburjon,Aralov Akbar o'g'li
 1142,Dilshod,Khan
-1143,Sevarjon,Arabov
+1143,Sevarjon,Arabov Tuychi o`g`li
 1144,Davron,G'oziyev
 1145,Abdurashid,Khakberdiev
 1146,Asror,Husanov Erkin o'g'li
@@ -562,7 +562,7 @@
 1154,Bobur,Turaev
 1155,Dilmurat,Kulnazarov Jumayevich
 1156,Doniyor,Daminov
-1157,Nazarbay,Esenmuradov
+1157,Nazarbay,Esenmuradov Kenjebaevich
 1158,Farkhod,Farmonov
 1159,Farrux,Eshtemirov 
 1160,Faruxjon,Mamurov Salimovich
@@ -572,7 +572,7 @@
 1164,Orif,Bekmirzayev Maxmatqulovich
 1165,Ganisher,Umrzaqov 
 1166,Husniddin,Shukurov
-1167,Muhitdin,Hobiev
+1167,Muhiddin,Xobiyev Muhammadiyevich
 1168,Mehriddin,Mamatqulov Bobur o'g'li
 1169,Jaloliddin ,Radjabov Jahongir o'g'li
 1170,Valijon,Abdig'aniyev
@@ -585,7 +585,7 @@
 1177,Kamoliddin,Mukhammadiev 
 1178,Mansurbek,Suyunov Soat o'g'li
 1179,Komil,Aliqulov Ahmad o'g'li
-1180,Kuanish,Davlatov
+1180,Quvonchbek,Davlatov Toyir o`g`li
 1181,Akbar,Tilovov Murot o'g'li
 1182,Mansur,Buriyev Jurayevich
 1183,Mansur,Qiyomov Ahmad o'g'li
@@ -613,7 +613,7 @@
 1205,Safarali,Xudayshukurov Xolmamatovich
 1206,Xurshid,Akramov Ne'matulloyevich
 1207,Sardor,Vaitov Mengniboyevich
-1208,Ruslan,Ravshanov
+1208,Ruslan,Ravshanov Botir o`g`li
 1209,Sardor,Boytemirov
 1210,Sarvar,Umrzakov 
 1211,Sarvar,Rakhmonov
@@ -945,7 +945,7 @@
 1543,Yoqub,Bo'riyev Yodgor o'g'li
 1544,Sardor,Muhammadiyev Qodiraliyevich
 1545,Sunatilla,Usmanov Boltayevich
-1546,Muxlis,Barotov
+1546,Muxlis,Barotov Berdimurod o`g`li
 1547,Feruz,Xoliqov Sherali o'g'li
 1548,Baxtiyor,Yo'ldoshev Muradillayevich
 1549,Ma'rufjon,Qosimov Uktam o'g'li
@@ -983,19 +983,19 @@
 1581,O‘tkir,Toshpulatov
 1582,Bunyod,Nasrullayev
 1583,Asadbek,Xamrokulov Muxiddin o'g'li
-1584,Samandar,Aliyev
+1584,Samandar,Aliyev Qobil o`g`li
 1585,Anvar,G'aniyev
-1586,Xusan,Togayev
+1586,Xusan,Togayev Abdirozzokovich
 1587,Irisqul,Ro'ziqulov 
-1588,Mansurjon,Turdiyev
-1589,Dilmurod,Abdirazoqov
-1590,Elshod,Baratov
-1591,Bunyod,Eshboltayev
+1588,Mansurjon,Turdiyev Jumayevich
+1589,Dilmurod,Abdirazoqov Shavkatovich
+1590,Elshod,Baratov To`ra o`g`li
+1591,Bunyod,Eshboltayev Qosim o`g`li
 1592,Elmurod,Bolliyev Nurmamatovich
-1593,Ozodbek,Yusupov
-1594,Toshkanbek,Shukurov 
-1595,Sanjarbek,Nekiyev
-1596,Tura,Eshdavlatov
+1593,Ozodbek,Yusupov To`raboy o`g`li
+1594,Toshkanbek,Shukurov Soatqul o'g'li
+1595,Sanjarbek,Nekiyev Xolboyevich
+1596,Tura,Eshdavlatov Eshboboyevich
 1597,Qodirjon,Xo'janov
 1598,KPC,KPC
 1599,SEVERN GLOCON,SEVERN GLOCON
@@ -1073,7 +1073,7 @@
 1671,Adham,Hamdamov Narzullo o'g'li
 1672,Saidalo,Saidov
 1673,aaaaaa,aaaaa
-1674,Xurshid,Bobomurodov Xurshid G‘olibjon o'g'li
+1674,Xurshid,Bobomurodov G‘olibjon o'g'li
 1675,Sardor,Xolmatov Shuxrat o'g'li
 1676,Kamoljon,Ismoilov Yashinovich
 1677,Sardor,Hamidov Abdisalim o'g'li
@@ -1109,9 +1109,9 @@
 1861,CONTRACTS &,PROCUREMENT
 1862,Olimjon,Salimov Salim o'g'li
 1868,Yoqub,Alimardanov Begmurod o'g'li
-1869,Og'abek,Bozorov
+1869,Og'abek,Bozorov Zayniddin o`g`li
 1870,Elbek,Rahmatov
-1871,Sardor,Murodullayev
+1871,Sardor,Murodillayev Umidillo o`g`li
 1872,Kuanishbay,Tleumuratov
 1873,0001(test),HVAC service Company (test)
 1874,Jim(test),Carrey(test)
@@ -1192,8 +1192,8 @@
 1962,Bexzod,Sultanov Farruxovich
 1963,TEst,
 1964,Abusoleh,Asrorxonov Qutbiddinovich
-1965,Bahodir,Alimov
-1966,Bahodir,Elmurodov
+1965,Bahodir,Alimov Norpo`latovich
+1966,Baxodir,Elmurodov Alimurod o`g`li
 1967,Shaxzod,Umirov Sobir o'g'li
 1968,Enver,Toleuov Marat uli
 1969,Yevgeniy,Pak Leonidovich
@@ -1220,7 +1220,7 @@
 1990,Zukhriddin,Samadov
 1991,Sul,SULTONOV'S PARTNERS MCHJ
 1992,Dispatcher,UzGTL
-1993,Xamidov,Jahongir
+1993,Xamidov,Jahongir Ilyos o`g`li
 1994,Aziz,Berdiyev Furqatovich
 1995,Shuxrat,Ilyasov Xodjiaxmadovich
 1997,Fayzulla,Umirov Baxodirovich
@@ -1230,7 +1230,7 @@
 2001,Nodirbek,Ravshanov Baxtiyarovich
 2002,Oybek,Ergashov Nizomiddin o'g'li
 2003,Abdulloh,Abdurahmonov
-2004,Nurbek ,Jurayev
+2004,Nurbek ,Jo'rayev Muqim o'g'li
 2005,SLU,Sinliquid Department
 2006,Yorqin,Baratov Nosirovich
 2007,Shaxrizod,Orziyev Matnazar o`g`li
@@ -1243,7 +1243,7 @@
 2014,Umid,Abduraimov Muratovich
 2015,Shohruh,Do'stqobilov
 2016,Jahongir,Xaydarov
-2017,Elbek,Raxmatov
+2017,Elbek,Rahmatov Rashid o'g'li
 2018,Mamurjon,Mansurov
 2019,,
 2020,Komoliddin ,Baratov
@@ -1259,7 +1259,7 @@
 2030,Aybek,Nazarbayev Orinbayevich
 2031,Ilyos ,Abduholiqov Turdiyevich
 2032,Azizjon,Baratov Safar o'g'li
-2033,Ilhom,Salomov Rejabovich 
+2033,Ilxom,Salomov Rejabovich 
 2034,Xurshid,Allayorov Buriyevich
 2035,Alisher,Baxadirov Shukuraliyevich
 2036,Xumoyun,Mamadiev Azamat o'gli
@@ -1293,7 +1293,7 @@
 2065,Shadibek,Nafasov Xayrullovich
 2066,Ziyodullo                                     ,Eshqobilov Zarif o'gli
 2068,Shoxrux,Meyliyev Egamberdi ug'li
-2069,Dilshod,Bahodirov
+2069,Dilshod,Bahodirov xxx
 2070,Levon,Oganov Razmikovich
 2071,Rustam,Tilovov Safar o'g'li
 2072,O'ktam,Ilhomov Omon o'g'li
@@ -1311,7 +1311,7 @@
 2084,Axror,Baxronov Shokir o'g'li 
 2085,Otabek,Abduraxmonov Bahodir o'g'l
 2086,Xumoyun,Mamadiev Azamat o'gli 
-2087,Maqsud ,Nomozov Alisher o'g'li 
+2087,Maxsudbek,Nomozov Alisher o'g'li 
 2088,Alisher,Azimov Morqa o'g'li
 2089,Eldor,Ro'zimatov Ravshan o'g'li
 2090,G'anisher,O'mrzaqov Boynazarovich
@@ -1328,7 +1328,7 @@
 2102,Sardor,Raxmatov Sunnatilla o'g'li
 2103, Iskandar ,Allaberdiyev Isoq o'g'li 
 2104,Muxriddin ,Raximov Baxtiyor O' g' li 
-2105,Suyun,Narziyev
+2105,Suyun,Narziyev Sadin o`g`li
 2106,Sherzod,Murodov Elmurod oʻgʻli
 2107,Dustmurod,Bobomurodov Tursunovich
 2108,dvdvd,dvdvdv
@@ -1352,7 +1352,7 @@
 2128,Elyor,Xayrullayev Baxtiyor o'g'li
 2129,Nabijon,Xazratqulov javlonovich
 2130,Abror,Xudoyshukurov Abdigaffor o'g'li
-2131,Abdumo'min,Shaturov
+2131,Abdumo'min,Shato`rov Safarovich
 2132,Kamoliddin,Muhammadiyev Abdizoir o'g'li
 2133,Ziyodullo,Xolmurodov Jola o`g`li
 2134,Shoxboz,Kenjayev  Erkin o'g'li
@@ -1362,7 +1362,7 @@
 2138,Ilham,Soltanov Hayitmurat o'g'lu
 2139,Mirjalol,Maxmarajabov Berdimurod o'g'li
 2140,Akbar,Duskobilov Akram o'g'li
-2141,Bahrom,Koraboyev Pardayevich	
+2141,Bahrom,Qoraboyev Pardayevich	
 2142,Behruzbek,Turayev Sherali o'g'li
 2143,Muhsin,Bo'riyev Baxrom o'g'li
 2144,Mirjalol,Davronov Shavkatjon o'g'li
@@ -1373,7 +1373,7 @@
 2152,Akrom,Tuychiyev Naim o'g'li
 2153,Ziyadulla,Abdiraxmanov O'ktam o'g'li
 2154,Ilxom,Axmedov Baxromovich
-2155,Ilyos,Soatqulov Ravshanovich
+2155,Ilyos,Soatqulov Ravshan o'g'li
 2156,Jamshid,Safarov Ulugbek o'g'li
 2157,Farid,Suyunov Sag'dulla o'g'li
 2158,Sardor,Karimov Safarovich
@@ -1417,3 +1417,15 @@
 2196,Xurshid,Abdig'afforov Abdiroziq o'g'li
 2197,Sherzod Abdusamad o'g'li,Sattorov
 2198,Bunyod,Nasrullayev Dilshod o'g'li
+2199,Abdurashid,Abdiyev Zafar o'g'li
+2200,Ma'ruf,Maqsadqulov Yaxshiboy o'g'li
+2201,Toshtemir,Panjiyev Jumayevich
+2202,Uktam,Doliyev Sadatovich
+2203,Abdulla,Karimov Murodulla o'g'li
+2204,Alisher,Ruziyev Zokir o'g'li
+2205,Doston,Elbekov Rustam o'g'li
+2206,Azizjon,Saparov Xatam o'g'li
+2207,Bekzod,Cho'yanov Ziyodulla o'g'li
+2208,Nurbek ,Holiqulov Zarif o'g'li
+2209,Ural,Eshqurbonov Qorjov o'g'li
+2210,G'anisher,G'afforov Maxmadustovich

@@ -1,7 +1,7 @@
 import pandas as pd
 from ...database.DF__budget import outsourceBudg, rmpdBudg, tarBudg, cofeBudg, mtkBudg
 
-### Оплаты за 2024 год!
+### Оплаты за 2025 год!
 def getPayments():
     payments = pd.read_excel('1c.xls')
 
@@ -33,13 +33,9 @@ def getPayments():
 
     
     payments = payments.loc[ (payments['Вид операции'] == 'Оплата по договору') ]
-    payments = payments.loc[ (payments['Status'] == 'Оплачен полностью') & ( payments['paidYear'] == 2024) ][['Initiator','Currency','Company name','Contract','Scope','paidMonth','Sum']]
+    payments = payments.loc[ (payments['Status'] == 'Оплачен полностью') & ( payments['paidYear'] == 2025) ][['Initiator','Currency','Company name','Contract','Scope','paidMonth','Sum']]
 
-    '''
-    ### Exception старый контракт с 2023 года Махсусэнергогаз. Последняя оплата была в январе, стоимость закрыта
-    payments.loc[ payments['Contract'] == 'UZGTL-CON-2858', 'Contract' ] = 'UZGTL-CON-23-984'
-    ############################################################################################################
-    '''
+
 
     payments.loc[ (payments['Contract'].isna()) & payments['Initiator']=='Отдел контрактных услуг', 'Contract' ] = 'undefinded - outsource'
     payments.loc[ (payments['Contract'].isna()) & payments['Initiator']=='Отдел центра передового опыта', 'Contract' ] = 'undefinded - cofe'
@@ -55,12 +51,12 @@ def getPayments():
     # EUR -> USD
     for i in payments.loc[ payments['Currency']=='eur' ].index:
         for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
-            payments.loc[i,m] = payments.loc[i,m] * 1.07
+            payments.loc[i,m] = payments.loc[i,m] * 1.18
 
     # RUB -> USD
     for i in payments.loc[ payments['Currency']=='rub' ].index:
         for m in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sum']:
-            payments.loc[i,m] = payments.loc[i,m] / 100
+            payments.loc[i,m] = payments.loc[i,m] / 79
 
 
 
@@ -118,7 +114,7 @@ def getPayments():
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='mtk', 'Contract' ].unique() ), 'Department'] = 'mtk'
 
 
-    payments.to_excel('all payments.xlsx', index=False)
+    #payments.to_excel('all payments.xlsx', index=False)
     ### 4. Суммирование по каждому контракту, удаление не относящихся к maintenance 
     payments = payments.loc[ ~(payments['Department'].isna()) ]
 
@@ -147,7 +143,7 @@ def sumPayments(department=False):
     payments.loc[ len(payments) ] = sum_row
 
     # Сумма по сумовым контрактам в долларах
-    sum_row = sum_row.apply(lambda x: x/12500 if pd.api.types.is_number(x) else x)
+    sum_row = sum_row.apply(lambda x: x/13000 if pd.api.types.is_number(x) else x)
     sum_row['Contract'] = 'Summary local contracts in usd'
     payments.loc[ len(payments) ] = sum_row
 
@@ -294,6 +290,7 @@ def detailedData(budget_src, type, cur, department = False):
             plan = pd.DataFrame({'Contract':contract, 'type':'Plan','Company name':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0}, index=[0,])
         if fact.empty:
             fact = pd.DataFrame({'Contract':contract, 'type':'Fact','Company name':'','Sum':0, 'Jan':0, 'Feb':0, 'Mar':0, 'Apr':0, 'May':0, 'Jun':0, 'Jul':0, 'Aug':0, 'Sep':0, 'Oct':0, 'Nov':0, 'Dec':0}, index=[0,])
+
 
         # Строка с вычислением значения fact/plan (%). Доп проверка чтобы избежать деления на 0
         sum_row = {}

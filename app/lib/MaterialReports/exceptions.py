@@ -60,10 +60,6 @@ def corrections(transactions):
     
     #Не списывать CofE 4 AP будут возвращать
     transacts.loc[ transacts['Reservation Number'].isin([17113,16761,17100]), 'Work Order Status Description' ] = 'Pending for return'
-
-
-    #ВРЕМЕННОЕ ИСПРАВЛЕНИЕ. ОТМЕНИТЬ В АПРЕЛЕМирсаид хайдоров часть насоса. Будет возврат в апреле. письмо сделал в апреле
-    transacts.loc[ transacts['Reservation Number'].isin([23067,23068]), 'closedMonth' ] = 5
     
     ############################################################################################################
 
@@ -80,87 +76,38 @@ def corrections(transactions):
     transacts.loc[ transacts['Reservation Number'].isin([19189,19146,19193,19666,19724,20441,19660,19679,21116,
                                                          15560,19680,15145,20369,21117,]), 'isRMPD_planner' ] = 'yes'
     
-    #G'anisher G'afforov Maxmadustovich - новый планер с подстанции ШГХК
-    transacts.loc[ transacts['Reservation Number'].isin([24687,24686,24340]), 'isRMPD_planner' ] = 'yes'
-
-    #Shohjahon из SLU берет материалы, пока Миржахон в отпуске
-    transacts.loc[ transacts['Reservation Number'].isin([24920,24965,24966,]), 'isRMPD_planner' ] = 'yes'
-
-    #Комплект из двух частей 2в1
-    transacts.loc[ transacts['Reservation Number'].isin([24701,]), 'Quantity' ] = 1
-
-    #Тулкинакя сказал закрыть в мае из-за деффектных актов
-    transacts.loc[ transacts['Reservation Number'].isin([24686,24687,19146,24340,]), 'closedMonth' ] = 5
-
+    #Дата возврата в мае, но сделан в июне
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([157205,157206,157207,157208,157203,157204,]), 'transactMonth' ] = 5
     
+    #Ошибка возврата Шахбоза
+    transacts.loc[ transacts['Reservation Number'].isin([25044,25057]), 'closedMonth' ] = 6
+
+    #Бочки (транзакция в июле, но нужно сделать в июне)
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([158897,
+                                                               158898,]), 'transactMonth' ] = 6
     
+    #Бочки мукаммаллик (закрыто в июле, но списываем в июне)
+    transacts.loc[ transacts['Reservation Number'].isin([25494, ]), 'closedMonth' ] = 6
+    transacts.loc[ transacts['Reservation Number'].isin([25494, ]), 'Work Order Status Description' ] = "Closed"
+    
+    #баллоны не принимать во внимание, Шахзодакя сказал у них нет номера
+    transacts = transacts.loc[ ~(transacts['Catalogue Transaction ID'].isin([158429,158430,]) )]
+
+    #Возврат спецодежды CofE сделали в августе, но закрываем вопрос в июльском отчёте
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([160621,]), 'transactMonth' ] = 7
+    
+
     ############################################################################################################
 
 
     ### 6. AP ##################################################################################################
-
     #Расходы rmpd на объект SGU #Мансур Хасанов - проблема с яроксиз актом, будет в апреле     
     transacts.loc[ transacts['Reservation Number'].isin([17166,17167,17169,17170,17171,17172,17173,17174,
-                                                         17175,17176,17177,17178,17179,]), 'Work Order Status Description' ] = "W8"
+                                                         17175,17176,17177,17178,17179,]), 'Work Order Status Description' ] = "Closed"
+    transacts.loc[ transacts['Reservation Number'].isin([17166,17167,17169,17170,17171,17172,17173,17174,
+                                                         17175,17176,17177,17178,17179,]), 'closedMonth' ] = 7
     transacts.loc[ transacts['Reservation Number'].isin([17166,17167,17169,17170,17171,17172,17173,17174,
                                                          17175,17176,17177,17178,17179,]), 'Отдел' ] = 'RMPD for AP'
-    #Handover есть, списать в марте
-    transacts.loc[ transacts['Reservation Number'].isin([21130,]), 'closedMonth' ] = 3
-    #Handover есть, не сделали фактуру списание будет в апреле
-    transacts.loc[ transacts['Reservation Number'].isin([23106,23288,23386,23387,]), 'closedMonth' ] = 5
-
-    #это не в АП, просто унит рядом с 60
-    transacts.loc[ transacts['Reservation Number'].isin([24175,]), 'Отдел' ] = "U&O"
-
-    
-
-    ############################################################################################################
-
-
-    ### 7. TAR Temp Save#################################################################################
-    transacts.loc[ transacts['Reservation Number'].isin([
-    #25
-    14660,14683,14665,14669,14684,14687,14692,14693,14809,16406,16413,18000,
-    #28
-    18752,19523,18753,18754,18898,19063,19274,19064,19273,19386,19585,19387,
-    19419,19420,19421,19422,19522,20328,20329,
-    #31
-    18089,18090,18097,18281,18283,18285,18286,18287,18288,18289,18291,18292,
-    18293,18295,18296,18297,18299,18303,18309,18311,18313,18314,18315,18316,
-    18317,18318,18319,18320,18321,18540,18541,18550,18551,18552,18554,18557,
-    18566,18594,18595,18622,
-    #33
-    18290,
-    #35
-    14691,18487,18509,
-    #90
-    14616,14618,14620,14645,14675,16407,16408,16409,18170,18171,18172,19474,
-    #47
-    16776,16771,16772,16774,16775,#!!! Есть 5-значный 16773
-    #48
-    18696,18909,
-    #50
-    16343,18117,18272,18273,18274,   
-    #54
-    15906,15956,15958,15971,15974,16335,16483,16495,16500,16506,16546,16548,16740,16745,15039,15041,15042,
-    15148,15151,15153,15159,15160,15163,15173,15180,15182,15185,15878,15885,16547,16556,16741,16746,
-    #57
-    18008, 18009, 18010, 18011, 18031,
-    #Буньед Лукмонов 68
-    16545,#Эта тоже должна была быть на 014. моя ошибка. 16346, она списана несколько месяцев назад
-    #Мирсаид Хайдоров #453
-    19379,19380,19381,19382,19383,19384,
-    #Мирсаид Хайдоров #454
-    18118,18122,
-    #Мирсаид Хайдоров #638
-    18023,15899,15932,15992,18025,19227,19228,19229,
-    ]), 'closedMonth' ] = 5
-
-    #Тоже закрыть в мае, раньше было указано в письме Буньёда
-    transacts.loc[ transacts['Reservation Number'].isin([
-    15879,
-    ]), 'closedMonth' ] = 5
-
     ############################################################################################################
 
     return transacts
@@ -233,16 +180,16 @@ extra = {
         ],
         'currentMonth':[
             #Бумага
-            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':3,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':2,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
-            #{'Код товара':'31158','Reservation Number':-5,'WO №':-5,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А3",'Ед.изм.':'пачка','Quantity':1,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':7,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':10,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            #{'Код товара':'31158','Reservation Number':-5,'WO №':-5,'closedMonth':5,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А3",'Ед.изм.':'пачка','Quantity':1,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
             
             #Met
             #Алюминий 13
-            {'Код товара':'29422','Reservation Number':-6,'WO №':-6,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Алюмин 13",'Ед.изм.':'т','Quantity':1.0006,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            #{'Код товара':'29422','Reservation Number':-6,'WO №':-6,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Алюмин 13",'Ед.изм.':'т','Quantity':1.0006,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Никель 13
-            {'Код товара':'11064','Reservation Number':-7,'WO №':-7,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Никель 13",'Ед.изм.':'т','Quantity':0.555,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            #{'Код товара':'11064','Reservation Number':-7,'WO №':-7,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Никель 13",'Ед.изм.':'т','Quantity':0.555,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Медь 13
-            {'Код товара':'21883','Reservation Number':-8,'WO №':-8,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.7226,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            #{'Код товара':'21883','Reservation Number':-8,'WO №':-8,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.7226,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Свинец 13
             #{'Код товара':'16797','Reservation Number':-6,'WO №':-6,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Свинец 13",'Ед.изм.':'т','Quantity':0.527,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
@@ -255,30 +202,28 @@ extra = {
             
             #Diesel
             #{'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':166,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':7,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':46,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
-            {'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.0199,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
+            #{'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.0199,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
         
         ],
         'currentMonth':[
             #Бумага
-            {'Код товара':'06944','Reservation Number':-5,'WO №':-5,'closedMonth':3,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            {'Код товара':'06944','Reservation Number':-5,'WO №':-5,'closedMonth':7,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Бумага', 'Объект':'Бумага'},
             
             #Diesel
-            #{'Код товара':'06933','Reservation Number':-6,'WO №':-6,'closedMonth':1,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':209,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-7,'WO №':-7,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':140,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-8,'WO №':-8,'closedMonth':0,'closedYear':2025,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':60,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-6,'WO №':-6,'closedMonth':7,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':115,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-8,'WO №':-8,'closedMonth':0,'closedYear':2025,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':85,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
-            {'Код товара':'09683','Reservation Number':-9,'WO №':-9,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':31.3871,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
+            {'Код товара':'09683','Reservation Number':-9,'WO №':-9,'closedMonth':7,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':28.39,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
         
             #Аргонбаллон
             #{'Код товара':'01874','Reservation Number':-9,'WO №':-9,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Аргон баллон 50л",'Ед.изм.':'шт','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Аргон баллон', 'Объект':'Аргон баллон'},
             
             #Половая тряпка
             #{'Код товара':'00094','Reservation Number':-10,'WO №':-10,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Половая тряпка",'Ед.изм.':'м','Quantity':100,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Половая тряпка', 'Объект':'Половая тряпка'},
-            
             ],
         'currentReturn':[]
     },

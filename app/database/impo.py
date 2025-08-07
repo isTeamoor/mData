@@ -44,9 +44,15 @@ priorityAnswer            = pd.read_csv("app/database/csv/ccc_rt_priorityAnswer.
 priorityAnswerDescription = pd.read_csv("app/database/csv/ccc_rt_priorityAnswersDescription.csv", encoding="utf-8")
 
 
-
 contactID.loc[ contactID['Contact ID']==1141,'Last Name' ] = 'Aralov Akbar o`g`li'
 contactID.loc[ contactID['Contact ID']==1463,'Last Name' ] = 'Toirov Ilxom o`g`li'
+contactID.loc[ contactID['Contact ID']==2210,'First Name' ] = 'G`anisher'
+contactID.loc[ contactID['Contact ID']==2210,'Last Name' ] = 'G`afforov Maxmadustovich'
+contactID.loc[ contactID['Contact ID']==1845,'Last Name' ] = 'Tilavov Abduxalil o`g`li'
+contactID.loc[ contactID['Contact ID']==2177,'Last Name' ] = 'Juraqulov Shahobiddin o`g`li'
+contactID.loc[ contactID['Contact ID']==2115,'Last Name' ] = 'Haydarov Ilhom o`g`li'
+
+
 contactID.insert(1, 'Reserved By',         contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Created By',          contactID['First Name'] + " " + contactID['Last Name'])
 contactID.insert(1, 'Requisitioned By',    contactID['First Name'] + " " + contactID['Last Name'])

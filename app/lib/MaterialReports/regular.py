@@ -18,7 +18,7 @@ def matReport(repMonth, repYear, department, transacts):
   transactions = filterDF(transactions, reference.department_Filters[department])
 
   transactions = reference.spread(transactions, spares, exceptions.inactive_Master_Reservations, repMonth, repYear)
-
+  
   ### Отчёт по временному хранению
   transactions['TempSave'] = transactions.apply(lambda x: 'yes' if x['Reservation Number'] in reference.tempSave[department] else x['Reservation Number'], axis=1)
   transactions.loc[ transactions['TempSave']=='yes'].to_excel('TempSave_report.xlsx')
@@ -56,7 +56,7 @@ def matReport(repMonth, repYear, department, transacts):
   ### 3. Выборка транзакций за отчётный период
   current = transactions.loc[ (transactions['transactMonth'] == repMonth) & (transactions['transactYear'] == repYear) 
                              & (transactions['Catalogue Transaction Action Name']=='Issue') ].copy()
-
+  
 
   ### 4. Возвраты за отчётный период
   currentReturn = transactions.loc[ (transactions['transactMonth'] == repMonth) & (transactions['transactYear'] == repYear)
@@ -216,33 +216,25 @@ def matReport(repMonth, repYear, department, transacts):
       #rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 10000  if x['Код товара']=='05733' else x['Сумма приход'], axis=1)
       rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 10000  if x['Код товара']=='05733' else x['Сумма расход'], axis=1)
       rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 10000  if x['Код товара']=='05733' else x['Сумма конец'], axis=1)
-      """
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1     if x['Код товара']=='12481' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 3043.63   if x['Код товара']=='12481' else x['Сумма приход'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 870.32   if x['Код товара']=='12481' else x['Сумма расход'], axis=1)
-  """
+      #Азот 27158 !
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 150894.645  if x['Код товара']=='27158' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 150894.64  if x['Код товара']=='27158' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 150894.64   if x['Код товара']=='27158' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 150894.64   if x['Код товара']=='27158' else x['Сумма конец'], axis=1)
+      #Свинцовая пломба 06801 !
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 28114.99736842105   if x['Код товара']=='06801' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 28114.99736842105  if x['Код товара']=='06801' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 28114.99736842105  if x['Код товара']=='06801' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 28114.99736842105  if x['Код товара']=='06801' else x['Сумма конец'], axis=1)
+      #Кислород газообразный 13688
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 7652.536929993577   if x['Код товара']=='13688' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 7500  if x['Код товара']=='13688' else x['Сумма приход'], axis=1)
+      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 7520.639610671765  if x['Код товара']=='13688' else x['Сумма расход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 7500  if x['Код товара']=='13688' else x['Сумма конец'], axis=1)
+      
   if department == 'rmpd':
       a=1
-      #Gloves
-      #rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 1106.592617449664     if x['Код товара']=='12478' else x['Сумма начало'], axis=1)
-      #rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 1268.179   if x['Код товара']=='12478' else x['Сумма приход'], axis=1)
-      #rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 1098.63   if x['Код товара']=='12478' else x['Сумма расход'], axis=1)
-      #rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 1268.179117647059   if x['Код товара']=='12478' else x['Сумма конец'], axis=1)
-      
-      #Труба (30394) из тн -> м 
-      #rep['Ед.изм.'] = rep.apply(lambda x: 'м' if x['Код товара']=='30394' else x['Ед.изм.'], axis=1)
-      #rep['Кол-во приход'] = rep.apply(lambda x: x['Кол-во приход'] * 142.5   if x['Код товара']=='30394' else x['Кол-во приход'], axis=1)
-      #rep['Кол-во конец'] = rep.apply(lambda x: x['Кол-во конец'] * 142.5   if x['Код товара']=='30394' else x['Кол-во конец'], axis=1)
-      #rep['Сумма начало']  = rep.apply(lambda x: x['Кол-во начало'] * 169319.6359649123    if x['Код товара']=='30394' else x['Сумма начало'], axis=1)
-      #rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 169319.6359649123   if x['Код товара']=='30394' else x['Сумма приход'], axis=1)
-      #rep['Сумма конец']  = rep.apply(lambda x: x['Кол-во конец'] * 169319.6359649123    if x['Код товара']=='30394' else x['Сумма конец'], axis=1)
-
-      """#32430
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 165183831.74    if x['Код товара']=='32430' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 164960617.44  if x['Код товара']=='32430' else x['Сумма приход'], axis=1)
-      rep['Сумма расход'] = rep.apply(lambda x: x['Кол-во расход'] * 165072224.6   if x['Код товара']=='32430' else x['Сумма расход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 165072224.6   if x['Код товара']=='32430' else x['Сумма конец'], axis=1)"""
-  ##########################################################
+      ##########################################################
 
 
   
@@ -310,11 +302,39 @@ def matReport(repMonth, repYear, department, transacts):
           'Work Order Status Description':'Closed','closedMonth':2,
           'Отдел':'Turnaround','Reserved By':'Kamoljon Ismoilov Yashinovich',
           'is014':'','iswOff':'','WO №':133264,'Asset Description':'Fired Steam Superheater', 'Объект':'172-XP-007', 'Кол-во возврат':0}
-
+  row5 = {'Account':'003.1 (Материалы на складе)',
+          'Код товара':'30405',
+          'Материал':'0,6/1KV MGT/XLPE/LSZH  2C X 2,5sqmm+2,5sqmm / Кабель с изоляцией из слюдяной ленты, сшитого полиэтилена, с малодымной оболочкой и нулевым содержанием галогенов',
+          'Ед.изм.':'м',
+          'Цена':1,
+          'Кол-во начало':0,'Сумма начало':0,
+          'Кол-во приход':30,'Сумма приход':30,
+          'Кол-во расход':30,'Сумма расход':30,'Кол-во 014':0, 'Сумма 014':0,
+          'Кол-во конец':0,'Сумма конец':0, 
+          'Reservation Number':25411,
+          'Work Order Status Description':'Closed','closedMonth':6,
+          'Отдел':'Cofe-Electrical','Reserved By':'Boburjon Aralov Akbar o`g`li',
+          'is014':'','iswOff':'','WO №':139844,'Asset Description':'Warehouse', 'Объект':'WIM', 'Кол-во возврат':0}
+  row6 = {'Account':'1090 (Прочие материалы)',
+          'Код товара':'30405',
+          'Материал':'0,6/1KV MGT/XLPE/LSZH  2C X 2,5sqmm+2,5sqmm / Кабель с изоляцией из слюдяной ленты, сшитого полиэтилена, с малодымной оболочкой и нулевым содержанием галогенов',
+          'Ед.изм.':'м',
+          'Цена':15597.66338028169,
+          'Кол-во начало':0,'Сумма начало':0,
+          'Кол-во приход':71,'Сумма приход':1107434.1,
+          'Кол-во расход':71,'Сумма расход':1107434.1,'Кол-во 014':0, 'Сумма 014':0,
+          'Кол-во конец':0,'Сумма конец':0, 
+          'Reservation Number':25412,
+          'Work Order Status Description':'Closed','closedMonth':6,
+          'Отдел':'Cofe-Electrical','Reserved By':'Boburjon Aralov Akbar o`g`li',
+          'is014':'','iswOff':'','WO №':139844,'Asset Description':'Warehouse', 'Объект':'WIM', 'Кол-во возврат':0}
   if department=='cofe':
     rep = rep.loc[ rep['Код товара']!='29137']
     rep = pd.concat([rep, pd.DataFrame(row1, index=[0])]).reset_index(drop=True)
     rep = pd.concat([rep, pd.DataFrame(row2, index=[0])]).reset_index(drop=True)
+    #rep = rep.loc[ rep['Код товара']!='30405']
+    #rep = pd.concat([rep, pd.DataFrame(row5, index=[0])]).reset_index(drop=True)
+    #rep = pd.concat([rep, pd.DataFrame(row6, index=[0])]).reset_index(drop=True)
   """if department=='rmpd':
     rep = pd.concat([rep, pd.DataFrame(row3, index=[0])]).reset_index(drop=True)
     rep = pd.concat([rep, pd.DataFrame(row4, index=[0])]).reset_index(drop=True)"""

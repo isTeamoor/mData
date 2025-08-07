@@ -27,6 +27,9 @@ rmpd_planners = ['Ulugbek  Xamroyev Maksudovich',
                  "To'lqin Berdiyev Omonovich",
                  'Mirjakhon Toirov',
                  'Mirjahon Toirov Ilxom o`g`li', 
+                 'G`anisher G`afforov Maxmadustovich',
+                 'Shohijahon Tilavov Abduxalil o`g`li',
+                 'Shomirzo Juraqulov Shahobiddin o`g`li'
                  ]
 reservations['isRMPD_planner'] = reservations['Reserved By'].copy().map(lambda x: 'yes' if x in rmpd_planners else 'no')
 

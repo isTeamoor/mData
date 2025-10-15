@@ -29,13 +29,11 @@ def get_reqs():
 def get_payments(department:str):
     payments.getPayments().to_excel('maintenance_payments.xlsx')
     
-    payments.sumPayments('rmpd')
+    """payments.sumPayments('rmpd')
     payments.sumPayments('cofe')
     payments.sumPayments('tar')
     payments.sumPayments('mtk')
-    payments.sumPayments('overall')
-    
-    data = payments.draw_report(department = department)
+    payments.sumPayments('overall')"""
     
     return {'/payments':'ok'}
 

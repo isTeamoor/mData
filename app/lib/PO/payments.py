@@ -114,7 +114,7 @@ def getPayments():
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='mtk', 'Contract' ].unique() ), 'Department'] = 'mtk'
 
 
-    #payments.to_excel('all payments.xlsx', index=False)
+    payments.to_excel('All Payments with Scope.xlsx', index=False)
     ### 4. Суммирование по каждому контракту, удаление не относящихся к maintenance 
     payments = payments.loc[ ~(payments['Department'].isna()) ]
 

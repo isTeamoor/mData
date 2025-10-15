@@ -47,7 +47,8 @@ spares = spares[[
 'Is Master Work Order', 'Is Group Work Order', 'Group WO number','Spares Comment','Employee WOSpares', 'Asset Description','Asset Number','Estimated Cost',
 ]]
 transactions = transactions.merge(spares, how='left', on='Work Order Spare ID')
-
+### !!! Exception !!!
+# 
 
 
 

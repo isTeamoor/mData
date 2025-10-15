@@ -39,7 +39,7 @@ spares['Estimated Cost'] = spares['Estimated Quantity'] * spares['Estimated Unit
 
 
 
-
+### Reservations for Air Products
 spares.loc [ (spares['Account Code']=='100000000012') & (spares['Reserved By']=="To'lqin Berdiyev Omonovich"), 'Short Department Name'] = '4AP'
 spares.loc [ (spares['Asset Number']).isin(unitChildren()) & (spares['Short Department Name']!='4AP'), 'Short Department Name' ] = '4AP'
 

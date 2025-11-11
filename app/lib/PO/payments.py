@@ -64,7 +64,7 @@ def getPayments():
     ### 3. Пометка контрактов по отделам
     # Outsource
     payments.loc[ payments['Contract'].isin(outsourceBudg['Contract'].unique()), 'Department'] = 'outsource'
-    payments.loc[ payments['Contract'].isin(['CON-0025','CON-0027']), 'Department'] = 'outsource'
+    #payments.loc[ payments['Contract'].isin(['CON-0025','CON-0027']), 'Department'] = 'outsource' /Перешло в отдел развития бизнеса
     payments.loc[ payments['Initiator'] == 'Отдел контрактных услуг', 'Department'] = 'outsource'
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='outsource', 'Contract' ].unique() ) , 'Department'] = 'outsource'
 
@@ -114,7 +114,7 @@ def getPayments():
     payments.loc[ payments['Contract'].isin( payments.loc[ payments['Department']=='mtk', 'Contract' ].unique() ), 'Department'] = 'mtk'
 
 
-    payments.to_excel('All Payments with Scope.xlsx', index=False)
+    payments.to_excel('GTL Payments with Scope.xlsx', index=False)
     ### 4. Суммирование по каждому контракту, удаление не относящихся к maintenance 
     payments = payments.loc[ ~(payments['Department'].isna()) ]
 
@@ -326,7 +326,7 @@ def draw_report(department = False):
 
     
     ### 2. Печать отчётов
-    sumPayments(department).to_excel(f'{department}_payments.xlsx', index=False)
+    sumPayments(department)
     summaryData(budget, department).to_excel(f'{department}_summary.xlsx', index=False)
 
     if department == 'outsource':

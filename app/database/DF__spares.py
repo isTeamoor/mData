@@ -31,6 +31,12 @@ unused = spares.loc[(spares['Reservation Number'].isna())
                    & ((spares['Work Order Status Description'] == 'Closed') | (spares['Work Order Status Description'] == 'Cancelled'))]
 spares = spares.drop(unused.index)
 
+### Удаление spares, для которых reservation есть, но не выполнен, но WO уже закрыт или отменен
+unused = spares.loc[(spares['reservYear'] == 0) 
+                   & (spares['Spares Comment'].isna())
+                   & ((spares['Work Order Status Description'] == 'Closed') | (spares['Work Order Status Description'] == 'Cancelled'))]
+spares = spares.drop(unused.index)
+
 
 
 spares['Actual Cost']    = spares['Actual Quantity'] * spares['Estimated Unit Cost']

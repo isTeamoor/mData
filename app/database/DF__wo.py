@@ -61,3 +61,9 @@ wo = wo[['Work Order ID', 'Work Order Number', 'Work Order Status Description','
         'Asset Description','Asset Number', 'Asset ID', 'Parent Asset ID',
         'Is Master Work Order', 'Is Group Work Order', 'Group WO number', 
         'WO Account Code Name','WO Account Code Description','Work Order Description','Raised Date Time']]
+
+### !!! Exception!!!
+#WO Civil, закрывать не собираются, CofE Брал в него материалы. Проверить статус в конце года
+wo.loc[ wo['Work Order Number'].isin([128258,]), 'closedMonth' ] = 10
+wo.loc[ wo['Work Order Number'].isin([128258,]), 'closedYear' ] = 2025
+wo.loc[ wo['Work Order Number'].isin([128258,]), 'Work Order Status Description' ] = "Closed"

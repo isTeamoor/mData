@@ -51,6 +51,32 @@ contactID.loc[ contactID['Contact ID']==2210,'Last Name' ] = 'G`afforov Maxmadus
 contactID.loc[ contactID['Contact ID']==1845,'Last Name' ] = 'Tilavov Abduxalil o`g`li'
 contactID.loc[ contactID['Contact ID']==2177,'Last Name' ] = 'Juraqulov Shahobiddin o`g`li'
 contactID.loc[ contactID['Contact ID']==2115,'Last Name' ] = 'Haydarov Ilhom o`g`li'
+contactID.loc[ contactID['Contact ID']==2183,'Last Name' ] = 'G`oziyev Yaxshiboyevich'
+#TAR
+contactID.loc[ contactID['Contact ID']==2073,'Last Name' ] = 'Luqmonov Akbar o`g`li'
+
+contactID.loc[ contactID['Contact ID']==2072,'First Name' ] = 'O`ktam'
+contactID.loc[ contactID['Contact ID']==2072,'Last Name' ] = 'Ilhomov Omon o`g`li'
+
+contactID.loc[ contactID['Contact ID']==1678,'First Name' ] = 'O`ktam'
+contactID.loc[ contactID['Contact ID']==1678,'Last Name' ] = 'Omonov Eshquvat o`g`li'
+
+contactID.loc[ contactID['Contact ID']==1576,'Last Name' ] = 'Ashrapov Badriddin o`g`li'
+
+contactID.loc[ contactID['Contact ID']==616,'First Name' ] = 'Jo`rabek'
+contactID.loc[ contactID['Contact ID']==616,'Last Name' ] = 'Berdialiyev Turdi o`g`li'
+
+contactID.loc[ contactID['Contact ID']==1675,'Last Name' ] = 'Xolmatov Shuxrat o`g`li'
+
+contactID.loc[ contactID['Contact ID']==1501,'Last Name' ] = 'Yuldoshev Shuhrat o`g`li'
+contactID.loc[ contactID['Contact ID']==1638,'Last Name' ] = 'Yuldoshev Shuhrat o`g`li'
+
+contactID.loc[ contactID['Contact ID']==1509,'First Name' ] = 'Ulug`bek'
+
+contactID.loc[ contactID['Contact ID']==1677,'Last Name' ] = 'Hamidov Abdisalim o`g`li'
+
+
+
 
 
 contactID.insert(1, 'Reserved By',         contactID['First Name'] + " " + contactID['Last Name'])

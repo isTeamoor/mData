@@ -53,7 +53,7 @@ spares.loc [ (spares['Asset Number']).isin(unitChildren()) & (spares['Short Depa
 
 
 spares = spares[[
-'Work Order Spare ID', 'Work Order ID', 'Work Order Spare Description', 'Reservation Number', 'reservYear', 'reservMonth', 'Reserved By', 'isRMPD_planner',
+'Work Order Spare ID', 'Work Order ID', 'Work Order Spare Description', 'Reservation Number', 'reservCreatedYear','reservCreatedMonth','reservYear', 'reservMonth', 'Reserved By', 'isRMPD_planner',
 'Estimated Quantity', 'Actual Quantity','UOMDescription','Estimated Unit Cost', 'Estimated Cost', 'Actual Cost', 
 'Work Order Number','Work Order Status Description','raisedYear', 'raisedMonth',
 'Work Order Component Description', 'Job Code Major Description', 'Account Code', 'Account Code Description', 

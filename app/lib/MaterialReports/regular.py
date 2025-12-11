@@ -1,6 +1,7 @@
 import pandas as pd
 from ...database.DF__spares import spares
 from ...database.DF__wo import wo
+from ...database.DF__assets import unitChild
 from ..gen import filterDF
 from . import exceptions, reference, yaroqsiz
 
@@ -187,8 +188,13 @@ def matReport(repMonth, repYear, department, transacts):
   if department == 'cofe':
     rep.loc[ rep['Код товара']=='06933', 'Цена' ] = 0
 
-    rep.loc[ rep['Код товара']=='11062', 'Цена' ] = 58035.71419753086
-    rep.loc[ rep['Код товара']=='13688', 'Цена' ] = 9370.842572062084
+    rep.loc[ rep['Код товара']=='11062', 'Цена' ] = 58035.71448409943
+    rep.loc[ rep['Код товара']=='14457', 'Цена' ] = 88756.6174375 
+
+  if department == 'rmpd':
+    rep.loc[ rep['Код товара']=='12813', 'Цена' ] = 41768.6741713571
+    rep.loc[ rep['Код товара']=='12814', 'Цена' ] = 7846.732666666667
+
 
   rep['Сумма начало']  = rep['Кол-во начало']  * rep['Цена']
   rep['Сумма приход']  = rep['Кол-во приход']  * rep['Цена']
@@ -199,14 +205,25 @@ def matReport(repMonth, repYear, department, transacts):
   ### Exception different prices in 1c
   if department == 'cofe':
       #Аргон 11062
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 58035.71405940594     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 58035.71431451613  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 58035.71418355185  if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 58035.71433513214     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 55044.79381941091  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 56147.14380812033  if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
       #Кислород газообразный 13688
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 9367.529880478088   if x['Код товара']=='13688' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 9375  if x['Код товара']=='13688' else x['Сумма приход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 8774.932003626473  if x['Код товара']=='13688' else x['Сумма конец'], axis=1)
-  
+      #rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 9367.529880478088   if x['Код товара']=='13688' else x['Сумма начало'], axis=1)
+      #rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 9375  if x['Код товара']=='13688' else x['Сумма приход'], axis=1)
+      #rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 8774.932003626473  if x['Код товара']=='13688' else x['Сумма конец'], axis=1)
+      #Кислород газообразный 14457
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 88982.6584962406   if x['Код товара']=='14457' else x['Сумма приход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 89323.85254716981   if x['Код товара']=='14457' else x['Сумма конец'], axis=1)
+  if department == 'rmpd':
+      #Мис 12813
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 18500   if x['Код товара']=='12813' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 42000  if x['Код товара']=='12813' else x['Сумма приход'], axis=1)
+      #Алюминий 12814
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 5000   if x['Код товара']=='12814' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 8032.740767045455  if x['Код товара']=='12814' else x['Сумма приход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 5000  if x['Код товара']=='12814' else x['Сумма конец'], axis=1)
+      
 
 
 
@@ -216,7 +233,7 @@ def matReport(repMonth, repYear, department, transacts):
               'Кол-во расход','Сумма расход','Кол-во 014', 'Сумма 014','Кол-во конец','Сумма конец', 'Reservation Number','Work Order Status Description',
               'closedMonth','Отдел','Reserved By','is014','iswOff','WO №','Asset Description', 'Объект', 'Кол-во возврат']]
   
-
+  """
   ### !!! Exception steel angle 003 & 1040 accounts
   row1 = {'Account':'003.1 (Материалы на складе)',
           'Код товара':'29137',
@@ -248,7 +265,7 @@ def matReport(repMonth, repYear, department, transacts):
     rep = rep.loc[ rep['Код товара']!='29137']
     rep = pd.concat([rep, pd.DataFrame(row1, index=[0])]).reset_index(drop=True)
     rep = pd.concat([rep, pd.DataFrame(row2, index=[0])]).reset_index(drop=True)
-
+  """
 
   ### 11. Базовый файл с детализацией по Reservations
   check = rep.copy()
@@ -283,6 +300,28 @@ def matReport(repMonth, repYear, department, transacts):
   
   dalolat = dalolat[['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By','Цена', 'Сумма расход']]
   dalolat = dalolat.groupby(['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By',]).sum()
+
+  ### C включением WO description
+  dalolat_mod = rep.loc[ (rep['Кол-во расход']>0) & (rep['iswOff']!='yes') ].copy()
+  dalolat_mod['Кол-во расход'] = dalolat_mod['Кол-во расход'] - dalolat_mod['Кол-во возврат']
+  dalolat_mod = dalolat_mod.loc [ dalolat_mod['Кол-во расход'] !=0 ]
+  
+  dalolat_mod['Кол-во всего'] = dalolat_mod['Код товара'].copy().map(  lambda x: dalolat_mod.loc[ dalolat_mod['Код товара'] == x, 'Кол-во расход' ].sum() )
+  
+  dalolat_mod = dalolat_mod[['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект', 'Reserved By','Цена', 'Сумма расход']]
+  # Добавляем WO Description
+  dalolat_mod = dalolat_mod.merge(wo[['Work Order Number','Work Order Description']], how = 'left', left_on='WO №', right_on='Work Order Number' )
+  dalolat_mod = dalolat_mod.fillna({'WO №':0, 'Work Order Description':'Custom'})
+  # Проход по assets
+  dalolat_mod['Facility'] = 'х'
+  dalolat_mod['Facility'] = dalolat_mod.apply(lambda x: 'SLU' if x['Объект'] in unitChild('SLU') else x['Facility'],axis=1)
+  dalolat_mod['Facility'] = dalolat_mod.apply(lambda x: 'U&O' if x['Объект'] in unitChild('U&O') else x['Facility'],axis=1)
+  dalolat_mod['Facility'] = dalolat_mod.apply(lambda x: 'PWU' if x['Объект'] in unitChild('PWU') else x['Facility'],axis=1)
+  dalolat_mod['Facility'] = dalolat_mod.apply(lambda x: 'Buildings' if x['Объект'] in unitChild('Buildings') else x['Facility'],axis=1)
+  dalolat_mod['Facility'] = dalolat_mod.apply(lambda x: 'Warehouse' if x['Объект'] in unitChild('Warehouse') else x['Facility'],axis=1)
+  dalolat_mod['Facility'] = dalolat_mod.apply(lambda x: 'AUTOMATION' if x['Объект'] in unitChild('AUTOMATION') else x['Facility'],axis=1)
+  dalolat_mod = dalolat_mod.groupby(['Код товара', 'Материал', "Ед.изм.",'Кол-во всего',"Отдел", 'WO №','Reservation Number', 'Кол-во расход','Asset Description', 'Объект','Facility', 'Reserved By','Work Order Description']).sum()
+
 
 
 
@@ -361,7 +400,7 @@ def matReport(repMonth, repYear, department, transacts):
 
   ### 14. Ввод в эксплуатацию. Не связан с TempSave reference.tempSaveLimits, только reference.tempSave!
   to014 = rep.loc[ rep['Кол-во 014']>0 ].copy()
-  to014 = to014.loc[ ~(to014['Reservation Number'].isin(reference.tempSave[department])) ]
+  #to014 = to014.loc[ ~(to014['Reservation Number'].isin(reference.tempSave[department])) ]
   to014 = to014[['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Кол-во 014', 'Цена', 'Сумма 014']]
   to014['Объект'] = ''
   to014 = to014.groupby(['Код товара', 'Материал', 'Объект', "Ед.изм.", 'Цена']).sum()
@@ -382,6 +421,7 @@ def matReport(repMonth, repYear, department, transacts):
   check.to_excel('2. check.xlsx', index=False)
   matRep.to_excel('3. matRep.xlsx', index=False)
   dalolat.to_excel('4. dalolat.xlsx')
+  dalolat_mod.to_excel('4. dalolat_mod.xlsx')
   handover.to_excel('4. handover.xlsx', index=False)
   to014.to_excel('4. 014.xlsx', index=False)
   wOff_Ap.to_excel('4. wOff_AP.xlsx', index=False)

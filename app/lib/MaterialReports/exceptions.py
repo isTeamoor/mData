@@ -9,6 +9,7 @@ def corrections(transactions):
                                                                        20232,
                                                                        22884,23146,23147,23148,23149,23150,23152,
                                                                        24187,
+                                                                       30943,
                                                                        ])) ]
     #RMPD
     transacts = transacts.loc[ ~(transacts['Reservation Number'].isin([16946,
@@ -59,37 +60,72 @@ def corrections(transactions):
                                                         'Work Order Status Description' ] = 'Pending for return'
     transacts.loc[ (transacts['Reservation Number'].isin([10968,10969,10970,10971,10972,10973,10974,10975,10976]))
                    &
-                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2026
+                   (transacts['Catalogue Transaction Action Name']=='Return to Stock'), 'transactYear' ] = 2027
     
     #Не списывать CofE 4 AP будут возвращать
-    transacts.loc[ transacts['Reservation Number'].isin([17113,16761,17100]), 
+    transacts.loc[ transacts['Reservation Number'].isin([17113,]), 
                                                         'Work Order Status Description' ] = 'Pending for return'
+    transacts.loc[ transacts['Reservation Number'].isin([16761,17100]), 
+                                                        'Work Order Status Description' ] = 'Closed'
     ############################################################################################################
 
     
     
 
     ### 5. Технические ошибки ##################################################################################
-    #Шохзод Юлдашев для SLU - он пока не в списке isRmpdPlaner
+    #Шохзод Юлдашев для SLU - он пока не в списке isRmpdPlaner. Проверить, можно удалить наверное, включил их в is_rmpdPlaner
     transacts.loc[ transacts['Reservation Number'].isin([19189,19146,19193,19666,19724,20441,19660,19679,21116,
                                                          15560,19680,15145,20369,21117,
                                                          4731,
                                                          29253]), 'isRMPD_planner' ] = 'yes'
 
-    #Корректировка кислорода CofE. Раньше в exceptions.extra было +0.12, перенес в reservation
-    transacts.loc[ transacts['Reservation Number'].isin([28748,]), 'Quantity' ] = 30.12
+    """#Корректировка кислорода CofE. Раньше в exceptions.extra было +0.12, перенес в reservation
+    transacts.loc[ transacts['Reservation Number'].isin([28748,]), 'Quantity' ] = 30.12"""
 
-    #Ошибка со склада - 1 вместо 2. Номер накладной 1280/ ! Изменили на 163651. Количество 1 теперь
-    #transacts = transacts.loc[ ~(transacts['Catalogue Transaction ID'].isin([163811,])) ]
+    """Ошибка со склада - 1 вместо 2. Номер накладной 1280/ ! Изменили на 163651. Количество 1 теперь
+    #transacts = transacts.loc[ ~(transacts['Catalogue Transaction ID'].isin([163811,])) ]"""
 
-    #Временное хранение. Уктам Ильхомов. Блайнд. Должен был быть списан в сентябре, в последний момент изменили. В ноябре
-    transacts.loc[ transacts['Reservation Number'].isin([26964,29199]), 'closedMonth' ] = 11
+    #Временное хранение. Уктам Ильхомов. Блайнд. Было лень разбираться. есть письмо на временное хранение
+    transacts.loc[ transacts['Reservation Number'].isin([26964,]), 'closedMonth' ] = 11
+
+    #Временное хранение.Мирсаид Хайдаров. Было лень разбираться. есть письмо на временное хранение
+    transacts.loc[ transacts['Reservation Number'].isin([29199,]), 'closedMonth' ] = 11
 
     #Баллон - это тара, будет на балансе, не в 014
     transacts.loc[ transacts['Код товара'].isin(['01876',]), 'Work Order Status Description' ] = "Тара"
 
     #Возврат. сделали в ноябре, но октябрский
     transacts.loc[ transacts['Catalogue Transaction ID'].isin([165725,]), 'transactMonth' ] = 10
+
+    #Возврат. сдали на склад в ноябре, но транзакция в декабре
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([168307,]), 'transactMonth' ] = 11
+
+    """#Мирсаид ошибся. сделали возврат списанных В декабре пересмотреть. есть корректирующее письмо
+    #Взять обратно на баланс и сразу вернуть на склад
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([167055,167054,]), 'transactMonth' ] = 12
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([167055,167054,]), 'closedMonth' ] = 12
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([160900,160908,]), 'transactMonth' ] = 11
+    transacts.loc[ transacts['Catalogue Transaction ID'].isin([160900,160908,]), 'closedMonth' ] = 12"""
+    transacts = transacts.loc[ ~( transacts['Catalogue Transaction ID'].isin([167055,167054,]) ) ]
+
+
+    #Спецодежду для TAR команды не считать
+    transacts = transacts.loc[ ~(transacts['Отдел']=="Training Sector") ]
+
+    #Бобур сказал это не списывать, они еще раз будут его использовать, потом может на врем хран дадут
+    transacts.loc[ transacts['Reservation Number'].isin([30127,]), 'Work Order Status Description' ] = 'Undefined'
+
+    #Временное хранение. Оказывается Faruh mamurov письмо написал на врем.хран. лень разбираться.
+    transacts.loc[ transacts['Reservation Number'].isin([28105,28099,28386,28097,28096,28102,28098,
+                                                         28106,28101,]), 'Work Order Status Description' ] = 'Tempsave'
+
+    #Транзакции в cmms ссылаются на одинаковую spareID
+    transacts = transacts.loc[ ~(
+        (transacts['Reservation Number'] == 29844) & (transacts['Catalogue Transaction ID'] == 165851) )]
+    transacts = transacts.loc[ ~(
+        (transacts['Reservation Number'] == 29846) & (transacts['Catalogue Transaction ID'] == 165838) )]
+    
+
     ############################################################################################################
 
 
@@ -100,7 +136,9 @@ def corrections(transactions):
     ### 7. Взято с временного хранения #########################################################################
     #Мансур Хасанов
     transacts = transacts.loc[ ~(transacts['Reservation Number'].isin([27599,
-                                                                       29283])) ]
+                                                                       29283,
+                                                                       30954,30956,30955,
+                                                                       ])) ]
     ############################################################################################################
 
     return transacts
@@ -162,16 +200,10 @@ extra = {
     'rmpd':{
         'begin':[
             #Met
-            {'Код товара':'12814','Reservation Number':-1,'WO №':-1,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Алюминий",'Ед.изм.':'кг','Quantity':5.3,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
-            {'Код товара':'12813','Reservation Number':-2,'WO №':-2,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Мис",'Ед.изм.':'кг','Quantity':7.87,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'12814','Reservation Number':-1,'WO №':-1,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Алюминий",'Ед.изм.':'кг','Quantity':5.3,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'12813','Reservation Number':-2,'WO №':-2,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Мис",'Ед.изм.':'кг','Quantity':7.87,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             {'Код товара':'12815','Reservation Number':-3,'WO №':-3,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Нержавекеющая сталь",'Ед.изм.':'кг','Quantity':0.84,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
 
-        ],
-        'currentMonth':[
-            #Бумага
-            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':10,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':8,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
-            #{'Код товара':'31158','Reservation Number':-5,'WO №':-5,'closedMonth':5,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А3",'Ед.изм.':'пачка','Quantity':1,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
-            
             #Баллоны от Нормуминова Достона. На склад на времХраны
             {'Код товара':'39700', 'Reservation Number':-5, 'WO №':-5, 'closedMonth':11, 'closedYear':2025, 'Work Order Status Description':'Closed', 'Материал':'Azot 46,7 литр ballon № ENK21E2184', 'Ед.изм.':'шт', 'Quantity':1, 'Отдел':'RMPD', 'Reserved By':'RMPD', 'Asset Description':'RMPD', 'Объект':'RMPD', },
             {'Код товара':'39701', 'Reservation Number':-6, 'WO №':-6, 'closedMonth':11, 'closedYear':2025, 'Work Order Status Description':'Closed', 'Материал':'Kislorod 46,7 литр ballon № ENK 21E 2047', 'Ед.изм.':'шт', 'Quantity':1, 'Отдел':'RMPD', 'Reserved By':'RMPD', 'Asset Description':'RMPD', 'Объект':'RMPD', },
@@ -488,13 +520,26 @@ extra = {
             {'Код товара':'40195', 'Reservation Number':-313, 'WO №':-313, 'closedMonth':11, 'closedYear':2025, 'Work Order Status Description':'Closed', 'Материал':'Assy,OCX  O2 cell &Heater ,assy ', 'Ед.изм.':'Dona', 'Quantity':1, 'Отдел':'RMPD', 'Reserved By':'RMPD', 'Asset Description':'RMPD', 'Объект':'RMPD', },
             {'Код товара':'40196', 'Reservation Number':-314, 'WO №':-314, 'closedMonth':11, 'closedYear':2025, 'Work Order Status Description':'Closed', 'Материал':'Cable gland  M16 ', 'Ед.изм.':'Komplekt', 'Quantity':1, 'Отдел':'RMPD', 'Reserved By':'RMPD', 'Asset Description':'RMPD', 'Объект':'RMPD', },
 
+        ],
+        'currentMonth':[
+            #Бумага
+            {'Код товара':'06944','Reservation Number':-4,'WO №':-4,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':8,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            #{'Код товара':'31158','Reservation Number':-5,'WO №':-5,'closedMonth':5,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага для офисной техники белая А3",'Ед.изм.':'пачка','Quantity':1,'Отдел':'rmpd','Reserved By':"rmpd",'Asset Description':'Бумага', 'Объект':'Бумага'},
+            
+            
             #Met
+            #Алюминий
+            {'Код товара':'12814','Reservation Number':-1009,'WO №':-1009,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Алюминий",'Ед.изм.':'кг','Quantity':69.7,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            #Алюминий
+            {'Код товара':'12814','Reservation Number':-1100,'WO №':-1100,'closedMonth':0,'closedYear':0,'Work Order Status Description':'Open','Материал':"Алюминий",'Ед.изм.':'кг','Quantity':0.7,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            #Медь
+            {'Код товара':'12813','Reservation Number':-1010,'WO №':-1010,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Мис",'Ед.изм.':'кг','Quantity':791.63,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Алюминий 13
-            #{'Код товара':'29422','Reservation Number':-6,'WO №':-6,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Алюмин 13",'Ед.изм.':'т','Quantity':1.0006,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'29422','Reservation Number':-1006,'WO №':-1006,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Алюмин 13",'Ед.изм.':'т','Quantity':0.075,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Никель 13
-            #{'Код товара':'11064','Reservation Number':-7,'WO №':-7,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Никель 13",'Ед.изм.':'т','Quantity':0.555,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'11064','Reservation Number':-1007,'WO №':-1007,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Никель 13",'Ед.изм.':'т','Quantity':0.1993,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Медь 13
-            #{'Код товара':'21883','Reservation Number':-8,'WO №':-8,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.7226,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
+            {'Код товара':'21883','Reservation Number':-1008,'WO №':-1008,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Медь 13",'Ед.изм.':'т','Quantity':0.7995,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
             #Свинец 13
             #{'Код товара':'16797','Reservation Number':-6,'WO №':-6,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Свинец 13",'Ед.изм.':'т','Quantity':0.527,'Отдел':'rmpd','Reserved By':"Metall",'Asset Description':'Metall', 'Объект':'Metall'},
         ],
@@ -507,26 +552,36 @@ extra = {
             
             #Diesel
             #{'Код товара':'06933','Reservation Number':-2,'WO №':-2,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':166,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':10,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':20,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-3,'WO №':-3,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':110,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
             
             #Met
             #{'Код товара':'09683','Reservation Number':-4,'WO №':-4,'closedMonth':4,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.0199,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
 
-        ],
-        'currentMonth':[
-            #Бумага
-            {'Код товара':'06944','Reservation Number':-5,'WO №':-5,'closedMonth':10,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':6,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Бумага', 'Объект':'Бумага'},
-            
-            #Diesel
-            {'Код товара':'06933','Reservation Number':-6,'WO №':-6,'closedMonth':10,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':90,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            {'Код товара':'06933','Reservation Number':-8,'WO №':-8,'closedMonth':0,'closedYear':2025,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':110,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
-            
-            #Met
-            {'Код товара':'09683','Reservation Number':-9,'WO №':-9,'closedMonth':9,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':28.804,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
-
             #Задвижка от АХО. Списание в ноябре!
             {'Код товара':'30892','Reservation Number':-10,'WO №':-10,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Задвижка металл. чугунная d=80мм (до 4 атмосфера)",'Ед.изм.':'комплект','Quantity':2,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Из АХО', 'Объект':'Из АХО'},
         
+        ],
+        'currentMonth':[
+            #Бумага
+            {'Код товара':'06944','Reservation Number':-5,'WO №':-5,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумага А4 SvetaCopy 80гр. В пачке 500 листов",'Ед.изм.':'пачка','Quantity':5,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Канцтовары', 'Объект':'Канцтовары'},
+            
+            #Скотч
+            {'Код товара':'37794','Reservation Number':-7,'WO №':-7,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Скотч - Длина - 50 м,Ширина - 48.0 мм",'Ед.изм.':'шт','Quantity':5,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Канцтовары', 'Объект':'Канцтовары'},
+            
+            #Хозтовары
+            {'Код товара':'36885','Reservation Number':-1,'WO №':-1,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Бумажные салфетки Elma Z ECO для дисп. 180 шт. (243)",'Ед.изм.':'упаковка','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Хозтовары', 'Объект':'Хозтовары'},
+            {'Код товара':'36104','Reservation Number':-2,'WO №':-2,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Туалетная бумага Elma Panda Asian pack Econom 6 шт",'Ед.изм.':'упаковка','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Хозтовары', 'Объект':'Хозтовары'},
+            {'Код товара':'22503','Reservation Number':-4,'WO №':-4,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Мыло жидкое в ПЭТ бутылке объемом 500 ml",'Ед.изм.':'упаковка','Quantity':5,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Хозтовары', 'Объект':'Хозтовары'},
+            
+            #Diesel
+            {'Код товара':'06933','Reservation Number':-6,'WO №':-6,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':75,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            {'Код товара':'06933','Reservation Number':-8,'WO №':-8,'closedMonth':0,'closedYear':2025,'Work Order Status Description':'Open','Материал':"Дизельное топливо GTL",'Ед.изм.':'л','Quantity':25,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Diesel', 'Объект':'Diesel'},
+            
+            #Met
+            {'Код товара':'09683','Reservation Number':-9,'WO №':-9,'closedMonth':11,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':28.614,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
+            {'Код товара':'09683','Reservation Number':-801,'WO №':-801,'closedMonth':0,'closedYear':2025,'Work Order Status Description':'Open','Материал':"СА-5 Qora metall chiqindilari ",'Ед.изм.':'тн','Quantity':0.0005,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'metall', 'Объект':'metall'},
+
+            
             
             #Аргонбаллон
             #{'Код товара':'01874','Reservation Number':-9,'WO №':-9,'closedMonth':11,'closedYear':2024,'Work Order Status Description':'Closed','Материал':"Аргон баллон 50л",'Ед.изм.':'шт','Quantity':10,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Аргон баллон', 'Объект':'Аргон баллон'},
@@ -534,6 +589,39 @@ extra = {
             #Половая тряпка
             #{'Код товара':'00094','Reservation Number':-10,'WO №':-10,'closedMonth':2,'closedYear':2025,'Work Order Status Description':'Closed','Материал':"Половая тряпка",'Ед.изм.':'м','Quantity':100,'Отдел':'CofE','Reserved By':"CofE",'Asset Description':'Половая тряпка', 'Объект':'Половая тряпка'},
             
+            {'Код товара':'40872', 'Reservation Number':-12, 'WO №':-12, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Труба 6 м х 48,3', 'Ед.изм.':'шт', 'Quantity':11893, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40873', 'Reservation Number':-13, 'WO №':-13, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Труба 4 м х 48,3', 'Ед.изм.':'Шт', 'Quantity':7325, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40874', 'Reservation Number':-14, 'WO №':-14, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Труба 3 м х 48,3', 'Ед.изм.':'Шт', 'Quantity':3063, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40875', 'Reservation Number':-15, 'WO №':-15, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Труба 2 м х 48,3', 'Ед.изм.':'шт', 'Quantity':1050, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40876', 'Reservation Number':-16, 'WO №':-16, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Труба 1,5м х 48,3 ', 'Ед.изм.':'Шт', 'Quantity':360, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40877', 'Reservation Number':-17, 'WO №':-17, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Труба ф48 х 1200 мм', 'Ед.изм.':'Шт', 'Quantity':280, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40878', 'Reservation Number':-18, 'WO №':-18, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Опорная плита: трубка 36х1,5х100мм подошва 150х150х6мм', 'Ед.изм.':'Шт', 'Quantity':150, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40879', 'Reservation Number':-19, 'WO №':-19, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Домкрат (башмак резбавой-опорный плита резбавой)', 'Ед.изм.':'Шт', 'Quantity':294, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40880', 'Reservation Number':-20, 'WO №':-20, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Хомут Неповоротный хомут 48*48', 'Ед.изм.':'Шт', 'Quantity':25000, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40881', 'Reservation Number':-21, 'WO №':-21, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Хомут поворотный хомут 48*48', 'Ед.изм.':'Шт', 'Quantity':9075, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40882', 'Reservation Number':-22, 'WO №':-22, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Муфты, болты и гайки 1/2`х21ММ EN74 гальваническое покрытие(соединитель наружный)', 'Ед.изм.':'Шт', 'Quantity':3025, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40883', 'Reservation Number':-23, 'WO №':-23, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Муфта рукава (соединитель внутренный)', 'Ед.изм.':'Шт', 'Quantity':2900, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40884', 'Reservation Number':-24, 'WO №':-24, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Стяжки одиночные, болты и гайки 1/2`х21ММ AS/NZS1576.2: 2009 гальваническое покрытие(Кобра)', 'Ед.изм.':'Шт', 'Quantity':1450, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40885', 'Reservation Number':-25, 'WO №':-25, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Зажим лучевой неповоротный 48,3ММ, болты, гайки М14х22ММ сталь кованная Q235 гальваническое покрытие (для балки-17)', 'Ед.изм.':'Шт', 'Quantity':4607, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40886', 'Reservation Number':-26, 'WO №':-26, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Зажим лучевой поворотный 48,3ММ, болты, гайки М14х22ММ сталь кованная Q235 гальваническое покрытие(для балки-17)', 'Ед.изм.':'Шт', 'Quantity':3050, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40887', 'Reservation Number':-27, 'WO №':-27, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Муфта кованая электро-оцинкованная 48,3ММ BS1139(бабочка)', 'Ед.изм.':'Шт', 'Quantity':2520, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40888', 'Reservation Number':-28, 'WO №':-28, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Хомут крепления доски (бабочка хомут)', 'Ед.изм.':'шт', 'Quantity':520, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40889', 'Reservation Number':-29, 'WO №':-29, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Зажимы для лестниц, болты и гайки 1/2`х21ММ BS 1139/EN 74-1 гальваническое покрытие', 'Ед.изм.':'Шт', 'Quantity':700, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40890', 'Reservation Number':-30, 'WO №':-30, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'(Ladder) Балка лестничный тип 10 метр) - Соединитель труб 10х0.4М OD48.3х3.2х305ММ', 'Ед.изм.':'Шт', 'Quantity':55, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40891', 'Reservation Number':-31, 'WO №':-31, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'(Ladder) Балка лестничный тип 6,0 метр) - Соединитель труб 6х0.4М OD48.3х3.2х305ММ', 'Ед.изм.':'Шт', 'Quantity':40, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40892', 'Reservation Number':-32, 'WO №':-32, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Настил металлический с крюками 420х45х3000х1.5ММ', 'Ед.изм.':'Шт', 'Quantity':2700, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40893', 'Reservation Number':-33, 'WO №':-33, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Настил металлический с крюками 420х45х3000х1.5ММ', 'Ед.изм.':'шт', 'Quantity':430, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40894', 'Reservation Number':-34, 'WO №':-34, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Настил с крюками 210х45х1.5х3000', 'Ед.изм.':'Шт', 'Quantity':600, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40895', 'Reservation Number':-35, 'WO №':-35, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Планка 1.2х45х210х2000ММ настил стальная с крючками', 'Ед.изм.':'Шт', 'Quantity':400, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40896', 'Reservation Number':-36, 'WO №':-36, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Доска(2м) сосна 40х200х2000ММ ГОСТ 8486-86', 'Ед.изм.':'Шт', 'Quantity':200, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40897', 'Reservation Number':-37, 'WO №':-37, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Доска (4м) сосна 40х200х4000ММ ГОСТ 8486-86', 'Ед.изм.':'Шт', 'Quantity':50, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40898', 'Reservation Number':-38, 'WO №':-38, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Доска (3м )сосна 40х200х3000ММ ГОСТ 8486-86', 'Ед.изм.':'Шт', 'Quantity':2050, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40899', 'Reservation Number':-39, 'WO №':-39, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Доска (6м) сосна 40х200х6000ММ ГОСТ 8486-86', 'Ед.изм.':'Шт', 'Quantity':50, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40900', 'Reservation Number':-40, 'WO №':-40, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Лестница 2000х2000х450х1.2х9', 'Ед.изм.':'Шт', 'Quantity':25, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40901', 'Reservation Number':-41, 'WO №':-41, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Лестница алюминий 3М 450ММ горизонтальная труба 29х29х1,2ММ вертикальная труба 63х24х1,2ММ', 'Ед.изм.':'Шт', 'Quantity':50, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40902', 'Reservation Number':-42, 'WO №':-42, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Лестница алюминий 4М 450ММ горизонтальная труба 29х29х1,2ММ вертикальная труба 63х24х1,2ММ', 'Ед.изм.':'Шт', 'Quantity':80, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+            {'Код товара':'40903', 'Reservation Number':-43, 'WO №':-43, 'closedMonth':10, 'closedYear':2025, 'Work Order Status Description':'NotClosed', 'Материал':'Лестница алюминий 6М 450ММ горизонтальная труба 29х29х1,2ММ вертикальная труба 63х24х1,2ММ', 'Ед.изм.':'Шт', 'Quantity':94, 'Отдел':'CofE', 'Reserved By':'CofE', 'Asset Description':'CofE', 'Объект':'CofE', },
+
             ],
         'currentReturn':[
             #Половая тряпка

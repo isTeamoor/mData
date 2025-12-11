@@ -45,7 +45,35 @@ def unitChildren():
     assetNumberlist.extend(goThroughTree(SGU))
     return assetNumberlist
 
+### 2. Показать все объекты, относящиеся к объекту
+def unitChild(obj):
+    librID = {
+        'SLU':78354,
+        'U&O':78371,
+        'PWU':78367,
+        'Buildings':78387,
+        'Warehouse':80734,
+        'AUTOMATION':208767,
+    }
+    assetNumberlist = {
+        'SLU':['SLU',],
+        'U&O':['U&O',],
+        'PWU':['PWU',],
+        'Buildings':['Buildings',],
+        'Warehouse':['Warehouse','WIM',],
+        'AUTOMATION':['AUTOMATION',],
+    }
+    def goThroughTree(assetID):
+        subList = []
+        for child in AssetsRelationships[assetID].keys():
+            childAssetNumber = AssetsRelationships[assetID][child]['assetNumber']
+            subList.append(childAssetNumber)
+            if child in AssetsRelationships:
+                subList.extend(goThroughTree(child))
+        return subList
 
+    assetNumberlist[obj].extend(goThroughTree(librID[obj]))
+    return assetNumberlist[obj]
 
 
 def checkRelationships(source):

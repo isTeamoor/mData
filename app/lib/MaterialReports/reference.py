@@ -73,6 +73,11 @@ is_014 = ['',
 '00693','00694','00695','00703','00702','00704','00701','30642','32399','32400','32401','32402','32403','32404',
 '32405','32406','32407','32408','32409','32410','32411','32412','32413','32414','32415','32416','32417','32418',
 '01619',
+'26786','26787','26793','34546','37900',
+'03015','41785','41748','41139','40095','41747','41749','41750', '41751', '41752', '41753', '41785',
+
+#Cluster Filter Fisher Tropsh
+'30652',
 
 #Баллоны от Нормуминов Достона на времХран
 '39700','39701','39702','39703','39704','39705','39706','39707','39708','39709','39710','39711','39712','39713',
@@ -116,9 +121,12 @@ tempSave = {
     'cofe':[],
     'rmpd':[
         #Уктам Ильхомов. Блайнд. Должен был быть списан в сентябре, в последний момент изменили. В октябре
-        26964,
+        #26964,
         #Мирсаид Хайдоров 2359-письмо. Pump. Брали из нее прокладку, остальное возвращают
-        29199,
+        #29199,
+        #SLU
+        28105,28099,28386,28097,28096,28102,28098,28106,28101,
+
     ]
 }
 tempSaveLimits = {
@@ -202,6 +210,7 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
         18649:{'transactMonth':12,'transactYear':2024},
         18982:{'transactMonth':12,'transactYear':2024},
         19620:{'transactMonth':1,'transactYear':2025},
+        30635:{'transactMonth':12,'transactYear':2025}
     }
 
 
@@ -301,6 +310,15 @@ def spread(transactions, spares, inactive_Master_Reservations, repMonth, repYear
     Limits.loc[ Limits['master Reservation Material Code']=='05140','UOMDescription' ] = 'тн'
     #######################################################################################
 
+    ############## Exception Списать TAR материалы
+    Limits.loc[ (Limits['master WO №']==193250) 
+               & (Limits['Work Order Status Description']!='Closed'),'closedMonth' ] = 12
+    Limits.loc[ (Limits['master WO №']==193250) 
+               & (Limits['Work Order Status Description']!='Closed'),'closedYear' ] = 2025
+    Limits.loc[ (Limits['master WO №']==193250) 
+               & (Limits['Work Order Status Description']!='Closed'),'Work Order Status Description' ] = 'Closed'
+    
+    #######################################################################################
 
 
 

@@ -59,6 +59,7 @@ def matReport(repMonth, repYear, department, transacts):
 
 
   for row in exceptions.extra[department]['begin']:
+      print(row)
       newRow = pd.DataFrame(row, index=[0])
       begin = pd.concat([begin, newRow]).reset_index(drop=True)
   for row in exceptions.extra[department]['currentMonth']:
@@ -188,8 +189,8 @@ def matReport(repMonth, repYear, department, transacts):
   if department == 'cofe':
     rep.loc[ rep['Код товара']=='06933', 'Цена' ] = 0
 
-    rep.loc[ rep['Код товара']=='11062', 'Цена' ] = 58035.71448409943
-    rep.loc[ rep['Код товара']=='14457', 'Цена' ] = 88756.6174375 
+    rep.loc[ rep['Код товара']=='11062', 'Цена' ] = 55465.80738795397
+    #rep.loc[ rep['Код товара']=='14457', 'Цена' ] = 88756.6174375 
 
   if department == 'rmpd':
     rep.loc[ rep['Код товара']=='12813', 'Цена' ] = 41768.6741713571
@@ -205,16 +206,20 @@ def matReport(repMonth, repYear, department, transacts):
   ### Exception different prices in 1c
   if department == 'cofe':
       #Аргон 11062
-      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 58035.71433513214     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 55044.79381941091  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 56147.14380812033     if x['Код товара']=='11062' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 54017.85712742981  if x['Код товара']=='11062' else x['Сумма приход'], axis=1)
       rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 56147.14380812033  if x['Код товара']=='11062' else x['Сумма конец'], axis=1)
       #Кислород газообразный 13688
       #rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 9367.529880478088   if x['Код товара']=='13688' else x['Сумма начало'], axis=1)
       #rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 9375  if x['Код товара']=='13688' else x['Сумма приход'], axis=1)
       #rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 8774.932003626473  if x['Код товара']=='13688' else x['Сумма конец'], axis=1)
       #Кислород газообразный 14457
-      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 88982.6584962406   if x['Код товара']=='14457' else x['Сумма приход'], axis=1)
-      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 89323.85254716981   if x['Код товара']=='14457' else x['Сумма конец'], axis=1)
+      #rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 88982.6584962406   if x['Код товара']=='14457' else x['Сумма приход'], axis=1)
+      #rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 89323.85254716981   if x['Код товара']=='14457' else x['Сумма конец'], axis=1)
+      #Кислород баллон 01876
+      rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 2688047.208     if x['Код товара']=='01876' else x['Сумма начало'], axis=1)
+      rep['Сумма приход'] = rep.apply(lambda x: x['Кол-во приход'] * 1   if x['Код товара']=='01876' else x['Сумма приход'], axis=1)
+      rep['Сумма конец'] = rep.apply(lambda x: x['Кол-во конец'] * 1008018.328   if x['Код товара']=='01876' else x['Сумма конец'], axis=1)
   if department == 'rmpd':
       #Мис 12813
       rep['Сумма начало'] = rep.apply(lambda x: x['Кол-во начало'] * 18500   if x['Код товара']=='12813' else x['Сумма начало'], axis=1)

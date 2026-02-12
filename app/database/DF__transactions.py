@@ -70,6 +70,10 @@ transactions = transactions[[
 'Estimated Cost',
 ]]
 
+### Exception
+#Wrong catalogue number in DB
+transactions = transactions.loc[ ~(transactions['Catalogue Number']=='24707') ]
+
 
 
 

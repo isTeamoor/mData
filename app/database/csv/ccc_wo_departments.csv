@@ -2,7 +2,7 @@
 1,PWU-Analyser,Maintenance
 5,Sales,Commercial
 7,Administrative and Service Department,Commercial
-8,SLU-Electrical,Maintenance
+8,SLU-Energy,Maintenance
 9,SLU-Rotating,Maintenance
 10,SLU-Static,Maintenance
 11,SLU-Instrumentation,Maintenance
@@ -10,11 +10,11 @@
 13,SGU-Rotating,Maintenance
 14,SGU-Instrumentation,Maintenance
 15,SGU-Static,Maintenance
-16,PWU-Electrical,Maintenance
+16,PWU-Energy,Maintenance
 17,PWU-Instrumentation,Maintenance
 18,PWU-Static,Maintenance
 19,PWU-Rotating,Maintenance
-20,U&O-Electrical,Maintenance
+20,U&O-Energy,Maintenance
 21,U&O-Instrumentation,Maintenance
 22,U&O-Static,Maintenance
 23,U&O-Rotating,Maintenance
@@ -47,7 +47,7 @@
 64,Process Engineering Department,Technical
 66,Information Technology Department,Other departments
 67,Department of Accounting and Corporate Reporting,Finance
-68,Reliability (SS),Technical
+68,Energy Services SS,Maintenance
 70,Emergency situations and Security Service,Other departments
 71,Procurement and Logistics,Commercial
 72,Human Resources Department,Other departments
@@ -75,7 +75,7 @@
 95,Cofe-HVAC,High Ventilation and Air Conditioner support
 96,Cofe-Welding,Welding Support
 97,Cofe-INSUL,Insulation support
-98,Cofe-Electrical,Electrical Support
+98,Admin-Energy,Maintenance
 99,Cofe-Steam Tracing,Steam Tracing Support
 100,Cofe-Stat (Machinist),Machinist Support
 101,Cofe-Met,Metrology Support
@@ -83,7 +83,7 @@
 103,Cofe-Valve,Control Valve support
 104,Quality Control,Quality Control Department
 105,Trainee Sector,Trainee Sector
-106,ETL Maintenance,Electrotechnical Laboratory team of Maintenance
+106,ETL-Energy,Electrotechnical Laboratory team of Maintenance
 107,Cofe-Scaff,Scaffolding support
 108,Material Technical Resources Management Dep. ,Other departments
 109,Marketing,Other departments
@@ -92,5 +92,6 @@
 112,Chinoz-Electrical,Chinoz terminal
 113,Shipped products accounting department,Production
 114,Management,
-115,Electrical Substation 220-kV,Maintenance
+115,SS-220kV-Energy,Maintenance
 116,ISO Standards Management Department,Other departments
+117,Energy Service,Maintenance

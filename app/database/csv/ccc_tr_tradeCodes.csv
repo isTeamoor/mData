@@ -95,7 +95,7 @@
 95,Inspection Engineer pipeline/Projects
 96,Deputy of Head
 97,Instrumentation Technician
-98,Electrical Technician
+98,Electrician
 99,Unit Engineer junior
 100,STAT
 101,Lead Specialist
@@ -206,6 +206,7 @@
 167,Land Surveyor
 168,Steel Strucure Engineer
 251,6-grade
+287,Electrical Foreman
 269,Jet Wash Supervisor
 273,F&G TECH
 201,Valve technician
@@ -223,5 +224,6 @@
 283,Substation Relay Engineer
 274,HVAC TECH
 284,Substation Economist
+286,Field Manager
 216,TA Elec Engineer
 244,Engineer

@@ -6,12 +6,12 @@
 5,U&O Rotating
 6,TAR Request
 7,SLU Static
-8,SLU Electrical
+8,SLU-Energy
 9,SLU Instrument
 10,SLU Analyser
 11,PWU Static
 12,PWU Instrument
-13,PWU Electrical
+13,PWU-Energy
 14,PWU Analyser
 15,16
 16,15
@@ -19,7 +19,7 @@
 18,19
 19,U&O Static
 20,U&O Instrument
-21,U&O Electrical
+21,U&O-Energy
 22,U&O Analyser
 23,20
 24,Con-Mon Request
@@ -79,7 +79,7 @@
 84,Quality Control Department
 85,Process Safety Department
 86,Public Services PR
-87,ETL Maintenance Request
+87,ETL-Energy
 88,Marketing PR
 89,General affairs
 91,Administration
@@ -108,6 +108,8 @@
 114,General affairs PR
 115,Shipped products accounting department
 116,Shipped products accounting department PR
-117,SS-220kV Substation
+117,SS-220kV-Energy
 118,SS-220kV Substation PR
 119,ISO Standards PR
+120,Energy Service PR
+121,Admin-Energy

@@ -46946,7 +46946,7 @@
 238243,173548,GOVERNING VALVE,150-SV-0724
 238244,173548,GOVERNING VALVE,150-SV-0504
 209664,174964,Centre of Excellence Department ,CofE
-214830,174964,Warehouse Inventory Management ,Material and Technical Department
+214830,174964,Warehouse Inventory Management ,Material and technical support service
 214932,174964,Civil & Building Department,C&BD
 218224,174964,Reliability,Reliability
 218245,174964,Commercial,Sales
@@ -46984,12 +46984,12 @@
 229536,174964,Other departments,Gender Equality 
 231120,174964,Other departments,Marketing
 252365,174964,Management of UZGTL,Management
-258084,174964,Other departments,Material Technical Recourses Managemen Department 
 259199,174964,Other departments,General Affairs Department
 260804,174964,Production,Shipped products accounting department
 266021,174964,Technical,Quality control department
 277269,174964,Other departments,ISO Standard 
 280774,174964,Maintenance,Maintenance Division
+282220,174964,Other Departments,Social Development Department
 175190,175188,SLU Maintenance team,Maintenance(SLU)
 175191,175188,PWU Maintenance,Maintenance(PWU)
 175192,175188,U&O Maintenance,Maintenance(U&O)
@@ -53701,7 +53701,12 @@
 214843,214830,Guard ,Begimqulov Nurshod Isroilovich
 214844,214830,Guard ,Ro'zimurodov Jo'rabek Bekchayevich
 217803,214830,Junior storekeeper,Yuldashev Jasur Farxod o'g'li
+218309,214830,Senior specialist,Rustamov Zoir XXX
+218563,214830,Junior planner,Asrorxonov Abusoleh Qutbiddinovich
+219777,214830,Senior specialist,G`oziyev Jamolbek Jurayevich
+219802,214830,Supply Chain Manager,Raxmanov Ismail Anvardjanovich
 220888,214830,Storekeeper,Nafasov Shadibek Xayrullovich
+223459,214830,Junior Specialist,Xurramov Temurbek Sattorali o'g'li
 235158,214830,storekeeper,Karimov Sardor Safarovich
 235159,214830,storekeeper,Meyliev Shamsiddin Ziyat-o'g'li
 260041,214830,Junior Storekeeper ,Xujakulov Alisher Rashidovich
@@ -54869,7 +54874,6 @@
 236423,218246,Maid,Bo'riyeva Dilnora Jurayevna
 236424,218246,Maid,Xolmuratova Shaxodat Maxmarajabovna
 258022,218246,Cleaner,Xoliqova Xadicha Sayfulla qizi
-260803,218246,Head of Department,Boltayev Azizjon Salimovich
 260808,218246,Cl,Nasibaliyeva Bunafsha Nadjmudinovna
 260809,218246,Gardener,Nazarov Sherzod Alisherovich
 260810,218246,Gardener,Toshmurodov Bobomurod Normuminovich
@@ -54976,7 +54980,6 @@
 224927,218256,Head of the Treasury department,Urazimbetov Dilshod Dauletbayevich
 224928,218256,Specialist,Abdumuradov Shaxzod Ilxomovich
 264495,218256,Junior Specialist,Ruziev Farrukhbek Olim ugli
-218401,218257,Leading specialist,Abdixamidov Sherzod Choriyevich
 218702,218257,Junior Specialist,Norboyev Fayruz Keldiyor o'g'li
 219738,218257,Head of Department,Komilov Alisher G'iyosbek o'g'li
 219740,218257,Specialist,Egamova Maxliyobonu Uktambek qizi
@@ -54988,7 +54991,6 @@
 219755,218257,Assistant of CEO,Bobomurodov Xurshid G'olibjon o'g'li
 219975,218257,Requests Handling Specialist,Nurillayeva Nurxon Botir qizi
 221527,218257,Specialist,Jo`rayev  Xusrav Asadulla o`g`li
-223285,218257,specialist-Youth Advisor to the Company’s Chief Executive Officer,Xudayorov Xumoyun Asliddin o'g'li
 229568,218257,Specialist,Zaynutdinova Rushana Maratovna
 259027,218257,Junior Specialist,Ubaydullayev Javlon Farhod o'g'li
 260801,218257,Junior Specialist,Duskobilov Akbar Akram o'g'li
@@ -55095,7 +55097,6 @@
 219799,218262,Boardman,Radjabov Alisher Erkinovich
 219800,218262,Boardman,Rahimov Behruz Rahmonovich
 219801,218262,Boardman,Rasulov Farrux Fozilovich
-219802,218262,Plant manager,Raxmanov Ismail Anvardjanovich
 219803,218262,Foreman,Razzaqov Jonibek Ibragimovich
 219804,218262,Field operator,Razzoqov Ma`rufjon Mamirjon o`g`li
 219805,218262,Field operator,Sadullayev Sardorbek Qadam og`li
@@ -58041,10 +58042,6 @@
 253311,253309,Pressure Switch,172-HPS-0680
 270266,257490,Lube Oil Pump A,171-XP-013-CB-05-PG-05A
 270265,257491,Lube Oil Pump B,171-XP-013-CB-05-PG-05B
-218309,258084,Specialist,Rustamov Zoir XXX
-218563,258084,Junior planner,Asrorxonov Abusoleh Qutbiddinovich
-219777,258084,Head of Department,G`oziyev Jamolbek Jurayevich
-223459,258084,Junior Specialist,Xurramov Temurbek Sattorali o'g'li
 259000,258995,Trainee,Baxodirov Shoxjaxon Xalil o'g'li
 259004,258995,Trainee,Bozorov Ikromjon Baxodir o'g'li
 259006,258995,Trainee,Jabborov Asadbek Xoltura o'g'li
@@ -58867,3 +58864,6 @@
 282194,282193,Maid,Mirtolipova Shaxnoza Karimovna
 282195,282193,Maid,Saydaliyeva Gulchexra Gulomxujayevna
 282196,282193,Maid,Berdiyeva Barno Valiyevna
+218401,282220,Chief Public Relations Specialist,Abdixamidov Sherzod Choriyevich
+223285,282220,specialist-Youth Advisor to the Company’s Chief Executive Officer,Xudayorov Xumoyun Asliddin o'g'li
+260803,282220,Head of Department,Boltayev Azizjon Salimovich
